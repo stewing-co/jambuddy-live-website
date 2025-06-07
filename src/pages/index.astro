@@ -1,0 +1,195 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="JamBuddy - Your Real-time Jam Session Companion">
+  <!-- Hero Section -->
+  <section class="bg-black text-white rounded-lg shadow-lg border border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="text-center">
+        <div class="mb-8 flex justify-center">
+          <img src="/images/logo/jam_buddy_clear.png" alt="JamBuddy Logo" class="w-48" />
+        </div>
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+          Real-time
+          <span class="text-yellow-300">Chord Detection</span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto">
+          Uses your phone's microphone to instantly identify chords from any music - whether you're playing an instrument or listening to your favorite songs.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#download" class="bg-gray-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-600 transition-colors">
+            Download Free
+          </a>
+          <a href="/features" class="border-2 border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-800 hover:border-gray-500 transition-colors">
+            See Features
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Preview -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-100 mb-4">Why Musicians Love JamBuddy</h2>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+          Powerful tools for musicians of all skill levels - perfect for jam sessions and learning
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center p-6 rounded-lg bg-gray-800 shadow-lg">
+          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-white">Microphone Chord Detection</h3>
+          <p class="text-gray-300">Uses your phone's mic to identify chords from any music source - your instrument, recordings, or streaming music</p>
+        </div>
+        
+        <div class="text-center p-6 rounded-lg bg-gray-800 shadow-lg">
+          <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17 2H7c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H7V4h10v16zM12 9c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-white">Google Watch App</h3>
+          <p class="text-gray-300">Companion app for Google Watch gives you chord info right on your wrist</p>
+        </div>
+        
+        <div class="text-center p-6 rounded-lg bg-gray-800 shadow-lg">
+          <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14h-2V9h-2V7h4v10z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-white">Multi-Instrument Support</h3>
+          <p class="text-gray-300">Real-time chord charts for guitar, ukulele, mandolin, and baritone ukulele</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it Works -->
+  <section class="bg-gray-900 py-20 rounded-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-white mb-4">How It Works</h2>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+          Simple, powerful, and designed by musicians for real-world jam sessions.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">1</div>
+          <h3 class="text-xl font-semibold mb-2 text-white">Open the App</h3>
+          <p class="text-gray-300">Launch JamBuddy and grant microphone access to enable chord detection.</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">2</div>
+          <h3 class="text-xl font-semibold mb-2 text-white">Play or Listen to Music</h3>
+          <p class="text-gray-300">Play your instrument or listen to any music source - recordings, streams, or live performances.</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">3</div>
+          <h3 class="text-xl font-semibold mb-2 text-white">See the Chords & Key</h3>
+          <p class="text-gray-300">JamBuddy instantly identifies chords from any music, letting you learn, practice, and improvise with your favorite songs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Tools -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-100 mb-4">Complete Musician's Toolkit</h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          JamBuddy comes packed with additional features to enhance your musical experience
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="p-6 rounded-lg bg-gray-800 shadow-lg flex items-start space-x-4">
+          <div class="w-12 h-12 bg-yellow-600 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-2 text-white">Instrument Tuner</h3>
+            <p class="text-gray-300">Built-in tuner with support for standard and custom tunings for all supported instruments.</p>
+          </div>
+        </div>
+        
+        <div class="p-6 rounded-lg bg-gray-800 shadow-lg flex items-start space-x-4">
+          <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-2 text-white">Jam Song Library</h3>
+            <p class="text-gray-300">Collection of old-time and bluegrass jam tunes with chord progressions and key information.</p>
+          </div>
+        </div>
+        
+        <div class="p-6 rounded-lg bg-gray-800 shadow-lg flex items-start space-x-4">
+          <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-2 text-white">Comprehensive Chord Library</h3>
+            <p class="text-gray-300">Access a vast library of chord fingerings for guitar, ukulele, mandolin, and baritone ukulele.</p>
+          </div>
+        </div>
+        
+        <div class="p-6 rounded-lg bg-gray-800 shadow-lg flex items-start space-x-4">
+          <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17 12c0 .59-.04 1.13-.12 1.64-.24 1.56-.91 2.91-1.5 3.43-.52.47-1.51.92-2.31 1.17-.81.25-1.4.6-1.57.76-.17-.16-.76-.51-1.57-.76-.8-.25-1.79-.7-2.31-1.17-.59-.52-1.26-1.87-1.5-3.43-.08-.51-.12-1.05-.12-1.64 0-.59.04-1.13.12-1.64.24-1.56.91-2.91 1.5-3.43.52-.47 1.51-.92 2.31-1.17.81-.25 1.4-.6 1.57-.76.17.16.76.51 1.57.76.8.25 1.79.7 2.31 1.17.59.52 1.26 1.87 1.5 3.43.08.51.12 1.05.12 1.64z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-2 text-white">Wear OS Integration</h3>
+            <p class="text-gray-300">Companion Google Watch app lets you see chords on your wrist during jam sessions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download CTA -->
+  <section id="download" class="bg-blue-900/90 text-white py-20 rounded-lg">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold mb-4">Ready to Jam?</h2>
+      <p class="text-xl mb-8">
+        Download JamBuddy today and instantly identify chords in any music you hear.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://play.google.com/store/apps/details?id=com.jambuddy" class="bg-white/10 border border-white/30 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition-colors flex items-center justify-center">
+          <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.9,2.4c-0.1,0-0.2,0-0.2,0l-11,5l-3.8-3.8c-0.3-0.3-0.8-0.3-1.1,0s-0.3,0.8,0,1.1l3.2,3.2l-3.2,3.2 c-0.3,0.3-0.3,0.8,0,1.1c0.2,0.2,0.4,0.2,0.6,0.2c0.2,0,0.4-0.1,0.6-0.2l3.8-3.8l11,5c0.1,0,0.2,0.1,0.2,0.1c0.2,0,0.3-0.1,0.5-0.2 c0.2-0.2,0.3-0.4,0.3-0.7V3.3C18.8,2.8,18.4,2.4,17.9,2.4z"/>
+          </svg>
+          Download on Google Play
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.jambuddy.wear" class="bg-white/10 border border-white/30 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition-colors flex items-center justify-center">
+          <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="12" r="9"/>
+            <circle cx="12" cy="12" r="7" fill="transparent" stroke="currentColor"/>
+          </svg>
+          Get the Wear OS App
+        </a>
+      </div>
+      <p class="text-blue-200 mt-4">Free download • Android 8.0+ required</p>
+    </div>
+  </section>
+</Layout>
