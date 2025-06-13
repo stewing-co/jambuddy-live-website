@@ -2,11 +2,11 @@
 
 This repository contains the marketing site for **JamBuddy**, a real-time chord detection app. The site is built with [Astro](https://astro.build/) and Tailwind CSS.
 
-JamBuddy is preparing for a closed testing release. Sign up for early access or join the mailing list for updates.
+JamBuddy is preparing for a closed alpha testing release. Sign up for early access or join the mailing list for updates.
 
-## Closed Testing Signups
+## Closed Alpha Testing Signups
 
-Users can now request access to closed testing by submitting the form at
+Users can now request access to closed alpha testing by submitting the form at
 `/closed-testing`. Submissions create GitHub issues using a Netlify serverless
 function. Deployments must configure the following environment variables:
 
@@ -24,9 +24,9 @@ scope and add it as `GITHUB_TOKEN`.
 The signup function uses these credentials to open issues in
 `stewing-co/jambuddy-live-website` for each signup.
 
-## Closed Testing Signups
+## Closed Alpha Testing Signups
 
-Users can now request access to closed testing by submitting the form at
+Users can now request access to closed alpha testing by submitting the form at
 `/closed-testing`. Submissions create GitHub issues using a Netlify serverless
 function. Deployments must configure the following environment variables:
 

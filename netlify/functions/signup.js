@@ -4,12 +4,14 @@ export async function handler(event) {
   }
 
   let data = {};
-  const contentType = event.headers['content-type'] || '';
+  const contentType = event.headers['content-type'] || event.headers['Content-Type'] || '';
   if (contentType.includes('application/json')) {
     try {
       data = JSON.parse(event.body);
     } catch {
-      return { statusCode: 400, body: 'Invalid JSON' };
+      const params = new URLSearchParams(event.body);
+      data.name = params.get('name');
+      data.email = params.get('email');
     }
   } else {
     const params = new URLSearchParams(event.body);
@@ -28,8 +30,8 @@ export async function handler(event) {
     return { statusCode: 500, body: 'GitHub configuration missing' };
   }
 
-  const issueTitle = `Closed testing signup: ${name}`;
-  const issueBody = `Email: ${email}\n\nUser expressed interest in closed testing.`;
+  const issueTitle = `Closed alpha testing signup: ${name}`;
+  const issueBody = `Email: ${email}\n\nUser expressed interest in closed alpha testing.`;
 
   try {
     const response = await fetch(`https://api.github.com/repos/${repo}/issues`, {
