@@ -3,11 +3,18 @@ export async function handler(event) {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 
-  let data;
-  try {
-    data = JSON.parse(event.body);
-  } catch {
-    return { statusCode: 400, body: 'Invalid JSON' };
+  let data = {};
+  const contentType = event.headers['content-type'] || '';
+  if (contentType.includes('application/json')) {
+    try {
+      data = JSON.parse(event.body);
+    } catch {
+      return { statusCode: 400, body: 'Invalid JSON' };
+    }
+  } else {
+    const params = new URLSearchParams(event.body);
+    data.name = params.get('name');
+    data.email = params.get('email');
   }
 
   const { name, email } = data;
