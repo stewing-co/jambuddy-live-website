@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Closed Testing Signup - JamBuddy" description="Sign up for our closed testing program or join the mailing list for updates.">
+  <section class="bg-blue-900/90 text-white py-20 rounded-lg">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Join Closed Testing</h1>
+      <p class="text-xl mb-8">Sign up below to request access to the closed testing program or to join our email list for future updates.</p>
+      <form id="signup-form" class="space-y-6 max-w-lg mx-auto" method="POST" action="/.netlify/functions/signup">
+        <div>
+          <label for="name" class="block text-left text-sm font-medium mb-2">Name</label>
+          <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900" />
+        </div>
+        <div>
+          <label for="email" class="block text-left text-sm font-medium mb-2">Email</label>
+          <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900" />
+        </div>
+        <button type="submit" class="w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">Sign Up</button>
+      </form>
+    </div>
+  </section>
+</Layout>
