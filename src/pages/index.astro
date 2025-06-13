@@ -25,10 +25,6 @@ import Layout from '../layouts/Layout.astro';
           <a href="/features" class="border-2 border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-800 hover:border-gray-500 transition-colors">
             See Features
           </a>
-        </div>
-        <div class="mt-12 flex justify-center">
-          <img src="/images/features/main-interface-chord-detection.png" alt="JamBuddy screenshot" class="w-full max-w-md rounded-lg border border-gray-700 shadow-lg" />
-        </div>
       </div>
     </div>
   </section>
@@ -74,10 +70,125 @@ import Layout from '../layouts/Layout.astro';
           <p class="text-gray-300">Real-time chord charts for guitar, ukulele, mandolin, and baritone ukulele</p>
         </div>
       </div>
+    </div>  </section>
+
+  <!-- App Screenshots Gallery -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-100 mb-4">App Screenshots</h2>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+          See JamBuddy in action across different features and interfaces
+        </p>
+      </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col h-full">
+          <div class="aspect-w-16 aspect-h-12 flex-shrink-0">
+            <img src="/images/features/chord-filter.png" alt="Chord filtering interface" class="w-full h-full object-contain bg-gray-700" />
+          </div>
+          <div class="p-4 flex-grow">
+            <h3 class="text-lg font-semibold text-white mb-2">Chord Filtering</h3>
+            <p class="text-gray-300 text-sm">Filter and search through different chord types</p>
+          </div>
+        </div>
+        
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col h-full">
+          <div class="aspect-w-16 aspect-h-12 flex-shrink-0">
+            <img src="/images/features/circle-guitar-chords-light.png" alt="Guitar chord circle interface" class="w-full h-full object-contain bg-gray-700" />
+          </div>
+          <div class="p-4 flex-grow">
+            <h3 class="text-lg font-semibold text-white mb-2">Guitar Chord Circle</h3>
+            <p class="text-gray-300 text-sm">Visual chord progression interface for guitar</p>
+          </div>
+        </div>
+        
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col h-full">
+          <div class="aspect-w-16 aspect-h-12 flex-shrink-0">
+            <img src="/images/features/circle-tunes.png" alt="Tune selection interface" class="w-full h-full object-contain bg-gray-700" />
+          </div>
+          <div class="p-4 flex-grow">
+            <h3 class="text-lg font-semibold text-white mb-2">Tune Library</h3>
+            <p class="text-gray-300 text-sm">Browse traditional jam tunes and songs</p>
+          </div>
+        </div>
+        
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col h-full">
+          <div class="aspect-w-16 aspect-h-12 flex-shrink-0">
+            <img src="/images/features/circle-uke-dark.png" alt="Ukulele interface" class="w-full h-full object-contain bg-gray-700" />
+          </div>
+          <div class="p-4 flex-grow">
+            <h3 class="text-lg font-semibold text-white mb-2">Ukulele Mode</h3>
+            <p class="text-gray-300 text-sm">Optimized interface for ukulele players</p>
+          </div>
+        </div>
+        
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col h-full">
+          <div class="aspect-w-16 aspect-h-12 flex-shrink-0">
+            <img src="/images/features/guitar-tune-light.png" alt="Guitar tuning interface" class="w-full h-full object-contain bg-gray-700" />
+          </div>
+          <div class="p-4 flex-grow">
+            <h3 class="text-lg font-semibold text-white mb-2">Guitar Tuner</h3>
+            <p class="text-gray-300 text-sm">Precise chromatic tuner for guitar</p>
+          </div>
+        </div>
+        
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col h-full">
+          <div class="aspect-w-16 aspect-h-12 flex-shrink-0">
+            <img src="/images/features/tuner-interface.png" alt="Main tuner interface" class="w-full h-full object-contain bg-gray-700" />
+          </div>
+          <div class="p-4 flex-grow">
+            <h3 class="text-lg font-semibold text-white mb-2">Multi-Instrument Tuner</h3>
+            <p class="text-gray-300 text-sm">Universal tuner for all supported instruments</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- How it Works -->
+  <!-- Watch App Gallery -->
+  <section class="py-20 bg-gray-900 rounded-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-white mb-4">Google Watch Integration</h2>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+          View chords and tune information right on your wrist
+        </p>
+      </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg max-w-sm flex flex-col h-full">
+          <div class="aspect-w-1 aspect-h-1 flex-shrink-0">
+            <img src="/images/features/watch-circle.png" alt="Watch circle interface" class="w-full h-full object-contain bg-gray-700" />
+          </div>
+          <div class="p-4 flex-grow">
+            <h3 class="text-lg font-semibold text-white mb-2">Circle of Fifths</h3>
+            <p class="text-gray-300 text-sm">Key relationships displayed on your watch</p>
+          </div>
+        </div>
+        
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg max-w-sm flex flex-col h-full">
+          <div class="aspect-w-1 aspect-h-1 flex-shrink-0">
+            <img src="/images/features/watch-guitar-chord.png" alt="Watch guitar chord display" class="w-full h-full object-contain bg-gray-700" />
+          </div>
+          <div class="p-4 flex-grow">
+            <h3 class="text-lg font-semibold text-white mb-2">Chord Display</h3>
+            <p class="text-gray-300 text-sm">Current chord information on your wrist</p>
+          </div>
+        </div>
+        
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg max-w-sm flex flex-col h-full">
+          <div class="aspect-w-1 aspect-h-1 flex-shrink-0">
+            <img src="/images/features/watch-tuner.png" alt="Watch tuner interface" class="w-full h-full object-contain bg-gray-700" />
+          </div>
+          <div class="p-4 flex-grow">
+            <h3 class="text-lg font-semibold text-white mb-2">Watch Tuner</h3>
+            <p class="text-gray-300 text-sm">Tune your instrument using your watch</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it Works-->
   <section class="bg-gray-900 py-20 rounded-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
@@ -181,6 +292,26 @@ import Layout from '../layouts/Layout.astro';
       <a href="/closed-testing" class="bg-white/10 border border-white/30 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition-colors inline-flex items-center justify-center">
         Sign Up for Closed Alpha Testing
       </a>
-    </div>
-  </section>
+    </div>  </section>
 </Layout>
+
+<style>
+  .aspect-w-16 {
+    position: relative;
+    padding-bottom: 75%; /* 4:3 aspect ratio */
+  }
+  
+  .aspect-w-1 {
+    position: relative;
+    padding-bottom: 100%; /* 1:1 aspect ratio */
+  }
+  
+  .aspect-w-16 img,
+  .aspect-w-1 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
