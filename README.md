@@ -58,3 +58,13 @@ npm run build
 ```
 
 The output is written to the `dist/` directory.
+
+## Alpha Tester Google Group
+
+Join our Google Group to discuss testing and receive updates:
+
+- Email: [jambuddy-testers@googlegroups.com](mailto:jambuddy-testers@googlegroups.com)
+- Direct link: <https://play.google.com/apps/testing/com.jambuddy.app>
+
+After joining the test group you can download the app from the Google Play Store:
+<https://play.google.com/store/apps/details?id=com.jambuddy.app>
