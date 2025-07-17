@@ -6,135 +6,167 @@ import Layout from '../layouts/Layout.astro';
   <!-- Hero Section -->
   <section class="bg-black text-white py-20 rounded-lg border border-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold mb-6">JamBuddy Gallery</h1>
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">See JamBuddy in Action</h1>
       <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-        Check out screenshots of JamBuddy in action and see everything it offers
+        Visual tour of everything JamBuddy offers musicians - from chord detection to song creation
       </p>
     </div>
   </section>
 
-  <!-- Mobile App Gallery -->
-  <section class="py-20">
+  <!-- Core Tools Gallery -->
+  <section class="py-20 bg-gray-900 rounded-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Mobile App Interface</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Listen, Learn, Write</h2>
         <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-          Comprehensive look at JamBuddy's mobile interface across different instruments and features
+          Screenshots showing JamBuddy's three core functions in action
         </p>
       </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">        <!-- Chord Detection Features -->
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">        
+        <!-- Listen Features -->
         <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-200 flex flex-col h-full">
           <div class="aspect-w-16 aspect-h-12 flex-shrink-0">
-            <img src="/images/features/chord-filter.png" alt="Advanced chord filtering system" class="w-full h-full object-contain bg-gray-700" />
+            <img src="/images/features/circle-guitar-chords-light.png" alt="Real-time chord detection with Circle of Fifths" class="w-full h-full object-contain bg-gray-700" />
           </div>
           <div class="p-6 flex-grow">
             <div class="flex items-center mb-3">
               <div class="w-3 h-3 bg-blue-500 rounded-full mr-2"></div>
-              <span class="text-sm text-blue-400 font-medium">CHORD DETECTION</span>
+              <span class="text-sm text-blue-400 font-medium">LISTEN</span>
             </div>
-            <h3 class="text-xl font-bold text-white mb-3">Chord Filtering System</h3>
+            <h3 class="text-xl font-bold text-white mb-3">Real-time Chord Detection</h3>
             <p class="text-gray-300 text-sm leading-relaxed">
-              Advanced filtering interface that lets you search and organize chords by type, key, and difficulty. Perfect for learning specific chord progressions.
+              Circle of Fifths with live chord recognition - point your microphone at any music source and see chords instantly.
             </p>
           </div>
         </div>
 
         <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-200 flex flex-col h-full">
           <div class="aspect-w-16 aspect-h-12 flex-shrink-0">
-            <img src="/images/features/circle-guitar-chords-light.png" alt="Guitar chord circle visualization" class="w-full h-full object-contain bg-gray-700" />
+            <img src="/images/features/chord-filter.png" alt="Chord filtering and charts" class="w-full h-full object-contain bg-gray-700" />
           </div>
           <div class="p-6 flex-grow">
             <div class="flex items-center mb-3">
-              <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
-              <span class="text-sm text-green-400 font-medium">GUITAR</span>
+              <div class="w-3 h-3 bg-blue-500 rounded-full mr-2"></div>
+              <span class="text-sm text-blue-400 font-medium">LISTEN</span>
             </div>
-            <h3 class="text-xl font-bold text-white mb-3">Guitar Chord Circle</h3>
+            <h3 class="text-xl font-bold text-white mb-3">Instant Chord Charts</h3>
             <p class="text-gray-300 text-sm leading-relaxed">
-              Interactive chord circle designed specifically for guitarists, showing chord relationships and progressions in an intuitive visual format.
+              Advanced filtering shows chord charts for any detected chord, with support for multiple instruments and voicings.
             </p>
           </div>
         </div>
 
         <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-200 flex flex-col h-full">
           <div class="aspect-w-16 aspect-h-12 flex-shrink-0">
-            <img src="/images/features/circle-uke-dark.png" alt="Ukulele interface in dark theme" class="w-full h-full object-contain bg-gray-700" />
+            <img src="/images/features/tuner.png" alt="Built-in chromatic tuner" class="w-full h-full object-contain bg-gray-700" />
+          </div>
+          <div class="p-6 flex-grow">
+            <div class="flex items-center mb-3">
+              <div class="w-3 h-3 bg-blue-500 rounded-full mr-2"></div>
+              <span class="text-sm text-blue-400 font-medium">LISTEN</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Built-in Tuner</h3>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              Chromatic tuner with precise pitch detection for guitar, ukulele, mandolin, and baritone ukulele.
+            </p>
+          </div>
+        </div>
+
+        <!-- Learn Features -->
+        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-200 flex flex-col h-full">
+          <div class="aspect-w-16 aspect-h-12 flex-shrink-0">
+            <img src="/images/features/metronome-strum-patterns.png" alt="Metronome with strum patterns" class="w-full h-full object-contain bg-gray-700" />
           </div>
           <div class="p-6 flex-grow">
             <div class="flex items-center mb-3">
               <div class="w-3 h-3 bg-purple-500 rounded-full mr-2"></div>
-              <span class="text-sm text-purple-400 font-medium">UKULELE</span>
+              <span class="text-sm text-purple-400 font-medium">LEARN</span>
             </div>
-            <h3 class="text-xl font-bold text-white mb-3">Ukulele Dark Mode</h3>
+            <h3 class="text-xl font-bold text-white mb-3">Metronome & Rhythms</h3>
             <p class="text-gray-300 text-sm leading-relaxed">
-              Specialized ukulele interface with dark theme, optimized for the four-string layout and common ukulele chord shapes and progressions.
+              Practice with the built-in metronome featuring various strum patterns and rhythms for better timing.
             </p>
           </div>
         </div>
 
-        <!-- Tune Library -->
         <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-200 flex flex-col h-full">
           <div class="aspect-w-16 aspect-h-12 flex-shrink-0">
-            <img src="/images/features/circle-tunes.png" alt="Traditional tunes library" class="w-full h-full object-contain bg-gray-700" />
+            <img src="/images/features/chord-browser-metronome.png" alt="Chord library browser" class="w-full h-full object-contain bg-gray-700" />
           </div>
           <div class="p-6 flex-grow">
             <div class="flex items-center mb-3">
-              <div class="w-3 h-3 bg-yellow-500 rounded-full mr-2"></div>
-              <span class="text-sm text-yellow-400 font-medium">SONG LIBRARY</span>
+              <div class="w-3 h-3 bg-purple-500 rounded-full mr-2"></div>
+              <span class="text-sm text-purple-400 font-medium">LEARN</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Chord Library</h3>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              Comprehensive chord library with fingerings and voicings for all supported instruments.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-200 flex flex-col h-full">
+          <div class="aspect-w-16 aspect-h-12 flex-shrink-0">
+            <img src="/images/features/tunes-chords-lyrics.png" alt="Traditional tunes with chords" class="w-full h-full object-contain bg-gray-700" />
+          </div>
+          <div class="p-6 flex-grow">
+            <div class="flex items-center mb-3">
+              <div class="w-3 h-3 bg-purple-500 rounded-full mr-2"></div>
+              <span class="text-sm text-purple-400 font-medium">LEARN</span>
             </div>
             <h3 class="text-xl font-bold text-white mb-3">Traditional Tunes</h3>
             <p class="text-gray-300 text-sm leading-relaxed">
-              Extensive library of old-time and bluegrass standards, complete with chord progressions, keys, and tempo information for jam sessions.
+              Built-in library of old-time and bluegrass songs with chord progressions, perfect for jam sessions.
             </p>
           </div>
         </div>
 
-        <!-- Tuner Interfaces -->
+        <!-- Write Features -->
         <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-200 flex flex-col h-full">
           <div class="aspect-w-16 aspect-h-12 flex-shrink-0">
-            <img src="/images/features/guitar-tune-light.png" alt="Guitar tuner with light theme" class="w-full h-full object-contain bg-gray-700" />
+            <img src="/images/features/tunes_manager_chord_editor.png" alt="Chord editor for song creation" class="w-full h-full object-contain bg-gray-700" />
           </div>
           <div class="p-6 flex-grow">
             <div class="flex items-center mb-3">
-              <div class="w-3 h-3 bg-orange-500 rounded-full mr-2"></div>
-              <span class="text-sm text-orange-400 font-medium">TUNER</span>
+              <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+              <span class="text-sm text-green-400 font-medium">WRITE</span>
             </div>
-            <h3 class="text-xl font-bold text-white mb-3">Guitar Tuner Light</h3>
+            <h3 class="text-xl font-bold text-white mb-3">Chord Editor</h3>
             <p class="text-gray-300 text-sm leading-relaxed">
-              Precise chromatic tuner with light theme, featuring large visual indicators and accurate pitch detection for quick and easy tuning.
+              Create and edit chord progressions for your original songs with an intuitive interface.
             </p>
           </div>
         </div>
 
         <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-200 flex flex-col h-full">
           <div class="aspect-w-16 aspect-h-12 flex-shrink-0">
-            <img src="/images/features/tuner-interface.png" alt="Universal tuner interface" class="w-full h-full object-contain bg-gray-700" />
+            <img src="/images/features/tunes_manager_lyrics_editor.png" alt="Lyrics editor interface" class="w-full h-full object-contain bg-gray-700" />
           </div>
           <div class="p-6 flex-grow">
             <div class="flex items-center mb-3">
-              <div class="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
-              <span class="text-sm text-red-400 font-medium">MULTI-INSTRUMENT</span>
+              <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+              <span class="text-sm text-green-400 font-medium">WRITE</span>
             </div>
-            <h3 class="text-xl font-bold text-white mb-3">Universal Tuner</h3>
+            <h3 class="text-xl font-bold text-white mb-3">Lyrics Editor</h3>
             <p class="text-gray-300 text-sm leading-relaxed">
-              Multi-instrument tuner supporting guitar, ukulele, mandolin, and baritone ukulele with customizable tuning presets.
+              Write and edit lyrics with chord synchronization for complete song composition.
             </p>
           </div>
         </div>
 
-        <!-- Combined Interface -->
         <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-200 flex flex-col h-full">
           <div class="aspect-w-16 aspect-h-12 flex-shrink-0">
-            <img src="/images/features/tunes_and_guitar_default_dark.png" alt="Integrated tunes and chord interface" class="w-full h-full object-contain bg-gray-700" />
+            <img src="/images/features/tunes_manager_record_audio.png" alt="Audio recording interface" class="w-full h-full object-contain bg-gray-700" />
           </div>
           <div class="p-6 flex-grow">
             <div class="flex items-center mb-3">
-              <div class="w-3 h-3 bg-indigo-500 rounded-full mr-2"></div>
-              <span class="text-sm text-indigo-400 font-medium">INTEGRATED</span>
+              <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+              <span class="text-sm text-green-400 font-medium">WRITE</span>
             </div>
-            <h3 class="text-xl font-bold text-white mb-3">Unified Interface</h3>
+            <h3 class="text-xl font-bold text-white mb-3">Audio Recording</h3>
             <p class="text-gray-300 text-sm leading-relaxed">
-              Tune library and chord detection together so you can learn songs while watching the chords roll by.
+              Record audio directly in the app and attach it to your songs for complete composition workflow.
             </p>
           </div>
         </div>
@@ -142,60 +174,70 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Watch App Gallery -->
+   <!-- Watch App Gallery -->
   <section class="py-20 bg-gray-900 rounded-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Google Watch Integration</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Wear OS Integration</h2>
         <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-          Companion Wear OS app that brings JamBuddy's power to your wrist for hands-free music learning
+          Companion watch app will bring JamBuddy's power to your wrist for hands-free music learning
         </p>
       </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-200 flex flex-col h-full">
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-200 flex flex-col h-full relative">
+          <div class="absolute top-4 right-4 z-10">
+            <span class="bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded">COMING SOON</span>
+          </div>
           <div class="aspect-w-1 aspect-h-1 flex-shrink-0">
-            <img src="/images/features/watch-circle.png" alt="Watch circle of fifths display" class="w-full h-full object-contain bg-gray-700" />
+            <img src="/images/features/watch-circle.png" alt="Watch Circle of Fifths" class="w-full h-full object-contain bg-gray-700" />
           </div>
           <div class="p-6 flex-grow">
             <div class="flex items-center mb-3">
               <div class="w-3 h-3 bg-blue-500 rounded-full mr-2"></div>
-              <span class="text-sm text-blue-400 font-medium">THEORY</span>
+              <span class="text-sm text-blue-400 font-medium">WATCH</span>
             </div>
             <h3 class="text-xl font-bold text-white mb-3">Circle of Fifths</h3>
             <p class="text-gray-300 text-sm leading-relaxed">
-              Interactive circle of fifths on your watch screen, perfect for understanding key relationships during jam sessions.
+              Interactive Circle of Fifths on your watch screen for understanding key relationships during jams.
             </p>
           </div>
         </div>
 
-        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-200 flex flex-col h-full">
+        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-200 flex flex-col h-full relative">
+          <div class="absolute top-4 right-4 z-10">
+            <span class="bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded">COMING SOON</span>
+          </div>
           <div class="aspect-w-1 aspect-h-1 flex-shrink-0">
-            <img src="/images/features/watch-guitar-chord.png" alt="Watch real-time chord display" class="w-full h-full object-contain bg-gray-700" />
+            <img src="/images/features/watch-guitar-chord.png" alt="Watch chord display" class="w-full h-full object-contain bg-gray-700" />
           </div>
           <div class="p-6 flex-grow">
             <div class="flex items-center mb-3">
               <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
-              <span class="text-sm text-green-400 font-medium">LIVE CHORDS</span>
+              <span class="text-sm text-green-400 font-medium">WATCH</span>
             </div>
-            <h3 class="text-xl font-bold text-white mb-3">Real-time Chords</h3>
+            <h3 class="text-xl font-bold text-white mb-3">Live Chord Detection</h3>
             <p class="text-gray-300 text-sm leading-relaxed">
-              Live chord detection results displayed on your watch, synchronized with your phone for hands-free chord reading.
+              Real-time chord detection results displayed on your watch, synchronized with your phone.
             </p>
           </div>
         </div>
 
-        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-200 flex flex-col h-full">
+        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-200 flex flex-col h-full relative">
+          <div class="absolute top-4 right-4 z-10">
+            <span class="bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded">COMING SOON</span>
+          </div>
           <div class="aspect-w-1 aspect-h-1 flex-shrink-0">
             <img src="/images/features/watch-tuner.png" alt="Watch tuner interface" class="w-full h-full object-contain bg-gray-700" />
           </div>
           <div class="p-6 flex-grow">
             <div class="flex items-center mb-3">
               <div class="w-3 h-3 bg-purple-500 rounded-full mr-2"></div>
-              <span class="text-sm text-purple-400 font-medium">TUNER</span>
+              <span class="text-sm text-purple-400 font-medium">WATCH</span>
             </div>
             <h3 class="text-xl font-bold text-white mb-3">Wrist Tuner</h3>
             <p class="text-gray-300 text-sm leading-relaxed">
-              Convenient tuning interface on your watch, letting you tune your instrument without taking your phone out of your pocket.
+              Tune your instrument without taking your phone out, with precise tuning right on your wrist.
             </p>
           </div>
         </div>
@@ -203,13 +245,75 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Feature Highlights -->
+  <!-- Advanced Features Gallery -->
   <section class="py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Why These Features Matter</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Advanced Features</h2>
         <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-          Each interface is designed with musicians in mind, optimized for real-world jam sessions and practice
+          Specialized tools that make JamBuddy perfect for serious musicians
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-200 flex flex-col h-full">
+          <div class="aspect-w-16 aspect-h-12 flex-shrink-0">
+            <img src="/images/features/key-lock.png" alt="Key lock feature" class="w-full h-full object-contain bg-gray-700" />
+          </div>
+          <div class="p-6 flex-grow">
+            <div class="flex items-center mb-3">
+              <div class="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
+              <span class="text-sm text-red-400 font-medium">ADVANCED</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Key Lock</h3>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              Lock in your key to stay focused on the current progression and avoid confusion during complex songs.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-200 flex flex-col h-full">
+          <div class="aspect-w-16 aspect-h-12 flex-shrink-0">
+            <img src="/images/features/logo-circle-next-chords.png" alt="Next chord predictions" class="w-full h-full object-contain bg-gray-700" />
+          </div>
+          <div class="p-6 flex-grow">
+            <div class="flex items-center mb-3">
+              <div class="w-3 h-3 bg-cyan-500 rounded-full mr-2"></div>
+              <span class="text-sm text-cyan-400 font-medium">PREDICTION</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Next Chord Predictions</h3>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              Intelligent predictions show likely next chords based on music theory and common progressions.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-200 flex flex-col h-full">
+          <div class="aspect-w-16 aspect-h-12 flex-shrink-0">
+            <img src="/images/features/tunes_manager_storage_required.png" alt="Storage management" class="w-full h-full object-contain bg-gray-700" />
+          </div>
+          <div class="p-6 flex-grow">
+            <div class="flex items-center mb-3">
+              <div class="w-3 h-3 bg-gray-500 rounded-full mr-2"></div>
+              <span class="text-sm text-gray-400 font-medium">MANAGEMENT</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Storage Management</h3>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              Efficiently manage your growing song library with built-in storage optimization and organization tools.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why These Features Matter -->
+  <section class="py-20 bg-gray-900 rounded-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Perfect for Musicians</h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Every interface is designed for real-world jam sessions and practice
         </p>
       </div>
       
@@ -239,7 +343,7 @@ import Layout from '../layouts/Layout.astro';
             <div>
               <h3 class="text-xl font-bold text-white mb-2">Instant Response</h3>
               <p class="text-gray-300">
-                Real-time chord detection with minimal latency keeps your playing smooth
+                Real-time chord detection with minimal latency keeps your playing smooth and natural
               </p>
             </div>
           </div>
@@ -253,44 +357,44 @@ import Layout from '../layouts/Layout.astro';
             <div>
               <h3 class="text-xl font-bold text-white mb-2">Multi-Platform</h3>
               <p class="text-gray-300">
-                Smooth experience across phone and watch with automatic syncing
+                Seamless experience across phone and tablet with consistent interface design
               </p>
             </div>
           </div>
         </div>
 
         <div class="bg-gray-800 rounded-2xl p-8 shadow-xl">
-          <h3 class="text-2xl font-bold text-white mb-6">Perfect for Musicians</h3>
+          <h3 class="text-2xl font-bold text-white mb-6">Built for Musicians</h3>
           <div class="space-y-4">
             <div class="flex items-center space-x-3">
               <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <span class="text-gray-300">Optimized for live performance environments</span>
+              <span class="text-gray-300">Works in live performance environments</span>
             </div>
             <div class="flex items-center space-x-3">
               <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <span class="text-gray-300">Designed for different skill levels</span>
+              <span class="text-gray-300">Scales from beginner to advanced players</span>
             </div>
             <div class="flex items-center space-x-3">
               <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <span class="text-gray-300">Multiple instruments supported</span>
+              <span class="text-gray-300">Multiple instruments in one app</span>
             </div>
             <div class="flex items-center space-x-3">
               <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <span class="text-gray-300">Both light and dark themes</span>
+              <span class="text-gray-300">Light and dark themes for any setting</span>
             </div>
             <div class="flex items-center space-x-3">
               <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <span class="text-gray-300">Hands-free operation with watch app</span>
+              <span class="text-gray-300">Watch companion app coming soon</span>
             </div>
           </div>
         </div>
@@ -301,16 +405,16 @@ import Layout from '../layouts/Layout.astro';
   <!-- CTA Section -->
   <section class="py-20 bg-blue-900/90 text-white rounded-lg">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-4xl font-bold mb-4">Experience JamBuddy</h2>
+      <h2 class="text-4xl font-bold mb-4">Ready to See JamBuddy in Action?</h2>
       <p class="text-xl mb-8">
-        See these features in action by joining our Google Group for alpha testing access
+        Join our testing group to experience these features firsthand and help shape JamBuddy's future
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="/closed-testing" class="bg-white/10 border border-white/30 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition-colors">
           Join Testing Group
         </a>
         <a href="/features" class="border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors">
-          Learn More About Features
+          Explore All Features
         </a>
       </div>
     </div>
