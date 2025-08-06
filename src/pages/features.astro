@@ -242,20 +242,22 @@ import Layout from '../layouts/Layout.astro';
       
 
   <!-- CTA Section -->
-  <section class="py-20 bg-black text-white rounded-lg mt-8 border border-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Jam Smarter?</h2>
-      <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+  <section class="relative py-24 bg-gradient-to-br from-blue-900 via-purple-900 to-blue-900 text-white rounded-xl mt-8 border border-gray-700 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-green-600/20"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">Ready to Jam Smarter?</h2>
+      <p class="text-xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed">
         Grab JamBuddy and start seeing chords in real time on your favorite instruments.
       </p>
-      <div class="flex flex-wrap gap-4 justify-center">
-        <a href="https://play.google.com/store/apps/details?id=com.jambuddy.app" class="bg-primary-700 text-white px-6 py-3 rounded-full shadow-md hover:bg-primary-600 transition-colors flex items-center gap-2">
-          <img src="/images/icons/google-play-badge.png" alt="Get it on Google Play" class="h-10" />
+      <div class="flex flex-wrap gap-4 justify-center mb-8">
+        <a href="https://play.google.com/store/apps/details?id=com.jambuddy.app&hl=en_US" target="_blank" rel="noopener" class="group bg-gradient-to-r from-white/20 to-white/10 border-2 border-white/30 backdrop-blur-sm text-white px-10 py-5 rounded-2xl font-bold text-xl hover:from-white/30 hover:to-white/20 transition-all duration-300 flex items-center shadow-2xl transform hover:scale-105">
+          <img src="/images/icons/google-play-badge.png" alt="Get it on Google Play" class="h-12 mr-4 transition-transform group-hover:scale-110" />
           <span>Google Play</span>
         </a>
       </div>
-      <p class="text-gray-400 mt-4">Free download • Android 8.0+ required</p>
-    </div>  </section>
+      <p class="text-gray-300 text-lg">Available now • Android 8.0+ • 99¢ one-time purchase</p>
+    </div>  
+  </section>
 </Layout>
 
 <style>
