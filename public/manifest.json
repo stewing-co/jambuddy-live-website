@@ -1,0 +1,21 @@
+{
+  "name": "JamBuddy",
+  "short_name": "JamBuddy",
+  "description": "Real-time chord recognition and music practice tools",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#1f2937",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
