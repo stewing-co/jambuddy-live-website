@@ -4,79 +4,129 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="JamBuddy - Music Tools for Musicians & Teachers">
   <!-- Hero Section -->
-  <section class="bg-black text-white rounded-lg shadow-lg border border-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+  <section class="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white rounded-xl shadow-2xl border border-gray-700 overflow-hidden">
+    <!-- Background pattern overlay -->
+    <div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-green-600/10"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
       <div class="text-center">
-        <div class="mb-8 flex justify-center">
-          <img src="/images/logo/jam_buddy_clear.png" alt="JamBuddy Logo" class="w-48" />
+        <div class="mb-12 flex justify-center">
+          <div class="relative">
+            <img src="/images/logo/jam_buddy_clear.png" alt="JamBuddy Logo" class="w-56 filter drop-shadow-2xl" />
+            <div class="absolute -inset-4 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-green-600/20 rounded-full blur-xl"></div>
+          </div>
         </div>
-        <h1 class="text-5xl md:text-6xl font-bold mb-4 text-gray-100">JamBuddy – Music Tools</h1>
-        <p class="text-2xl text-gray-300 max-w-2xl mx-auto mb-4">The ultimate music practice tool for musicians and music teachers</p>
-        <p class="text-lg text-gray-400 max-w-3xl mx-auto mb-6">With real-time chord recognition, powerful practice features, and complete song organization, JamBuddy helps you learn songs faster, teach more effectively, and perform with confidence.</p>
-        <span class="inline-block bg-yellow-400 text-black font-bold px-4 py-2 rounded-lg shadow mb-6">
-          Works offline – no ads, one-time purchase<br />
-          Minimal latency chord recognition – Multi-instrument support
-        </span>
+        <h1 class="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-green-100 bg-clip-text text-transparent leading-tight">
+          Listen, Learn, Write
+        </h1>
+        <p class="text-2xl md:text-3xl text-gray-200 max-w-3xl mx-auto mb-8 leading-relaxed">
+          Everything you need to jam with confidence
+        </p>
+        <div class="mb-12">
+          <span class="inline-block bg-gradient-to-r from-yellow-400 to-orange-400 text-black font-bold px-6 py-4 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-200">
+            JamBuddy will <u>never</u> have ads. One-time price: <b>99¢</b>.<br />
+            Runs 100% on your phone—no internet required.
+          </span>
+        </div>
         <!-- CTA buttons -->
-        <div class="flex flex-col sm:flex-row gap-6 justify-center mb-10">
-          <a href="/closed-testing" class="bg-gray-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-600 transition-colors">
-            Join Testing Group
+        <div class="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+          <a href="https://play.google.com/store/apps/details?id=com.jambuddy.app&hl=en_US" target="_blank" rel="noopener" class="group bg-gradient-to-r from-green-600 to-green-700 text-white px-10 py-5 rounded-xl font-bold text-xl hover:from-green-700 hover:to-green-800 transition-all duration-300 flex items-center justify-center shadow-xl hover:shadow-2xl transform hover:scale-105">
+            <img src="/images/icons/google-play-badge.png" alt="Get it on Google Play" class="h-12 mr-3 transition-transform group-hover:scale-110" />
+            Download Now
           </a>
-          <a href="https://play.google.com/store/apps/details?id=com.jambuddy" target="_blank" rel="noopener" class="border-2 border-green-500 text-green-500 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-500 hover:text-white hover:border-green-400 transition-colors flex items-center justify-center">
-            <img src="/images/icons/google-play-badge.png" alt="Get it on Google Play" class="h-10" />
+          <a href="/features" class="border-2 border-gray-300 text-gray-300 px-10 py-5 rounded-xl font-bold text-xl hover:bg-gray-300 hover:text-black transition-all duration-300 flex items-center justify-center backdrop-blur-sm hover:backdrop-blur-md transform hover:scale-105">
+            Learn More
           </a>
         </div>
-        <!-- Removed old paragraph for a cleaner hero section -->
       </div>
     </div>
   </section>
 
   <!-- Three Core Features -->
-  <section class="py-20">
+  <section class="py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- ...existing code... -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Tools For Musicians</h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">Music, metronome, tuner and chord detection all offline in realtime</p>
+      </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
         <!-- Listen -->
-        <div class="text-center p-8 rounded-lg bg-gray-800 shadow-lg">
-          <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-            <!-- Material Symbols: graphic_eq (audio waveform bars) -->
-            <svg class="w-10 h-10 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-              <rect x="4" y="10" width="2" height="4" rx="1" />
-              <rect x="8" y="7" width="2" height="10" rx="1" />
-              <rect x="12" y="4" width="2" height="16" rx="1" />
-              <rect x="16" y="7" width="2" height="10" rx="1" />
-              <rect x="20" y="10" width="2" height="4" rx="1" />
-            </svg>
+        <div class="group relative">
+          <div class="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-blue-400 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+          <div class="relative text-center p-10 rounded-2xl bg-gray-800/90 backdrop-blur-sm shadow-xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300">
+            <div class="w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-8 shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-12 h-12 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <rect x="4" y="10" width="2" height="4" rx="1" />
+                <rect x="8" y="7" width="2" height="10" rx="1" />
+                <rect x="12" y="4" width="2" height="16" rx="1" />
+                <rect x="16" y="7" width="2" height="10" rx="1" />
+                <rect x="20" y="10" width="2" height="4" rx="1" />
+              </svg>
+            </div>
+            <h3 class="text-3xl font-bold mb-6 text-white">Listen</h3>
+            <p class="text-gray-300 mb-6 text-lg leading-relaxed">Real-time chord detection with Circle of Fifths, chord charts, next chord predictions, and chromatic tuner.</p>
+            <div class="space-y-2 text-blue-300 font-medium">
+              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>Microphone chord detection</div>
+              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>Key visualization</div>
+              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>Chord predictions</div>
+            </div>
           </div>
+<<<<<<< HEAD
           <h3 class="text-2xl font-bold mb-4 text-white">🎧 Real-Time Chord Recognition</h3>
           <p class="text-gray-300 mb-4">Detects chords instantly through your device's microphone with Circle of Fifths visualization and next chord prediction for jamming and improvisation.</p>
           <div class="text-sm text-blue-300">✓ Built-in chromatic tuner<br />✓ Key & chord visualization<br />✓ Minimal latency recognition</div>
+=======
+>>>>>>> fe2e3887b046fac1898c149ecf50aacee53fac96
         </div>
         
         <!-- Learn -->
-        <div class="text-center p-8 rounded-lg bg-gray-800 shadow-lg">
-          <div class="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-            <!-- Musical note icon -->
-            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
-            </svg>
+        <div class="group relative">
+          <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-purple-400 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+          <div class="relative text-center p-10 rounded-2xl bg-gray-800/90 backdrop-blur-sm shadow-xl border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
+            <div class="w-24 h-24 bg-gradient-to-br from-purple-500 to-purple-700 rounded-full flex items-center justify-center mx-auto mb-8 shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+              </svg>
+            </div>
+            <h3 class="text-3xl font-bold mb-6 text-white">Learn</h3>
+            <p class="text-gray-300 mb-6 text-lg leading-relaxed">Get it under your fingers with a metronome with strum patterns, chord library, and sample tunes.</p>
+            <div class="space-y-2 text-purple-300 font-medium">
+              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>Metronome & rhythms</div>
+              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>Chord library</div>
+              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>Tunes for today</div>
+            </div>
           </div>
+<<<<<<< HEAD
           <h3 class="text-2xl font-bold mb-4 text-white">📚 Practice Tools for Every Skill Level</h3>
           <p class="text-gray-300 mb-4">Visual metronome with customizable light pulses, strum pattern display, and audio speed control – slow down without changing pitch.</p>
           <div class="text-sm text-purple-300">✓ Smart looping for tricky parts<br />✓ Multiple themes & layouts<br />✓ Multi-instrument support</div>
+=======
+>>>>>>> fe2e3887b046fac1898c149ecf50aacee53fac96
         </div>
         
         <!-- Write -->
-        <div class="text-center p-8 rounded-lg bg-gray-800 shadow-lg">
-          <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
-            </svg>
+        <div class="group relative">
+          <div class="absolute -inset-0.5 bg-gradient-to-r from-green-600 to-green-400 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+          <div class="relative text-center p-10 rounded-2xl bg-gray-800/90 backdrop-blur-sm shadow-xl border border-gray-700 hover:border-green-500/50 transition-all duration-300">
+            <div class="w-24 h-24 bg-gradient-to-br from-green-500 to-green-700 rounded-full flex items-center justify-center mx-auto mb-8 shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+              </svg>
+            </div>
+            <h3 class="text-3xl font-bold mb-6 text-white">Write</h3>
+            <p class="text-gray-300 mb-6 text-lg leading-relaxed">Create your own songs with chord and lyrics editors, sheet music integration, and audio recording. Export to JSON.</p>
+            <div class="space-y-2 text-green-300 font-medium">
+              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Song creation tools</div>
+              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Audio recording</div>
+              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>JSON export</div>
+            </div>
           </div>
+<<<<<<< HEAD
           <h3 class="text-2xl font-bold mb-4 text-white">✍️ Organize Your Songs & Lessons</h3>
           <p class="text-gray-300 mb-4">Store sheet music (PDF/images), backing tracks, lyrics, and chord charts. Add custom notes and annotations with fast access to large libraries.</p>
           <div class="text-sm text-green-300">✓ Works offline completely<br />✓ Flexible layouts for phones & tablets<br />✓ No ads, one-time purchase</div>
+=======
+>>>>>>> fe2e3887b046fac1898c149ecf50aacee53fac96
         </div>
       </div>
     </div>
@@ -111,9 +161,6 @@ import Layout from '../layouts/Layout.astro';
             <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/tunes_manager_song_details_editor.png" alt="Song Details Editor" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Song Details Editor</h4><p class="text-gray-300">Edit song details and metadata for every tune.</p></div></div>
             <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/tunes_manager_storage_required.png" alt="Storage Manager" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Storage Manager</h4><p class="text-gray-300">Easily manage storage for your growing song library.</p></div></div>
             <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/uke-dark.png" alt="Ukulele Support" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Ukulele Support</h4><p class="text-gray-300">Support for guitar, bass, ukulele, baratone ukulele and mandolin, so far.</p></div></div>
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/watch-circle.png" alt="Watch Circle" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Watch Circle</h4><p class="text-gray-300">(Coming soon) Circle of Fifths visualization on your smartwatch.</p></div></div>
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/watch-guitar-chord.png" alt="Watch Guitar Chord" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Watch Guitar Chord</h4><p class="text-gray-300">(Coming soon) Chord charts available on your watch.</p></div></div>
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/watch-tuner.png" alt="Watch Tuner" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Watch Tuner</h4><p class="text-gray-300">(Coming soon) Tune your instrument from your wrist with smartwatch support.</p></div></div>
           </div>
         </div>
         <!-- Carousel controls -->
@@ -172,15 +219,22 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- CTA -->
-  <section id="download" class="bg-blue-900/90 text-white py-20 rounded-lg">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-4xl font-bold mb-4">Ready to Jam Smarter?</h2>
-      <p class="text-xl mb-8">
-        Join the Google Group for early access and help shape JamBuddy.
+  <section id="download" class="relative bg-gradient-to-br from-blue-900 via-purple-900 to-blue-900 text-white py-24 rounded-xl overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-green-600/20"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
+        Ready to Jam Smarter?
+      </h2>
+      <p class="text-2xl mb-12 text-gray-200 leading-relaxed max-w-2xl mx-auto">
+        Download JamBuddy now and start identifying chords in your favorite songs!
       </p>
-      <a href="/closed-testing" class="bg-white/10 border border-white/30 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition-colors inline-flex items-center justify-center">
-        Join Testing Group
-      </a>
+      <div class="mb-8">
+        <a href="https://play.google.com/store/apps/details?id=com.jambuddy.app&hl=en_US" target="_blank" rel="noopener" class="group inline-flex items-center justify-center bg-gradient-to-r from-white/20 to-white/10 border-2 border-white/30 backdrop-blur-sm text-white px-12 py-6 rounded-2xl font-bold text-xl hover:from-white/30 hover:to-white/20 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-105">
+          <img src="/images/icons/google-play-badge.png" alt="Get it on Google Play" class="h-12 mr-4 transition-transform group-hover:scale-110" />
+          Get on Google Play
+        </a>
+      </div>
+      <p class="text-gray-300 text-lg">Available now • Android 8.0+ • 99¢ one-time purchase</p>
     </div>
   </section>
 </Layout>

@@ -1,10 +1,15 @@
 @import "tailwindcss";
 
 /* Dark theme base styles */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #000000;
   color: #e0e0e0;
   position: relative;
+  line-height: 1.6;
 }
 
 /* Background chord chart - white on dark background */
@@ -20,28 +25,66 @@ body::before {
   background-size: 800px auto;
   background-attachment: fixed;
   background-position: center;
-  opacity: 0.15; /* More visible white chord charts */
+  opacity: 0.08; /* Subtle background pattern */
   z-index: -1;
   filter: invert(1); /* Make the chart white */
 }
 
 /* Add a dark overlay for content */
 .content-overlay {
-  background-color: rgba(0, 0, 0, 0.85);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
-  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.90);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Make all sections with backgrounds clean and minimal */
 section[class*="bg-"] {
-  backdrop-filter: blur(3px);
-  border-radius: 0.5rem;
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
   margin-bottom: 2rem;
 }
 
-/* Increase visual separation for card elements */
-[class*="rounded-lg"], [class*="rounded-2xl"] {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+/* Enhanced visual separation for card elements */
+[class*="rounded-lg"], [class*="rounded-2xl"], [class*="rounded-xl"] {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom gradient text utility */
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff, #a855f7, #3b82f6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Improved hover effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a5568;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
 }
 
 /* Custom color classes for our minimalist dark theme */

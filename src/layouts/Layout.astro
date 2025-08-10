@@ -6,7 +6,7 @@ export interface Props {
   description?: string;
 }
 
-const { title, description = "JamBuddy - Ever wish you had perfect pitch?" } = Astro.props;
+const { title, description = "JamBuddy - Real Time Chord and Key Detection" } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -19,23 +19,23 @@ const { title, description = "JamBuddy - Ever wish you had perfect pitch?" } = A
     <title>{title}</title>
   </head>
   <body class="min-h-screen">
-    <nav class="bg-black shadow-md border-b border-gray-800 backdrop-blur-sm sticky top-0 z-50">
+    <nav class="bg-black/95 shadow-2xl border-b border-gray-700 backdrop-blur-md sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
+        <div class="flex justify-between h-20">
           <div class="flex items-center">
-            <a href="/">
-              <img src="/images/logo/jam_buddy_clear.png" alt="JamBuddy" class="h-8" />
+            <a href="/" class="group flex items-center">
+              <img src="/images/logo/jam_buddy_clear.png" alt="JamBuddy" class="h-10 transition-transform duration-300 group-hover:scale-110" />
             </a>
-          </div>          <div class="flex items-center space-x-8">
-            <a href="/" class="text-gray-300 hover:text-white transition-colors">Home</a>
-            <a href="/collections" class="text-gray-300 hover:text-white transition-colors">Music Collections</a>
-            <a href="/features" class="text-gray-300 hover:text-white transition-colors">Features</a>
-            <a href="/gallery" class="text-gray-300 hover:text-white transition-colors">Gallery</a>
-            <a href="/closed-testing" class="text-gray-300 hover:text-white transition-colors">Join Testing</a>
-            <a href="/about" class="text-gray-300 hover:text-white transition-colors">About</a>
-            <a href="/contact" class="text-gray-300 hover:text-white transition-colors">Contact</a>
-            <a href="https://play.google.com/store/apps/details?id=com.jambuddy.app" class="bg-transparent px-0 py-0 rounded-full flex items-center gap-2">
-              <img src="/images/icons/google-play-badge.png" alt="Get it on Google Play" class="h-10" />
+          </div>          
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="/" class="text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 font-medium">Home</a>
+            <a href="/collections" class="text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 font-medium">Music Collections</a>
+            <a href="/features" class="text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 font-medium">Features</a>
+            <a href="/gallery" class="text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 font-medium">Gallery</a>
+            <a href="/about" class="text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 font-medium">About</a>
+            <a href="/contact" class="text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 font-medium">Contact</a>
+            <a href="https://play.google.com/store/apps/details?id=com.jambuddy.app&hl=en_US" target="_blank" rel="noopener" class="group bg-gradient-to-r from-green-600 to-green-700 text-white px-4 py-2 rounded-xl font-semibold transition-all duration-300 hover:from-green-700 hover:to-green-800 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center">
+              <img src="/images/icons/google-play-badge.png" alt="Get it on Google Play" class="h-8 transition-transform group-hover:scale-110" />
             </a>
           </div>
         </div>
@@ -48,59 +48,62 @@ const { title, description = "JamBuddy - Ever wish you had perfect pitch?" } = A
       </div>
     </main>
 
-    <footer class="bg-gray-900/95 text-white backdrop-blur-sm">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer class="bg-gradient-to-b from-gray-900 to-black text-white backdrop-blur-md border-t border-gray-700">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div class="col-span-2">
-            <h3 class="text-2xl font-bold mb-4">JamBuddy</h3>
-            <p class="text-gray-300 mb-4">
-              Your real-time musical companion. Get perfect chord suggestions and keep your jam sessions flowing smoothly.
+            <div class="flex items-center mb-6">
+              <img src="/images/logo/jam_buddy_clear.png" alt="JamBuddy" class="h-12 mr-4" />
+              <h3 class="text-3xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">JamBuddy</h3>
+            </div>
+            <p class="text-gray-300 mb-8 text-lg leading-relaxed">
+              Android app for real-time chord and key detection, chord charts, tuner, metronome and music library management.
             </p>
-            <div class="flex space-x-4">
-              <a href="https://github.com/stewing-co" class="text-gray-300 hover:text-white transition-colors">
+            <div class="flex space-x-6">
+              <a href="https://github.com/stewing-co" class="group text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-110">
                 <span class="sr-only">GitHub</span>
-                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
                 </svg>
               </a>
-              <a href="https://www.youtube.com/@JamBuddyLive" class="text-gray-300 hover:text-white transition-colors">
+              <a href="https://www.youtube.com/@JamBuddyLive" class="group text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-110">
                 <span class="sr-only">YouTube</span>
-                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                 </svg>
               </a>
-              <a href="https://bsky.app/profile/warpandweftdata.com" class="text-gray-300 hover:text-white transition-colors">
+              <a href="https://bsky.app/profile/warpandweftdata.com" class="group text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-110">
                 <span class="sr-only">Bluesky</span>
-                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z"/>
                 </svg>
               </a>
             </div>
           </div>
           <div>
-            <h4 class="text-lg font-semibold mb-4">Product</h4>            <ul class="space-y-2">
-              <li><a href="/features" class="text-gray-300 hover:text-white transition-colors">Features</a></li>
-              <li><a href="/gallery" class="text-gray-300 hover:text-white transition-colors">Gallery</a></li>
+            <h4 class="text-xl font-bold mb-6 text-white">Product</h4>            
+            <ul class="space-y-4">
+              <li><a href="/features" class="text-gray-300 hover:text-white transition-all duration-300 hover:translate-x-1">Features</a></li>
+              <li><a href="/gallery" class="text-gray-300 hover:text-white transition-all duration-300 hover:translate-x-1">Gallery</a></li>
               <li>
-                <a href="https://play.google.com/store/apps/details?id=com.jambuddy.app" class="text-gray-300 hover:text-white transition-colors flex items-center gap-2">
-                  <img src="/images/icons/google-play-badge.png" alt="Get it on Google Play" class="h-10" />
+                <a href="https://play.google.com/store/apps/details?id=com.jambuddy.app&hl=en_US" target="_blank" rel="noopener" class="group text-gray-300 hover:text-white transition-all duration-300 flex items-center hover:translate-x-1">
+                  <img src="/images/icons/google-play-badge.png" alt="Get it on Google Play" class="h-8 mr-2 transition-transform group-hover:scale-110" />
+                  <span>Android App</span>
                 </a>
               </li>
-              <li><a href="https://play.google.com/store/apps/details?id=com.jambuddy.wear" class="text-gray-300 hover:text-white transition-colors">Wear OS App</a></li>
             </ul>
           </div>
           <div>
-            <h4 class="text-lg font-semibold mb-4">Company</h4>
-            <ul class="space-y-2">
-              <li><a href="/about" class="text-gray-300 hover:text-white transition-colors">About</a></li>
-              <li><a href="/closed-testing" class="text-gray-300 hover:text-white transition-colors">Join Testing</a></li>
-              <li><a href="/contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
-              <li><a href="/privacy" class="text-gray-300 hover:text-white transition-colors">Privacy</a></li>
+            <h4 class="text-xl font-bold mb-6 text-white">Company</h4>
+            <ul class="space-y-4">
+              <li><a href="/about" class="text-gray-300 hover:text-white transition-all duration-300 hover:translate-x-1">About</a></li>
+              <li><a href="/contact" class="text-gray-300 hover:text-white transition-all duration-300 hover:translate-x-1">Contact</a></li>
+              <li><a href="/privacy" class="text-gray-300 hover:text-white transition-all duration-300 hover:translate-x-1">Privacy</a></li>
             </ul>
           </div>
         </div>
-        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-300">
-          <p>&copy; 2025 JamBuddy. All rights reserved.</p>
+        <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+          <p class="text-gray-400 text-lg">&copy; 2025 JamBuddy. All rights reserved.</p>
         </div>
       </div>
     </footer>

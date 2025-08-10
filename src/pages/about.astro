@@ -200,19 +200,20 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- CTA Section -->
-  <section class="py-20 bg-black/80 rounded-lg mt-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Join Alpha Testing</h2>
-      <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-        JamBuddy is still in development. Join our Google Group to get testing access and share your feedback!
+  <section class="relative py-24 bg-gradient-to-br from-blue-900 via-purple-900 to-blue-900 rounded-xl mt-8 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-green-600/20"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-8 bg-gradient-to-r from-white via-blue-100 to-green-100 bg-clip-text text-transparent">Get JamBuddy Now</h2>
+      <p class="text-xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed">
+        JamBuddy is now available! Download the app and start learning your favorite songs today.
       </p>
-      <div class="flex flex-wrap gap-4 justify-center">
-        <a href="/closed-testing" class="bg-gray-800 border border-gray-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-700 transition-colors flex items-center">
-          <img src="/images/icons/google-play-badge.png" alt="Get it on Google Play" class="h-10 mr-2" />
-          Join Testing Group
+      <div class="flex flex-wrap gap-6 justify-center">
+        <a href="https://play.google.com/store/apps/details?id=com.jambuddy.app&hl=en_US" target="_blank" rel="noopener" class="group bg-gradient-to-r from-white/20 to-white/10 border-2 border-white/30 backdrop-blur-sm text-white px-10 py-5 rounded-2xl font-bold text-xl hover:from-white/30 hover:to-white/20 transition-all duration-300 flex items-center shadow-2xl transform hover:scale-105">
+          <img src="/images/icons/google-play-badge.png" alt="Get it on Google Play" class="h-12 mr-4 transition-transform group-hover:scale-110" />
+          Get on Google Play
         </a>
-        <a href="/contact" class="bg-gray-800 border border-gray-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-700 transition-colors flex items-center">
-          <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <a href="/contact" class="bg-gray-800/80 border-2 border-gray-600 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:bg-gray-700/80 hover:border-gray-500 transition-all duration-300 flex items-center backdrop-blur-sm transform hover:scale-105">
+          <svg class="w-8 h-8 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
           </svg>
           Send Feedback
