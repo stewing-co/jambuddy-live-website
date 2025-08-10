@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="JamBuddy - Your Real-time Jam Session Companion">
+<Layout title="JamBuddy - Music Tools for Musicians & Teachers">
   <!-- Hero Section -->
   <section class="bg-black text-white rounded-lg shadow-lg border border-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -10,11 +10,12 @@ import Layout from '../layouts/Layout.astro';
         <div class="mb-8 flex justify-center">
           <img src="/images/logo/jam_buddy_clear.png" alt="JamBuddy Logo" class="w-48" />
         </div>
-        <h1 class="text-5xl md:text-6xl font-bold mb-4 text-gray-100">Listen, Learn, Write</h1>
-        <p class="text-2xl text-gray-300 max-w-2xl mx-auto mb-4">Everything you need to jam with confidence</p>
+        <h1 class="text-5xl md:text-6xl font-bold mb-4 text-gray-100">JamBuddy – Music Tools</h1>
+        <p class="text-2xl text-gray-300 max-w-2xl mx-auto mb-4">The ultimate music practice tool for musicians and music teachers</p>
+        <p class="text-lg text-gray-400 max-w-3xl mx-auto mb-6">With real-time chord recognition, powerful practice features, and complete song organization, JamBuddy helps you learn songs faster, teach more effectively, and perform with confidence.</p>
         <span class="inline-block bg-yellow-400 text-black font-bold px-4 py-2 rounded-lg shadow mb-6">
-          JamBuddy will <u>never</u> have ads. One-time price: <b>99¢</b>.<br />
-          Runs 100% on your phone—no internet required.
+          Works offline – no ads, one-time purchase<br />
+          Minimal latency chord recognition – Multi-instrument support
         </span>
         <!-- CTA buttons -->
         <div class="flex flex-col sm:flex-row gap-6 justify-center mb-10">
@@ -48,9 +49,9 @@ import Layout from '../layouts/Layout.astro';
               <rect x="20" y="10" width="2" height="4" rx="1" />
             </svg>
           </div>
-          <h3 class="text-2xl font-bold mb-4 text-white">Listen</h3>
-          <p class="text-gray-300 mb-4">Real-time chord detection with Circle of Fifths, chord charts, next chord predictions, and chromatic tuner.</p>
-          <div class="text-sm text-blue-300">✓ Microphone chord detection<br />✓ Key visualization<br />✓ Chord predictions</div>
+          <h3 class="text-2xl font-bold mb-4 text-white">🎧 Real-Time Chord Recognition</h3>
+          <p class="text-gray-300 mb-4">Detects chords instantly through your device's microphone with Circle of Fifths visualization and next chord prediction for jamming and improvisation.</p>
+          <div class="text-sm text-blue-300">✓ Built-in chromatic tuner<br />✓ Key & chord visualization<br />✓ Minimal latency recognition</div>
         </div>
         
         <!-- Learn -->
@@ -61,9 +62,9 @@ import Layout from '../layouts/Layout.astro';
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
             </svg>
           </div>
-          <h3 class="text-2xl font-bold mb-4 text-white">Learn</h3>
-          <p class="text-gray-300 mb-4">Get it under your fingers with a metronome with strum patterns, chord library, and sample tunes.</p>
-          <div class="text-sm text-purple-300">✓ Metronome & rhythms<br />✓ Chord library<br />✓ Tunes for today</div>
+          <h3 class="text-2xl font-bold mb-4 text-white">📚 Practice Tools for Every Skill Level</h3>
+          <p class="text-gray-300 mb-4">Visual metronome with customizable light pulses, strum pattern display, and audio speed control – slow down without changing pitch.</p>
+          <div class="text-sm text-purple-300">✓ Smart looping for tricky parts<br />✓ Multiple themes & layouts<br />✓ Multi-instrument support</div>
         </div>
         
         <!-- Write -->
@@ -73,9 +74,9 @@ import Layout from '../layouts/Layout.astro';
               <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
             </svg>
           </div>
-          <h3 class="text-2xl font-bold mb-4 text-white">Write</h3>
-          <p class="text-gray-300 mb-4">Create your own songs with chord and lyrics editors, sheet music integration, and audio recording. Export to JSON.</p>
-          <div class="text-sm text-green-300">✓ Song creation tools<br />✓ Audio recording<br />✓ JSON export</div>
+          <h3 class="text-2xl font-bold mb-4 text-white">✍️ Organize Your Songs & Lessons</h3>
+          <p class="text-gray-300 mb-4">Store sheet music (PDF/images), backing tracks, lyrics, and chord charts. Add custom notes and annotations with fast access to large libraries.</p>
+          <div class="text-sm text-green-300">✓ Works offline completely<br />✓ Flexible layouts for phones & tablets<br />✓ No ads, one-time purchase</div>
         </div>
       </div>
     </div>
@@ -91,14 +92,16 @@ import Layout from '../layouts/Layout.astro';
             <!-- All Features Images -->
             <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/chord-browser-metronome.png" alt="Chord Browser & Metronome" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Chord Browser & Metronome</h4><p class="text-gray-300">Browse chords and practice with the built-in metronome for perfect timing.</p></div></div>
             <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/chord-filter.png" alt="Chord Filter" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Instant Chord Charts</h4><p class="text-gray-300">Instant chord charts and filtering for any detected chord.</p></div></div>
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/circle-guitar-chords-light.png" alt="Circle of Fifths" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Circle of Fifths</h4><p class="text-gray-300">Circle of Fifths with real-time chord detection and key visualization.</p></div></div>
+            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/2025-08-10-61.png" alt="Circle of Fifths Detection" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Real-time Circle of Fifths</h4><p class="text-gray-300">Live chord detection with Circle of Fifths visualization showing key relationships and chord progressions.</p></div></div>
+            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/2025-08-10-58.png" alt="Chord Library Browser" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Comprehensive Chord Library</h4><p class="text-gray-300">Browse and learn chord fingerings for guitar, ukulele, mandolin and more with detailed chord charts.</p></div></div>
+            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/2025-08-10-56.png" alt="Song Manager" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Song Library Management</h4><p class="text-gray-300">Organize and manage your personal collection of songs with lyrics, chords, and backing tracks.</p></div></div>
             <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/circle-tunes.png" alt="Split Screen" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Split Screen</h4><p class="text-gray-300">Split screen or full screen to get you the info you want.</p></div></div>
             <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/key-lock.png" alt="Key Lock" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Key Lock</h4><p class="text-gray-300">Lock in your key and stay in tune throughout your session.</p></div></div>
             <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/logo-circle-next-chords.png" alt="Next Chords" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Next Chord Predictions</h4><p class="text-gray-300">Next chord predictions keep you ahead of the progression.</p></div></div>
             <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/metronome-strum-patterns.png" alt="Metronome & Strum Patterns" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Metronome & Strum Patterns</h4><p class="text-gray-300">Practice strum patterns and rhythms with the metronome.</p></div></div>
             <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/tablet_full_screen_lyrics.png" alt="Full Screen Lyrics" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Full Screen Lyrics</h4><p class="text-gray-300">Full-screen lyrics display for easy reading while you play.</p></div></div>
             <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/tablet_lyrics_and_recording.png" alt="Lyrics & Recording" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Lyrics & Recording</h4><p class="text-gray-300">Record your performance while following along with lyrics.</p></div></div>
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/tuner.png" alt="Tuner" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Chromatic Tuner</h4><p class="text-gray-300">Chromatic tuner for precise instrument tuning.</p></div></div>
+            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/2025-08-10-70.png" alt="Chromatic Tuner & Metronome" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Chromatic Tuner & Visual Metronome</h4><p class="text-gray-300">Precise chromatic tuner with visual feedback and integrated metronome with customizable strum patterns.</p></div></div>
             <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/tunes-chords-lyrics.png" alt="Tunes, Chords & Lyrics" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Tunes, Chords & Lyrics</h4><p class="text-gray-300">A few songs to fit the moment with tabs, chords, lyrics, sheet music and audio courtesy of Aunt Jan.</p></div></div>
             <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/tunes-sheet-audio.png" alt="Sheet Music & Audio" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Sheet Music & Audio</h4><p class="text-gray-300">Record audio and attach sheet music to your compositions.</p></div></div>
             <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/tunes_manager_chord_editor.png" alt="Chord Editor" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Chord Editor</h4><p class="text-gray-300">Edit chords and arrangements in your personal song manager.</p></div></div>
@@ -139,15 +142,23 @@ import Layout from '../layouts/Layout.astro';
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="p-6 rounded-lg bg-gray-800 shadow-lg">
           <h3 class="text-xl font-bold text-white mb-3">🎯 Never Miss a Chord</h3>
-          <p class="text-gray-300">Real-time detection keeps you locked in during any jam session</p>
+          <p class="text-gray-300">Real-time detection with minimal latency keeps you locked in during any jam session</p>
         </div>
         
         <div class="p-6 rounded-lg bg-gray-800 shadow-lg">
           <h3 class="text-xl font-bold text-white mb-3">🎵 Complete Learning Suite</h3>
-          <p class="text-gray-300">Metronome, chord library, and traditional tunes all in one app</p>
+          <p class="text-gray-300">Visual metronome, strum patterns, chord library, and built-in tuner all in one app</p>
         </div>
         
         <div class="p-6 rounded-lg bg-gray-800 shadow-lg">
+          <h3 class="text-xl font-bold text-white mb-3">🎸 Multi-Instrument Support</h3>
+          <p class="text-gray-300">Supports guitar, bass, ukulele, mandolin & more with optimized chord visualization</p>
+        </div>
+        
+        <div class="p-6 rounded-lg bg-gray-800 shadow-lg">
+          <h3 class="text-xl font-bold text-white mb-3">📱 Works Completely Offline</h3>
+          <p class="text-gray-300">No internet required, no ads, one-time purchase with support for large music libraries</p>
+        </div>
           <h3 class="text-xl font-bold text-white mb-3">✍️ Create Your Own</h3>
           <p class="text-gray-300">Write, record, and organize your original songs with full editing tools</p>
         </div>
@@ -294,6 +305,36 @@ import Layout from '../layouts/Layout.astro';
     bindEvents() {
       this.prevBtn?.addEventListener('click', () => this.prevSlide());
       this.nextBtn?.addEventListener('click', () => this.nextSlide());
+      
+      // Add touch support for mobile
+      let startX = 0;
+      let currentX = 0;
+      let isDragging = false;
+      
+      this.track.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+      });
+      
+      this.track.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        currentX = e.touches[0].clientX;
+        e.preventDefault(); // Prevent scrolling
+      });
+      
+      this.track.addEventListener('touchend', () => {
+        if (!isDragging) return;
+        isDragging = false;
+        
+        const diff = startX - currentX;
+        if (Math.abs(diff) > 50) { // Minimum swipe distance
+          if (diff > 0) {
+            this.nextSlide();
+          } else {
+            this.prevSlide();
+          }
+        }
+      });
     }
     
     nextSlide() {
