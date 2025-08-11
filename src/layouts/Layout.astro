@@ -35,6 +35,8 @@ const { title, description = "JamBuddy - Tools for Musicians" } = Astro.props;
               <img src="/images/logo/jam_buddy_clear.png" alt="JamBuddy" class="h-10 transition-transform duration-300 group-hover:scale-110" />
             </a>
           </div>          
+          
+          <!-- Desktop Navigation -->
           <div class="hidden md:flex items-center space-x-8">
             <a href="/" class="text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 font-medium">Home</a>
             <a href="/collections" class="text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 font-medium">Music Collections</a>
@@ -44,6 +46,31 @@ const { title, description = "JamBuddy - Tools for Musicians" } = Astro.props;
             <a href="/contact" class="text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 font-medium">Contact</a>
             <a href="https://play.google.com/store/apps/details?id=com.jambuddy.app&hl=en_US" target="_blank" rel="noopener" class="group bg-gradient-to-r from-green-600 to-green-700 text-white px-4 py-2 rounded-xl font-semibold transition-all duration-300 hover:from-green-700 hover:to-green-800 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center">
               <img src="/images/icons/google-play-badge.png" alt="Get it on Google Play" class="h-8 transition-transform group-hover:scale-110" />
+            </a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none focus:text-white">
+              <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                <path class="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                <path class="close-icon hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden">
+          <div class="px-2 pt-2 pb-3 space-y-1 bg-black/95 border-t border-gray-700">
+            <a href="/" class="block px-3 py-2 text-gray-300 hover:text-white transition-all duration-300 font-medium">Home</a>
+            <a href="/collections" class="block px-3 py-2 text-gray-300 hover:text-white transition-all duration-300 font-medium">Music Collections</a>
+            <a href="/features" class="block px-3 py-2 text-gray-300 hover:text-white transition-all duration-300 font-medium">Features</a>
+            <a href="/gallery" class="block px-3 py-2 text-gray-300 hover:text-white transition-all duration-300 font-medium">Gallery</a>
+            <a href="/about" class="block px-3 py-2 text-gray-300 hover:text-white transition-all duration-300 font-medium">About</a>
+            <a href="/contact" class="block px-3 py-2 text-gray-300 hover:text-white transition-all duration-300 font-medium">Contact</a>
+            <a href="https://play.google.com/store/apps/details?id=com.jambuddy.app&hl=en_US" target="_blank" rel="noopener" class="block mx-3 my-2 bg-gradient-to-r from-green-600 to-green-700 text-white px-4 py-2 rounded-xl font-semibold text-center">
+              Download App
             </a>
           </div>
         </div>
@@ -115,5 +142,30 @@ const { title, description = "JamBuddy - Tools for Musicians" } = Astro.props;
         </div>
       </div>
     </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.querySelector('.menu-icon');
+        const closeIcon = document.querySelector('.close-icon');
+
+        mobileMenuButton.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+          menuIcon.classList.toggle('hidden');
+          closeIcon.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+          });
+        });
+      });
+    </script>
   </body>
 </html>
