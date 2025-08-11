@@ -1,7 +1,7 @@
 {
   "name": "JamBuddy",
   "short_name": "JamBuddy",
-  "description": "Real-time chord recognition and music practice tools",
+  "description": "Tools for Musicians",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",
