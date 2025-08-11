@@ -15,6 +15,19 @@ const { title, description = "JamBuddy - Tools for Musicians" } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://jambuddy.app/" />
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content="https://jambuddy.app/" />
+  <meta property="og:image" content="https://jambuddy.app/images/logo/jam_buddy_clear.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content="https://jambuddy.app/images/logo/jam_buddy_clear.png" />
+    
+  <!-- TODO: Add structured data (SoftwareApplication) as a later enhancement -->
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -27,6 +40,7 @@ const { title, description = "JamBuddy - Tools for Musicians" } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="min-h-screen">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-black text-white px-4 py-2 rounded z-50">Skip to content</a>
     <nav class="bg-black/95 shadow-2xl border-b border-gray-700 backdrop-blur-md sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-20">

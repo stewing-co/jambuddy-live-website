@@ -4,51 +4,49 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="About - JamBuddy" description="Learn about the story behind JamBuddy and our mission to enhance musical creativity and collaboration.">
   <!-- Hero Section -->
-  <section class="bg-gray-900 text-white py-20 rounded-lg">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold mb-6">About JamBuddy</h1>
-      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-        The ultimate music practice tool for musicians and music teachers - with real-time chord recognition, powerful practice features, and complete song organization
+  <section class="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white py-20 rounded-lg relative overflow-hidden" aria-labelledby="about-heading">
+    <div class="absolute inset-0 pointer-events-none opacity-30 bg-[radial-gradient(circle_at_30%_20%,rgba(60,150,255,0.25),transparent_60%),radial-gradient(circle_at_70%_70%,rgba(0,200,140,0.2),transparent_60%)]"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 id="about-heading" class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-green-100 bg-clip-text text-transparent">About JamBuddy</h1>
+      <p class="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+        JamBuddy is a focused, distraction‑free practice companion that helps musicians <span class="text-white font-semibold">hear, understand, and create</span> music faster. It blends instant chord recognition, visual rhythm guidance, and organized song & lesson management — built to work fully offline with total privacy.
       </p>
-      <div class="mt-6 mb-2 text-center">
-        <span class="inline-block bg-yellow-400 text-black font-bold px-4 py-2 rounded-lg shadow">
-          Works offline – no ads, one-time purchase<br />
-          Minimal latency chord recognition – Multi-instrument support<br />
-          Built for musicians & teachers who want to <b>learn songs faster and teach more effectively</b>
-        </span>
+      <div class="mt-10 flex flex-wrap justify-center gap-3 text-sm" aria-label="Key principles">
+        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-200">Offline • No Ads</span>
+        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-200">One‑Time Purchase</span>
+        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-200">Real‑Time Chord Engine</span>
+        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-200">Multi‑Instrument</span>
+        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-200">Privacy First</span>
       </div>
     </div>
   </section>
 
   <!-- Our Story -->
-  <section class="py-20 bg-gray-900 rounded-lg">
+  <section class="py-20 bg-gray-900 rounded-lg" aria-labelledby="story-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">My Story</h2>
-          <div class="prose prose-lg text-gray-300">
-            <p class="mb-6">
-              Hey! I'm Steve Ewing, the solo developer behind JamBuddy. I built this app because I'm learning guitar myself, having just picked up the ukulele last year. As a data scientist who's passionate about music, I wanted a tool that could help me identify chords in songs I'm trying to learn.
-            </p>
-            <p class="mb-6">
-              While I'm comfortable with data analysis and machine learning, app development is completely new territory for me. JamBuddy represents my first foray into mobile development, applying my data science skills to audio analysis while learning Android development from scratch.
-            </p>
-            <p>
-              JamBuddy is my attempt to solve a real problem I faced - a simple app that listens to music and tells you what chords are being played, whether you're practicing an instrument or just trying to figure out your favorite song. Perfect for beginners like me!
-            </p>
+          <h2 id="story-heading" class="text-3xl md:text-4xl font-bold text-white mb-6">Why I Built JamBuddy</h2>
+          <div class="prose prose-invert prose-lg text-gray-300 max-w-none">
+            <p class="mb-6">I started learning songs the slow, frustrating way—pausing videos, guessing chords, scribbling messy progressions, and losing momentum. Existing apps either locked features behind subscriptions, harvested data, or buried the core tools under clutter.</p>
+            <p class="mb-6">So I built what I wished existed: a <strong>fast, offline, no‑nonsense environment</strong> that helps you identify chords as you listen, internalize rhythm visually, loop tricky parts, and log ideas the moment they hit. Teachers began using early builds in group settings and asked for organizational touches—so JamBuddy grew to support both personal practice and classroom flow.</p>
+            <p class="mb-0">JamBuddy is still evolving weekly. Every refinement is guided by a simple question: <em>Does this help someone learn or teach music faster with less friction?</em></p>
           </div>
         </div>
-        <div class="bg-gray-800 rounded-2xl p-8 border border-purple-500/20">
-          <div class="text-center">
-            <div class="w-24 h-24 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
-              </svg>
+        <div class="bg-gray-800 rounded-2xl p-8 border border-purple-500/20 relative overflow-hidden">
+          <div class="absolute inset-0 opacity-10 bg-gradient-to-br from-purple-500 via-blue-500 to-green-500"></div>
+          <div class="relative text-center">
+            <div class="w-24 h-24 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+              <span class="text-white text-3xl font-bold">JB</span>
             </div>
-            <h3 class="text-2xl font-bold text-white mb-4">My Goal</h3>
-            <p class="text-gray-300">
-              To make learning instruments easier and more fun by helping people quickly identify chords in their favorite songs without needing years of ear training.
-            </p>
+            <h3 class="text-2xl font-bold text-white mb-4">The Goal</h3>
+            <p class="text-gray-300 leading-relaxed">Remove friction between <em>hearing</em> something inspiring and <em>turning it into music you can play or teach</em>. JamBuddy should feel like a minimal, powerful instrument—not a gamified platform competing for attention.</p>
+            <div class="mt-6 grid grid-cols-2 gap-4 text-sm text-left">
+              <div class="bg-black/30 rounded-lg p-3 border border-white/5"><span class="block text-white font-semibold mb-1">No Dark Patterns</span><span class="text-gray-400">Own it once. No upsells.</span></div>
+              <div class="bg-black/30 rounded-lg p-3 border border-white/5"><span class="block text-white font-semibold mb-1">Local Processing</span><span class="text-gray-400">Audio stays on device.</span></div>
+              <div class="bg-black/30 rounded-lg p-3 border border-white/5"><span class="block text-white font-semibold mb-1">Fast Feedback</span><span class="text-gray-400">Low‑latency detection.</span></div>
+              <div class="bg-black/30 rounded-lg p-3 border border-white/5"><span class="block text-white font-semibold mb-1">Teacher Friendly</span><span class="text-gray-400">Organize songs & sets.</span></div>
+            </div>
           </div>
         </div>
       </div>
@@ -56,80 +54,53 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- App Principles -->
-  <section class="py-20 bg-gray-900/80 rounded-lg mt-8">
+  <section class="py-20 bg-gray-900/80 rounded-lg mt-8" aria-labelledby="principles-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">App Principles</h2>
-        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-          What I care about when making JamBuddy
-        </p>
+        <h2 id="principles-heading" class="text-3xl md:text-4xl font-bold text-white mb-4">Product Principles</h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">Every design & feature decision filters through these guardrails.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="text-center bg-gray-800 p-6 rounded-xl">
-          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-            </svg>
-          </div>
+        <div class="text-center bg-gray-800 p-6 rounded-xl border border-blue-500/20">
+          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 font-bold text-lg text-white">1</div>
           <h3 class="text-xl font-bold text-white mb-4">Beginner Friendly</h3>
-          <p class="text-gray-300">
-            Made for people like me who are just starting out and want to learn their favorite songs without years of ear training.
-          </p>
+          <p class="text-gray-300">Fast wins build momentum: instant chords, clear rhythm, zero setup overhead. Learn songs—not software.</p>
         </div>
 
-        <div class="text-center bg-gray-800 p-6 rounded-xl">
-          <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
-            </svg>
-          </div>
+        <div class="text-center bg-gray-800 p-6 rounded-xl border border-green-500/20">
+          <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6 font-bold text-lg text-white">2</div>
           <h3 class="text-xl font-bold text-white mb-4">Simple & Useful</h3>
-          <p class="text-gray-300">
-            Focused on what matters: quick, accurate chord detection for any music you play or hear.
-          </p>
+          <p class="text-gray-300">No dashboards, feed algorithms, or gamified clutter. Only the tools that shorten the gap between listening and playing.</p>
         </div>
 
-        <div class="text-center bg-gray-800 p-6 rounded-xl">
-          <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-            </svg>
-          </div>
+        <div class="text-center bg-gray-800 p-6 rounded-xl border border-purple-500/20">
+          <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 font-bold text-lg text-white">3</div>
           <h3 class="text-xl font-bold text-white mb-4">Constantly Improving</h3>
-          <p class="text-gray-300">
-            JamBuddy evolves every week, and your feedback helps shape its future.
-          </p>
+          <p class="text-gray-300">Micro-iterations weekly: performance tweaks, detection accuracy boosts, teacher workflow refinements.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- About the Developer -->
-  <section class="py-20 bg-gray-900 rounded-lg mt-8">
+  <section class="py-20 bg-gray-900 rounded-lg mt-8" aria-labelledby="developer-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">About the Developer</h2>
-        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-          Just a student who loves music and coding
-        </p>
+        <h2 id="developer-heading" class="text-3xl md:text-4xl font-bold text-white mb-4">About the Developer</h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">Student, guitarist-by-obsession, and builder of tools that reduce friction for creative learners.</p>
       </div>
 
       <div class="flex flex-col md:flex-row items-center justify-center gap-12">
-        <div class="bg-gray-800 p-8 rounded-xl border border-blue-500/20 max-w-2xl">
-          <div class="flex flex-col md:flex-row gap-8 items-center text-left">
-            <div class="w-32 h-32 bg-gradient-to-br from-gray-600 to-gray-800 rounded-full flex items-center justify-center flex-shrink-0">
-              <span class="text-3xl font-bold text-white">SE</span>
+        <div class="bg-gray-800 p-8 rounded-xl border border-blue-500/20 max-w-3xl">
+          <div class="flex flex-col md:flex-row gap-8 items-start text-left">
+            <div class="w-32 h-32 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+              <span class="text-white text-3xl font-bold">JB</span>
             </div>
-            <div>
-              <h3 class="text-2xl font-bold text-white mb-2">Steve Ewing</h3>
-              <p class="text-gray-400 font-medium mb-4">Data Scientist & Music Enthusiast</p>
-              <p class="text-gray-300 mb-3">
-                I work as a data scientist and love exploring how machine learning can help musicians. JamBuddy is my first mobile app after picking up ukulele and guitar.
-              </p>
-              <p class="text-gray-300">
-                When I'm not coding or practicing chords, I'm studying music theory and testing new ways to analyze audio.
-              </p>
+            <div class="text-gray-300 leading-relaxed space-y-4">
+              <p>I treat JamBuddy like an instrument. Every millisecond of latency removed and every click saved compounds into smoother practice and teaching sessions. I publish frequent updates and respond directly to feedback—nothing is filtered through support tiers.</p>
+              <p>If you’re an educator piloting JamBuddy in a classroom or ensemble setting, I’d love to hear how students are using it and what would accelerate your workflow next.</p>
+              <p class="text-sm text-gray-500">Want to reach out? Use the <a href="/contact" class="text-blue-400 hover:text-blue-300 underline">contact page</a> or email directly.</p>
             </div>
           </div>
         </div>
@@ -138,62 +109,48 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- App Features -->
-  <section class="py-20 bg-gray-900 text-white rounded-lg mt-8">
+  <section class="py-20 bg-gray-900 text-white rounded-lg mt-8" aria-labelledby="capabilities-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">What JamBuddy Can Do</h2>
-        <p class="text-xl text-gray-300">
-          A few key tools that take the guesswork out of learning
-        </p>
+        <h2 id="capabilities-heading" class="text-3xl md:text-4xl font-bold mb-4">Core Capabilities</h2>
+        <p class="text-xl text-gray-300">Foundational tools that speed up the listen → learn → create cycle.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
-        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 text-left">
           <div class="w-16 h-16 bg-gray-700 rounded-full mx-auto mb-4 flex items-center justify-center">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
             </svg>
           </div>
           <h3 class="text-2xl font-bold mb-2">🎧 Real-Time Chord Recognition</h3>
-          <p class="text-gray-300">
-            Detects chords instantly through your device's microphone with Circle of Fifths visualization, next chord prediction for jamming, and built-in chromatic tuner for guitar, bass, ukulele, mandolin & more
-          </p>
+          <p class="text-gray-300">Low‑latency detection engine with Circle of Fifths overlay, next‑chord predictions, and integrated tuner. Supports guitar, bass, ukulele, mandolin & more.</p>
         </div>
         
-        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 text-left">
           <div class="w-16 h-16 bg-gray-700 rounded-full mx-auto mb-4 flex items-center justify-center">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
           </div>
-          <h3 class="text-2xl font-bold mb-2">📚 Practice Tools for Every Skill Level</h3>
-          <p class="text-gray-300">
-            Visual metronome with customizable light pulses, strum pattern display to improve timing & rhythm, audio speed control – slow down without changing pitch, and smart looping for tricky parts
-          </p>
+          <h3 class="text-2xl font-bold mb-2">📚 Practice Tools</h3>
+          <p class="text-gray-300">Visual metronome pulses, strum pattern guidance, tempo adjust without pitch shift, and precision looping for difficult measures.</p>
         </div>
         
-        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 text-left">
           <div class="w-16 h-16 bg-gray-700 rounded-full mx-auto mb-4 flex items-center justify-center">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
             </svg>
           </div>
-          <h3 class="text-2xl font-bold mb-2">✍️ Organize Your Songs & Lessons</h3>
-          <p class="text-gray-300">
-            Store sheet music (PDF/images), backing tracks, lyrics, and chord charts. Add custom notes and annotations with fast access to large libraries. Multiple themes & custom color schemes with flexible layouts for phones and tablets.
-          </p>
+          <h3 class="text-2xl font-bold mb-2">✍️ Song & Lesson Organization</h3>
+          <p class="text-gray-300">Store lyrics, chord progressions, sheet references, tempo notes, and recordings in one consistent structure.</p>
         </div>
         
-        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
-          <div class="w-16 h-16 bg-gray-700 rounded-full mx-auto mb-4 flex items-center justify-center">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
-            </svg>
-          </div>
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 text-left">
+          <div class="w-16 h-16 bg-gray-700 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
           <h3 class="text-2xl font-bold mb-2">🎸 Multi-Instrument Support</h3>
-          <p class="text-gray-300">
-            Supports guitar, bass, ukulele, mandolin, and baritone ukulele with optimized chord visualization for each instrument. Built for musicians & teachers who want professional-grade tools that work offline.
-          </p>
+          <p class="text-gray-300">Switch seamlessly across guitar, ukulele, mandolin, banjo and more with accurate chord shapes & tuning contexts.</p>
         </div>
       </div>
     </div>

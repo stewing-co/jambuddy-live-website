@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="JamBuddy - Real-Time Tools for Musicians">
   <!-- Hero Section -->
-  <section class="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white rounded-xl shadow-2xl border border-gray-700 overflow-hidden">
+  <section class="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white rounded-xl shadow-2xl border border-gray-700 overflow-hidden" aria-labelledby="hero-heading">
     <!-- Background pattern overlay -->
     <div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-green-600/10"></div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -15,11 +15,11 @@ import Layout from '../layouts/Layout.astro';
             <div class="absolute -inset-4 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-green-600/20 rounded-full blur-xl"></div>
           </div>
         </div>
-        <h1 class="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-green-100 bg-clip-text text-transparent leading-tight">
-          Listen, Learn, Write
+        <h1 id="hero-heading" class="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-green-100 bg-clip-text text-transparent leading-tight">
+          Hear It. Understand It. Create It.
         </h1>
-        <p class="text-2xl md:text-3xl text-gray-200 max-w-3xl mx-auto mb-12 leading-relaxed">
-          Real-time tools for musicians
+        <p class="text-2xl md:text-3xl text-gray-200 max-w-3xl mx-auto mb-8 leading-relaxed">
+          Instant chord detection, visual rhythm coaching & songwriting tools—offline, private, one-time purchase.
         </p>
         <!-- CTA buttons -->
         <div class="flex flex-col sm:flex-row gap-6 justify-center mb-12">
@@ -27,20 +27,36 @@ import Layout from '../layouts/Layout.astro';
             <img src="/images/icons/google-play-badge.png" alt="Get it on Google Play" class="h-12 mr-3 transition-transform group-hover:scale-110" />
             Download Now
           </a>
-          <a href="/features" class="border-2 border-gray-300 text-gray-300 px-10 py-5 rounded-xl font-bold text-xl hover:bg-gray-300 hover:text-black transition-all duration-300 flex items-center justify-center backdrop-blur-sm hover:backdrop-blur-md transform hover:scale-105">
-            Learn More
+          <a href="/features" class="border-2 border-gray-300 text-gray-300 px-10 py-5 rounded-xl font-bold text-xl hover:bg-gray-300 hover:text-black transition-all duration-300 flex items-center justify-center backdrop-blur-sm hover:backdrop-blur-md transform hover:scale-105" aria-label="Explore all JamBuddy features">
+            Explore Features
+          </a>
+          <a href="#education" class="border-2 border-green-500 text-green-400 px-10 py-5 rounded-xl font-bold text-xl hover:bg-green-500 hover:text-black transition-all duration-300 flex items-center justify-center backdrop-blur-sm hover:backdrop-blur-md transform hover:scale-105" aria-label="See educator benefits">
+            For Educators
           </a>
         </div>
+        <!-- Trust Badges -->
+        <div class="flex flex-wrap justify-center gap-4 mb-10" aria-label="Key benefits">
+          <div class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-200 flex items-center gap-2"><span class="w-2 h-2 bg-green-400 rounded-full"></span> Offline • No Ads</div>
+          <div class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-200 flex items-center gap-2"><span class="w-2 h-2 bg-blue-400 rounded-full"></span> Real-Time Chord Detection</div>
+          <div class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-200 flex items-center gap-2"><span class="w-2 h-2 bg-purple-400 rounded-full"></span> Multi-Instrument</div>
+          <div class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-200 flex items-center gap-2"><span class="w-2 h-2 bg-yellow-400 rounded-full"></span> One-Time Purchase</div>
+          <div class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-200 flex items-center gap-2"><span class="w-2 h-2 bg-pink-400 rounded-full"></span> Privacy Friendly</div>
+        </div>
+        <!-- Teacher Testimonial -->
+        <figure class="max-w-2xl mx-auto">
+          <blockquote class="text-lg italic text-gray-300">“JamBuddy lets my students see and correct chords instantly—prep time dropped, engagement went up.”</blockquote>
+          <figcaption class="mt-3 text-sm text-gray-400">— Sarah M., High School Guitar Instructor</figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
   <!-- Three Core Features -->
-  <section class="py-24">
+  <section class="py-24" aria-labelledby="core-pillars-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Jam in Real-Time</h2>
-        <p class="text-xl text-gray-300 max-w-3xl mx-auto">Advanced chord detection, built-in tuner, visual metronome, and comprehensive music tools—all working seamlessly offline</p>
+        <h2 id="core-pillars-heading" class="text-4xl md:text-5xl font-bold text-white mb-6">Turn Any Song Into a Learning Session</h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">Detect chords, internalize rhythm, and capture ideas—fast, accurate, distraction‑free.</p>
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -109,51 +125,51 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Feature Showcase with Carousels -->
-  <section class="py-20 bg-gray-900 rounded-lg mt-8">
+  <section class="py-20 bg-gray-900 rounded-lg mt-8" aria-labelledby="carousel-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 text-center">See JamBuddy in Action</h2>
+      <h2 id="carousel-heading" class="text-3xl md:text-4xl font-bold text-white mb-12 text-center">See JamBuddy in Action</h2>
       <div class="relative max-w-4xl mx-auto">
         <div class="carousel-container overflow-hidden rounded-lg">
-          <div class="carousel-track flex transition-transform duration-300" id="main-carousel">
+          <div class="carousel-track flex transition-transform duration-300" id="main-carousel" role="region" aria-label="Feature screenshots">
             <!-- All Features Images -->
             <!-- Real-time Chord Recognition -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/circle_and_song_chords.png" alt="Real-time Chord Recognition" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Real-time Chord Recognition</h4><p class="text-gray-300">Live chord detection with Circle of Fifths visualization showing key relationships and chord progressions.</p></div></div>
+            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/circle_and_song_chords.png" alt="Real-time chord recognition interface" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Real-Time Chord Recognition</h4><p class="text-gray-300">Live chord detection with Circle of Fifths visualization showing key relationships and chord progressions.</p></div></div>
             
             <!-- Comprehensive Tuner -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/tuner.png" alt="Chromatic Tuner" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Chromatic Tuner</h4><p class="text-gray-300">Precise chromatic tuner with visual feedback for all stringed instruments.</p></div></div>
+            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/tuner.png" alt="Chromatic tuner interface" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Chromatic Tuner</h4><p class="text-gray-300">Precise chromatic tuner with visual feedback for all stringed instruments.</p></div></div>
             
             <!-- Chord Library Browser -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/chord_browser_chort_chart.png" alt="Chord Library Browser" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Comprehensive Chord Library</h4><p class="text-gray-300">Browse and learn chord fingerings for guitar, ukulele, mandolin and more with detailed chord charts.</p></div></div>
+            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/chord_browser_chord_chart.png" alt="Chord library browser screen" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Comprehensive Chord Library</h4><p class="text-gray-300">Browse and learn chord fingerings for guitar, ukulele, mandolin and more with detailed chord charts.</p></div></div>
             
             <!-- Song Manager -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/tunes_manager_list.png" alt="Song Library Management" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Song Library Management</h4><p class="text-gray-300">Organize and manage your personal collection of songs with lyrics, chords, and backing tracks.</p></div></div>
+            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/tunes_manager_list.png" alt="Song library management list" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Song Library Management</h4><p class="text-gray-300">Organize and manage your personal collection of songs with lyrics, chords, and backing tracks.</p></div></div>
             
             <!-- Metronome -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/metronome_and_next_chord.png" alt="Metronome & Next Chords" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Metronome & Next Chord Predictions</h4><p class="text-gray-300">Built-in metronome with strum patterns and intelligent next chord predictions.</p></div></div>
+            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/metronome_and_next_chord.png" alt="Metronome with next chord predictions" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Metronome & Next Chord Predictions</h4><p class="text-gray-300">Built-in metronome with strum patterns and intelligent next chord predictions.</p></div></div>
             
             <!-- Full Screen Chord Charts -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/full_size_chord_chart.png" alt="Full Screen Chord Charts" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Full Screen Chord Charts</h4><p class="text-gray-300">Large, clear chord charts for easy reading during practice and performance.</p></div></div>
+            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/full_size_chord_chart.png" alt="Full screen chord chart view" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Full Screen Chord Charts</h4><p class="text-gray-300">Large, clear chord charts for easy reading during practice and performance.</p></div></div>
             
             <!-- Sheet Music Support -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/sheet_music_phone.png" alt="Sheet Music Support" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Sheet Music Support</h4><p class="text-gray-300">View and manage sheet music alongside your chord progressions and lyrics.</p></div></div>
+            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/sheet_music_phone.png" alt="Sheet music screen" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Sheet Music Support</h4><p class="text-gray-300">View and manage sheet music alongside your chord progressions and lyrics.</p></div></div>
             
             <!-- Audio Player -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/song_player_and_looping.png" alt="Audio Player & Looping" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Audio Player & Looping</h4><p class="text-gray-300">Play and loop audio tracks while following chord progressions and lyrics.</p></div></div>
+            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/song_player_and_looping.png" alt="Audio player and looping interface" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Audio Player & Looping</h4><p class="text-gray-300">Play and loop audio tracks while following chord progressions and lyrics.</p></div></div>
             
             <!-- Chord Editor -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/tunes_manager_chord_editor.png" alt="Chord Editor" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Chord Editor</h4><p class="text-gray-300">Create and edit chord progressions with an intuitive chord sequence editor.</p></div></div>
+            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/tunes_manager_chord_editor.png" alt="Chord editor progression builder" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Chord Editor</h4><p class="text-gray-300">Create and edit chord progressions with an intuitive chord sequence editor.</p></div></div>
             
             <!-- Multi-Instrument Support -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/full_size_chord_chart_mando.png" alt="Multi-Instrument Support" class="object-contain bg-gray-700 rounded" /></div><h4 class="text-xl font-bold text-white mb-2">Multi-Instrument Support</h4><p class="text-gray-300">Support for guitar, ukulele, mandolin, banjo, and more stringed instruments.</p></div></div>
+      <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/full_size_chord_chart_mando.png" alt="Mandolin chord chart instrument support" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Multi-Instrument Support</h4><p class="text-gray-300">Support for guitar, ukulele, mandolin, banjo, and more stringed instruments.</p></div></div>
           </div>
         </div>
         <!-- Carousel controls -->
-        <button class="carousel-btn carousel-prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-colors z-10">
+    <button class="carousel-btn carousel-prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-colors z-10" aria-label="Previous slides">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
           </svg>
         </button>
-        <button class="carousel-btn carousel-next absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-colors z-10">
+    <button class="carousel-btn carousel-next absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-colors z-10" aria-label="Next slides">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
           </svg>
@@ -168,10 +184,10 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Education Section -->
-  <section class="py-20 bg-gradient-to-br from-green-900/20 via-blue-900/20 to-purple-900/20 rounded-xl">
+  <section id="education" class="py-20 bg-gradient-to-br from-green-900/20 via-blue-900/20 to-purple-900/20 rounded-xl" aria-labelledby="education-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Perfect for Music Education</h2>
+        <h2 id="education-heading" class="text-4xl md:text-5xl font-bold text-white mb-6">Perfect for Music Education</h2>
         <p class="text-xl text-gray-300 max-w-3xl mx-auto">Empower your students with real-time feedback and comprehensive learning tools</p>
       </div>
       

@@ -4,17 +4,22 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Music Collections - JamBuddy" description="Discover external music collections curated for JamBuddy users.">
   <!-- Hero Section -->
-  <section class="bg-black text-white rounded-lg shadow-lg border border-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+  <section class="bg-black text-white rounded-lg shadow-lg border border-gray-800 relative overflow-hidden" aria-labelledby="collections-heading">
+    <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_30%_30%,rgba(80,150,255,0.25),transparent_60%),radial-gradient(circle_at_70%_70%,rgba(0,200,140,0.15),transparent_65%)]"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
       <div class="text-center">
         <div class="mb-8 flex justify-center">
-          <img src="/images/logo/jam_buddy_clear.png" alt="JamBuddy Logo" class="w-48" />
+          <img src="/images/logo/jam_buddy_clear.png" alt="JamBuddy logo mark" class="w-40" loading="lazy" decoding="async" />
         </div>
-        <h1 class="text-5xl md:text-6xl font-bold mb-4 text-gray-100">Music Collections</h1>
-        <p class="text-2xl text-gray-300 max-w-2xl mx-auto mb-4">Curated links to external music libraries and resources for every jam session</p>
-        <span class="inline-block bg-yellow-400 text-black font-bold px-4 py-2 rounded-lg shadow mb-6">
-          Explore new tunes and expand your repertoire. All links open in a new tab.
-        </span>
+        <h1 id="collections-heading" class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-green-100 bg-clip-text text-transparent">Music Collections</h1>
+        <p class="text-2xl text-gray-300 max-w-2xl mx-auto mb-8 leading-relaxed">Hand‑picked external libraries, tabs, tune archives & songbooks to expand what you can learn and teach.</p>
+        <div class="flex flex-wrap gap-3 justify-center text-sm" aria-label="Collection categories">
+          <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-300">Sheet Music</span>
+          <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-300">Tabs & Chords</span>
+          <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-300">Traditional Tunes</span>
+          <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-300">Bluegrass & Folk</span>
+        </div>
+        <p class="mt-6 text-sm text-gray-500">Links open in a new tab. JamBuddy isn’t affiliated; these are community‑helpful resources.</p>
       </div>
     </div>
   </section>

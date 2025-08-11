@@ -4,23 +4,22 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Gallery - JamBuddy" description="Browse JamBuddy in action through screenshots of every feature.">
   <!-- Hero Section -->
-  <section class="bg-black text-white py-20 rounded-lg border border-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold mb-6">See JamBuddy in Action</h1>
-      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-        Visual tour of everything JamBuddy offers musicians - from chord detection to song creation
+  <section class="bg-black text-white py-20 rounded-lg border border-gray-800 relative overflow-hidden" aria-labelledby="gallery-heading">
+    <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_30%_30%,rgba(80,150,255,0.25),transparent_60%),radial-gradient(circle_at_70%_70%,rgba(0,200,140,0.18),transparent_65%)]"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 id="gallery-heading" class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-green-100 bg-clip-text text-transparent">See JamBuddy in Action</h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+        A visual tour of the listening, practice, and creation tools that speed up learning & teaching.
       </p>
     </div>
   </section>
 
   <!-- Core Tools Gallery -->
-  <section class="py-20 bg-gray-900 rounded-lg">
+  <section class="py-20 bg-gray-900 rounded-lg" aria-labelledby="core-interface-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Core Interface</h2>
-        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-          Clean, intuitive design that works perfectly for both practice and teaching
-        </p>
+        <h2 id="core-interface-heading" class="text-3xl md:text-4xl font-bold text-white mb-4">Core Interface</h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">Clean, focused layouts for quick comprehension in solo or group settings.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">        
@@ -127,13 +126,11 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Dual Perspective Benefits -->
-  <section class="py-20 bg-gray-900 rounded-lg">
+  <section class="py-20 bg-gray-900 rounded-lg" aria-labelledby="dual-perspective-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">One Interface, Two Perspectives</h2>
-        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-          See how JamBuddy's design serves both individual practice and classroom instruction
-        </p>
+        <h2 id="dual-perspective-heading" class="text-3xl md:text-4xl font-bold text-white mb-4">One Interface, Two Perspectives</h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">How the same tool adapts to individual focus or classroom flow.</p>
       </div>
       
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -215,13 +212,11 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Advanced Features - Simplified -->
-  <section class="py-20">
+  <section class="py-20" aria-labelledby="advanced-features-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Advanced Features</h2>
-        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-          Specialized tools for advanced musicians and comprehensive classroom management
-        </p>
+        <h2 id="advanced-features-heading" class="text-3xl md:text-4xl font-bold text-white mb-4">Advanced Features</h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">Specialized tools for deeper harmonic exploration & structured teaching.</p>
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -277,13 +272,11 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Why JamBuddy Works -->
-  <section class="py-20 bg-gray-900 rounded-lg">
+  <section class="py-20 bg-gray-900 rounded-lg" aria-labelledby="why-works-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Why JamBuddy Works</h2>
-        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-          Thoughtful design that serves both individual musicians and educational environments
-        </p>
+        <h2 id="why-works-heading" class="text-3xl md:text-4xl font-bold text-white mb-4">Why JamBuddy Works</h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">Design choices grounded in speed, clarity, and cognitive load reduction.</p>
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -379,13 +372,11 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- CTA Section -->
     <!-- Hero Section -->
-  <section class="relative py-24 bg-gradient-to-br from-blue-900 via-purple-900 to-blue-900 text-white rounded-xl overflow-hidden">
+  <section class="relative py-24 bg-gradient-to-br from-blue-900 via-purple-900 to-blue-900 text-white rounded-xl overflow-hidden" aria-labelledby="gallery-cta-heading">
     <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-green-600/20"></div>
     <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">JamBuddy Gallery</h1>
-      <p class="text-xl mb-8 text-gray-200 leading-relaxed max-w-4xl mx-auto">
-        See how JamBuddy transforms music practice and education through intuitive design
-      </p>
+      <h2 id="gallery-cta-heading" class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">Try JamBuddy</h2>
+      <p class="text-xl mb-8 text-gray-200 leading-relaxed max-w-4xl mx-auto">Install the app and turn any song into a structured learning session.</p>
       
       <!-- Dual Perspective Tags -->
       <div class="flex flex-wrap justify-center gap-4 mb-12">
@@ -402,8 +393,8 @@ import Layout from '../layouts/Layout.astro';
           <img src="/images/icons/google-play-badge.png" alt="Get it on Google Play" class="h-12 mr-4 transition-transform group-hover:scale-110" />
           Download Now
         </a>
-        <a href="/features" class="border-2 border-white/30 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:bg-white/10 transition-all duration-300 backdrop-blur-sm transform hover:scale-105">
-          Learn More
+        <a href="/features" class="border-2 border-white/30 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:bg-white/10 transition-all duration-300 backdrop-blur-sm transform hover:scale-105" aria-label="Explore JamBuddy features">
+          Explore Features
         </a>
       </div>
     </div>

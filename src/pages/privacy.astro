@@ -4,17 +4,15 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Privacy Policy - JamBuddy" description="JamBuddy respects your privacy and never collects personal data.">
   <!-- Hero Section -->
-  <section class="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-20">
+  <section class="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-20" aria-labelledby="privacy-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold mb-6">Privacy Policy</h1>
-      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-        We don't gather your information. JamBuddy's advanced chord recognition, tuning tools, and song library work entirely on your device and never send data anywhere.
-      </p>
-      <div class="mt-6 mb-2 text-center">
-        <span class="inline-block bg-yellow-400 text-black font-bold px-4 py-2 rounded-lg shadow">
-          JamBuddy will <u>never</u> have ads. One-time price: <b>99¢</b>.<br />
-          Runs 100% on your phone or tablet—no internet required except to download and install.
-        </span>
+      <h1 id="privacy-heading" class="text-4xl md:text-5xl font-bold mb-6">Privacy Policy</h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">JamBuddy processes everything locally on your device. No accounts. No analytics. No data leaves your phone or tablet.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3 text-sm" aria-label="Privacy guarantees">
+        <span class="px-4 py-2 rounded-full bg-white/10 border border-white/10">No Tracking</span>
+        <span class="px-4 py-2 rounded-full bg-white/10 border border-white/10">Offline by Design</span>
+        <span class="px-4 py-2 rounded-full bg-white/10 border border-white/10">One-Time Purchase</span>
+        <span class="px-4 py-2 rounded-full bg-white/10 border border-white/10">Ad-Free Forever</span>
       </div>
     </div>
   </section>
@@ -27,25 +25,25 @@ import Layout from '../layouts/Layout.astro';
           <strong>Last updated:</strong> June 7, 2025
         </p>
 
-        <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Information We Collect</h2>
+  <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Information We Collect</h2>
         <p>JamBuddy does <strong>not</strong> collect, store, or share any personal information or usage data. The app's real-time chord recognition, advanced tuning capabilities, metronome, and song library operate entirely locally on your device and do not transmit any data externally.</p>
 
-        <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-12">2. Why We Don’t Collect Data</h2>
-        <p>We believe privacy is fundamental. JamBuddy is designed to function fully without the need to collect any personal or usage data. All audio processing for chord recognition and tuning happens locally on your device, and no data leaves your device under any circumstances.</p>
+  <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-12">2. Why We Don’t Collect Data</h2>
+  <p>Privacy reduces cognitive friction. JamBuddy works fully disconnected: chord recognition, tuning, metronome, and song handling stay sandboxed locally. There's nothing to upload, sync, or monetize.</p>
 
-        <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-12">3. Third-Party Services</h2>
-        <p>JamBuddy does not use any third-party services that collect or process your data. There are no analytics or tracking tools integrated.</p>
+  <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-12">3. Third-Party Services</h2>
+  <p>No third‑party SDKs, analytics libraries, crash reporters, or advertising frameworks are embedded. The app ships as a self‑contained client.</p>
 
-        <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-12">4. Data Security</h2>
-        <p>Since JamBuddy does not collect or store any data, there is no data at risk of breach. All processing is done locally on your device, minimizing any security concerns.</p>
+  <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-12">4. Data Security</h2>
+  <p>Because no personal data is collected, traditional breach risk is minimized. Local processing means audio never leaves memory contexts controlled by your OS.</p>
 
-        <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-12">5. Children’s Privacy</h2>
-        <p>JamBuddy is suitable for users of all ages. Because we do not collect any information, we do not knowingly collect any data from children or adults.</p>
+  <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-12">5. Children’s Privacy</h2>
+  <p>JamBuddy is appropriate for all ages. With no accounts or collection, there is no storage or transmission of data from children.</p>
 
-        <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-12">6. Changes to This Policy</h2>
-        <p>If we ever decide to collect data in the future (which we currently have no intention of doing), we will update this Privacy Policy accordingly and notify users of any changes.</p>
+  <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-12">6. Changes to This Policy</h2>
+  <p>If data collection is ever considered, it will require a clear opt‑in, a revised policy, and an in‑app notice before any change takes effect.</p>
 
-        <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-12">7. Contact Us</h2>
+  <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-12">7. Contact Us</h2>
         <p>If you have any questions about this Privacy Policy or our commitment to your privacy, please contact us at:</p>
         <div class="bg-gray-50 p-6 rounded-lg mt-4 max-w-md">
           <p><strong>Email:</strong> <a href="mailto:sewing@warpandweftdata.com" class="text-blue-600 hover:text-blue-700">sewing@warpandweftdata.com</a></p>

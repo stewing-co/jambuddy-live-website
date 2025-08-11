@@ -4,12 +4,17 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Contact - JamBuddy" description="Reach out to the JamBuddy team. We love hearing from fellow musicians!">
   <!-- Hero Section -->
-  <section class="bg-gradient-to-r from-teal-600 to-blue-600 text-white py-20">
+  <section class="bg-gradient-to-r from-teal-600 to-blue-600 text-white py-20" aria-labelledby="contact-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold mb-6">Let's Connect</h1>
-      <p class="text-xl text-teal-100 max-w-3xl mx-auto">
-        Questions or feedback about JamBuddy? We'd love to hear from musicians and music teachers using the app!
+      <h1 id="contact-heading" class="text-4xl md:text-5xl font-bold mb-6">Get In Touch</h1>
+      <p class="text-xl text-teal-100 max-w-3xl mx-auto leading-relaxed">
+        Feedback, feature ideas, classroom use, media questions—send it. I respond personally.
       </p>
+      <div class="mt-6 flex flex-wrap justify-center gap-3 text-sm" aria-label="Typical response time">
+        <span class="px-4 py-2 rounded-full bg-white/20 text-white/90">Avg response: &lt; 24h</span>
+        <span class="px-4 py-2 rounded-full bg-white/20 text-white/90">Educator friendly</span>
+        <span class="px-4 py-2 rounded-full bg-white/20 text-white/90">No marketing spam</span>
+      </div>
     </div>
   </section>
 
@@ -19,7 +24,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <!-- Contact Form -->
         <div>
-          <h2 class="text-3xl font-bold text-gray-900 mb-8">Send us a Message</h2>
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">Send a Message</h2>
           <form class="space-y-6" action="https://formspree.io/f/xpzgkgpz" method="POST">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
@@ -121,10 +126,10 @@ import Layout from '../layouts/Layout.astro';
 
         <!-- Contact Information -->
         <div>
-          <h2 class="text-3xl font-bold text-gray-900 mb-8">Contact Information</h2>
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">Direct Contact</h2>
           
           <div class="space-y-8">
-            <div class="flex items-start space-x-4">
+            <div class="flex items-start space-x-4" aria-label="Email contact">
               <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
                 <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
@@ -139,7 +144,7 @@ import Layout from '../layouts/Layout.astro';
               </div>
             </div>
 
-            <div class="flex items-start space-x-4">
+            <div class="flex items-start space-x-4" aria-label="Support contact">
               <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                 <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
@@ -152,7 +157,7 @@ import Layout from '../layouts/Layout.astro';
               </div>
             </div>
 
-            <div class="flex items-start space-x-4">
+            <div class="flex items-start space-x-4" aria-label="Press contact">
               <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
                 <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
@@ -165,7 +170,7 @@ import Layout from '../layouts/Layout.astro';
               </div>
             </div>
 
-            <div class="flex items-start space-x-4">
+            <div class="flex items-start space-x-4" aria-label="Partnership contact">
               <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
                 <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
@@ -211,34 +216,32 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- FAQ Section -->
-  <section class="py-20 bg-gray-50">
+  <section class="py-20 bg-gray-50" aria-labelledby="faq-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Quick answers to common questions about JamBuddy
-        </p>
+        <h2 id="faq-heading" class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">Short answers to common questions. Need more? Reach out above.</p>
       </div>
 
       <div class="max-w-3xl mx-auto space-y-6">
         <div class="bg-white rounded-lg p-6 shadow-sm">
-          <h3 class="text-lg font-semibold text-gray-900 mb-3">How quickly do you respond to messages?</h3>
-          <p class="text-gray-600">We aim to respond to all inquiries within 24 hours during business days. For urgent technical support issues, we typically respond within 4-6 hours.</p>
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">How fast do you respond?</h3>
+          <p class="text-gray-600">Most replies go out the same day (often within a few hours). Class adoption or technical issues get priority.</p>
         </div>
 
         <div class="bg-white rounded-lg p-6 shadow-sm">
           <h3 class="text-lg font-semibold text-gray-900 mb-3">Do you offer phone support?</h3>
-          <p class="text-gray-600">Currently, we provide support primarily through email and our online help center. We're working on adding phone support for premium users in the near future.</p>
+          <p class="text-gray-600">Not yet. Email keeps responses thoughtful and fast. Live sessions (screen share) can be scheduled for schools.</p>
         </div>
 
         <div class="bg-white rounded-lg p-6 shadow-sm">
-          <h3 class="text-lg font-semibold text-gray-900 mb-3">Can I schedule a demo or consultation?</h3>
-          <p class="text-gray-600">Absolutely! We offer personalized demos for music schools, studios, and enterprise customers. Use the contact form above and select "Partnership" to schedule a consultation.</p>
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">Can I schedule a demo?</h3>
+          <p class="text-gray-600">Yes—music programs, ensembles, and studios can request a short walkthrough. Choose “Partnership” in the form.</p>
         </div>
 
         <div class="bg-white rounded-lg p-6 shadow-sm">
-          <h3 class="text-lg font-semibold text-gray-900 mb-3">How can I submit feature requests?</h3>
-          <p class="text-gray-600">We love hearing from our community! Use the contact form with "Feature Request" as the subject, or join our Discord community where we actively discuss upcoming features with users.</p>
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">How do I suggest a feature?</h3>
+          <p class="text-gray-600">Pick “Feature Request” in the subject or include it in your message. High‑impact teaching + practice wins get prioritized.</p>
         </div>
       </div>
     </div>
