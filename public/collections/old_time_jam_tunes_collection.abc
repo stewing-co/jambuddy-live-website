@@ -78,6 +78,8 @@ K: A
 X:6
 T:Billy Wilson
 R:Reel
+C: Traditional
+S: https://JamBuddy.live
 L:1/8
 M:4/4
 K:A
@@ -96,6 +98,7 @@ L:1/8
 K:D
 R: Rag
 Q:132
+S: https://JamBuddy.live
 A:JamBuddy 2025
 |:"D"F2 F2|FDEF|"G"G2 G2|G2 AG|"D"F2 F2|FDEF|"A"E2 E2|E2 E2
 |"D"F2 F2|FDEF|"G"G2 G2|G2 AG|"D"F2 GF|"A"E2 FE|"D"D2 D2|D4:|
@@ -607,23 +610,10 @@ S:https://JamBuddy.live
 M:3/4
 L:1/4
 K:Bb
-Bc|:"Bb"d3/2c/2B|"Eb"g2f/2d/2|"Bb"f2-f/2g/2|"Bb"f2B/2c/2|"Gm"d2c/2B/2|\
-"Eb"g2f/2d/2|"Cm"c2-c/2d/2|
-"F"c2d/2f/2|"Gm"d3/2c/2B|"Eb"g2f/2d/2|"Bb"f2B|"Eb"b2g|"Bb"f2B/2d/2|"F"c2B|\
-"Bb"B3-|"Bb"BBc||
-"Gm"d3/2c/2B|"Eb"g2f/2d/2|"Bb"f2-f/2g/2|"Bb"f2B/2c/2|"Gm"d2c/2B/2|"Gm"g2f/2d/2\
-|"Cm"c2-c/2d/2|
-"F"c2d/2f/2|"Gm"d3/2c/2B|"Eb"g2f/2d/2|"Bb"f2B|"Eb"b2g|"Bb"f2B/2d/2|"F"c2B|\
-"Bb"B3-|"Bb"Bdf||
-"Eb"g2e/2g/2|"Eb"b2a/2g/2|"Bb"f2-f/2g/2|"Bb"f2d/2f/2|"Gm"g2f/2d/2|"Gm"f2B/2d/2\
-|"Cm"c2-c/2d/2|"F"c2d/2f/2|
-"Eb"g2e/2g/2|"Eb"b2a/2g/2|"Bb"f2e/2d/2|"Eb"b2e|"Bb"d2B/2d/2|"F"c2B|"Bb"B3-|\
-"Bb"Bdf||
-"Eb"g2e/2g/2|"Eb"b2a/2g/2|"Bb"f2-f/2g/2|"Bb"f2d/2f/2|"Gm"g2f/2d/2|"Gm"f2B/2d/2\
-|"Cm"c2-c/2d/2|
-"F"c2d/2f/2|"Gm"d2c/2B/2|"Eb"g2f/2d/2|"Bb"f2B|"Eb"b2g|"Bb"f2B/2d/2|"F"c2B|\
-"Bb"B3-|"Bb"B:|
-
+Bc|:"Bb"d3/2c/2B|"Eb"g2f/2d/2|"Bb"f2-f/2g/2|"Bb"f2B/2c/2|"Gm"d2c/2B/2|"Eb"g2f/2d/2|"Cm"c2-c/2d/2|
+"F"c2d/2f/2|"Gm"d3/2c/2B|"Eb"g2f/2d/2|"Bb"f2B|"Eb"b2g|"Bb"f2B/2d/2|"F"c2B|"Bb"B3-|"Bb"BBc:|
+"Eb"g2e/2g/2|"Eb"b2a/2g/2|"Bb"f2-f/2g/2|"Bb"f2d/2f/2|"Gm"g2f/2d/2|"Gm"f2B/2d/2|"Cm"c2-c/2d/2|"F"c2d/2f/2|
+"Eb"g2e/2g/2|"Eb"b2a/2g/2|"Bb"f2e/2d/2|"Eb"b2e|"Bb"d2B/2d/2|"F"c2B|"Bb"B3-||1"Bb"Bdf:|2 "Bb"B3:|]
 
 X:41
 T:Hollow Poplar
