@@ -1,4 +1,4 @@
-X: 1
+X:1
 T: Angeline the Baker
 L: 1/8
 C: Traditional
@@ -835,7 +835,7 @@ K:D
 |: "D"ag fe|"G"A/2BB/2 BB|"D"ag fe|"G"B/2A/2B/2c/2 "D"df|"D"ag fe|
 |"G"A/2BB/2 BB|"A"A/2B/2c/2d/2 e/2f/2e/2d/2|"A"c/2A/2B/2c/2 "D"dd:|
 
-X:58
+X:57
 T:Niel Gow’s Lament
 R:Air
 C:Niel Gow
@@ -851,7 +851,7 @@ D/2B,/2|: A,>B,D ~D>ED| (EFA) B2 d| (AFD) (E>DE)|{DE}FDB, B,2 D/2B,/2|
 |(df)d (ec)A|(B/2A/2)(B/2c/2){Bc}d  (B/2A/2)(G/2F/2)(E/2D/2)|(F/2D/2)(A/2F/2)(d/2A/2) (B/2A/2)(G/2F/2)(E/2D/2)|{DE}FEE E2 D/2B,/2|
 |A,>B,D D>ED| (EF)A d2 c/2B/2| (AF)D {=C} B,2  A,| B,DDD2||
 
-X:59
+X:58
 T:North Carolina Breakdown
 C: Arthur L. Smith
 S: https://JamBuddy.live
@@ -866,7 +866,7 @@ d2|: "C"[e2g2][e2-g2-] [e2g2][e2-g2-]| [e2g2]g2 gag2| \
 
 
 
-X:60
+X:59
 T:Old French Reel
 R: Reel
 C:Traditional
@@ -879,7 +879,7 @@ K: D
 |: "A"efed c2A2 | AEAc e2dc | "G"BGBd gfed |"A"cAce a2 cd|
 | "A"efed c2A2 | AEAc e2dc | "G"BGBd gfed |"A"c2A2 A3 :|
 
-X:61
+X:60
 T:Old Joe Clark
 C: Traditional
 S: https://JamBuddy.live
@@ -893,7 +893,7 @@ K: Amix
 |: "A"A3A A4 | e2d2 c4 | A3A A2A2 | "G"G4 G4 | 
 |"A"A3A A4 | e2d2 c4 | A2c2 "G"B2G2 | "A"A4 A4 :| 
 
-X:62
+X:61
 T:Old Molly Hare
 C: Nathaniel Gow
 S: https://JamBuddy.live
@@ -904,7 +904,7 @@ K: D
 de |: "D"f2fd f2fd | f2fd "A7"cAeA | "D"f2fd "G"gfed | "A7"cABc "D"defg :|
 |: "D"a2af "G"b2ba | "Em"g2ge "A7"a2ag | "D"f2fd "G"gfed |1 "A7"cABc "D"defg :|2 "A7"cABc "D"d4 |]
 
-X:63
+X:62
 T:Over the Waterfall
 M:4/4
 C: Traditional
@@ -916,7 +916,7 @@ de|: "D"f2a2 "A"gfe2| "D"dedB A2de| f2a2 "A"gfe2| "D"d6 de||
 FG|: "D"A2AA "G"B2B2| "D"ABAG F2FG| A2d2 "A7"cde2| "D"d6FG|| 
 |    "D"A2AA "G"B2B2| "D"ABAG F2FG| A2AA "A7"GFE2| "D"D4 D4 :|
 
-X:64
+X:63
 T:Petronella
 C: Nathaniel Gow
 S: https://JamBuddy.live
@@ -930,7 +930,7 @@ d/2A/2|:"D"FA/2F/2 "A7"EA/2F/2|"D"DD DF/2A/2|"G"dc/2d/2 "E7"ed|"A7"c/2d/2B/2c/2 
 |"D"Df/2d/2 Aa/2f/2|"Em"gg/2f/2 e/2d/2c/2B/2|"A7"Ae/2c/2 A/2g/2e/2c/2|1"D"d f d A/2G/2:|2"D" d4|]
 
 
-X:65
+X:64
 T:Pig Ankle Rag
 C: Traditional
 S: https://JamBuddy.live
@@ -947,7 +947,7 @@ af |: "A7"gecA- A2af | gecA- AABA | "D"dABA dABA | dBAF- F2af|
 | "G"B4 d3e | "D"fa2a bafd | "A7"Acea fdec |1 "D"d2 [f4d6] cB :|2 "D"d8 |]
 
 
-X:66
+X:65
 T:Planxty Irwin
 C: Turlough O'Carolan
 S: https://JamBuddy.live
@@ -960,7 +960,7 @@ A|:"D"d2c|"G"Bcd|"A7"A2G|"D"FED|"A7"G2E|"D"FGA|"A"C2D|"A7"E2A|
 |:"D"d2d|"D"dcd|"Em"e2e|"A7"ecA|"D"f2f|F"A"e2d|"E7"dcB|"A7"ABc|
 |"D"d2c|"G"Bcd|"A7"A2G|"D"FED|"A7""Em"G2E|"D""Bm"FGA|"A7""Em"D2" ""A7"C|"D"D2"A7"A:||
 
-X:67
+X:66
 T:Polly Put the Kettle On
 C: Traditional
 S: https://JamBuddy.live
@@ -976,7 +976,7 @@ d/2e/2|:"D"fd "A7"ge|"D"fd dd/2c/2|"G"BB e3/2d/2|"Em"cA "A7"GE|
 |"D"fa "A7"g/2f/2g/2e/2|"D"fd de/2f/2|"G"gb e/2f/2e/2d/2|"A7"cA Ad/2e/2|
 |"D"fd "A7/e"ge|"D/f"af "G"b3/2g/2|"D"fd "C"A=c|1"D"d3 d/2e/2:|2"D" d4|]
 
-X:69
+X:67
 T:Red Haired Boy
 C: Traditional
 S: https://JamBuddy.live
@@ -991,7 +991,7 @@ AF |: "A"E2A2 ABcd | efec "D"d2c-d | "A"edcB ABcA | "G"BAEF =G3F |
 |   "A"E2A2 ABcd | efec "D"d2c-d | "A"e2 a-g afed |\
 [1 "(E)"c2A2 "(A)"A2e-f :|[2 "(E)"c2A2 "(A)"A2AF |]
 
-X:70
+X:68
 T:Red Wing
 C: Traditional
 S: https://JamBuddy.live
@@ -1005,7 +1005,7 @@ D2F2 |: "G"G3G G2B2 | d6 B2 | "C"c-de2 g2e2 | "G"d6 B2 |
   "D"d4 A4- |[1 A2d2 e2d2 | "G"d4 B4- | B2f2- "G7"g2f2 :|\
 [2 A2(Ac BA)F2 | "G"G8 | G4 D2F2 |]
 
-X:71
+X:69
 T:Road to Boston
 M:4/4
 C: Traditional
@@ -1017,7 +1017,7 @@ ee|: "D"f6 ef| g2f2 e2d2| "A"c2d2 e2f2| "D"d2A2 F2A2|
 |: "D"a6 ^ga| "B"b2a2 =g2f2| "Em"g6 fg| "A"a2g2 f2e2|
 | "D"f6 ef| "G"g2f2 e2d2| "A"c2d2 e2c2|1 "D"d2A2 d2 fg :|2 "D"d2A2d4 ||
 
-X:72
+X:70
 T:Rochester Schottische
 M:4/4
 R:Schottische
@@ -1031,7 +1031,7 @@ K:D
 |:"D"ABAG FEDF |"G"EDEF G2A2-|"D"ABAG FED2|"G"EDFDG2FG|
 |"D"ABAG FEDF |"G"EDEF G2A2-|"D"ABAG "A"FAE2|"D"D3ED4:||
 
-X:73
+X:71
 T:Roscoe
 R:Reel
 M:4/4
@@ -1044,7 +1044,7 @@ K:G
 |: e(g || "G"g2) gg edBA | dB A2G2 (g2 | g2) g2 e g3 | "D"a3b a2 (b2 |
 |"G"b)aba gedB | "C"c3 d c2 A(B | "D"B)dBB A F3 | "G"G3A G2 :|
 
-X:74
+X:72
 T:Sadie at the Backdoor
 C: Traditional
 S: https://JamBuddy.live
@@ -1057,7 +1057,7 @@ DE|:"D"F2F2 ED E2|F2E2D2 =c2-|"C"=c2 B2 "A"AF E2|"D" D3E D3 E|
 |"D"F2F2ED3|"C"=c4 "G" B4|"D"f2>e2"G"d2B2|"A"AFE2"D"D4 :|
 
 
-X:75
+X:73
 T:Sailor’s Hornpipe
 M:2/4
 L:1/16
@@ -1070,7 +1070,7 @@ BA|"G"G2G,2 G,2DC|B,DG GBAG|"A7"A2A,2 A,2AG|"D7"FAd2 d2ef|
 |:DC|"G"B,DGD B,DGD|"C"E2C2 C2ED|"A7"^CEAE CEAE|"D7"F2D2 D2cB|
 |"C"c2e2 edcB|"C"cBAG "A7"AGFE|"G"DGFA "D7"GBAc|"G"B2G2 G2:|
 
-X:77
+X:74
 T:Sally Goodin
 M:4/4
 L:1/8
@@ -1080,7 +1080,7 @@ K:A
 AB|:"A"cABc A2 AB|cABA F A2 B|cABc ABAF|[1"E"ECEA "A"F A2 B:|[2"E"ECEA "A"F A3|]
 |: "A"ABcd e2 cd|efed cAcd|efed cdcB||[1"E"ABAF "A"EF AB:|[2"E"ABAF "A"EF A]|
 
-X:78
+X:75
 T:Salt Creek
 C: Traditional
 S: https://JamBuddy.live
@@ -1093,7 +1093,7 @@ E2|:"A"A3AA2A2|"G"BABc "D"d3A| "A"BA=GA BAGA|"G"BAG2E4|
 |:"A"ea2a a2a2|"A"aba=g e2ef|"G"=g2ga gede|"G"=gfga gedg|
 "A"ea2a a2a2|"A"aba=g e2ef|"G"=gfga gfed|1"A"(3cdc A2A2 e2:|2 "A"(3cdc A2A4 |]
 
-X:79
+X:76
 T:Sandy River Belle
 C: Traditional
 S: https://JamBuddy.live
@@ -1107,7 +1107,7 @@ ef|:"G"[Bg]age d2ef|gabg "C"age[Bf]|"G"[Bg]aged2ed|"A"ea2b "D"a2e[_Bf]|
 |"G"G2E2DDEF|"Em"GGBG ed2e/f/|"G"gage "C"dded|1 "D"BGAF "G"G2 (3DEF :|2"D"BGAF "G"G4|]
 
 
-X:80
+X:77
 T:Seneca Square Dance
 M:4/4
 C: Traditional
@@ -1121,7 +1121,7 @@ D G |:"G"B2 B>B |d B-B2 | B2 B>B | "F" A "C" G-G A|
 |"C" g/a/b/a/ g e| "G" d>B2 A/ G | "C" A/B/A/G/ "D" E F |1 "G"G2 B d :|2 "G" G4 |]
 
 
-X:81
+X:78
 T:Shady Grove
 C:Traditional
 S:https://JamBuddy.live
@@ -1134,7 +1134,7 @@ A|:"Am" A2AA A2AA|"G"B2A2G4|"Am"A2AA c2d2|e4e4|
 |"C"e2ef g2e2|"G"dB "Em"A2G3 A|"G"B2d2"Em"edB2|"Am"A4A4:|
 
 
-X:82
+X:79
 T:Shove that Pig’s Foot a Little Farther in the Fire
 C:Traditional
 S:https://JamBuddy.live
@@ -1146,7 +1146,7 @@ GA|:"G"BdBA G2 EF|"C"GAGE "G"D4|DE G2 B3c|"D"B2 A4 GA|
 |:"G"B (dd2)  dBdg|"C"edBc "G"d4|"C"g4g3d|"D"e2 d4 dd|
 |"G"B (dd2)  dBdg|"C"edBc "G"d4|BABd  "D"BAGB|1 "G"A2 G4 BA:|2 "G"A2 G6||
 
-X:83
+X:80
 T:Soldiers Joy
 C:Traditional
 S:https://JamBuddy.live
@@ -1160,7 +1160,7 @@ FG |: "D"AFDF AFDF | "D"A2 dc d2 FG | "D"AFDF AFDF | "A"G2 E2 E2 FG |!
 |"D"fefg abaf | "G"edcd "A"efge | "D"fafd "A"egec |1 "D"d6 de :||2 "D" d8 |]
 
 
-X:84
+X:81
 T:Southern Aristocracy
 C:Traditional
 S:https://JamBuddy.live
@@ -1173,7 +1173,7 @@ K:G
 |:"G" g2ff e2d2|"Em"e2ee e2e2-|"C"e2eg e2dB|"Em"B2BB B2z2|"C"edef gfe2|
 |"G"d2e d2BG2|1 "A7"B2 B^c2 BA2|"D7"d4 d2(3def:|2 "D7"B2Bd2 BA2|"G"G4 G2z2|]
 
-X:86
+X:82
 T:Spotted Pony
 M:4/4
 L:1/8
@@ -1186,7 +1186,7 @@ K: D
 |: "D"f2af e3e- | "G"efed B4 | "D"ABde f2ed | f2a2 "A7"e2de |
 |"D"f2afe3e- | "G"efed B4 |[1"D"A2BAd3A | "G"BAF2 "A7"E4:|[2"D"ABdA"G"Bd2B|"A7"AFE2 "D"D4|]
 
-X:87
+X:83
 T:Squirrel Heads & Gravy
 M:4/4
 L:1/8
@@ -1199,7 +1199,7 @@ K:G
 |: "G"d2de dcBc | d2de d2Bc | d2de dcB2 | "D"A3B A2Bc |
 |   "G"d2de dcB2 | "C"cBcd e4 | "G"d2 ef g2d2 | "D"BG A2 "G"G4 :|
 
-X:88
+X:84
 T:Squirrel Hunters
 M:4/4
 C: Traditional
@@ -1211,7 +1211,7 @@ ee|:"Em"e2 e2 B2B2|efed B2 BA| "G" G2 Bc d2 Bc | dBcA Bc d2|
 |:"Am"e2 ge a2ag | edef gedB | "G" G2Bc d2Bc | "Em"dBcA Bcd2|
 |"Am"e2 ge a2ag | edef gedB | "G" G2Bc "Em" dABG |1 "D"A3 BA e2 :|2 "D"A3 BA E2|]
 
-X:89
+X:85
 T:Step Around Johnny
 C: Traditional
 S: https://JamBuddy.live
@@ -1224,7 +1224,7 @@ K:D
 |:"D"F3EF2A2-|AGFE D2D2|"G"B3AB2A2-|"D"AGFED2E2|
 |sF3EF2A2-|AGFED2D2|"A"EDEF GFEF|"D"D3ED2:|
 
-X:90
+X:86
 T:Sugar Hill
 C: Traditional
 S: https://JamBuddy.live
@@ -1237,7 +1237,7 @@ K:D
 |:"D"A B/2B/2 A G|"A"F E "D"D D/2D/2|F D/2D/2 F D|"G"B, B,/2B,/2 B, B,|
 |"D"A B/2B/2 A G|"A"F E "D"D D/2D/2|D B, "A"D B,|"D"D D/2D/2 D D:||
 
-X:91
+X:87
 T:Sugar in the Gourd
 C: Traditional
 S: https://JamBuddy.live
@@ -1250,7 +1250,7 @@ K:A
 "D"ab/2a/2 "A"f/2e/2c|"A"e/2f/2e "E7"c2|"F#m"AB/2c/2 "Bm"B/2A/2F|\
 "E7"E/2F/2A "A"A2:|
 
-X:92
+X:88
 T:Temperance Reel
 C: Traditional
 S: https://JamBuddy.live
@@ -1263,7 +1263,7 @@ K:G
 |    "Em"Beed e3f| geaf gfed| BEED EFGA |1 "D"BdAF "G"G2 B2 :|2"D"BGAF "G"GFED|]
 
 
-X:93
+X:89
 T:Tombigbee Waltz
 C: Traditional
 S: https://JamBuddy.live
@@ -1276,7 +1276,7 @@ K: G
 |: "G"g2d | g2d | "C"e>de | "G"d2B | 
 | "D7"BAA | A2B/d/ |1 "C"e2"D7"d | "G"B2d :|2 "C"ed"D7"F | "G"G3 |]
 
-X:95
+X:90
 T:Turkey in the Straw
 C: Traditional
 S: https://JamBuddy.live
@@ -1289,7 +1289,7 @@ BA|:"G"GFGA G2B,C|"G"DEDB, D2GA|"G"B2B2 "Em"BAGA|"Am"B2A2 "D7"A2BA|
 |:"G"Bd2B d2d2|"G7"Bd2B d4|"C"ce2c e2e2|"C"ce2c "D7"e2f2|
 "G"g2g2 d2d2|"G"Bd2B "D7"A2GA|"G"Bd2e "Em"dBGA|1"D7"B2A2 "G"G2A2:|2"D7"B2A2 "G"G4:|
 
-X:96
+X:91
 T:Walk Along John
 M:4/4
 L:1/8
@@ -1301,7 +1301,7 @@ K:G
 |:"G"GABd e2d2 | "C"dBde g4 | "G"GABd e2d2 | "D7"dBA2 "G"G4 |
 |"G"GABd e2d2 | "C"dBde g3a | "Em"b2a2 g2e2 | "D7"dBA2 "G"G4 :|
 
-X:98
+X:92
 T:West Fork Gals
 C: Traditional
 S: https://JamBuddy.live
@@ -1314,7 +1314,7 @@ d/2e/2|:"D"f3/2e/2 de/2f/2|"G"g/2f/2g Bf|"A7"e3/2d/2 cA|"D"d/2B/2A/2G/2 F/2E/2D|
 |:"D"A3/2G/2 F3/2G/2|Ad F3/2F/2|"A7"G/2C/2F EEA|G/2C/2F E2|
 |e/2f/2e/2d/2 c/2A/2B/2c/2|"D"dA FA|"D"df "A7"e/2f/2G/2e/2|"D"f/2A/2c dz:|
 
-X:99
+X:93
 T:Westphalia Waltz
 M:3/4
 L:1/8
@@ -1327,7 +1327,7 @@ K:G
 |:"G"g6|"Bm"f6|"Em"e2f2g2|"Bm"B6|"G"{Bc}B2A2B2|!{Bc}B2A2G2|"Am"c3Bcd|"D"c6|"Am"e6|"G#5"e6|"C"e2f2g2|"D"f4e2|!
 d3^ (3cde|1d2^c2=c2|"G"B4-Bc|B4d2:|2d2F2A2|"G"G6|G3|]
 
-X:100
+X:94
 T:Whiskey before Breakfast
 C: Traditional
 S: https://JamBuddy.live
@@ -1340,19 +1340,19 @@ K:D
 |: "D"A2 B2 d2cd | "A"efed cBA2 | e2ef e2 ef | gfed cABc |
 | "D"d2 fd "A"c2ec | "G"BABc "D"dBAF | "G"G2BG "D"F2AF |[1 "A"EDEF "D"D2dB :|[2 "A"EDEF "D"D4 |]
 
-X:101
+X:95
 T:Will the Circle be Unbroken
 C:Traditional
 S:https://JamBuddy.live
 R:Ballad
 M:4/4
 L:1/8
-K:D
+K:G
 |:DE "G"G2 G4- | G4 B2A2 | G4 B4- | B4 B2A2 |"C"G4 A4 | G4 E4 | "G"D8 |
  |  DE "G"G2 G4- | G4 B2d2 | d4 B4- | B4 G2A2 |\
 B4 B4 | "D"A4 B2A2 | "G"G8 :|]
 
-X:102
+X:96
 T:Wind that Shakes the Barley
 R: Reel
 C: Traditional
@@ -1366,7 +1366,7 @@ K: D
 |"D"f2fd "A"g2ge | "D"f2fd "A"edcA | "D"defg afba | "D"gfed "G"B2"D"d2 :|
 
 
-X:103
+X:97
 T:Year of Jubilo
 C: Traditional
 S: https://JamBuddy.live
