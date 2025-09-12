@@ -74,7 +74,7 @@
         synth = new ABCJS.synth.CreateSynth();
         // Resolve soundfonts from website public path if available
         const soundFont = function(filename) {
-          return '/abcjs/soundfonts/FluidR3_GM/acoustic_grand_piano-mp3/' + filename;
+          return 'abcjs/soundfonts/FluidR3_GM/acoustic_grand_piano-mp3/' + filename;
         };
         await synth.init({
           visualObj,
@@ -117,4 +117,3 @@
   </script>
 </body>
 </html>
-

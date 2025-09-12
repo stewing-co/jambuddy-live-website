@@ -349,8 +349,9 @@
       }
       const synth = new ABCJS.synth.CreateSynth();
       const soundFont = function(filename) {
-        // Expect soundfonts under website public path
-        return '/abcjs/soundfonts/FluidR3_GM/acoustic_grand_piano-mp3/' + filename;
+        // Soundfont path (relative to site root). Copy MP3s to public/abcjs/soundfonts/FluidR3_GM/acoustic_grand_piano-mp3/
+        // Use a relative URL so it also works on subpaths.
+        return 'abcjs/soundfonts/FluidR3_GM/acoustic_grand_piano-mp3/' + filename;
       };
       await synth.init({
         visualObj,
