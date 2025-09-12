@@ -2,65 +2,58 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="JamBuddy - Real-Time Tools for Musicians">
+<Layout title="JamBuddy – Real‑Time Jam Assistant">
   <!-- Hero Section -->
   <section class="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white rounded-xl shadow-2xl border border-gray-700 overflow-hidden" aria-labelledby="hero-heading">
     <!-- Background pattern overlay -->
     <div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-green-600/10"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-      <div class="text-center">
-        <div class="mb-12 flex justify-center">
-          <div class="relative">
-            <img src="/images/logo/jam_buddy_clear.png" alt="JamBuddy Logo" class="w-56 filter drop-shadow-2xl" />
-            <div class="absolute -inset-4 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-green-600/20 rounded-full blur-xl"></div>
-          </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <!-- Top row: logo left, headline/subhead right -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        <div class="md:col-span-3 flex md:justify-start justify-center">
+          <img src="/images/logo/jam_buddy_round.png" alt="JamBuddy Logo" class="w-28 md:w-36 lg:w-40 filter drop-shadow-2xl" />
         </div>
-        <h1 id="hero-heading" class="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-green-100 bg-clip-text text-transparent leading-tight">
-          Hear It. Understand It. Create It.
-        </h1>
-        <p class="text-2xl md:text-3xl text-gray-200 max-w-3xl mx-auto mb-8 leading-relaxed">
-          Instant chord detection, visual rhythm coaching & songwriting tools—offline, private, one-time purchase.
-        </p>
-        <!-- CTA buttons -->
-        <div class="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-          <a href="https://play.google.com/store/apps/details?id=com.jambuddy.app&hl=en_US" target="_blank" rel="noopener" class="group bg-gradient-to-r from-green-600 to-green-700 text-white px-10 py-5 rounded-xl font-bold text-xl hover:from-green-700 hover:to-green-800 transition-all duration-300 flex items-center justify-center shadow-xl hover:shadow-2xl transform hover:scale-105">
-            <img src="/images/icons/google-play-badge.png" alt="Get it on Google Play" class="h-12 mr-3 transition-transform group-hover:scale-110" />
-            Download Now
-          </a>
-          <a href="/features" class="border-2 border-gray-300 text-gray-300 px-10 py-5 rounded-xl font-bold text-xl hover:bg-gray-300 hover:text-black transition-all duration-300 flex items-center justify-center backdrop-blur-sm hover:backdrop-blur-md transform hover:scale-105" aria-label="Explore all JamBuddy features">
-            Explore Features
-          </a>
-          <a href="#education" class="border-2 border-green-500 text-green-400 px-10 py-5 rounded-xl font-bold text-xl hover:bg-green-500 hover:text-black transition-all duration-300 flex items-center justify-center backdrop-blur-sm hover:backdrop-blur-md transform hover:scale-105" aria-label="See educator benefits">
-            For Educators
-          </a>
+        <div class="md:col-span-9 text-center md:text-left">
+          <h1 id="hero-heading" class="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-white via-blue-100 to-green-100 bg-clip-text text-transparent leading-tight">
+            Play Smarter. In Real Time.
+          </h1>
+          <p class="text-lg md:text-2xl text-gray-200 max-w-3xl md:max-w-4xl md:ml-0 mx-auto leading-relaxed">
+            Real‑time key & chord detection, next‑chord prediction, MIDI playback, visual metronome, tuner, and a swipeable chord chart—plus an instant ABC sheet‑music viewer/editor for your own transcriptions.
+          </p>
         </div>
-        <!-- Trust Badges -->
-        <div class="flex flex-wrap justify-center gap-4 mb-10" aria-label="Key benefits">
-          <div class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-200 flex items-center gap-2"><span class="w-2 h-2 bg-green-400 rounded-full"></span> Offline • No Ads</div>
-          <div class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-200 flex items-center gap-2"><span class="w-2 h-2 bg-blue-400 rounded-full"></span> Real-Time Chord Detection</div>
-          <div class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-200 flex items-center gap-2"><span class="w-2 h-2 bg-purple-400 rounded-full"></span> Multi-Instrument</div>
-          <div class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-200 flex items-center gap-2"><span class="w-2 h-2 bg-yellow-400 rounded-full"></span> One-Time Purchase</div>
-          <div class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-200 flex items-center gap-2"><span class="w-2 h-2 bg-pink-400 rounded-full"></span> Privacy Friendly</div>
-        </div>
-        <!-- Teacher Testimonial -->
-        <figure class="max-w-2xl mx-auto">
-          <blockquote class="text-lg italic text-gray-300">“JamBuddy lets my students see and correct chords instantly—prep time dropped, engagement went up.”</blockquote>
-          <figcaption class="mt-3 text-sm text-gray-400">— Sarah M., High School Guitar Instructor</figcaption>
-        </figure>
+      </div>
+
+      <!-- Buttons row below -->
+      <div class="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center mt-8">
+        <a href="https://play.google.com/store/apps?id=com.jambuddy.app&hl=en_US" target="_blank" rel="noopener" class="group bg-gradient-to-r from-green-600 to-green-700 text-white px-8 py-4 rounded-xl font-bold text-lg md:text-xl hover:from-green-700 hover:to-green-800 transition-all duration-300 flex items-center justify-center shadow-xl hover:shadow-2xl transform hover:scale-105">
+          <img src="/images/icons/google-play-badge.png" alt="Get it on Google Play" class="h-10 md:h-12 mr-3 transition-transform group-hover:scale-110" />
+          Download Now
+        </a>
+        <a href="/features" class="border-2 border-gray-300 text-gray-300 px-8 py-4 rounded-xl font-bold text-lg md:text-xl hover:bg-gray-300 hover:text-black transition-all duration-300 flex items-center justify-center backdrop-blur-sm hover:backdrop-blur-md transform hover:scale-105" aria-label="Explore all JamBuddy features">
+          Explore Features
+        </a>
+      </div>
+
+      <!-- Benefits row under buttons -->
+      <div class="flex flex-wrap md:justify-start justify-center gap-3 md:gap-4 mt-8" aria-label="Key benefits">
+        <div class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-200 flex items-center gap-2"><span class="w-2 h-2 bg-green-400 rounded-full"></span> Offline • No Ads</div>
+        <div class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-200 flex items-center gap-2"><span class="w-2 h-2 bg-blue-400 rounded-full"></span> Live Key & Chord Detection</div>
+        <div class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-200 flex items-center gap-2"><span class="w-2 h-2 bg-purple-400 rounded-full"></span> ABC Sheet Viewer & Editor</div>
+        <div class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-200 flex items-center gap-2"><span class="w-2 h-2 bg-emerald-400 rounded-full"></span> MIDI Playback & Export</div>
       </div>
     </div>
   </section>
 
-  <!-- Three Core Features -->
+  <!-- Real-time Workflow -->
   <section class="py-24" aria-labelledby="core-pillars-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 id="core-pillars-heading" class="text-4xl md:text-5xl font-bold text-white mb-6">Turn Any Song Into a Learning Session</h2>
-        <p class="text-xl text-gray-300 max-w-3xl mx-auto">Detect chords, internalize rhythm, and capture ideas—fast, accurate, distraction‑free.</p>
+        <h2 id="core-pillars-heading" class="text-4xl md:text-5xl font-bold text-white mb-6">From Detection To Practice, Fast</h2>
+        <p class="text-xl text-gray-300 max-w-4xl mx-auto">JamBuddy listens and shows you the key and chords in real time, and helps you practice with MIDI playback, metronome, tuner, and a swipeable chord chart. For sheet music, use the built‑in ABC viewer/editor to render your own or shared transcriptions.</p>
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-        <!-- Listen -->
+        <!-- Listen / Detect -->
         <div class="group relative">
           <div class="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-blue-400 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
           <div class="relative text-center p-10 rounded-2xl bg-gray-800/90 backdrop-blur-sm shadow-xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300">

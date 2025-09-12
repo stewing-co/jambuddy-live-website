@@ -1,0 +1,165 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const { collection } = Astro.params;
+
+// Pre-render available collection routes
+export async function getStaticPaths() {
+  return [
+    { params: { collection: 'old-time-jam-tunes' } },
+    { params: { collection: 'irish-session-top100' } },
+    { params: { collection: 'open-hymnal' } },
+  ];
+}
+
+// Map slugs to file paths in this mono-repo. When deploying the website alone,
+// copy these files into /public/collections and update paths accordingly.
+const projectRoot = process.cwd();
+const sources = {
+  'old-time-jam-tunes': import.meta.env.PROD
+    ? path.resolve(projectRoot, 'public/collections/old_time_jam_tunes_collection.abc')
+    : path.resolve(projectRoot, '../app/src/main/assets/tunes/old_time_jam_tunes_collection.abc'),
+  'irish-session-top100': import.meta.env.PROD
+    ? path.resolve(projectRoot, 'public/collections/irish_session_top100_collection.abc')
+    : path.resolve(projectRoot, '../app/src/main/assets/tunes/irish_session_top100_collection.abc'),
+  'open-hymnal': import.meta.env.PROD
+    ? path.resolve(projectRoot, 'public/collections/open_hymnal_collection.abc')
+    : path.resolve(projectRoot, '../app/src/main/assets/tunes/open_hymnal_collection.abc'),
+} as const;
+
+const titleMap: Record<string, string> = {
+  'old-time-jam-tunes': 'Old Time Jam Tunes',
+  'irish-session-top100': 'The Session Top 100',
+  'open-hymnal': 'Open Hymnal'
+};
+
+const filePath = sources[collection! as keyof typeof sources];
+let abcText: string | null = null;
+try {
+  abcText = fs.readFileSync(filePath, 'utf8');
+} catch (e) {
+  abcText = null;
+}
+
+const pageTitle = titleMap[collection!] ?? 'ABC Collection';
+---
+
+<Layout title={`${pageTitle} – ABC Collection`} description={`View and edit the ${pageTitle} ABC collection in your browser.`}>
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="flex items-center gap-3 mb-6">
+      <a href="/abc" class="text-sm text-gray-300 hover:underline">← Back to ABC</a>
+      <h1 class="text-3xl font-bold text-white">{pageTitle}</h1>
+    </div>
+
+    {abcText ? (
+      <>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <!-- Left column: selection + controls + rendered song -->
+          <div class="space-y-3 lg:col-span-1">
+            <div class="p-3 rounded bg-gray-800 border border-gray-700">
+              <div class="flex items-center gap-2">
+                <button id="prevTune" class="px-2 py-1 bg-gray-700 text-white rounded">&#9664;</button>
+                <select id="tuneSelect" class="flex-1 min-w-0 bg-black text-gray-200 border border-gray-700 rounded p-2 text-sm"></select>
+                <button id="nextTune" class="px-2 py-1 bg-gray-700 text-white rounded">&#9654;</button>
+                <button id="showFull" class="px-2 py-1 bg-gray-700 text-white rounded text-xs">Full</button>
+              </div>
+              <div class="mt-2 flex items-center gap-4 flex-wrap">
+                <div class="flex items-center gap-2">
+                  <button id="transposeDown" class="px-2 py-1 bg-gray-700 text-white rounded" title="Transpose down">&#9837;</button>
+                  <span id="currentKeyLabel" class="text-gray-100 font-semibold min-w-[2ch] text-center">K?</span>
+                  <button id="transposeUp" class="px-2 py-1 bg-gray-700 text-white rounded" title="Transpose up">&#9839;</button>
+                </div>
+                <div class="flex items-center gap-2">
+                  <input id="tempoSlider" type="range" min="40" max="220" value="120" class="w-16" />
+                  <span id="tempoLabel" class="text-gray-300 text-sm">120 BPM</span>
+                  <button id="playToggle" class="px-3 py-1 bg-green-600 hover:bg-green-500 text-white rounded">Play</button>
+                </div>
+              </div>
+            </div>
+            <div class="p-3 rounded bg-gray-900 border border-gray-800">
+              <div id="paper"></div>
+            </div>
+          </div>
+
+          <!-- Middle column: ABC editor -->
+          <div class="lg:col-span-1 space-y-2">
+            <div class="flex justify-end gap-2 flex-wrap">
+              <div class="flex gap-2">
+                <button id="exportTuneAbc" class="px-3 py-1 bg-gray-700 text-white rounded" title="Export selected tune as .abc">Tune .abc</button>
+                <button id="exportFullAbc" class="px-3 py-1 bg-gray-700 text-white rounded" title="Export full collection as .abc">Full .abc</button>
+                <button id="exportPng" class="px-3 py-1 bg-gray-700 text-white rounded" title="Export rendered sheet as .png">PNG</button>
+                <button id="exportMidi" class="px-3 py-1 bg-gray-700 text-white rounded" title="Export MIDI">MIDI</button>
+              </div>
+            </div>
+            <textarea id="abcInput" class="w-full h-[70vh] p-3 font-mono text-sm rounded bg-black text-gray-200 border border-gray-700">{abcText}</textarea>
+          </div>
+
+          <!-- Right column: tabs on top, headers below -->
+          <div class="space-y-3 lg:col-span-1">
+            <div class="p-4 rounded bg-gray-800 border border-gray-700">
+              <h2 class="text-xl font-semibold text-white">Layers</h2>
+              <label class="block text-sm text-gray-300">Tablature layer</label>
+              <select id="layerSelect" class="w-full bg-black text-gray-200 border border-gray-700 rounded p-2 text-sm">
+                <option value="none">None (Staff only)</option>
+                <option value="guitar">Guitar</option>
+                <option value="mandolin">Mandolin</option>
+                <option value="ukulele">Ukulele</option>
+                <option value="baritone">Baritone Ukulele</option>
+              </select>
+              <label class="text-sm text-gray-300"><input id="stripChords" type="checkbox" class="mr-2" /> Strip quoted chords for tabs</label>
+              <p class="text-xs text-gray-400">If your abcjs build doesn’t support tablature, the staff will still render.</p>
+            </div>
+
+            <div class="p-4 rounded bg-gray-800 border border-gray-700">
+              <h2 class="text-xl font-semibold text-white">Headers</h2>
+              <div class="grid grid-cols-2 gap-2 text-sm text-gray-200">
+                <label><input id="hv-title" type="checkbox" class="mr-2" checked /> Title (T:)</label>
+                <label><input id="hv-composer" type="checkbox" class="mr-2" checked /> Composer (C:)</label>
+                <label><input id="hv-notes" type="checkbox" class="mr-2" checked /> Notes (N:)</label>
+                <label><input id="hv-book" type="checkbox" class="mr-2" checked /> Book (B:)</label>
+                <label><input id="hv-source" type="checkbox" class="mr-2" checked /> Source (S:)</label>
+                <label><input id="hv-subtitle" type="checkbox" class="mr-2" checked /> Subtitle (A:)</label>
+                <label><input id="hv-lyrics" type="checkbox" class="mr-2" checked /> Lyrics (w:/W:)</label>
+                <label><input id="hv-tempo" type="checkbox" class="mr-2" checked /> Tempo (Q:)</label>
+                <label><input id="hv-rhythm" type="checkbox" class="mr-2" checked /> Rhythm (R:)</label>
+                <label><input id="hv-key" type="checkbox" class="mr-2" checked /> Key (K:)</label>
+                <label><input id="hv-meter" type="checkbox" class="mr-2" checked /> Meter (M:)</label>
+                <label><input id="hv-length" type="checkbox" class="mr-2" checked /> Length (L:)</label>
+              </div>
+            </div>
+
+            <div class="p-4 rounded bg-gray-800 border border-gray-700">
+              <h2 class="text-xl font-semibold text-white">Theme</h2>
+              <div class="flex items-center gap-4 mt-2">
+                <label class="text-sm text-gray-300 flex items-center gap-2">
+                  Paper
+                  <input id="paperBgColor" type="color" class="w-10 h-8 rounded border border-gray-700 bg-black" value="#ffffff" />
+                </label>
+                <label class="text-sm text-gray-300 flex items-center gap-2">
+                  Ink
+                  <input id="inkColor" type="color" class="w-10 h-8 rounded border border-gray-700 bg-black" value="#000000" />
+                </label>
+              </div>
+              <p class="text-xs text-gray-400 mt-2">Adjust paper and ink colors for display and PNG export. Defaults to black ink on white paper.</p>
+            </div>
+          </div>
+        </div>
+      </>
+    ) : (
+      <div class="p-4 rounded bg-red-900/40 border border-red-800 text-red-200">
+        Failed to load the ABC source file. If you are building the website repo separately, copy the collection .abc files into <code>/public/collections</code> and rebuild.
+      </div>
+    )}
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/abcjs@6.4.4/dist/abcjs-basic-min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/abcjs@6.4.4/dist/abcjs-midi-min.js" defer></script>
+  <script src="/abc/viewer.js" defer></script>
+  <script>
+    window.addEventListener('load', () => {
+      if (window.ABCViewer) ABCViewer.init('abcInput', 'paper');
+    });
+  </script>
+</Layout>

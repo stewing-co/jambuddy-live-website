@@ -2,29 +2,26 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Music Collections - JamBuddy" description="Discover external music collections curated for JamBuddy users.">
+<Layout title="External Links - JamBuddy" description="Hand‑picked external sites: tabs, tune archives, and songbooks that pair well with JamBuddy.">
   <!-- Hero Section -->
-  <section class="bg-black text-white rounded-lg shadow-lg border border-gray-800 relative overflow-hidden" aria-labelledby="collections-heading">
+  <section class="bg-black text-white rounded-lg shadow-lg border border-gray-800 relative overflow-hidden" aria-labelledby="external-links-heading">
     <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_30%_30%,rgba(80,150,255,0.25),transparent_60%),radial-gradient(circle_at_70%_70%,rgba(0,200,140,0.15),transparent_65%)]"></div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
       <div class="text-center">
         <div class="mb-8 flex justify-center">
           <img src="/images/logo/jam_buddy_clear.png" alt="JamBuddy logo mark" class="w-40" loading="lazy" decoding="async" />
         </div>
-        <h1 id="collections-heading" class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-green-100 bg-clip-text text-transparent">Music Collections</h1>
-        <p class="text-2xl text-gray-300 max-w-2xl mx-auto mb-8 leading-relaxed">Hand‑picked external libraries, tabs, tune archives & songbooks to expand what you can learn and teach.</p>
-        <div class="flex flex-wrap gap-3 justify-center text-sm" aria-label="Collection categories">
-          <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-300">Sheet Music</span>
-          <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-300">Tabs & Chords</span>
-          <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-300">Traditional Tunes</span>
-          <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-300">Bluegrass & Folk</span>
+        <h1 id="external-links-heading" class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-green-100 bg-clip-text text-transparent">External Links</h1>
+        <p class="text-2xl text-gray-300 max-w-2xl mx-auto mb-8 leading-relaxed">Resources we love: tune libraries, ABC collections, tabs, and songbooks. Open in a new tab and bring what you find back to JamBuddy.</p>
+        <div class="mt-4">
+          <a href="/abc" class="inline-block px-5 py-3 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold">Use the ABC Viewer</a>
         </div>
         <p class="mt-6 text-sm text-gray-500">Links open in a new tab. JamBuddy isn’t affiliated; these are community‑helpful resources.</p>
       </div>
     </div>
   </section>
 
-   <!-- Guitar & Popular Music -->
+  <!-- Links Grid (copied from collections, retitled) -->
   <section class="py-12">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-bold text-white mb-8 text-center">🎸 Sites for Free Music</h2>
@@ -74,30 +71,8 @@ import Layout from '../layouts/Layout.astro';
           <p class="text-gray-300 mb-4">Family-friendly music and song resources perfect for all-ages jams.</p>
           <a href="https://www.okeedokee.org/music" target="_blank" rel="noopener" class="bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-500 transition-colors inline-block">Visit Okee Dokee Music</a>
         </div>
-        <div class="p-8 rounded-lg bg-gray-800 shadow-lg text-center">
-          <h3 class="text-2xl font-bold text-white mb-4">Bluegrass Lyrics</h3>
-          <p class="text-gray-300 mb-4">Lyrics and chords for classic bluegrass songs. Essential for bluegrass jams.</p>
-          <a href="https://bluegrasslyrics.com/" target="_blank" rel="noopener" class="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-500 transition-colors inline-block">Visit Bluegrass Lyrics</a>
-        </div>
-        <div class="p-8 rounded-lg bg-gray-800 shadow-lg text-center">
-          <h3 class="text-2xl font-bold text-white mb-4">Banjo Hangout</h3>
-          <p class="text-gray-300 mb-4">Banjo tabs, lessons, and community discussions for all banjo styles.</p>
-          <a href="https://www.banjohangout.org/" target="_blank" rel="noopener" class="bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-500 transition-colors inline-block">Visit Banjo Hangout</a>
-        </div>
-        <div class="p-8 rounded-lg bg-gray-800 shadow-lg text-center">
-          <h3 class="text-2xl font-bold text-white mb-4">Mandolin Cafe</h3>
-          <p class="text-gray-300 mb-4">Mandolin tabs, chords, and community resources for mandolin players.</p>
-          <a href="https://www.mandolincafe.com/" target="_blank" rel="noopener" class="bg-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-pink-500 transition-colors inline-block">Visit Mandolin Cafe</a>
-        </div>
       </div>
     </div>
   </section>
-
-  <!-- CTA -->
-  <section class="bg-blue-900/90 text-white py-20 rounded-lg mt-8">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-4xl font-bold mb-4">Suggest a Collection</h2>
-      <p class="text-xl mb-8">Know a great music resource we missed? <a href="/contact" class="underline text-yellow-300">Send it to us</a> and help the JamBuddy community grow!</p>
-    </div>
-  </section>
 </Layout>
+

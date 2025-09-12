@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ABC Synth Player</title>
+  <style>
+    html, body { margin: 0; padding: 0; background: #0b0b0b; color: #e5e7eb; font-family: system-ui, sans-serif; }
+    header { padding: 12px 16px; border-bottom: 1px solid #1f2937; display: flex; gap: 8px; align-items: center; }
+    main { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 12px; }
+    textarea { width: 100%; height: calc(100vh - 120px); background: #000; color: #e5e7eb; border: 1px solid #374151; border-radius: 8px; padding: 8px; }
+    #paper { background: #0b0b0b; border: 1px solid #374151; border-radius: 8px; padding: 8px; height: calc(100vh - 120px); overflow: auto; }
+    #paper svg text { fill: #e5e7eb !important; }
+    #paper svg path { stroke: #e5e7eb !important; }
+    button { background: #2563eb; color: white; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; }
+    button.secondary { background: #374151; }
+    button.green { background: #16a34a; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/abcjs@6.4.4/dist/abcjs-basic-min.js"></script>
+</head>
+<body>
+  <header>
+    <strong id="title">ABC Synth</strong>
+    <span style="opacity:0.7">Transpose:</span>
+    <button id="down" class="secondary">-1</button>
+    <span id="vtInfo">0 st</span>
+    <button id="up" class="secondary">+1</button>
+    <button id="render" class="secondary">Render</button>
+    <button id="play" class="green">Play</button>
+    <button id="stop" class="secondary">Stop</button>
+  </header>
+  <main>
+    <textarea id="abc"></textarea>
+    <div id="paper"></div>
+  </main>
+
+  <script>
+    let vt = 0;
+    let synth = null;
+    let audioContext = null;
+    const el = (id) => document.getElementById(id);
+
+    function getHashAbc() {
+      try {
+        const hash = location.hash || '';
+        const m = hash.match(/#abc=([^&]+)/);
+        if (!m) return '';
+        const b64 = m[1];
+        return decodeURIComponent(escape(atob(b64)));
+      } catch (_) { return ''; }
+    }
+
+    function getQuery() {
+      return new URLSearchParams(location.search);
+    }
+
+    function render() {
+      const paper = el('paper');
+      const abc = el('abc').value;
+      paper.innerHTML = '';
+      if (!window.ABCJS || !ABCJS.renderAbc) return;
+      const vObjs = ABCJS.renderAbc('paper', abc, { responsive: 'resize', visualTranspose: vt });
+      return vObjs && vObjs[0];
+    }
+
+    async function play() {
+      try {
+        const visualObj = render();
+        if (!visualObj) return;
+        const Ctx = window.AudioContext || window.webkitAudioContext;
+        if (!audioContext) audioContext = new Ctx();
+        await audioContext.resume();
+        if (synth) { try { synth.stop(); } catch(_){} }
+        synth = new ABCJS.synth.CreateSynth();
+        // Resolve soundfonts from website public path if available
+        const soundFont = function(filename) {
+          return '/abcjs/soundfonts/FluidR3_GM/acoustic_grand_piano-mp3/' + filename;
+        };
+        await synth.init({
+          visualObj,
+          audioContext,
+          millisecondsPerMeasure: 1000,
+          options: {
+            soundFont,
+            program: 0,
+            midiTranspose: vt,
+            gain: 0.7
+          }
+        });
+        await synth.prime();
+        await synth.start();
+      } catch (e) {
+        console.error('Synth play failed:', e);
+        alert('Audio play failed: ' + (e && e.message ? e.message : e));
+      }
+    }
+
+    function stop() {
+      try { if (synth) synth.stop(); } catch(_){}
+    }
+
+    window.addEventListener('load', () => {
+      const q = getQuery();
+      vt = parseInt(q.get('vt') || '0', 10) || 0;
+      el('vtInfo').textContent = vt + ' st';
+      const title = q.get('title');
+      if (title) el('title').textContent = title + ' – ABC Synth';
+      const abc = getHashAbc();
+      if (abc) el('abc').value = abc; else el('abc').value = 'X:1\nT:Example\nM:4/4\nL:1/8\nK:C\nCDEF GABc|';
+      render();
+      el('down').addEventListener('click', () => { vt--; el('vtInfo').textContent = vt + ' st'; render(); });
+      el('up').addEventListener('click', () => { vt++; el('vtInfo').textContent = vt + ' st'; render(); });
+      el('render').addEventListener('click', render);
+      el('play').addEventListener('click', play);
+      el('stop').addEventListener('click', stop);
+    });
+  </script>
+</body>
+</html>
+

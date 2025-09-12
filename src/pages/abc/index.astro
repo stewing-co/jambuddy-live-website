@@ -1,0 +1,120 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const collections = [
+  { slug: 'old-time-jam-tunes', title: 'Old Time Jam Tunes' },
+  { slug: 'irish-session-top100', title: 'The Session Top 100' },
+  { slug: 'open-hymnal', title: 'Open Hymnal' }
+];
+---
+
+<Layout title="ABC Viewer & Editor" description="Render and edit ABC notation in your browser with playback and transposition.">
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <h1 class="text-4xl font-bold text-white mb-3">ABC Viewer & Editor</h1>
+    <div class="flex flex-wrap items-center gap-2 mb-4">
+      {collections.map((c) => (
+        <a href={`/abc/${c.slug}`} class="px-3 py-1 rounded bg-gray-800 border border-gray-700 text-blue-200 hover:text-white hover:bg-gray-700 text-sm">
+          {c.title}
+        </a>
+      ))}
+    </div>
+    <p class="text-gray-300 mb-6">Paste your ABC below or open one of our curated collections. Uses abcjs to render sheet music in your browser.</p>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- Left column: controls + rendered song -->
+      <div class="space-y-3 lg:col-span-1">
+        <div class="p-3 rounded bg-gray-800 border border-gray-700">
+          <div class="flex items-center gap-4 flex-wrap">
+            <div class="flex items-center gap-2">
+              <button id="transposeDown" class="px-2 py-1 bg-gray-700 text-white rounded" title="Transpose down">&#9837;</button>
+              <span id="currentKeyLabel" class="text-gray-100 font-semibold min-w-[2ch] text-center">K?</span>
+              <button id="transposeUp" class="px-2 py-1 bg-gray-700 text-white rounded" title="Transpose up">&#9839;</button>
+            </div>
+            <div class="flex items-center gap-2">
+              <input id="tempoSlider" type="range" min="40" max="220" value="120" class="w-16" />
+              <span id="tempoLabel" class="text-gray-300 text-sm">120 BPM</span>
+              <button id="playToggle" class="px-3 py-1 bg-green-600 hover:bg-green-500 text-white rounded">Play</button>
+            </div>
+          </div>
+        </div>
+        <div class="p-3 rounded bg-gray-900 border border-gray-800">
+          <div id="paper"></div>
+        </div>
+      </div>
+
+      <!-- Middle column: editor + exports -->
+      <div class="lg:col-span-1 space-y-2">
+        <div class="flex justify-end gap-2 mb-1 flex-wrap">
+          <div class="flex gap-2">
+            <button id="exportTuneAbc" class="px-3 py-1 bg-gray-700 text-white rounded" title="Export current as .abc">Tune .abc</button>
+            <button id="exportFullAbc" class="px-3 py-1 bg-gray-700 text-white rounded" title="Export full text as .abc">Full .abc</button>
+            <button id="exportPng" class="px-3 py-1 bg-gray-700 text-white rounded" title="Export rendered sheet as .png">PNG</button>
+            <button id="exportMidi" class="px-3 py-1 bg-gray-700 text-white rounded" title="Export MIDI">MIDI</button>
+          </div>
+        </div>
+        <textarea id="abcInput" class="w-full h-[70vh] p-3 font-mono text-sm rounded bg-black text-gray-200 border border-gray-700" placeholder="Paste or type ABC notation here..."></textarea>
+      </div>
+
+      <!-- Right column: layers + headers + theme + collections list -->
+      <div class="space-y-3 lg:col-span-1">
+        <div class="p-4 rounded-lg bg-gray-800 border border-gray-700 space-y-3">
+          <h2 class="text-xl font-semibold text-white">Layers</h2>
+          <label class="block text-sm text-gray-300">Tablature layer</label>
+          <select id="layerSelect" class="w-full bg-black text-gray-200 border border-gray-700 rounded p-2 text-sm">
+            <option value="none">None (Staff only)</option>
+            <option value="guitar">Guitar</option>
+            <option value="mandolin">Mandolin</option>
+            <option value="ukulele">Ukulele</option>
+            <option value="baritone">Baritone Ukulele</option>
+          </select>
+          <label class="text-sm text-gray-300"><input id="stripChords" type="checkbox" class="mr-2" /> Strip quoted chords for tabs</label>
+          <p class="text-xs text-gray-400">If your abcjs build doesn’t support tablature, the staff will still render.</p>
+        </div>
+
+        <div class="p-4 rounded-lg bg-gray-800 border border-gray-700 space-y-3">
+          <h2 class="text-xl font-semibold text-white">Headers</h2>
+          <div class="grid grid-cols-2 gap-2 text-sm text-gray-200">
+            <label><input id="hv-title" type="checkbox" class="mr-2" checked /> Title (T:)</label>
+            <label><input id="hv-composer" type="checkbox" class="mr-2" checked /> Composer (C:)</label>
+            <label><input id="hv-notes" type="checkbox" class="mr-2" checked /> Notes (N:)</label>
+            <label><input id="hv-book" type="checkbox" class="mr-2" checked /> Book (B:)</label>
+            <label><input id="hv-source" type="checkbox" class="mr-2" checked /> Source (S:)</label>
+            <label><input id="hv-subtitle" type="checkbox" class="mr-2" checked /> Subtitle (A:)</label>
+            <label><input id="hv-lyrics" type="checkbox" class="mr-2" checked /> Lyrics (w:/W:)</label>
+            <label><input id="hv-tempo" type="checkbox" class="mr-2" checked /> Tempo (Q:)</label>
+            <label><input id="hv-rhythm" type="checkbox" class="mr-2" checked /> Rhythm (R:)</label>
+            <label><input id="hv-key" type="checkbox" class="mr-2" checked /> Key (K:)</label>
+            <label><input id="hv-meter" type="checkbox" class="mr-2" checked /> Meter (M:)</label>
+            <label><input id="hv-length" type="checkbox" class="mr-2" checked /> Length (L:)</label>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-lg bg-gray-800 border border-gray-700 space-y-3">
+          <h2 class="text-xl font-semibold text-white">Theme</h2>
+          <div class="flex items-center gap-4">
+            <label class="text-sm text-gray-300 flex items-center gap-2">
+              Paper
+              <input id="paperBgColor" type="color" class="w-10 h-8 rounded border border-gray-700 bg-black" value="#ffffff" />
+            </label>
+            <label class="text-sm text-gray-300 flex items-center gap-2">
+              Ink
+              <input id="inkColor" type="color" class="w-10 h-8 rounded border border-gray-700 bg-black" value="#000000" />
+            </label>
+          </div>
+          <p class="text-xs text-gray-400">Adjust paper and ink colors for display and PNG export.</p>
+        </div>
+
+        
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/abcjs@6.4.4/dist/abcjs-basic-min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/abcjs@6.4.4/dist/abcjs-midi-min.js" defer></script>
+  <script src="/abc/viewer.js" defer></script>
+  <script>
+    window.addEventListener('load', () => {
+      if (window.ABCViewer) ABCViewer.init('abcInput', 'paper');
+    });
+  </script>
+</Layout>
