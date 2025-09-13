@@ -523,35 +523,20 @@
         const norm = this.normalizeAbc(raw);
         const filtered = this.filterHeaders(norm);
 
-        // Base staff
+        // Build render options; when a tablature layer is chosen, render staff + tab together in one pass
+        const hasTab = this.state.layer && this.state.layer !== 'none';
+        const tabSpec = hasTab ? this.instruments[this.state.layer] : null;
         const baseOpts = { responsive: 'resize', add_classes: true, visualTranspose: this.state.vt, wrap: { preferredMeasuresPerLine: 5 } };
-        const v = ABCJS.renderAbc(this.state.paperId, filtered, baseOpts);
+        const renderOpts = hasTab && tabSpec ? { ...baseOpts, tablature: [tabSpec] } : baseOpts;
+        // Optionally strip chord symbols when rendering tabs for a cleaner layout
+        const abcToRender = (hasTab && this.state.stripChordsForTabs) ? this.simplifyForTab(filtered) : filtered;
+        const v = ABCJS.renderAbc(this.state.paperId, abcToRender, renderOpts);
         this.state.lastVisualObj = v && v[0];
         try { this.updateKeyLabel(filtered); } catch(_) {}
         try { this.applyThemeInline(); } catch(_) {}
         try { this.ensureResponsiveSvgs(); } catch(_) {}
         try { this.updatePaperHeight(); } catch(_) {}
 
-        // Optional single tablature layer
-        if (this.state.layer && this.state.layer !== 'none') {
-          const tabSpec = this.instruments[this.state.layer];
-          if (tabSpec) {
-            const simple = this.simplifyForTab(filtered);
-            try {
-              ABCJS.renderAbc(this.state.paperId, simple, { tablature: [tabSpec], clef: false, key: false, time: false, visualTranspose: this.state.vt });
-              // Post-hiding just in case
-              setTimeout(() => {
-                try {
-                  document.querySelectorAll('#' + this.state.paperId + ' svg .abcjs-clef, #' + this.state.paperId + ' svg .abcjs-keysig, #' + this.state.paperId + ' svg .abcjs-timesig').forEach(el => { el.style.display = 'none'; });
-                } catch (_) {}
-                try { this.ensureResponsiveSvgs(); } catch(_) {}
-                try { this.updatePaperHeight(); } catch(_) {}
-              }, 50);
-            } catch (e) {
-              console.warn('Tablature not supported in this build of abcjs:', e && e.message);
-            }
-          }
-        }
         if (returnVisualObj) return this.state.lastVisualObj;
       } catch (e) {
         console.error('ABC render failed:', e);
@@ -722,8 +707,31 @@
   Viewer.updatePaperHeight = function() {
     const paper = document.getElementById(this.state.paperId);
     if (!paper) return;
+    // Clear any fixed height first
     const wrapper = paper.parentElement;
-    if (wrapper) wrapper.style.height = 'auto';
+    if (wrapper) wrapper.style.height = '';
+    // Measure combined height of all SVGs (should be one after single-pass render)
+    const svgs = paper.querySelectorAll('svg');
+    let total = 0;
+    svgs.forEach(svg => {
+      try {
+        // Prefer intrinsic bbox height, fallback to clientHeight
+        const vb = (svg.getAttribute('viewBox') || '').split(/\s+/).map(Number);
+        const h = (vb.length === 4 ? vb[3] : 0) || svg.getBBox().height || svg.clientHeight || 0;
+        total += Math.ceil(h);
+      } catch(_) {
+        total += svg.clientHeight || 0;
+      }
+    });
+    // If we have a wrapper with constrained layout, set explicit px height to avoid excessive whitespace
+    if (wrapper && total > 0) {
+      // Scale to displayed width: height scales with width/viewBox; rely on auto vertical sizing
+      // Use scrollHeight as final guard if computed total is off
+      setTimeout(() => {
+        const h = Math.max(paper.scrollHeight, total);
+        wrapper.style.height = h + 'px';
+      }, 0);
+    }
   };
 
   // --- Responsiveness helper ---
