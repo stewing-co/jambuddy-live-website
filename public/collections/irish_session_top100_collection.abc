@@ -1,17 +1,4 @@
 X:1
-T:Ashplant, The
-C:Traditional
-R:reel
-K:E
-M:4/4
-L:1/8
-|:BE~E2 BAGA| BE~E2 ~G3A| BE~E2 BABd| gedB A2GA|
-| BE~E2 BAGA| BE~E2 ~G3A| ~B3A (3Bcd ef| gedB A2GA:||
-|: B2eB fBeB| ~B2ed BAGA| B2eB ~f3d| efdB A2GA|
-| B2eB fBeB| ~B2ed BAGA| (3Bcd ef ~g3a| gedB A2GA:||
-%%footer JamBuddy 2025 - No rights reserved, public domain
-
-X:2
 T:Atholl Highlanders, The
 C:Traditional
 R:jig
@@ -19,29 +6,15 @@ K:A
 M:6/8
 L:1/8
 |: e2e ecA| ecA Bcd| e2e ecA| Bcd cBA|
-| e2e ecA| ecA Bcd| eae fed| cdB A3:|
-| Ace Ace|Adf Adf| Ace Ace| Bcd c2B| Ace Ace|
-| Adf Adf| eae fed| cdB A3:| 
-|:a2a aec| a2a aec| a2a aec| Bcd cBA|
-| a2a aec| a2a aec| eae fed| cdB A3:|
-| c2c cBA| d2d fed| c2c cBA| =G2=G BA=G|
-| c2c cBA| d2d fed| eae fed| cdB A3 :|
-%%footer JamBuddy 2025 - No rights reserved, public domain
+! e2e ecA| ecA Bcd| eae fed| cdB A3:| ! Ace Ace|
+Adf Adf| Ace Ace| Bcd c2B| ! Ace Ace|
+Adf Adf| eae fed| cdB A3:| ! |:
+a2a aec| a2a aec| a2a aec| Bcd cBA|
+! a2a aec| a2a aec| eae fed| cdB A3:|
+! c2c cBA| d2d fed| c2c cBA| =G2=G BA=G|
+! c2c cBA| d2d fed| eae fed| cdB A3:|
 
-X:3
-T:Ballydesmond, The
-C:Traditional
-R:polka
-K:A
-M:4/4
-L:1/8
-|: E>A AB| cd e2| G>F GA| GF ED|
-! E>A AB| cd ef| ge dB| A2 A2:| ! |:
-a2 ab| ag ef| g2 ga| ge de|
-! ea ab| ag ef| ge dB| A2 A2:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
-
-X:4
+X:2
 T:Banish Misfortune
 C:Traditional
 R:jig
@@ -55,9 +28,8 @@ e2c cBc| e2f gfe| ! f2g agf| e2f gfe|
 fed cAG| Ad^c d3:| ! |: f2g e2f|
 d2e c2d| ABA GAG| F2F GED| ! c3 cAG|
 AGA cde| fed cAG| Ad^c d3:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:5
+X:3
 T:Banshee, The
 C:Traditional
 R:reel
@@ -68,9 +40,8 @@ L:1/8
 ! G2 GD EDEG| AGAB d2 Bd| eged BAGA| BAGE ED D2:| ! |:
 ea a2 efgf| eBBA B2 Bd| eB B2 efgf| eBBA B2 Bd|
 ! ea a2 efgf| eBBA B2 Bd| eged BAGA| BAGE EDD2:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:6
+X:4
 T:Blackthorn Stick, The
 C:Traditional
 R:jig
@@ -82,9 +53,8 @@ DGG FGA| BGB A2 d| ! gfg age| dBG AGE|
 DGG FGA| BGG G2:| ! |: d|
 edd gdd| edd gdd| e2 e gfg| edB A2 d|
 ! gfg age| dBG AGE| DGG FGA| BGG G2:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:7
+X:5
 T:Blarney Pilgrim, The
 C:Traditional
 R:jig
@@ -97,9 +67,8 @@ L:1/8
 ! g2e dBG| AGA BGE| B2G AGE| GED D3:|
 ! A2D B2D| A2D ABc| BAG AGE| GEA GED|
 ! ADD BDD| ADD ABc| BAG AGE| GED D3:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:8
+X:6
 T:Boys Of Bluehill, The
 C:Traditional
 R:hornpipe
@@ -111,9 +80,8 @@ fa gf eg fe| df ed B2 dB| ! BA FA D2 FA| BA (3Bcd e2 de|
 fa gf eg fe| d2 f2 d2:| ! |: fg|
 af df a2 g2| ef ga b2 ag| fa gf eg fe| df ed B2 dB|
 ! BA FA D2 FA| BA (3Bcd e2 de| fa gf eg fe| d2 f2 d2:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:9
+X:7
 T:Britches Full Of Stitches, The
 C:Traditional
 R:polka
@@ -124,9 +92,8 @@ L:1/8
 ! G>A BG| AG Bd| G>A GE| ED D2:| ! |:
 d>e dB| AG AB| d>e dB| AG E2|
 ! d>e dB| AG AB| G>A GE| ED D2:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:10
+X:8
 T:Bucks Of Oranmore, The
 C:Traditional
 R:reel
@@ -143,9 +110,8 @@ A2FA A2dB| A2FA BEE2| A2FA A2Bd| egfd edBd|
 ! f2df e2de| f2df edBd| faaf bfaf| defd edBd||
 ! Adfd edfd| Adfd edBd| Adfd edfd| gefd edBd|
 ! Adfd edfd| Adfd edB2| faaf bfaf| defd edBd||
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:11
+X:9
 T:Butterfly, The
 C:Traditional
 R:slip jig
@@ -156,9 +122,8 @@ L:1/8
 B2d d2B AFD:| ! |: B2d e2f g3| B2d g2e dBA|
 B2d e2f g2a| b2a g2e dBA:| ! |: B3 B2A G2A|
 B3 BAB dBA| B3 B2A G2A| B2d g2e dBA:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:12
+X:10
 T:Calliope House
 C:Traditional
 R:jig
@@ -170,9 +135,8 @@ FAA A2F| ! A2B d2e| 1 f2f fed| e3 e2A:| 2 f2f edc|
 d3 efg|| ! |: a2a faa| eaa faa|
 g2g fgf| efe dBA| FAA A2F| ! A2B d2e|
 1 f2f fed| e3 efg:| 2 f2f edc| d3 d3||
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:13
+X:11
 T:Castle Kelly
 C:Traditional
 R:reel
@@ -182,9 +146,8 @@ L:1/8
 |: A2 cA ABcA| GcEG G2 EG| A2 cA ABcd| ecdB cA A2:|
 ! agec dfed| cAGE G2 eg| agec d2cd| eaag a2ba| ! gedc dfed|
 cAGE| G2 EG| A2 cA ABcd| ecdB cA A2|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:14
+X:12
 T:Cliffs Of Moher, The
 C:Traditional
 R:jig
@@ -197,9 +160,8 @@ L:1/8
 ! e2e dBA| e2e dBA| GAB dBA| EFG A3|
 ! efe dBA| efe dBA| GAB dBA| GAB dBd|
 ! efe ded| cec BeB| GAB dBA| EFG A3|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:15
+X:13
 T:Concertina, The
 C:Traditional
 R:reel
@@ -210,9 +172,8 @@ L:1/8
 ! A2FA BAFA| A2FA BAFA| FABc d2dA| BAFE D4:| ! |:
 Addd Addd| AddA BAFA| B2BA B2BA| B2BA BAFA|
 ! Addd Addd| AddA BAFA| FABc d2dA| BAFE D4:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:16
+X:14
 T:Congress, The
 C:Traditional
 R:reel
@@ -223,9 +184,8 @@ L:1/8
 ! eAAG A2Bd| eaaf gedB| cBcd eged| cABG A2Bd:| ! |:
 eaag abag| eaag egdg| egdg egdg| eaaf gedg|
 ! eaag a2ag| eaaf gedB| c2cd e2ed| cABG A2Bd:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:17
+X:15
 T:Connaughtman's Rambles, The
 C:Traditional
 R:jig
@@ -237,9 +197,8 @@ dBB BAG| ! FAA dAA| BAA def| gfe dfe|
 1 dBB BAG:| 2 dBB B3|| ! |: fbb faf|
 fed ede| fbb faf| fed e3| ! fbb faf|
 fed def| gfe dfe| 1 dBB B3:| 2 dBB BAG||
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:18
+X:16
 T:Cooley's
 C:Traditional
 R:reel
@@ -251,26 +210,8 @@ FDAD BDAD| FDAD dAFD| ! EBBA B2 EB| B2 AB defg|
 afec dBAF| DEFD E2:| ! |: gf|
 eB B2 efge| eB B2 gedB| A2 FA DAFA| A2 FA defg|
 ! eB B2 eBgB| eB B2 defg| afec dBAF| DEFD E2:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:19
-T:Crested Hens
-C:Traditional
-R:waltz
-K:D
-M:3/4
-L:1/8
-E3G FE| B4 Bc| dc Be dc| dc BA GF|
-! E3G FE| B4 Bc| dc BA GA| B3G FD|
-! E3G FE| B4 Bc| dc Be dc| dc BA GF|
-! E3G FE| B4 Bc| dc BA GA| B4 ef||
-! gB Bg gB| =c4ef| gf ag fe| ^d2e2 f2|
-! gB Bg gB| =c4ef| gf ag fd| e3e ef|
-! gB Bg gB| =c4ef| gf ag fe| ^d2e2 f2|
-! gB Bg gB| =c4ef| gf ag fd| e3G FA||
-%%footer JamBuddy 2025 - No rights reserved, public domain
-
-X:20
+X:17
 T:Cup Of Tea, The
 C:Traditional
 R:reel
@@ -284,9 +225,20 @@ d2 eg fdec| dBAG FD D2| ! d2 eg fdec| dfaf g2 fg|
 afge fdec| dBAG FD D2:| ! |: FAdA FABA|
 FAdA FEE2| FAdA FABc| dBAG FD D2| ! FAdA FABA|
 FAde fee2| fdec dBAF| GBAG FD D2:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:21
+X:18
+T:Dancing Master, The
+C:Traditional
+R:jig
+K:E
+M:6/8
+L:1/8
+|: GEE BEE| GEE BAG| FDD ADD| dcd AGF|
+! GEE BEE| GEG B2c| dcd AGF| GEE E3:| ! |:
+Bcd e2f| e2f edB| Bcd e2f| edB d3|
+! Bcd e2f| e2f edB| dcd AGF| GEE E3:|
+
+X:19
 T:Donnybrook Fair
 C:Traditional
 R:jig
@@ -298,9 +250,8 @@ L:1/8
 ! gfe fed| efe dBA| Bee dBA| Bee e2f|
 ! [1gfe fed| efe dBA| BAB GAB| AGF G2f:|
 ! [2gfg aga| bge dBA| B2B GAB| AGF G3||
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:22
+X:20
 T:Drowsy Maggie
 C:Traditional
 R:reel
@@ -310,9 +261,20 @@ L:1/8
 |: E2BE dEBE| E2BE AFDF| E2BE dEBE| BABc dAFD:|
 ! d2fd c2ec| defg afge| d2fd c2ec| BABc dAFA|
 ! d2fd c2ec| defg afge| afge fdec| BABc dAFD|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:23
+X:21
+T:Dunmore Lasses, The
+C:Traditional
+R:reel
+K:Em
+M:4/4
+L:1/8
+|: ~E3F ~G3A| Be~e2 Be~e2| ~E3F G2BG| A2BA GEFD|
+! ~E3F ~G3A| Beed ~e3f| (3.g.f.e fd eBdB| AcBA GEFD:|
+! g2eg fedc| Be~e2 Be~e2| g2eg fedB| AcBA GE~E2|
+! g2eg fedc| Beed ~e3f| (3.g.f.e fd eBdB| AcBA GEE2:|
+
+X:22
 T:Dusty Windowsills
 C:Traditional
 R:jig
@@ -325,9 +287,8 @@ L:1/8
 ! EGG DGG| EFG ABc| Bee dBG| ABA A3:|
 ! A2A gAf| A2A gAf| G2G eGd| G2G edB|
 ! A2A gAf| A2d efg| age dBG| ABA A3:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:24
+X:23
 T:Earl's Chair, The
 C:Traditional
 R:reel
@@ -338,9 +299,8 @@ L:1/8
 ! B2Bd BAFA| B2Bd BAFA| AFAB dcdf| edef d3z:| ! |:
 e2ec d2Bd| efec dFAB| e2ec d3e| fedB ADFA|
 ! e2ef eB (3BBB| gB (3BBB defg| afbf afef| gedB ADFA:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:25
+X:24
 T:Egan's
 C:Traditional
 R:polka
@@ -351,9 +311,8 @@ L:1/8
 ! fA BA| fA BA| d2 e>f| ed d2:| ! |:
 fa f>e| ed BA| d2 e>f| ed BA|
 ! fa f>e| ed BA| d2 e>f| ed d2:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:26
+X:25
 T:Fanny Power
 C:Traditional
 R:waltz
@@ -365,9 +324,8 @@ L:1/8
 "C"F>GE "D"D>GF| "G" G3 G2:| ! |: d|
 "G"dB/c/d dB/c/d| "Em"G>AG GBd| "C"ec/d/e ec/d/e| "D"A>BA ABc|
 ! "G"B>cd "C"e>fg| "D"f>ga d2c| "G"B>AG "D"A/B/cF| "G"G3 G2:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:27
+X:26
 T:Farewell To Ireland
 C:Traditional
 R:reel
@@ -383,9 +341,8 @@ d2 dB GABd| eABA eAAa| gedB BA A2| ! eABA eABA|
 d2 dB GABd| c2 BA Bdef| gedB BA A2:| ! |:
 aece aece| gdBd gdBd| aece a2 af| gedB BA A2|
 ! agef g2 ge| dedB GA B2| cAeA d2 ef| gedB BA A2:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:28
+X:27
 T:Farewell To Whalley Range
 C:Traditional
 R:slip jig
@@ -395,23 +352,8 @@ L:1/8
 |: F2c BA~F- F2E| F2c BAc fec| B3 BAB c2A| 1 ~B3 BAB cBA:|
 2 ~B3 BAB cef|| ! a3 fec fec| B3 BAB cef| a3 baf afe| fec Bce fec|
 ! a2f fec fec| B3 BAB cef| a3 baf afe| fec fec BAB||
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:29
-T:Father Kelly's
-C:Traditional
-R:reel
-K:G
-M:4/4
-L:1/8
-|: B2GB AGEG| DGGF G2AB| c2AB cBAG|
-EAAG FDGA| ! B2GB AGEG| DGGF GABc| d2Bd gdBd|
-1 cAFA ~G3A:| 2 cAFA GABc|| ! |: d2Bd gdBd|
-d2Bd gdBd| e2ce agfe| defg agfe| ! d2Bd gdBd|
-d2Bd gdBd| c2Ac BAGB| 1 AGFA GABc:| 2 AGFA ~G3A||
-%%footer JamBuddy 2025 - No rights reserved, public domain
-
-X:30
+X:28
 T:Fig For A Kiss, A
 C:Traditional
 R:slip jig
@@ -422,9 +364,21 @@ G2B E2B BAG| F2A D2A AGF| G2B E2B BAG| B/c/dB AGF DEF|
 ! G2B E2B BAG| F2A D2A AGF| G2B E2B BAG| B/c/dB AGF E3||
 ! g2e g2e edB| f2d dcd fed| g2e g2e edB| dBG GBd e2f|
 ! g2e g2e edB| f2d dcd fed| gfe fed ecA| B/c/dB AGF E2F||
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:31
+X:29
+T:Foxhunter, The
+C:Traditional
+R:slip jig
+K:D
+M:6/8
+L:1/8
+|: FDF F2D G2E| FDF F2D E2D| FDF F2D G2B|
+AFD DEF E2D:| ! |: B3 BAG FGA| B2E E2F G2B|
+ABc dcB ABc| d2 D D2 F E2 D:| ! |: fdf f2d g2e|
+fdf f2d e2d| fdf f2d g2b| afd def e2d:| ! |:
+gfe dcB AGF| B2 E E2 F G2 B| ABc dcB ABc| d2 D DEF E2 D:|
+
+X:30
 T:Foxhunters, The
 C:Traditional
 R:reel
@@ -437,9 +391,8 @@ AcBG AGEG:| ! |: gedB GABd| gdBd eaaf|
 gedB GABG| ABcd eA~A2:| ! |: dggf ~g2ge|
 dggd egdB| dggf ~g2gd| egdB AGAB:| ! |:
 G2BG dGBG| GABG AGAB| ~G2BG dGBd| egdB AGAB:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:32
+X:31
 T:Frank's
 C:Traditional
 R:reel
@@ -454,9 +407,8 @@ L:1/8
 ! aA Ag AA fA| ef fe cA Bc| df (3fff ec Ac| BA GB Ae fg|
 ! aA Ag AA fA| e f2 e cA Bc| d3 f eA ce| fa ec (3Bcd cB|
 ! Ac BA F3 A| EF AB cA Bc| d3 f ec Ac| BA GB A4||
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:33
+X:32
 T:Garrett Barry's
 C:Traditional
 R:jig
@@ -467,9 +419,8 @@ A|: DEF ~G3| AGE c2A| dcA d2e| fed cAG|
 ! ~F3 GFG| AGE (3Bcd e| dcA GEA| DED D2 A:| ! |:
 dcA d2e| fed (3efg e| dcA c2d| efd ecA|
 ! dAA d2e| fed (3efg e| dcA GEA| DED D2 A:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:34
+X:33
 T:Geese In The Bog, The
 C:Traditional
 R:jig
@@ -481,23 +432,8 @@ cEE GED| EAA A2B| ! cEE GEE| cEE GAB|
 cBA GED| EAA A2:|: B| ! cde ged|
 eaf ged| cde ged| eag ~a3| ! cde ged|
 eaf ged| cBA GED| EAA A2:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:35
-T:Glass Of Beer, The
-C:Traditional
-R:reel
-K:Bm
-M:4/4
-L:1/8
-|: fB (3BBB fBaB| fB (3BBB edce| fB (3BBB ~f3 e|
-1 dfaf e2 de:| 2 dfaf e3 c|| ! |: dcde ~f3 e|
-defd edBA| dcde ~f3 e| 1 dfaf e3 c:| 2 dfaf edba||
-! fB (3BBB fBaB| fb (3BBB e2 de| fB (3BBB ~f3 e| dfaf e2 de|
-! fB (3BBB bBaB| fBeB fede| fB (3BBB ~f3 e| dfaf e4||
-%%footer JamBuddy 2025 - No rights reserved, public domain
-
-X:36
+X:34
 T:Gravel Walks, The
 C:Traditional
 R:reel
@@ -511,24 +447,8 @@ gedc BAGB| ! |: (3cBA BG A2 AB| cAAd BAGB|
 (3cBA BG ABcd| efge dBGB:| ! |: c2 gc acgc|
 c2 gc BAGB| c2 gc acga| gedc BAGB| ! c2 gc acgc|
 c2 gc BAGB| ABcd efga| gedc BAGB:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:37
-T:Greig's Pipes
-C:Traditional
-R:reel
-K:G
-M:4/4
-L:1/8
-~B2BA BAGA| B2GB AGEG| ~B2BA BAGB| cABG AGEG|
-! ~B2BA BAGA| B2GB AGEG| Bd~d2 eBdB| AcBG AGEG||
-! DG~G2 DGBG| DGBG AGEG| DGGF GABc| d2BG ABGE|
-! AG~G2 AGBG| DGBG AGEG| DGGF GABc| dBAc BG~G2||
-! d2 (3Bcd edge| dGBG AGEG| d2 (3Bcd eg~g2| agbg ageg|
-! d2 (3Bcd edge| dGBG AGEG| d2 (3Bcd eg~g2| agab aged||
-%%footer JamBuddy 2025 - No rights reserved, public domain
-
-X:38
+X:35
 T:Hag At The Churn, The
 C:Traditional
 R:jig
@@ -538,9 +458,8 @@ L:1/8
 |: A2G ADD| A2G Adc| A2G ADD| EFG EFG:|
 ! AdB c3| Add efg| AdB c2A| GEG AED|
 ! AdB c3| Add efg| age dcA| GEG AED||
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:39
+X:36
 T:Harvest Home, The
 C:Traditional
 R:hornpipe
@@ -552,28 +471,43 @@ eAfA gAfA| (3efe (3dcB AGFE| ! DAFA DAFA| defe dcBA|
 eAfA gfec| d2 f2 d2:| ! |: cd|
 eAAA fAAA| gAfA eAAA| eAfA gAfA| (3efe (3dcB (3ABA (3GFE|
 ! DAFA DAFA| defe dcBA| eAfA gfec| d2 f2 d2:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:40
-T:Humours Of Ballyloughlin, The
+X:37
+T:Haste To The Wedding
 C:Traditional
 R:jig
 K:D
 M:6/8
 L:1/8
-|: ABA AGE| GED D2 B| cBc ded|
-cAG FED| ! ABA AGE| ~G3 cGE| DED DFA|
-1 DED D2 A:| 2 DED D2 B|| ! |: ~c3 cBc|
-cAG AB^c| ~d3 ded| dAF DFA| ! cBc dcB|
-cAG FGE| DED DFA| 1 DED D2 B:| 2 DED D2 e||
-! |: fdd gdd| fdd gdd| ^cde ged|
-^cde ~g3| ! fdd gdd| fdd ged| ^cde gag|
-1 ed^c d2 e:| 2 ed^c d^cB|| ! |: AFD ABG|
-~F3 GED| ~E3 EFG| ~E3 EFG| ! ABA dAG|
-~F3 GEA| DED DFA| 1 DED D2 A:| 2 DED D3||
-%%footer JamBuddy 2025 - No rights reserved, public domain
+|: AFA Agf| ede fdB| AFA dAF| EFE EFG|
+! AFA Agf| ede fdB| A2g faf| ded d3:| ! |:
+afa afa| bgb bgb| afa agf| ede efg|
+! a3 f3| ede fdB| A2g faf| ded d3:|
 
-X:41
+X:38
+T:Humours Of Glendart, The
+C:Traditional
+R:jig
+K:D
+M:6/8
+L:1/8
+|: BAF AFE| FED EFA| BAF AFE| FEE E2A|
+! BAF AFE| FED FAB| dcB AFE| FDD D2A:|
+! def d2B| ABA AFA| def d2d| ede fdB|
+! def edB| dBA ABc| dcB AFE| FDD D2A:|
+
+X:39
+T:Humours Of Tulla, The
+C:Traditional
+R:reel
+K:D
+M:4/4
+L:1/8
+|: d2Ad BdAB| d2fd edBc| d2Ad BdAd|
+1 (3Bcd ef g2fe:| 2 (3Bcd ef g2fg|| ! |: af~f2 df~f2|
+af~f2 g2fg| af~f2 dfed| 1 (3Bcd ef g2fg:| 2 (3Bcd ef g2fe||
+
+X:40
 T:I Buried My Wife And Danced On Her Grave
 C:Traditional
 R:jig
@@ -584,9 +518,8 @@ L:1/8
 ! DDD F2G| AdB cAF| GGG BAG| AFD D2A:| ! |:
 d2e fed| faf gfe| d2e fed| dcA dcA|
 ! d2e fed| faf gfe| dcA BAG| AFD D3:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:42
+X:41
 T:Inisheer
 C:Traditional
 R:waltz
@@ -599,9 +532,8 @@ L:1/8
 e3f ed| B3A Bd| G3B A/G/F| ! G3A Bd|
 e3f ed| B3A Bd| gf ed B/c/d| ! e3A Bd|
 e3f ed| B3A Bd| D3B A/G/F| G6||
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:43
+X:42
 T:Irish Washerwoman, The
 C:Traditional
 R:jig
@@ -612,9 +544,8 @@ L:1/8
 ! BGG DGG| BGB dcB| cBc Adc| BGG G3:| ! |:
 BGG DGG| BGB BAG| AFF DFF| AFA AGF|
 ! EGG DGG| CGG B,GG| cBc Adc| BGG G3:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:44
+X:43
 T:Jig Of Slurs, The
 C:Traditional
 R:jig
@@ -630,9 +561,8 @@ aff gff| G2g gfg| aff g3| ! G2g gfg|
 aff gff| e2e efg| fed e3:| ! |:
 GBB Bdd| dee edB| GBB Bdd| dee efg|
 ! GBB Bdd| dee edB| e2e efg| fed e3:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:45
+X:44
 T:Jimmy Ward's
 C:Traditional
 R:jig
@@ -644,9 +574,8 @@ L:1/8
 2 DED D2B|| ! |: cBA BAG| ABA AGB|
 cBA BGE| DED GAB| ! cBA BAG| ABA ABc|
 dcB AGE| 1 GED D2B:| 2 GED DEF|| G6||
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:46
+X:45
 T:John Ryan's
 C:Traditional
 R:polka
@@ -657,9 +586,8 @@ dd B/c/d/B/| AF ED| dd B/c/d/B/| AF E2|
 ! dd B/c/d/B/| AF Ad| fd ec| d2 d2||
 ! fd de/f/| gf ed| fd de/f/| gf a2|
 ! fd de/f/| gf ed| fd ec| d2 d2||
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:47
+X:46
 T:Julia Delaney's
 C:Traditional
 R:reel
@@ -668,23 +596,8 @@ M:4/4
 L:1/8
 |: dcAG ~F2EF| ~E2 DE FD D2| dcAG FGAA| Addc d2 fe:|
 ! |: f2fe fagf| ecgc acgc| f2fe fagf| edcG Add2:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:48
-T:Kerfunten, The
-C:Traditional
-R:jig
-K:D
-M:6/8
-L:1/8
-|: F3 FED| FGA Bcd| A2 B BAF|
-~E3 EDE| ! ~F3 FED| FGA Bcd| A2 B BAF|
-1 EFE D2 E:| 2 EFE DFA|| ! |: d3 def|
-B3 BAB| d3 def| fed efe| ! d3 def|
-B3 BAB| A2 d dAF| 1 EFE DFA:| 2 EFE D2 E||
-%%footer JamBuddy 2025 - No rights reserved, public domain
-
-X:49
+X:47
 T:Kesh, The
 C:Traditional
 R:jig
@@ -695,9 +608,8 @@ L:1/8
 ! GAG GAB| ABA ABd| edd gdd| BAF G3:| ! |:
 B2B d2d| ege dBA| B2B dBG| ABA AGA|
 ! BAB d^cd| ege dBd| gfg aga| bgg g3:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:50
+X:48
 T:Kid On The Mountain, The
 C:Traditional
 R:slip jig
@@ -710,9 +622,8 @@ BAG FAG FED:| ! |: gfg efe e2 f| gfg efg afd|
 gfg efe e2 a| bag fag fed:| ! |: eBB e2f g2f|
 eBB efg afd| eBB e2f g2a| bag fag fed:| ! |:
 edB dBA G2D| GAB dge dBA| edB dBA G2A| BAG FAG FED:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:51
+X:49
 T:King Of The Fairies
 C:Traditional
 R:hornpipe
@@ -726,9 +637,8 @@ e2e2 Bdef| gagf e3f| e2B2 BABc| dedc BcdB|
 ! e2B2 Bdef| gagf efed| Bdeg fedf| e6 ef|
 ! g3e f3d| edBc d3e| dBAF GABc| dBAF GFED|
 ! B,2E2 EFGA| B2e2 edef| e2B2 BAGF| E6:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:52
+X:50
 T:Lark In The Morning, The
 C:Traditional
 R:jig
@@ -744,7 +654,30 @@ fef fef| dff fef| edB BdB| ! dff fef|
 fef def| g2e f2d| edB BdB:| ! |:
 Add fdd| edd fdd| Add fdd| edB BdB|
 ! Add fdd| edB def| g2e f2d| edB BdB:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
+
+X:51
+T:Lilting Banshee, The
+C:Traditional
+R:jig
+K:A
+M:6/8
+L:1/8
+|: EAA EAA| BAB G2A| Bee edB| def gfg|
+! eAA eAA| BAB G2A| Bee edB| dBA A3:|
+! eaa age| dBA G2A| Bee edB| def gfg|
+! eaa age| dBA G2A| Bee edB| dBA A3:|
+
+X:52
+T:Little Beggarman, The
+C:Traditional
+R:hornpipe
+K:A
+M:4/4
+L:1/8
+|: "A"EAAG ABcd| efec "D"d2 cd| "A"eAAA ABcA| "G"B=GEF "G"G2 FG|
+! "A"EAAG ABcd| efec "D"d2 cd| "A"eaaa afed| cA"E"BG "A"A4:| ! |:
+"G"g2 g"G"a gfef| gfec "D"d2 cd| "A"eAAA ABcA| "G"B=GEF G2 FG|
+! "A"EAAG ABcd| efec "D"d2 cd| "A"eaaa afed| cA"E"BG "A"A4:|
 
 X:53
 T:MacLeod's Farewell
@@ -758,7 +691,6 @@ ABde dBAG| ! F2BF AFEF| D2 DE FABd| e2fd efdB|
 1 ABde d2:| 2 ABde d3|| ! B| A3 f edfd|
 A3 f edfd| ABdA BdAB| dBAF E2 DE| ! F2BF AFEF|
 D2DE FABd| e2fd efdB| 1 ABde d3:| 2 ABde d2||
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
 X:54
 T:Maid Behind The Bar, The
@@ -771,7 +703,6 @@ L:1/8
 ! FAAB AFED| FAAB ABde| fBBA BcdB| AFEF D4:| ! |:
 faab afde| fdad fd d2| efga beef| gebe gfeg|
 ! fgaf bfaf| defd e2 de| fBBA BcdB| AFEF D4:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
 X:55
 T:Maids Of Mount Kisco, The
@@ -786,7 +717,6 @@ L:1/8
 1 e~g3 gedB:| 2 edge d2 Bd|| ! |: ea~a2 bgaf|
 gfed GABd| ea~a2 bgaf| gede g2eg| ! ~a3f ~g3e|
 dedB GABd| eA~A2 efge| 1 dBGB A2 Bd:| 2 dBGB ~A3G||
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
 X:56
 T:Man Of The House, The
@@ -798,7 +728,6 @@ L:1/8
 |: E2BE GABG| E2BE FDAD| E2BE GABc| 1 dBcA BGED:|
 2 dBcA BGE2|| ! e2ge f2af| gfed edBd| e2ge f2af| gfed Beed|
 ! efge fgaf| gfed efga| bgaf gfed| edBA GEED||
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
 X:57
 T:Mason's Apron, The
@@ -819,7 +748,6 @@ beee beee| beae gefg| ! aeee aeee| aege feee|
 dcde fefa| A2 cB A2:| ! |: ed|
 c2Ac eAce| AceA cecA| d2 Ad fAdf| AdfA dfed|
 ! c2Ac eAce| AceA cecA| d2dc defa| A2 cB A2:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
 X:58
 T:Merrily Kiss The Quaker
@@ -832,7 +760,6 @@ L:1/8
 GAB AGF G3 G2:| ! |: A| BGG AGG BGG AGG| GAB DEG A2A AGA|
 ! BGG AGG BGG AGG| GAB AGF G3 G2:| ! |: d|
 g2g a2a bag edB| g2g gab a2a agf| ! g2g f2f ege dBA| GAB AGF G3 G2:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
 X:59
 T:Merry Blacksmith, The
@@ -846,7 +773,6 @@ ABde fded| Beed egfe| ! d3A BAFA-| ABdA BAFA-|
 ABde fdec| dBAF D2:| ! |: fg|
 a2ag f2fe| d2dA BAFA-| ABde fded| Beed egfg|
 ! abag fgfe| dcdA BAFA| ABde fdec| dBAF D2:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
 X:60
 T:Miss McLeod's
@@ -859,7 +785,6 @@ L:1/8
 ! G2 BG AGBG| B2 BA B2 d2| e2 ef edef| gfed BcBA:| ! |:
 G2 gf edeg| B2 BA BcBA| G2 gf edeg| a2 ag aeef|
 ! g2 gf edeg| BcBA B2 d2| edef edef| gfed BcBA:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
 X:61
 T:Mist Covered Mountain, The
@@ -875,7 +800,6 @@ age edB| AGE G2A| BAB GED| ! age a2b|
 age edB| AGE G2A| BAG A3| ! age a2b|
 age edB| AGE G2A| BAB GED| ! EDE G2A|
 BAG ABd| efg dBG| BAG A2||
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
 X:62
 T:Monaghan, The
@@ -893,7 +817,6 @@ gfg bge| g2e efe| fdf afd| ! g2e efe|
 gfg bge| d^cd ABG| FDF AGF:| ! |:
 EGB edB| dBG AFD| EGB dBG| FDF AGF|
 ! EGB GBd| Beg efg| d^cd ABG| FDF AGF:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
 X:63
 T:Morning Dew, The
@@ -908,7 +831,6 @@ B2eB AFDF| Bdeg fdec| d2dA BAFD| ! B2EB GBEB|
 B2EB AFDF| B2EB GBEB| BcdB AFDF| ! B2EB GBEB|
 B2EB AFDF| Bdeg fdec| d2dA BAFD| ! |:
 BAGF EFGA| B2GB A2GA| BAGF EFGA| BcdB AFDF:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
 X:64
 T:Morrison's
@@ -923,7 +845,6 @@ L:1/8
 ! Bee fee| aee fee| gfe d2A| BAG FGA|
 ! Bee fee| aee fee| Bee fee| faf def|
 ! g3 gfe| def g2d| edc d2A| BAG FED|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
 X:65
 T:Mountain Road, The
@@ -936,7 +857,6 @@ F2 AF BFAF| F2 AF EFDE| F2 AF BFAF| G2 FG EFDE|
 ! F2 AF BFAF| F2 AF EFD2| FAA2 BAFA| BABd eddA|
 ! d2dA BAFA| d2 de fgfe| d2 dA BAFA| G2 FG EDFA|
 ! d2 dA BAFA| d2 de fgfe| d2 dA BAFA| G2 FG EFDE|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
 X:66
 T:Musical Priest, The
@@ -950,7 +870,6 @@ cBAc B2:| ! |: Bc| d2dc dfed|
 (3cBA eA fAeA| dcBc defb| afec B2:| ! Bc|
 dBB2 bafb| afec ABce| dB B2 bafb| afec B2Bc|
 ! dB B2 bafb| afec ABce| dcBc defb| afec B2|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
 X:67
 T:My Darling Asleep
@@ -963,7 +882,6 @@ L:1/8
 ! fdd cAA| BGG A2G| FAA def| gec d3:| ! |:
 FAA Add| FAA BGG| FAA def| gfg eaa|
 ! fdd cAA| BGG A2G| FAA def| gec d3:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
 X:68
 T:Off To California
@@ -976,9 +894,21 @@ L:1/8
 ! G2GB AGED| GBdg e2df| gfgd edBG| ABAF G4:| ! |:
 gfeg fedf| edef edBd| gfgd edBG| ABAG EDEF|
 ! GFGB AGED| GBdg e2df| gfgd edBG| ABAF G4:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
 X:69
+T:Old Favourite, The
+C:Traditional
+R:jig
+K:G
+M:6/8
+L:1/8
+|: B3 BAB| dBA G2B| ded d2 B|
+ded B2A| ! B3 BAB| dBA G2B| ded cBA|
+G3 GAA:| ! |: g2e f2d| ege d2B|
+ded d2 B| ded B2d| g2e f2d| ! ege d2B|
+1 dge dBA| G3 GBd:| 2 dge dge| dge dBA||
+
+X:70
 T:Otter's Holt, The
 C:Traditional
 R:reel
@@ -991,9 +921,8 @@ e|: fBBA FEFB| (3ABA FB ABde| fBBA FEFA| (3Bcd cA Bcde|
 ! defd Adfa| bfaf efde| fBBA FEFA| (3Bcd cA B3c|
 ! ~d3f a2 fa| (3baf af effe| d2 fd adfa| bfaf effe|
 ! dcdf a2 fa| (3baf af effe| fBBA FEFA| (3Bcd cA ~B3e||
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:70
+X:71
 T:Out On The Ocean
 C:Traditional
 R:jig
@@ -1005,9 +934,8 @@ GED G2A| B2B AGE| ! D2B BAG| BdB A2B|
 GED G2A| BGE G:| ! Bd| e2e edB|
 ege edB| d2B def| gfe dBA| ! G2A B2d|
 ege d2B| AGE G2A| BGE G:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:71
+X:72
 T:Over The Moor To Maggie
 C:Traditional
 R:reel
@@ -1021,9 +949,8 @@ eaag abag| eaag a2 ga| ! b2bg a2af| g2ge fedB|
 dggf gbag| edef g2:| ! |: cd|
 e2ec d2dB| c2cA BAGD| EAAG ABAG| EAAG ABcd|
 ! e2ec d2dB| c2cA BAGE| DGGF GBAG| EDEF G2:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:72
+X:73
 T:Pigeon On The Gate, The
 C:Traditional
 R:reel
@@ -1035,9 +962,8 @@ D2 (3FED ADFE| DEFA BAFA| ! BE ~E2 BEdE| BE ~E2 B2 AF|
 D2 FA dfec| dBAF E2:| ! FA| Beed efed|
 (3Bcd ef gedB| Addc d3 B| A2 FE DEFA| ! Beed efed|
 (3Bcd ef g2 fg| af (3gfe fd ec| dBAF E2:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:73
+X:74
 T:Rakish Paddy
 C:Traditional
 R:reel
@@ -1048,9 +974,8 @@ L:1/8
 ! c4 c2 AB| cBAG EDCE| DEFG ABcA| dcAG F2 D2:| ! |:
 eg g2 ag g2| eg g2 ed^cd| ea a2 ba a2| ea a2 egdg|
 ! eg g2 ag g2| fed^c defg| afge fde^c| dcAG F2 D2:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:74
+X:75
 T:Rambling Pitchfork, The
 C:Traditional
 R:jig
@@ -1061,9 +986,8 @@ L:1/8
 ! FEF AFF| dFF AFF| GFG BAG| FDD D3:| ! |:
 d2e fed| ecA ABc| dcd fed| faf gfe|
 ! d2e fed| ecA BAF| GFG BAG| FDD D3:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:75
+X:76
 T:Rights Of Man, The
 C:Traditional
 R:hornpipe
@@ -1075,9 +999,8 @@ gfed edBd| cBAG A2GA| ! BcAB GAFG| EFGA B2ef|
 gfed Bgfg| e2 E2 E2:| ! |: ga|
 babg efga| babg egfe| d^cde fefg| afdf a2gf|
 ! edef gfga| bgaf gfef| gfed Bgfg| e2 E2 E2:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:76
+X:77
 T:Road To Lisdoonvarna, The
 C:Traditional
 R:slide
@@ -1086,9 +1009,8 @@ M:4/4
 L:1/8
 |: E2B B2A B2c d2A| F2A ABA D2E FED| ! E2B B2A B2c d3| cdc B2A B2E E3:|
 ! |: e2f gfe d2B Bcd| c2A ABc d2B B3| ! e2f gfe d2B Bcd| cdc B2A B2E E3:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:77
+X:78
 T:Rocky Road To Dublin, The
 C:Traditional
 R:slip jig
@@ -1098,9 +1020,8 @@ L:1/8
 |: efe d2B ~A3| E2A A2A Bcd| efe d2B A2c| B2G G2A Bcd:|
 ! e2a a2f ~g3| e2a a2f g2d| e2a a2f g2e| d2B G2A Bcd|
 ! e2a a2f ~g3| e2a a2A Bcd| efg fga g2e| d2B G2A Bcd||
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:78
+X:79
 T:Rolling In The Ryegrass
 C:Traditional
 R:reel
@@ -1109,9 +1030,8 @@ M:4/4
 L:1/8
 |: A2AB AFDF| G2BG dGBG| ABAF DFAF| GBAG E2D2:|
 ! |: ABde f2fd| g2ge fedB| ABde fefa| gfdf e2d2:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:79
+X:80
 T:Rolling Waves, The
 C:Traditional
 R:jig
@@ -1122,9 +1042,8 @@ L:1/8
 ! FEF DED| D2d cAG| FAF GBG| A2F GFE:|
 ! D2d cAd| cAd cAG| FEF cAd| A2F GFE|
 ! D2d cAd| fed cAG| FAF GBG| A2F GFE:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:80
+X:81
 T:Rose In The Heather, The
 C:Traditional
 R:jig
@@ -1136,23 +1055,21 @@ fdB AFE| ! ~F3 ~E3| DFA BAF| AdB AFE|
 1 FDD D2E:| 2 FDD D2e|| ! fdB ABd| faa afd|
 ~g3 fed| Bee efg| ! fdB ABd| f2a afa|
 bag fge| 1 fdc d2e:| 2 fdc d2A||
-%%footer JamBuddy 2025 - No rights reserved, public domain
-
-X:81
-T:Sailor's Bonnet, The
-C:Traditional
-R:reel
-K:D
-M:4/4
-L:1/8
-|: A2 FA df f2| dfef dB B2| A2 FA dfef|
-dBAF AD D2| ! A2 FA dfef| dfef dB B2| A2 FA dfef|
-dBAF ADD2|| ! |: a3b afdf| afef dB B2|
-fb b2 bafa| b2 af fe e2| ! bf f2 af f2| afef dB B2|
-A2 FA dfef| 1 dBAF ADD2:| 2 dBAF ADDB||
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
 X:82
+T:Saddle The Pony
+C:Traditional
+R:jig
+K:G
+M:6/8
+L:1/8
+|: D| GBA G2B| def gdB|
+GBA G2B| AFD AFD| ! GBA G2B| def gfg|
+efe dBA| BGG G2:| ! |: d|
+efe edB| def gfg| efe edB| dBA ABd|
+! efe edB| def gfg| efe dBA| BGG G2:|
+
+X:83
 T:Saint Anne's
 C:Traditional
 R:reel
@@ -1163,21 +1080,6 @@ L:1/8
 ! fedf edcB| A2FA DAFA| BGed cABc| eddc d2 de:| ! |:
 f2fg fedc| Bggf g2gf| edcB ABce| baa^g abag|
 ! f2fg fedc| Bggf g2gf| edcB ABcd| eddc d2 de:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
-
-X:83
-T:Salamanca, The
-C:Traditional
-R:reel
-K:D
-M:4/4
-L:1/8
-|: dB| ADFD ADFD| Adcd fdcd|
-BEGE BEGE| Bded cdeg| ! fBAB fBAB| fafc deag|
-fdec dBAG| FGEF D2:| ! |: fg|
-afdg bgeg| fdec dcBc| ABcd defg| a2^gb a2f=g|
-! afff geee| fdec dfag| fdec dBAG| FGEF D2:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
 X:84
 T:Sally Gardens, The
@@ -1190,7 +1092,6 @@ L:1/8
 ! GFGA BAGB| d2eB dBAB| d2Bd efge| dBAB G4:| ! |:
 dggf g2de| g2bg ageg| eaag a2eg| a2bg ageg|
 ! dggf g2de| g2bg ageg| d2Bd efge| dBAB G4:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
 X:85
 T:Ships Are Sailing, The
@@ -1203,7 +1104,6 @@ L:1/8
 ! Beed BcdB| AD (3FED A,D (3FED| ~E3F GFGA| Beed e3z:|
 ! ~g3a bgeg| ~f3g afdf| gfga bgaf| gefd e2 de|
 ! gfga bgeg| fefg afdf| g2bg f2af| edef gfed:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
 X:86
 T:Silver Spear, The
@@ -1217,7 +1117,6 @@ dfed (3BdB AG| ! FA (3AAA BAFA| dfed Bdef| gage fgfe|
 1 dfed (3BdB AG:| 2 dfed BdAd|| ! |: fa (3aaa bfaf|
 gfed Bdde| fa (3aaa bfaf| gfed (3BdB A2| ! fa (3aaa bfaf|
 gfed Bdef| ~g3 e ~f3 e| 1 dfed BdAd:| 2 dfed B2 AG||
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
 X:87
 T:Sligo Maid, The
@@ -1230,25 +1129,8 @@ L:1/8
 ! A2BA (3B^cd ef| gedB AGEG| B3G A2GE| DEGA BAA2:| ! |:
 eaag a2ga| bgaf gfed| eggf g2ge| dega bgag|
 ! eaag a2ga| bgaf gfed| eg (3gfg edBA| dBgB BAA2:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
 X:88
-T:Spootiskerry
-C:Traditional
-R:reel
-K:G
-M:4/4
-L:1/8
-|: DE| G2 DE GDEG| DEGA B2 AB|
-G2 DE GABd| eged B2 AB| ! G2 DE GDEG| DEGA B2 AB|
-g2 ed edBA| B2 G2 G2:| ! ef| g2 ed ed B2|
-BABG E2 DE| GABd eged| B2 A2 A2 ef| ! g2 ed ed B2|
-BABG E2 DE| GABd eged| B2 G2 G2 ef| ! g2 ed ed B2|
-BABG E2 DE| GABd eged| B2 A2 A2 DE| ! G2 DE GDEG|
-DEGA B2 AB| g2 ed edBA| B2 GB G2||
-%%footer JamBuddy 2025 - No rights reserved, public domain
-
-X:89
 T:Sporting Paddy
 C:Traditional
 R:reel
@@ -1259,9 +1141,8 @@ EAAB GABG| EAAB G2ED| EAA2 GABd| edge dBAG|
 ! EAAB GABG| EAAB G2ED| EAA2 GABd| edge d2ef||
 ! geee gede| geee a2ba| gee2 ged2| efge d2ef|
 ! geee gede| geee a2ga| bgab gabg| efge dBAG||
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:90
+X:89
 T:Star Of Munster, The
 C:Traditional
 R:reel
@@ -1273,22 +1154,8 @@ EAAB cBcd| eaaf gfed| ! cBAc BAGB| AGEF GEDG|
 EAAB cded| cABG A2:| ! |: de|
 eaab ageg| agbg agef| gfga gfef| gfaf gfdf|
 ! eaab ageg| agbg agef| g2ge a2ga| bgaf ge:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:91
-T:Swallowtail, The
-C:Traditional
-R:jig
-K:E
-M:6/8
-L:1/8
-|: GEE BEE| GEE BAG| FDD ADD| dcd AGF|
-! GEE BEE| GEG B2c| dcd AGF| GEE E3:| ! |:
-Bcd e2f| e2f edB| Bcd e2f| edB d3|
-! Bcd e2f| e2f edB| dcd AGF| GEE E3:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
-
-X:92
+X:90
 T:Sí Bheag Sí Mhór
 C:Traditional
 R:waltz
@@ -1304,9 +1171,8 @@ b4 a2| f4 ed| e4 a2| f4 e2|
 d4 B2| A4 BA| ! F4 E2| D4 f2|
 B4 e2| A4 a2| ba gf ed| e4 dc|
 d6| 1 d4 de:| 2 d6||
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:93
+X:91
 T:Tabhair Dom Do Lámh
 C:Traditional
 R:waltz
@@ -1326,9 +1192,8 @@ b2 b2 b2| b4 ag| a2 ag ab| a4 gf|
 ! e3 f2 (3gfe| d2 d2 g2| B3 d cB| A4 (3cBA|
 G2 GA Bd| =f4 ed| e2 e2 g2| e4 dB|
 ! d2 d2 g2| B2 B2 dB| A2 AB (3cBA| G6||
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:94
+X:92
 T:Tam Lin
 C:Traditional
 R:reel
@@ -1339,9 +1204,8 @@ L:1/8
 ! A,2DA, FA,DA,| B,2DB, FB,DB,| C2EC GCEC| FEDC A,DD2:| ! |:
 dA~A2 FADA| dA~A2 FADA| cG~G2 EG~G2| cG~G2 cdec|
 ! dA~A2 FADA| dA~A2 FADA,| ~B,3A, B,CDE| FDEC A,DD2:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:95
+X:93
 T:Tarbolton, The
 C:Traditional
 R:reel
@@ -1352,9 +1216,8 @@ L:1/8
 GBAG FDDF| ! Eeed efge| fedf edBA| GABG FGA=c| BGAF GE E:|
 ! gfef (3gfe be| gebe gfef| d2 fd adfd| ABAG FDDF|
 ! (3GGG BG (3FFF AF| Eeef gfed| B2 dB AGFA| BGAF GE E:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:96
+X:94
 T:Teetotaller's, The
 C:Traditional
 R:reel
@@ -1365,9 +1228,8 @@ L:1/8
 ! G2 GF GABc| dBeB dBAc| BEED EFGA| BGAF G4:| ! |:
 Beed e2ef| gfaf gfed| B^cde d2ef| gfaf gfed|
 ! Beed e2ef| gfaf gfed| BEED EFGA| BGAF G4:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:97
+X:95
 T:Tenpenny Bit, The
 C:Traditional
 R:jig
@@ -1378,9 +1240,8 @@ L:1/8
 ! eAA eAA| BAB GAB| def ged| BAG A3:|
 ! eaa aga| bag ged| eaa aga| bag a3|
 ! eaa aga| bag ged| def ged| BAG A3:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:98
+X:96
 T:Toss The Feathers
 C:Traditional
 R:reel
@@ -1390,9 +1251,21 @@ L:1/8
 |: EBBB dBBB| EBBB FAFA| BE E2 BABc| dfed BAFA:|
 ! Beed e2 de| fede fe e2| febe febe| fede fee2|
 ! Beed e2 de| fede fa a2| b2bf a2af| egfe dBAF|
-%%footer JamBuddy 2025 - No rights reserved, public domain
 
-X:99
+X:97
+T:Toss The Feathers
+C:Traditional
+R:reel
+K:D
+M:4/4
+L:1/8
+|: D2 FD ADFD| ABcA G~E3| D2 (3FED ADFA|
+d2 ed cAGE| ! (3DDD AD (3DDD AD| ABcA G~E3| cABG A2 AB|
+1 cded cAGE:| 2 cded cAGc|| ! |: Ad (3ddd Ad (3ddd|
+Ad (3ddd ed^cd| eaag a2 ag| eaag ed^cd| ! efge afge|
+dfed cAGB| cABG A2 AB| 1 cded cAGc:| 2 cded cAGE||
+
+X:98
 T:Tripping Up The Stairs
 C:Traditional
 R:jig
@@ -1403,7 +1276,18 @@ L:1/8
 ! FAA GBB| FAd fed| c2c ABc| dfe d2A:|
 ! dBB fBB| dBB fed| cAA eAA| efe edc|
 ! dBB fBB| fgf fed| cBc ABc| dfe d3:|
-%%footer JamBuddy 2025 - No rights reserved, public domain
+
+X:99
+T:Wind That Shakes The Barley, The
+C:Traditional
+R:reel
+K:D
+M:4/4
+L:1/8
+A2AB AFED| B2BA BcdB| A2AB AFED| gfed BcdB|
+! A2AB AFED| B2BA BcdB| A2AB AFED| gfed Bcde||
+! f2fd g2ge| f2fd Bcde| f2fd g2fg| afed Bcde|
+! f2fd g2ge| f2fd Bcde| defg a2ab| afed BcdB||
 
 X:100
 T:Wise Maid, The
@@ -1417,4 +1301,3 @@ d2eg fdec| dBAG BEED| ! F2FG FEDE| FAAB AFED|
 d2eg fdec| dBAG FD:| ! |: FA|
 d2AG FDFA| dfaf gfeg| fedf eAcA| dfed cA A2|
 ! BAGB ADFD| dfaf gfed| Bdce dBAG| FGEF D2:|
-%%footer JamBuddy 2025 - No rights reserved, public domain

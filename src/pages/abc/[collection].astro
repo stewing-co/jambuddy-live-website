@@ -57,7 +57,7 @@ const pageTitle = titleMap[collection!] ?? 'ABC Collection';
       <>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <!-- Left column: selection + controls + rendered song -->
-          <div class="space-y-3 lg:col-span-1">
+          <div class="lg:col-span-1 h-[70vh] flex flex-col space-y-3">
             <div class="p-3 rounded bg-gray-800 border border-gray-700">
               <div class="flex items-center gap-2">
                 <button id="prevTune" class="px-2 py-1 bg-gray-700 text-white rounded">&#9664;</button>
@@ -78,13 +78,13 @@ const pageTitle = titleMap[collection!] ?? 'ABC Collection';
                 </div>
               </div>
             </div>
-            <div class="p-3 rounded bg-gray-900 border border-gray-800">
-              <div id="paper"></div>
+            <div class="p-3 rounded bg-gray-900 border border-gray-800 flex-1 min-h-0 overflow-auto">
+              <div id="paper" class="min-h-full"></div>
             </div>
           </div>
 
           <!-- Middle column: ABC editor -->
-          <div class="lg:col-span-1 space-y-2">
+          <div class="lg:col-span-1 h-[70vh] flex flex-col space-y-2">
             <div class="flex justify-end gap-2 flex-wrap">
               <div class="flex gap-2">
                 <button id="exportTuneAbc" class="px-3 py-1 bg-gray-700 text-white rounded" title="Export selected tune as .abc">Tune .abc</button>
@@ -93,11 +93,11 @@ const pageTitle = titleMap[collection!] ?? 'ABC Collection';
                 <button id="exportMidi" class="px-3 py-1 bg-gray-700 text-white rounded" title="Export MIDI">MIDI</button>
               </div>
             </div>
-            <textarea id="abcInput" class="w-full h-[70vh] p-3 font-mono text-sm rounded bg-black text-gray-200 border border-gray-700">{abcText}</textarea>
+            <textarea id="abcInput" class="w-full flex-1 min-h-0 p-3 font-mono text-sm rounded bg-black text-gray-200 border border-gray-700 resize-none">{abcText}</textarea>
           </div>
 
           <!-- Right column: tabs on top, headers below -->
-          <div class="space-y-3 lg:col-span-1">
+          <div class="space-y-3 lg:col-span-1 h-[70vh] overflow-auto">
             <div class="p-4 rounded bg-gray-800 border border-gray-700">
               <h2 class="text-xl font-semibold text-white">Layers</h2>
               <label class="block text-sm text-gray-300">Tablature layer</label>

@@ -22,7 +22,7 @@ const collections = [
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
       <!-- Left column: controls + rendered song -->
-      <div class="space-y-3 lg:col-span-1">
+      <div class="lg:col-span-1 h-[70vh] flex flex-col space-y-3">
         <div class="p-3 rounded bg-gray-800 border border-gray-700">
           <div class="flex items-center gap-4 flex-wrap">
             <div class="flex items-center gap-2">
@@ -37,13 +37,13 @@ const collections = [
             </div>
           </div>
         </div>
-        <div class="p-3 rounded bg-gray-900 border border-gray-800">
-          <div id="paper"></div>
+        <div class="p-3 rounded bg-gray-900 border border-gray-800 flex-1 min-h-0 overflow-auto">
+          <div id="paper" class="min-h-full"></div>
         </div>
       </div>
 
       <!-- Middle column: editor + exports -->
-      <div class="lg:col-span-1 space-y-2">
+      <div class="lg:col-span-1 h-[70vh] flex flex-col space-y-2">
         <div class="flex justify-end gap-2 mb-1 flex-wrap">
           <div class="flex gap-2">
             <button id="exportTuneAbc" class="px-3 py-1 bg-gray-700 text-white rounded" title="Export current as .abc">Tune .abc</button>
@@ -52,11 +52,11 @@ const collections = [
             <button id="exportMidi" class="px-3 py-1 bg-gray-700 text-white rounded" title="Export MIDI">MIDI</button>
           </div>
         </div>
-        <textarea id="abcInput" class="w-full h-[50vh] min-h-[200px] p-3 font-mono text-sm rounded bg-black text-gray-200 border border-gray-700" placeholder="Paste or type ABC notation here..."></textarea>
+        <textarea id="abcInput" class="w-full flex-1 min-h-0 p-3 font-mono text-sm rounded bg-black text-gray-200 border border-gray-700 resize-none" placeholder="Paste or type ABC notation here..."></textarea>
       </div>
 
       <!-- Right column: layers + headers + theme + collections list -->
-      <div class="space-y-3 lg:col-span-1">
+      <div class="space-y-3 lg:col-span-1 h-[70vh] overflow-auto">
         <div class="p-4 rounded-lg bg-gray-800 border border-gray-700 space-y-3">
           <h2 class="text-xl font-semibold text-white">Layers</h2>
           <label class="block text-sm text-gray-300">Tablature layer</label>
