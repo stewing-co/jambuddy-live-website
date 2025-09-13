@@ -200,6 +200,27 @@
       // Auto-render initially
       this.render();
 
+      // Recompute on window resize and when the paper content size changes
+      try {
+        const paperEl = document.getElementById(this.state.paperId);
+        if (paperEl) {
+          const ro = new ResizeObserver(() => {
+            try { this.ensureResponsiveSvgs(); } catch(_) {}
+            try { this.updatePaperHeight(); } catch(_) {}
+          });
+          ro.observe(paperEl);
+          // Keep a reference to avoid GC in some browsers
+          this._resizeObserver = ro;
+        }
+      } catch(_) {}
+
+      try {
+        window.addEventListener('resize', () => {
+          try { this.ensureResponsiveSvgs(); } catch(_) {}
+          try { this.updatePaperHeight(); } catch(_) {}
+        });
+      } catch(_) {}
+
       // Initialize theme color pickers if present
       const bgPicker = q('paperBgColor');
       const fgPicker = q('inkColor');
