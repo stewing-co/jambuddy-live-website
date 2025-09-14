@@ -1,667 +1,801 @@
 X:1
 T:Atholl Highlanders, The
+S:The Session: https://thesession.org/tunes/107#setting107
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:A
 M:6/8
 L:1/8
+Q:113
 |: e2e ecA| ecA Bcd| e2e ecA| Bcd cBA|
-! e2e ecA| ecA Bcd| eae fed| cdB A3:| ! Ace Ace|
-Adf Adf| Ace Ace| Bcd c2B| ! Ace Ace|
-Adf Adf| eae fed| cdB A3:| ! |:
-a2a aec| a2a aec| a2a aec| Bcd cBA|
-! a2a aec| a2a aec| eae fed| cdB A3:|
-! c2c cBA| d2d fed| c2c cBA| =G2=G BA=G|
-! c2c cBA| d2d fed| eae fed| cdB A3:|
+| e2e ecA| ecA Bcd| eae fed| cdB A3:|
+| Ace Ace|Adf Adf| Ace Ace| Bcd c2B| 
+| Ace Ace|Adf Adf| eae fed| cdB A3:| 
+|:a2a aec| a2a aec| a2a aec| Bcd cBA|
+| a2a aec| a2a aec| eae fed| cdB A3:|
+| c2c cBA| d2d fed| c2c cBA| =G2=G BA=G|
+| c2c cBA| d2d fed| eae fed| cdB A3:|
 
 X:2
 T:Banish Misfortune
+S:The Session: https://thesession.org/tunes/9#setting9
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:D
 M:6/8
 L:1/8
-|: fed cAG| A2d cAG| F2D DED|
-FEF GFG| ! AGA cAG| AGA cde| fed cAG|
-Ad^c d3:| ! |: f2d d^cd| f2g agf|
-e2c cBc| e2f gfe| ! f2g agf| e2f gfe|
-fed cAG| Ad^c d3:| ! |: f2g e2f|
-d2e c2d| ABA GAG| F2F GED| ! c3 cAG|
-AGA cde| fed cAG| Ad^c d3:|
+Q:113
+|: fed cAG| A2d cAG| F2D DED| FEF GFG|
+| AGA cAG| AGA cde| fed cAG| Ad^c d3:|
+|: f2d d^cd| f2g agf| e2c cBc| e2f gfe|
+| f2g agf| e2f gfe|fed cAG| Ad^c d3:|
+|: f2g e2f | d2e c2d| ABA GAG| F2F GED| 
+|c3 cAG| AGA cde| fed cAG| Ad^c d3:|
 
 X:3
 T:Banshee, The
+S:The Session: https://thesession.org/tunes/8#setting8
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:G
 M:4/4
 L:1/8
+Q:120
 |: G2 GD EDEG| AGAB d2 Bd| eged BAGA| BAGE EDDE|
-! G2 GD EDEG| AGAB d2 Bd| eged BAGA| BAGE ED D2:| ! |:
-ea a2 efgf| eBBA B2 Bd| eB B2 efgf| eBBA B2 Bd|
-! ea a2 efgf| eBBA B2 Bd| eged BAGA| BAGE EDD2:|
+| G2 GD EDEG| AGAB d2 Bd| eged BAGA| BAGE ED D2:| 
+|: ea a2 efgf| eBBA B2 Bd| eB B2 efgf| eBBA B2 Bd|
+| ea a2 efgf| eBBA B2 Bd| eged BAGA| BAGE EDD2:|
 
 X:4
 T:Blackthorn Stick, The
+S:The Session: https://thesession.org/tunes/702#setting702
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:G
 M:6/8
 L:1/8
-|: d| gfg ege| dBG AGE|
-DGG FGA| BGB A2 d| ! gfg age| dBG AGE|
-DGG FGA| BGG G2:| ! |: d|
-edd gdd| edd gdd| e2 e gfg| edB A2 d|
-! gfg age| dBG AGE| DGG FGA| BGG G2:|
+Q:113
+d |: gfg ege| dBG AGE| DGG FGA| BGB A2 d|
+| gfg age| dBG AGE| DGG FGA|1 BGG G2 d:|2 BGG G2 d|] 
+|: edd gdd| edd gdd| e2 e gfg| edB A2 d|
+| gfg age| dBG AGE| DGG FGA|1 BGG G2 d:|2 BGG G3 |]
 
 X:5
 T:Blarney Pilgrim, The
+S:The Session: https://thesession.org/tunes/5#setting5
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:D
 M:6/8
 L:1/8
+Q:113
 |: DED DEG| A2A ABc| BAG AGE| GEA GED|
-! DED DEG| A2A ABc| BAG AGE| GED D3:|
-! ded dBG| AGA BGE| ded dBG| AGA GAB|
-! g2e dBG| AGA BGE| B2G AGE| GED D3:|
-! A2D B2D| A2D ABc| BAG AGE| GEA GED|
-! ADD BDD| ADD ABc| BAG AGE| GED D3:|
+| DED DEG| A2A ABc| BAG AGE| GED D3:|
+|: ded dBG| AGA BGE| ded dBG| AGA GAB|
+| g2e dBG| AGA BGE| B2G AGE| GED D3:|
+|: A2D B2D| A2D ABc| BAG AGE| GEA GED|
+| ADD BDD| ADD ABc| BAG AGE| GED D3:|
 
 X:6
 T:Boys Of Bluehill, The
+S:The Session: https://thesession.org/tunes/651#setting651
+S:https://JamBuddy.live 2025
 C:Traditional
 R:hornpipe
 K:D
 M:4/4
 L:1/8
-|: FA| BA FA D2 FA| BA (3Bcd e2 de|
-fa gf eg fe| df ed B2 dB| ! BA FA D2 FA| BA (3Bcd e2 de|
-fa gf eg fe| d2 f2 d2:| ! |: fg|
-af df a2 g2| ef ga b2 ag| fa gf eg fe| df ed B2 dB|
-! BA FA D2 FA| BA (3Bcd e2 de| fa gf eg fe| d2 f2 d2:|
+Q:138
+FA|: BA FA D2 FA| BA (3Bcd e2 de| fa gf eg fe| df ed B2 dB| 
+|BA FA D2 FA| BA (3Bcd e2 de| fa gf eg fe|1 d2 f2 d2 FA:|2 d2 f2 d2 fg |]
+|: af df a2 g2| ef ga b2 ag| fa gf eg fe| df ed B2 dB|
+| BA FA D2 FA| BA (3Bcd e2 de| fa gf eg fe|1 d2 f2 d2 fg:|2 d2 f2 d4|]
 
 X:7
 T:Britches Full Of Stitches, The
+S:The Session: https://thesession.org/tunes/1075#setting24427
+S:https://JamBuddy.live 2025
 C:Traditional
 R:polka
 K:G
 M:4/4
 L:1/8
+Q:120
 |: G>A BG| AG BG| G2 BG| AG E2|
-! G>A BG| AG Bd| G>A GE| ED D2:| ! |:
-d>e dB| AG AB| d>e dB| AG E2|
-! d>e dB| AG AB| G>A GE| ED D2:|
+| G>A BG| AG Bd| G>A GE| ED D2:| 
+|: d>e dB| AG AB| d>e dB| AG E2|
+| d>e dB| AG AB| G>A GE| ED D2:|
 
 X:8
 T:Bucks Of Oranmore, The
+S:The Session: https://thesession.org/tunes/2#setting2
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:D
 M:4/4
 L:1/8
-A2FA A2dB| A2FA BEE2| A2FA A2Bd| egfd edBd|
-! A2FA A2dB| A2FA BEE2| DEFG AFAB| defd edBd||
-! ADFD A2dB| ADFD BEE2| ADFD A2Bd| egfd edBd|
-! ADFD A2dB| ADFD BEE2| DEFG AFAB| defd efge||
-! a2fd edef| a2fd ed B2| a2fd edef| gefd edB2|
-! a2fd edef| a2fd edB2| faaf bfaf| defd edBd||
-! f2df e2de| f2df edBd| f2df e2de| gefd edBd|
-! f2df e2de| f2df edBd| faaf bfaf| defd edBd||
-! Adfd edfd| Adfd edBd| Adfd edfd| gefd edBd|
-! Adfd edfd| Adfd edB2| faaf bfaf| defd edBd||
+Q:120
+| A2FA A2dB| A2FA BEE2| A2FA A2Bd| egfd edBd|
+| A2FA A2dB| A2FA BEE2| DEFG AFAB| defd edBd||
+| ADFD A2dB| ADFD BEE2| ADFD A2Bd| egfd edBd|
+| ADFD A2dB| ADFD BEE2| DEFG AFAB| defd efge||
+| a2fd edef| a2fd ed B2| a2fd edef| gefd edB2|
+| a2fd edef| a2fd edB2| faaf bfaf| defd edBd||
+| f2df e2de| f2df edBd| f2df e2de| gefd edBd|
+| f2df e2de| f2df edBd| faaf bfaf| defd edBd||
+| Adfd edfd| Adfd edBd| Adfd edfd| gefd edBd|
+| Adfd edfd| Adfd edB2| faaf bfaf| defd edBd||
 
 X:9
 T:Butterfly, The
+S:The Session: https://thesession.org/tunes/10#setting10
+S:https://JamBuddy.live 2025
 C:Traditional
 R:slip jig
 K:Em
 M:6/8
 L:1/8
-|: B2E G2E F3| B2E G2E FED| B2E G2E F3|
-B2d d2B AFD:| ! |: B2d e2f g3| B2d g2e dBA|
-B2d e2f g2a| b2a g2e dBA:| ! |: B3 B2A G2A|
-B3 BAB dBA| B3 B2A G2A| B2d g2e dBA:|
+Q:113
+|: B2E G2E F3| B2E G2E FED| B2E G2E F3| B2d d2B AFD:| 
+|: B2d e2f g3| B2d g2e dBA| B2d e2f g2a| b2a g2e dBA:| 
+|: B3 B2A G2A| B3 BAB dBA| B3 B2A G2A| B2d g2e dBA:|
 
 X:10
 T:Calliope House
+S:The Session: https://thesession.org/tunes/15#setting15
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:D
 M:6/8
 L:1/8
+Q:113
 |: dAA fAA| eAA fAA| Bee e2d| efe dBA|
-FAA A2F| ! A2B d2e| 1 f2f fed| e3 e2A:| 2 f2f edc|
-d3 efg|| ! |: a2a faa| eaa faa|
-g2g fgf| efe dBA| FAA A2F| ! A2B d2e|
-1 f2f fed| e3 efg:| 2 f2f edc| d3 d3||
+| FAA A2F| A2B d2e|1 f2f fed| e3 e2A:|2 f2f edc|d3 efg|]
+|: a2a faa| eaa faa| g2g fgf| efe dBA| FAA A2F|
+| A2B d2e|1 f2f fed| e3 efg:|2 f2f edc| d3 d3|]
 
 X:11
 T:Castle Kelly
+S:The Session: https://thesession.org/tunes/21#setting21
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:Am
 M:4/4
 L:1/8
+Q:120
 |: A2 cA ABcA| GcEG G2 EG| A2 cA ABcd| ecdB cA A2:|
-! agec dfed| cAGE G2 eg| agec d2cd| eaag a2ba| ! gedc dfed|
-cAGE| G2 EG| A2 cA ABcd| ecdB cA A2|
+| agec dfed| cAGE G2 eg| agec d2cd| eaag a2ba|
+| gedc dfed|cAGE| G2 EG| A2 cA ABcd| ecdB cA A2|
 
 X:12
 T:Cliffs Of Moher, The
+S:The Session: https://thesession.org/tunes/12#setting12
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:A
 M:6/8
 L:1/8
+Q:113
 |: a3 bag| eaf ged| c2A BAG| EFG ABd|
-! eaa bag| eaf ged| c2A BAG| EFG A3:|
-! e2e dBA| e2e dBA| GAB dBA| GAB dBd|
-! e2e dBA| e2e dBA| GAB dBA| EFG A3|
-! efe dBA| efe dBA| GAB dBA| GAB dBd|
-! efe ded| cec BeB| GAB dBA| EFG A3|
+| eaa bag| eaf ged| c2A BAG| EFG A3:|
+| e2e dBA| e2e dBA| GAB dBA| GAB dBd|
+| e2e dBA| e2e dBA| GAB dBA| EFG A3|
+| efe dBA| efe dBA| GAB dBA| GAB dBd|
+| efe ded| cec BeB| GAB dBA| EFG A3|
 
 X:13
 T:Concertina, The
+S:The Session: https://thesession.org/tunes/18#setting18
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:D
 M:4/4
 L:1/8
+Q:120
 |: A2FA BAFA| A2FA BAFA| B2BA B2BA| B2BA BAFA|
-! A2FA BAFA| A2FA BAFA| FABc d2dA| BAFE D4:| ! |:
-Addd Addd| AddA BAFA| B2BA B2BA| B2BA BAFA|
-! Addd Addd| AddA BAFA| FABc d2dA| BAFE D4:|
+| A2FA BAFA| A2FA BAFA| FABc d2dA| BAFE D4:|
+|: Addd Addd| AddA BAFA| B2BA B2BA| B2BA BAFA|
+| Addd Addd| AddA BAFA| FABc d2dA| BAFE D4:|
 
 X:14
 T:Congress, The
+S:The Session: https://thesession.org/tunes/208#setting208
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:A
 M:4/4
 L:1/8
+Q:120
 |: eAAG A2Bd| eaaf gedg| eAcA eAcA| BGGA Bdeg|
-! eAAG A2Bd| eaaf gedB| cBcd eged| cABG A2Bd:| ! |:
-eaag abag| eaag egdg| egdg egdg| eaaf gedg|
-! eaag a2ag| eaaf gedB| c2cd e2ed| cABG A2Bd:|
+| eAAG A2Bd| eaaf gedB| cBcd eged| cABG A2Bd:| 
+|: eaag abag| eaag egdg| egdg egdg| eaaf gedg|
+| eaag a2ag| eaaf gedB| c2cd e2ed| cABG A2Bd:|
 
 X:15
 T:Connaughtman's Rambles, The
+S:The Session: https://thesession.org/tunes/19#setting19
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:D
 M:6/8
 L:1/8
-|: FAA dAA| BAA dAG| FAA dfe|
-dBB BAG| ! FAA dAA| BAA def| gfe dfe|
-1 dBB BAG:| 2 dBB B3|| ! |: fbb faf|
-fed ede| fbb faf| fed e3| ! fbb faf|
-fed def| gfe dfe| 1 dBB B3:| 2 dBB BAG||
+Q:113
+|: FAA dAA| BAA dAG| FAA dfe| dBB BAG| 
+| FAA dAA| BAA def| gfe dfe|1 dBB BAG:|2 dBB B3||
+|: fbb faf| fed ede| fbb faf| fed e3| 
+| fbb faf| fed def| gfe dfe|1 dBB B3 :|2 dBB BAG||
 
 X:16
 T:Cooley's
+S:The Session: https://thesession.org/tunes/1#setting1
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
-K:E
+K:D
 M:4/4
 L:1/8
-|: D2| EBBA B2 EB| B2 AB dBAG|
-FDAD BDAD| FDAD dAFD| ! EBBA B2 EB| B2 AB defg|
-afec dBAF| DEFD E2:| ! |: gf|
-eB B2 efge| eB B2 gedB| A2 FA DAFA| A2 FA defg|
-! eB B2 eBgB| eB B2 defg| afec dBAF| DEFD E2:|
+Q:120
+D2|: EBBA B2 EB| B2 AB dBAG|FDAD BDAD| FDAD dAFD| 
+| EBBA B2 EB| B2 AB defg| afec dBAF|1 DEFD E2 D2:|2 DEFD E2 gf |] 
+|: eB B2 efge| eB B2 gedB| A2 FA DAFA| A2 FA defg|
+| eB B2 eBgB| eB B2 defg| afec dBAF|1 DEFD E2 gf :|2 DEFD E4 |]
 
 X:17
 T:Cup Of Tea, The
+S:The Session: https://thesession.org/tunes/20#setting20
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
-K:E
+K:D
 M:4/4
 L:1/8
-|: BAGF GEEF| GEBE GEEA| BAGF GEEG|
-FDAD FDDA| ! BAGF GEEF| GEBE GEEA| B2 BA GABc|
-dBAG FD D2:| ! K:D! |: d2 eg fdec| d2 eg fB B2|
-d2 eg fdec| dBAG FD D2| ! d2 eg fdec| dfaf g2 fg|
-afge fdec| dBAG FD D2:| ! |: FAdA FABA|
-FAdA FEE2| FAdA FABc| dBAG FD D2| ! FAdA FABA|
-FAde fee2| fdec dBAF| GBAG FD D2:|
+Q:120
+|: BAGF GEEF| GEBE GEEA| BAGF GEEG|FDAD FDDA| 
+| BAGF GEEF| GEBE GEEA| B2 BA GABc| dBAG FD D2:| 
+|: d2 eg fdec| d2 eg fB B2| d2 eg fdec| dBAG FD D2| 
+| d2 eg fdec| dfaf g2 fg| afge fdec| dBAG FD D2:| 
+|: FAdA FABA| FAdA FEE2| FAdA FABc| dBAG FD D2| 
+| FAdA FABA| FAde fee2| fdec dBAF| GBAG FD D2:|
 
 X:18
 T:Dancing Master, The
+S:The Session: https://thesession.org/tunes/106#setting12675
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
-K:E
+K:D
 M:6/8
 L:1/8
+Q:113
 |: GEE BEE| GEE BAG| FDD ADD| dcd AGF|
-! GEE BEE| GEG B2c| dcd AGF| GEE E3:| ! |:
-Bcd e2f| e2f edB| Bcd e2f| edB d3|
-! Bcd e2f| e2f edB| dcd AGF| GEE E3:|
+| GEE BEE| GEG B2c| dcd AGF| GEE E3:| !
+|:Bcd e2f| e2f edB| Bcd e2f| edB d3|
+| Bcd e2f| e2f edB| dcd AGF| GEE E3:|
 
 X:19
 T:Donnybrook Fair
+S:The Session: https://thesession.org/tunes/26#setting26
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:G
 M:6/8
 L:1/8
+Q:113
 |: GFG AGA| Bee dBA| BAB GAB| AGE DED|
-! G2G A2A| Bee dBA| B2B GAB| AGF G3:|
-! gfe fed| efe dBA| Bee dBA| Bee e2f|
-! [1gfe fed| efe dBA| BAB GAB| AGF G2f:|
-! [2gfg aga| bge dBA| B2B GAB| AGF G3||
+| G2G A2A| Bee dBA| B2B GAB| AGF G3:|
+| gfe fed| efe dBA| Bee dBA| Bee e2f|
+| [1gfe fed| efe dBA| BAB GAB| AGF G2f:|
+| [2gfg aga| bge dBA| B2B GAB| AGF G3|]
 
 X:20
 T:Drowsy Maggie
+S:The Session: https://thesession.org/tunes/27#setting27
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
-K:E
+K:D
 M:4/4
 L:1/8
+Q:120
 |: E2BE dEBE| E2BE AFDF| E2BE dEBE| BABc dAFD:|
-! d2fd c2ec| defg afge| d2fd c2ec| BABc dAFA|
-! d2fd c2ec| defg afge| afge fdec| BABc dAFD|
+| d2fd c2ec| defg afge| d2fd c2ec| BABc dAFA|
+| d2fd c2ec| defg afge| afge fdec| BABc dAFD|
 
 X:21
 T:Dunmore Lasses, The
+S:The Session: https://thesession.org/tunes/462#setting462
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:Em
 M:4/4
 L:1/8
+Q:120
 |: ~E3F ~G3A| Be~e2 Be~e2| ~E3F G2BG| A2BA GEFD|
-! ~E3F ~G3A| Beed ~e3f| (3.g.f.e fd eBdB| AcBA GEFD:|
-! g2eg fedc| Be~e2 Be~e2| g2eg fedB| AcBA GE~E2|
-! g2eg fedc| Beed ~e3f| (3.g.f.e fd eBdB| AcBA GEE2:|
+| ~E3F ~G3A| Beed ~e3f| (3.g.f.e fd eBdB| AcBA GEFD:|
+| g2eg fedc| Be~e2 Be~e2| g2eg fedB| AcBA GE~E2|
+| g2eg fedc| Beed ~e3f| (3.g.f.e fd eBdB| AcBA GEE2:|
 
 X:22
 T:Dusty Windowsills
+S:The Session: https://thesession.org/tunes/29#setting29
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:A
 M:6/8
 L:1/8
+Q:113
 |: A2B cBA| eAB cBA| GAG FGG| EGG EFG|
-! A2B cBA| e2d efg| age dBG| ABA A3:|
-! a3 age| dBd g3| gag gfe| dBA GAG|
-! EGG DGG| EFG ABc| Bee dBG| ABA A3:|
-! A2A gAf| A2A gAf| G2G eGd| G2G edB|
-! A2A gAf| A2d efg| age dBG| ABA A3:|
+| A2B cBA| e2d efg| age dBG| ABA A3:|
+| a3 age| dBd g3| gag gfe| dBA GAG|
+| EGG DGG| EFG ABc| Bee dBG| ABA A3:|
+| A2A gAf| A2A gAf| G2G eGd| G2G edB|
+| A2A gAf| A2d efg| age dBG| ABA A3:|
 
 X:23
 T:Earl's Chair, The
+S:The Session: https://thesession.org/tunes/221#setting221
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:D
 M:4/4
 L:1/8
+Q:120
 |: B2Bd BAFA| B2Bd BAFA| AF (3FFF DF (3FFF| AFdB AFEF|
-! B2Bd BAFA| B2Bd BAFA| AFAB dcdf| edef d3z:| ! |:
-e2ec d2Bd| efec dFAB| e2ec d3e| fedB ADFA|
-! e2ef eB (3BBB| gB (3BBB defg| afbf afef| gedB ADFA:|
+|B2Bd BAFA| B2Bd BAFA| AFAB dcdf| edef d3z:| 
+|: e2ec d2Bd| efec dFAB| e2ec d3e| fedB ADFA|
+| e2ef eB (3BBB| gB (3BBB defg| afbf afef| gedB ADFA:|
 
 X:24
 T:Egan's
+S:The Session: https://thesession.org/tunes/39#setting39
+S:https://JamBuddy.live 2025
 C:Traditional
 R:polka
 K:D
 M:4/4
 L:1/8
+Q:120
 |: fA BA| fA BA| d2 e>f| ed BA|
-! fA BA| fA BA| d2 e>f| ed d2:| ! |:
-fa f>e| ed BA| d2 e>f| ed BA|
-! fa f>e| ed BA| d2 e>f| ed d2:|
+| fA BA| fA BA| d2 e>f| ed d2:| 
+|: fa f>e| ed BA| d2 e>f| ed BA|
+| fa f>e| ed BA| d2 e>f| ed d2:|
 
 X:25
 T:Fanny Power
+S:The Session: https://thesession.org/tunes/957#setting957
+S:https://JamBuddy.live 2025
 C:Traditional
 R:waltz
 K:G
 M:3/4
 L:1/8
-|: D| "G"G2D "Em"G>AB| "C"c2B "D"A2G|
-"C"F>GE "D"D>ED| "Bm"F2G "D"A>Bc| ! "G"B>AG "Em"B>cd| "C"e2A "D"A2G|
-"C"F>GE "D"D>GF| "G" G3 G2:| ! |: d|
-"G"dB/c/d dB/c/d| "Em"G>AG GBd| "C"ec/d/e ec/d/e| "D"A>BA ABc|
-! "G"B>cd "C"e>fg| "D"f>ga d2c| "G"B>AG "D"A/B/cF| "G"G3 G2:|
+Q:96
+D|: "G"G2D "Em"G>AB| "C"c2B "D"A2G| "C"F>GE "D"D>ED| "Bm"F2G "D"A>Bc| 
+| "G"B>AG "Em"B>cd| "C"e2A "D"A2G| "C"F>GE "D"D>GF|1 "G" G3 G2 D:|2 "G" G3 G2 d|] 
+|: "G"dB/c/d dB/c/d| "Em"G>AG GBd| "C"ec/d/e ec/d/e| "D"A>BA ABc|
+| "G"B>cd "C"e>fg| "D"f>ga d2c| "G"B>AG "D"A/B/cF|1 "G"G3 G2 d:|2 "G" G3 G3|]
 
 X:26
 T:Farewell To Ireland
+S:The Session: https://thesession.org/tunes/33#setting33
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:A
 M:4/4
 L:1/8
-|: A,3 C E3 F| GEDB, G,B,DB,| A,3 C E3 F|
-GEDF EA,A,G,| ! A,3 C E3 F| GEDB, D2 g2| edeg a2 ba|
-gedB BA A2:| ! K:AMix! |: a2 ag agef| g2 ga gede|
-a2 ag agef| gedB BA A2| ! agef gage| d2 dB GABd|
-cAeA Bdef| gedB BA A2:| ! |: eABA eABA|
-d2 dB GABd| eABA eAAa| gedB BA A2| ! eABA eABA|
-d2 dB GABd| c2 BA Bdef| gedB BA A2:| ! |:
-aece aece| gdBd gdBd| aece a2 af| gedB BA A2|
-! agef g2 ge| dedB GA B2| cAeA d2 ef| gedB BA A2:|
+Q:120
+|: A,3 C E3 F| GEDB, G,B,DB,| A,3 C E3 F| GEDF EA,A,G,| 
+| A,3 C E3 F| GEDB, D2 g2| edeg a2 ba| gedB BA A2:| 
+K:AMix
+|: a2 ag agef| g2 ga gede| a2 ag agef| gedB BA A2|
+| agef gage| d2 dB GABd| cAeA Bdef| gedB BA A2:| 
+|: eABA eABA| d2 dB GABd| eABA eAAa| gedB BA A2| 
+| eABA eABA| d2 dB GABd| c2 BA Bdef| gedB BA A2:| 
+|: aece aece| gdBd gdBd| aece a2 af| gedB BA A2|
+| agef g2 ge| dedB GA B2| cAeA d2 ef| gedB BA A2:|
 
 X:27
 T:Farewell To Whalley Range
+S:The Session: https://thesession.org/tunes/2410#setting2410
+S:https://JamBuddy.live 2025
 C:Traditional
 R:slip jig
 K:A
 M:6/8
 L:1/8
-|: F2c BA~F- F2E| F2c BAc fec| B3 BAB c2A| 1 ~B3 BAB cBA:|
-2 ~B3 BAB cef|| ! a3 fec fec| B3 BAB cef| a3 baf afe| fec Bce fec|
-! a2f fec fec| B3 BAB cef| a3 baf afe| fec fec BAB||
+Q:113
+|: F2c BA~F- F2E| F2c BAc fec| B3 BAB c2A|1 ~B3 BAB cBA:|2 ~B3 BAB cef|]
+| a3 fec fec| B3 BAB cef| a3 baf afe| fec Bce fec|
+| a2f fec fec| B3 BAB cef| a3 baf afe| fec fec BAB||
 
 X:28
 T:Fig For A Kiss, A
+S:The Session: https://thesession.org/tunes/750#setting750
+S:https://JamBuddy.live 2025
 C:Traditional
 R:slip jig
-K:E
+K:D
 M:6/8
 L:1/8
-G2B E2B BAG| F2A D2A AGF| G2B E2B BAG| B/c/dB AGF DEF|
-! G2B E2B BAG| F2A D2A AGF| G2B E2B BAG| B/c/dB AGF E3||
-! g2e g2e edB| f2d dcd fed| g2e g2e edB| dBG GBd e2f|
-! g2e g2e edB| f2d dcd fed| gfe fed ecA| B/c/dB AGF E2F||
+Q:113
+|: G2B E2B BAG| F2A D2A AGF| G2B E2B BAG| B/c/dB AGF DEF|
+| G2B E2B BAG| F2A D2A AGF| G2B E2B BAG| B/c/dB AGF E3 :|
+|: g2e g2e edB| f2d dcd fed| g2e g2e edB| dBG GBd e2f|
+| g2e g2e edB| f2d dcd fed| gfe fed ecA| B/c/dB AGF E2F :|
 
 X:29
 T:Foxhunter, The
+S:The Session: https://thesession.org/tunes/482#setting482
+S:https://JamBuddy.live 2025
 C:Traditional
 R:slip jig
 K:D
 M:6/8
 L:1/8
-|: FDF F2D G2E| FDF F2D E2D| FDF F2D G2B|
-AFD DEF E2D:| ! |: B3 BAG FGA| B2E E2F G2B|
-ABc dcB ABc| d2 D D2 F E2 D:| ! |: fdf f2d g2e|
-fdf f2d e2d| fdf f2d g2b| afd def e2d:| ! |:
-gfe dcB AGF| B2 E E2 F G2 B| ABc dcB ABc| d2 D DEF E2 D:|
+Q:113
+|: FDF F2D G2E| FDF F2D E2D| FDF F2D G2B| AFD DEF E2D:| 
+|: B3 BAG FGA| B2E E2F G2B| ABc dcB ABc| d2 D D2 F E2 D:| 
+|: fdf f2d g2e| fdf f2d e2d| fdf f2d g2b| afd def e2d:| 
+|: gfe dcB AGF| B2 E E2 F G2 B| ABc dcB ABc| d2 D DEF E2 D:|
 
 X:30
 T:Foxhunters, The
+S:The Session: https://thesession.org/tunes/511#setting511
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:G
 M:4/4
 L:1/8
+Q:120
 |: d2BG d2BG| d2BG AGEG| d2BG dGBG| AcBG AGEG:|
-! |: D~D2B BAGE| DGBG AGEG| D~D2B BAGB|
-AcBG AGEG:| ! |: gedB GABd| gdBd eaaf|
-gedB GABG| ABcd eA~A2:| ! |: dggf ~g2ge|
-dggd egdB| dggf ~g2gd| egdB AGAB:| ! |:
-G2BG dGBG| GABG AGAB| ~G2BG dGBd| egdB AGAB:|
+|: D~D2B BAGE| DGBG AGEG| D~D2B BAGB| AcBG AGEG:| 
+|: gedB GABd| gdBd eaaf| gedB GABG| ABcd eA~A2:| 
+|: dggf ~g2ge| dggd egdB| dggf ~g2gd| egdB AGAB:| 
+|: G2BG dGBG| GABG AGAB| ~G2BG dGBd| egdB AGAB:|
 
 X:31
 T:Frank's
+S:The Session: https://thesession.org/tunes/646#setting646
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:A
 M:4/4
 L:1/8
+Q:120
 | Ac BA F2 AF| EF AB cA Bc| d3 f ec Ae| fa ec (3Bcd cB|
-! Ac BA F2 AF| EF AB cA Bc| d3 f ec Ac| BA GB A2 (3EFG|
-! Ac BA F2 AF| EF AB cA Bc| d2 df ec Ae| fa ec (3Bcd cB|
-! Ac BA EF AF| EF AB cA Bc| df (3fff ec Ac| BA GB Ae fg||
-! aA Ag AA fA| ef fe cA Bc| d3 f ec Ac| Bc de fe (3efg|
-! aA Ag AA fA| ef fe cA Bc| df (3fff ec Ac| BA GB Ae fg|
-! aA Ag AA fA| e f2 e cA Bc| d3 f eA ce| fa ec (3Bcd cB|
-! Ac BA F3 A| EF AB cA Bc| d3 f ec Ac| BA GB A4||
+| Ac BA F2 AF| EF AB cA Bc| d3 f ec Ac| BA GB A2 (3EFG|
+| Ac BA F2 AF| EF AB cA Bc| d2 df ec Ae| fa ec (3Bcd cB|
+| Ac BA EF AF| EF AB cA Bc| df (3fff ec Ac| BA GB Ae fg||
+| aA Ag AA fA| ef fe cA Bc| d3 f ec Ac| Bc de fe (3efg|
+| aA Ag AA fA| ef fe cA Bc| df (3fff ec Ac| BA GB Ae fg|
+| aA Ag AA fA| e f2 e cA Bc| d3 f eA ce| fa ec (3Bcd cB|
+| Ac BA F3 A| EF AB cA Bc| d3 f ec Ac| BA GB A4||
 
 X:32
 T:Garrett Barry's
+S:The Session: https://thesession.org/tunes/544#setting544
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:G
 M:6/8
 L:1/8
+Q:113
 A|: DEF ~G3| AGE c2A| dcA d2e| fed cAG|
-! ~F3 GFG| AGE (3Bcd e| dcA GEA| DED D2 A:| ! |:
-dcA d2e| fed (3efg e| dcA c2d| efd ecA|
-! dAA d2e| fed (3efg e| dcA GEA| DED D2 A:|
+| ~F3 GFG| AGE (3Bcd e| dcA GEA| DED D2 A:|
+|: dcA d2e| fed (3efg e| dcA c2d| efd ecA|
+| dAA d2e| fed (3efg e| dcA GEA| DED D2 A:|
 
 X:33
 T:Geese In The Bog, The
+S:The Session: https://thesession.org/tunes/43#setting12461
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:A
 M:6/8
 L:1/8
-|: B| cEE GEE| cEE GAB|
-cEE GED| EAA A2B| ! cEE GEE| cEE GAB|
-cBA GED| EAA A2:|: B| ! cde ged|
-eaf ged| cde ged| eag ~a3| ! cde ged|
-eaf ged| cBA GED| EAA A2:|
+Q:113
+B |: cEE GEE| cEE GAB| cEE GED| EAA A2B| 
+| cEE GEE| cEE GAB| cBA GED| EAA A2 B:|
+|: cde ged| eaf ged| cde ged| eag ~a3| 
+| cde ged| eaf ged| cBA GED|1 EAA A2 B :|2 EAA A3 |]
 
 X:34
 T:Gravel Walks, The
+S:The Session: https://thesession.org/tunes/42#setting42
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:A
 M:4/4
 L:1/8
-|: A2 eA (3cBA eA| A2 eA BAGB| A2 eA (3Bcd ef|
-gedc BAGB:| ! A2 aA gAfA| A2 eA BAGB| A2 aA gAfA|
-gedc BAGB| ! A2 aA gAfA| A2 eA BAGB| ABcd efga|
-gedc BAGB| ! |: (3cBA BG A2 AB| cAAd BAGB|
-(3cBA BG ABcd| efge dBGB:| ! |: c2 gc acgc|
-c2 gc BAGB| c2 gc acga| gedc BAGB| ! c2 gc acgc|
-c2 gc BAGB| ABcd efga| gedc BAGB:|
+Q:120
+|: A2 eA (3cBA eA| A2 eA BAGB| A2 eA (3Bcd ef||gedc BAGB:| 
+| A2 aA gAfA| A2 eA BAGB| A2 aA gAfA| gedc BAGB| 
+| A2 aA gAfA| A2 eA BAGB| ABcd efga| gedc BAGB|
+|: (3cBA BG A2 AB| cAAd BAGB| (3cBA BG ABcd| efge dBGB:|
+|: c2 gc acgc| c2 gc BAGB| c2 gc acga| gedc BAGB| 
+| c2 gc acgc| c2 gc BAGB| ABcd efga| gedc BAGB:|
 
 X:35
 T:Hag At The Churn, The
+S:The Session: https://thesession.org/tunes/829#setting829
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:D
 M:6/8
 L:1/8
+Q:113
 |: A2G ADD| A2G Adc| A2G ADD| EFG EFG:|
-! AdB c3| Add efg| AdB c2A| GEG AED|
-! AdB c3| Add efg| age dcA| GEG AED||
+| AdB c3| Add efg| AdB c2A| GEG AED|
+| AdB c3| Add efg| age dcA| GEG AED||
 
 X:36
 T:Harvest Home, The
+S:The Session: https://thesession.org/tunes/49#setting49
+S:https://JamBuddy.live 2025
 C:Traditional
 R:hornpipe
 K:D
 M:4/4
 L:1/8
-|: AF| DAFA DAFA| defe dcBA|
-eAfA gAfA| (3efe (3dcB AGFE| ! DAFA DAFA| defe dcBA|
-eAfA gfec| d2 f2 d2:| ! |: cd|
-eAAA fAAA| gAfA eAAA| eAfA gAfA| (3efe (3dcB (3ABA (3GFE|
-! DAFA DAFA| defe dcBA| eAfA gfec| d2 f2 d2:|
+Q:138
+AF|: DAFA DAFA| defe dcBA| eAfA gAfA| (3efe (3dcB AGFE|
+| DAFA DAFA| defe dcBA| eAfA gfec|1 d2 f2 d2 AF :|2 d2 f2 d2 cd |]
+|: eAAA fAAA| gAfA eAAA| eAfA gAfA| (3efe (3dcB (3ABA (3GFE|
+| DAFA DAFA| defe dcBA| eAfA gfec|1 d2 f2 d2 cd:|2 d2 f2 d4|]
 
 X:37
 T:Haste To The Wedding
+S:The Session: https://thesession.org/tunes/582#setting582
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:D
 M:6/8
 L:1/8
+Q:113
 |: AFA Agf| ede fdB| AFA dAF| EFE EFG|
-! AFA Agf| ede fdB| A2g faf| ded d3:| ! |:
-afa afa| bgb bgb| afa agf| ede efg|
-! a3 f3| ede fdB| A2g faf| ded d3:|
+| AFA Agf| ede fdB| A2g faf| ded d3:| 
+|: afa afa| bgb bgb| afa agf| ede efg|
+| a3 f3| ede fdB| A2g faf| ded d3:|
 
 X:38
 T:Humours Of Glendart, The
+S:The Session: https://thesession.org/tunes/45#setting45
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:D
 M:6/8
 L:1/8
+Q:113
 |: BAF AFE| FED EFA| BAF AFE| FEE E2A|
-! BAF AFE| FED FAB| dcB AFE| FDD D2A:|
-! def d2B| ABA AFA| def d2d| ede fdB|
-! def edB| dBA ABc| dcB AFE| FDD D2A:|
+| BAF AFE| FED FAB| dcB AFE| FDD D2A:|
+| def d2B| ABA AFA| def d2d| ede fdB|
+| def edB| dBA ABc| dcB AFE| FDD D2A:|
 
 X:39
 T:Humours Of Tulla, The
+S:The Session: https://thesession.org/tunes/141#setting13269
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:D
 M:4/4
 L:1/8
-|: d2Ad BdAB| d2fd edBc| d2Ad BdAd|
-1 (3Bcd ef g2fe:| 2 (3Bcd ef g2fg|| ! |: af~f2 df~f2|
-af~f2 g2fg| af~f2 dfed| 1 (3Bcd ef g2fg:| 2 (3Bcd ef g2fe||
+Q:120
+|: d2Ad BdAB| d2fd edBc| d2Ad BdAd|1 (3Bcd ef g2fe:|2 (3Bcd ef g2fg|]
+|: af~f2 df~f2| af~f2 g2fg| af~f2 dfed|1 (3Bcd ef g2fg:|2 (3Bcd ef g2fe|]
 
 X:40
 T:I Buried My Wife And Danced On Her Grave
+S:The Session: https://thesession.org/tunes/381#setting381
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:D
 M:6/8
 L:1/8
+Q:113
 |: DDD F2G| AdB cAF| GGG BAG| FFF GEA|
-! DDD F2G| AdB cAF| GGG BAG| AFD D2A:| ! |:
-d2e fed| faf gfe| d2e fed| dcA dcA|
-! d2e fed| faf gfe| dcA BAG| AFD D3:|
+| DDD F2G| AdB cAF| GGG BAG| AFD D2A:| 
+|: d2e fed| faf gfe| d2e fed| dcA dcA|
+| d2e fed| faf gfe| dcA BAG| AFD D3:|
 
 X:41
 T:Inisheer
+S:The Session: https://thesession.org/tunes/211#setting211
+S:https://JamBuddy.live 2025
 C:Traditional
 R:waltz
 K:D
 M:3/4
 L:1/8
+Q:96
 |: B3A Bd| B3A Bd| E3B AB| D3B AG|
-! B3A Bd| B3A Bd| G3B A/G/F| 1 G3E DG:| 2 G3A Bd||
-! e3f ed| B3A Bd| ef ed B/c/d| ! e3A Bd|
-e3f ed| B3A Bd| G3B A/G/F| ! G3A Bd|
-e3f ed| B3A Bd| gf ed B/c/d| ! e3A Bd|
-e3f ed| B3A Bd| D3B A/G/F| G6||
+| B3A Bd| B3A Bd| G3B A/G/F|1 G3E DG:|2 G3A Bd|]
+| e3f ed| B3A Bd| ef ed B/c/d| e3A Bd|
+| e3f ed| B3A Bd| G3B A/G/F|  G3A Bd|
+| e3f ed| B3A Bd| gf ed B/c/d| e3A Bd|
+| e3f ed| B3A Bd| D3B A/G/F| G6||
 
 X:42
 T:Irish Washerwoman, The
+S:The Session: https://thesession.org/tunes/92#setting92
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:G
 M:6/8
 L:1/8
+Q:113
 |: BGG DGG| BGB dcB| cAA EAA| cAc edc|
-! BGG DGG| BGB dcB| cBc Adc| BGG G3:| ! |:
-BGG DGG| BGB BAG| AFF DFF| AFA AGF|
-! EGG DGG| CGG B,GG| cBc Adc| BGG G3:|
+| BGG DGG| BGB dcB| cBc Adc| BGG G3:| 
+|: BGG DGG| BGB BAG| AFF DFF| AFA AGF|
+| EGG DGG| CGG B,GG| cBc Adc| BGG G3:|
 
 X:43
 T:Jig Of Slurs, The
+S:The Session: https://thesession.org/tunes/35#setting35
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:D
 M:6/8
 L:1/8
-|: Add cdd| Bdd Add| Bdd Add|
-Bee edB| ! Add cdd| Bdd Add| Bdd cde|
-fec d3:| ! |: A2f fef| a2f fed|
-B2e ede| f2f edB| ! A2f fef| a2f fed|
-Add cde| fec d3:| ! K:Gmaj! |: G2g gfg|
-aff gff| G2g gfg| aff g3| ! G2g gfg|
-aff gff| e2e efg| fed e3:| ! |:
-GBB Bdd| dee edB| GBB Bdd| dee efg|
-! GBB Bdd| dee edB| e2e efg| fed e3:|
+Q:113
+|: Add cdd| Bdd Add| Bdd Add| Bee edB| 
+| Add cdd| Bdd Add| Bdd cde| fec d3:|
+|: A2f fef| a2f fed| B2e ede| f2f edB|
+| A2f fef| a2f fed| Add cde| fec d3 :|
+K:Gmaj
+|: G2g gfg| aff gff| G2g gfg| aff g3|
+| G2g gfg| aff gff| e2e efg| fed e3:| 
+|: GBB Bdd| dee edB| GBB Bdd| dee efg|
+| GBB Bdd| dee edB| e2e efg| fed e3:|
 
 X:44
 T:Jimmy Ward's
+S:The Session: https://thesession.org/tunes/793#setting793
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:G
 M:6/8
 L:1/8
+Q:113
 |: G3 GAB| AGE GED| GGG AGE| GED DEF|
-! G3 GAB| AGE GAB| cBA BGE| 1 DED DEF:|
-2 DED D2B|| ! |: cBA BAG| ABA AGB|
-cBA BGE| DED GAB| ! cBA BAG| ABA ABc|
-dcB AGE| 1 GED D2B:| 2 GED DEF|| G6||
+| G3 GAB| AGE GAB| cBA BGE|1 DED DEF:|2 DED D2B|]
+|: cBA BAG| ABA AGB| cBA BGE| DED GAB| 
+| cBA BAG| ABA ABc| dcB AGE|1 GED D2B:|2 GED DEF| G6|]
 
 X:45
 T:John Ryan's
+S:The Session: https://thesession.org/tunes/441#setting441
+S:https://JamBuddy.live 2025
 C:Traditional
 R:polka
 K:D
 M:4/4
 L:1/8
+Q:120
 dd B/c/d/B/| AF ED| dd B/c/d/B/| AF E2|
-! dd B/c/d/B/| AF Ad| fd ec| d2 d2||
-! fd de/f/| gf ed| fd de/f/| gf a2|
-! fd de/f/| gf ed| fd ec| d2 d2||
+| dd B/c/d/B/| AF Ad| fd ec| d2 d2||
+| fd de/f/| gf ed| fd de/f/| gf a2|
+| fd de/f/| gf ed| fd ec| d2 d2||
 
 X:46
 T:Julia Delaney's
+S:The Session: https://thesession.org/tunes/589#setting589
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:D
 M:4/4
 L:1/8
+Q:120
 |: dcAG ~F2EF| ~E2 DE FD D2| dcAG FGAA| Addc d2 fe:|
-! |: f2fe fagf| ecgc acgc| f2fe fagf| edcG Add2:|
+|: f2fe fagf| ecgc acgc| f2fe fagf| edcG Add2:|
 
 X:47
 T:Kesh, The
+S:The Session: https://thesession.org/tunes/55#setting55
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:G
 M:6/8
 L:1/8
+Q:113
 |: G3 GAB| A3 ABd| edd gdd| edB dBA|
-! GAG GAB| ABA ABd| edd gdd| BAF G3:| ! |:
-B2B d2d| ege dBA| B2B dBG| ABA AGA|
-! BAB d^cd| ege dBd| gfg aga| bgg g3:|
+| GAG GAB| ABA ABd| edd gdd| BAF G3:| 
+|:B2B d2d| ege dBA| B2B dBG| ABA AGA|
+| BAB d^cd| ege dBd| gfg aga| bgg g3:|
 
 X:48
 T:Kid On The Mountain, The
+S:The Session: https://thesession.org/tunes/52#setting52
+S:https://JamBuddy.live 2025
 C:Traditional
 R:slip jig
 K:Em
 M:6/8
 L:1/8
+Q:113
 |: EFE FEF G2 F| E3 cBA BGE| EFE FED G2 A| BAG FAG FED:|
-! |: BGB AFA G2 D| GAB dge dBA| BGB AFA G2 A|
-BAG FAG FED:| ! |: gfg efe e2 f| gfg efg afd|
-gfg efe e2 a| bag fag fed:| ! |: eBB e2f g2f|
-eBB efg afd| eBB e2f g2a| bag fag fed:| ! |:
-edB dBA G2D| GAB dge dBA| edB dBA G2A| BAG FAG FED:|
+|: BGB AFA G2 D| GAB dge dBA| BGB AFA G2 A| BAG FAG FED:| 
+|: gfg efe e2 f| gfg efg afd| gfg efe e2 a| bag fag fed:| 
+|: eBB e2f g2f|eBB efg afd| eBB e2f g2a| bag fag fed:| 
+|: edB dBA G2D| GAB dge dBA| edB dBA G2A| BAG FAG FED:|
 
 X:49
 T:King Of The Fairies
+S:The Session: https://thesession.org/tunes/475#setting475
+S:https://JamBuddy.live 2025
 C:Traditional
 R:hornpipe
-K:E
+K:D
 M:4/4
 L:1/8
-|: B,2| EDEF GFGA| B2B2 G2GA|
-B2E2 EFGE| FGFE D2B,2| ! EDEF GFGA| BAGB d3c|
-B2E2 GFE_E| E6:| ! |: d2|
-e2e2 Bdef| gagf e3f| e2B2 BABc| dedc BcdB|
-! e2B2 Bdef| gagf efed| Bdeg fedf| e6 ef|
-! g3e f3d| edBc d3e| dBAF GABc| dBAF GFED|
-! B,2E2 EFGA| B2e2 edef| e2B2 BAGF| E6:|
+Q:138
+B,2|: EDEF GFGA| B2B2 G2GA| B2E2 EFGE| FGFE D2B,2| 
+| EDEF GFGA| BAGB d3c| B2E2 GFE_E|1 E6 B,2 |2 E6 d2:| 
+|: e2e2 Bdef| gagf e3f| e2B2 BABc| dedc BcdB|
+| e2B2 Bdef| gagf efed| Bdeg fedf| e6 ef|
+| g3e f3d| edBc d3e| dBAF GABc| dBAF GFED|
+| B,2E2 EFGA| B2e2 edef| e2B2 BAGF|1 E6 d2:|2 E8|]
 
 X:50
 T:Lark In The Morning, The
+S:The Session: https://thesession.org/tunes/62#setting62
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:D
 M:6/8
 L:1/8
-|: AFA AFA| BGB BdB| AFA AFA|
-fed BdB| ! AFA AFA| BGB BdB| def afe|
-dBB BdB:| ! |: def afe| bff afe|
-def afe| dBB BdB| ! def afe| bff afe|
-g2e f2d| edB BdB:| ! |: dff fef|
-fef fef| dff fef| edB BdB| ! dff fef|
-fef def| g2e f2d| edB BdB:| ! |:
-Add fdd| edd fdd| Add fdd| edB BdB|
-! Add fdd| edB def| g2e f2d| edB BdB:|
+Q:113
+|: AFA AFA| BGB BdB| AFA AFA| fed BdB| 
+| AFA AFA| BGB BdB| def afe| dBB BdB:|
+|: def afe| bff afe| def afe| dBB BdB| 
+| def afe| bff afe| g2e f2d| edB BdB:| 
+|: dff fef| fef fef| dff fef| edB BdB| 
+| dff fef| fef def| g2e f2d| edB BdB:| 
+|: Add fdd| edd fdd| Add fdd| edB BdB|
+| Add fdd| edB def| g2e f2d| edB BdB:|
 
 X:51
 T:Lilting Banshee, The
+S:The Session: https://thesession.org/tunes/60#setting60
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:A
 M:6/8
 L:1/8
+Q:113
 |: EAA EAA| BAB G2A| Bee edB| def gfg|
 ! eAA eAA| BAB G2A| Bee edB| dBA A3:|
 ! eaa age| dBA G2A| Bee edB| def gfg|
@@ -669,11 +803,14 @@ L:1/8
 
 X:52
 T:Little Beggarman, The
+S:The Session: https://thesession.org/tunes/566#setting566
+S:https://JamBuddy.live 2025
 C:Traditional
 R:hornpipe
 K:A
 M:4/4
 L:1/8
+Q:138
 |: "A"EAAG ABcd| efec "D"d2 cd| "A"eAAA ABcA| "G"B=GEF "G"G2 FG|
 ! "A"EAAG ABcd| efec "D"d2 cd| "A"eaaa afed| cA"E"BG "A"A4:| ! |:
 "G"g2 g"G"a gfef| gfec "D"d2 cd| "A"eAAA ABcA| "G"B=GEF G2 FG|
@@ -681,11 +818,14 @@ L:1/8
 
 X:53
 T:MacLeod's Farewell
+S:The Session: https://thesession.org/tunes/518#setting518
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:D
 M:4/4
 L:1/8
+Q:120
 |: DE| F2BF AFEF| D2 DE FABd| e2 fd efdB|
 ABde dBAG| ! F2BF AFEF| D2 DE FABd| e2fd efdB|
 1 ABde d2:| 2 ABde d3|| ! B| A3 f edfd|
@@ -694,11 +834,14 @@ D2DE FABd| e2fd efdB| 1 ABde d3:| 2 ABde d2||
 
 X:54
 T:Maid Behind The Bar, The
+S:The Session: https://thesession.org/tunes/64#setting64
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:D
 M:4/4
 L:1/8
+Q:120
 |: FAAB AFED| FAAB ABde| fBBA Bcde| fBBA BcdA|
 ! FAAB AFED| FAAB ABde| fBBA BcdB| AFEF D4:| ! |:
 faab afde| fdad fd d2| efga beef| gebe gfeg|
@@ -706,11 +849,14 @@ faab afde| fdad fd d2| efga beef| gebe gfeg|
 
 X:55
 T:Maids Of Mount Kisco, The
+S:The Session: https://thesession.org/tunes/432#setting432
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:A
 M:4/4
 L:1/8
+Q:120
 |: EA~A2 BA~A2| EA~A2 BGAG| EG~G2 AG~G2| EG~G2 EGDG|
 ! EA~A2 BAAG| EA~A2 BABd| efge afge| 1 dBGB ~A3G:| 2 dBGB A2dB||
 ! |: ~A3B dBAB| G2BG DGBG| ~A3B dGBd|
@@ -720,22 +866,28 @@ dedB GABd| eA~A2 efge| 1 dBGB A2 Bd:| 2 dBGB ~A3G||
 
 X:56
 T:Man Of The House, The
+S:The Session: https://thesession.org/tunes/222#setting222
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:Em
 M:4/4
 L:1/8
+Q:120
 |: E2BE GABG| E2BE FDAD| E2BE GABc| 1 dBcA BGED:|
 2 dBcA BGE2|| ! e2ge f2af| gfed edBd| e2ge f2af| gfed Beed|
 ! efge fgaf| gfed efga| bgaf gfed| edBA GEED||
 
 X:57
 T:Mason's Apron, The
+S:The Session: https://thesession.org/tunes/74#setting74
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:A
 M:4/4
 L:1/8
+Q:120
 |: e2| aAA2 ABAF| EFAc dcBA| dBB2 BcBA|
 Bcde fefg| ! aAA2 ABAF| EFAc dcBA| dcde fefa| A2 cB A2:|
 ! |: ed| cAeA fAeA| cAeA fedc|
@@ -751,11 +903,14 @@ c2Ac eAce| AceA cecA| d2 Ad fAdf| AdfA dfed|
 
 X:58
 T:Merrily Kiss The Quaker
+S:The Session: https://thesession.org/tunes/70#setting70
+S:https://JamBuddy.live 2025
 C:Traditional
 R:slide
 K:G
 M:4/4
 L:1/8
+Q:150
 |: D| GAB G2B c2A BGE| GAB DEG A2A AGE| ! GAB GAB cBA BGE|
 GAB AGF G3 G2:| ! |: A| BGG AGG BGG AGG| GAB DEG A2A AGA|
 ! BGG AGG BGG AGG| GAB AGF G3 G2:| ! |: d|
@@ -763,11 +918,14 @@ g2g a2a bag edB| g2g gab a2a agf| ! g2g f2f ege dBA| GAB AGF G3 G2:|
 
 X:59
 T:Merry Blacksmith, The
+S:The Session: https://thesession.org/tunes/72#setting72
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:D
 M:4/4
 L:1/8
+Q:120
 |: AB| d2dA BAFA| ABdA BAFA|
 ABde fded| Beed egfe| ! d3A BAFA-| ABdA BAFA-|
 ABde fdec| dBAF D2:| ! |: fg|
@@ -776,11 +934,14 @@ a2ag f2fe| d2dA BAFA-| ABde fded| Beed egfg|
 
 X:60
 T:Miss McLeod's
+S:The Session: https://thesession.org/tunes/75#setting75
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:G
 M:4/4
 L:1/8
+Q:120
 |: G2 BG AGBG| B2 BA BcBA| G2 BG AGBG| A2 AG AcBA|
 ! G2 BG AGBG| B2 BA B2 d2| e2 ef edef| gfed BcBA:| ! |:
 G2 gf edeg| B2 BA BcBA| G2 gf edeg| a2 ag aeef|
@@ -788,11 +949,14 @@ G2 gf edeg| B2 BA BcBA| G2 gf edeg| a2 ag aeef|
 
 X:61
 T:Mist Covered Mountain, The
+S:The Session: https://thesession.org/tunes/256#setting256
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:A
 M:6/8
 L:1/8
+Q:113
 |: G| EAA ABd| e2 A AGE|
 ~G3 GAB| dBA GED| ! EAA ABd| e2A AGE|
 efg dBG| BAG A2:| ! a| age a2b|
@@ -803,11 +967,14 @@ BAG ABd| efg dBG| BAG A2||
 
 X:62
 T:Monaghan, The
+S:The Session: https://thesession.org/tunes/67#setting67
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:Em
 M:6/8
 L:1/8
+Q:113
 |: BGE F2E| BGE FGA| BGE F2E|
 AFD FGA| ! GBE F2E| BGE FGA| d^cd ABG|
 FDF AGF:| ! |: EGB efg| fed edB|
@@ -820,11 +987,14 @@ EGB edB| dBG AFD| EGB dBG| FDF AGF|
 
 X:63
 T:Morning Dew, The
+S:The Session: https://thesession.org/tunes/69#setting69
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:E
 M:4/4
 L:1/8
+Q:120
 |: E3B2AFD| EDEB BAFD| E3B2AFA| BcdB AFDF:|
 ! B2eB fBeB| B2eB AFDF| B2eB fBeB| BcdB AFDF| ! B2eB fBeB|
 B2eB AFDF| Bdeg fdec| d2dA BAFD| ! B2EB GBEB|
@@ -834,11 +1004,14 @@ BAGF EFGA| B2GB A2GA| BAGF EFGA| BcdB AFDF:|
 
 X:64
 T:Morrison's
+S:The Session: https://thesession.org/tunes/71#setting71
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:E
 M:6/8
 L:1/8
+Q:113
 |: E3 B3| EBE AFD| EDE B3| dcB AFD|
 ! E3 B3| EBE AFD| G3 FGA| dAG FED:|
 ! Bee fee| aee fee| Bee fee| a2g fed|
@@ -848,11 +1021,14 @@ L:1/8
 
 X:65
 T:Mountain Road, The
+S:The Session: https://thesession.org/tunes/68#setting68
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:D
 M:4/4
 L:1/8
+Q:120
 F2 AF BFAF| F2 AF EFDE| F2 AF BFAF| G2 FG EFDE|
 ! F2 AF BFAF| F2 AF EFD2| FAA2 BAFA| BABd eddA|
 ! d2dA BAFA| d2 de fgfe| d2 dA BAFA| G2 FG EDFA|
@@ -860,11 +1036,14 @@ F2 AF BFAF| F2 AF EFDE| F2 AF BFAF| G2 FG EFDE|
 
 X:66
 T:Musical Priest, The
+S:The Session: https://thesession.org/tunes/73#setting73
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:Bm
 M:4/4
 L:1/8
+Q:120
 |: BA| FBBA B2Bd| cBAf ecBA| FBBA B2Bd|
 cBAc B2:| ! |: Bc| d2dc dfed|
 (3cBA eA fAeA| dcBc defb| afec B2:| ! Bc|
@@ -873,11 +1052,14 @@ dBB2 bafb| afec ABce| dB B2 bafb| afec B2Bc|
 
 X:67
 T:My Darling Asleep
+S:The Session: https://thesession.org/tunes/76#setting76
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:D
 M:6/8
 L:1/8
+Q:113
 |: fdd cAA| BGG A2G| FAA def| gfg eaa|
 ! fdd cAA| BGG A2G| FAA def| gec d3:| ! |:
 FAA Add| FAA BGG| FAA def| gfg eaa|
@@ -885,11 +1067,14 @@ FAA Add| FAA BGG| FAA def| gfg eaa|
 
 X:68
 T:Off To California
+S:The Session: https://thesession.org/tunes/30#setting30
+S:https://JamBuddy.live 2025
 C:Traditional
 R:hornpipe
 K:G
 M:4/4
 L:1/8
+Q:138
 |: GFGB AGED| GBdg e2df| gfgd edBG| ABAG E2DE|
 ! G2GB AGED| GBdg e2df| gfgd edBG| ABAF G4:| ! |:
 gfeg fedf| edef edBd| gfgd edBG| ABAG EDEF|
@@ -897,11 +1082,14 @@ gfeg fedf| edef edBd| gfgd edBG| ABAG EDEF|
 
 X:69
 T:Old Favourite, The
+S:The Session: https://thesession.org/tunes/56#setting56
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:G
 M:6/8
 L:1/8
+Q:113
 |: B3 BAB| dBA G2B| ded d2 B|
 ded B2A| ! B3 BAB| dBA G2B| ded cBA|
 G3 GAA:| ! |: g2e f2d| ege d2B|
@@ -910,11 +1098,14 @@ ded d2 B| ded B2d| g2e f2d| ! ege d2B|
 
 X:70
 T:Otter's Holt, The
+S:The Session: https://thesession.org/tunes/636#setting636
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:Bm
 M:4/4
 L:1/8
+Q:120
 e|: fBBA FEFB| (3ABA FB ABde| fBBA FEFA| (3Bcd cA Bcde|
 ! fBBA FEFB| (3ABA FB ABde| faaf effe| 1 dBBA ~B3e:| 2 dBAF B3c||
 ! d2 fd Adfa| bfaf effe| (3ddd fd Adfa| bfaf egfe|
@@ -924,11 +1115,14 @@ e|: fBBA FEFB| (3ABA FB ABde| fBBA FEFA| (3Bcd cA Bcde|
 
 X:71
 T:Out On The Ocean
+S:The Session: https://thesession.org/tunes/108#setting108
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:G
 M:6/8
 L:1/8
+Q:113
 |: GE| D2B BAG| BdB A2B|
 GED G2A| B2B AGE| ! D2B BAG| BdB A2B|
 GED G2A| BGE G:| ! Bd| e2e edB|
@@ -937,11 +1131,14 @@ ege d2B| AGE G2A| BGE G:|
 
 X:72
 T:Over The Moor To Maggie
+S:The Session: https://thesession.org/tunes/115#setting115
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:G
 M:4/4
 L:1/8
+Q:120
 |: DE| G2GA B2Bd| efge dBAG| EAAG ABAG|
 EAAG AcBA| ! GFGA BABd| efge dBAG| DGGF GBAG| EDEF G2:|
 ! |: ga| b2bg a2af| g2ge fedB|
@@ -952,11 +1149,14 @@ e2ec d2dB| c2cA BAGD| EAAG ABAG| EAAG ABcd|
 
 X:73
 T:Pigeon On The Gate, The
+S:The Session: https://thesession.org/tunes/517#setting517
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:E
 M:4/4
 L:1/8
+Q:120
 |: dc| BE ~E2 BEdE| BE ~E2 dBAF|
 D2 (3FED ADFE| DEFA BAFA| ! BE ~E2 BEdE| BE ~E2 B2 AF|
 D2 FA dfec| dBAF E2:| ! FA| Beed efed|
@@ -965,11 +1165,14 @@ D2 FA dfec| dBAF E2:| ! FA| Beed efed|
 
 X:74
 T:Rakish Paddy
+S:The Session: https://thesession.org/tunes/86#setting86
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:A
 M:4/4
 L:1/8
+Q:120
 |: c4 c2 AB| cBAG Ec c2| Add^c defe| dcAG FGAB|
 ! c4 c2 AB| cBAG EDCE| DEFG ABcA| dcAG F2 D2:| ! |:
 eg g2 ag g2| eg g2 ed^cd| ea a2 ba a2| ea a2 egdg|
@@ -977,11 +1180,14 @@ eg g2 ag g2| eg g2 ed^cd| ea a2 ba a2| ea a2 egdg|
 
 X:75
 T:Rambling Pitchfork, The
+S:The Session: https://thesession.org/tunes/89#setting89
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:D
 M:6/8
 L:1/8
+Q:113
 |: F2F AFF| dFF AFF| G2G ABc| ded cAG|
 ! FEF AFF| dFF AFF| GFG BAG| FDD D3:| ! |:
 d2e fed| ecA ABc| dcd fed| faf gfe|
@@ -989,11 +1195,14 @@ d2e fed| ecA ABc| dcd fed| faf gfe|
 
 X:76
 T:Rights Of Man, The
+S:The Session: https://thesession.org/tunes/83#setting83
+S:https://JamBuddy.live 2025
 C:Traditional
 R:hornpipe
 K:Em
 M:4/4
 L:1/8
+Q:138
 |: GA| B2A2 G2F2| EFGA B2ef|
 gfed edBd| cBAG A2GA| ! BcAB GAFG| EFGA B2ef|
 gfed Bgfg| e2 E2 E2:| ! |: ga|
@@ -1002,42 +1211,54 @@ babg efga| babg egfe| d^cde fefg| afdf a2gf|
 
 X:77
 T:Road To Lisdoonvarna, The
+S:The Session: https://thesession.org/tunes/250#setting250
+S:https://JamBuddy.live 2025
 C:Traditional
 R:slide
 K:E
 M:4/4
 L:1/8
+Q:150
 |: E2B B2A B2c d2A| F2A ABA D2E FED| ! E2B B2A B2c d3| cdc B2A B2E E3:|
 ! |: e2f gfe d2B Bcd| c2A ABc d2B B3| ! e2f gfe d2B Bcd| cdc B2A B2E E3:|
 
 X:78
 T:Rocky Road To Dublin, The
+S:The Session: https://thesession.org/tunes/593#setting593
+S:https://JamBuddy.live 2025
 C:Traditional
 R:slip jig
 K:A
 M:6/8
 L:1/8
+Q:113
 |: efe d2B ~A3| E2A A2A Bcd| efe d2B A2c| B2G G2A Bcd:|
 ! e2a a2f ~g3| e2a a2f g2d| e2a a2f g2e| d2B G2A Bcd|
 ! e2a a2f ~g3| e2a a2A Bcd| efg fga g2e| d2B G2A Bcd||
 
 X:79
 T:Rolling In The Ryegrass
+S:The Session: https://thesession.org/tunes/87#setting87
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:D
 M:4/4
 L:1/8
+Q:120
 |: A2AB AFDF| G2BG dGBG| ABAF DFAF| GBAG E2D2:|
 ! |: ABde f2fd| g2ge fedB| ABde fefa| gfdf e2d2:|
 
 X:80
 T:Rolling Waves, The
+S:The Session: https://thesession.org/tunes/88#setting88
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:D
 M:6/8
 L:1/8
+Q:113
 |: FEF DED| D2d cAG| FEF FED| A2F GFE|
 ! FEF DED| D2d cAG| FAF GBG| A2F GFE:|
 ! D2d cAd| cAd cAG| FEF cAd| A2F GFE|
@@ -1045,11 +1266,14 @@ L:1/8
 
 X:81
 T:Rose In The Heather, The
+S:The Session: https://thesession.org/tunes/447#setting13312
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:D
 M:6/8
 L:1/8
+Q:113
 |: FAF EFE| DFA BAF| ABd ede|
 fdB AFE| ! ~F3 ~E3| DFA BAF| AdB AFE|
 1 FDD D2E:| 2 FDD D2e|| ! fdB ABd| faa afd|
@@ -1058,11 +1282,14 @@ bag fge| 1 fdc d2e:| 2 fdc d2A||
 
 X:82
 T:Saddle The Pony
+S:The Session: https://thesession.org/tunes/307#setting307
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:G
 M:6/8
 L:1/8
+Q:113
 |: D| GBA G2B| def gdB|
 GBA G2B| AFD AFD| ! GBA G2B| def gfg|
 efe dBA| BGG G2:| ! |: d|
@@ -1071,11 +1298,14 @@ efe edB| def gfg| efe edB| dBA ABd|
 
 X:83
 T:Saint Anne's
+S:The Session: https://thesession.org/tunes/103#setting103
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:D
 M:4/4
 L:1/8
+Q:120
 |: fedf edcB| A2FA DAFA| B2GB EBGB| A2FA DAFA|
 ! fedf edcB| A2FA DAFA| BGed cABc| eddc d2 de:| ! |:
 f2fg fedc| Bggf g2gf| edcB ABce| baa^g abag|
@@ -1083,11 +1313,14 @@ f2fg fedc| Bggf g2gf| edcB ABce| baa^g abag|
 
 X:84
 T:Sally Gardens, The
+S:The Session: https://thesession.org/tunes/98#setting98
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:G
 M:4/4
 L:1/8
+Q:120
 |: G2GA BAGB| dBeB dBAB| d2Bd efge| dBAB GEDE|
 ! GFGA BAGB| d2eB dBAB| d2Bd efge| dBAB G4:| ! |:
 dggf g2de| g2bg ageg| eaag a2eg| a2bg ageg|
@@ -1095,11 +1328,14 @@ dggf g2de| g2bg ageg| eaag a2eg| a2bg ageg|
 
 X:85
 T:Ships Are Sailing, The
+S:The Session: https://thesession.org/tunes/543#setting543
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:E
 M:4/4
 L:1/8
+Q:120
 |: Beed BcdB| AD (3FED A,D (3FED| ~E3F GFGA| Beef gfed|
 ! Beed BcdB| AD (3FED A,D (3FED| ~E3F GFGA| Beed e3z:|
 ! ~g3a bgeg| ~f3g afdf| gfga bgaf| gefd e2 de|
@@ -1107,11 +1343,14 @@ L:1/8
 
 X:86
 T:Silver Spear, The
+S:The Session: https://thesession.org/tunes/182#setting182
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:D
 M:4/4
 L:1/8
+Q:120
 A|: FA (3AAA BAFA| dfed BddA| FA (3AAA BAFA|
 dfed (3BdB AG| ! FA (3AAA BAFA| dfed Bdef| gage fgfe|
 1 dfed (3BdB AG:| 2 dfed BdAd|| ! |: fa (3aaa bfaf|
@@ -1120,11 +1359,14 @@ gfed Bdef| ~g3 e ~f3 e| 1 dfed BdAd:| 2 dfed B2 AG||
 
 X:87
 T:Sligo Maid, The
+S:The Session: https://thesession.org/tunes/399#setting399
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:A
 M:4/4
 L:1/8
+Q:120
 |: A2BA (3B^cd ef| gedB AGEF| G2BG dGBG| DEGA BAdB|
 ! A2BA (3B^cd ef| gedB AGEG| B3G A2GE| DEGA BAA2:| ! |:
 eaag a2ga| bgaf gfed| eggf g2ge| dega bgag|
@@ -1132,11 +1374,14 @@ eaag a2ga| bgaf gfed| eggf g2ge| dega bgag|
 
 X:88
 T:Sporting Paddy
+S:The Session: https://thesession.org/tunes/430#setting430
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:G
 M:4/4
 L:1/8
+Q:120
 EAAB GABG| EAAB G2ED| EAA2 GABd| edge dBAG|
 ! EAAB GABG| EAAB G2ED| EAA2 GABd| edge d2ef||
 ! geee gede| geee a2ba| gee2 ged2| efge d2ef|
@@ -1144,11 +1389,14 @@ EAAB GABG| EAAB G2ED| EAA2 GABd| edge dBAG|
 
 X:89
 T:Star Of Munster, The
+S:The Session: https://thesession.org/tunes/197#setting197
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:A
 M:4/4
 L:1/8
+Q:120
 |: ed| c2Ac B2GB| AGEF GEDG|
 EAAB cBcd| eaaf gfed| ! cBAc BAGB| AGEF GEDG|
 EAAB cded| cABG A2:| ! |: de|
@@ -1157,11 +1405,14 @@ eaab ageg| agbg agef| gfga gfef| gfaf gfdf|
 
 X:90
 T:Sí Bheag Sí Mhór
+S:The Session: https://thesession.org/tunes/449#setting449
+S:https://JamBuddy.live 2025
 C:Traditional
 R:waltz
 K:D
 M:3/4
 L:1/8
+Q:96
 de|: f3e d2| d2 de d2| B4 A2|
 F4 A2| BA Bc d2| e4 de| f2 f2 e2|
 ! d4 f2| B4 e2| A4 d2| F4 E2|
@@ -1174,11 +1425,14 @@ d6| 1 d4 de:| 2 d6||
 
 X:91
 T:Tabhair Dom Do Lámh
+S:The Session: https://thesession.org/tunes/454#setting454
+S:https://JamBuddy.live 2025
 C:Traditional
 R:waltz
 K:G
 M:3/4
 L:1/8
+Q:96
 D2| E2 G2 G2| G4 D2| E2 G2 G>A| G4 D2|
 E2 G2 G2| G2 A2 B2| B2 e2 de| B4 AG|
 ! A2 A2 ed| B2 B2 dB| A2 AB AG| E4 D2|
@@ -1195,11 +1449,14 @@ G2 GA Bd| =f4 ed| e2 e2 g2| e4 dB|
 
 X:92
 T:Tam Lin
+S:The Session: https://thesession.org/tunes/248#setting248
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:Dm
 M:4/4
 L:1/8
+Q:120
 |: A,2DA, FA,DA,| B,2DB, FB,DB,| C2EC GCEC| FEDC A,DDC|
 ! A,2DA, FA,DA,| B,2DB, FB,DB,| C2EC GCEC| FEDC A,DD2:| ! |:
 dA~A2 FADA| dA~A2 FADA| cG~G2 EG~G2| cG~G2 cdec|
@@ -1207,11 +1464,14 @@ dA~A2 FADA| dA~A2 FADA| cG~G2 EG~G2| cG~G2 cdec|
 
 X:93
 T:Tarbolton, The
+S:The Session: https://thesession.org/tunes/560#setting560
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:E
 M:4/4
 L:1/8
+Q:120
 |: D| Eeed e2 BA| GBAF GFEF| Dddc d2 AF|
 GBAG FDDF| ! Eeed efge| fedf edBA| GABG FGA=c| BGAF GE E:|
 ! gfef (3gfe be| gebe gfef| d2 fd adfd| ABAG FDDF|
@@ -1219,11 +1479,14 @@ GBAG FDDF| ! Eeed efge| fedf edBA| GABG FGA=c| BGAF GE E:|
 
 X:94
 T:Teetotaller's, The
+S:The Session: https://thesession.org/tunes/114#setting114
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:G
 M:4/4
 L:1/8
+Q:120
 |: G2 GF GABc| dBeB dBAc| BEED EFGA| BGAF GFED|
 ! G2 GF GABc| dBeB dBAc| BEED EFGA| BGAF G4:| ! |:
 Beed e2ef| gfaf gfed| B^cde d2ef| gfaf gfed|
@@ -1231,11 +1494,14 @@ Beed e2ef| gfaf gfed| B^cde d2ef| gfaf gfed|
 
 X:95
 T:Tenpenny Bit, The
+S:The Session: https://thesession.org/tunes/109#setting109
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:A
 M:6/8
 L:1/8
+Q:113
 |: eAA eAA| BAB GBd| eAA eAA| def gfg|
 ! eAA eAA| BAB GAB| def ged| BAG A3:|
 ! eaa aga| bag ged| eaa aga| bag a3|
@@ -1243,22 +1509,28 @@ L:1/8
 
 X:96
 T:Toss The Feathers
+S:The Session: https://thesession.org/tunes/113#setting113
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:E
 M:4/4
 L:1/8
+Q:120
 |: EBBB dBBB| EBBB FAFA| BE E2 BABc| dfed BAFA:|
 ! Beed e2 de| fede fe e2| febe febe| fede fee2|
 ! Beed e2 de| fede fa a2| b2bf a2af| egfe dBAF|
 
 X:97
 T:Toss The Feathers
+S:The Session: https://thesession.org/tunes/138#setting138
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:D
 M:4/4
 L:1/8
+Q:120
 |: D2 FD ADFD| ABcA G~E3| D2 (3FED ADFA|
 d2 ed cAGE| ! (3DDD AD (3DDD AD| ABcA G~E3| cABG A2 AB|
 1 cded cAGE:| 2 cded cAGc|| ! |: Ad (3ddd Ad (3ddd|
@@ -1267,11 +1539,14 @@ dfed cAGB| cABG A2 AB| 1 cded cAGc:| 2 cded cAGE||
 
 X:98
 T:Tripping Up The Stairs
+S:The Session: https://thesession.org/tunes/111#setting111
+S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
 K:D
 M:6/8
 L:1/8
+Q:113
 |: FAA GBB| FAd fed| cBc ABc| dfe dAG|
 ! FAA GBB| FAd fed| c2c ABc| dfe d2A:|
 ! dBB fBB| dBB fed| cAA eAA| efe edc|
@@ -1279,11 +1554,14 @@ L:1/8
 
 X:99
 T:Wind That Shakes The Barley, The
+S:The Session: https://thesession.org/tunes/116#setting116
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:D
 M:4/4
 L:1/8
+Q:120
 A2AB AFED| B2BA BcdB| A2AB AFED| gfed BcdB|
 ! A2AB AFED| B2BA BcdB| A2AB AFED| gfed Bcde||
 ! f2fd g2ge| f2fd Bcde| f2fd g2fg| afed Bcde|
@@ -1291,11 +1569,14 @@ A2AB AFED| B2BA BcdB| A2AB AFED| gfed BcdB|
 
 X:100
 T:Wise Maid, The
+S:The Session: https://thesession.org/tunes/118#setting118
+S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
 K:D
 M:4/4
 L:1/8
+Q:120
 |: DE| F2FG FEDE| FAAB AFED|
 d2eg fdec| dBAG BEED| ! F2FG FEDE| FAAB AFED|
 d2eg fdec| dBAG FD:| ! |: FA|
