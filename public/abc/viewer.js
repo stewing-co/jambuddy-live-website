@@ -34,7 +34,13 @@
       currentTempo: null,
       selectedIndex: -1,
       theme: { bg: '#ffffff', fg: '#000000' },
-      playFinishTimer: null
+      playFinishTimer: null,
+      timer: null,
+      highlighted: [],
+      enableHighlight: false,
+      synthControl: null,
+      synthUiEl: null,
+      finishTimeout: null
     },
 
     instruments: {
@@ -225,8 +231,10 @@
       // Initialize theme color pickers if present
       const bgPicker = q('paperBgColor');
       const fgPicker = q('inkColor');
+      const hlToggle = q('highlightNotes');
       if (bgPicker) bgPicker.value = this.state.theme.bg;
       if (fgPicker) fgPicker.value = this.state.theme.fg;
+      if (hlToggle) hlToggle.checked = !!this.state.enableHighlight;
       const onTheme = () => {
         const bg = (bgPicker && bgPicker.value) || this.state.theme.bg;
         const fg = (fgPicker && fgPicker.value) || this.state.theme.fg;
@@ -234,8 +242,35 @@
       };
       if (bgPicker) bgPicker.addEventListener('input', onTheme);
       if (fgPicker) fgPicker.addEventListener('input', onTheme);
+      if (hlToggle) hlToggle.addEventListener('change', async () => {
+        this.state.enableHighlight = !!hlToggle.checked;
+        if (!this.state.enableHighlight) {
+          // Turn off any active highlight immediately
+          if (this.state.timer && this.state.timer.stop) { try { this.state.timer.stop(); } catch(_) {} }
+          this.clearHighlight();
+        } else if (this.state.isPlaying) {
+          // Re-sync by restarting playback for clean cursor alignment
+          try { await this.restartPlayback(); } catch(_) {}
+        }
+      });
       // Apply defaults on load
       this.setThemeColors(this.state.theme.bg, this.state.theme.fg);
+      // Prepare hidden synth UI container for cursor control if needed
+      try {
+        let el = document.getElementById('abcjs-audio-hidden');
+        if (!el) {
+          el = document.createElement('div');
+          el.id = 'abcjs-audio-hidden';
+          // Keep in DOM but off-screen so SynthController can attach cleanly
+          el.style.position = 'absolute';
+          el.style.left = '-10000px';
+          el.style.top = '-10000px';
+          el.style.width = '0';
+          el.style.height = '0';
+          document.body.appendChild(el);
+        }
+        this.state.synthUiEl = el;
+      } catch(_) {}
     },
 
     // Extract tunes by X: header
@@ -370,9 +405,8 @@
         this.state.synth = null;
       }
       const synth = new ABCJS.synth.CreateSynth();
+      // Local soundfont path relative to site root (keep as originally working in your deploy)
       const soundFont = function(filename) {
-        // Soundfont path (relative to site root). Copy MP3s to public/abcjs/soundfonts/FluidR3_GM/acoustic_grand_piano-mp3/
-        // Use a relative URL so it also works on subpaths.
         return 'abcjs/soundfonts/FluidR3_GM/acoustic_grand_piano-mp3/' + filename;
       };
       await synth.init({
@@ -391,35 +425,156 @@
         // Re-render to get current visual object in sync
         const vObj = this.render(true);
         if (!vObj) throw new Error('render failed');
-        await this.ensureSynth(vObj);
-        // Clear any previous finish polling
-        if (this.state.playFinishTimer) { try { clearTimeout(this.state.playFinishTimer); } catch(_) {} this.state.playFinishTimer = null; }
-        const startResult = this.state.synth.start();
-        this.state.isPlaying = true;
-        this.updatePlayButton();
-        // Handle playback finish to toggle Stop -> Play automatically
-        if (startResult && typeof startResult.then === 'function') {
-          startResult.then(() => {
-            this.state.isPlaying = false;
-            this.updatePlayButton();
-          }).catch(() => {
-            this.state.isPlaying = false;
-            this.updatePlayButton();
-          });
-        } else {
-          // Fallback: poll isRunning if no promise
-          const poll = () => {
-            try {
-              if (!this.state.synth || !this.state.synth.isRunning) {
+        // If highlight is enabled and SynthController exists, use it to drive both audio and cursor
+        // Disabled for now to ensure stable playback path; use TimingCallbacks instead
+        if (false && this.state.enableHighlight && ABCJS?.synth?.SynthController) {
+          // Clean up any existing controller
+          try { this.state.synthControl?.pause && this.state.synthControl.pause(); } catch(_) {}
+          try { this.state.synthControl?.stop && this.state.synthControl.stop(); } catch(_) {}
+          // Build cursor control callbacks
+          const cursorControl = {
+            onStart: () => { this.clearHighlight(); },
+            onEvent: (ev) => {
+              if (!ev) { this.clearHighlight(); return; }
+              this.clearHighlight();
+              if (ev.elements) {
+                try {
+                  ev.elements.forEach(set => set.forEach(el => {
+                    if (!el) return;
+                    // Save previous styles
+                    if (el.dataset) {
+                      el.dataset.prevFill = el.getAttribute('fill') ?? '__unset__';
+                      el.dataset.prevStroke = el.getAttribute('stroke') ?? '__unset__';
+                    }
+                    el.classList && el.classList.add('abc-current-note');
+                    el.setAttribute('fill', '#f59e0b');
+                    el.setAttribute('stroke', '#f59e0b');
+                    this.state.highlighted.push(el);
+                    // Also color children inside the element (paths, etc.)
+                    try {
+                      el.querySelectorAll && el.querySelectorAll('path,polygon,polyline,use,ellipse,circle,rect').forEach(ch => {
+                        if (ch.dataset) {
+                          ch.dataset.prevFill = ch.getAttribute('fill') ?? '__unset__';
+                          ch.dataset.prevStroke = ch.getAttribute('stroke') ?? '__unset__';
+                        }
+                        ch.classList && ch.classList.add('abc-current-note');
+                        ch.setAttribute('fill', '#f59e0b');
+                        ch.setAttribute('stroke', '#f59e0b');
+                        this.state.highlighted.push(ch);
+                      });
+                    } catch (_) {}
+                  }));
+                } catch(_) {}
+              }
+            },
+            onFinished: () => {
+              this.state.isPlaying = false;
+              this.updatePlayButton();
+              this.clearHighlight();
+            },
+            // You can tweak these for smoother cursor
+            beatSubdivisions: 2,
+            lineEndAnticipation: 0
+          };
+          // Create/load controller
+          const sc = new ABCJS.synth.SynthController();
+          sc.load(this.state.synthUiEl, cursorControl, { displayPlay: false, displayProgress: false });
+          this.state.synthControl = sc;
+          // Configure options (use our soundfont mapping)
+          // userAction must be true when called from a click handler to satisfy autoplay policies
+          await sc.setTune(vObj, true, { qpm: this.state.currentTempo || undefined, midiTranspose: (this.state.vt||0), program: 0, soundFontUrl: 'https://paulrosen.github.io/abcjs/audio/soundfont/acoustic_grand_piano-mp3/' });
+          // Clear previous timeouts
+          if (this.state.playFinishTimer) { try { clearTimeout(this.state.playFinishTimer); } catch(_) {} this.state.playFinishTimer = null; }
+          if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
+          // Start via controller (handles highlight + audio)
+          const startP = sc.play();
+          this.state.isPlaying = true;
+          this.updatePlayButton();
+          if (startP && typeof startP.then === 'function') {
+            startP.then(() => {
+              this.state.isPlaying = false;
+              this.updatePlayButton();
+              this.clearHighlight();
+            }).catch(() => {
+              this.state.isPlaying = false;
+              this.updatePlayButton();
+              this.clearHighlight();
+            });
+          }
+          // Also set watchdog by duration if available
+          try {
+            const d = Number(sc.synth && sc.synth.duration);
+            if (d && isFinite(d) && d > 0) {
+              this.state.finishTimeout = setTimeout(() => {
                 this.state.isPlaying = false;
                 this.updatePlayButton();
-                this.state.playFinishTimer = null;
-                return;
-              }
-            } catch(_) {}
+                this.clearHighlight();
+                this.state.finishTimeout = null;
+              }, Math.ceil(d * 1000) + 250);
+            }
+          } catch(_) {}
+        } else {
+          // Default path: our CreateSynth, optional TimingCallbacks
+          await this.ensureSynth(vObj);
+          if (this.state.enableHighlight) {
+            const timer = this.installTiming(vObj);
+            if (timer && timer.start) timer.start(0);
+          } else {
+            if (this.state.timer && this.state.timer.stop) { try { this.state.timer.stop(); } catch(_) {} }
+            this.clearHighlight();
+          }
+          // Clear any previous finish polling/timeouts
+          if (this.state.playFinishTimer) { try { clearTimeout(this.state.playFinishTimer); } catch(_) {} this.state.playFinishTimer = null; }
+          if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
+          const startResult = this.state.synth.start();
+          this.state.isPlaying = true;
+          this.updatePlayButton();
+          // Duration-based watchdog to ensure UI resets even if callbacks fail
+          try {
+            const d = Number(this.state.synth && this.state.synth.duration);
+            if (d && isFinite(d) && d > 0) {
+              this.state.finishTimeout = setTimeout(() => {
+                this.state.isPlaying = false;
+                this.updatePlayButton();
+                if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
+                this.clearHighlight();
+                this.state.finishTimeout = null;
+              }, Math.ceil(d * 1000) + 250);
+            }
+          } catch(_) {}
+          // Handle playback finish to toggle Stop -> Play automatically
+          if (startResult && typeof startResult.then === 'function') {
+            startResult.then(() => {
+              this.state.isPlaying = false;
+              this.updatePlayButton();
+              if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
+              this.clearHighlight();
+              if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
+            }).catch(() => {
+              this.state.isPlaying = false;
+              this.updatePlayButton();
+              if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
+              this.clearHighlight();
+              if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
+            });
+          } else {
+            // Fallback: poll isRunning if no promise
+            const poll = () => {
+              try {
+                if (!this.state.synth || !this.state.synth.isRunning) {
+                  this.state.isPlaying = false;
+                  this.updatePlayButton();
+                  this.state.playFinishTimer = null;
+                  if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
+                  this.clearHighlight();
+                  if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
+                  return;
+                }
+              } catch(_) {}
+              this.state.playFinishTimer = setTimeout(poll, 500);
+            };
             this.state.playFinishTimer = setTimeout(poll, 500);
-          };
-          this.state.playFinishTimer = setTimeout(poll, 500);
+          }
         }
       } catch (e) {
         console.error('Play failed:', e);
@@ -429,7 +584,11 @@
 
     stop: function() {
       try { if (this.state.synth) this.state.synth.stop(); } catch(_) {}
+      try { if (this.state.synthControl) this.state.synthControl.stop(); } catch(_) {}
       if (this.state.playFinishTimer) { try { clearTimeout(this.state.playFinishTimer); } catch(_) {} this.state.playFinishTimer = null; }
+      if (this.state.timer && this.state.timer.stop) { try { this.state.timer.stop(); } catch(_) {} }
+      this.clearHighlight();
+      if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
       this.state.isPlaying = false;
       this.updatePlayButton();
     },
@@ -437,32 +596,128 @@
     restartPlayback: async function() {
       try {
         const vObj = this.render(true);
-        await this.ensureSynth(vObj);
-        if (this.state.playFinishTimer) { try { clearTimeout(this.state.playFinishTimer); } catch(_) {} this.state.playFinishTimer = null; }
-        const startResult = this.state.synth.start();
-        this.state.isPlaying = true;
-        this.updatePlayButton();
-        if (startResult && typeof startResult.then === 'function') {
-          startResult.then(() => {
-            this.state.isPlaying = false;
-            this.updatePlayButton();
-          }).catch(() => {
-            this.state.isPlaying = false;
-            this.updatePlayButton();
-          });
-        } else {
-          const poll = () => {
-            try {
-              if (!this.state.synth || !this.state.synth.isRunning) {
+        // If highlight is enabled and SynthController exists, prefer it for restart
+        if (false && this.state.enableHighlight && ABCJS?.synth?.SynthController) {
+          try { this.state.synthControl?.pause && this.state.synthControl.pause(); } catch(_) {}
+          try { this.state.synthControl?.stop && this.state.synthControl.stop(); } catch(_) {}
+          const cursorControl = {
+            onStart: () => { this.clearHighlight(); },
+            onEvent: (ev) => {
+              if (!ev) { this.clearHighlight(); return; }
+              this.clearHighlight();
+              if (ev.elements) {
+                try {
+                  ev.elements.forEach(set => set.forEach(el => {
+                    if (!el) return;
+                    if (el.dataset) {
+                      el.dataset.prevFill = el.getAttribute('fill') ?? '__unset__';
+                      el.dataset.prevStroke = el.getAttribute('stroke') ?? '__unset__';
+                    }
+                    el.classList && el.classList.add('abc-current-note');
+                    el.setAttribute('fill', '#f59e0b');
+                    el.setAttribute('stroke', '#f59e0b');
+                    this.state.highlighted.push(el);
+                  }));
+                } catch(_) {}
+              }
+            },
+            onFinished: () => {
+              this.state.isPlaying = false;
+              this.updatePlayButton();
+              this.clearHighlight();
+            },
+            beatSubdivisions: 2,
+            lineEndAnticipation: 0
+          };
+          const sc = new ABCJS.synth.SynthController();
+          sc.load(this.state.synthUiEl, cursorControl, { displayPlay: false, displayProgress: false });
+          this.state.synthControl = sc;
+          await sc.setTune(vObj, true, { qpm: this.state.currentTempo || undefined, midiTranspose: (this.state.vt||0), program: 0, soundFontUrl: 'https://paulrosen.github.io/abcjs/audio/soundfont/acoustic_grand_piano-mp3/' });
+          if (this.state.playFinishTimer) { try { clearTimeout(this.state.playFinishTimer); } catch(_) {} this.state.playFinishTimer = null; }
+          if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
+          const p = sc.play();
+          this.state.isPlaying = true;
+          this.updatePlayButton();
+          if (p && typeof p.then === 'function') {
+            p.then(() => {
+              this.state.isPlaying = false;
+              this.updatePlayButton();
+              this.clearHighlight();
+            }).catch(() => {
+              this.state.isPlaying = false;
+              this.updatePlayButton();
+              this.clearHighlight();
+            });
+          }
+          try {
+            const d = Number(sc.synth && sc.synth.duration);
+            if (d && isFinite(d) && d > 0) {
+              this.state.finishTimeout = setTimeout(() => {
                 this.state.isPlaying = false;
                 this.updatePlayButton();
-                this.state.playFinishTimer = null;
-                return;
-              }
-            } catch(_) {}
+                this.clearHighlight();
+                this.state.finishTimeout = null;
+              }, Math.ceil(d * 1000) + 250);
+            }
+          } catch(_) {}
+        } else {
+          // Default restart path
+          await this.ensureSynth(vObj);
+          if (this.state.enableHighlight) {
+            const timer = this.installTiming(vObj);
+            if (timer && timer.start) timer.start(0);
+          } else {
+            if (this.state.timer && this.state.timer.stop) { try { this.state.timer.stop(); } catch(_) {} }
+            this.clearHighlight();
+          }
+          if (this.state.playFinishTimer) { try { clearTimeout(this.state.playFinishTimer); } catch(_) {} this.state.playFinishTimer = null; }
+          if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
+          const startResult = this.state.synth.start();
+          this.state.isPlaying = true;
+          this.updatePlayButton();
+          try {
+            const d = Number(this.state.synth && this.state.synth.duration);
+            if (d && isFinite(d) && d > 0) {
+              this.state.finishTimeout = setTimeout(() => {
+                this.state.isPlaying = false;
+                this.updatePlayButton();
+                if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
+                this.clearHighlight();
+                this.state.finishTimeout = null;
+              }, Math.ceil(d * 1000) + 250);
+            }
+          } catch(_) {}
+          if (startResult && typeof startResult.then === 'function') {
+            startResult.then(() => {
+              this.state.isPlaying = false;
+              this.updatePlayButton();
+              if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
+              this.clearHighlight();
+              if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
+            }).catch(() => {
+              this.state.isPlaying = false;
+              this.updatePlayButton();
+              if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
+              this.clearHighlight();
+              if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
+            });
+          } else {
+            const poll = () => {
+              try {
+                if (!this.state.synth || !this.state.synth.isRunning) {
+                  this.state.isPlaying = false;
+                  this.updatePlayButton();
+                  this.state.playFinishTimer = null;
+                  if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
+                  this.clearHighlight();
+                  if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
+                  return;
+                }
+              } catch(_) {}
+              this.state.playFinishTimer = setTimeout(poll, 500);
+            };
             this.state.playFinishTimer = setTimeout(poll, 500);
-          };
-          this.state.playFinishTimer = setTimeout(poll, 500);
+          }
         }
       } catch (e) {
         console.error('Restart playback failed:', e);
@@ -591,6 +846,8 @@
         const paperEl = document.getElementById(this.state.paperId);
         if (!input || !paperEl) return;
         paperEl.innerHTML = '';
+        // Clear any previous highlight state on new render
+        this.clearHighlight && this.clearHighlight();
         const raw = input.value || 'X:1\nT:Example\nM:4/4\nL:1/8\nK:C\nCDEF GABc|';
         const norm = this.normalizeAbc(raw);
         const filtered = this.filterHeaders(norm);
@@ -598,7 +855,7 @@
         // Build render options; when a tablature layer is chosen, render staff + tab together in one pass
         const hasTab = this.state.layer && this.state.layer !== 'none';
         const tabSpec = hasTab ? this.instruments[this.state.layer] : null;
-        const baseOpts = { responsive: 'resize', add_classes: true, visualTranspose: this.state.vt, wrap: { preferredMeasuresPerLine: 5 } };
+        const baseOpts = { responsive: 'resize', add_classes: true, visualTranspose: this.state.vt, selectionColor: '#f59e0b', wrap: { preferredMeasuresPerLine: 5 } };
         const renderOpts = hasTab && tabSpec ? { ...baseOpts, tablature: [tabSpec] } : baseOpts;
         // Optionally strip chord symbols when rendering tabs for a cleaner layout
         const abcToRender = (hasTab && this.state.stripChordsForTabs) ? this.simplifyForTab(filtered) : filtered;
@@ -613,6 +870,101 @@
       } catch (e) {
         console.error('ABC render failed:', e);
       }
+    }
+  };
+
+  // --- Playback cursor/highlight helpers ---
+  Viewer.clearHighlight = function() {
+    try {
+      // Prefer native engraver clear if available
+      if (this.state.lastVisualObj && this.state.lastVisualObj.rangeHighlight) {
+        try { this.state.lastVisualObj.rangeHighlight(0, 0); } catch(_) {}
+      }
+      (this.state.highlighted || []).forEach(el => {
+        try {
+          // Restore previous presentation attributes if we changed them
+          if (el && el.dataset) {
+            if (el.dataset.prevFill !== undefined) {
+              if (el.dataset.prevFill === '__unset__') el.removeAttribute('fill');
+              else el.setAttribute('fill', el.dataset.prevFill);
+              delete el.dataset.prevFill;
+            }
+            if (el.dataset.prevStroke !== undefined) {
+              if (el.dataset.prevStroke === '__unset__') el.removeAttribute('stroke');
+              else el.setAttribute('stroke', el.dataset.prevStroke);
+              delete el.dataset.prevStroke;
+            }
+          }
+          el?.classList?.remove('abc-current-note');
+        } catch(_) {}
+      });
+    } catch(_) {}
+    this.state.highlighted = [];
+  };
+
+  Viewer.installTiming = function(vObj) {
+    try {
+      if (!vObj || !ABCJS) return null;
+      if (!ABCJS.TimingCallbacks) { console.warn('ABCJS.TimingCallbacks not available in this build; skipping note highlight'); return null; }
+      // Clean up any previous timer/highlights
+      if (this.state.timer && this.state.timer.stop) {
+        try { this.state.timer.stop(); } catch(_) {}
+      }
+      this.clearHighlight();
+      const qpm = this.state.currentTempo || undefined; // use tune tempo if undefined
+      const timer = new ABCJS.TimingCallbacks(vObj, {
+        qpm,
+        eventCallback: (ev) => {
+          // End of tune sends null
+          if (!ev) { this.clearHighlight(); return; }
+          // Try abcjs native selection first using start/end char
+          if (typeof ev.startChar === 'number' && typeof ev.endChar === 'number' && vObj && vObj.rangeHighlight) {
+            try {
+              vObj.rangeHighlight(ev.startChar, ev.endChar);
+              return;
+            } catch(_) { /* fall through to manual coloring */ }
+          }
+          // Fallback: manually color SVG elements
+          this.clearHighlight();
+          if (ev.elements) {
+            try {
+              ev.elements.forEach(set => {
+                set.forEach(el => {
+                  if (!el) return;
+                  if (el.classList) {
+                    el.classList.add('abc-current-note');
+                  }
+                  if (el.dataset) {
+                    el.dataset.prevFill = el.getAttribute('fill') ?? '__unset__';
+                    el.dataset.prevStroke = el.getAttribute('stroke') ?? '__unset__';
+                  }
+                  el.setAttribute('fill', '#f59e0b');
+                  el.setAttribute('stroke', '#f59e0b');
+                  this.state.highlighted.push(el);
+                  // Also color children
+                  try {
+                    el.querySelectorAll && el.querySelectorAll('path,polygon,polyline,use,ellipse,circle,rect').forEach(ch => {
+                      if (ch.dataset) {
+                        ch.dataset.prevFill = ch.getAttribute('fill') ?? '__unset__';
+                        ch.dataset.prevStroke = ch.getAttribute('stroke') ?? '__unset__';
+                      }
+                      ch.classList && ch.classList.add('abc-current-note');
+                      ch.setAttribute('fill', '#f59e0b');
+                      ch.setAttribute('stroke', '#f59e0b');
+                      this.state.highlighted.push(ch);
+                    });
+                  } catch(_) {}
+                });
+              });
+            } catch(_) {}
+          }
+        }
+      });
+      this.state.timer = timer;
+      return timer;
+    } catch (e) {
+      console.error('Failed to install timing callbacks:', e);
+      return null;
     }
   };
 

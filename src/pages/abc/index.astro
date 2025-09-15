@@ -100,6 +100,10 @@ const collections = [
               Ink
               <input id="inkColor" type="color" class="w-10 h-8 rounded border border-gray-700 bg-black" value="#000000" />
             </label>
+            <label class="text-sm text-gray-300 flex items-center gap-2">
+              <input id="highlightNotes" type="checkbox" class="w-4 h-4" />
+              Highlight playing notes
+            </label>
           </div>
           <p class="text-xs text-gray-400">Adjust paper and ink colors for display and PNG export.</p>
         </div>
@@ -111,6 +115,22 @@ const collections = [
 
   <script src="https://cdn.jsdelivr.net/npm/abcjs@6.4.4/dist/abcjs-basic-min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/abcjs@6.4.4/dist/abcjs-midi-min.js" defer></script>
+  <style>
+    /* Highlight style for the currently playing note */
+    #paper .abc-current-note {
+      fill: #f59e0b !important;       /* amber-500 */
+      stroke: #f59e0b !important;
+      opacity: 0.95;
+    }
+    /* Ensure common glyphs inherit highlight */
+    #paper .abc-current-note path,
+    #paper .abc-current-note polygon,
+    #paper .abc-current-note polyline,
+    #paper .abc-current-note use {
+      fill: #f59e0b !important;
+      stroke: #f59e0b !important;
+    }
+  </style>
   <script src="/abc/viewer.js" defer></script>
   <script>
     window.addEventListener('load', () => {

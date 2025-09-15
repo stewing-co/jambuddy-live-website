@@ -141,6 +141,10 @@ const pageTitle = titleMap[collection!] ?? 'ABC Collection';
                   Ink
                   <input id="inkColor" type="color" class="w-10 h-8 rounded border border-gray-700 bg-black" value="#000000" />
                 </label>
+                <label class="text-sm text-gray-300 flex items-center gap-2">
+                  <input id="highlightNotes" type="checkbox" class="w-4 h-4" />
+                  Highlight playing notes
+                </label>
               </div>
               <p class="text-xs text-gray-400 mt-2">Adjust paper and ink colors for display and PNG export. Defaults to black ink on white paper.</p>
             </div>
@@ -156,6 +160,24 @@ const pageTitle = titleMap[collection!] ?? 'ABC Collection';
 
   <script src="https://cdn.jsdelivr.net/npm/abcjs@6.4.4/dist/abcjs-basic-min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/abcjs@6.4.4/dist/abcjs-midi-min.js" defer></script>
+  <style>
+    /* Current note highlight */
+    #paper .abc-current-note {
+      fill: #f59e0b !important;
+      stroke: #f59e0b !important;
+      opacity: 0.95;
+    }
+    #paper .abc-current-note path,
+    #paper .abc-current-note polygon,
+    #paper .abc-current-note polyline,
+    #paper .abc-current-note use,
+    #paper .abc-current-note ellipse,
+    #paper .abc-current-note circle,
+    #paper .abc-current-note rect {
+      fill: #f59e0b !important;
+      stroke: #f59e0b !important;
+    }
+  </style>
   <script src="/abc/viewer.js" defer></script>
   <script>
     window.addEventListener('load', () => {
