@@ -32,6 +32,7 @@
       isPlaying: false,
       lastVisualObj: null,
       currentTempo: null,
+      currentTempoUnit: null, // e.g., '1/4' if Q:1/4=120 was present
       selectedIndex: -1,
       theme: { bg: '#ffffff', fg: '#000000' },
       playFinishTimer: null,
@@ -142,8 +143,10 @@
       const tempoLabel = q('tempoLabel');
       if (tempoSlider) {
         // Initialize from current ABC or default 120
-        const bpmFromAbc = this.parseTempoFromAbc(input ? input.value : '') || 120;
+        const parsedTempo = this.parseTempoFromAbc(input ? input.value : '');
+        const bpmFromAbc = (parsedTempo && parsedTempo.bpm) || 120;
         this.state.currentTempo = bpmFromAbc;
+        this.state.currentTempoUnit = (parsedTempo && parsedTempo.unit) || null;
         tempoSlider.value = String(bpmFromAbc);
         if (tempoLabel) tempoLabel.textContent = bpmFromAbc + ' BPM';
         const onTempoChange = async () => {
@@ -152,7 +155,7 @@
           if (tempoLabel) tempoLabel.textContent = bpm + ' BPM';
           // Update ABC Q: header in the editor to reflect tempo and re-render
           if (input) {
-            input.value = this.setAbcTempo(input.value, bpm);
+            input.value = this.setAbcTempo(input.value, bpm, this.state.currentTempoUnit);
             this.render();
           }
           // If currently playing, restart playback at the new tempo
@@ -328,11 +331,15 @@
         // Update tempo slider from selected tune
         const tempoSlider = document.getElementById('tempoSlider');
         const tempoLabel = document.getElementById('tempoLabel');
-        const bpmFromAbc = this.parseTempoFromAbc(hit.abc) || this.state.currentTempo || 120;
+        const parsedTempo = this.parseTempoFromAbc(hit.abc);
+        const bpmFromAbc = (parsedTempo && parsedTempo.bpm) || this.state.currentTempo || 120;
+        const unitFromAbc = (parsedTempo && parsedTempo.unit) || null;
+        this.state.currentTempo = bpmFromAbc;
+        this.state.currentTempoUnit = unitFromAbc;
         if (tempoSlider) tempoSlider.value = String(bpmFromAbc);
         if (tempoLabel) tempoLabel.textContent = bpmFromAbc + ' BPM';
-        // Ensure ABC has Q header to match slider value for clarity
-        input.value = this.setAbcTempo(input.value, bpmFromAbc);
+        // Ensure ABC has Q header to match slider value for clarity, preserving explicit unit if present
+        input.value = this.setAbcTempo(input.value, bpmFromAbc, unitFromAbc);
         this.stop();
         this.render();
       }
@@ -360,16 +367,31 @@
       const lines = abc.split(/\r?\n/);
       for (const line of lines) {
         if (!/^Q:\s*/.test(line)) continue;
-        // Try forms like Q:1/4=120 or Q:120
-        const m1 = line.match(/=(\d+)/);
-        if (m1) return parseInt(m1[1], 10);
-        const m2 = line.match(/^Q:\s*(\d+)/);
-        if (m2) return parseInt(m2[1], 10);
+        // Match forms like Q:1/4=120, Q:C=120, Q:120, or Q: Allegro=120
+        // 1) explicit unit with equals
+        let m = line.match(/^Q:\s*([^=\s]+)\s*=\s*(\d+)/);
+        if (m) {
+          const unit = m[1];
+          const bpm = parseInt(m[2], 10);
+          return { bpm, unit };
+        }
+        // 2) unitless numeric bpm
+        m = line.match(/^Q:\s*(\d+)/);
+        if (m) {
+          const bpm = parseInt(m[1], 10);
+          return { bpm, unit: null };
+        }
+        // 3) text then =number, keep no unit
+        m = line.match(/=(\d+)/);
+        if (m) {
+          const bpm = parseInt(m[1], 10);
+          return { bpm, unit: null };
+        }
       }
       return null;
     },
 
-    setAbcTempo: function(abc, bpm) {
+    setAbcTempo: function(abc, bpm, unit) {
       if (!abc) return '';
       // Remove existing Q: lines including trailing newline
       let text = abc.replace(/^[ \t]*Q:\s*.*(?:\r?\n)?/gm, '');
@@ -377,9 +399,9 @@
       const kMatch = text.match(/^(K:[^\n\r]*)/m);
       if (kMatch) {
         const kLine = kMatch[0];
-        text = text.replace(kLine, kLine + `\nQ:${bpm}`);
+        text = text.replace(kLine, kLine + `\nQ:${unit ? `${unit}=` : ''}${bpm}`);
       } else {
-        text = `Q:${bpm}\n` + text;
+        text = `Q:${unit ? `${unit}=` : ''}${bpm}\n` + text;
       }
       // Normalize spacing and remove any leftover blank after K:
       text = text.replace(/^[ \t]+$/gm, '')
@@ -482,7 +504,7 @@
           this.state.synthControl = sc;
           // Configure options (use our soundfont mapping)
           // userAction must be true when called from a click handler to satisfy autoplay policies
-          await sc.setTune(vObj, true, { qpm: this.state.currentTempo || undefined, midiTranspose: (this.state.vt||0), program: 0, soundFontUrl: 'https://paulrosen.github.io/abcjs/audio/soundfont/acoustic_grand_piano-mp3/' });
+          await sc.setTune(vObj, true, { midiTranspose: (this.state.vt||0), program: 0, soundFontUrl: 'https://paulrosen.github.io/abcjs/audio/soundfont/acoustic_grand_piano-mp3/' });
           // Clear previous timeouts
           if (this.state.playFinishTimer) { try { clearTimeout(this.state.playFinishTimer); } catch(_) {} this.state.playFinishTimer = null; }
           if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
@@ -632,7 +654,7 @@
           const sc = new ABCJS.synth.SynthController();
           sc.load(this.state.synthUiEl, cursorControl, { displayPlay: false, displayProgress: false });
           this.state.synthControl = sc;
-          await sc.setTune(vObj, true, { qpm: this.state.currentTempo || undefined, midiTranspose: (this.state.vt||0), program: 0, soundFontUrl: 'https://paulrosen.github.io/abcjs/audio/soundfont/acoustic_grand_piano-mp3/' });
+          await sc.setTune(vObj, true, { midiTranspose: (this.state.vt||0), program: 0, soundFontUrl: 'https://paulrosen.github.io/abcjs/audio/soundfont/acoustic_grand_piano-mp3/' });
           if (this.state.playFinishTimer) { try { clearTimeout(this.state.playFinishTimer); } catch(_) {} this.state.playFinishTimer = null; }
           if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
           const p = sc.play();
@@ -810,7 +832,7 @@
         if (t.startsWith('S:') && v.source === false) continue;
         if (t.startsWith('A:') && v.subtitle === false) continue;
         if ((t.startsWith('w:') || t.startsWith('W:')) && v.lyrics === false) continue;
-        if (t.startsWith('Q:') && v.tempo === false) continue;
+        // Preserve Q: (tempo) in the ABC even when hidden, so playback timing remains correct.
         if (t.startsWith('R:') && v.rhythm === false) continue;
         if (t.startsWith('K:') && v.key === false) continue;
         if (t.startsWith('M:') && v.meter === false) continue;
@@ -864,6 +886,7 @@
         this.state.lastVisualObj = v && v[0];
         try { this.updateKeyLabel(filtered); } catch(_) {}
         try { this.applyThemeInline(); } catch(_) {}
+        try { this.applyHeaderVisibilityToSvg(); } catch(_) {}
         try { this.ensureResponsiveSvgs(); } catch(_) {}
         try { this.updatePaperHeight(); } catch(_) {}
 
@@ -913,9 +936,9 @@
         try { this.state.timer.stop(); } catch(_) {}
       }
       this.clearHighlight();
-      const qpm = this.state.currentTempo || undefined; // use tune tempo if undefined
+      // Let ABCJS use the tempo from the ABC (Q: header) directly to respect units
       const timer = new ABCJS.TimingCallbacks(vObj, {
-        qpm,
+        qpm: undefined,
         beatSubdivisions: 2,
         beatCallback: (beat, totalBeats, totalMs, position) => {
           if (!this.state.enableHighlight) return;
@@ -964,7 +987,19 @@
           ball.style.height = `${Math.round(hPx)}px`;
           ball.style.transform = `translate(${Math.round(left)}px, ${Math.round(topPx)}px)`;
           ball.style.opacity = '0.35';
-        },
+    },
+    
+    // Visually hide selected headers in the rendered SVG without removing them from the ABC source
+    applyHeaderVisibilityToSvg: function() {
+      try {
+        const svg = document.querySelector('#' + this.state.paperId + ' svg');
+        if (!svg) return;
+        const v = this.state.headerVisibility || {};
+        // Tempo
+        const hideTempo = v.tempo === false;
+        svg.querySelectorAll('.abcjs-tempo').forEach(el => { el.style.display = hideTempo ? 'none' : ''; });
+      } catch(_) {}
+    },
         eventCallback: (ev) => {
           // End of tune sends null
           if (!ev) { this.clearHighlight(); return; }
