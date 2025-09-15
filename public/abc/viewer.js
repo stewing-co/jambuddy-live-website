@@ -33,7 +33,8 @@
       lastVisualObj: null,
       currentTempo: null,
       selectedIndex: -1,
-      theme: { bg: '#ffffff', fg: '#000000' }
+      theme: { bg: '#ffffff', fg: '#000000' },
+      playFinishTimer: null
     },
 
     instruments: {
@@ -391,9 +392,35 @@
         const vObj = this.render(true);
         if (!vObj) throw new Error('render failed');
         await this.ensureSynth(vObj);
-        await this.state.synth.start();
+        // Clear any previous finish polling
+        if (this.state.playFinishTimer) { try { clearTimeout(this.state.playFinishTimer); } catch(_) {} this.state.playFinishTimer = null; }
+        const startResult = this.state.synth.start();
         this.state.isPlaying = true;
         this.updatePlayButton();
+        // Handle playback finish to toggle Stop -> Play automatically
+        if (startResult && typeof startResult.then === 'function') {
+          startResult.then(() => {
+            this.state.isPlaying = false;
+            this.updatePlayButton();
+          }).catch(() => {
+            this.state.isPlaying = false;
+            this.updatePlayButton();
+          });
+        } else {
+          // Fallback: poll isRunning if no promise
+          const poll = () => {
+            try {
+              if (!this.state.synth || !this.state.synth.isRunning) {
+                this.state.isPlaying = false;
+                this.updatePlayButton();
+                this.state.playFinishTimer = null;
+                return;
+              }
+            } catch(_) {}
+            this.state.playFinishTimer = setTimeout(poll, 500);
+          };
+          this.state.playFinishTimer = setTimeout(poll, 500);
+        }
       } catch (e) {
         console.error('Play failed:', e);
         alert('Playback failed. Ensure soundfonts exist under /abcjs/soundfonts/FluidR3_GM/acoustic_grand_piano-mp3/.');
@@ -402,6 +429,7 @@
 
     stop: function() {
       try { if (this.state.synth) this.state.synth.stop(); } catch(_) {}
+      if (this.state.playFinishTimer) { try { clearTimeout(this.state.playFinishTimer); } catch(_) {} this.state.playFinishTimer = null; }
       this.state.isPlaying = false;
       this.updatePlayButton();
     },
@@ -410,9 +438,32 @@
       try {
         const vObj = this.render(true);
         await this.ensureSynth(vObj);
-        await this.state.synth.start();
+        if (this.state.playFinishTimer) { try { clearTimeout(this.state.playFinishTimer); } catch(_) {} this.state.playFinishTimer = null; }
+        const startResult = this.state.synth.start();
         this.state.isPlaying = true;
         this.updatePlayButton();
+        if (startResult && typeof startResult.then === 'function') {
+          startResult.then(() => {
+            this.state.isPlaying = false;
+            this.updatePlayButton();
+          }).catch(() => {
+            this.state.isPlaying = false;
+            this.updatePlayButton();
+          });
+        } else {
+          const poll = () => {
+            try {
+              if (!this.state.synth || !this.state.synth.isRunning) {
+                this.state.isPlaying = false;
+                this.updatePlayButton();
+                this.state.playFinishTimer = null;
+                return;
+              }
+            } catch(_) {}
+            this.state.playFinishTimer = setTimeout(poll, 500);
+          };
+          this.state.playFinishTimer = setTimeout(poll, 500);
+        }
       } catch (e) {
         console.error('Restart playback failed:', e);
       }
