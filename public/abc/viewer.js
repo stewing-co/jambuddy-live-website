@@ -37,7 +37,7 @@
       playFinishTimer: null,
       timer: null,
       highlighted: [],
-      enableHighlight: false,
+      enableHighlight: true,
       synthControl: null,
       synthUiEl: null,
       finishTimeout: null
@@ -846,6 +846,7 @@
         const paperEl = document.getElementById(this.state.paperId);
         if (!input || !paperEl) return;
         paperEl.innerHTML = '';
+        try { paperEl.style.position = paperEl.style.position || 'relative'; } catch(_) {}
         // Clear any previous highlight state on new render
         this.clearHighlight && this.clearHighlight();
         const raw = input.value || 'X:1\nT:Example\nM:4/4\nL:1/8\nK:C\nCDEF GABc|';
@@ -880,6 +881,7 @@
       if (this.state.lastVisualObj && this.state.lastVisualObj.rangeHighlight) {
         try { this.state.lastVisualObj.rangeHighlight(0, 0); } catch(_) {}
       }
+      try { if (this.state.cursorBallEl) this.state.cursorBallEl.style.opacity = '0'; } catch(_) {}
       (this.state.highlighted || []).forEach(el => {
         try {
           // Restore previous presentation attributes if we changed them
@@ -914,6 +916,55 @@
       const qpm = this.state.currentTempo || undefined; // use tune tempo if undefined
       const timer = new ABCJS.TimingCallbacks(vObj, {
         qpm,
+        beatSubdivisions: 2,
+        beatCallback: (beat, totalBeats, totalMs, position) => {
+          if (!this.state.enableHighlight) return;
+          // Lazy create cursor bar
+          if (!this.state._cursorBallInit) {
+            try {
+              const paper = document.getElementById(this.state.paperId);
+              if (paper && !document.getElementById('abc-cursor-bar')) {
+                const el = document.createElement('div');
+                el.id = 'abc-cursor-bar';
+                el.style.position = 'absolute';
+                el.style.width = '16px';
+                el.style.height = '0px';
+                el.style.marginLeft = '0';
+                el.style.marginTop = '0';
+                el.style.borderRadius = '2px';
+                el.style.background = '#f59e0b';
+                el.style.pointerEvents = 'none';
+                el.style.opacity = '0';
+                el.style.transition = 'opacity 120ms ease';
+                paper.appendChild(el);
+                this.state.cursorBallEl = el;
+              }
+              this.state._cursorBallInit = true;
+            } catch(_) {}
+          }
+          const paper = document.getElementById(this.state.paperId);
+          const svg = paper ? paper.querySelector('svg') : null;
+          const ball = this.state.cursorBallEl;
+          if (!paper || !svg || !ball || !position) return;
+          const pr = paper.getBoundingClientRect();
+          const sr = svg.getBoundingClientRect();
+          // Scale SVG coords (viewBox) to rendered CSS pixels
+          let scaleX = 1, scaleY = 1;
+          try {
+            const vb = (svg.getAttribute('viewBox') || '').split(/\s+/).map(Number);
+            if (vb.length === 4 && vb[2] > 0 && vb[3] > 0) {
+              scaleX = (sr.width || svg.clientWidth || 1) / vb[2];
+              scaleY = (sr.height || svg.clientHeight || 1) / vb[3];
+            }
+          } catch(_) {}
+          const barW = 16;
+          const left = (sr.left - pr.left) + (position.left ? position.left * scaleX : 0) - (barW / 2);
+          const topPx = (sr.top - pr.top) + (position.top ? position.top * scaleY : 0);
+          const hPx = position.height ? (position.height * scaleY) : 0;
+          ball.style.height = `${Math.round(hPx)}px`;
+          ball.style.transform = `translate(${Math.round(left)}px, ${Math.round(topPx)}px)`;
+          ball.style.opacity = '0.35';
+        },
         eventCallback: (ev) => {
           // End of tune sends null
           if (!ev) { this.clearHighlight(); return; }
@@ -1099,12 +1150,86 @@
   Viewer.exportMidi = async function() {
     try {
       const abc = document.getElementById(this.state.inputId)?.value || '';
+      // Ensure the MIDI plugin is present; try to lazy-load if missing
+      const ensureMidi = async () => {
+        try {
+          if (window.ABCJS && ABCJS.midi && typeof ABCJS.midi.getMidiFile === 'function') return true;
+          if (this._loadingMidiPlugin) {
+            // Wait for an in-flight load
+            return new Promise((resolve) => {
+              const chk = () => {
+                if (window.ABCJS && ABCJS.midi && typeof ABCJS.midi.getMidiFile === 'function') resolve(true);
+                else setTimeout(chk, 100);
+              };
+              chk();
+            });
+          }
+          this._loadingMidiPlugin = true;
+          const loadScript = (src) => new Promise((resolve, reject) => {
+            const s = document.createElement('script');
+            s.src = src;
+            s.async = true;
+            s.onload = () => resolve(true);
+            s.onerror = () => reject(new Error('Failed to load ' + src));
+            document.head.appendChild(s);
+          });
+          try {
+            await loadScript('https://cdn.jsdelivr.net/npm/abcjs@6.4.4/dist/abcjs-midi-min.js');
+          } catch (_) {
+            // Fallback CDN
+            await loadScript('https://unpkg.com/abcjs@6.4.4/dist/abcjs-midi-min.js');
+          }
+          this._loadingMidiPlugin = false;
+          return !!(window.ABCJS && ABCJS.midi && typeof ABCJS.midi.getMidiFile === 'function');
+        } catch (_) {
+          this._loadingMidiPlugin = false;
+          return false;
+        }
+      };
+      const midiOk = await ensureMidi();
+      if (!midiOk) {
+        alert('MIDI export not available. Ensure abcjs-midi-min.js is loaded.');
+        return;
+      }
       if (ABCJS?.midi?.getMidiFile) {
-        const dataUrl = ABCJS.midi.getMidiFile(abc);
-        if (typeof dataUrl === 'string' && dataUrl.startsWith('data:audio/midi')) {
+        // 1) Prefer encoded data URI
+        let res = ABCJS.midi.getMidiFile(abc, { midiOutputType: 'encoded', midiTranspose: (this.state.vt||0) });
+        if (typeof res === 'string') {
+          if (res.startsWith('data:audio/midi')) {
+            const fname = this.sanitizeFilename(this.getCurrentTitle(abc), 'tune') + '.mid';
+            this.download(fname, 'audio/midi', res);
+            return;
+          }
+          const m = res.match(/href=["'](data:audio\/midi[^"']+)["']/i);
+          if (m && m[1]) {
+            const fname = this.sanitizeFilename(this.getCurrentTitle(abc), 'tune') + '.mid';
+            this.download(fname, 'audio/midi', m[1]);
+            return;
+          }
+        }
+        // 2) Try binary output and build a Blob
+        let bin = ABCJS.midi.getMidiFile(abc, { midiOutputType: 'binary', midiTranspose: (this.state.vt||0) });
+        if (bin && (bin.byteLength || (typeof Uint8Array !== 'undefined' && bin instanceof Uint8Array))) {
+          const blob = new Blob([bin], { type: 'audio/midi' });
           const fname = this.sanitizeFilename(this.getCurrentTitle(abc), 'tune') + '.mid';
-          this.download(fname, 'audio/midi', dataUrl);
+          this.download(fname, 'audio/midi', blob);
           return;
+        }
+        // 3) Try with the current visual object source
+        const vObjAlt = this.state.lastVisualObj || this.render(true);
+        if (vObjAlt) {
+          let res2 = ABCJS.midi.getMidiFile(vObjAlt, { midiOutputType: 'encoded', midiTranspose: (this.state.vt||0) });
+          if (typeof res2 === 'string' && res2.startsWith('data:audio/midi')) {
+            const fname = this.sanitizeFilename(this.getCurrentTitle(abc), 'tune') + '.mid';
+            this.download(fname, 'audio/midi', res2);
+            return;
+          }
+          const m2 = typeof res2 === 'string' ? res2.match(/href=["'](data:audio\/midi[^"']+)["']/i) : null;
+          if (m2 && m2[1]) {
+            const fname = this.sanitizeFilename(this.getCurrentTitle(abc), 'tune') + '.mid';
+            this.download(fname, 'audio/midi', m2[1]);
+            return;
+          }
         }
       }
       if (ABCJS?.synth?.CreateSynth) {
