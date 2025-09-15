@@ -7,7 +7,7 @@ R:jig
 K:A
 M:6/8
 L:1/8
-Q:1/4=113
+Q:1/8=113
 |: e2e ecA| ecA Bcd| e2e ecA| Bcd cBA|
 | e2e ecA| ecA Bcd| eae fed| cdB A3:|
 | Ace Ace|Adf Adf| Ace Ace| Bcd c2B| 
@@ -26,7 +26,7 @@ R:jig
 K:Dmix
 M:6/8
 L:1/8
-Q:1/4=113
+Q:1/8=113
 |: fed cAG| A2d cAG| F2D DED| FEF GFG|
 | AGA cAG| AGA cde| fed cAG| Ad^c d3:|
 |: f2d d^cd| f2g agf| e2c cBc| e2f gfe|
@@ -43,7 +43,7 @@ R:reel
 K:G
 M:4/4
 L:1/8
-Q:1/4=120
+Q:1/8=120
 |: G2 GD EDEG| AGAB d2 Bd| eged BAGA| BAGE EDDE|
 | G2 GD EDEG| AGAB d2 Bd| eged BAGA| BAGE ED D2:| 
 |: ea a2 efgf| eBBA B2 Bd| eB B2 efgf| eBBA B2 Bd|
@@ -58,7 +58,7 @@ R:jig
 K:G
 M:6/8
 L:1/8
-Q:1/4=113
+Q:1/8=113
 d |: gfg ege| dBG AGE| DGG FGA| BGB A2 d|
 | gfg age| dBG AGE| DGG FGA|1 BGG G2 d:|2 BGG G2 d|] 
 |: edd gdd| edd gdd| e2 e gfg| edB A2 d|
@@ -73,7 +73,7 @@ R:jig
 K:Dmix
 M:6/8
 L:1/8
-Q:1/4=113
+Q:1/8=113
 |: DED DEG| A2A ABc| BAG AGE| GEA GED|
 | DED DEG| A2A ABc| BAG AGE| GED D3:|
 |: ded dBG| AGA BGE| ded dBG| AGA GAB|
@@ -90,7 +90,7 @@ R:hornpipe
 K:D
 M:4/4
 L:1/8
-Q:1/4=138
+Q:1/8=138
 FA|: BA FA D2 FA| BA (3Bcd e2 de| fa gf eg fe| df ed B2 dB| 
 |BA FA D2 FA| BA (3Bcd e2 de| fa gf eg fe|1 d2 f2 d2 FA:|2 d2 f2 d2 fg |]
 |: af df a2 g2| ef ga b2 ag| fa gf eg fe| df ed B2 dB|
@@ -105,7 +105,7 @@ R:polka
 K:G
 M:4/4
 L:1/8
-Q:1/4=120
+Q:1/8=120
 |: G>A BG| AG BG| G2 BG| AG E2|
 | G>A BG| AG Bd| G>A GE| ED D2:| 
 |: d>e dB| AG AB| d>e dB| AG E2|
@@ -120,7 +120,7 @@ R:reel
 K:D
 M:4/4
 L:1/8
-Q:1/4=120
+Q:1/8=120
 | A2FA A2dB| A2FA BEE2| A2FA A2Bd| egfd edBd|
 | A2FA A2dB| A2FA BEE2| DEFG AFAB| defd edBd||
 | ADFD A2dB| ADFD BEE2| ADFD A2Bd| egfd edBd|
@@ -141,7 +141,7 @@ R:slip jig
 K:Emin
 M:6/8
 L:1/8
-Q:1/4=113
+Q:1/8=113
 |: B2E G2E F3| B2E G2E FED| B2E G2E F3| B2d d2B AFD:| 
 |: B2d e2f g3| B2d g2e dBA| B2d e2f g2a| b2a g2e dBA:| 
 |: B3 B2A G2A| B3 BAB dBA| B3 B2A G2A| B2d g2e dBA:|
@@ -155,7 +155,7 @@ R:jig
 K:D
 M:6/8
 L:1/8
-Q:1/4=113
+Q:1/8=113
 |: dAA fAA| eAA fAA| Bee e2d| efe dBA|
 | FAA A2F| A2B d2e|1 f2f fed| e3 e2A:|2 f2f edc|d3 efg|]
 |: a2a faa| eaa faa| g2g fgf| efe dBA| FAA A2F|
