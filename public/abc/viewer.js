@@ -37,7 +37,7 @@
       playFinishTimer: null,
       timer: null,
       highlighted: [],
-      enableHighlight: true,
+      enableHighlight: false,
       synthControl: null,
       synthUiEl: null,
       finishTimeout: null
