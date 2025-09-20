@@ -4,9 +4,21 @@ import '../styles/global.css';
 export interface Props {
   title: string;
   description?: string;
+  fullWidth?: boolean;
+  contentClass?: string;
 }
 
-const { title, description = "JamBuddy - Tools for Musicians" } = Astro.props;
+const {
+  title,
+  description = "JamBuddy - Tools for Musicians",
+  fullWidth = false,
+  contentClass
+} = Astro.props;
+
+const baseContentClass = fullWidth
+  ? "content-overlay w-full max-w-none my-8 px-4 sm:px-6 lg:px-12 xl:px-16 py-10"
+  : "content-overlay mx-auto max-w-7xl my-8 p-6";
+const resolvedContentClass = contentClass ?? baseContentClass;
 ---
 
 <!DOCTYPE html>
@@ -94,7 +106,7 @@ const { title, description = "JamBuddy - Tools for Musicians" } = Astro.props;
     </nav>
 
     <main>
-      <div class="content-overlay mx-auto max-w-7xl my-8 p-6">
+      <div class={resolvedContentClass}>
         <slot />
       </div>
     </main>

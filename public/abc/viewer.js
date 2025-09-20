@@ -868,7 +868,12 @@
         const paperEl = document.getElementById(this.state.paperId);
         if (!input || !paperEl) return;
         paperEl.innerHTML = '';
-        try { paperEl.style.position = paperEl.style.position || 'relative'; } catch(_) {}
+        try {
+          paperEl.style.position = paperEl.style.position || 'relative';
+          paperEl.style.display = paperEl.style.display || 'flex';
+          paperEl.style.flexDirection = paperEl.style.flexDirection || 'column';
+          paperEl.style.height = '100%';
+        } catch(_) {}
         // Clear any previous highlight state on new render
         this.clearHighlight && this.clearHighlight();
         const raw = input.value || 'X:1\nT:Example\nM:4/4\nL:1/8\nK:C\nCDEF GABc|';
@@ -878,7 +883,8 @@
         // Build render options; when a tablature layer is chosen, render staff + tab together in one pass
         const hasTab = this.state.layer && this.state.layer !== 'none';
         const tabSpec = hasTab ? this.instruments[this.state.layer] : null;
-        const baseOpts = { responsive: 'resize', add_classes: true, visualTranspose: this.state.vt, selectionColor: '#f59e0b', wrap: { preferredMeasuresPerLine: 5 } };
+        const paperWidth = Math.max(paperEl.clientWidth || paperEl.offsetWidth || 740, 320);
+        const baseOpts = { responsive: 'resize', add_classes: true, visualTranspose: this.state.vt, selectionColor: '#f59e0b', wrap: { preferredMeasuresPerLine: 5 }, staffwidth: paperWidth };
         const renderOpts = hasTab && tabSpec ? { ...baseOpts, tablature: [tabSpec] } : baseOpts;
         // Optionally strip chord symbols when rendering tabs for a cleaner layout
         const abcToRender = (hasTab && this.state.stripChordsForTabs) ? this.simplifyForTab(filtered) : filtered;
@@ -1291,31 +1297,15 @@
   Viewer.updatePaperHeight = function() {
     const paper = document.getElementById(this.state.paperId);
     if (!paper) return;
-    // Clear any fixed height first
     const wrapper = paper.parentElement;
-    if (wrapper) wrapper.style.height = '';
-    // Measure combined height of all SVGs (should be one after single-pass render)
-    const svgs = paper.querySelectorAll('svg');
-    let total = 0;
-    svgs.forEach(svg => {
-      try {
-        // Prefer intrinsic bbox height, fallback to clientHeight
-        const vb = (svg.getAttribute('viewBox') || '').split(/\s+/).map(Number);
-        const h = (vb.length === 4 ? vb[3] : 0) || svg.getBBox().height || svg.clientHeight || 0;
-        total += Math.ceil(h);
-      } catch(_) {
-        total += svg.clientHeight || 0;
-      }
-    });
-    // If we have a wrapper with constrained layout, set explicit px height to avoid excessive whitespace
-    if (wrapper && total > 0) {
-      // Scale to displayed width: height scales with width/viewBox; rely on auto vertical sizing
-      // Use scrollHeight as final guard if computed total is off
-      setTimeout(() => {
-        const h = Math.max(paper.scrollHeight, total);
-        wrapper.style.height = h + 'px';
-      }, 0);
+    if (wrapper) {
+      wrapper.style.height = '100%';
+      wrapper.style.display = wrapper.style.display || 'flex';
+      wrapper.style.flexDirection = wrapper.style.flexDirection || 'column';
     }
+    paper.style.height = '100%';
+    paper.style.display = paper.style.display || 'flex';
+    paper.style.flexDirection = paper.style.flexDirection || 'column';
   };
 
   // --- Responsiveness helper ---
@@ -1329,7 +1319,8 @@
         svg.removeAttribute('height');
         svg.style.maxWidth = '100%';
         svg.style.width = '100%';
-        svg.style.height = 'auto';
+        svg.style.height = '100%';
+        svg.style.maxHeight = '100%';
         svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
         // Ensure viewBox exists for proper scaling
         if (!svg.getAttribute('viewBox')) {
