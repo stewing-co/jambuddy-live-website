@@ -39,6 +39,7 @@
       timer: null,
       highlighted: [],
       enableHighlight: false,
+      playbackMode: 'mixed', // 'mixed', 'chords', 'melody'
       synthControl: null,
       synthUiEl: null,
       finishTimeout: null
@@ -410,6 +411,38 @@
       return text;
     },
 
+    getProgramForPlaybackMode: function() {
+      switch (this.state.playbackMode) {
+        case 'chords': return 24; // Acoustic Guitar
+        case 'melody': return 40; // Violin
+        case 'mixed':
+        default: return 0; // Piano
+      }
+    },
+
+    filterAbcForPlaybackMode: function(abcText) {
+      switch (this.state.playbackMode) {
+        case 'chords':
+          // For chords-only: keep chord symbols, replace melody notes with rests
+          // Use a more careful approach to avoid breaking ABC syntax
+          return abcText.replace(/([A-Ga-g][,']*\d*)/g, 'z$2');
+        case 'melody':
+          // For melody-only: remove chord symbols (quoted text like "C" or "G7")
+          return abcText.replace(/"[^"]*"/g, '');
+        case 'mixed':
+        default:
+          return abcText;
+      }
+    },
+
+    setPlaybackMode: function(mode) {
+      this.state.playbackMode = mode;
+      // If currently playing, restart playback with new mode
+      if (this.state.isPlaying) {
+        this.restartPlayback().catch(e => console.error('Failed to restart playback with new mode:', e));
+      }
+    },
+
     // Playback API
     ensureAudioContext: async function() {
       if (this.state.audioContext) return this.state.audioContext;
@@ -434,7 +467,7 @@
       await synth.init({
         visualObj,
         audioContext: ac,
-        options: { soundFont, program: 0, midiTranspose: (this.state.vt || 0), gain: 0.7 }
+        options: { soundFont, program: this.getProgramForPlaybackMode(), midiTranspose: (this.state.vt || 0), gain: 0.7 }
       });
       await synth.prime();
       this.state.synth = synth;
@@ -445,7 +478,7 @@
       try {
         if (!window.ABCJS?.synth) throw new Error('abcjs synth not available');
         // Re-render to get current visual object in sync
-        const vObj = this.render(true);
+        const vObj = this.render(true, true);
         if (!vObj) throw new Error('render failed');
         // If highlight is enabled and SynthController exists, use it to drive both audio and cursor
         // Disabled for now to ensure stable playback path; use TimingCallbacks instead
@@ -617,7 +650,7 @@
 
     restartPlayback: async function() {
       try {
-        const vObj = this.render(true);
+        const vObj = this.render(true, true);
         // If highlight is enabled and SynthController exists, prefer it for restart
         if (false && this.state.enableHighlight && ABCJS?.synth?.SynthController) {
           try { this.state.synthControl?.pause && this.state.synthControl.pause(); } catch(_) {}
@@ -861,7 +894,7 @@
       return out.join('\n');
     },
 
-    render: function(returnVisualObj) {
+    render: function(returnVisualObj, forPlayback) {
       try {
         if (!global.ABCJS || !ABCJS.renderAbc) return;
         const input = document.getElementById(this.state.inputId);
@@ -879,6 +912,7 @@
         const raw = input.value || 'X:1\nT:Example\nM:4/4\nL:1/8\nK:C\nCDEF GABc|';
         const norm = this.normalizeAbc(raw);
         const filtered = this.filterHeaders(norm);
+        const playbackFiltered = forPlayback ? this.filterAbcForPlaybackMode(filtered) : filtered;
 
         // Build render options; when a tablature layer is chosen, render staff + tab together in one pass
         const hasTab = this.state.layer && this.state.layer !== 'none';
@@ -887,10 +921,10 @@
         const baseOpts = { responsive: 'resize', add_classes: true, visualTranspose: this.state.vt, selectionColor: '#f59e0b', wrap: { preferredMeasuresPerLine: 5 }, staffwidth: paperWidth };
         const renderOpts = hasTab && tabSpec ? { ...baseOpts, tablature: [tabSpec] } : baseOpts;
         // Optionally strip chord symbols when rendering tabs for a cleaner layout
-        const abcToRender = (hasTab && this.state.stripChordsForTabs) ? this.simplifyForTab(filtered) : filtered;
+        const abcToRender = (hasTab && this.state.stripChordsForTabs) ? this.simplifyForTab(playbackFiltered) : playbackFiltered;
         const v = ABCJS.renderAbc(this.state.paperId, abcToRender, renderOpts);
         this.state.lastVisualObj = v && v[0];
-        try { this.updateKeyLabel(filtered); } catch(_) {}
+        try { this.updateKeyLabel(playbackFiltered); } catch(_) {}
         try { this.applyThemeInline(); } catch(_) {}
         try { this.applyHeaderVisibilityToSvg(); } catch(_) {}
         try { this.ensureResponsiveSvgs(); } catch(_) {}
@@ -1274,7 +1308,7 @@
         }
       }
       if (ABCJS?.synth?.CreateSynth) {
-        const vObj = this.render(true);
+        const vObj = this.render(true, true);
         const synth = new ABCJS.synth.CreateSynth();
         await synth.init({ visualObj: vObj, options: { midiTranspose: (this.state.vt||0) } });
         if (synth.downloadMidi) {

@@ -1,6 +1,6 @@
 X:1
 T:Atholl Highlanders, The
-S:The Session: https://thesession.org/tunes/107#setting107
+S:The Session: https://thesession.org/tunes/107#setting55314
 S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
@@ -8,18 +8,18 @@ K:A
 M:6/8
 L:1/8
 Q:1/4=113
-|: e2e ecA| ecA Bcd| e2e ecA| Bcd cBA|
-| e2e ecA| ecA Bcd| eae fed| cdB A3:|
-| Ace Ace|Adf Adf| Ace Ace| Bcd c2B| 
-| Ace Ace|Adf Adf| eae fed| cdB A3:| 
-|:a2a aec| a2a aec| a2a aec| Bcd cBA|
-| a2a aec| a2a aec| eae fed| cdB A3:|
-| c2c cBA| d2d fed| c2c cBA| =G2=G BA=G|
-| c2c cBA| d2d fed| eae fed| cdB A3:|
+|: "A"e2e ecA| ecA "G"Bcd| "A"e2e ecA| "G"Bcd "E"cBA|
+| "A"e2e ecA| ecA "G"Bcd| "A"eae "D"fed| "E"cdB "A"A3:|
+|: "A"Ace Ace|"D"Adf Adf| "A"Ace Ace| "G"Bcd "E"c2B| 
+| "A"Ace Ace|"D"Adf Adf| "A"eae "D"fed| "E"cdB "A"A3:| 
+|:"A"a2a aec| a2a aec| a2a aec| "G"Bcd "E"cBA|
+| "A"a2a aec| a2a aec| eae "D"fed| "E"cdB "A"A3:|
+|: "A"c2c cBA| "D"d2d fed| "A"c2c cBA| "G"=G2=G BA=G|
+| "A"c2c cBA| "D"d2d fed| "A"eae "D"fed| "E"cdB "A"A3:|
 
 X:2
 T:Banish Misfortune
-S:The Session: https://thesession.org/tunes/9#setting9
+S:The Session: https://thesession.org/tunes/9#setting28408
 S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
@@ -27,16 +27,16 @@ K:Dmix
 M:6/8
 L:1/8
 Q:1/4=113
-|: fed cAG| A2d cAG| F2D DED| FEF GFG|
-| AGA cAG| AGA cde| fed cAG| Ad^c d3:|
-|: f2d d^cd| f2g agf| e2c cBc| e2f gfe|
-| f2g agf| e2f gfe|fed cAG| Ad^c d3:|
-|: f2g e2f | d2e c2d| ABA GAG| F2F GED| 
-|c3 cAG| AGA cde| fed cAG| Ad^c d3:|
+de|:"D"fed "C"cAG|"D"Add "C"cAG|"D"F2D DED|FEF "C"GFG|
+|"D"AGA "C"cAG|"D"AGA "C"cde|"D"fed "C"cAG|"D"Ad^c d2e:|
+|:"D"f2d d^cd|f2g agf|"C"e2c cBc|e2f gfe|
+|"D"f2g agf|"C"e2f gfe|"D"fed "C"cAG|"D"Ad^c d2e:|
+|:"D"f2g "C"e2f|"D"d2e "C"c2d|"D"ABA "C"GAG|"D"F2F GED|
+|"C"c3 cAG|AGA cde|"D"fed cAG|1 "C"Ad^c "D"d2e:|2 "C"Ad^c "D"d3||
 
 X:3
 T:Banshee, The
-S:The Session: https://thesession.org/tunes/8#setting8
+S:The Session: https://thesession.org/tunes/8#setting55315
 S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
@@ -44,14 +44,14 @@ K:G
 M:4/4
 L:1/8
 Q:1/4=120
-|: G2 GD EDEG| AGAB d2 Bd| eged BAGA| BAGE EDDE|
-| G2 GD EDEG| AGAB d2 Bd| eged BAGA| BAGE ED D2:| 
-|: ea a2 efgf| eBBA B2 Bd| eB B2 efgf| eBBA B2 Bd|
-| ea a2 efgf| eBBA B2 Bd| eged BAGA| BAGE EDD2:|
+|:"G"G2 GD EDED|GFGB d2 Bd|"C"eged BAGA|"D"BAGE E2 (3DEF|
+|"G"G2 GD EDED|GFGB d2 Bd|"C"eged BAGA|"D"BAGE E2 D2:|
+|:"Em"eaag egge|"G"dBBA B2 Bd|"C"e2 eB gBfB|"D"eBBA B3 z|
+|"Em"eaag efge |"G"dBBA B2 Bd|"C"eged BAGA|"D"BAGE E2 D2:|
 
 X:4
 T:Blackthorn Stick, The
-S:The Session: https://thesession.org/tunes/702#setting702
+S:The Session: https://thesession.org/tunes/702#setting49484
 S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
@@ -59,14 +59,14 @@ K:G
 M:6/8
 L:1/8
 Q:1/4=113
-d |: gfg ege| dBG AGE| DGG FGA| BGB A2 d|
-| gfg age| dBG AGE| DGG FGA|1 BGG G2 d:|2 BGG G2 d|] 
-|: edd gdd| edd gdd| e2 e gfg| edB A2 d|
-| gfg age| dBG AGE| DGG FGA|1 BGG G2 d:|2 BGG G3 |]
+d|:"G"gfg "C"ege|"G"dBG "C"AGE|"G"DGG "D7"FGA|"G"BGB"D7" A2 d|
+|"G"gfg "C"age|"G"dBG "C"AGE|"G"DGG "D7"FGA| "G"BGG G2 d:|
+|:"G"edd gdd|edd gdd|e2 e "C"gfg|"G"edB "D7"A2 d|
+|"G"gfg "C"age|"G"dBG "C"AGE|"G"DGG "D7"FGA|1"G"BGG G2 d:||2"G"BGG G3||
 
 X:5
 T:Blarney Pilgrim, The
-S:The Session: https://thesession.org/tunes/5#setting5
+S:The Session: https://thesession.org/tunes/5#setting28409
 S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
@@ -74,16 +74,16 @@ K:Dmix
 M:6/8
 L:1/8
 Q:1/4=113
-|: DED DEG| A2A ABc| BAG AGE| GEA GED|
-| DED DEG| A2A ABc| BAG AGE| GED D3:|
-|: ded dBG| AGA BGE| ded dBG| AGA GAB|
-| g2e dBG| AGA BGE| B2G AGE| GED D3:|
-|: A2D B2D| A2D ABc| BAG AGE| GEA GED|
-| ADD BDD| ADD ABc| BAG AGE| GED D3:|
+|:"G"DED DEG|"D"A2A ABc|"G"BAG "Am"AGE|"Em"GEA "C"GED|
+|"G"DED DEG|"D"A2A ABc|"G"BAG "Am"AGE|"D"GED D3:|
+|:"G"ded dBG|"D"AGA "G"BGE|"G"ded dBG|"D"AGA "G"GAB|
+|"Em"g2e "G"dBG|"Am"AGA "Em"BGE|"G"B2G "C"AGE|"D"GAG G3:|
+|:"D"A2D "G"B2D|"D"A2D ABc|"G"BAG "Am"AGE|"Em"GEA "C"GED|
+|"D"ADD "G"BDD|"D"ADD ABc|"G"BAG "Am"AGE|"C"GED "D"D3:|
 
 X:6
 T:Boys Of Bluehill, The
-S:The Session: https://thesession.org/tunes/651#setting651
+S:The Session: https://thesession.org/tunes/651#setting21789
 S:https://JamBuddy.live 2025
 C:Traditional
 R:hornpipe
@@ -91,10 +91,10 @@ K:D
 M:4/4
 L:1/8
 Q:1/4=138
-FA|: BA FA D2 FA| BA (3Bcd e2 de| fa gf eg fe| df ed B2 dB| 
-|BA FA D2 FA| BA (3Bcd e2 de| fa gf eg fe|1 d2 f2 d2 FA:|2 d2 f2 d2 fg |]
-|: af df a2 g2| ef ga b2 ag| fa gf eg fe| df ed B2 dB|
-| BA FA D2 FA| BA (3Bcd e2 de| fa gf eg fe|1 d2 f2 d2 fg:|2 d2 f2 d4|]
+FA|:"Bm"BAFA "D"DA FA|"Bm"BA (3Bcd "A" e2 de|"D"fa gf "A7"egfe|"D"dfed "Bm"B2dA|
+|"Bm"BAFA "D"DAFA|"Bm7"BA (3Bcd "Em"e2 de|"D"fagf "A7"egfe|1 "D"d2 f2 d2 FA:|2 "D"d2 f2 d2 fg||
+|:"D"afdf a2gf|"G"efga b2 ag|"D"fagf "A7"egfe|"D"dfed "Bm"B2 dA|
+|BA FA "D"DA FA|"Bm7" BA (3Bcd "Em"e2de|"D"fagf "A7"egfe|1 "D"d2 f2 d2 fg:|2 "D"d2 f2 d2 z2||
 
 X:7
 T:Britches Full Of Stitches, The
@@ -106,14 +106,14 @@ K:G
 M:4/4
 L:1/8
 Q:1/4=120
-|: G>A BG| AG BG| G2 BG| AG E2|
-| G>A BG| AG Bd| G>A GE| ED D2:| 
-|: d>e dB| AG AB| d>e dB| AG E2|
-| d>e dB| AG AB| G>A GE| ED D2:|
+|: "G"G>A BG| "C"AG BG| "G"G2 BG| "D"AG E2|
+| "G"G>A BG| "C"AG Bd| G>A "D"GE| "G"ED D2:| 
+|: "G"d>e dB| "C"AG AB| "G"d>e dB| "D"AG E2|
+| "G"d>e dB| "C"AG AB| G>A "D"GE| "G"ED D2:|
 
 X:8
 T:Bucks Of Oranmore, The
-S:The Session: https://thesession.org/tunes/2#setting2
+S:The Session: https://thesession.org/tunes/2#setting39727
 S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
@@ -121,34 +121,29 @@ K:D
 M:4/4
 L:1/8
 Q:1/4=120
-| A2FA A2dB| A2FA BEE2| A2FA A2Bd| egfd edBd|
-| A2FA A2dB| A2FA BEE2| DEFG AFAB| defd edBd||
-| ADFD A2dB| ADFD BEE2| ADFD A2Bd| egfd edBd|
-| ADFD A2dB| ADFD BEE2| DEFG AFAB| defd efge||
-| a2fd edef| a2fd ed B2| a2fd edef| gefd edB2|
-| a2fd edef| a2fd edB2| faaf bfaf| defd edBd||
-| f2df e2de| f2df edBd| f2df e2de| gefd edBd|
-| f2df e2de| f2df edBd| faaf bfaf| defd edBd||
-| Adfd edfd| Adfd edBd| Adfd edfd| gefd edBd|
-| Adfd edfd| Adfd edB2| faaf bfaf| defd edBd||
+|:"D"A2 FA A2dB|A2FA "G"BEE2|1 "D"A2 FA A2Bd|"G"egfd "A"edBd:|2 "D"DEFG A2AB|"G"defd "A"edBd||
+|:"D"ADDD ADBD|ADFA "G"BEE2|1 "D"ADFG A2AB|"G"defd "A"edBd:|2 "D"DEFG A2AB|"G"defd "A"edef||
+|:"D"a2fd edef|a2fd "G"edBd|1 "D"a2fd e2ef|"G"gefd "A"edBd:|2 "D"faaf bfaf|"G"gefd "A"edBd||
+|:"D"f2df "A"edde|"D"f2df edBd|1 "D"f2df "A"edef|"G"gefd "A"edBd:|2 "D"faaf bfaf|"G"gefd "A"edBd||
+|:"D"Adfd edfd|Adfd "G"edBd|1 "D"Adfd edef|"G"ge fd "A"edBd:|2 "D" faaf bfaf|"G"gefd "A"edBd||
 
 X:9
 T:Butterfly, The
-S:The Session: https://thesession.org/tunes/10#setting10
+S:The Session: https://thesession.org/tunes/10#setting21788
 S:https://JamBuddy.live 2025
 C:Traditional
 R:slip jig
-K:Emin
-M:6/8
+K:Gmaj
+M:9/8
 L:1/8
 Q:1/4=113
-|: B2E G2E F3| B2E G2E FED| B2E G2E F3| B2d d2B AFD:| 
-|: B2d e2f g3| B2d g2e dBA| B2d e2f g2a| b2a g2e dBA:| 
-|: B3 B2A G2A| B3 BAB dBA| B3 B2A G2A| B2d g2e dBA:|
+|:"Em"B2E G2E "D"F3|"Em"B2E G2E "D"FED|"Em"B2E G2E "D"F3|"G"B2d d2B "D"AFD:|
+|:"Em"B2d e2f g3|B2d g2e "D"dBA|"Em"B2d e2f g2a|"G"b2a g2e "D"dBA:|
+|:"Em"B3 B2A G2A|B3 BAB "D"dBA|"Em"B3 B2A G2A|"G"B2d g2e "D"dBA:|
 
 X:10
 T:Calliope House
-S:The Session: https://thesession.org/tunes/15#setting15
+S:The Session: https://thesession.org/tunes/15#setting31495
 S:https://JamBuddy.live 2025
 C:Traditional
 R:jig
@@ -156,24 +151,25 @@ K:D
 M:6/8
 L:1/8
 Q:1/4=113
-|: dAA fAA| eAA fAA| Bee e2d| efe dBA|
-| FAA A2F| A2B d2e|1 f2f fed| e3 e2A:|2 f2f edc|d3 efg|]
-|: a2a faa| eaa faa| g2g fgf| efe dBA| FAA A2F|
-| A2B d2e|1 f2f fed| e3 efg:|2 f2f edc| d3 d3|]
+|:"D"dAA fAA|"A"eAA "D"fAA|"G"Bee e2d|"A"efe dBA|"D"FAA A2F|
+|"G"A2B d2e|1 "Em"f2f fed|"A"e3 e2A:|2 "G" f2f edB|"D"d3 efg||
+|:"D"a2a faa|eaa faa|"G"g2g fgf|"Em"efe dBA|"D"FAA A2F|
+|"G"A2B d2e|1 "Em"f2f fed|"A"e3 efg:|2 "G"f2f edB|"D"d3d3||
 
 X:11
 T:Castle Kelly
-S:The Session: https://thesession.org/tunes/21#setting21
+S:The Session: https://thesession.org/tunes/21#setting55317
 S:https://JamBuddy.live 2025
 C:Traditional
 R:reel
-K:Amin
+K:Ador
 M:4/4
 L:1/8
 Q:1/4=120
-|: A2 cA ABcA| GcEG G2 EG| A2 cA ABcd| ecdB cA A2:|
-| agec dfed| cAGE G2 eg| agec d2cd| eaag a2ba|
-| gedc dfed|cAGE| G2 EG| A2 cA ABcd| ecdB cA A2|
+|:"Am"A2 cA A2 cA|"G"GE (3DED G2 EG|"Am"A2 cA GAcd|"G"ecdB "Am"cAAG|
+|"Am"A2 cA A2 cA|"G"GE (3DED G2 EG|"Am"A2 cA GAcd|"G"eged "Am"cA A2:|
+|:"Am"agec "G"d2 ed|"Am"cAGE "Em"G3 g|"Am"agec "G"d2 cd|"Em"eaag "Am"a2 ag|
+|"Am"agec "G"d2 ed|"Am"cAGE "G"G2 EG|"Am"A2 cA GAcd|"G"ecdB "Am"cA A2:|
 
 X:12
 T:Cliffs Of Moher, The
