@@ -235,10 +235,12 @@
       // Initialize theme color pickers if present
       const bgPicker = q('paperBgColor');
       const fgPicker = q('inkColor');
+      const highlightBtn = q('highlightToggle');
       const hlToggle = q('highlightNotes');
       if (bgPicker) bgPicker.value = this.state.theme.bg;
       if (fgPicker) fgPicker.value = this.state.theme.fg;
-      if (hlToggle) hlToggle.checked = !!this.state.enableHighlight;
+      if (highlightBtn) this.updateHighlightControl(highlightBtn, this.state.enableHighlight);
+      if (!highlightBtn && hlToggle) hlToggle.checked = !!this.state.enableHighlight;
       const onTheme = () => {
         const bg = (bgPicker && bgPicker.value) || this.state.theme.bg;
         const fg = (fgPicker && fgPicker.value) || this.state.theme.fg;
@@ -246,17 +248,30 @@
       };
       if (bgPicker) bgPicker.addEventListener('input', onTheme);
       if (fgPicker) fgPicker.addEventListener('input', onTheme);
-      if (hlToggle) hlToggle.addEventListener('change', async () => {
-        this.state.enableHighlight = !!hlToggle.checked;
-        if (!this.state.enableHighlight) {
-          // Turn off any active highlight immediately
-          if (this.state.timer && this.state.timer.stop) { try { this.state.timer.stop(); } catch(_) {} }
-          this.clearHighlight();
-        } else if (this.state.isPlaying) {
-          // Re-sync by restarting playback for clean cursor alignment
-          try { await this.restartPlayback(); } catch(_) {}
-        }
-      });
+      if (highlightBtn) {
+        highlightBtn.addEventListener('click', async () => {
+          this.state.enableHighlight = !this.state.enableHighlight;
+          this.updateHighlightControl(highlightBtn, this.state.enableHighlight);
+          if (!this.state.enableHighlight) {
+            if (this.state.timer && this.state.timer.stop) { try { this.state.timer.stop(); } catch(_) {} }
+            this.clearHighlight();
+          } else if (this.state.isPlaying) {
+            try { await this.restartPlayback(); } catch(_) {}
+          }
+        });
+      } else if (hlToggle) {
+        hlToggle.addEventListener('change', async () => {
+          this.state.enableHighlight = !!hlToggle.checked;
+          if (!this.state.enableHighlight) {
+            // Turn off any active highlight immediately
+            if (this.state.timer && this.state.timer.stop) { try { this.state.timer.stop(); } catch(_) {} }
+            this.clearHighlight();
+          } else if (this.state.isPlaying) {
+            // Re-sync by restarting playback for clean cursor alignment
+            try { await this.restartPlayback(); } catch(_) {}
+          }
+        });
+      }
       // Apply defaults on load
       this.setThemeColors(this.state.theme.bg, this.state.theme.fg);
       // Prepare hidden synth UI container for cursor control if needed
@@ -791,6 +806,16 @@
         btn.classList.remove('bg-red-600');
         btn.classList.add('bg-green-600', 'hover:bg-green-500');
       }
+    },
+
+    updateHighlightControl: function(btn, enabled) {
+      if (!btn) return;
+      const active = !!enabled;
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+      btn.textContent = active ? 'Highlight notes: On' : 'Highlight notes: Off';
+      btn.classList.toggle('bg-amber-500', active);
+      btn.classList.toggle('text-black', active);
+      btn.classList.toggle('text-amber-400', !active);
     },
 
     // Theme API
@@ -1353,8 +1378,14 @@
         svg.removeAttribute('height');
         svg.style.maxWidth = '100%';
         svg.style.width = '100%';
-        svg.style.height = '100%';
-        svg.style.maxHeight = '100%';
+        svg.style.height = 'auto';
+        svg.style.maxHeight = 'none';
+        svg.style.display = 'block';
+        const container = svg.closest('.abcjs-container');
+        if (container) {
+          container.style.width = '100%';
+          container.style.display = container.style.display || 'block';
+        }
         svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
         // Ensure viewBox exists for proper scaling
         if (!svg.getAttribute('viewBox')) {
