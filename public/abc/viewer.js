@@ -943,7 +943,7 @@
         const hasTab = this.state.layer && this.state.layer !== 'none';
         const tabSpec = hasTab ? this.instruments[this.state.layer] : null;
         const paperWidth = Math.max(paperEl.clientWidth || paperEl.offsetWidth || 740, 320);
-        const baseOpts = { responsive: 'resize', add_classes: true, visualTranspose: this.state.vt, selectionColor: '#f59e0b', wrap: { preferredMeasuresPerLine: 5 }, staffwidth: paperWidth };
+        const baseOpts = { responsive: 'resize', add_classes: true, visualTranspose: this.state.vt, selectionColor: '#f59e0b', wrap: { preferredMeasuresPerLine: 5 } };
         const renderOpts = hasTab && tabSpec ? { ...baseOpts, tablature: [tabSpec] } : baseOpts;
         // Optionally strip chord symbols when rendering tabs for a cleaner layout
         const abcToRender = (hasTab && this.state.stripChordsForTabs) ? this.simplifyForTab(playbackFiltered) : playbackFiltered;
@@ -1382,11 +1382,6 @@
         svg.style.maxHeight = 'none';
         svg.style.display = 'block';
         const container = svg.closest('.abcjs-container');
-        if (container) {
-          container.style.width = '100%';
-          container.style.display = container.style.display || 'block';
-        }
-        svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
         // Ensure viewBox exists for proper scaling
         if (!svg.getAttribute('viewBox')) {
           const bb = svg.getBBox();
