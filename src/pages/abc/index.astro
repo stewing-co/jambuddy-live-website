@@ -30,10 +30,18 @@ const collections = [
               <span id="currentKeyLabel" class="text-gray-100 font-semibold min-w-[2ch] text-center">K?</span>
               <button id="transposeUp" class="px-2 py-1 bg-gray-700 text-white rounded" title="Transpose up">&#9839;</button>
             </div>
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-2 flex-wrap">
               <input id="tempoSlider" type="range" min="40" max="220" value="120" class="w-16" />
               <span id="tempoLabel" class="text-gray-300 text-sm">120 BPM</span>
               <button id="playToggle" class="px-3 py-1 bg-green-600 hover:bg-green-500 text-white rounded">Play</button>
+              <button
+                id="highlightToggle"
+                class="px-3 py-1 rounded border border-amber-500 text-amber-400 hover:bg-amber-500 hover:text-black"
+                aria-pressed="false"
+                type="button"
+              >
+                Highlight notes: Off
+              </button>
             </div>
           </div>
         </div>
@@ -99,10 +107,6 @@ const collections = [
             <label class="text-sm text-gray-300 flex items-center gap-2">
               Ink
               <input id="inkColor" type="color" class="w-10 h-8 rounded border border-gray-700 bg-black" value="#000000" />
-            </label>
-            <label class="text-sm text-gray-300 flex items-center gap-2">
-              <input id="highlightNotes" type="checkbox" class="w-4 h-4" checked />
-              Highlight playing notes
             </label>
           </div>
           <p class="text-xs text-gray-400">Adjust paper and ink colors for display and PNG export.</p>
