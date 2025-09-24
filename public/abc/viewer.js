@@ -5,20 +5,7 @@
   const Viewer = {
     state: {
       vt: 0,
-      headerVisibility: {
-        title: true,
-        notes: true,
-        composer: true,
-        book: true,
-        source: true,
-        subtitle: true,
-        lyrics: true,
-        tempo: true,
-        rhythm: true,
-        key: true,
-        meter: true,
-        length: true
-      },
+      // headerVisibility removed — header toggles are handled in native apps only
       layer: 'none', // none|guitar|mandolin|ukulele|baritone
       stripChordsForTabs: false,
       inputId: null,
@@ -38,11 +25,16 @@
       playFinishTimer: null,
       timer: null,
       highlighted: [],
+  // Elements temporarily highlighted by TimingCallbacks for current-note
+  // cursor progression. Kept separate from `highlighted` so persistent
+  // selections remain when playback stops.
+  timerHighlighted: [],
       enableHighlight: false,
       playbackMode: 'mixed', // 'mixed', 'chords', 'melody'
       synthControl: null,
       synthUiEl: null,
-      finishTimeout: null
+      finishTimeout: null,
+      renderScale: 60 // percent of viewport height to aim SVG max-height
     },
 
     instruments: {
@@ -68,20 +60,7 @@
         });
       };
 
-      // Header visibility
-      bindCheck('hv-title', 'title', 'headerVisibility');
-      bindCheck('hv-notes', 'notes', 'headerVisibility');
-      bindCheck('hv-composer', 'composer', 'headerVisibility');
-      bindCheck('hv-book', 'book', 'headerVisibility');
-      bindCheck('hv-source', 'source', 'headerVisibility');
-      bindCheck('hv-subtitle', 'subtitle', 'headerVisibility');
-      bindCheck('hv-lyrics', 'lyrics', 'headerVisibility');
-      bindCheck('hv-tempo', 'tempo', 'headerVisibility');
-      bindCheck('hv-rhythm', 'rhythm', 'headerVisibility');
-      // Element headers
-      bindCheck('hv-key', 'key', 'headerVisibility');
-      bindCheck('hv-meter', 'meter', 'headerVisibility');
-      bindCheck('hv-length', 'length', 'headerVisibility');
+  // Header toggles removed from web viewer
 
       const transposeInfo = q('transposeInfo');
       const down = q('transposeDown');
@@ -137,6 +116,49 @@
         const stopBtn = q('stopBtn');
         if (playBtn) playBtn.addEventListener('click', () => this.play());
         if (stopBtn) stopBtn.addEventListener('click', () => this.stop());
+      }
+
+      // Playback mode toggle button
+      const playbackModeToggle = q('playbackModeToggle');
+      if (playbackModeToggle) {
+        playbackModeToggle.addEventListener('click', () => {
+          // Cycle through modes: mixed -> chords -> melody -> mixed
+          const modes = ['mixed', 'chords', 'melody'];
+          const currentIndex = modes.indexOf(this.state.playbackMode);
+          const nextIndex = (currentIndex + 1) % modes.length;
+          this.state.playbackMode = modes[nextIndex];
+          this.updatePlaybackModeButton(playbackModeToggle);
+        });
+        this.updatePlaybackModeButton(playbackModeToggle);
+      }
+
+      // Highlight toggle wiring
+      const highlightToggle = q('highlightToggle');
+      if (highlightToggle) {
+        // Initialize control state
+        this.updateHighlightControl(highlightToggle, this.state.enableHighlight);
+        highlightToggle.addEventListener('click', async () => {
+          // Toggle state
+          this.state.enableHighlight = !this.state.enableHighlight;
+          this.updateHighlightControl(highlightToggle, this.state.enableHighlight);
+          if (this.state.enableHighlight) {
+            // If a visual object is available and playback is active, install timing
+            try {
+              // Clear transient highlights/cursor so timing begins from the first note
+              try { this._clearTransientHighlights(); } catch(_) {}
+              try { this._clearCursor(); } catch(_) {}
+              const displayVObj = this.state.lastVisualObj || this.render(true);
+              const timer = this.installTiming(displayVObj);
+              if (timer && timer.start && this.state.isPlaying) timer.start(0);
+            } catch (e) {
+              console.warn('Failed to enable highlight timing:', e);
+            }
+          } else {
+            // Disable timing and clear any highlights
+            try { if (this.state.timer && this.state.timer.stop) this.state.timer.stop(); } catch(_) {}
+            this.clearHighlight();
+          }
+        });
       }
 
       // Tempo slider
@@ -218,6 +240,15 @@
           const ro = new ResizeObserver(() => {
             try { this.ensureResponsiveSvgs(); } catch(_) {}
             try { this.updatePaperHeight(); } catch(_) {}
+            try { this._clearTransientHighlights(); } catch(_) {}
+            try {
+              if (this.state.enableHighlight) {
+                try { if (this.state.timer && this.state.timer.stop) this.state.timer.stop(); } catch(_) {}
+                const displayVObj = this.state.lastVisualObj || this.render(true);
+                const timer = this.installTiming(displayVObj);
+                if (timer && timer.start && this.state.isPlaying) timer.start(0);
+              }
+            } catch(_) {}
           });
           ro.observe(paperEl);
           // Keep a reference to avoid GC in some browsers
@@ -229,48 +260,43 @@
         window.addEventListener('resize', () => {
           try { this.ensureResponsiveSvgs(); } catch(_) {}
           try { this.updatePaperHeight(); } catch(_) {}
+          try { this._clearTransientHighlights(); } catch(_) {}
+          try {
+            if (this.state.enableHighlight) {
+              // Keep persistent highlights; just clear transient cursor/highlights
+              try { if (this.state.timer && this.state.timer.stop) this.state.timer.stop(); } catch(_) {}
+              try { this._clearTransientHighlights(); } catch(_) {}
+              try { this._clearCursor(); } catch(_) {}
+              const displayVObj = this.state.lastVisualObj || this.render(true);
+              const timer = this.installTiming(displayVObj);
+              if (timer && timer.start && this.state.isPlaying) timer.start(0);
+            }
+          } catch(_) {}
         });
       } catch(_) {}
 
-      // Initialize theme color pickers if present
-      const bgPicker = q('paperBgColor');
-      const fgPicker = q('inkColor');
-      const highlightBtn = q('highlightToggle');
-      const hlToggle = q('highlightNotes');
-      if (bgPicker) bgPicker.value = this.state.theme.bg;
-      if (fgPicker) fgPicker.value = this.state.theme.fg;
-      if (highlightBtn) this.updateHighlightControl(highlightBtn, this.state.enableHighlight);
-      if (!highlightBtn && hlToggle) hlToggle.checked = !!this.state.enableHighlight;
-      const onTheme = () => {
-        const bg = (bgPicker && bgPicker.value) || this.state.theme.bg;
-        const fg = (fgPicker && fgPicker.value) || this.state.theme.fg;
-        this.setThemeColors(bg, fg);
-      };
-      if (bgPicker) bgPicker.addEventListener('input', onTheme);
-      if (fgPicker) fgPicker.addEventListener('input', onTheme);
-      if (highlightBtn) {
-        highlightBtn.addEventListener('click', async () => {
-          this.state.enableHighlight = !this.state.enableHighlight;
-          this.updateHighlightControl(highlightBtn, this.state.enableHighlight);
-          if (!this.state.enableHighlight) {
-            if (this.state.timer && this.state.timer.stop) { try { this.state.timer.stop(); } catch(_) {} }
-            this.clearHighlight();
-          } else if (this.state.isPlaying) {
-            try { await this.restartPlayback(); } catch(_) {}
-          }
-        });
-      } else if (hlToggle) {
-        hlToggle.addEventListener('change', async () => {
-          this.state.enableHighlight = !!hlToggle.checked;
-          if (!this.state.enableHighlight) {
-            // Turn off any active highlight immediately
-            if (this.state.timer && this.state.timer.stop) { try { this.state.timer.stop(); } catch(_) {} }
-            this.clearHighlight();
-          } else if (this.state.isPlaying) {
-            // Re-sync by restarting playback for clean cursor alignment
-            try { await this.restartPlayback(); } catch(_) {}
-          }
-        });
+      // Render scale control wiring (if present)
+      const scaleSlider = q('renderScale');
+      const scaleLabel = q('renderScaleLabel');
+      if (scaleSlider) {
+        const setVal = () => {
+          const v = parseInt(scaleSlider.value, 10) || 60;
+          this.state.renderScale = v;
+          if (scaleLabel) scaleLabel.textContent = `${v}%`;
+          try { this.applyRenderScale(); } catch(_) {}
+          try {
+            if (this.state.enableHighlight) {
+              try { if (this.state.timer && this.state.timer.stop) this.state.timer.stop(); } catch(_) {}
+              const displayVObj = this.state.lastVisualObj || this.render(true);
+              const timer = this.installTiming(displayVObj);
+              if (timer && timer.start && this.state.isPlaying) timer.start(0);
+            }
+          } catch(_) {}
+        };
+        scaleSlider.value = String(this.state.renderScale);
+        if (scaleLabel) scaleLabel.textContent = `${this.state.renderScale}%`;
+        scaleSlider.addEventListener('input', setVal);
+        scaleSlider.addEventListener('change', setVal);
       }
       // Apply defaults on load
       this.setThemeColors(this.state.theme.bg, this.state.theme.fg);
@@ -438,16 +464,67 @@
     filterAbcForPlaybackMode: function(abcText) {
       switch (this.state.playbackMode) {
         case 'chords':
-          // For chords-only: keep chord symbols, replace melody notes with rests
-          // Use a more careful approach to avoid breaking ABC syntax
-          return abcText.replace(/([A-Ga-g][,']*\d*)/g, 'z$2');
+          // Keep header lines (like X:, T:, K:, Q:, etc.) and chord quotes, but replace melody notes with rests
+          return this._filterChordsOnly(abcText);
         case 'melody':
-          // For melody-only: remove chord symbols (quoted text like "C" or "G7")
-          return abcText.replace(/"[^"]*"/g, '');
+          // Remove quoted chord symbols from music lines, keep headers
+          return this._filterMelodyOnly(abcText);
         case 'mixed':
         default:
           return abcText;
       }
+    },
+
+    // Helper used by filterAbcForPlaybackMode
+    _filterChordsOnly: function(abcContent) {
+      const lines = (abcContent || '').split('\n');
+      const out = [];
+      for (let line of lines) {
+        // Preserve header lines (capital-letter key:value)
+        if (/^[A-Z]:/.test(line)) {
+          out.push(line);
+          continue;
+        }
+        let filteredLine = '';
+        let inQuote = false;
+        for (let i = 0; i < line.length; i++) {
+          const ch = line[i];
+          if (ch === '"') {
+            inQuote = !inQuote;
+            filteredLine += ch;
+          } else if (inQuote) {
+            // keep chord text
+            filteredLine += ch;
+          } else {
+            // Outside quotes: replace note letters with rests, keep other characters
+            if (/[A-Ga-g]/.test(ch)) {
+              filteredLine += 'z';
+            } else {
+              filteredLine += ch;
+            }
+          }
+        }
+        out.push(filteredLine);
+      }
+      return out.join('\n');
+    },
+
+    _filterMelodyOnly: function(abcContent) {
+      const lines = (abcContent || '').split('\n');
+      const out = [];
+      for (let line of lines) {
+        if (/^[A-Z]:/.test(line)) { out.push(line); continue; }
+        let filteredLine = '';
+        let inQuote = false;
+        for (let i = 0; i < line.length; i++) {
+          const ch = line[i];
+          if (ch === '"') { inQuote = !inQuote; continue; }
+          if (!inQuote) filteredLine += ch;
+          // skip characters inside quotes
+        }
+        out.push(filteredLine);
+      }
+      return out.join('\n');
     },
 
     setPlaybackMode: function(mode) {
@@ -482,7 +559,15 @@
       await synth.init({
         visualObj,
         audioContext: ac,
-        options: { soundFont, program: this.getProgramForPlaybackMode(), midiTranspose: (this.state.vt || 0), gain: 0.7 }
+        options: {
+          soundFont,
+          program: this.getProgramForPlaybackMode(),
+          midiTranspose: (this.state.vt || 0),
+          gain: 0.7,
+          // Apply playback mode settings
+          chordsOff: this.state.playbackMode === 'melody',  // Disable chords for melody-only
+          voicesOff: this.state.playbackMode === 'chords'   // Disable melody voices for chords-only
+        }
       });
       await synth.prime();
       this.state.synth = synth;
@@ -587,7 +672,24 @@
           // Default path: our CreateSynth, optional TimingCallbacks
           await this.ensureSynth(vObj);
           if (this.state.enableHighlight) {
-            const timer = this.installTiming(vObj);
+            // Ensure a DOM-attached visual object is available for timing
+            // callbacks. If we only have a playback-only visual object (vObj)
+            // create a visible render so `state.lastVisualObj` points at the
+            // DOM-attached visual object that TimingCallbacks can use.
+            try {
+              if (!this.state.lastVisualObj) {
+                try { this.render(); } catch(_) {}
+              }
+            } catch(_) {}
+            // Ensure transient highlights/cursor are cleared so timing begins
+            // at the first note consistently.
+            try { this._clearTransientHighlights(); } catch(_) {}
+            try { this._clearCursor(); } catch(_) {}
+            // TimingCallbacks needs a DOM-attached visual object so it can
+            // find and color SVG elements. Use the displayed visual object
+            // (this.state.lastVisualObj) when available.
+            const displayVObj = this.state.lastVisualObj || vObj;
+            const timer = this.installTiming(displayVObj);
             if (timer && timer.start) timer.start(0);
           } else {
             if (this.state.timer && this.state.timer.stop) { try { this.state.timer.stop(); } catch(_) {} }
@@ -599,6 +701,9 @@
           const startResult = this.state.synth.start();
           this.state.isPlaying = true;
           this.updatePlayButton();
+          // Reapply render scaling after playback starts in case synth or
+          // controller operations mutated SVG sizing.
+          try { this.applyRenderScale(); } catch(_) {}
           // Duration-based watchdog to ensure UI resets even if callbacks fail
           try {
             const d = Number(this.state.synth && this.state.synth.duration);
@@ -657,7 +762,11 @@
       try { if (this.state.synthControl) this.state.synthControl.stop(); } catch(_) {}
       if (this.state.playFinishTimer) { try { clearTimeout(this.state.playFinishTimer); } catch(_) {} this.state.playFinishTimer = null; }
       if (this.state.timer && this.state.timer.stop) { try { this.state.timer.stop(); } catch(_) {} }
-      this.clearHighlight();
+      // Clear transient timer highlights and cursor artifacts so the next
+      // play installs fresh timing highlights from the start.
+      try { this._clearTransientHighlights(); } catch(_) {}
+      try { this._clearCursor(); } catch(_) {}
+      try { this.state.timer = null; } catch(_) {}
       if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
       this.state.isPlaying = false;
       this.updatePlayButton();
@@ -702,7 +811,8 @@
           const sc = new ABCJS.synth.SynthController();
           sc.load(this.state.synthUiEl, cursorControl, { displayPlay: false, displayProgress: false });
           this.state.synthControl = sc;
-          await sc.setTune(vObj, true, { midiTranspose: (this.state.vt||0), program: 0, soundFontUrl: 'https://paulrosen.github.io/abcjs/audio/soundfont/acoustic_grand_piano-mp3/' });
+          // Prefer the DOM-attached visual object for controller highlight behavior
+          await sc.setTune(this.state.lastVisualObj || vObj, true, { midiTranspose: (this.state.vt||0), program: 0, soundFontUrl: 'https://paulrosen.github.io/abcjs/audio/soundfont/acoustic_grand_piano-mp3/' });
           if (this.state.playFinishTimer) { try { clearTimeout(this.state.playFinishTimer); } catch(_) {} this.state.playFinishTimer = null; }
           if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
           const p = sc.play();
@@ -734,7 +844,16 @@
           // Default restart path
           await this.ensureSynth(vObj);
           if (this.state.enableHighlight) {
-            const timer = this.installTiming(vObj);
+            // Ensure DOM-attached visualObj exists for highlight callbacks
+            try {
+              if (!this.state.lastVisualObj) {
+                try { this.render(); } catch(_) {}
+              }
+            } catch(_) {}
+            try { this._clearTransientHighlights(); } catch(_) {}
+            try { this._clearCursor(); } catch(_) {}
+            const displayVObj = this.state.lastVisualObj || vObj;
+            const timer = this.installTiming(displayVObj);
             if (timer && timer.start) timer.start(0);
           } else {
             if (this.state.timer && this.state.timer.stop) { try { this.state.timer.stop(); } catch(_) {} }
@@ -745,30 +864,31 @@
           const startResult = this.state.synth.start();
           this.state.isPlaying = true;
           this.updatePlayButton();
+          try { this.applyRenderScale(); } catch(_) {}
           try {
             const d = Number(this.state.synth && this.state.synth.duration);
             if (d && isFinite(d) && d > 0) {
-              this.state.finishTimeout = setTimeout(() => {
-                this.state.isPlaying = false;
-                this.updatePlayButton();
-                if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
-                this.clearHighlight();
-                this.state.finishTimeout = null;
-              }, Math.ceil(d * 1000) + 250);
-            }
+                this.state.finishTimeout = setTimeout(() => {
+                  this.state.isPlaying = false;
+                  this.updatePlayButton();
+                  if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
+                  try { this._clearCursor(); } catch(_) {}
+                  this.state.finishTimeout = null;
+                }, Math.ceil(d * 1000) + 250);
+              }
           } catch(_) {}
-          if (startResult && typeof startResult.then === 'function') {
+            if (startResult && typeof startResult.then === 'function') {
             startResult.then(() => {
               this.state.isPlaying = false;
               this.updatePlayButton();
               if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
-              this.clearHighlight();
+              try { this._clearCursor(); } catch(_) {}
               if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
             }).catch(() => {
               this.state.isPlaying = false;
               this.updatePlayButton();
               if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
-              this.clearHighlight();
+              try { this._clearCursor(); } catch(_) {}
               if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
             });
           } else {
@@ -779,7 +899,7 @@
                   this.updatePlayButton();
                   this.state.playFinishTimer = null;
                   if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
-                  this.clearHighlight();
+                  try { this._clearCursor(); } catch(_) {}
                   if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
                   return;
                 }
@@ -816,6 +936,17 @@
       btn.classList.toggle('bg-amber-500', active);
       btn.classList.toggle('text-black', active);
       btn.classList.toggle('text-amber-400', !active);
+    },
+    updatePlaybackModeButton: function(btn) {
+      if (!btn) return;
+      const modes = {
+        mixed: { icon: '🎵', text: 'Mixed', title: 'Playback Mode: Chords + Melody' },
+        chords: { icon: '🎹', text: 'Chords', title: 'Playback Mode: Chords Only' },
+        melody: { icon: '🎶', text: 'Melody', title: 'Playback Mode: Melody Only' }
+      };
+      const mode = modes[this.state.playbackMode] || modes.mixed;
+      btn.textContent = `${mode.icon} ${mode.text}`;
+      btn.title = mode.title;
     },
 
     // Theme API
@@ -877,27 +1008,8 @@
     },
 
     filterHeaders: function(abc) {
-      const v = this.state.headerVisibility;
-      const lines = abc.split('\n');
-      const out = [];
-      for (let i = 0; i < lines.length; i++) {
-        const l = lines[i];
-        const t = l.trimStart();
-        if (t.startsWith('T:') && v.title === false) continue;
-        if (t.startsWith('C:') && v.composer === false) continue;
-        if (t.startsWith('N:') && v.notes === false) continue;
-        if (t.startsWith('B:') && v.book === false) continue;
-        if (t.startsWith('S:') && v.source === false) continue;
-        if (t.startsWith('A:') && v.subtitle === false) continue;
-        if ((t.startsWith('w:') || t.startsWith('W:')) && v.lyrics === false) continue;
-        // Preserve Q: (tempo) in the ABC even when hidden, so playback timing remains correct.
-        if (t.startsWith('R:') && v.rhythm === false) continue;
-        if (t.startsWith('K:') && v.key === false) continue;
-        if (t.startsWith('M:') && v.meter === false) continue;
-        if (t.startsWith('L:') && v.length === false) continue;
-        out.push(l);
-      }
-      return out.join('\n');
+      // Header visibility toggles removed from web viewer — return ABC unchanged
+      return abc || '';
     },
 
     simplifyForTab: function(abc) {
@@ -932,8 +1044,16 @@
           paperEl.style.flexDirection = paperEl.style.flexDirection || 'column';
           paperEl.style.height = '100%';
         } catch(_) {}
-        // Clear any previous highlight state on new render
-        this.clearHighlight && this.clearHighlight();
+        // Clear any previous transient highlight/cursor state on new render
+        try { this._clearTransientHighlights(); } catch(_) {}
+        // If this is a visible DOM render (not a playback-only render) and
+        // playback was active, stop now and restart after rendering so the
+        // playback always begins from the first note on SVG changes.
+        const wasPlaying = !!this.state.isPlaying;
+        if (!forPlayback && wasPlaying) {
+          try { this.stop(); } catch(_) {}
+          this._restartAfterRender = true;
+        }
         const raw = input.value || 'X:1\nT:Example\nM:4/4\nL:1/8\nK:C\nCDEF GABc|';
         const norm = this.normalizeAbc(raw);
         const filtered = this.filterHeaders(norm);
@@ -945,10 +1065,24 @@
         const paperWidth = Math.max(paperEl.clientWidth || paperEl.offsetWidth || 740, 320);
         const baseOpts = { responsive: 'resize', add_classes: true, visualTranspose: this.state.vt, selectionColor: '#f59e0b', wrap: { preferredMeasuresPerLine: 5 } };
         const renderOpts = hasTab && tabSpec ? { ...baseOpts, tablature: [tabSpec] } : baseOpts;
-        // Optionally strip chord symbols when rendering tabs for a cleaner layout
-        const abcToRender = (hasTab && this.state.stripChordsForTabs) ? this.simplifyForTab(playbackFiltered) : playbackFiltered;
-        const v = ABCJS.renderAbc(this.state.paperId, abcToRender, renderOpts);
-        this.state.lastVisualObj = v && v[0];
+
+        // Render the visible paper from the unmodified (display) ABC so playback filtering does not affect rendering
+        const abcForDisplay = (hasTab && this.state.stripChordsForTabs) ? this.simplifyForTab(filtered) : filtered;
+        const vDisplay = ABCJS.renderAbc(this.state.paperId, abcForDisplay, renderOpts);
+        this.state.lastVisualObj = vDisplay && vDisplay[0];
+        // If caller wants a visual object for playback, build it from the playback-filtered ABC but do not replace the visible rendering
+        if (returnVisualObj && forPlayback) {
+          try {
+            const abcForPlayback = (hasTab && this.state.stripChordsForTabs) ? this.simplifyForTab(playbackFiltered) : playbackFiltered;
+            // Use a non-DOM container ("*") to obtain a visual object suitable for the synth/midi without touching the page
+            const vPlayback = ABCJS.renderAbc("*", abcForPlayback, renderOpts);
+            return vPlayback && vPlayback[0];
+          } catch (e) {
+            // Fall back to the display visual object if playback-specific render fails
+            console.warn('Playback visual render failed, falling back to display visualObj', e);
+            return this.state.lastVisualObj;
+          }
+        }
         try { this.updateKeyLabel(playbackFiltered); } catch(_) {}
         try { this.applyThemeInline(); } catch(_) {}
         try { this.applyHeaderVisibilityToSvg(); } catch(_) {}
@@ -956,6 +1090,12 @@
         try { this.updatePaperHeight(); } catch(_) {}
 
         if (returnVisualObj) return this.state.lastVisualObj;
+        // If we stopped playback at the beginning of render because the SVG
+        // changed, restart playback now so it begins from the first note.
+        if (this._restartAfterRender) {
+          this._restartAfterRender = false;
+          try { this.play(); } catch(_) {}
+        }
       } catch (e) {
         console.error('ABC render failed:', e);
       }
@@ -990,17 +1130,86 @@
       });
     } catch(_) {}
     this.state.highlighted = [];
+    try {
+      if (this._highlightUnlockTimer) { try { clearTimeout(this._highlightUnlockTimer); } catch(_) {} this._highlightUnlockTimer = null; }
+      this.state._highlightLocked = false;
+    } catch(_) {}
+  };
+
+  // Clear only the transient cursor artifacts (cursor bar and timing state)
+  Viewer._clearCursor = function() {
+    try {
+      if (this.state.timer && this.state.timer.stop) {
+        try { this.state.timer.stop(); } catch(_) {}
+      }
+    } catch(_) {}
+    try { if (this.state.cursorBallEl) this.state.cursorBallEl.style.opacity = '0'; } catch(_) {}
+    try {
+      if (this._highlightUnlockTimer) { try { clearTimeout(this._highlightUnlockTimer); } catch(_) {} this._highlightUnlockTimer = null; }
+      this.state._highlightLocked = false;
+    } catch(_) {}
+  };
+
+  // Apply transient timer-driven highlights (do not modify persistent highlights)
+  Viewer._applyTransientHighlights = function(elems) {
+    try {
+      // Clear any previous transient highlights first
+      this._clearTransientHighlights();
+    } catch(_) {}
+    try {
+      this.state.timerHighlighted = [];
+      elems.forEach(el => {
+        if (!el) return;
+        try {
+          if (el.dataset) {
+            el.dataset.prevFill = el.getAttribute('fill') ?? '__unset__';
+            el.dataset.prevStroke = el.getAttribute('stroke') ?? '__unset__';
+          }
+          el.classList && el.classList.add('abc-current-note');
+          el.setAttribute('fill', '#f59e0b');
+          el.setAttribute('stroke', '#f59e0b');
+          this.state.timerHighlighted.push(el);
+        } catch(_) {}
+      });
+    } catch(_) {}
+  };
+
+  Viewer._clearTransientHighlights = function() {
+    try {
+      (this.state.timerHighlighted || []).forEach(el => {
+        try {
+          if (!el) return;
+          if (el.dataset) {
+            if (el.dataset.prevFill !== undefined) {
+              if (el.dataset.prevFill === '__unset__') el.removeAttribute('fill');
+              else el.setAttribute('fill', el.dataset.prevFill);
+              delete el.dataset.prevFill;
+            }
+            if (el.dataset.prevStroke !== undefined) {
+              if (el.dataset.prevStroke === '__unset__') el.removeAttribute('stroke');
+              else el.setAttribute('stroke', el.dataset.prevStroke);
+              delete el.dataset.prevStroke;
+            }
+          }
+          el?.classList?.remove('abc-current-note');
+        } catch(_) {}
+      });
+    } catch(_) {}
+    this.state.timerHighlighted = [];
   };
 
   Viewer.installTiming = function(vObj) {
     try {
       if (!vObj || !ABCJS) return null;
       if (!ABCJS.TimingCallbacks) { console.warn('ABCJS.TimingCallbacks not available in this build; skipping note highlight'); return null; }
-      // Clean up any previous timer/highlights
+      // Clean up any previous timer/highlights — do NOT remove persistent
+      // user-selected highlights here. Only stop the timer and clear
+      // transient cursor/highlight artifacts so persistent selections stay.
       if (this.state.timer && this.state.timer.stop) {
         try { this.state.timer.stop(); } catch(_) {}
       }
-      this.clearHighlight();
+      try { this._clearTransientHighlights(); } catch(_) {}
+      try { this._clearCursor(); } catch(_) {}
       // Let ABCJS use the tempo from the ABC (Q: header) directly to respect units
       const timer = new ABCJS.TimingCallbacks(vObj, {
         qpm: undefined,
@@ -1023,7 +1232,7 @@
                 el.style.background = '#f59e0b';
                 el.style.pointerEvents = 'none';
                 el.style.opacity = '0';
-                el.style.transition = 'opacity 120ms ease';
+                el.style.transition = 'opacity 120ms ease, transform 120ms ease, height 120ms ease';
                 paper.appendChild(el);
                 this.state.cursorBallEl = el;
               }
@@ -1036,7 +1245,80 @@
           if (!paper || !svg || !ball || !position) return;
           const pr = paper.getBoundingClientRect();
           const sr = svg.getBoundingClientRect();
-          // Scale SVG coords (viewBox) to rendered CSS pixels
+          if (this.state._highlightLocked) return;
+          try {
+            // Prefer transient timer-driven highlights, then DOM elements with
+            // the current-note class, then persistent highlighted elements.
+            // If we find multiple elements, compute their union bounding box.
+            let elemsToUse = null;
+            if (this.state.timerHighlighted && this.state.timerHighlighted.length) elemsToUse = Array.from(this.state.timerHighlighted);
+            if (!elemsToUse) {
+              const paperNode = document.getElementById(this.state.paperId);
+              if (paperNode) {
+                const domSelAll = paperNode.querySelectorAll('.abc-current-note');
+                if (domSelAll && domSelAll.length) elemsToUse = Array.from(domSelAll);
+              }
+            }
+            if (!elemsToUse && this.state.highlighted && this.state.highlighted.length) elemsToUse = Array.from(this.state.highlighted);
+            if (elemsToUse && elemsToUse.length) {
+              // Compute union bounding rect
+              let minL = Infinity, minT = Infinity, maxR = -Infinity, maxB = -Infinity;
+              elemsToUse.forEach(el => {
+                if (!el || !el.getBoundingClientRect) return;
+                try {
+                  const r = el.getBoundingClientRect();
+                  if (r.left < minL) minL = r.left;
+                  if (r.top < minT) minT = r.top;
+                  if (r.right > maxR) maxR = r.right;
+                  if (r.bottom > maxB) maxB = r.bottom;
+                } catch(_) {}
+              });
+                if (isFinite(minL) && isFinite(minT) && isFinite(maxR) && isFinite(maxB)) {
+                const width = Math.max(0, maxR - minL);
+                const height = Math.max(0, maxB - minT);
+                const barW = 16;
+                const left = (minL - pr.left) + (width ? (width / 2) : 0) - (barW / 2);
+                const topPx = (minT - pr.top);
+                ball.style.height = `${Math.round(height)}px`;
+                ball.style.transform = `translate(${Math.round(left)}px, ${Math.round(topPx)}px)`;
+                ball.style.opacity = '0.35';
+                  // Record that we positioned via DOM elements so beatCallback
+                  // won't override with viewBox-based coords immediately after.
+                  try { this.state._lastElementPlacementTime = Date.now(); } catch(_) {}
+                return;
+              }
+            }
+          } catch(_) {}
+          // If we recently placed the cursor using DOM element bounding boxes,
+          // avoid immediately overriding that placement with viewBox-mapped
+          // coordinates which can jump when CSS scaling is present.
+          if (this.state._lastElementPlacementTime && (Date.now() - this.state._lastElementPlacementTime) < 1200) return;
+
+          // Map the viewBox/user coords to screen coordinates using SVG CTM
+          try {
+            if (svg.createSVGPoint && svg.getScreenCTM) {
+              const pt = svg.createSVGPoint();
+              pt.x = position.left || 0;
+              pt.y = position.top || 0;
+              const screenP = pt.matrixTransform(svg.getScreenCTM());
+              let heightPx = 0;
+              if (position.height) {
+                const pt2 = svg.createSVGPoint();
+                pt2.x = position.left || 0;
+                pt2.y = (position.top || 0) + position.height;
+                const screenP2 = pt2.matrixTransform(svg.getScreenCTM());
+                heightPx = Math.abs(screenP2.y - screenP.y);
+              }
+              const barW = 16;
+              const left = screenP.x - pr.left - (barW / 2);
+              const topPx = screenP.y - pr.top;
+              ball.style.height = `${Math.round(heightPx)}px`;
+              ball.style.transform = `translate(${Math.round(left)}px, ${Math.round(topPx)}px)`;
+              ball.style.opacity = '0.35';
+              return;
+            }
+          } catch (_) {}
+          // Fallback: Scale SVG coords (viewBox) to rendered CSS pixels
           let scaleX = 1, scaleY = 1;
           try {
             const vb = (svg.getAttribute('viewBox') || '').split(/\s+/).map(Number);
@@ -1052,61 +1334,62 @@
           ball.style.height = `${Math.round(hPx)}px`;
           ball.style.transform = `translate(${Math.round(left)}px, ${Math.round(topPx)}px)`;
           ball.style.opacity = '0.35';
-    },
-    
-    // Visually hide selected headers in the rendered SVG without removing them from the ABC source
-    applyHeaderVisibilityToSvg: function() {
-      try {
-        const svg = document.querySelector('#' + this.state.paperId + ' svg');
-        if (!svg) return;
-        const v = this.state.headerVisibility || {};
-        // Tempo
-        const hideTempo = v.tempo === false;
-        svg.querySelectorAll('.abcjs-tempo').forEach(el => { el.style.display = hideTempo ? 'none' : ''; });
-      } catch(_) {}
-    },
+        },
         eventCallback: (ev) => {
           // End of tune sends null
-          if (!ev) { this.clearHighlight(); return; }
+          if (!ev) { try { this._clearTransientHighlights(); } catch(_) {} return; }
           // Try abcjs native selection first using start/end char
           if (typeof ev.startChar === 'number' && typeof ev.endChar === 'number' && vObj && vObj.rangeHighlight) {
             try {
               vObj.rangeHighlight(ev.startChar, ev.endChar);
+              // Prevent the beatCallback from immediately overriding this element-based placement
+              try {
+                this.state._highlightLocked = true;
+                if (this._highlightUnlockTimer) { try { clearTimeout(this._highlightUnlockTimer); } catch(_) {} this._highlightUnlockTimer = null; }
+                this._highlightUnlockTimer = setTimeout(() => { try { this.state._highlightLocked = false; this._highlightUnlockTimer = null; } catch(_) {} }, 1200);
+              } catch(_) {}
               return;
             } catch(_) { /* fall through to manual coloring */ }
           }
-          // Fallback: manually color SVG elements
-          this.clearHighlight();
+          // Fallback: manually color SVG elements — treat these as transient
           if (ev.elements) {
             try {
-              ev.elements.forEach(set => {
-                set.forEach(el => {
-                  if (!el) return;
-                  if (el.classList) {
-                    el.classList.add('abc-current-note');
+              const elems = [];
+              ev.elements.forEach(set => set.forEach(el => { if (el) elems.push(el); }));
+              try { this._applyTransientHighlights(elems); } catch(_) {}
+              
+              // Position the cursor bar relative to the first highlighted element's
+              // bounding box so the cursor aligns with the actual DOM layout and
+              // respects any CSS-based max-height/width scaling.
+              try {
+                const paper = document.getElementById(this.state.paperId);
+                const ball = this.state.cursorBallEl;
+                if (paper && ball) {
+                  // Find first element node within ev.elements
+                  let firstEl = null;
+                  for (const set of ev.elements) {
+                    if (Array.isArray(set) && set.length) { firstEl = set[0]; break; }
+                    if (set && set.nodeType) { firstEl = set; break; }
                   }
-                  if (el.dataset) {
-                    el.dataset.prevFill = el.getAttribute('fill') ?? '__unset__';
-                    el.dataset.prevStroke = el.getAttribute('stroke') ?? '__unset__';
+                  if (firstEl && firstEl.getBoundingClientRect) {
+                    const pr = paper.getBoundingClientRect();
+                    const er = firstEl.getBoundingClientRect();
+                    const barW = parseInt(ball.style.width || '16', 10) || 16;
+                    const left = (er.left - pr.left) + (er.width ? (er.width/2) : 0) - (barW / 2);
+                    const topPx = (er.top - pr.top);
+                    const hPx = er.height || 0;
+                    ball.style.height = `${Math.round(hPx)}px`;
+                    ball.style.transform = `translate(${Math.round(left)}px, ${Math.round(topPx)}px)`;
+                    ball.style.opacity = '0.35';
+                    // Lock beatCallback updates briefly to avoid it overriding this DOM-based placement
+                    try {
+                      this.state._highlightLocked = true;
+                      if (this._highlightUnlockTimer) { try { clearTimeout(this._highlightUnlockTimer); } catch(_) {} this._highlightUnlockTimer = null; }
+                      this._highlightUnlockTimer = setTimeout(() => { try { this.state._highlightLocked = false; this._highlightUnlockTimer = null; } catch(_) {} }, 1200);
+                    } catch(_) {}
                   }
-                  el.setAttribute('fill', '#f59e0b');
-                  el.setAttribute('stroke', '#f59e0b');
-                  this.state.highlighted.push(el);
-                  // Also color children
-                  try {
-                    el.querySelectorAll && el.querySelectorAll('path,polygon,polyline,use,ellipse,circle,rect').forEach(ch => {
-                      if (ch.dataset) {
-                        ch.dataset.prevFill = ch.getAttribute('fill') ?? '__unset__';
-                        ch.dataset.prevStroke = ch.getAttribute('stroke') ?? '__unset__';
-                      }
-                      ch.classList && ch.classList.add('abc-current-note');
-                      ch.setAttribute('fill', '#f59e0b');
-                      ch.setAttribute('stroke', '#f59e0b');
-                      this.state.highlighted.push(ch);
-                    });
-                  } catch(_) {}
-                });
-              });
+                }
+              } catch(_) {}
             } catch(_) {}
           }
         }
@@ -1391,6 +1674,22 @@
         }
       } catch(_) {}
     });
+    try { this.applyRenderScale(); } catch(_) {}
+  };
+
+  Viewer.applyRenderScale = function() {
+    try {
+      const paper = document.getElementById(this.state.paperId);
+      if (!paper) return;
+      const svgs = paper.querySelectorAll('svg');
+      const pct = Math.max(20, Math.min(100, Number(this.state.renderScale || 60)));
+      const maxPx = Math.round((window.innerHeight || 800) * (pct / 100));
+      svgs.forEach(svg => {
+        try {
+          svg.style.maxHeight = maxPx + 'px';
+        } catch(_) {}
+      });
+    } catch (e) { /* no-op */ }
   };
 
   global.ABCViewer = Viewer;

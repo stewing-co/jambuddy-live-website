@@ -20,7 +20,7 @@ const collections = [
     </div>
     <p class="text-gray-300 mb-6">Paste your ABC below or open one of our curated collections. Uses abcjs to render sheet music in your browser.</p>
 
-    <div class="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(420px,1.7fr)_minmax(320px,1.05fr)_minmax(260px,0.9fr)] xl:grid-cols-[minmax(440px,1.9fr)_minmax(360px,1.15fr)_minmax(280px,1fr)]">
+  <div class="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(420px,1.9fr)_minmax(520px,1.15fr)] xl:grid-cols-[minmax(440px,1.95fr)_minmax(560px,1.05fr)]">
       <!-- Left column: controls + rendered song -->
       <div class="lg:col-span-1 h-[70vh] flex flex-col space-y-3">
         <div class="p-3 rounded bg-gray-800 border border-gray-700">
@@ -33,7 +33,20 @@ const collections = [
             <div class="flex items-center gap-2 flex-wrap">
               <input id="tempoSlider" type="range" min="40" max="220" value="120" class="w-16" />
               <span id="tempoLabel" class="text-gray-300 text-sm">120 BPM</span>
+              <label class="text-sm text-gray-300 flex items-center gap-2">
+                Render height
+                <input id="renderScale" type="range" min="20" max="100" value="60" class="w-28" />
+                <span id="renderScaleLabel" class="text-gray-300 text-sm">60%</span>
+              </label>
               <button id="playToggle" class="px-3 py-1 bg-green-600 hover:bg-green-500 text-white rounded">Play</button>
+              <button
+                id="playbackModeToggle"
+                class="px-3 py-1 rounded bg-blue-600 hover:bg-blue-500 text-white"
+                title="Playback Mode: Chords + Melody"
+                type="button"
+              >
+                🎵 Mixed
+              </button>
               <button
                 id="highlightToggle"
                 class="px-3 py-1 rounded border border-amber-500 text-amber-400 hover:bg-amber-500 hover:text-black"
@@ -45,6 +58,20 @@ const collections = [
             </div>
           </div>
         </div>
+
+        <!-- Tabulature selection under play controls -->
+        <div class="p-3 rounded bg-gray-800 border border-gray-700">
+          <label class="block text-sm text-gray-300 mb-2">Tablature layer</label>
+          <select id="layerSelect" class="w-full bg-black text-gray-200 border border-gray-700 rounded p-2 text-sm">
+            <option value="none">None (Staff only)</option>
+            <option value="guitar">Guitar</option>
+            <option value="mandolin">Mandolin</option>
+            <option value="ukulele">Ukulele</option>
+            <option value="baritone">Baritone Ukulele</option>
+          </select>
+          <label class="text-sm text-gray-300 mt-2 block"><input id="stripChords" type="checkbox" class="mr-2" /> Strip quoted chords for tabs</label>
+        </div>
+
         <div class="p-3 rounded bg-gray-900 border border-gray-800 flex-1 min-h-0 overflow-auto">
           <div id="paper" class="min-h-full h-full"></div>
         </div>
@@ -63,57 +90,7 @@ const collections = [
         <textarea id="abcInput" class="w-full flex-1 min-h-0 p-3 font-mono text-sm rounded bg-black text-gray-200 border border-gray-700 resize-none" placeholder="Paste or type ABC notation here..."></textarea>
       </div>
 
-      <!-- Right column: layers + headers + theme + collections list -->
-      <div class="space-y-3 lg:col-span-1 h-[70vh] overflow-auto">
-        <div class="p-4 rounded-lg bg-gray-800 border border-gray-700 space-y-3">
-          <h2 class="text-xl font-semibold text-white">Layers</h2>
-          <label class="block text-sm text-gray-300">Tablature layer</label>
-          <select id="layerSelect" class="w-full bg-black text-gray-200 border border-gray-700 rounded p-2 text-sm">
-            <option value="none">None (Staff only)</option>
-            <option value="guitar">Guitar</option>
-            <option value="mandolin">Mandolin</option>
-            <option value="ukulele">Ukulele</option>
-            <option value="baritone">Baritone Ukulele</option>
-          </select>
-          <label class="text-sm text-gray-300"><input id="stripChords" type="checkbox" class="mr-2" /> Strip quoted chords for tabs</label>
-          <p class="text-xs text-gray-400">If your abcjs build doesn’t support tablature, the staff will still render.</p>
-        </div>
-
-        <div class="p-4 rounded-lg bg-gray-800 border border-gray-700 space-y-3">
-          <h2 class="text-xl font-semibold text-white">Headers</h2>
-          <div class="grid grid-cols-2 gap-2 text-sm text-gray-200">
-            <label><input id="hv-title" type="checkbox" class="mr-2" checked /> Title (T:)</label>
-            <label><input id="hv-composer" type="checkbox" class="mr-2" checked /> Composer (C:)</label>
-            <label><input id="hv-notes" type="checkbox" class="mr-2" checked /> Notes (N:)</label>
-            <label><input id="hv-book" type="checkbox" class="mr-2" checked /> Book (B:)</label>
-            <label><input id="hv-source" type="checkbox" class="mr-2" checked /> Source (S:)</label>
-            <label><input id="hv-subtitle" type="checkbox" class="mr-2" checked /> Subtitle (A:)</label>
-            <label><input id="hv-lyrics" type="checkbox" class="mr-2" checked /> Lyrics (w:/W:)</label>
-            <label><input id="hv-tempo" type="checkbox" class="mr-2" checked /> Tempo (Q:)</label>
-            <label><input id="hv-rhythm" type="checkbox" class="mr-2" checked /> Rhythm (R:)</label>
-            <label><input id="hv-key" type="checkbox" class="mr-2" checked /> Key (K:)</label>
-            <label><input id="hv-meter" type="checkbox" class="mr-2" checked /> Meter (M:)</label>
-            <label><input id="hv-length" type="checkbox" class="mr-2" checked /> Length (L:)</label>
-          </div>
-        </div>
-
-        <div class="p-4 rounded-lg bg-gray-800 border border-gray-700 space-y-3">
-          <h2 class="text-xl font-semibold text-white">Theme</h2>
-          <div class="flex items-center gap-4">
-            <label class="text-sm text-gray-300 flex items-center gap-2">
-              Paper
-              <input id="paperBgColor" type="color" class="w-10 h-8 rounded border border-gray-700 bg-black" value="#ffffff" />
-            </label>
-            <label class="text-sm text-gray-300 flex items-center gap-2">
-              Ink
-              <input id="inkColor" type="color" class="w-10 h-8 rounded border border-gray-700 bg-black" value="#000000" />
-            </label>
-          </div>
-          <p class="text-xs text-gray-400">Adjust paper and ink colors for display and PNG export.</p>
-        </div>
-
-        
-      </div>
+      <!-- Right column removed: simplified to two-column layout -->
     </div>
   </section>
 
@@ -136,9 +113,4 @@ const collections = [
     }
   </style>
   <script src="/abc/viewer.js" defer></script>
-  <script>
-    window.addEventListener('load', () => {
-      if (window.ABCViewer) ABCViewer.init('abcInput', 'paper');
-    });
-  </script>
-</Layout>
+  <script src="/abc/init-viewer.js" defer></script>
