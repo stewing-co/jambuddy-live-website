@@ -25,16 +25,20 @@
       playFinishTimer: null,
       timer: null,
       highlighted: [],
-  // Elements temporarily highlighted by TimingCallbacks for current-note
-  // cursor progression. Kept separate from `highlighted` so persistent
-  // selections remain when playback stops.
-  timerHighlighted: [],
+      // Elements temporarily highlighted by TimingCallbacks for current-note
+      // cursor progression. Kept separate from `highlighted` so persistent
+      // selections remain when playback stops.
+      timerHighlighted: [],
       enableHighlight: false,
       playbackMode: 'mixed', // 'mixed', 'chords', 'melody'
       synthControl: null,
       synthUiEl: null,
       finishTimeout: null,
-      renderScale: 60 // percent of viewport height to aim SVG max-height
+      renderScale: 60, // percent of viewport height to aim SVG max-height
+      // cursor state
+      _cursorBallInit: false,
+      cursorBallEl: null,
+      _highlightLocked: false
     },
 
     instruments: {
@@ -60,7 +64,7 @@
         });
       };
 
-  // Header toggles removed from web viewer
+      // Header toggles removed from web viewer
 
       const transposeInfo = q('transposeInfo');
       const down = q('transposeDown');
@@ -99,6 +103,7 @@
           input.value = this.state.fullAbc;
           this.state.selectedX = null;
           this.state.selectedIndex = -1;
+          this.stop();
           this.render();
         });
       }
@@ -577,179 +582,101 @@
     play: async function() {
       try {
         if (!window.ABCJS?.synth) throw new Error('abcjs synth not available');
-        // Re-render to get current visual object in sync
+        // Bump a play session id so any stale async callbacks from previous
+        // runs won't clear highlights after the user stops playback.
+        this.state.playSession = (this.state.playSession || 0) + 1;
+        const __playSession = this.state.playSession;
+        // Ensure a visible DOM-attached visual object exists for timing/highlights
+        // and also obtain a playback-only visual object for synth initialization.
+        let displayVObj = this.state.lastVisualObj || null;
+        if (!displayVObj) {
+          try { displayVObj = this.render(true); } catch(_) { displayVObj = null; }
+        }
+        // Build playback-only visual object (non-DOM) for the synth
         const vObj = this.render(true, true);
         if (!vObj) throw new Error('render failed');
-        // If highlight is enabled and SynthController exists, use it to drive both audio and cursor
-        // Disabled for now to ensure stable playback path; use TimingCallbacks instead
-        if (false && this.state.enableHighlight && ABCJS?.synth?.SynthController) {
-          // Clean up any existing controller
-          try { this.state.synthControl?.pause && this.state.synthControl.pause(); } catch(_) {}
-          try { this.state.synthControl?.stop && this.state.synthControl.stop(); } catch(_) {}
-          // Build cursor control callbacks
-          const cursorControl = {
-            onStart: () => { this.clearHighlight(); },
-            onEvent: (ev) => {
-              if (!ev) { this.clearHighlight(); return; }
-              this.clearHighlight();
-              if (ev.elements) {
-                try {
-                  ev.elements.forEach(set => set.forEach(el => {
-                    if (!el) return;
-                    // Save previous styles
-                    if (el.dataset) {
-                      el.dataset.prevFill = el.getAttribute('fill') ?? '__unset__';
-                      el.dataset.prevStroke = el.getAttribute('stroke') ?? '__unset__';
-                    }
-                    el.classList && el.classList.add('abc-current-note');
-                    el.setAttribute('fill', '#f59e0b');
-                    el.setAttribute('stroke', '#f59e0b');
-                    this.state.highlighted.push(el);
-                    // Also color children inside the element (paths, etc.)
-                    try {
-                      el.querySelectorAll && el.querySelectorAll('path,polygon,polyline,use,ellipse,circle,rect').forEach(ch => {
-                        if (ch.dataset) {
-                          ch.dataset.prevFill = ch.getAttribute('fill') ?? '__unset__';
-                          ch.dataset.prevStroke = ch.getAttribute('stroke') ?? '__unset__';
-                        }
-                        ch.classList && ch.classList.add('abc-current-note');
-                        ch.setAttribute('fill', '#f59e0b');
-                        ch.setAttribute('stroke', '#f59e0b');
-                        this.state.highlighted.push(ch);
-                      });
-                    } catch (_) {}
-                  }));
-                } catch(_) {}
-              }
-            },
-            onFinished: () => {
-              this.state.isPlaying = false;
-              this.updatePlayButton();
-              this.clearHighlight();
-            },
-            // You can tweak these for smoother cursor
-            beatSubdivisions: 2,
-            lineEndAnticipation: 0
-          };
-          // Create/load controller
-          const sc = new ABCJS.synth.SynthController();
-          sc.load(this.state.synthUiEl, cursorControl, { displayPlay: false, displayProgress: false });
-          this.state.synthControl = sc;
-          // Configure options (use our soundfont mapping)
-          // userAction must be true when called from a click handler to satisfy autoplay policies
-          await sc.setTune(vObj, true, { midiTranspose: (this.state.vt||0), program: 0, soundFontUrl: 'https://paulrosen.github.io/abcjs/audio/soundfont/acoustic_grand_piano-mp3/' });
-          // Clear previous timeouts
-          if (this.state.playFinishTimer) { try { clearTimeout(this.state.playFinishTimer); } catch(_) {} this.state.playFinishTimer = null; }
-          if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
-          // Start via controller (handles highlight + audio)
-          const startP = sc.play();
-          this.state.isPlaying = true;
-          this.updatePlayButton();
-          if (startP && typeof startP.then === 'function') {
-            startP.then(() => {
-              this.state.isPlaying = false;
-              this.updatePlayButton();
-              this.clearHighlight();
-            }).catch(() => {
-              this.state.isPlaying = false;
-              this.updatePlayButton();
-              this.clearHighlight();
-            });
-          }
-          // Also set watchdog by duration if available
+        // Default path: our CreateSynth, optional TimingCallbacks
+        await this.ensureSynth(vObj);
+        if (this.state.enableHighlight) {
+          // Ensure a DOM-attached visual object is available for timing callbacks.
           try {
-            const d = Number(sc.synth && sc.synth.duration);
-            if (d && isFinite(d) && d > 0) {
-              this.state.finishTimeout = setTimeout(() => {
-                this.state.isPlaying = false;
-                this.updatePlayButton();
-                this.clearHighlight();
-                this.state.finishTimeout = null;
-              }, Math.ceil(d * 1000) + 250);
+            if (!this.state.lastVisualObj) {
+              try { this.render(); } catch(_) {}
             }
           } catch(_) {}
-        } else {
-          // Default path: our CreateSynth, optional TimingCallbacks
-          await this.ensureSynth(vObj);
-          if (this.state.enableHighlight) {
-            // Ensure a DOM-attached visual object is available for timing
-            // callbacks. If we only have a playback-only visual object (vObj)
-            // create a visible render so `state.lastVisualObj` points at the
-            // DOM-attached visual object that TimingCallbacks can use.
-            try {
-              if (!this.state.lastVisualObj) {
-                try { this.render(); } catch(_) {}
-              }
-            } catch(_) {}
-            // Ensure transient highlights/cursor are cleared so timing begins
-            // at the first note consistently.
-            try { this._clearTransientHighlights(); } catch(_) {}
-            try { this._clearCursor(); } catch(_) {}
-            // TimingCallbacks needs a DOM-attached visual object so it can
-            // find and color SVG elements. Use the displayed visual object
-            // (this.state.lastVisualObj) when available.
-            const displayVObj = this.state.lastVisualObj || vObj;
-            const timer = this.installTiming(displayVObj);
-            if (timer && timer.start) timer.start(0);
-          } else {
-            if (this.state.timer && this.state.timer.stop) { try { this.state.timer.stop(); } catch(_) {} }
-            this.clearHighlight();
+          // Ensure transient highlights/cursor are cleared so timing begins at the first note consistently.
+          try { this._clearTransientHighlights(); } catch(_) {}
+          try { this._clearCursor(); } catch(_) {}
+          // Prefer the visible display VObj we ensured above; fall back to whatever vObj we have.
+          const useDisplay = this.state.lastVisualObj || displayVObj || vObj;
+          let timer = this.installTiming(useDisplay);
+          // Defensive retry if needed
+          if (!timer) {
+            try { this.render(); } catch(_) {}
+            try { timer = this.installTiming(this.state.lastVisualObj || useDisplay); } catch(_) { timer = null; }
           }
-          // Clear any previous finish polling/timeouts
-          if (this.state.playFinishTimer) { try { clearTimeout(this.state.playFinishTimer); } catch(_) {} this.state.playFinishTimer = null; }
-          if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
-          const startResult = this.state.synth.start();
-          this.state.isPlaying = true;
-          this.updatePlayButton();
-          // Reapply render scaling after playback starts in case synth or
-          // controller operations mutated SVG sizing.
-          try { this.applyRenderScale(); } catch(_) {}
-          // Duration-based watchdog to ensure UI resets even if callbacks fail
-          try {
-            const d = Number(this.state.synth && this.state.synth.duration);
-            if (d && isFinite(d) && d > 0) {
-              this.state.finishTimeout = setTimeout(() => {
+          if (timer && timer.start) timer.start(0);
+        } else {
+          if (this.state.timer && this.state.timer.stop) { try { this.state.timer.stop(); } catch(_) {} }
+          this.clearHighlight();
+        }
+        // Clear any previous finish polling/timeouts
+        if (this.state.playFinishTimer) { try { clearTimeout(this.state.playFinishTimer); } catch(_) {} this.state.playFinishTimer = null; }
+        if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
+        const startResult = this.state.synth.start();
+        this.state.isPlaying = true;
+        this.updatePlayButton();
+        // Reapply render scaling after playback starts
+        try { this.applyRenderScale(); } catch(_) {}
+        // Duration-based watchdog
+        try {
+          const d = Number(this.state.synth && this.state.synth.duration);
+          if (d && isFinite(d) && d > 0) {
+            this.state.finishTimeout = setTimeout(() => {
+              this.state.isPlaying = false;
+              this.updatePlayButton();
+              if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
+              this.clearHighlight();
+              this.state.finishTimeout = null;
+            }, Math.ceil(d * 1000) + 250);
+          }
+        } catch(_) {}
+        // Handle playback finish to toggle Stop -> Play automatically
+        if (startResult && typeof startResult.then === 'function') {
+          startResult.then(() => {
+            if (this.state.playSession !== __playSession) return;
+            this.state.isPlaying = false;
+            this.updatePlayButton();
+            if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
+            this.clearHighlight();
+            if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
+          }).catch(() => {
+            if (this.state.playSession !== __playSession) return;
+            this.state.isPlaying = false;
+            this.updatePlayButton();
+            if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
+            this.clearHighlight();
+            if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
+          });
+        } else {
+          // Fallback: poll isRunning if no promise
+          const poll = () => {
+            try {
+              if (this.state.playSession !== __playSession) { this.state.playFinishTimer = null; return; }
+              if (!this.state.synth || !this.state.synth.isRunning) {
+                if (this.state.playSession !== __playSession) { this.state.playFinishTimer = null; return; }
                 this.state.isPlaying = false;
                 this.updatePlayButton();
+                this.state.playFinishTimer = null;
                 if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
                 this.clearHighlight();
-                this.state.finishTimeout = null;
-              }, Math.ceil(d * 1000) + 250);
-            }
-          } catch(_) {}
-          // Handle playback finish to toggle Stop -> Play automatically
-          if (startResult && typeof startResult.then === 'function') {
-            startResult.then(() => {
-              this.state.isPlaying = false;
-              this.updatePlayButton();
-              if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
-              this.clearHighlight();
-              if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
-            }).catch(() => {
-              this.state.isPlaying = false;
-              this.updatePlayButton();
-              if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
-              this.clearHighlight();
-              if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
-            });
-          } else {
-            // Fallback: poll isRunning if no promise
-            const poll = () => {
-              try {
-                if (!this.state.synth || !this.state.synth.isRunning) {
-                  this.state.isPlaying = false;
-                  this.updatePlayButton();
-                  this.state.playFinishTimer = null;
-                  if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
-                  this.clearHighlight();
-                  if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
-                  return;
-                }
-              } catch(_) {}
-              this.state.playFinishTimer = setTimeout(poll, 500);
-            };
+                if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
+                return;
+              }
+            } catch(_) {}
             this.state.playFinishTimer = setTimeout(poll, 500);
-          }
+          };
+          this.state.playFinishTimer = setTimeout(poll, 500);
         }
       } catch (e) {
         console.error('Play failed:', e);
@@ -764,6 +691,8 @@
       if (this.state.timer && this.state.timer.stop) { try { this.state.timer.stop(); } catch(_) {} }
       // Clear transient timer highlights and cursor artifacts so the next
       // play installs fresh timing highlights from the start.
+      // Invalidate any pending async finish handlers
+      try { this.state.playSession = (this.state.playSession || 0) + 1; } catch(_) {}
       try { this._clearTransientHighlights(); } catch(_) {}
       try { this._clearCursor(); } catch(_) {}
       try { this.state.timer = null; } catch(_) {}
@@ -775,139 +704,71 @@
     restartPlayback: async function() {
       try {
         const vObj = this.render(true, true);
-        // If highlight is enabled and SynthController exists, prefer it for restart
-        if (false && this.state.enableHighlight && ABCJS?.synth?.SynthController) {
-          try { this.state.synthControl?.pause && this.state.synthControl.pause(); } catch(_) {}
-          try { this.state.synthControl?.stop && this.state.synthControl.stop(); } catch(_) {}
-          const cursorControl = {
-            onStart: () => { this.clearHighlight(); },
-            onEvent: (ev) => {
-              if (!ev) { this.clearHighlight(); return; }
-              this.clearHighlight();
-              if (ev.elements) {
-                try {
-                  ev.elements.forEach(set => set.forEach(el => {
-                    if (!el) return;
-                    if (el.dataset) {
-                      el.dataset.prevFill = el.getAttribute('fill') ?? '__unset__';
-                      el.dataset.prevStroke = el.getAttribute('stroke') ?? '__unset__';
-                    }
-                    el.classList && el.classList.add('abc-current-note');
-                    el.setAttribute('fill', '#f59e0b');
-                    el.setAttribute('stroke', '#f59e0b');
-                    this.state.highlighted.push(el);
-                  }));
-                } catch(_) {}
-              }
-            },
-            onFinished: () => {
-              this.state.isPlaying = false;
-              this.updatePlayButton();
-              this.clearHighlight();
-            },
-            beatSubdivisions: 2,
-            lineEndAnticipation: 0
-          };
-          const sc = new ABCJS.synth.SynthController();
-          sc.load(this.state.synthUiEl, cursorControl, { displayPlay: false, displayProgress: false });
-          this.state.synthControl = sc;
-          // Prefer the DOM-attached visual object for controller highlight behavior
-          await sc.setTune(this.state.lastVisualObj || vObj, true, { midiTranspose: (this.state.vt||0), program: 0, soundFontUrl: 'https://paulrosen.github.io/abcjs/audio/soundfont/acoustic_grand_piano-mp3/' });
-          if (this.state.playFinishTimer) { try { clearTimeout(this.state.playFinishTimer); } catch(_) {} this.state.playFinishTimer = null; }
-          if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
-          const p = sc.play();
-          this.state.isPlaying = true;
-          this.updatePlayButton();
-          if (p && typeof p.then === 'function') {
-            p.then(() => {
-              this.state.isPlaying = false;
-              this.updatePlayButton();
-              this.clearHighlight();
-            }).catch(() => {
-              this.state.isPlaying = false;
-              this.updatePlayButton();
-              this.clearHighlight();
-            });
+        await this.ensureSynth(vObj);
+        if (this.state.enableHighlight) {
+          // Ensure DOM-attached visualObj exists for highlight callbacks
+          if (!this.state.lastVisualObj) { try { this.render(); } catch(_) {} }
+          try { this._clearTransientHighlights(); } catch(_) {}
+          try { this._clearCursor(); } catch(_) {}
+          const useDisplay = this.state.lastVisualObj || vObj;
+          let timer = this.installTiming(useDisplay);
+          if (!timer) {
+            try { this.render(); } catch(_) {}
+            try { timer = this.installTiming(this.state.lastVisualObj || useDisplay); } catch(_) { timer = null; }
           }
-          try {
-            const d = Number(sc.synth && sc.synth.duration);
-            if (d && isFinite(d) && d > 0) {
-              this.state.finishTimeout = setTimeout(() => {
+          if (timer && timer.start) timer.start(0);
+        } else {
+          if (this.state.timer && this.state.timer.stop) { try { this.state.timer.stop(); } catch(_) {} }
+          this.clearHighlight();
+        }
+        if (this.state.playFinishTimer) { try { clearTimeout(this.state.playFinishTimer); } catch(_) {} this.state.playFinishTimer = null; }
+        if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
+        const startResult = this.state.synth.start();
+        this.state.isPlaying = true;
+        this.updatePlayButton();
+        try { this.applyRenderScale(); } catch(_) {}
+        try {
+          const d = Number(this.state.synth && this.state.synth.duration);
+          if (d && isFinite(d) && d > 0) {
+            this.state.finishTimeout = setTimeout(() => {
+              this.state.isPlaying = false;
+              this.updatePlayButton();
+              if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
+              try { this._clearCursor(); } catch(_) {}
+              this.state.finishTimeout = null;
+            }, Math.ceil(d * 1000) + 250);
+          }
+        } catch(_) {}
+        if (startResult && typeof startResult.then === 'function') {
+          startResult.then(() => {
+            this.state.isPlaying = false;
+            this.updatePlayButton();
+            if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
+            try { this._clearCursor(); } catch(_) {}
+            if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
+          }).catch(() => {
+            this.state.isPlaying = false;
+            this.updatePlayButton();
+            if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
+            try { this._clearCursor(); } catch(_) {}
+            if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
+          });
+        } else {
+          const poll = () => {
+            try {
+              if (!this.state.synth || !this.state.synth.isRunning) {
                 this.state.isPlaying = false;
                 this.updatePlayButton();
-                this.clearHighlight();
-                this.state.finishTimeout = null;
-              }, Math.ceil(d * 1000) + 250);
-            }
-          } catch(_) {}
-        } else {
-          // Default restart path
-          await this.ensureSynth(vObj);
-          if (this.state.enableHighlight) {
-            // Ensure DOM-attached visualObj exists for highlight callbacks
-            try {
-              if (!this.state.lastVisualObj) {
-                try { this.render(); } catch(_) {}
+                this.state.playFinishTimer = null;
+                if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
+                try { this._clearCursor(); } catch(_) {}
+                if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
+                return;
               }
             } catch(_) {}
-            try { this._clearTransientHighlights(); } catch(_) {}
-            try { this._clearCursor(); } catch(_) {}
-            const displayVObj = this.state.lastVisualObj || vObj;
-            const timer = this.installTiming(displayVObj);
-            if (timer && timer.start) timer.start(0);
-          } else {
-            if (this.state.timer && this.state.timer.stop) { try { this.state.timer.stop(); } catch(_) {} }
-            this.clearHighlight();
-          }
-          if (this.state.playFinishTimer) { try { clearTimeout(this.state.playFinishTimer); } catch(_) {} this.state.playFinishTimer = null; }
-          if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
-          const startResult = this.state.synth.start();
-          this.state.isPlaying = true;
-          this.updatePlayButton();
-          try { this.applyRenderScale(); } catch(_) {}
-          try {
-            const d = Number(this.state.synth && this.state.synth.duration);
-            if (d && isFinite(d) && d > 0) {
-                this.state.finishTimeout = setTimeout(() => {
-                  this.state.isPlaying = false;
-                  this.updatePlayButton();
-                  if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
-                  try { this._clearCursor(); } catch(_) {}
-                  this.state.finishTimeout = null;
-                }, Math.ceil(d * 1000) + 250);
-              }
-          } catch(_) {}
-            if (startResult && typeof startResult.then === 'function') {
-            startResult.then(() => {
-              this.state.isPlaying = false;
-              this.updatePlayButton();
-              if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
-              try { this._clearCursor(); } catch(_) {}
-              if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
-            }).catch(() => {
-              this.state.isPlaying = false;
-              this.updatePlayButton();
-              if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
-              try { this._clearCursor(); } catch(_) {}
-              if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
-            });
-          } else {
-            const poll = () => {
-              try {
-                if (!this.state.synth || !this.state.synth.isRunning) {
-                  this.state.isPlaying = false;
-                  this.updatePlayButton();
-                  this.state.playFinishTimer = null;
-                  if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
-                  try { this._clearCursor(); } catch(_) {}
-                  if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
-                  return;
-                }
-              } catch(_) {}
-              this.state.playFinishTimer = setTimeout(poll, 500);
-            };
             this.state.playFinishTimer = setTimeout(poll, 500);
-          }
+          };
+          this.state.playFinishTimer = setTimeout(poll, 500);
         }
       } catch (e) {
         console.error('Restart playback failed:', e);
@@ -1038,6 +899,8 @@
         const paperEl = document.getElementById(this.state.paperId);
         if (!input || !paperEl) return;
         paperEl.innerHTML = '';
+        // NEW: reset cursor state because the node was just removed
+        try { this.state._cursorBallInit = false; this.state.cursorBallEl = null; } catch(_) {}
         try {
           paperEl.style.position = paperEl.style.position || 'relative';
           paperEl.style.display = paperEl.style.display || 'flex';
@@ -1085,7 +948,7 @@
         }
         try { this.updateKeyLabel(playbackFiltered); } catch(_) {}
         try { this.applyThemeInline(); } catch(_) {}
-        try { this.applyHeaderVisibilityToSvg(); } catch(_) {}
+        try { this.applyHeaderVisibilityToSvg?.(); } catch(_) {}
         try { this.ensureResponsiveSvgs(); } catch(_) {}
         try { this.updatePaperHeight(); } catch(_) {}
 
@@ -1112,8 +975,24 @@
       try { if (this.state.cursorBallEl) this.state.cursorBallEl.style.opacity = '0'; } catch(_) {}
       (this.state.highlighted || []).forEach(el => {
         try {
-          // Restore previous presentation attributes if we changed them
+          // Restore previous inline styles (important) and presentation attrs
           if (el && el.dataset) {
+            if (el.dataset.prevStyleFill !== undefined) {
+              const v = el.dataset.prevStyleFill;
+              if (v) el.style.setProperty('fill', v);
+              else el.style.removeProperty('fill');
+              delete el.dataset.prevStyleFill;
+            } else {
+              el.style.removeProperty('fill');
+            }
+            if (el.dataset.prevStyleStroke !== undefined) {
+              const v = el.dataset.prevStyleStroke;
+              if (v) el.style.setProperty('stroke', v);
+              else el.style.removeProperty('stroke');
+              delete el.dataset.prevStyleStroke;
+            } else {
+              el.style.removeProperty('stroke');
+            }
             if (el.dataset.prevFill !== undefined) {
               if (el.dataset.prevFill === '__unset__') el.removeAttribute('fill');
               else el.setAttribute('fill', el.dataset.prevFill);
@@ -1144,6 +1023,8 @@
       }
     } catch(_) {}
     try { if (this.state.cursorBallEl) this.state.cursorBallEl.style.opacity = '0'; } catch(_) {}
+    // NEW: ensure stale references don't block re-creation
+    try { this.state._cursorBallInit = false; this.state.cursorBallEl = null; } catch(_) {}
     try {
       if (this._highlightUnlockTimer) { try { clearTimeout(this._highlightUnlockTimer); } catch(_) {} this._highlightUnlockTimer = null; }
       this.state._highlightLocked = false;
@@ -1158,16 +1039,23 @@
     } catch(_) {}
     try {
       this.state.timerHighlighted = [];
+      const highlightFill = '#f59e0b';
       elems.forEach(el => {
         if (!el) return;
         try {
           if (el.dataset) {
+            // Save previous inline styles and presentation attrs
+            const prevStyleFill = el.style.getPropertyValue('fill');
+            const prevStyleStroke = el.style.getPropertyValue('stroke');
+            if (prevStyleFill !== undefined) el.dataset.prevStyleFill = prevStyleFill;
+            if (prevStyleStroke !== undefined) el.dataset.prevStyleStroke = prevStyleStroke;
             el.dataset.prevFill = el.getAttribute('fill') ?? '__unset__';
             el.dataset.prevStroke = el.getAttribute('stroke') ?? '__unset__';
           }
           el.classList && el.classList.add('abc-current-note');
-          el.setAttribute('fill', '#f59e0b');
-          el.setAttribute('stroke', '#f59e0b');
+          // Critical: inline style with !important to beat theme CSS
+          el.style.setProperty('fill', highlightFill, 'important');
+          el.style.setProperty('stroke', highlightFill, 'important');
           this.state.timerHighlighted.push(el);
         } catch(_) {}
       });
@@ -1179,6 +1067,24 @@
       (this.state.timerHighlighted || []).forEach(el => {
         try {
           if (!el) return;
+          // Restore inline styles (or remove if none)
+          if (el.dataset && el.dataset.prevStyleFill !== undefined) {
+            const v = el.dataset.prevStyleFill;
+            if (v) el.style.setProperty('fill', v);
+            else el.style.removeProperty('fill');
+            delete el.dataset.prevStyleFill;
+          } else {
+            el.style.removeProperty('fill');
+          }
+          if (el.dataset && el.dataset.prevStyleStroke !== undefined) {
+            const v = el.dataset.prevStyleStroke;
+            if (v) el.style.setProperty('stroke', v);
+            else el.style.removeProperty('stroke');
+            delete el.dataset.prevStyleStroke;
+          } else {
+            el.style.removeProperty('stroke');
+          }
+          // Restore presentation attributes
           if (el.dataset) {
             if (el.dataset.prevFill !== undefined) {
               if (el.dataset.prevFill === '__unset__') el.removeAttribute('fill');
@@ -1216,11 +1122,12 @@
         beatSubdivisions: 2,
         beatCallback: (beat, totalBeats, totalMs, position) => {
           if (!this.state.enableHighlight) return;
-          // Lazy create cursor bar
-          if (!this.state._cursorBallInit) {
+          // Robust cursor creation: (re)build if missing, detached, or not found
+          if (!this.state.cursorBallEl || !this.state.cursorBallEl.isConnected || !document.getElementById('abc-cursor-bar')) {
             try {
               const paper = document.getElementById(this.state.paperId);
-              if (paper && !document.getElementById('abc-cursor-bar')) {
+              if (paper) {
+                try { const old = document.getElementById('abc-cursor-bar'); if (old) old.remove(); } catch(_) {}
                 const el = document.createElement('div');
                 el.id = 'abc-cursor-bar';
                 el.style.position = 'absolute';
@@ -1235,8 +1142,8 @@
                 el.style.transition = 'opacity 120ms ease, transform 120ms ease, height 120ms ease';
                 paper.appendChild(el);
                 this.state.cursorBallEl = el;
+                this.state._cursorBallInit = true;
               }
-              this.state._cursorBallInit = true;
             } catch(_) {}
           }
           const paper = document.getElementById(this.state.paperId);
@@ -1273,7 +1180,7 @@
                   if (r.bottom > maxB) maxB = r.bottom;
                 } catch(_) {}
               });
-                if (isFinite(minL) && isFinite(minT) && isFinite(maxR) && isFinite(maxB)) {
+              if (isFinite(minL) && isFinite(minT) && isFinite(maxR) && isFinite(maxB)) {
                 const width = Math.max(0, maxR - minL);
                 const height = Math.max(0, maxB - minT);
                 const barW = 16;
@@ -1282,9 +1189,9 @@
                 ball.style.height = `${Math.round(height)}px`;
                 ball.style.transform = `translate(${Math.round(left)}px, ${Math.round(topPx)}px)`;
                 ball.style.opacity = '0.35';
-                  // Record that we positioned via DOM elements so beatCallback
-                  // won't override with viewBox-based coords immediately after.
-                  try { this.state._lastElementPlacementTime = Date.now(); } catch(_) {}
+                // Record that we positioned via DOM elements so beatCallback
+                // won't override with viewBox-based coords immediately after.
+                try { this.state._lastElementPlacementTime = Date.now(); } catch(_) {}
                 return;
               }
             }
@@ -1381,7 +1288,7 @@
                     ball.style.height = `${Math.round(hPx)}px`;
                     ball.style.transform = `translate(${Math.round(left)}px, ${Math.round(topPx)}px)`;
                     ball.style.opacity = '0.35';
-                    // Lock beatCallback updates briefly to avoid it overriding this DOM-based placement
+                    // Lock beatCallback updates briefly to avoid overriding this DOM-based placement
                     try {
                       this.state._highlightLocked = true;
                       if (this._highlightUnlockTimer) { try { clearTimeout(this._highlightUnlockTimer); } catch(_) {} this._highlightUnlockTimer = null; }
@@ -1405,9 +1312,9 @@
   // --- Key utilities ---
   Viewer.parseKeyFromAbc = function(abc) {
     if (!abc) return null;
-    const m = abc.match(/^K:\s*([^\n\r]+)/m);
+    const m = abc.match(/^(K:\s*[^\n\r]+)/m);
     if (!m) return null;
-    const raw = m[1].trim();
+    const raw = m[1].replace(/^K:\s*/, '').trim();
     // Root note like C, G, D#, Eb
     const m2 = raw.match(/^([A-Ga-g])([#b]?)/);
     if (!m2) return null;
