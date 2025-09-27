@@ -449,607 +449,607 @@ Q:1/4=120
 
 X:32
 T:Garrett Barry's
-S:The Session: https://thesession.org/tunes/544#setting544
+S:The Session: https://thesession.org/tunes/544#setting55354
 C:Traditional
 R:jig
 K:G
 M:6/8
 L:1/8
 Q:1/4=113
-A|: DEF ~G3| AGE c2A| dcA d2e| fed cAG|
-| ~F3 GFG| AGE (3Bcd e| dcA GEA| DED D2 A:|
-|: dcA d2e| fed (3efg e| dcA c2d| efd ecA|
-| dAA d2e| fed (3efg e| dcA GEA| DED D2 A:|
+A|:"D" DEF GFG|"Am" AGE "C" c2 A|"D" dcA d2 e|"D" fed "C" cAG|
+|"D" FEF GFG|"Am" AGE cde|"C" dcA "G" GEA|"D" DED D2 A:|
+|:"D" dcA d2 e|"D" fed "Am" efe|"C" dcA c2 d|"Am" egd "C" ecA|
+|"D" dcA d2 e|"D" fed "Am" efe|"C" dcA "G" GEA|1"D" DED D2 A:|2 "D" DED D3||
 
 X:33
 T:Geese In The Bog, The
-S:The Session: https://thesession.org/tunes/43#setting12461
+S:The Session: https://thesession.org/tunes/43#setting55355
 C:Traditional
 R:jig
 K:Ador
 M:6/8
 L:1/8
 Q:1/4=113
-B |: cEE GEE| cEE GAB| cEE GED| EAA A2B| 
-| cEE GEE| cEE GAB| cBA GED| EAA A2 B:|
-|: cde ged| eaf ged| cde ged| eag ~a3| 
-| cde ged| eaf ged| cBA GED|1 EAA A2 B :|2 EAA A3 |]
+B |: "C"cEE "G"GEE| "C"cEE GAB| cEE "G"GED| "Am"EAA A2B| 
+| "C"cEE "G"GEE| "C"cEE GAB| cBA "G"GED|"Am" EAA A2 B:|
+|: "C"cde "G"ged| "Am"eaf ged| "C"cde "G"ged| "Am"eag ~a3| 
+| "C"cde "G"ged| "Am"eaf ged| "C"cBA "G"GED|1 "Am"EAA A2 B :|2 "Am"EAA A3 |]
 
 X:34
 T:Gravel Walks, The
-S:The Session: https://thesession.org/tunes/42#setting42
+S:The Session: https://thesession.org/tunes/42#setting39424
 C:Traditional
 R:reel
 K:Ador
 M:4/4
 L:1/8
 Q:1/4=120
-|: A2 eA (3cBA eA| A2 eA BAGB| A2 eA (3Bcd ef||gedc BAGB:| 
-| A2 aA gAfA| A2 eA BAGB| A2 aA gAfA| gedc BAGB| 
-| A2 aA gAfA| A2 eA BAGB| ABcd efga| gedc BAGB|
-|: (3cBA BG A2 AB| cAAd BAGB| (3cBA BG ABcd| efge dBGB:|
-|: c2 gc acgc| c2 gc BAGB| c2 gc acga| gedc BAGB| 
-| c2 gc acgc| c2 gc BAGB| ABcd efga| gedc BAGB:|
+|:"Am"A2 eA BA eA|A2 eA "G"BA GB|"Am"A2 eA B/c/d ef|"C"ge dc "G"BA GB:|
+|"Am"A2 aA gA fA|~A2 eA "G"BA GB|"Am"A2 aA gA fa|"C"ge dc "G"BA GB|
+|"Am"A2 aA gA fA|~A2 eA "G"BA GB|"Am"AB cd ef ga|"C"ge dc "G"BA GB||
+|:"Am"cA AG A3 B|cA ~A2 "G"dB GB|"Am"cA AG A2 B/c/d|"C"ef ge "G"dB GB:|
+|"C"c2 gc ac gc|~c2 gc "G"BA GB|"C"c2 gc ac ga|ge dc "G"BA GB|
+|"C"c2 gc ac gc|"C"~c2 gc "G"BA GB|"Am"AB cd ef ga|"C"ge dc "G"BA GB||
 
 X:35
 T:Hag At The Churn, The
-S:The Session: https://thesession.org/tunes/829#setting829
+S:The Session: https://thesession.org/tunes/829#setting55356
 C:Traditional
 R:jig
 K:Dmix
 M:6/8
 L:1/8
 Q:1/4=113
-|: A2G ADD| A2G Adc| A2G ADD| EFG EFG:|
-| AdB c3| Add efg| AdB c2A| GEG AED|
-| AdB c3| Add efg| age dcA| GEG AED||
+|"D"A2G ADD|A2G Adc|A2G ADD|"C"EFG "Am7"EFG|
+|"D"AB/A/G ADD|AB/A/G Adc|AB/A/G ADD|"C"EFG "Am7"EFG|
+|"D"AdB "Am7"c3|Add efg|"D"AdB "Am7"c2G|E3 "C"GED|
+|"D"AdB "Am7"c3|Add efg|"C"fge "G"dcA|"Am7"GEF "D"GED|
 
 X:36
 T:Harvest Home, The
-S:The Session: https://thesession.org/tunes/49#setting49
+S:The Session: https://thesession.org/tunes/49#setting21792
 C:Traditional
 R:hornpipe
 K:D
 M:4/4
 L:1/8
 Q:1/4=138
-AF|: DAFA DAFA| defe dcBA| eAfA gAfA| (3efe (3dcB AGFE|
-| DAFA DAFA| defe dcBA| eAfA gfec|1 d2 f2 d2 AF :|2 d2 f2 d2 cd |]
-|: eAAA fAAA| gAfA eAAA| eAfA gAfA| (3efe (3dcB (3ABA (3GFE|
-| DAFA DAFA| defe dcBA| eAfA gfec|1 d2 f2 d2 cd:|2 d2 f2 d4|]
+"A"AF|:"D"DAFA DAFA|"D"defe dcBA|"A"eAfA gAfA|"Em"(3efe (3dcB "A7"(3ABA (3GFE|
+|"D"DAFA DAFA|"D"defe dcBA|"A7"eAfA gfec|1 "D"d2 f2 d2 "A"AF:|2 "D"d2 f2 d2 cd||
+|:"A"eAA/G/A "D"fAA/G/A|"A7"gAfA "D"eAA/G/A|"A"eAfA gAfA|"Em"(3efe (3dcB "A7"(3ABA (3GFE|
+|"D"DAFA DAFA|"D"defe dcBA|"A7"eAfA gfec|1 "D"d2 f2 d2 cd:|2 "D"d2 f2 d4||
 
 X:37
 T:Haste To The Wedding
-S:The Session: https://thesession.org/tunes/582#setting582
+S:The Session: https://thesession.org/tunes/582#setting21777
 C:Traditional
 R:jig
 K:D
 M:6/8
 L:1/8
 Q:1/4=113
-|: AFA Agf| ede fdB| AFA dAF| EFE EFG|
-| AFA Agf| ede fdB| A2g faf| ded d3:| 
-|: afa afa| bgb bgb| afa agf| ede efg|
-| a3 f3| ede fdB| A2g faf| ded d3:|
+A|:"D"AFA Agf|"G"ede fdB|"D"AFA AGF|"A"EFE EFG|
+|"D"AFA Agf|"G"ede fdB|"A"AFg faf|1 "D"ded d2A:|2 "D"ded d2a||
+|:"D"afa afa|"G"bgb bgb|"D"afa agf|"A"efe efg|
+|"D"a3 f3|"G"ede fdB|"A"AFg faf|1 "D"ded d2a:|2 "D"ded d3||
 
 X:38
 T:Humours Of Glendart, The
-S:The Session: https://thesession.org/tunes/45#setting45
+S:The Session: https://thesession.org/tunes/45#setting46676
 C:Traditional
 R:jig
 K:D
 M:6/8
 L:1/8
 Q:1/4=113
-|: BAF AFE| FED EFA| BAF AFE| FEE E2A|
-| BAF AFE| FED FAB| dcB AFE| FDD D2A:|
-| def d2B| ABA AFA| def d2d| ede fdB|
-| def edB| dBA ABc| dcB AFE| FDD D2A:|
+|:"D"BAF ADD|FEF DFA|BAF ADD|"A"FEE E2A|
+|"D"BAF ADD|FEF DFA|"G"dcB AFE|"D"FDD D2D:|
+|:"Bm"def d2B|"G"ABA AFD|"Bm"def d2d|"A"ede fdB|
+|"Bm"def d2B|"G"dBA ABc|"A"dcB AFE|"D"FDD D2A:|
 
 X:39
 T:Humours Of Tulla, The
-S:The Session: https://thesession.org/tunes/141#setting13269
+S:The Session: https://thesession.org/tunes/141#setting39245
 C:Traditional
 R:reel
 K:D
 M:4/4
 L:1/8
 Q:1/4=120
-|: d2Ad BdAB| d2fd edBc| d2Ad BdAd|1 (3Bcd ef g2fe:|2 (3Bcd ef g2fg|]
-|: af~f2 df~f2| af~f2 g2fg| af~f2 dfed|1 (3Bcd ef g2fg:|2 (3Bcd ef g2fe|]
+|:"D"d2 Ad BdAB|d2 fd "G"edBc|"D"d2 Ad BdAd|
+[1 "G"(3Bcd ef "A"gefe:|2 "G"(3Bcd ef "A"g2 fg||
+|:"D"afff dfff|afff "A"geee|"D"afff dfed|
+[1 "G"(3Bcd ef "A"g2 fg:|2 "G"(3Bcd ef "A"g2 fe||
 
 X:40
 T:I Buried My Wife And Danced On Her Grave
-S:The Session: https://thesession.org/tunes/381#setting381
+S:The Session: https://thesession.org/tunes/381#setting55357
 C:Traditional
 R:jig
 K:Dmix
 M:6/8
 L:1/8
 Q:1/4=113
-|: DDD F2G| AdB cAF| GGG BAG| FFF GEA|
-| DDD F2G| AdB cAF| GGG BAG| AFD D2A:| 
-|: d2e fed| faf gfe| d2e fed| dcA dcA|
-| d2e fed| faf gfe| dcA BAG| AFD D3:|
+|: "D"DDD F2G| "D"AdB cAF| "G"GGG BAG| "D"FFF "A"GEA|
+| "D"DDD F2G| "D"AdB cAF|"G" GGG BAG|1 "A"AFD "D"D3:|2  "A"AFD "D"D2A|] 
+|: "D"d2e fed| "D"faf "A"gfe| "D"d2e fed| "C"dcA dcA|
+| "D"d2e fed| "D"faf "A"gfe| "D"dcA "G"BAG|1 "A"AFD "D"D2 A:|2  "A"AFD "D"D3|]
 
 X:41
 T:Inisheer
-S:The Session: https://thesession.org/tunes/211#setting211
+S:The Session: https://thesession.org/tunes/211#setting31778
 C:Traditional
 R:waltz
 K:Dmix
 M:3/4
 L:1/8
 Q:1/4=96
-|: B3A Bd| B3A Bd| E3B AB| D3B AG|
-| B3A Bd| B3A Bd| G3B A/G/F|1 G3E DG:|2 G3A Bd|]
-| e3f ed| B3A Bd| ef ed B/c/d| e3A Bd|
-| e3f ed| B3A Bd| G3B A/G/F|  G3A Bd|
-| e3f ed| B3A Bd| gf ed B/c/d| e3A Bd|
-| e3f ed| B3A Bd| D3B A/G/F| G6||
+D2|:"G"B3A B<d|"Em"B3A B<d|"C" E3B AB|"D" D3B A<G|
+|"G"B3A B<d|"Em"B3A B<d|"C" G3B "D"A/G/F|1 "G" G4D2:|2 "G"G3A Bd||
+|"C"e3f e<d|"G" B3A Bd|"C"ef ed B/c/d|
+|"C"e4 Bd|"Am"e3f e<d|"G" B3A B<d|"G" D3B "D"A/G/F|
+|"C"G3A Bd|"G"e3f e<d|"C" B3A Bd|"C" gf ed B/c/d|
+|"C"e4 Bd|"Am"e3f e<d|"G" B3A B<d|"G" D3B "D"A/G/F|"G" G4||
 
 X:42
 T:Irish Washerwoman, The
-S:The Session: https://thesession.org/tunes/92#setting92
+S:The Session: https://thesession.org/tunes/92#setting21778
 C:Traditional
 R:jig
 K:G
 M:6/8
 L:1/8
 Q:1/4=113
-|: BGG DGG| BGB dcB| cAA EAA| cAc edc|
-| BGG DGG| BGB dcB| cBc Adc| BGG G3:| 
-|: BGG DGG| BGB BAG| AFF DFF| AFA AGF|
-| EGG DGG| CGG B,GG| cBc Adc| BGG G3:|
+dc|:"G"BGG DGG|BGB dcB|"Am"cAA EAA|cAc "D"edc|
+|"G"BGG DGG|BGB dcB|"Am"cBc "D"Adc|1 "G"BGG Gdc:|2 "G"BGG Gga||
+|:"G"bgg dgg|bgb bag|"D"aff dff|afa agf|
+|"C"egg "G"dgg|"C"cgg "G"B2B|"Am"cBc "D"Adc|1 "G"BGG Gga:|2 "G"BGG G3||
 
 X:43
 T:Jig Of Slurs, The
-S:The Session: https://thesession.org/tunes/35#setting35
+S:The Session: https://thesession.org/tunes/35#setting41743
 C:Traditional
 R:jig
 K:D
 M:6/8
 L:1/8
 Q:1/4=113
-|: Add cdd| Bdd Add| Bdd Add| Bee edB| 
-| Add cdd| Bdd Add| Bdd cde| fec d3:|
-|: A2f fef| a2f fed| B2e ede| f2f edB|
-| A2f fef| a2f fed| Add cde| fec d3 :|
-K:Gmaj
-|: G2g gfg| aff gff| G2g gfg| aff g3|
-| G2g gfg| aff gff| e2e efg| fed e3:| 
-|: GBB Bdd| dee edB| GBB Bdd| dee efg|
-| GBB Bdd| dee edB| e2e efg| fed e3:|
+|:"D"Add cdd|"G"Bdd "D"Add|"G"Bdd "D"Add|"G"Bee "A"edB|
+|"D"Add cdd|"G"Bdd "D"Add|"G"Bdd "A"cde|"D"fec d3:|
+|:"D"A2f fef|a2f fed|"G"B2e ede|"A"f2f edB|
+|"D"A2f fef|a2f fed|"G"Add "A"cde|"D"fec d3:|
+|:"G"G2g gfg|"D"aff "G"gff|"G"G2g gfg|"D"aff "G"g3|
+|"G"G2g gfg|"D"aff "G"gff|"Em"e2e efg|"D"fed e3:|
+|:"G"GBB Bdd|dee edB|GBB Bdd|dee efg|
+|GBB Bdd|dee edB|"Em"e2e efg|"D"fed e3:|
 
 X:44
 T:Jimmy Ward's
-S:The Session: https://thesession.org/tunes/793#setting793
+S:The Session: https://thesession.org/tunes/793#setting47541
 C:Traditional
 R:jig
 K:G
 M:6/8
 L:1/8
 Q:1/4=113
-|: G3 GAB| AGE GED| GGG AGE| GED DEF|
-| G3 GAB| AGE GAB| cBA BGE|1 DED DEF:|2 DED D2B|]
-|: cBA BAG| ABA AGB| cBA BGE| DED GAB| 
-| cBA BAG| ABA ABc| dcB AGE|1 GED D2B:|2 GED DEF| G6|]
+|:"G"G3 GAB|AGE GED|GGG AGE|"D"GED DEF|
+|"G"G3 GAB|AGE GAB|cBA BGE|1 "D"DED DEF:|2 "D"DED D2B||
+|:"Am"cBA "G"BAG|"D"ABA AGB|"Am"cBA "G"BGE|"D"DED GAB|
+|"Am"cBA "G"BAG|"D"ABA ABc|dcB "Am"AGE|1 "D"GED D2B:|2 "D"GED DEF||
 
 X:45
 T:John Ryan's
-S:The Session: https://thesession.org/tunes/441#setting441
+S:The Session: https://thesession.org/tunes/441#setting28845
 C:Traditional
 R:polka
 K:D
 M:4/4
 L:1/8
 Q:1/4=120
-dd B/c/d/B/| AF ED| dd B/c/d/B/| AF E2|
-| dd B/c/d/B/| AF Ad| fd ec| d2 d2||
-| fd de/f/| gf ed| fd de/f/| gf a2|
-| fd de/f/| gf ed| fd ec| d2 d2||
+|:"D"dd "G"B/c/d/B/|"D"AF AF|"D"dd "G"B/c/d/B/|"A"AF "D"ED|
+|"D"dd "G"B/c/d/B/|"D"AF Ad/e/|"D"fd "A"ec|1 "D"d2 d2:|2 "D"d2 d"A7"d/e/||
+|"D"fd de/f/|"G"gf "A7"ed/e/|"D" fd Ad|"A7"fe/f/ a3/2g/|
+|"D"fd de/f/|"G"gf "A"ed/e/|"D"fd "A7"ec|1 "D"d2 "A7"dd/e/:|2 "D" d2 d2||
 
 X:46
 T:Julia Delaney's
-S:The Session: https://thesession.org/tunes/589#setting589
+S:The Session: https://thesession.org/tunes/589#setting39256
 C:Traditional
 R:reel
-K:Ddor
+K:Emin
 M:4/4
 L:1/8
 Q:1/4=120
-|: dcAG ~F2EF| ~E2 DE FD D2| dcAG FGAA| Addc d2 fe:|
-|: f2fe fagf| ecgc acgc| f2fe fagf| edcG Add2:|
+d|:"Em"edBA G2EG|"D"F2DF "Em"GEGB|edBA G2EG|"Am"Bee^d "B"efgf|
+"Em"edBA G2EG|"D"FEDF "Em"GEE^d|edBA "C"GEEG|1 "Bm"Bee^d "Em"e4:|2 "Bm"Bee^d "Em"e3f||
+|:g2gf gbag|"D"fdad bdad|"Em"gfef gbag|"Bm"fedf "Em"e^def|
+g2gf gbag|"D"fdad bdad|"Em"gfeg "C"fedc|1 "Bm"Bee^d "Em"e3f:|2 "Bm"Bee^d "Em"e4||
 
 X:47
 T:Kesh, The
-S:The Session: https://thesession.org/tunes/55#setting55
+S:The Session: https://thesession.org/tunes/55#setting31538
 C:Traditional
 R:jig
 K:G
 M:6/8
 L:1/8
 Q:1/4=113
-|: G3 GAB| A3 ABd| edd gdd| edB dBA|
-| GAG GAB| ABA ABd| edd gdd| BAF G3:| 
-|:B2B d2d| ege dBA| B2B dBG| ABA AGA|
-| BAB d^cd| ege dBd| gfg aga| bgg g3:|
+|:"G"G3 GAB|"D"A3 ABd|"C"edd gdd|edB "D"dBA|
+|"G"GAG GAB|"D"ABA ABd|"C"edd gdd|"D"BAF "G"G3:|
+|:"G"B2B dBd|"C"ege dBA|"G"B2B dBG|"D"A2 A AGA|
+|"G"B2B dBd|"C"ege dBd|"Am"gfg aga|"D"bgf "G"g3:|
 
 X:48
 T:Kid On The Mountain, The
-S:The Session: https://thesession.org/tunes/52#setting52
+S:The Session: https://thesession.org/tunes/52#setting47539
 C:Traditional
 R:slip jig
 K:Em
-M:6/8
+M:9/8
 L:1/8
 Q:1/4=113
-|: EFE FEF G2 F| E3 cBA BGE| EFE FED G2 A| BAG FAG FED:|
-|: BGB AFA G2 D| GAB dge dBA| BGB AFA G2 A| BAG FAG FED:| 
-|: gfg efe e2 f| gfg efg afd| gfg efe e2 a| bag fag fed:| 
-|: eBB e2f g2f|eBB efg afd| eBB e2f g2a| bag fag fed:| 
-|: edB dBA G2D| GAB dge dBA| edB dBA G2A| BAG FAG FED:|
+|:"Em"E3 FEF G2F|"Em"E3 BcA BGD|"Em"E3 FEF G2A|"G"BAG "D"FAG FED:|
+|:"G"BGB "D"AFA "G"G2D|"G"GAB dge dBA|"G"BGB "D"AFA "G"G2A|"G"BAG "D"FAG FED:|
+|:"Em"g3 eBe e2f|"Em"g3 efg "D"afd|"Em"g3 eBe ega|"C"bag fag "D"fed:|
+|:"Em"eBB e2f g2f|"Em"eBB efg "D"afd|"Em"eBB e2f g2a|"C"bag fag "D"fed:|
+|:"G"edB "D"dBA "G"G2D|"G"GAB dge "D"dBd|"G"edB "D"dBA "G"G2A|"G"BAG "D"FAG FED:|
 
 X:49
 T:King Of The Fairies
-S:The Session: https://thesession.org/tunes/475#setting475
+S:The Session: https://thesession.org/tunes/475#setting37954
 C:Traditional
 R:hornpipe
-K:Edor
+K:Dmix
 M:4/4
 L:1/8
 Q:1/4=138
-B,2|: EDEF GFGA| B2B2 G2GA| B2E2 EFGE| FGFE D2B,2| 
-| EDEF GFGA| BAGB d3c| B2E2 GFE_E|1 E6 B,2 |2 E6 d2:| 
-|: e2e2 Bdef| gagf e3f| e2B2 BABc| dedc BcdB|
-| e2B2 Bdef| gagf efed| Bdeg fedf| e6 ef|
-| g3e f3d| edBc d3e| dBAF GABc| dBAF GFED|
-| B,2E2 EFGA| B2e2 edef| e2B2 BAGF|1 E6 d2:|2 E8|]
+B2|:"Em"EDEF GFGA|B2 B2 "G"G3 A|"Em"B2 E2 EFGE|"D"FGFE D3 B|
+|"Em"EDEF GFGA|BAGB "G"d3 c|"Em"B2 E2 "D"GFED|"Em"E2 ED E2 B2:|
+|"Em"e2 e2 Bdef|"G"gagf "Em"e3 f|e2 B2 BAB^c|"D"ded^c BcdB|
+|"Em"e2 e2 Bdef|"G"gagf "Em"efed|Bdeg "D"fedf|"Em"e2 ed e3 f|
+|"G"g2 ge "D"f2 fd|"Em"edB^c"D"d3 e|"Em"dBAF "G"GAB^c|"D"dBAF "Em"GFED|
+|B2 E2 EFGA|"G"B2 e2 "Em"edef|e2 B2 "D"BAGF|"Em"E2 ED E4||
 
 X:50
 T:Lark In The Morning, The
-S:The Session: https://thesession.org/tunes/62#setting62
+S:The Session: https://thesession.org/tunes/62#setting41765
 C:Traditional
 R:jig
 K:D
 M:6/8
 L:1/8
 Q:1/4=113
-|: AFA AFA| BGB BdB| AFA AFA| fed BdB| 
-| AFA AFA| BGB BdB| def afe| dBB BdB:|
-|: def afe| bff afe| def afe| dBB BdB| 
-| def afe| bff afe| g2e f2d| edB BdB:| 
-|: dff fef| fef fef| dff fef| edB BdB| 
-| dff fef| fef def| g2e f2d| edB BdB:| 
-|: Add fdd| edd fdd| Add fdd| edB BdB|
-| Add fdd| edB def| g2e f2d| edB BdB:|
+|:"D"AFA AFA|"G"BGB BdB|"D"AFA Ade|"D"fed "G"BdB|
+|"D"AFA AFA|"G"BGB BdB|"D"def "A"afe|"Bm"fdB "G"BAB:|
+|:"D"def afa|"G"bab afe|"D"def "A"afe|"Bm"fdB "G"BAB|
+|"D"def afa|"G"bab "D"a2f|"G"gfg "D"fgf|"Em"edB "G"BAB:|
+|:"D"d2f fef|fef fef|def fef|"Em"edB "G"BAB|
+|"D"d2f fef|fef fef|"G"gfg "D"fgf|"Em"edB "G"BAB:|
+|:"D"Add fdd|edd fdB|Add fdd|"Em"edB "G"BAB|
+|"D"Add fdd|"A"ede "D"fef|"G"gfg "D"fgf|"Em"edB "G"BAB:|
 
 X:51
 T:Lilting Banshee, The
-S:The Session: https://thesession.org/tunes/60#setting60
+S:The Session: https://thesession.org/tunes/60#setting34816
 C:Traditional
 R:jig
 K:Ador
 M:6/8
 L:1/8
 Q:1/4=113
-|: EAA EAA| BAB G2A| Bee edB| def gfg|
-| eAA eAA| BAB G2A| Bee edB| dBA A3:|
-| eaa age| dBA G2A| Bee edB| def gfg|
-| eaa age| dBA G2A| Bee edB| dBA A3:|
+|:"Am"EAA EAA|"G"BAB G2A|"Em"Bee edB|"G"dBA GED|
+|"Am"EAA EAA|"G"BAB G2A|"Em"Bee edB|1 "G"dBA "Am"A3:|2 "G"dBA "Am"A2d||
+|:"Am"eaa age|"G"dBA G2A|"Em" Bee edB|"D"def "G"gfg|
+|"Am"eaa age|"G"dBA G2A|"Em"Bee edB|1 "G"dBA "Am"A2d:|2 "G"dBA "A"A3||
 
 X:52
 T:Little Beggarman, The
-S:The Session: https://thesession.org/tunes/566#setting566
+S:The Session: https://thesession.org/tunes/566#setting55358
 C:Traditional
 R:hornpipe
 K:Amix
 M:4/4
 L:1/8
 Q:1/4=138
-|: "A"EAAG ABcd| efec "D"d2 cd| "A"eAAA ABcA| "G"B=GEF "G"G2 FG|
-| "A"EAAG ABcd| efec "D"d2 cd| "A"eaaa afed| cA"E"BG "A"A4:|
-|: "G"g2 g"G"a gfef| gfec "D"d2 cd| "A"eAAA ABcA| "G"B=GEF G2 FG|
-| "A"EAAG ABcd| efec "D"d2 cd| "A"eaaa afed| cA"E"BG "A"A4:|
+AG|:"A"E2A2 ABcd|efec "D"d2cd|"A"e2A2 ABcA|"Em"BGEF G2 AG|
+|"A"E2A2 ABcd|efec "D"d2cd|"A"eaab ag"Em"ed|"A"c2A2A2 AG:|
+|:"Em"gfga gfef|gfec "G"d2cd|"A"edcB ABcA|"Em"BGEF G2AG|
+|"A"E2AG A2 cd|efec "D"d2cd|"A"eaab ag"Em"ed|1"A"c2 A2 A2 ef:|2"A"c2 A2 A4||
 
 X:53
 T:MacLeod's Farewell
-S:The Session: https://thesession.org/tunes/518#setting518
+S:The Session: https://thesession.org/tunes/518#setting55362
 C:Traditional
 R:reel
 K:D
 M:4/4
 L:1/8
 Q:1/4=120
-DE|: F2BF AFEF| D2 DE FABd| e2 fd efdB| ABde dBAG| 
-| F2BF AFEF| D2 DE FABd| e2fd efdB|1 ABde d2 DE:|2 ABde d3 B|]
-|: A3 f edfd| A3 f edfd| ABdA BdAB| dBAF E2 DE|
-| F2BF AFEF| D2DE FABd| e2fd efdB|1 ABde d3 B:|2 ABde d4||
+DE|: "D"F2BF "A"AFEF|"D" D2 DE FABd| "Em"e2 fd efdB| "A7"ABde dBAG| 
+|"D" F2BF "A"AFEF| "D"D2 DE FABd| "Em"e2fd efdB|1 "A7"ABde "D"d2 DE:|2 "A7"ABde "D"d3 B|]
+|: "D"A3 f edfd| "D"A3 f edfd| "D"ABdA "Bm"BdAB| "Em"dBAF "A7"E2 DE|
+|"D" F2BF "A"AFEF| "D"D2DE FABd| "Em"e2fd efdB|1 "A7"ABde "D"d3 B:|2 "A7"ABde "D"d4||
 
 X:54
 T:Maid Behind The Bar, The
-S:The Session: https://thesession.org/tunes/64#setting64
+S:The Session: https://thesession.org/tunes/64#setting47313
 C:Traditional
 R:reel
 K:D
 M:4/4
 L:1/8
 Q:1/4=120
-|: FAAB AFED| FAAB ABde| fBBA Bcde| fBBA BcdA|
-| FAAB AFED| FAAB ABde| fBBA BcdB| AFEF D4:|
-|:faab afde| fdad fd d2| efga beef| gebe gfeg|
-| fgaf bfaf| defd e2 de| fBBA BcdB| AFEF D4:|
+|:"D"FAAB AFED|FAAB A2de|"Bm"fBBA Bcde|"G"fBBA "A"B2A2|
+|"D"FAAB AFED|FAAB A2de|"Bm"fBBA BcdB|"A"AFEF "D"D4:|
+|:"D"faab dde2|fdad f2 f2|"Em"gfga beef|"G"gebe "A"g2e2|
+|"D"faaf bfaf|defd ef e2|"Bm"fBBA BcdB|"A"AFEF "D"D4:|
 
 X:55
 T:Maids Of Mount Kisco, The
-S:The Session: https://thesession.org/tunes/432#setting432
+S:The Session: https://thesession.org/tunes/432#setting45678
 C:Traditional
 R:reel
 K:Ador
 M:4/4
 L:1/8
 Q:1/4=120
-|: EA~A2 BA~A2| EA~A2 BGAG| EG~G2 AG~G2| EG~G2 EGDG|
-| EA~A2 BAAG| EA~A2 BABd| efge afge|1 dBGB ~A3G:|2 dBGB A2dB|]
-|: ~A3B dBAB| G2BG DGBG| ~A3B dGBd|1 e~g3 gedB:|2 edge d2 Bd|]
-|: ea~a2 bgaf| gfed GABd| ea~a2 bgaf| gede g2eg|
-| ~a3f ~g3e| dedB GABd| eA~A2 efge|1 dBGB A2 Bd:|2 dBGB ~A3G|]
+|:"Am" EA ~A2 BGAG|EA ~A2 BGAG|"G" DG ~G2 BGAG|DG ~G2 DGB,D|
+|"Am" EA ~A2 BGAG|EA ~A2 "G" BABd|"Em" eg ~g2 "Am" ag ~g2|"G" dBGB "Am" A3 G:|
+|:"Am" A3 B "D" dBAB|"G" G2 BG dGBG|"Am" A3 B "D" d2 Bd|1 "Em" egfa "G" gedB:|2 "Em" egfa "G" gedg||
+|:"Am" ea ~a2 bgag|"G" gedB GABd|"Am" ea ~a2 bgag|"Em" gede "G" g2 eg|
+"Am" abaf "Em" gage|"D" d2 dB "G" GABd|"Am" eA ~a2 "Am" efge|"G" dBGB "Am" A4:|
 
 X:56
 T:Man Of The House, The
-S:The Session: https://thesession.org/tunes/222#setting222
+S:The Session: https://thesession.org/tunes/222#setting55363
 C:Traditional
 R:reel
 K:Em
 M:4/4
 L:1/8
 Q:1/4=120
-|: E2BE GABG| E2BE FDAD| E2BE GABc|1 dBcA BGED:|2 dBcA BGE2|]
-| e2ge f2af| gfed edBd| e2ge f2af| gfed Beed|
-| efge fgaf| gfed efga| bgaf gfed| edBA GEED||
+|: "Em"E2BE GABG| E2BE "D"FDAD| "Em"E2BE GABc|1 "G"dBAF "D"BAGF:|2 "G"dBAF "D"BEE2|]
+|"Em"efge "D"fgaf|"C"gfed "D"edBd|"Em"e2ge "D"f2af|"C"gfed "D"Beed|
+|"Em"e2ge "D"f2af|"C"gfed "C"efga|"G"bgaf "D"gfed|"C"edBA "D"GEED|]
 
 X:57
 T:Mason's Apron, The
-S:The Session: https://thesession.org/tunes/74#setting74
+S:The Session: https://thesession.org/tunes/74#setting55364
 C:Traditional
 R:reel
 K:A
 M:4/4
 L:1/8
 Q:1/4=120
-e2|: aAA2 ABAF| EFAc dcBA| dBB2 BcBA| Bcde fefg|
-| aAA2 ABAF| EFAc dcBA| dcde fefa|1 A2 cB A2 e2:|2 A2 cB A2 ed|]
-|: cAeA fAeA| cAeA fedc| dBfB aBfB| defg afed|
-| cAeA fAeA| EFAc dcBA| d2dc defa| A2 cB A2 ed:| 
-|: ceee feee| ceee fedc| dfff afff| dfff agfe|
-| ceee feee| EFAc dcBA| dcde fefa|1 A2 cB A2 ed:|2 A2 cB A2 e2|]
-|: aeee aeee| aege feee| beee beee| beae gefg|
-| aeee aeee| aege feee| dcde fefa|1 A2 cB A2 e2:|2 A2 cB A2 ed |] 
-|: c2Ac eAce| AceA cecA| d2 Ad fAdf| AdfA dfed|
-| c2Ac eAce| AceA cecA| d2dc defa|1 A2 cB A2 ed:|2 A2 cB A4|]
+ed|:"A"c2 A2 ABAF|EFAB c2 BA|"D"dB B2 BcBA|Bcde "E"f2 ed|
+|"A"c2 A2 ABAF|EFAB c2 BA|"D"BABc defa|"E"edcB "A"A2 ed:|
+|:"A"cAeA fAeA|cAeA fedc|"D"dBfB gBfB|dBfB gfed|
+|"A"cAeA fAeA|cAeA fedc|"D"Bcde fefa|1 "E"edcB "A"A2 ed:|2 "E"edcB "A"A4|]
 
 X:58
 T:Merrily Kiss The Quaker
-S:The Session: https://thesession.org/tunes/70#setting70
+S:The Session: https://thesession.org/tunes/70#setting55365
 C:Traditional
 R:slide
 K:G
-M:12/8
+M:6/8
 L:1/8
 Q:1/4=150
-D|: GAB G2B c2A BGE| GAB DEG A2A AGE| GAB GAB cBA BGE|1 GAB AGF G3 G2 D:|2  GAB AGF G3 G2 A|]
-|: BGG AGG BGG AGG| GAB DEG A2A AGA| BGG AGG BGG AGG|1 GAB AGF G3 G2 A:|2 GAB AGF G3 G2 d |]
-| g2g a2a bag edB| g2g gab a2a agf| g2g f2f ege dBA|1 GAB AGF G3 G2 d:|2 GAB AGF G6:|
+D|:"G"GAB D2B|"C"c2A "D"BGE|"G"GAB DEG|"D"A3 AGE|
+|"G"GAB D2B|"C"c2A "D"BGE|"G"GAB "D"DEF|1 "G"G3 G2D:|2 "G"G3 G2A||
+|:"G"BGG "D"AGG|"G"BGG "D"AGE|"G"GAB DEG|"D"A3 AGA|
+|"G"BGG "D"AGG|"G"BGG "D"AGE|"G"GAB "D"AGF|1 "G"G3 G2A:|2 "G"G3 GBd||
+|:"G"gfg "D"aga|"G"bge def|gfg gab|"D"a3 agf|
+|"G"gag "D"fgf|"C"efe "G"dBA|"G"BAB "D"DEF|1 "G"G3 GBd:|2 "G"G3 G2D||
 
 X:59
 T:Merry Blacksmith, The
-S:The Session: https://thesession.org/tunes/72#setting72
+S:The Session: https://thesession.org/tunes/72#setting42710
 C:Traditional
 R:reel
 K:D
 M:4/4
 L:1/8
 Q:1/4=120
-AB|: d2dA BAFA| ABdA BAFA|| ABde fded| Beed egfe| 
-| d3A BAFA-| ABdA BAFA-|| ABde fdec|1 dBAF D2 AB:|2 dBAF fg|]
-|:a2ag f2fe| d2dA BAFA-| ABde fded| Beed egfg|
-| abag fgfe| dcdA BAFA| ABde fdec|1 dBAF D2 fg:|2 dBAF D4|]
+A4|:"D"d2dA BAFA|BcdA BAFA|"G"Bcde "D"fedA|"G"Be2d "A"egfe|
+|"D"d2dA BAFA|BcdA BAFA|"G"Bcde "D"fafe|"A"dBFE "D"D4:|
+|:"D"a2ag fgfe|d2dA BAFA|"G"Bcde "D"fedA|"G"Be2d "A"egfe|
+|"D(Bm)"a2ag fgfe|d2dA BAFA|"G"Bcde "D"fafe|"A"dBFE "D"D4:|
 
 X:60
 T:Miss McLeod's
-S:The Session: https://thesession.org/tunes/75#setting75
+S:The Session: https://thesession.org/tunes/75#setting31921
 C:Traditional
 R:reel
 K:G
 M:4/4
 L:1/8
 Q:1/4=120
-|: G2 BG AGBG| B2 BA BcBA| G2 BG AGBG| A2 AG AcBA|
-| G2 BG AGBG| B2 BA B2 d2| e2 ef edef| gfed BcBA:| !
-|: G2 gf edeg| B2 BA BcBA| G2 gf edeg| a2 ag aeef|
-| g2 gf edeg| BcBA B2 d2| edef edef| gfed BcBA:|
+|:"G"G2 BG dGBG|B2 BA BcBA|G2 BG dGBG|"D"A2 AG AcBA|
+|"G"G2 BG dGBG|B2 BA Bc d2|"C"efed Bdef|"D7"gedB AcBA:|
+|:"G"G2 gf edeg|B2 BA BcBA|G2 gf edeg|"D"a2 ab agef|
+|"G"g2 gf edeg|B2BA Bcdf|"C"edcB cdef|"D7"gedB AcBA:|
 
 X:61
 T:Mist Covered Mountain, The
-S:The Session: https://thesession.org/tunes/256#setting256
+S:The Session: https://thesession.org/tunes/256#setting55366
 C:Traditional
 R:jig
 K:Ador
 M:6/8
 L:1/8
 Q:1/4=113
-G |: EAA ABd| e2 A AGE| ~G3 GAB| dBA GED| 
-| EAA ABd| e2A AGE| efg dBG|1 BAG A2 G :|2 BAG A2 a |]
-|: age a2b| age edB| AGE G2A| BAB GED| 
-| age a2b| age edB| AGE G2A| BAG A3| 
-| age a2b| age edB| AGE G2A| BAB GED| 
-| EDE G2A| BAG ABd| efg dBG| BAG A3||
+G |: "Am"EAA ABd| e2 A AGE| "G"~G3 GAB| "Em"dBA GED| 
+| "Am"EAA ABd| e2A AGE| "G"efg dBG|1 "Em"BAG "Am"A2 G :|2 "Em"BAG "Am"A2 a |]
+| "Am"age a2b| age edB| "G"AGE G2A| "Em"BAB GED| 
+| "Am"age a2b| age edB| "G"AGE G2A| "Em"BAG A3| 
+| "Am"age a2b| age edB| "G"AGE G2A| "Em"BAB GED| 
+| "Am"EDE G2A| "Em"BAG ABd| "G"efg dBG| BAG "Am"A3||
 
 X:62
 T:Monaghan, The
-S:The Session: https://thesession.org/tunes/67#setting67
+S:The Session: https://thesession.org/tunes/67#setting55367
 C:Traditional
 R:jig
 K:Em
 M:6/8
 L:1/8
 Q:1/4=113
-|: BGE F2E| BGE FGA| BGE F2E|AFD FGA| 
-| GBE F2E| BGE FGA| d^cd ABG| FDF AGF:| 
-|: EGB efg| fed edB|EGB dBG| FDF AGF| 
-| EGB efg| fed edB| d^cd ABG| FDF AGF:| 
-|: g2e efe| gfg bge| g2e efe| fdf afd| 
-|g2e efe| gfg bge| d^cd ABG| FDF AGF:| 
-|: EGB edB| dBG AFD| EGB dBG| FDF AGF|
-| EGB GBd| Beg efg| d^cd ABG| FDF AGF:|
+|:"Em"BGE "D"F2E|"Em"BGE "D"FGA|"Em"BGE "D"F2E|AFD FGA|
+|"Em"BGE "D"F2E|"Em"BGE "D"FGA|dcB ABG|FDF AGF:|
+|:"Em"EGB efg|"D"fed "Em"edB|EGB dBG|"D"FDF AGF|
+|"Em"EGB efg|"D"fed "Em"edB|"D"dcB ABG|FDF AGF:|
+|:"Em"g2e efe|geg bge|g2e eBe|"D"fdf afd|
+|"Em"g2e efe|geg bge|"D"d2B ABG|FDF AGF:|
+|:"Em"EGB edB|"G"dBG "D"AFD|"Em"EGB "G"dBG|"D"FDF AGF|
+|"Em"EGB GBd|Beg egb|"D"dcB ABG|FDF AGF:|
 
 X:63
 T:Morning Dew, The
-S:The Session: https://thesession.org/tunes/69#setting69
+S:The Session: https://thesession.org/tunes/69#setting55373
 C:Traditional
 R:reel
 K:Edor
 M:4/4
 L:1/8
 Q:1/4=120
-|: E3B2AFD| EDEB BAFD| E3B2AFA| BcdB AFDF:|
-| B2eB fBeB| B2eB AFDF| B2eB fBeB| BcdB AFDF| 
-| B2eB fBeB| B2eB AFDF| Bdeg fdec| d2dA BAFD| 
-| B2EB GBEB| B2EB AFDF| B2EB GBEB| BcdB AFDF| 
-| B2EB GBEB| B2EB AFDF| Bdeg fdec| d2dA BAFD| 
-|: BAGF EFGA| B2GB A2GA| BAGF EFGA| BcdB AFDF:|
+|:"Em"E3 B- BAFD|EBEB "D"AGFD|"Em"E3 B- BAFA|"G"BcdB "D"ADFA:|
+|:"Em"B2 eB fBeB|B2 eB "D"AFDF|"Em"B2eB fBeB| "G"dcdB "D"ADFA|
+|"Em"B2 eB fBeB|B2 eB "D"AFDF| "Em"B2ef gfge|"G"dcdB "D"ADFA:||
+|:"Em"B2 GB FBEB|B2 dB "D"ADFA| "Em"B2 GB FBEB|"G"dcdB "D"ADFA|
+|"Em"BAGF EFGA|B2 GB "D"ADFA|"Em"BAGF EFGA|"G"BcdB "D"ADFA:|
 
 X:64
 T:Morrison's
-S:The Session: https://thesession.org/tunes/71#setting71
+S:The Session: https://thesession.org/tunes/71#setting31493
 C:Traditional
 R:jig
 K:Edor
 M:6/8
 L:1/8
 Q:1/4=113
-|: E3 B3| EBE AFD| EDE B3| dcB AFD|
-| E3 B3| EBE AFD| G3 FGA| dAG FED:|
-| Bee fee| aee fee| Bee fee| a2g fed|
-| Bee fee| aee fee| gfe d2A| BAG FGA|
-| Bee fee| aee fee| Bee fee| faf def|
-| g3 gfe| def g2d| edc d2A| BAG FED|
+|:"Em"E3 B3|EBE "D"AFD|"Em"EDE B3|"G"dcB "D"AFD|
+|"Em"E3 B3|EBE "D"AFD|"C"G3 FGA|"D"dAG FED:|
+|"Em"Bee fee|aee fee|Bee fee|"D"a2g fed|
+|"Em"Bee fee|aee fee|"C"gfe d2A|"D"BAG FGA|
+|"Em"Bee fee|aee fee|Bee fee|"D"faf def|
+|"C"g3 gfe|"G"def g2d|"D"edc d2A|"C"BAG "D"FED||
 
 X:65
 T:Mountain Road, The
-S:The Session: https://thesession.org/tunes/68#setting68
+S:The Session: https://thesession.org/tunes/68#setting47098
 C:Traditional
 R:reel
 K:D
 M:4/4
 L:1/8
 Q:1/4=120
-| F2 AF BFAF| F2 AF EFDE| F2 AF BFAF| G2 FG EFDE|
-| F2 AF BFAF| F2 AF EFD2| FAA2 BAFA| BABd eddA|
-| d2dA BAFA| d2 de fgfe| d2 dA BAFA| G2 FG EDFA|
-| d2 dA BAFA| d2 de fgfe| d2 dA BAFA| G2 FG EFDE|
+|"D" F2 AF BFAF|F2 AF "A" EFDE|"D" F2 AF BFAF|"G" G2 FG "A" EFDE|
+|"D" F2 AF BFAF|F2 AF "A" EFD2|"D" FAA2 BAFA|"G" BABd "A" eddA|
+|"D" d2dA BAFA|d2 de "A" fgfe|"D" d2 dA BAFA|"G" G2 FG "A" EDFA|
+|"D" d2 dA BAFA|d2 de "A" fgfe|"D" d2 dA BAFA|"G" G2FG "D" EFDE|
 
 X:66
 T:Musical Priest, The
-S:The Session: https://thesession.org/tunes/73#setting73
+S:The Session: https://thesession.org/tunes/73#setting55381
 C:Traditional
 R:reel
 K:Bmin
 M:4/4
 L:1/8
 Q:1/4=120
-BA|: FBBA B2Bd| cBAf ecBA| FBBA B2Bd|1 cBAc B2 BA:|2 cBAc B2 Bc |]
-|: d2dc dfed| (3cBA eA fAeA| dcBc defb| afec B2 :|
-| dBB2 bafb| afec ABce| dB B2 bafb| afec B2Bc|
-| dB B2 bafb| afec ABce| dcBc defb| afec B2|
+BA|:"Bm" FB BA BABd|"A"cBAf ecBA|"Bm"FB BA BcdB|1"A"cBAc "Bm"B2 BA:|2"A"cBAc "Bm"B2 Bc||
+|:"D"d2 dc dfed|"A"(3cBA eA fA eA|"Bm"dcBc "D"defb|"A"afec "Bm"B2 Bc:|
+|"Bm"dB (3BAB bafb|"A"afec ABce|"Bm"dB (3BAB bafb|"A"afec "Bm"B2 Bc|
+|"Bm"dB (3BAB bafb|"A"afec ABce|"Bm"dBBc defb|"A"afec "Bm"B4||
 
 X:67
 T:My Darling Asleep
-S:The Session: https://thesession.org/tunes/76#setting76
+S:The Session: https://thesession.org/tunes/76#setting34856
 C:Traditional
 R:jig
 K:D
 M:6/8
 L:1/8
 Q:1/4=113
-|: fdd cAA| BGG A2G| FAA def| gfg eaa|
-| fdd cAA| BGG A2G| FAA def| gec d3:| 
-|: FAA Add| FAA BGG| FAA def| gfg eaa|
-| fdd cAA| BGG A2G| FAA def| gec d3:|
+ag|:"D"fed "A"cAA|"G"BGB "D"A2G|FAA def|"G"gfg "A"eag|
+|"D"f2d "A"cAA|"G"BGG "D"A2G|FAA def|1 "A"gec "D"d2e:|2 "A"gec "D"d2G||
+|:"D"FAA dAG|FAA BAG|F2A def|"G"gfg "A"eag|
+|"D"f2d "A"cAc|"G"BGB "D"A2G|FAA def|1 "A"gec "D"d2G:|2 "A"gec "D"d2e||
 
 X:68
 T:Off To California
-S:The Session: https://thesession.org/tunes/30#setting30
+S:The Session: https://thesession.org/tunes/30#setting21791
 C:Traditional
 R:hornpipe
 K:G
 M:4/4
 L:1/8
 Q:1/4=138
-|: GFGB AGED| GBdg e2df| gfgd edBG| ABAG E2DE|
-| G2GB AGED| GBdg e2df| gfgd edBG| ABAF G4:| 
-|: gfeg fedf| edef edBd| gfgd edBG| ABAG EDEF|
-| GFGB AGED| GBdg e2df| gfgd edBG| ABAF G4:|
+(3DEF|:"G"GFGB "D"AGED|"G"GBdg "C"e2 (3def|"G"gfgd "Em"edBG|"Am"ABAG "D"E2 (3DEF|
+|"G"GFGB "D"AGED|"G"GBdg "C"e2 (3def|"G"gfgd "Em"edBG|1 "D"(3ABA GF "G"G2 (3DEF:|2 "D"(3ABA GF "G"G2 (3def||
+|:"E"gfeg "Bm"fedf|"C"edef "Em"edBd|"G"gfgd "Em"edBG|"Am"ABAG "D"E2 (3DEF|
+|"G"GFGB "D"AGED|"G"GBdg "C"e2 (3def|"G"gfgd "Em"edBG|1 "D"(3ABA GF "G"G2 (3def:|2 "D"(3ABA GF "G"G4||
 
 X:69
 T:Old Favourite, The
-S:The Session: https://thesession.org/tunes/56#setting56
+S:The Session: https://thesession.org/tunes/56#setting53958
 C:Traditional
 R:jig
 K:G
 M:6/8
 L:1/8
 Q:1/4=113
-|: B3 BAB| dBA G2B| ded d2 B| ded B2A| 
-| B3 BAB| dBA G2B| ded cBA| G3 GAA :| 
-|: g2e f2d| ege d2B| ded d2 B| ded B2d|
-| g2e f2d| ege d2B|1 dge dBA| G3 GBd:|2 dge dge| dge dBA|]
+|:"G"B2(B B)AB|"G"dBA GBc|"G"d2 (d d2)B|"D"ded B2A|
+|"G"B2 (B B)AB|"G"dBA GBc|"D"ded cBA|1 "G"GD B, G,2 A:|2 "G"G3 GBd||
+|"Em"g3 fgf|"C"efe edB|"D"d2 (d d2) B|"D"ded ABd|
+|"Em"g2 (f f) gf|"C"efe edB|"D"dfe dBA|"G"G3 G (3 Bcd|
+|"G"g (3Bcd "D"f (3Bcd|"C"efe edB|"D"d2 (d d2) B|"D"ded ABd|
+|"Em"g2 (f f) gf|"C"efe edB|"D"dfe dfe|"D"dfe dBA|
 
 X:70
 T:Otter's Holt, The
-S:The Session: https://thesession.org/tunes/636#setting636
+S:The Session: https://thesession.org/tunes/636#setting55382
 C:Traditional
 R:reel
 K:Bm
 M:4/4
 L:1/8
 Q:1/4=120
-e|: fBBA FEFB| (3ABA FB ABde| fBBA FEFA| (3Bcd cA Bcde|
-| fBBA FEFB| (3ABA FB ABde| faaf effe|1 dBBA ~B3e:|2 dBAF B3c||
-| d2 fd Adfa| bfaf effe| (3ddd fd Adfa| bfaf egfe|
-| defd Adfa| bfaf efde| fBBA FEFA| (3Bcd cA B3c|
-| ~d3f a2 fa| (3baf af effe| d2 fd adfa| bfaf effe|
-| dcdf a2 fa| (3baf af effe| fBBA FEFA| (3Bcd cA ~B3e||
+de|:"Bm" fBBA FEFB|"A" A2 FB ABde|"Bm" fBBA FEFA|"A"(3Bcd cA "Bm" B2 de|
+|"Bm"fBBA FEFB|"A" A2 FB ABde|"Bm"fbaf egfe|1dBAF "Bm"B2 de:|2 dBAF "Bm"B2 de|]
+|: "D" d2fd Adfa|"G" bfaf "A" egfe|"D" d2fd Adfa|"G" bfaf "A"e2 (3ABc|
+|"D" d2fd Adfa|"G" bfaf "A"efde|"Bm" fBBA FEFA|1 "A" (3Bcd cA "Bm"B2 (3ABc:|2 "A"(3Bcd cA "Bm"B4||
 
 X:71
 T:Out On The Ocean
-S:The Session: https://thesession.org/tunes/108#setting108
+S:The Session: https://thesession.org/tunes/108#setting55383
 C:Traditional
 R:jig
 K:G
 M:6/8
 L:1/8
 Q:1/4=113
-GE |: D2B BAG| BdB A2B| GED G2A| B2B AGE|
-| D2B BAG| BdB A2B| GED G2A|1 BGE G GE :|2 BGE G Bd |]
-|: e2e edB| ege edB| d2B def| gfe dBA| 
-| G2A B2d| ege d2B| AGE G2A|1 BGE G Bd:|2 BGE G G2 |]
+GE |: "G"D2B BAG| BdB "D"A2B| "G"GED G2A| "C"B2B "D"AGE|
+| "G"D2B BAG| BdB "D"A2B| "G"GED G2A|1 "D"BGE "G"G GE :|2 "D"BGE "G"G Bd |]
+|: "Em"e2e edB| ege edB| "D"d2B def| gfe dBA| 
+| "G"G2A B2d| "C"ege "G"d2B| AGE G2A|1 "D"BGE "G"G Bd:|2 "D"BGE "G" G3 |]
 
 X:72
 T:Over The Moor To Maggie
-S:The Session: https://thesession.org/tunes/115#setting115
+S:The Session: https://thesession.org/tunes/115#setting27782
 C:Traditional
 R:reel
 K:G
 M:4/4
 L:1/8
 Q:1/4=120
-DE |: G2GA B2Bd| efge dBAG| EAAG ABAG| EAAG AcBA|
-| GFGA BABd| efge dBAG| DGGF GBAG|1 EDEF G2 DE:|2 EDEF G2 ga |]
-|: b2bg a2af| g2ge fedB| eaag abag| eaag a2 ga| 
-| b2bg a2af| g2ge fedB| dggf gbag|1 edef g2 ga:|2 edef g2 cd |]
-|: e2ec d2dB| c2cA BAGD| EAAG ABAG| EAAG ABcd|
-| e2ec d2dB| c2cA BAGE| DGGF GBAG|1 EDEF G2 cd:|2 EDEF G4|]
+DE|:"G"G3A BG Bd|"Em"ef ge "G"dB AG|"Am"EA AG "D"AB AG|"Am"EA AG "D"A2 DE|
+|"G"G3A BG Bd|"Em"ef ge "G"dB AG|"Em"EG G2 "G"BG AG|1 EG GF G2 DE:|2 EG GF G2 ga||
+|:"G"b3g "D"a3f|"C"ga ge "G"d2 Bd|"Am"ea ag "D"ab ag|"Am"ea ag "D"a2 ga|
+|"G"bg g2 "D"af f2|"C"ga ge "G"d2 Bd|"Em"eg g2 "G"bg ag|1 eg gf "G"g2 ga:|2 eg gf "G"g2 Bd||
+|:"C"e3c "G"d2 dB|"Am"c2 cA "G"B2 AG|"Am"EA AG "D"AB AG|"Am"EA AG "D"AB cd|
+|"C"e3c "G"de dB|"Am"cA A2 "G"B2 AG|"Em"EG G2 "G"BG AG|1 EG GF G2 Bd:|2 EG GF G4||
 
 X:73
 T:Pigeon On The Gate, The
@@ -1060,10 +1060,10 @@ K:Edor
 M:4/4
 L:1/8
 Q:1/4=120
-dc|: BE ~E2 BEdE| BE ~E2 dBAF| D2 (3FED ADFE| DEFA BAFA|
-| BE ~E2 BEdE| BE ~E2 B2 AF| D2 FA dfec|1 dBAF E2 dc:|2 dBAF E2 FA |]
-|: Beed efed| (3Bcd ef gedB| Addc d3 B| A2 FE DEFA| 
-| Beed efed| (3Bcd ef g2 fg| af (3gfe fd ec|1 dBAF E2 FA:|2 dBAF E4 |]
+dc|: "Em"BE ~E2 BEdE| BE ~E2 dBAF| "D"D2 (3FED ADFE| DEFA BAFA|
+| "Em"BE ~E2 BEdE| BE ~E2 B2 AF| "D"D2 FA dfec|1 dBAF E2 dc:|2 dBAF E2 FA |]
+|: "Em"Beed efed| (3Bcd ef gedB| "D"Addc d3 B| A2 FE DEFA| 
+| "Em"Beed efed| (3Bcd ef g2 fg| "D"af (3gfe fd ec|1 dBAF E2 FA:|2 dBAF E4 |]
 
 X:74
 T:Rakish Paddy
@@ -1074,50 +1074,52 @@ K:Ador
 M:4/4
 L:1/8
 Q:1/4=120
-|: c4 c2 AB| cBAG Ec c2| Add^c defe| dcAG FGAB|
-| c4 c2 AB| cBAG EDCE| DEFG ABcA| dcAG F2 D2:| 
-|: eg g2 ag g2| eg g2 ed^cd| ea a2 ba a2| ea a2 egdg|
-| eg g2 ag g2| fed^c defg| afge fde^c| dcAG F2 D2:|
+|:"Am"c3B c2AB|cBAG FGEF|"D"Add^c defe|dcAG FGAB|
+|"Am"c3B c2AB|cBAG FGEF|"D"DEFG ABcA|dcAG FDDB:|
+|:"C"egg2 aggf|eggf ed^cd|"D"eaa2 baag|eaag ed^cd|
+|"C"egg2 aggg|"D"egfe defg|afge fde^c|1 dcAG FGAB|2 dcAG FDD2|]
 
 X:75
 T:Rambling Pitchfork, The
-S:The Session: https://thesession.org/tunes/89#setting89
+S:The Session: https://thesession.org/tunes/89#setting55333
 C:Traditional
 R:jig
 K:D
 M:6/8
 L:1/8
 Q:1/4=113
-|: F2F AFF| dFF AFF| G2G ABc| ded cAG|
-| FEF AFF| dFF AFF| GFG BAG| FDD D3:| 
-|: d2e fed| ecA ABc| dcd fed| faf gfe|
-| d2e fed| ecA BAF| GFG BAG| FDD D3:|
+|: "D"FFF AFF | dFF AFF | "G"G2G GBc | "A"ded cAG |
+"D"F2F AFF | dFF AFF |"G"G2 G B2 B|"D"AFD D3 :|
+|: d2 e f2d | "A"ecA ABc | "D"d2 e f2d | "D"faf "G"gfe |
+"D"d2 e f2d | "A"ecA A2 A | "G"G2 G B2 B|"D"AFD D3 :|
 
 X:76
 T:Rights Of Man, The
-S:The Session: https://thesession.org/tunes/83#setting83
+S:The Session: https://thesession.org/tunes/83#setting45004
 C:Traditional
 R:hornpipe
 K:Em
 M:4/4
 L:1/8
 Q:1/4=138
-|: GA| B2A2 G2F2| EFGA B2ef| gfed edBd| cBAG A2GA| 
-|BcAB GAFG| EFGA B2ef| gfed Bgfg|1 e2 E2 E2 GA :|2 e2 E2 E2 ga |]
-|: babg efga| babg egfe| d^cde fefg| afdf a2gf|
-! edef gfga| bgaf gfef| gfed Bgfg|1 e2 E2 E2 ga:|2 e2 E2 E4 |]
+GA|:"Em"(3BcB AB GAFG|"Am"EFGA "Em"B2 ef|"C"gfed "G"edBd|"Am"cBAG "D"A2 GA|
+"Em"(3BcB (3ABA (3GAG (3FGF|"Am"EFGA "Em"B2 ef|"Am"gfed "D"Bgfg|1 "Em"e2 E2 E2 GA:|2 "Em"e2 E2 E2 ga||
+|:"G"babg "Em"efga|"G"babg "Em"egfe|"D"d^cde fefg|"Bm"afdf a2gf|
+"C"edef gfga|"Am"bgaf "Em"gfef|"Am" gfed "D"Bgfg|1 "Em"e2 E2 E2 ga:|2 "Em"e2 E2 E4||
 
 X:77
 T:Road To Lisdoonvarna, The
-S:The Session: https://thesession.org/tunes/250#setting250
+S:The Session: https://thesession.org/tunes/250#setting48133
 C:Traditional
 R:slide
 K:Edor
-M:4/4
+M:12/8
 L:1/8
 Q:1/4=150
-|: E2B B2A B2c d2A| F2A ABA D2E FED| E2B B2A B2c d3| cdc B2A B2E E3:|
-|: e2f gfe d2B Bcd| c2A ABc d2B B3| e2f gfe d2B Bcd| cdc B2A B2E E3:|
+D|:"Em"E2B B2A B2c d3|"D"F2A ABA D2E FED|
+|"Em"E2B B2A B2c d3|"D"cdc B2A "Em"B2E E3:|
+|:"Em"e2f gfe "G"d2B Bcd|"A"c2A ABc "Bm"d2B B3|
+|"Em"e2f gfe "G"d2B Bcd|"A"cdc "Bm"B2A "Em"B2E E3:|
 
 X:78
 T:Rocky Road To Dublin, The
@@ -1125,317 +1127,335 @@ S:The Session: https://thesession.org/tunes/593#setting593
 C:Traditional
 R:slip jig
 K:Ador
-M:6/8
+M:9/8
 L:1/8
 Q:1/4=113
-|: efe d2B ~A3| E2A A2A Bcd| efe d2B A2c| B2G G2A Bcd:|
-| e2a a2f ~g3| e2a a2f g2d| e2a a2f g2e| d2B G2A Bcd|
-| e2a a2f ~g3| e2a a2A Bcd| efg fga g2e| d2B G2A Bcd||
+|: "Am"efe "G"d2B "Am"~A3| E2A A2A "G"Bcd| "Am"efe "G"d2B "Am"A2c| "G"B2G G2A Bcd:|
+| "Am"e2a a2f "G"~g3| "Am"e2a a2f "G"g2d| "Am"e2a a2f g2e| "G"d2B G2A Bcd|
+| "Am"e2a a2f "G"~g3| "Am"e2a a2A "G"Bcd| "Am"efg fga g2e| "G"d2B G2A Bcd||
 
 X:79
 T:Rolling In The Ryegrass
-S:The Session: https://thesession.org/tunes/87#setting87
+S:The Session: https://thesession.org/tunes/87#setting46368
 C:Traditional
 R:reel
 K:D
 M:4/4
 L:1/8
 Q:1/4=120
-|: A2AB AFDF| G2BG dGBG| ABAF DFAF| GBAG E2D2:|
-|: ABde f2fd| g2ge fedB| ABde fefa| gfdf e2d2:|
+|:"D"A2AB AFDF|"G"G2BG dGBG|"D"ABAF DFAF|"G"GBAG "A"E2D2:|
+|:"D"ABde f2fd|"G"g2ge fedB|"D"ABde fefa|"D"gfdf "A"e2d2:|
 
 X:80
 T:Rolling Waves, The
-S:The Session: https://thesession.org/tunes/88#setting88
+S:The Session: https://thesession.org/tunes/88#setting45744
 C:Traditional
 R:jig
 K:D
 M:6/8
 L:1/8
 Q:1/4=113
-|: FEF DED| D2d cAG| FEF FED| A2F GFE|
-| FEF DED| D2d cAG| FAF GBG| A2F GFE:|
-|: D2d cAd| cAd cAG| FEF cAd| A2F GFE|
-| D2d cAd| fed cAG| FAF GBG| A2F GFE:|
+|:"D"FEF DED|"D"D2d "A"cAG|"D"FEF DED|"A"A2F "G"GFE|
+|"D"FEF DED|"D"D2d "A"cAG|"D"FAF "G"GBG|"D"A2F "A"GFE:|
+|:"D"D2d "A"cAd|"A"cAd cAG|"D"F2d "A"cAG|"D"A2F "G"GFE|
+|"D"D2d "A"cAd|"D"fed "A"cAG|"D"FAF "G"GBG|"D"A2F "A"GFE:|
 
 X:81
 T:Rose In The Heather, The
-S:The Session: https://thesession.org/tunes/447#setting13312
+S:The Session: https://thesession.org/tunes/447#setting49483
 C:Traditional
 R:jig
 K:D
 M:6/8
 L:1/8
 Q:1/4=113
-|: FAF EFE| DFA BAF| ABd ede| fdB AFE| 
-| ~F3 ~E3| DFA BAF| AdB AFE|1 FDD D2E:|2 FDD D2e||
-| fdB ABd| faa afd| ~g3 fed| Bee efg| 
-| fdB ABd| f2a afa| bag fge|1 fdc d2e:|2 fdc d2A||
+|:"D"FAF "A"EFE|"D"DFA BAF|ABd ede|"Bm"fdB "A"AFE|
+|"D"FAF "A"EFE|"D"DFA BAF|"G"AdB AFE|"A"FDC "D"D3:|
+|:"D"fdB ABd|faa afd|"Em"gfg fed|"A"Bee efg|
+|"D"fdB ABd|faa afa|"G"baf gfe|"A"fdc "D"d3:|
 
 X:82
 T:Saddle The Pony
-S:The Session: https://thesession.org/tunes/307#setting307
+S:The Session: https://thesession.org/tunes/307#setting55395
 C:Traditional
 R:jig
 K:G
 M:6/8
 L:1/8
 Q:1/4=113
-D |: GBA G2B| def gdB| GBA G2B| AFD AFD| 
-| GBA G2B| def gfg| efe dBA|1 BGG G2 D:|2 BGG G2 d |] 
-|: efe edB| def gfg| efe edB| dBA ABd|
-! efe edB| def gfg| efe dBA|1 BGG G2 d:|2 BGG G3 |]
+D|:"G"GBA G2B|"G"def gdB|"G"GBA G2B|"D"AFD AFD|
+"G"GBA G2B|"G"def g2g|"C"ege "G"dBA|1 "D"AGF "G"G2 D:|2 "D"AGF "G"G2 d||
+|:"Em"e2e edB|"D"def "G"g2g|"Em"e2e edB|"D"dBA ABd|
+"Em"e2e edB|"D"def "G"g2g|"C"ege "G"dBA|1 "D"AGF "G"G2 d:|2 "D"AGF "G"G4||
 
 X:83
 T:Saint Anne's
-S:The Session: https://thesession.org/tunes/103#setting103
+S:The Session: https://thesession.org/tunes/103#setting22314
 C:Traditional
 R:reel
 K:D
 M:4/4
 L:1/8
 Q:1/4=120
-|: fedf edcB| A2FA DAFA| B2GB EBGB| A2FA DAFA|
-| fedf edcB| A2FA DAFA| BGed cABc| eddc d2 de:| 
-|: f2fg fedc| Bggf g2gf| edcB ABce| baa^g abag|
-| f2fg fedc| Bggf g2gf| edcB ABcd| eddc d2 de:|
+de|:"D" f2fg "A" fedB|"D" A2F2F2A2|"G" B2GA BcdB|"D"A2F2 F2de|
+|"D" f2fg "A" fedB|"D" A2F2F2A2|"G" B2d2 "A"cdec|1 "D" d2de d2de:|2 "D" d2de d2ag||
+|:"D" f2d2 defg|"G" a2gf g2gf|"A" edcB Aceg|"D"b2a2 a2g2|
+|"D"f2d2 defg|"G"a2gf g2gf|"A"edcB ABce|1 "D"f2f2 d2ag:|2 "D"f2"A"d2"D"d2z2||
 
 X:84
 T:Sally Gardens, The
-S:The Session: https://thesession.org/tunes/98#setting98
+S:The Session: https://thesession.org/tunes/98#setting48123
 C:Traditional
 R:reel
 K:G
 M:4/4
 L:1/8
 Q:1/4=120
-|: G2GA BAGB| dBeB dBAB| d2Bd efge| dBAB GEDE|
-| GFGA BAGB| d2eB dBAB| d2Bd efge| dBAB G4:|
-|: dggf g2de| g2bg ageg| eaag a2eg| a2bg ageg|
-| dggf g2de| g2bg ageg| d2Bd efge| dBAB G4 :|
+BA|:"G"G2DG B2GB|dBeB dBAB|"G"d2Bd "Em"efge|"Am"dBAB "D"GEDE|
+|"G"G2DG B2GB|dBeB dBAB|"G"d2Bd "C"egdB|1 "D"AcBA "G"GEED:|2 "D"AcBA "G"G2||
+|:Bc|"G"dggf g2de|g2bg ageg|"Am"eaag a2eg|a2bg ageg|
+|"G"dggf g2de|g2bg ageg|"G"d2Bd "C"egdB|"D"Ac (3BAB "G"G2:|
 
 X:85
 T:Ships Are Sailing, The
-S:The Session: https://thesession.org/tunes/543#setting543
+S:The Session: https://thesession.org/tunes/543#setting55396
 C:Traditional
 R:reel
 K:Edor
 M:4/4
 L:1/8
 Q:1/4=120
-|: Beed BcdB| AD (3FED A,D (3FED| ~E3F GFGA| Beef gfed|
-| Beed BcdB| AD (3FED A,D (3FED| ~E3F GFGA| Beed e3z:|
-| ~g3a bgeg| ~f3g afdf| gfga bgaf| gefd e2 de|
-| gfga bgeg| fefg afdf| g2bg f2af| edef gfed:|
+ed|:"Em"Beed BcdB|"D"ADFD ADFD|"Em"EDEF GFGA|"G"Beef "D"gfed|
+|"Em"Beed BcdB|"D"ADFD ADFD|"Em"EDEF GFGA|1 "D"Beed "Em"e2 ed:|2 "D"Beed "Em"e2 ef||
+|:"Em"gfga bgeg|"D"fefg afdf|"Em"gfga bgeg|"D"fedf "Em"e2ef|
+|"Em"gfga bgeg|"D"fefg afdf|"Em"g2bg "D"f2af|1 "C"edef "D"gf ef :|2 "C"edef "Em" e4 ||
 
 X:86
 T:Silver Spear, The
-S:The Session: https://thesession.org/tunes/182#setting182
+S:The Session: https://thesession.org/tunes/182#setting45738
 C:Traditional
 R:reel
 K:D
 M:4/4
 L:1/8
 Q:1/4=120
-A|: FA (3AAA BAFA| dfed BddA| FA (3AAA BAFA| dfed (3BdB AG| 
-| FA (3AAA BAFA| dfed Bdef| gage fgfe|1 dfed (3BdB AG:|2 dfed BdAd||
-|: fa (3aaa bfaf| gfed Bdde| fa (3aaa bfaf| gfed (3BdB A2| 
-| fa (3aaa bfaf| gfed Bdef| ~g3 e ~f3 e|1 dfed BdAd:|2 dfed B2 AG||
+|:"D"FA ~A2 BAFA|"G"dfed "A"BcdA|"D"FA ~A2 BAFA|"G"dfed "A"~B2 A2|
+|"D"FA ~A2 BAFA|"G"dfed "A"Bdef|"G"~g3 e "D"~f3 e|"G"dfed "A"~B2 A2:|
+|:"D"fa ~a2 bfaf|"G"gfed "A"Bcde|"D"fa ~a2 bfaf|"G"gfed "A"~B2 A2|
+|"D"fa ~a2 bfaf|"G"gfed "A"Bdef|"G"~g3 e "D"~f3 e|1 "G"dfed "A"~B2 A2:|2 "G"dfed "D"~d4||
 
 X:87
 T:Sligo Maid, The
-S:The Session: https://thesession.org/tunes/399#setting399
+S:The Session: https://thesession.org/tunes/399#setting55397
 C:Traditional
 R:reel
 K:Ador
 M:4/4
 L:1/8
 Q:1/4=120
-|: A2BA (3B^cd ef| gedB AGEF| G2BG dGBG| DEGA BAdB|
-| A2BA (3B^cd ef| gedB AGEG| B3G A2GE| DEGA BAA2:| 
-|:eaag a2ga| bgaf gfed| eggf g2ge| dega bgag|
-| eaag a2ga| bgaf gfed| eg (3gfg edBA| dBgB BAA2:|
+|: "Am"A2BA (3Bcd ef| gedB AGEF| "G"G2BG DGBG| DEGA BedB|
+| "Am"A2BA (3Bcd ef| gedB AGEG| "G"B3G A2GE| DEGA "Am"BAA2:| 
+|: eaag a2ga| bgaf gfed| "G"eggf g2ge| dega bgag|
+| "Am"eaag a2ga| bgaf gfed| "G"eg (3ggg edBA| dBgB "Am"BAA2:|
 
 X:88
 T:Sporting Paddy
-S:The Session: https://thesession.org/tunes/430#setting430
+S:The Session: https://thesession.org/tunes/430#setting55399
 C:Traditional
 R:reel
 K:G
 M:4/4
 L:1/8
 Q:1/4=120
-| EAAB GABG| EAAB G2ED| EAA2 GABd| edge dBAG|
-| EAAB GABG| EAAB G2ED| EAA2 GABd| edge d2ef||
-| geee gede| geee a2ba| gee2 ged2| efge d2ef|
-| geee gede| geee a2ga| bgab gabg| efge dBAG||
+|"Am"EAAB "G"GABG|"Am"EAAB "G"G2ED|"Am"EAAB "G"GABd|"Am"edge "G"dBAG|
+|"Am"EAAB "G"GABG|"Am"EAAB "G"G2ED|"Am"EAAB "G"GABd|"Am"edge "G"d2ef||
+|"Em"geee gede|geee "D"a2ba|"Em"geee ged2|efge "D"d2ef|
+|"Em"ggfg edBd|geee "D"a2ga|"Em"bgaf ged2|efge "D"dBAG||
 
 X:89
 T:Star Of Munster, The
-S:The Session: https://thesession.org/tunes/197#setting197
+S:The Session: https://thesession.org/tunes/197#setting28411
 C:Traditional
 R:reel
 K:Ador
 M:4/4
 L:1/8
 Q:1/4=120
-ed|: c2Ac B2GB| AGEF GEDG| EAAB cBcd| eaaf gfed| 
-| cBAc BAGB| AGEF GEDG| EAAB cded|1 cABG A2 ed:|2 cABG A2 de |] 
-|:eaab ageg| agbg agef| gfga gfef| gfaf gfdf|
-|eaab ageg| agbg agef| g2ge a2ga|1 bgaf ge de :|2 bgaf ge e2 |]
+|ed|:"Am"c2Ac "G"B2GB|"F"AGEF "Em"GEDG|"Am"EAAB cBcd|"Am"eaaf "Em"gfed|
+"Am"cBAc "G"BAGB|"F"AGEF "Em"GEDG|"Am"EAAB cded|1 "G"(3cBA BG "Am"A2ed:|2 "G"(3cBA BG "Am"A2de||
+|:"Am"eaab ageg|"Am"agbg agef|"G"gfga gfef|"G"gfaf gfdf|
+"Am"eaab ageg|"Am"agbg agef|"G"g2gf "F#m"a2ga|"Em"bgaf [1gedf:|2 gedB|A4]
 
 X:90
 T:Sí Bheag Sí Mhór
-S:The Session: https://thesession.org/tunes/449#setting449
+S:The Session: https://thesession.org/tunes/449#setting55400
 C:Traditional
 R:waltz
 K:D
 M:3/4
 L:1/8
 Q:1/4=96
-de|: f3e d2| d2 de d2| B4 A2| F4 A2| BA Bc d2| e4 de| f2 f2 e2| d4 f2|
-| B4 e2| A4 d2| F4 E2| D4 e2| B4 e2| A4 dc| d6| d4 de :|
-|: f2 fe d2| ed ef a2| b4 a2| f4 ed| e4 a2| f4 e2| d4 B2| A4 BA|
-| F4 E2| D4 f2| B4 e2| A4 a2| ba gf ed| e4 dc| d6|1 d4 de:|2 d6||
+de|:"D"f2 fe d2|"Bm"d2 de d2|"G"B4 "A"A2|"D"F4 A2|"G"BA Bc d2|"A7"e4 de|"D"f2 f2 e2|"Bm"d4 f2|
+|"G"B4 e2|"D/A"A4 d2|"Bm"F4 E2|"Bm"D4 f2|"G"B4 e2|"A7"A4 dc|"D"d6|"D"d4 de:|
+|:"D"f2 fe d2|"A7"ed ef a2|"G"b4 a2|"D"f4 ed|"A7"e4 a2|"D"f4 e2|"D"d4 B2|"A"B4 A2|
+|"F#m"F4 E2|"Bm"D4 f2|"G"B4 e2|"A7"A4 a2|"G"ba gf ed|"A7"e4 dc|"D"d6|1 "D"d4 de:|2 "D"d6||
 
 X:91
 T:Tabhair Dom Do Lámh
-S:The Session: https://thesession.org/tunes/454#setting454
+S:The Session: https://thesession.org/tunes/454#setting54009
 C:Traditional
 R:waltz
 K:G
 M:3/4
 L:1/8
 Q:1/4=96
-D2|: E2 G2 G2| G4 D2| E2 G2 G>A| G4 D2| E2 G2 G2| G2 A2 B2| B2 e2 de| B4 AG|
-| A2 A2 ed| B2 B2 dB| A2 AB AG| E4 D2| E2 G2 G2| G4 D2| E2 G2 G2| G4 D2|
-| E2 G2 G2| G2 A2 B2| de dB AB| G4 D2|E2 G2 G2| G2 A2 B2| B2 e2 d2| B4 AG|
-| A2 A2 ed| B2 B2 dB| A2 AB cd| e4 dB| d2 d2 e2| g4 ed| e2 e2 (3geg| a4 de|
-| g2 g2 de| g2 g2 de| g2 g2 (3aga| b6| b2 b2 b2| b4 ag| a2 ag ab| a4 gf|
-| e3 f2 (3gfe| d2 d2 g2| B3 d cB| A4 (3cBA|G2 GA Bd| =f4 ed| e2 e2 g2| e4 dB|
-| d2 d2 g2| B2 B2 dB| A2 AB (3cBA| G6:|] y500
+D2|:"C"E2 G2 G2|"G"G4 D2|"C"E2 G2 G2|"G"G4 D2|"C"E2 G2 G2|"G"G2 A2 B2|"Bm"B2 e2 d2|"Em"B4 AG|
+|"Am"A2 A2 ed|"G"B2 B2 dB|"Am"A3 B AG|"C"E4 D2|"C"E2 G2 G2|"G"G4 D2|"C"E2 G2 G2|"G"G4 D2|
+|"C"E2 G2 G2|"Em"G2 A2 B2|"D"D3 B AB|"G"G4 D2|"C"E2 G2 G2|"G"G2 A2 B2|"Bm"B2 e2 d2|"Em"B4 AG|
+|"Am"A2 A2 ed|"G"B2 B2 dB|"Am"A3 G (3Bcd|"C"e4 dB|"G"d2 d2 e2|"Em"g4 ed|"C"e2 e2 g2|"D"a4 ge|
+|"G"g2 g2 de|"Em"g2 g2 de|"C"g2 g2 a2|"G"b6|"G"b2 b2 b2|"Em"b4 ag|"Am"a2 ag ab|"D"a4 gf|
+|"C"e2 e2 ge|"G"d2 d2 gd|"Em"B2 B2 dB|"D"A3 c BA|
+|"G"G3A (3Bcd|"F"=f4 ed|"C"e2 e2 g2|"C"e4 dB|"G"d2 d2 gd|"Em"B2 B2 dB|"D"A3 c BA|"G"G4D2:|
+|[2 "Fine""C"E2 G2 G2|"G"G4 D2|"C"E2 G2 G2|"G"G4 D2|"C"E2 G2 G2|"Em"G2 A2 B2|"D"D3 B AB|"G"G6||
 
 X:92
 T:Tam Lin
-S:The Session: https://thesession.org/tunes/248#setting248
+S:The Session: https://thesession.org/tunes/248#setting37488
 C:Traditional
 R:reel
 K:Dm
 M:4/4
 L:1/8
 Q:1/4=120
-|: A,2DA, FA,DA,| B,2DB, FB,DB,| C2EC GCEC| FEDC A,DDC|
-| A,2DA, FA,DA,| B,2DB, FB,DB,| C2EC GCEC| FEDC A,DD2:| 
-|:dA~A2 FADA| dA~A2 FADA| cG~G2 EG~G2| cG~G2 cdec|
-|dA~A2 FADA| dA~A2 FADA,| ~B,3A, B,CDE| FDEC A,DD2:|
+|:"Dm"A,2DA, FA,DA,|"Bb"B,2DB, FB,DB,|"C"C2EC GCEC|"Dm"FEDC A,DDC|
+|"Dm"A,2DA, FA,DA,|"Bb"B,2DB, FB,DB,|"C"C2EC GCEC|"Dm"FEDC A,DD2:|
+|:"Dm"dA~A2 FADA|dA~A2 FADA|"C"cG~G2 EG~G2|cG~G2 cdec|
+|"Dm"dA~A2 FADA|dA~A2 FADA,|"Gm"~B,3A, B,CDE|"Am"FDEC "Dm"A,DD2:|
 
 X:93
 T:Tarbolton, The
-S:The Session: https://thesession.org/tunes/560#setting560
+S:The Session: https://thesession.org/tunes/560#setting55401
 C:Traditional
 R:reel
 K:Edor
 M:4/4
 L:1/8
 Q:1/4=120
-D|: Eeed e2 BA| GBAF GFEF| Dddc d2 AF| GBAG FDDF| 
-| Eeed efge| fedf edBA| GABG FGA=c|1 BGAF GE ED:|2 BGAF GE eg |]
-| gfef (3gfe be| gebe gfef| d2 fd adfd| ABAG FDDF|
-| (3GGG BG (3FFF AF| Eeef gfed| B2 dB AGFA|1 BGAF GE E e:|2 BGAF GE E2 |]
+D|:"Em" Eeed e2 BA| GBAF GFEF| "D"Dddc d2 AF| GBAG FDDF| 
+| "Em"Eeed efge| "D"fedf "Em"edBA| GABG "D"FGA=c|1 BGAF "Em"GE ED:|2 BGAF "Em"GE eg |]
+|: "Em"gfef (3gfe be| gebe gfef| "D"d2 fd adfd| ABAG FDDF|
+| "Em"(3GGG BG "D"(3FFF AF| "Em"Eeef gfed| B2 dB AGFA|1 "D"BGAF "Em"GE E e:|2 "D"BGAF GE E2 |]
 
 X:94
 T:Teetotaller's, The
-S:The Session: https://thesession.org/tunes/114#setting114
+S:The Session: https://thesession.org/tunes/114#setting55402
 C:Traditional
 R:reel
 K:G
 M:4/4
 L:1/8
 Q:1/4=120
-|: G2 GF GABc| dBeB dBAc| BEED EFGA| BGAF GFED|
-| G2 GF GABc| dBeB dBAc| BEED EFGA| BGAF G4:| 
-|:Beed e2ef| gfaf gfed| B^cde d2ef| gfaf gfed|
-| Beed e2ef| gfaf gfed| BEED EFGA| BGAF G4:|
+(3DEF|:"G"G2GF GABc|d2ge dBAc|"Em"BEED EFGA|BcAF GFED|
+|"G"G2GF GABc|d2ge dBAc|"Em"BEED EFGA|1"D"BcAF "G"G2 (3DEF:|2"D"BcAF "G"G2 GA|]
+|:"Em"Beef e2ef|ggga gfed|"D"Bdd^c d2de|fgaf gfed|
+|"Em"Beed e2ef|ggga gfed|BcBG EFGA|1 "D"BcAF "G"G2 GA:|2 "D"BcAF "G"G4||
 
 X:95
 T:Tenpenny Bit, The
-S:The Session: https://thesession.org/tunes/109#setting109
+S:The Session: https://thesession.org/tunes/109#setting55403
 C:Traditional
 R:jig
 K:Ador
 M:6/8
 L:1/8
 Q:1/4=113
-|: eAA eAA| BAB GBd| eAA eAA| def gfg|
-| eAA eAA| BAB GAB| def ged| BAG A3:|
-| eaa aga| bag ged| eaa aga| bag a3|
-| eaa aga| bag ged| def ged| BAG A3:|
+|:"Am"eAA eAA|"Em"BAB "G"GBd|"Am"eAA eAA|"Em"def "G"gfg|
+|"Am"eAA eAA|"Em"BAB "G"G2B|"Em"def "G"gdB|"G"BAG "Am"A2d:|
+|:"Am"eaa aga|"Em"bab "G"ged|"Am"eaa aga|"Em"bgf "G"g2 d|
+|"Am"eaa aga|"Em"ab2 "G"ged|"Em"def "G"gdB|1"G"BAG "Am"A2d:|2"G"BAG "Am"A3||
 
 X:96
 T:Toss The Feathers
-S:The Session: https://thesession.org/tunes/113#setting113
+S:The Session: https://thesession.org/tunes/113#setting43560
 C:Traditional
 R:reel
 K:Edor
 M:4/4
 L:1/8
 Q:1/4=120
-|: EBBB dBBB| EBBB FAFA| BE E2 BABc| dfed BAFA:|
-! Beed e2 de| fede fe e2| febe febe| fede fee2|
-! Beed e2 de| fede fa a2| b2bf a2af| egfe dBAF|
+|:"Em"EBB2 dBB2|"Em"EBBA "D"FEFA|"Em"BE E2 B3d|"C"egfe "D"dBAF|
+|"Em"EBB2 dBB2|"Em"EBBA "D"FEFA|"Em"BE E2 B3d|"C"egfe "D"dBBA||
+|"Em"Beed e2 de|"D"fede "Bm"fe e2|"Em"febe febe|"D"fede "Bm"fe e2|
+|"Em"Beed e2 de|"D"fede fa a2|"G"b3f "D"a3f|"C"egfe "Bm"dBAF:|
 
 X:97
 T:Toss The Feathers #2
-S:The Session: https://thesession.org/tunes/138#setting138
+S:The Session: https://thesession.org/tunes/138#setting31481
 C:Traditional
 R:reel
 K:Dmix
 M:4/4
 L:1/8
 Q:1/4=120
-|: D2 FD ADFD| ABcA G~E3| D2 (3FED ADFA| d2 ed cAGE|
-| (3DDD AD (3DDD AD| ABcA G~E3| cABG A2 AB|1 cded cAGE:|2 cded cAGc||
-|: Ad (3ddd Ad (3ddd| Ad (3ddd ed^cd| eaag a2 ag| eaag ed^cd|
-| efge afge|dfed cAGB| cABG A2 AB|1 cded cAGc:|2 cded cAGE||
+|:"D"D2 ED ADED|ABcA "C"GEGE|"D"D2 (3FED ADED|AddB "C"cAGE|
+|"D"D2 DA D2 ED|ABcA "C"GE E2|cABG A2 (3ABc|"G" d2 ed "Am7"cAGE:|
+|:"D"Ad d2 Ad d2|Ad d2 ed^cd|"Am" eaag a2 ge|a2 ag aged|
+|"C"ef (3gfe af (3gfe|"G" f3 d dcAB|"C" cABG A2 (3ABc|"G"d2 ed "Am7"cAGE:|
 
 X:98
 T:Tripping Up The Stairs
-S:The Session: https://thesession.org/tunes/111#setting111
+S:The Session: https://thesession.org/tunes/111#setting28407
 C:Traditional
 R:jig
 K:D
 M:6/8
 L:1/8
 Q:1/4=113
-|: FAA GBB| FAd fed| cBc ABc| dfe dAG|
-| FAA GBB| FAd fed| c2c ABc| dfe d2A:|
-| dBB fBB| dBB fed| cAA eAA| efe edc|
-| dBB fBB| fgf fed| cBc ABc| dfe d3:|
+|:"D"FAA "G"GBB|"D"FAd fed|"A"cBc ABc|"D"dfe "G"dAG|
+|"D"FAA "G"GBB|"D"FAd fed|"A"c2c ABc|"D"dfe d2A:|
+|:"Bm"dBB fBB|"Bm"dBB fed|"A"cAA eAA|"A"efe edc|
+|"Bm"dBB fBB|"Bm"fgf fed|"A"cBc ABc|"D"dfe d3:|
 
 X:99
 T:Wind That Shakes The Barley, The
-S:The Session: https://thesession.org/tunes/116#setting116
+S:The Session: https://thesession.org/tunes/116#setting45357
 C:Traditional
 R:reel
 K:D
 M:4/4
 L:1/8
 Q:1/4=120
-|A2AB AFED| B2BA BcdB| A2AB AFED| gfed BcdB|
-| A2AB AFED| B2BA BcdB| A2AB AFED| gfed Bcde||
-| f2fd g2ge| f2fd Bcde| f2fd g2fg| afed Bcde|
-| f2fd g2ge| f2fd Bcde| defg a2ab| afed BcdB||
+|:"D"A2AB AFED|"G"B2BA BcdB|"D"A2AB AFED|1 "G"gfed "A"BcdB:|2 "G"gfed "A"Bcde||
+|:"D"f2fd "G"g2ge|"D"f2fd "A"Bcde|"D"f2fd "G"g2fg|1 "A"afed Bcde:|2 "A"afed BcdB||
 
 X:100
 T:Wise Maid, The
-S:The Session: https://thesession.org/tunes/118#setting118
+S:The Session: https://thesession.org/tunes/118#setting55404
 C:Traditional
 R:reel
 K:D
 M:4/4
 L:1/8
 Q:1/4=120
-DE|: F2FG FEDE| FAAB AFED|d2eg fdec| dBAG BEED| 
-| F2FG FEDE| FAAB AFED| d2eg fdec|1 dBAG FD DE:|2 dBAG FD FA |] 
-|: d2AG FDFA| dfaf gfeg| fedf eAcA| dfed cA A2|
-| BAGB ADFD| dfaf gfed| Bdce dBAG|1 FGEF D2 FA :|2 FGEF D4 |]
+DE|:"D"F2FG FEDE|FAAB AFED|d2eg fdec|"G"dBAF "A"BE~E2|
+|"D"F2FG FEDE|FAAB AFED|d2eg "G"fdec|"A"dBAG "D"FD D2:|
+|:"D"d2AG FDFA|dfaf "A"gfeg|"D"fAdf "A"eAce|"G"dfed "A"cA ~A2|
+|"G"BDGB "D"ADFA|dfaf gfed|"G"Bdce dBAG|"A"FGEF "D"D4:|
+
+X:101
+T:Whats Left of the Flag
+S:The Session: https://thesession.org/tunes/118#setting55387
+C:Flogging Molly
+R:jig
+K:D
+M:6/8 
+L:1/8
+Q:1/4=120
+| "D" A,D2A,D2 |FA "G"BB"D"A2|  FED2F2|ED"Bm"B,4 |
+w: His eyes they closed and his last breath spoke. He had seen all to be seen.
+| "D"A,DA,D FA|"G"B2B2"D"A2 | FEDD EF|"G"E2D"D"D3|
+w: A life once full, now an em-pty vase. Wilt the blos-soms on his ear-ly grave.
+| FA"G"B2 BB| A"D"FA2 FF |FA"Bm"BcdF|"A"A6|
+w: Walk a-way me boy, walk a-way me boy. And by mor-ning we'll be free.
+|FE"D"D2ED|FA"G"BB"D"A2| FFE DFF|"A"E2D"D"D3|
+w: Wipe that gol-den tear from your mo-ther, dear. And reaise what's left of the flag for me.
