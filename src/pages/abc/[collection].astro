@@ -12,13 +12,15 @@ export async function getStaticPaths() {
     { params: { collection: 'old-time-jam-tunes' } },
     { params: { collection: 'irish-session-top100' } },
     { params: { collection: 'open-hymnal' } },
+    { params: { collection: 'roaring-jelly-2024' } },
   ];
 }
 
 const filenameMap: Record<string, string> = {
   'old-time-jam-tunes': 'old_time_jam_tunes_collection.abc',
   'irish-session-top100': 'irish_session_top100_collection.abc',
-  'open-hymnal': 'open_hymnal_collection.abc'
+  'open-hymnal': 'open_hymnal_collection.abc',
+  'roaring-jelly-2024': 'roaring_jelly_collection.abc'
 };
 
 const searchRoots = [
@@ -30,7 +32,8 @@ const searchRoots = [
 const titleMap: Record<string, string> = {
   'old-time-jam-tunes': 'Old Time Jam Tunes',
   'irish-session-top100': 'The Session Top 100',
-  'open-hymnal': 'Open Hymnal'
+  'open-hymnal': 'Open Hymnal',
+  'roaring-jelly-2024': 'Roaring Jelly (2024 Session)'
 };
 
 const currentDir = fileURLToPath(new URL('.', import.meta.url));
