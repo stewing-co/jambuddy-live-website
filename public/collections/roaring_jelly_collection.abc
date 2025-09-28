@@ -12,7 +12,6 @@ DC|"G"B,DGA B2DC|B,DGA "G#dim"B2AG|"Am7"FGAB cAFA|"D"GABc "D7"d2DC|
 X: 2
 T: Alabama Jubilee
 I: Alabama Jubilee	S-A	C	square
-C: S-A
 M: C
 Z: Transcribed to abc by Mary Lou Knack
 R: square
@@ -26,7 +25,7 @@ K: C
 X: 3
 T: All the Rage
 I: All the Rage	J-48	E	jig
-C: Larry Unger \2511989
+C: Larry Unger
 M: 6/8
 R: jig
 K: E
@@ -39,7 +38,6 @@ X: 4
 T: All Those Endearing Young Charms
 I: All Those Endearing Young Charms	W-7	G	waltz
 I: My Lodging's on the Cold Ground	W-7	G	waltz
-C: W-7
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -52,8 +50,7 @@ dc| "G"B2 d2 g2| g4 d2| "C"e2 c2 g2| g4 fe|    "G"d3 c B2| "D"A2 G2 A2| "G"B2 d2
 X: 5
 T: Amelia's
 I: Amelia's	W-14	D	waltz
-C: W-14
-C: Bob McQuillen \2511981
+C: Bob McQuillen
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -77,7 +74,6 @@ K:Am
 
 X: 7
 T: Anniversary Waltz
-C:W-48
 I: Anniversary Waltz, The	W-??	Dm	waltz
 M: 3/4
 R: waltz
@@ -103,8 +99,6 @@ K: G
 X: 9
 T: Ash Grove, The
 I: Ash Grove, The	W-36	A	waltz
-C: W-36
-C: Welsh
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: Waltz
@@ -118,8 +112,7 @@ E2|: "A"A2 c2 ed| c2 A2 A2| "Bm"B2 dc BA| "E"G2 E2 E2|    "A"A2 cB AG| "D"F2 D2 
 X: 10
 T: Ashokan Farewell
 I: Ashokan Farewell	W-25	D	waltz
-C: W-25
-C: Jay Ungar  \2511983
+C: Jay Ungar
 M: 3/4
 L: 1/4
 Z: Transcribed to abc by Mary Lou Knack
@@ -132,7 +125,6 @@ F/G/| "D"A>FD| "D7/F#"d2A| "G"B>cd| "D"A<FE|       F>ED| "Bm"B,2 G,| "A"A,3| "A7
 
 X: 11
 T: Athol Highlanders Jig
-C: M-9
 M: 6/8
 Z: Transcribed to abc by Mary Lou Knack
 R: jig
@@ -175,7 +167,6 @@ z2A| "D"f2f fga| d2d dcB| ABA "B7"AGF| "Em"E2E E2A|
 X: 14
 T: Balkan Hills Schottische, The
 I: Balkan Hills Schottische, The	M-4	D	schottische
-C: M-4
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: schottishe
@@ -205,7 +196,7 @@ Transition: Play either Glen Echo or Sligo Creek next, depending on what our Bel
 
 X: 16
 T: Barbour's Cordial
-C: Keith Murphy \251Black Isle Music, BMI
+C: Keith Murphy
 M: 6/8
 L: 1/8
 K: Dm
@@ -238,8 +229,7 @@ z2|:"F"A2cA cAcA| "Bb"B2dB dBdB| "F"A2cA cAcA| "C7"BAGF EFGB|
 
 X: 19
 T: Beer Barrel Polka
-I: Beer Barrel Polka	S-B	Bb/Eb	square
-C: S-B
+I: Beer Barrel Polka
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: square
@@ -271,7 +261,6 @@ K: C
 
 X: 21
 T:Benton's Dream
-C:
 R:reel
 Z:transcribed to ABC by Debby Knight
 M:C|
@@ -285,7 +274,6 @@ K:Amix
 X: 22
 T: Bergman's Valtz
 I: Bergman's Valtz	W-8	Am	waltz
-C: W-8
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -307,7 +295,7 @@ K:Bm
 
 X: 24
 T:Bert Ferguson
-C: \2511980 Samuel Ian Rothmar Burns
+C: Samuel Ian Rothmar Burns
 R: jig
 M: 6/8
 K: A
@@ -322,7 +310,7 @@ C:Larry Unger
 M: C|
 L: 1/8
 R: reel
-K: Amin %Transposed from EMIN
+K: Amin
 "A"A_B^cd efed|egfe "Bb"fed^c|"A"A_B^cd efed|efed "Bb"e2 ee|
 "A"A_B^cd efed|egfe "Bb"fed^c|"A"d^c_Bd "Bb"cBAG| "A"A2 E2 A2 z2 :|
 [|:"A"A2 eA "Bb" _B2 ed|"A"^cd e2 -egfe|A2 eA "Bb"_B2 ed|"Gm"^c_B G2-GdcB|
@@ -355,7 +343,6 @@ K: G
 
 X: 28
 T: Blarney Pilgrim, The
-C: M-13
 M: 6/8
 L: 1/8
 R: jig
@@ -382,7 +369,6 @@ Acd ^d=dc |Acd ^d=dc | age cAG| _EDC A,3 :|
 
 X: 30
 T:Bluemont Waltz
-C:W-56
 K:A
 M:3/4
 L:1/4
@@ -397,7 +383,6 @@ A/B/|"A"c2e/c/ |"E"B>d c/B/ |"F#m"A/ F3/2 F/G/ | F2 E |
 
 X: 31
 T:Boda Valsen
-C:W-47
 M: 3/4
 R: Waltz
 K:G
@@ -429,7 +414,6 @@ FG| "D"A>BAF A2de| f>efa d2dc| "G"B>cdB "D"AFED| "A"E2EF E2FG|
 X: 33
 T: Bonny Tyneside
 I: Bonny Tyneside	W-7	D	waltz
-C: W-7
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -481,7 +465,6 @@ B| "Am"A/A/A a2 A/A/A g2| Aage ageg| "G"G/G/G BA BGGB| "F"[c2G2]BA "G"BGGB|
 X: 37
 T: Bully of the Town
 I: Bully of the Town	S-B	F	square
-C: S-B
 C: Trevathan
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
@@ -515,7 +498,7 @@ L:1/8
 X: 39
 T: Bus Stop Reel
 I: Bus Stop Reel	R-139	D	reel
-C: Anita Anderson \2511987
+C: Anita Anderson 
 Z: Transcribed to abc by Mary Lou Knack
 R: reel
 M: C|
@@ -539,7 +522,7 @@ d|: "G"BcdB G2gf| "C"edef gedc| "G"BcdB G2Bd| "D"cBAG F2D2|
 X: 41
 T: Båtsman Deck
 I: Batsman Deck	M-2	G	hambo
-C: M-2 \2511980 Matt Fichtenbaum
+C: Matt Fichtenbaum
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: hambo
@@ -610,7 +593,6 @@ K: D
 X: 47
 T: Chinese Breakdown
 I: Chinese Breakdown	S-C	D	square
-C: S-C
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: square
@@ -663,7 +645,6 @@ K: Ador
 X: 51
 T: Climb Up Golden Stairs
 I: Climb Up Golden Stairs	S-C	G	square
-C: S-C
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: square
@@ -706,7 +687,6 @@ K: Dmaj
 X: 54
 T: Coco Roco
 C: Keith Murphy
-C: Black Isle Music, BMI
 K:EMix
 M:6/8
 |:"E7"E2B AAB|dBA GAB|E2 B AAB|"G"=G2G "D"FED|
@@ -728,7 +708,6 @@ E| "Am"EAA ABc| "E"Bee e2d| "Am"cBA ABc| "E"B^GE E2E|
 X: 56
 T: Come O'er the Stream, Charlie
 I: Come O'er the Stream, Charlie	W-7	G	waltz
-C: W-7
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -780,8 +759,7 @@ F2|"Em"EBBA B2 EB | B2 AB dBAG | "D"(3FED AD BDAD | (3FED AD BAGF |
 X: 60
 T: Cori McLenon
 I: Cori McLenon	W-9	Am	waltz
-C: W-9
-C: Bob McQuillen \2511979
+C: Bob McQuillen
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -805,7 +783,6 @@ B/A/| "G"GDE G2A| Bgf gdB| "C"ABc "G"BGA| "Am"BcA "D"BGE|
 X: 62
 T: Crooked Stovepipe #1, The
 I: Crooked Stovepipe, The	S-C	G	square
-C: S-C
 C: Ralph Page
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
@@ -853,8 +830,7 @@ K: D
 X: 66
 T: Dancing Bear, The
 I: Dancing Bear, The	R-116	Em	reel
-C: Bob McQuillen  2/22/78
-M: C|
+C: Bob McQuillen
 R: reel
 K: Em
 "Em"EFGF EFGF| EFGA G2E2| "A"EFGF EFGF| EFGA G2E2|
@@ -865,7 +841,6 @@ K: Em
 X: 67
 T: Darling Nellie Gray
 I: Darling Nellie Gray	S-D	D	square
-C: S-D
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: square
@@ -895,7 +870,6 @@ F8  | G4^G4 | c3c c4- |c2B2 A2G2 | c3c c4- |c2B2 A2G2 |"D"d3A "A7"BAFA |"D"d2z2 
 
 X: 69
 T: Derry Reel, The
-C:
 R: reel
 M: C|
 L: 1/8
@@ -907,7 +881,6 @@ AB|"A"c3B ABcA |"E" B2cB AFEF |"A"ABce a2ge | "D"(3fga ec "E"B2AB |
 
 X: 70
 T:Devil in the Strawstack
-C:                          % title
 M:C|                           % meter
 L:1/8                        % length of shortest note
 K:Gm                           % key
@@ -969,7 +942,6 @@ e^g| "A"aA (3.A.A.A aAbA| aA (3.A.A.A agef| "G"gB (3.B.B.B gBaB| gB (3.B.B.B gef
 X: 75
 T: Disarmament Waltz
 I: Disarmament Waltz	W-37	G	waltz
-C: W-37
 C: Micah Solomon
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
@@ -1008,7 +980,6 @@ G2| "C"c2c2 "G"BcdB| "C"cega gece| "F"f2fd "C"e2ec| "G"dcBA G2AB|
 X: 78
 T: Down Yonder
 I: Down Yonder	S-D	D	square
-C: S-D
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: square
@@ -1044,8 +1015,7 @@ GE| "G"DBB BAG| Bdd dBG| "C"cde "G"dBG| "Am"BAA "D"AGE|
 X: 81
 T: Ed Shaw's Waltz
 I: Ed Shaw's Waltz	W-22	D	waltz
-C: W-22
-C: Ed Shaw  August 1987
+C: Ed Shaw
 M: 3/4
 L: 1/4
 Z: Transcribed to abc by Mary Lou Knack
@@ -1069,7 +1039,6 @@ d2| "G"[B4b4] [B2b2][B2a2]| [B4g4] [B2g2]d2|  [B2b2][B2b2] [B2a2][B2g2]| "D7"[A4
 
 X: 83
 T:Emma's Waltz
-C:W-49
 M:3/4
 L:1/8                        % length of shortest note
 K:Am
@@ -1110,7 +1079,7 @@ K:Em
 X: 86
 T: Fair Jenny's Jig
 I: Fair Jenny's Jig	J-18	D	jig
-C: Peter Barnes \2511977
+C: Peter Barnes
 M: 6/8
 R: jig
 K: D
@@ -1138,8 +1107,7 @@ K:D
 X: 88
 T: Far Away
 I: Far Away	W-38	Bm	waltz
-C: W-38
-C: \2511986 Peter Jung
+C: Peter Jung
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -1206,7 +1174,7 @@ K: D
 
 X: 94
 T:Fleur de Mandragore
-C: \251Michel Bordeleau
+C: Michel Bordeleau
 R:Reel
 L:1/8
 M:C|
@@ -1246,7 +1214,6 @@ M:C|
 X: 97
 T: Forest Flower Waltz
 I: Forest Flower Waltz	W-23	Bm	waltz
-C: W-23
 M: 3/4
 L: 1/4
 Z: Transcribed to abc by Mary Lou Knack
@@ -1313,7 +1280,7 @@ cB|"A"Aceg aga2|Aceg aga2|"G"edef =gfgf|edef =gedB|
 
 X: 102
 T: Fée des Dents, la
-C: \2512009 André Brunet
+C: André Brunet
 M: 6/8
 L: 1/8
 K: G
@@ -1336,7 +1303,6 @@ K: D
 
 X: 104
 T:Gay Gordons
-C:M-17 Credited to Pipe Major
 C:George S. McLennan
 L:1/8
 M:C|
@@ -1349,8 +1315,6 @@ E2|"A"A2AB c2A2|"D"dcde f2ed|"A"c2a2 efed|"E"c2B2B2E2|
 X: 105
 T: Gentle Maiden
 I: Gentle Maiden	W-5	G	waltz
-C: W-5
-C: Irish
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -1362,7 +1326,7 @@ d2| "G"d3 e f2| "C"g4 g2| g4 g2| g2 f2 e2|    "G"d3 c B2| "G7"A4 G2| "C"E6-| E4 
 
 X: 106
 T: Gigue du Salon
-C: Pascal Gemme \2512013
+C: Pascal Gemme
 M: 6/8
 L: 1/8
 K: A
@@ -1403,7 +1367,6 @@ I: Goin' Down South	S-G	D/E/F	square
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: square
-C: arr: T. Saletan S-G
 P: Intro
 K: D
 "D"A2 A4 B2| A8| "G"A2G2 G2B2| d4 D2E2| "D"F4 A4| "A7"F4 E4| "D"D8| z8|]
@@ -1429,8 +1392,6 @@ K: D
 X: 110
 T: Golden Slippers
 I: Golden Slippers	S-G	G	reel
-C: S-G
-C: Old-Time
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: square
@@ -1469,7 +1430,6 @@ K: A
 X: 113
 T: Goodbye My Lady Love
 I: Goodbye My Lady Love	S-G	Bm/D	square
-C: S-G
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: square
@@ -1512,7 +1472,6 @@ K: D
 X: 116
 T: Grandfather's Clock
 I: Grandfather's Clock	S-G	G	square
-C: S-G
 C: Henry Clay Work
 M: C
 Z: Transcribed to abc by Mary Lou Knack
@@ -1528,7 +1487,6 @@ K: G
 
 X: 117
 T:Granny Won't Your Dog Bite
-C:
 S:Old Time, from Ruthie Dornfeld
 Z:
 M:C|
@@ -1568,8 +1526,7 @@ cAGA cAdA|"Am(C)"e4-e2 d2|"Am"c2 A2 "G"GG AG|[1"G/E-G"EDEG"Am" A2 AB :|[2 "G/E-G
 X: 120
 T: Great Waltz of China, The
 I: Great Waltz of China, The	W-39	D	waltz
-C: W-39
-C: \2511985 Mark Simos
+C: Mark Simos
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -1588,7 +1545,6 @@ T: Green Fields of America
 I: Green Fields of America	R-37	G	reel
 M: C|
 R: reel
-C: R-37
 K: G
 AB| "C"c2ec "G"B2dB| "Am"AGAB AGEF| "G"GAGE DEGB| "Am"AGAB AGEB|
     "C"c2ec "G"B2dB| "Am"AGAB AGEF| "G"GAGE DEGA| "D"BGAF "G"G2 :|
@@ -1620,7 +1576,6 @@ K: D
 X: 124
 T: Greenwood Tree, The
 I: Greenwood Tree, The	W-3	D	waltz
-C: W-3
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -1631,7 +1586,6 @@ F2| "G"B4 Bc| d2 d2 F2| d4 cB| "D"A2 F2 FG|    A2 AB AF| A2 d2 e2| f3 e d2| "A7"
 
 X: 125
 T:Haapavesi Waltz
-C:W-54
 R:Waltz
 M:3/4
 L:1/8
@@ -1713,8 +1667,6 @@ B2 AB AF F2|B2 AB AB B2|e2 AA FDAF|EFFE F4:|
 
 X: 132
 T: Haste to the Wedding
-C: J-2
-C: British Isles, New England
 M: 6/8
 Z: Transcribed to abc by Mary Lou Knack
 R: jig
@@ -1728,7 +1680,6 @@ a| "D"afa afa| "G"bgb bgb| "D"afa agf| "A"gfg efg|
 X: 133
 T: Hewlett
 I: Hewlett	W-11	D	waltz
-C: W-11
 C: O'Carolan
 H: From Paul Milde 12/9/82
 M: 3/4
@@ -1742,8 +1693,7 @@ AF| "D"D2 DE FG| "A"AB c2 A2| "Bm"d2 f2 fg| "G"fe d3 B|     "D"A2 F2 F2| "G"G3 B
 X: 134
 T: High Clouds
 I: High Clouds	W-30	G	waltz
-C: W-30
-C: David Kaynor  \2511980
+C: David Kaynor
 M: 3/4
 Z: Transcribed to ABC by Mary Lou Knack
 R: waltz
@@ -1776,7 +1726,6 @@ K: D
 
 X: 137
 T:Hokpers Vals
-C:W-51
 M:3/4
 L:1/8
 K:Dm
@@ -1864,7 +1813,6 @@ A ABcd|"A"eAAe AAeA | AAeA "D"f2ed | "A"ceAB cAeA | ceAc "A#dim"dedc |
 X: 144
 T: Honest John
 I: Honest John	S-H	G	square
-C: S-H
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: square
@@ -1883,7 +1831,6 @@ gf| "G"e2d2 B2G2| "C"A2G2 E2D2| "G"G2G2 GABc| "D7"d4 B2gf| \
 X: 145
 T: Honeysuckle Schottishe
 I: Honeysuckle Schottishe	M-5	F	schottishe
-C: M-5
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: schottishe
@@ -1900,7 +1847,7 @@ G>^G| A2A2 B2=B2| c6 A>_B| c2=B>c d>c_B>A| G6 C2|
 X: 146
 T: Horgalaten
 I: Horgalaten	M-1	Gm/Bb	hambo
-C: M-1 \2511980 Matt Fichtenbaum
+C: Matt Fichtenbaum
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: hambo
@@ -1916,7 +1863,6 @@ K: Gm
 X: 147
 T: Hot Time
 I: Hot Time	S-H	G	square
-C: S-H
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: square
@@ -2002,7 +1948,6 @@ A/B/| "A"c2E EFE| "D"F2A A2f| "A"e2c cBA| "E"B2B B2A/B/|
 X: 154
 T: Hurry, Hurry, Hurry
 I: Hurry, Hurry, Hurry	S-H	C	square
-C: S-H
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: square
@@ -2015,7 +1960,6 @@ E2F2| "G7"G2G2 G2G2| G2G2 A2B2| "C"c8-| c4 |]
 X: 155
 T: Hvem Kan Segle Ulan Vind
 I: Hvem Kan Segle Ulan Vind	W-8	Am	waltz
-C: W-8
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -2026,7 +1970,6 @@ K: Am
 X: 156
 T: I Want A Girl
 I: I Want A Girl	S-I	G	square
-C: S-I
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: square
@@ -2048,8 +1991,7 @@ K:D
 X: 158
 T: If You Knew Susie
 I: If You Knew Susie	S-I	A	square
-C: S-I
-C: $1B.G. DeSylva, Joseph Meyer \2511925\032
+C: B.G. DeSylva, Joseph Meyer
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: square
@@ -2079,7 +2021,6 @@ w: Oh,| oh what a girl!|_|_***|**
 
 X: 159
 T:Il Valzer di Mezzanotte
-C:W-52
 K:Am
 M:3/4
 R:Waltz
@@ -2093,7 +2034,7 @@ c2 e3 c|"Bm"d6-|"D"d2e2 d2|"A"c2 z2 d2|"E"B2z2e2|"A"A3AA2|1"A"A6:|2"Am"AE AB=cd|
 X: 160
 T:Indian Point
 R:jig
-C:Rick Mohr  4/89
+C:Rick Mohr
 D:
 Z:Translated to abc by Debbie Knight
 Z:
@@ -2117,7 +2058,6 @@ K:Edor
 
 X: 162
 T:Inisheer
-C: W-55
 K:G
 L:1/8
 M:3/4
@@ -2150,7 +2090,6 @@ a| "A"ecA "D"BAF| "A"AFE EFA| "Bm"Bdc BAB| "E"cBB B2 a|    "A"ecA "D"BAF| "A"AFE
 X: 165
 T: J. B. Milne
 I: J. B. Milne	S-J	A	square
-C: S-J
 Z: Transcribed to abc by Mary Lou Knack
 R: square
 M: C|
@@ -2167,7 +2106,6 @@ cd| "A"efed c2A2| E2A2 c4| cedc B2A2| "Bm"d6Bc|
 X: 166
 T: Jackson's Breakdown
 I: Jackson's Breakdown	S-J	D	square
-C: S-J
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: square
@@ -2181,8 +2119,7 @@ K: D
 X: 167
 T: Jacqueline's Waltz
 I: Jacqueline's Waltz	W-17	A	waltz
-C: W-17
-C: Tom Anderson  1980
+C: Tom Anderson 
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -2283,8 +2220,7 @@ ee| "A"eccc c2ee| eccc c2ee| fAeA dAcA| "E7"dBBB B2dd|
 X: 175
 T: Judy and Jim's Wedding
 I: Judy and Jim's Wedding	W-42	D	waltz
-C: W-42
-C: \2511988 Larry Unger
+C: Larry Unger
 B: The Curvy Road to Corinth
 Z: transcribed by Mary Lou Knack 6-Jul-1999
 M: 3/4
@@ -2296,7 +2232,6 @@ K: D
 
 X: 176
 T:Julia Delaney
-C: Unknown, around 1900
 M: C
 L: 1/8
 R: reel
@@ -2320,7 +2255,7 @@ K: D
 X: 178
 T: Jump At the Sun
 I: Jump At the Sun	J-50	Gm	jig
-C: John Kirkpatrick  \2511972
+C: John Kirkpatrick
 M: 6/8
 R: jig
 K: Gm
@@ -2332,7 +2267,6 @@ K: Gm
 X: 179
 T: Just Because
 I: Just Because	S-J	G	square
-C: S-J
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: square
@@ -2358,7 +2292,6 @@ cB|"A"AAcB AAcB | Aceg aega | "E7"bgeg fecd | ecef ecBc|
 X: 181
 T: Karis Pers Polska
 I: Karis Pers Polska	M-7	D	polka
-C: M-7 (Trad)
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: polka
@@ -2429,7 +2362,6 @@ ed|"A"c2AA AcBA | "D"FBAF "A"E3A |"Bm"BABc d2B2 |"E"AAAc efed |
 
 X: 187
 T: La Bastringue
-C: M-11
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: reel
@@ -2469,7 +2401,6 @@ Bdc BAG |
 
 X: 190
 T:La Gueussinette
-C:W-53
 K:Bm treble
 M:3/4
 R:Waltz
@@ -2520,9 +2451,8 @@ L:1/8
 
 X: 194
 T:La valse des pastoriaux
-C:W-50
 M:3/4
-L:1/8                        % length of shortest note
+L:1/8                        
 K:G
 "1st time"D2y10|:"G"G2 GABc|d3 cBG|"Am"c2 cBAG|"D"A2 FADF|
 "G"GFGABc|d2 dcBG|"Am"cBAGFG|[1"D"A4D2:|[2"D"A3 gfd||
@@ -2562,8 +2492,7 @@ A| "D"FADA FADA| FAdA "G"BAdA|"D"FADF "Em"EDEF| "A"DB,A,B, "D"D3E|
 X: 198
 T: Lady Lepley
 I: Lady Lepley	W-27	C	waltz
-C: W-27
-C: Ed Pearlman  10/84
+C: Ed Pearlman
 M: 3/4
 L: 1/4
 Z: Transcribed to abc by Mary Lou Knack
@@ -2705,8 +2634,6 @@ K: D
 X: 210
 T: Limerick Rake, The
 I: Limerick Rake, The	W-13	Em	waltz
-H: "waltzified" by C. B.
-C: W-13
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -2740,7 +2667,6 @@ K:A
 X: 213
 T: Little Rascals
 I: Little Rascals	W-31	C	waltz
-C: W-31
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -2774,7 +2700,6 @@ A2| "D"ddc2 B2A2| F6 A2| ddc2 B2=c2| "A"^c8| \
 X: 216
 T: Lord Inchiquin
 I: Lord Inchiquin	W-4	D	waltz
-C: W-4
 C: O'Carolan
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
@@ -2817,7 +2742,6 @@ K: G
 X: 219
 T: Louisiana Swing
 I: Louisiana Swing	S-L	G	square
-C: S-L
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: square
@@ -2827,7 +2751,7 @@ D2E2F2| "G"G4 B4| G2G2 D4| G2G2 B2B2| G2G2 D4| G2G2 E2D2| G2G2 E2D2| "D"D8-| D6 
 
 X: 220
 T: Lovely Madness, A
-C: \251Beoga
+C: Beoga
 R: reel
 M: C|
 L: 1/8
@@ -2841,8 +2765,7 @@ K: Amin
 X: 221
 T: Lover's Waltz, The
 I: Lover's Waltz, The	W-40	D	waltz
-C: W-40
-C: \2511992 Molly Mason & Jay Ungar
+C: Molly Mason & Jay Ungar
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -2854,7 +2777,6 @@ A df|| "D"a3a fd| "G"B3A GF| "D"A6-| A3A df|     a3a fd| "G"B3A GF| "Em"A6-| "A7
 
 X: 222
 T: Lowery's Quadrille
-C:M-8 (also R-173)
 M: C|
 L: 1/8
 R: reel
@@ -2915,7 +2837,6 @@ K: G
 X: 227
 T: Maple Sugar
 I: Maple Sugar	S-M	D/A	square
-C: S-M
 C: Ward Allen
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
@@ -2933,7 +2854,7 @@ F2 G2^G2 | "D"A4 A3B| A2G2 F2E2| F2 F4 G2| F4 G2F2| \
 
 X: 228
 T:March of St. Timothy
-C: M-10  \2511985 Judi Morningstar
+C: Judi Morningstar
 M:C|
 L:1/8
 K:G
@@ -2984,8 +2905,7 @@ K:D
 X: 233
 T: Margaret's Waltz
 I: Margaret's Waltz	W-18	A	waltz
-C: W-18
-C: Pat Shaw \2511959
+C: Pat Shaw 
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -2997,7 +2917,6 @@ cd| "C#m"e3f ge| "F#m"a4 a2| "D"fe d2 f2| "E7"e3d cB|    "A"A3B cd| "F#m"e4 e2| 
 X: 234
 T: Marianne
 I: Marianne	S-M	F	square
-C: S-M
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: square
@@ -3013,8 +2932,7 @@ P:
 X: 235
 T: Marleen's Last Goodnight
 I: Marleen's Last Goodnight	W-28	G	waltz
-C: W-28
-C: Bruce A. Randall 1992
+C: Bruce A. Randall
 M: 3/4
 L: 1/4
 Z: Transcribed to abc by Mary Lou Knack
@@ -3060,7 +2978,6 @@ d| "G"cAf "C"edg| "D"fef "G"gfg| "D"aga "G"bag| "A"fge "D"d2B|"G"b2g "D"agf| "C"
 X: 239
 T: Midnight on the Water
 I: Midnight on the Water	W-24	D	waltz
-C: W-24
 C: Luke Thomasson
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
@@ -3109,7 +3026,7 @@ K: D
 
 X: 243
 T: Mist On The Mountain, The
-C: \251Junior Crehan
+C: Junior Crehan
 R: jig
 M: 6/8
 L: 1/8
@@ -3158,7 +3075,6 @@ A| "D"d2A AGF| "G"GAB "D"A2A| "G"Bcd efg| "A"fed cBA|
 X: 247
 T: Moragh of Dunvegan
 I: Moragh of Dunvegan	W-9	D	waltz
-C: W-9
 M: 3/2
 L: 1/4
 Z: Transcribed to abc by Mary Lou Knack
@@ -3197,8 +3113,8 @@ AB|:"A"cEBE AEFE | "A"cEBE AEFA | "Bm"BFBc BFBc | "E"dBcA BAFA |
 
 X: 250
 T: Motel Henry
-C: \251Jean-Claude Mirandette
-O: Qu\'ebec
+C: Jean-Claude Mirandette
+O: Québec
 R: reel
 Z: 2011, 2017 John Chambers <jc:trillian.mit.edu>
 S: printed MS of unknown origin
@@ -3241,7 +3157,7 @@ e| "Am"a>^ga a2e| a>^ga a2e| "G"=g>bg e>ge| dBG G2e|
 
 X: 253
 T:Multnomah March
-C: M-16 \251Bob McQuillen
+C: Bob McQuillen
 K:A
 M:C|
 L:1/4
@@ -3268,8 +3184,7 @@ If ending with this tune, tack on an A at the end.
 X: 255
 T: My Cape Breton Home
 I: My Cape Breton Home			W-34	G	waltz
-C: W-34
-C: Jerry Holland \2511988
+C: Jerry Holland
 Z: Transcribed to abc by Mary Lou Knack
 R: Waltz
 M: 3/4
@@ -3282,7 +3197,6 @@ D| "G"D3G B2| "C"c3c Bc| "G"d3B G2| "Am"A2 G2 "D7"E2|    "G"D3G B2| "C"c3c Bc| "
 X: 256
 T: My Home Waltz
 I: My Home Waltz	W-5	A	waltz
-C: W-5
 C: Old-Time
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
@@ -3296,7 +3210,6 @@ E2| "A"A3 B c2| c3 B c2| e3 d c2| c4 e2|    "E7"d3 c d2| B2 c2 d2| "A"e3 c A2| A
 X: 257
 T: My Little Girl
 I: My Little Girl	S-M	G	square
-C: S-M
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: square
@@ -3308,8 +3221,7 @@ B,C^C| "G"D4- DDEF| A2G4FG| A2G2 D2E2| "D7"F4 zA,A,B,|
 
 X: 258
 T:Myra's Jig
-C:(\2511991 Ian Lowthian
-C: and Acoustic Radio)
+C:Ian Lowthian
 M:6/8
 L:1/8
 R:jig
@@ -3346,7 +3258,6 @@ K: D
 X: 261
 T: Nelly Bly
 I: Nelly Bly	S-N	C	square
-C: S-N
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: square
@@ -3376,7 +3287,6 @@ I: Noel's Waltz	W-13	G	waltz
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
 M: 3/4
-C: W-13
 K: G
 D2| "G"G3 A Bc| d2 B2 d2| "C"e3 d ce| "G"d4 d2|    "D"c2 A3 c| "G"B2 G2 B2| "D"A2 d2 "A7"e2| "D"f4 d2|
     "G"g4 ba| "Em"g4 gf| "C"e4 gf| "Am"e4 dc|    "G"Bc d2 B2| "D"c2 A2 ed| "D7"cB A2 F2| "G"G4|]
@@ -3385,7 +3295,7 @@ Bc| "G"d4 Bc| d4 ed| "Am"c4 cB| A4 AB|    "D"c3 d ed| "D7"c2 B2 A2| "G"B3 A GB| 
 
 X: 264
 T: North Carolina Breakdown
-C:Arthur L. Smith 1937
+C:Arthur L. Smith
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: reel
@@ -3454,7 +3364,6 @@ K: C
 X: 270
 T: Old Rosin, the Beau
 I: Old Rosin, the Beau	W-2	G	waltz
-C: W-2
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -3537,7 +3446,6 @@ K: Ddor
 X: 277
 T:Paddy Killoran's
 R:jig
-C:
 D:From recording by J-P Loyer, Ojnab
 Z:Translated to abc by Debby Knight
 Z:
@@ -3551,7 +3459,7 @@ K:G
 X: 278
 T: Pat d'Budgie
 I: Pat d'Budgie	R-106	C	reel
-C: Graham Townsend \2511961
+C: Graham Townsend
 M: C|
 R: reel
 K: C
@@ -3564,7 +3472,6 @@ X: 279
 T: Penobscot Memory
 I: Penobscot Memory	W-44	G	waltz
 R: waltz
-C: W-44
 C: Vince O'Donnell
 Z:Transcribed to abc by Debby Knight
 M:3/4
@@ -3626,7 +3533,6 @@ I: Plaisir d'Amour	W-6	G	waltz
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
-C: W-6
 K: G
 D| "G"G6| "D"A6| "G"B6| B4 z B| "C"[A6c6e6]| "G"B3 G B2| "D"A6| A4 z D|
    "C"E6| "D"F6| "G"G4 AB| "C"E2 A3 c| "G"B6| "D"A6| "G"G6| [G,6G6]|]
@@ -3637,7 +3543,6 @@ D| "G"G6| "D"A2 BA GA| "G"B6| B4 z B| "C"[A6c6e6]| "G"B3 G B2| "D"A6| A4 z D|
 X: 285
 T: Planxty Fanny Power
 I: Planxty Fanny Power	W-26	G	waltz
-C: W-26
 C: O'Carolan
 M: 3/4
 L: 1/4
@@ -3663,7 +3568,7 @@ e| "G"d2G2 cBAG| d2G2 cBAG| "Am"e2A2 ABcd| e2A2 "D7"ABcd|
 X: 287
 T: Polska
 I: ???	M-3	G	hambo
-C: M-3 \2511980 Matt Fichtenbaum
+C: Matt Fichtenbaum
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: hambo
@@ -3721,7 +3626,6 @@ B2 B AGF|GFE DCB,|CDE DCB,| [1A,3 A,B,C:| [2A,3 z2 D||
 
 X: 291
 T: Ragtime Annie
-C: M-12 (also R-104)
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: rag
@@ -3784,7 +3688,7 @@ K:D
 X: 296
 T:Rannie MacLellan's Reel
 R:Reel
-C: \251Brenda Stubbert
+C: Brenda Stubbert
 S:http://www.cranfordpub.com
 D:In Jig Time,1994; Fiddler's Choice, Jerry Holland; Natalie MacMaster Live
 B:Brenda Stubbert's Collection
@@ -3800,7 +3704,6 @@ X: 297
 T: Rapp-Kalle's Waltz
 I: Rapp-Kalle's Waltz	W-12	D	waltz
 H: from Matt Fichtenbaum 3/81
-C: W-12
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -3814,7 +3717,6 @@ dd| "D"d2 c2 B2| "G"G4 B2| (3BcB A2 D2| "D"F4 A2|       (3ABA G2 A,2| "A"C4 d2| 
 X: 298
 T: Red River Valley
 I: Red River Valley	S-R	G	square
-C: S-R
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: square
@@ -3836,7 +3738,6 @@ K: Ador
 X: 300
 T: Redwing
 I: Redwing	S-R	D	square
-C: S-R
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: square
@@ -3899,7 +3800,6 @@ D2|: "G"GABA GEED| "D7"FGAG FDD2| "G"GABc dBge| "D7"dBAc "G"BGEF|
 
 X: 306
 T:Reel de Pointe-au-Pic
-C:
 R:Reel
 M:C|
 L:1/8
@@ -3963,7 +3863,6 @@ K: G
 
 X: 311
 T: Reel des Menteries
-C: Trad. Qu\'ebec
 R: reel
 M: C|
 L: 1/8
@@ -4012,7 +3911,6 @@ K: ADor
 
 X: 315
 T:Reel du Faubourg
-C:
 R:Reel
 M:C|
 L:1/8
@@ -4136,7 +4034,7 @@ K: A
 
 X: 325
 T: Reel á Gilbert
-C:\251Réjean Lizotte
+C: Réjean Lizotte
 M: C|
 L: 1/8
 R: reel
@@ -4206,7 +4104,7 @@ X: 331
 T:Road to Errogie, The
 S:Scottish reel, originally in B major
 Z:
-C: \251Adam Sutherland
+C: Adam Sutherland
 M:C|
 L:1/8
 K:A
@@ -4301,8 +4199,7 @@ K: Dmaj
 X: 339
 T: Rose by the Door, The
 I: Rose by the Door, The	W-29	D	waltz
-C: W-29
-C: Andrea Hoag 511985
+C: Andrea Hoag
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -4396,7 +4293,6 @@ A2| "D"f2fg fedB| A2FG AFAd| "G"BGGF G2FG| "D"BAAF A2de|
 X: 346
 T: Saletan Special
 I: Saletan Special	S-S	G	square
-C: S-S
 C: Bob McQuillen
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
@@ -4415,7 +4311,6 @@ G,2 B,2C2|
 
 X: 347
 T:Sasha
-C:M-14
 M:C
 L:1/4
 K:Dm                           % key
@@ -4490,7 +4385,7 @@ K:Dmix
 X: 353
 T: Scotty O'Neil
 I: Scotty O'Neil	R-32	D	reel
-C: Bob McQuillen 1973
+C: Bob McQuillen
 M: C|
 R: reel
 K: D
@@ -4515,8 +4410,6 @@ K:Am
 X: 355
 T: Seamus O'Brien
 I: Seamus O'Brien	W-20	G	waltz
-C: W-20
-C: Irish
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -4567,7 +4460,6 @@ B| "D"AFD DFA| ded cBA| "Em"BGE EFA| "A7"B2 A Bcd|
 X: 359
 T: Sheebag Sheemore
 I: Sheebag Sheemore	W-3	D	waltz
-C: W-3
 C: O'Carolan
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
@@ -4581,7 +4473,6 @@ de| "D"f3 e d2| d3 e d2| "G"B4 A2| "D"F4 A2|    "G"BA Bc d2| "A"e4 de| "D"f4 (3e
 X: 360
 T: Sheik of Araby, The
 I: Sheik of Araby, The	S-S	A	square
-C: S-S
 C: T. Snyder
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
@@ -4595,7 +4486,6 @@ K: A
 X: 361
 T: Shepard's Wife, The
 I: Shepard's Wife, The	W-2	G	waltz
-C: W-2
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -4639,7 +4529,6 @@ GA|"G"BdBA G2 E2|"C"GAGE "G"D4|DE G2 B3c| "D"B2 A4 GA|
 
 X: 365
 T: Silver and Gold Two-Step
-C:M-15 (also R-80)
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: two-step
@@ -4650,7 +4539,6 @@ F2G2| "D"A2f2 A2f2| Af3 f3f| "A7"f2 e4- e^d| e4 E2F2|"A7"G2e2 G2e2| Ge3 e3d| "D"
 
 X: 366
 T:  Silver Spear, The
-C: Trad. Ireland (R-158)
 M: C|
 L: 1/8
 K: D
@@ -4687,7 +4575,7 @@ K:Dminor
 X: 369
 T: Skippin' Cat
 I: Skippin' Cat		R-122	G	reel
-C: Jack Link \2511986
+C: Jack Link
 M: C|
 R: reel
 K: G
@@ -4732,7 +4620,7 @@ de| "Bm"f2ef dB~B2| f2ef df~f2| "A"a2ed cAAF| EFAB "F#m"c3e|
 X: 373
 T: Slip-On Gang, The
 R: reel
-C: \251Damian McKee
+C: Damian McKee
 M: C|
 L: 1/8
 K: A
@@ -4744,7 +4632,6 @@ K: A
 X: 374
 T: Smoke on the Water
 I: Smoke on the Water	S-S	G	square
-C: S-S
 C: Zeke Clements
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
@@ -4764,7 +4651,7 @@ D2E2| "G"G2G2 G2A2| G2E2 D2E2| "C"G2G2 G2E2| "G"G4 D2E2| \
 X: 375
 T:Snow Deer
 R:reel
-C:Bob Wills?
+C:Bob Wills
 D:From The Essential Texas Fiddle by Joe Stephenson
 Z:Transcribed to abc by Debbie Knight, edited by Mary Lou Knack
 M:C|
@@ -4777,7 +4664,6 @@ _AAFA BBAB| ddBd f2f2| gef^f ge=f^f| g^f=fe-e4|
 X: 376
 T: Solomon Levi
 I: Solomon Levi	S-S	G	square
-C: S-S
 M: 6/8
 Z: Transcribed to abc by Mary Lou Knack
 R: square
@@ -4793,7 +4679,6 @@ z2z2zd| "G"Hdzd dzd| dzd dzd| "C"eze eze| e4 ze|
 X: 377
 T: Sound of Jura, The
 I: Sound of Jura, The	W-32	G	waltz
-C: W-32
 C: Eric Scott
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
@@ -4808,8 +4693,6 @@ X: 378
 T: South Wind
 I: South Wind	W-11	G	waltz
 H: from Robin C.
-C: W-11
-C: Irish
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -4832,7 +4715,6 @@ K:A
 X: 380
 T: Spel-Gulle's Polska
 I: Spel-Gulle's Polska	M-2	Dm	hambo
-C: M-2
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: hambo
@@ -4846,7 +4728,7 @@ K: Dm
 X: 381
 T: Spootiskerry
 I: Spootiskerry	R-78	G	reel
-C: Ian Burns \2511980
+C: Ian Burns
 M: C|
 R: reel
 K: G
@@ -4914,7 +4796,6 @@ F| "A"E3 EFA| "E"B3 Bce| "D"fea "F#m"fec| "Bm"ecA "E"BAF|
 
 X: 387
 T: Star of Munster, The
-C: Trad. Ireland (R-159)
 M: C|
 L: 1/8
 K: Ador
@@ -4926,8 +4807,6 @@ K: Ador
 X: 388
 T: Star of the County Down, The
 I: Star of the County Down, The	W-1	Am	waltz
-C: W-1
-C: Irish
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -4952,7 +4831,6 @@ X: 390
 T: Svensk-Anna's Waltz
 I: Svensk-Anna's Waltz	W-12	D	waltz
 H: from Matt Fichtenbaum 3/81
-C: W-12
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -4976,7 +4854,6 @@ A/c/| "D"dcd fdc| dAG FED| FAd "A"cAF| E=CE "A7"GFE|
 X: 392
 T: Sweet Baby James Waltz
 I: Sweet Baby James Waltz	W-21	A	waltz
-C: W-21
 C: Aram Hollman
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
@@ -4995,7 +4872,7 @@ K: A
 X: 393
 T: Sweet Nell
 R: reel
-C: \251Jamie Gans
+C: Jamie Gans
 M: 4/4
 L: 1/8
 K: A
@@ -5019,7 +4896,6 @@ K: G
 X: 395
 T: Take Me Out to the Ballgame
 I: Take Me Out to the Ballgame	W-31	F	waltz
-C: W-31
 C: Albert von Tilzer
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
@@ -5064,7 +4940,6 @@ K: ADor
 X: 399
 T: Three Flowers, The
 I: Three Flowers, The	W-10	G	waltz
-C: W-10
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -5077,7 +4952,7 @@ e2| "G"d4 d2| B4 g2| "D"f4 f2| A4- AB| c4 A2| F4 A2| "G"G6-| G6|
 X: 400
 T: Tierspolska
 I: Tierspolska	M-1	G	hambo
-C: M-1 \2511980 Matt Fichtenbaum
+C: Matt Fichtenbaum
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: hambo
@@ -5091,8 +4966,7 @@ D| "G"G2 B>D G>B| "C"(3cBc e>c A>G| "D"F2 A>D F>A| "G"d>e ~d>c B>A|
 X: 401
 T: Tillie's a Treasure
 I: Tillie's a Treasure	W-35	A	waltz
-C: W-35
-C: Leslie Fuller 1996
+C: Leslie Fuller
 Z: Transcribed to abc by Mary Lou Knack
 R: Waltz
 M: 3/4
@@ -5104,7 +4978,6 @@ K: A
 
 X: 402
 T: Timmy Clifford's
-C: J-66
 Z: Transcribed to abc by Mary Lou Knack
 R: jig
 M: 6/8
@@ -5118,7 +4991,6 @@ K: G
 X: 403
 T: Tipperary So Far Away
 I: Tipperary So Far Away	W-10	G	waltz
-C: W-10
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -5153,8 +5025,7 @@ A/F/|: "D"DFA ddd| "A"ecA cde| "D"fff "G"ggg| "A"ecA GFE|
 X: 406
 T: Tongadale
 R: reel
-C: \251Taigh na Teud/
-C:Farquhar MacDonald
+C: Taigh na Teud Farquhar MacDonald
 M: C|
 L: 1/8
 K: Amin
@@ -5176,7 +5047,6 @@ f/e/| "D"dAF DFA| "G"Bed "A"cBA| "D"dcd "A"efg| "D"fdf "A"ece|
 
 X: 408
 T: Tournera Trois
-C:W-46
 Z: 2006 John Chambers <jc@trillian.mit.edu>
 S: MS of unknown origin
 M: 3/4
@@ -5190,7 +5060,6 @@ K: Bm
 X: 409
 T:Trail of the Lonesome Pine, The
 I:Trail of the Lonesome Pine, The	S-T	F	square
-C:S-T
 M:C|
 Z:Transcribed to abc by Mary Lou Knack
 R:square
@@ -5280,8 +5149,7 @@ K: Amaj
 X: 416
 T: Two Rivers
 I: Two Rivers	W-43	Bm	waltz
-C: W-43
-C: \2511986 Larry Unger
+C: Larry Unger
 B: The Curvy Road to Corinth
 Z: transcribed by Mary Lou Knack 7-Jul-1999
 M: 3/4
@@ -5306,7 +5174,6 @@ K: Dmaj
 X: 418
 T: Valse
 I: Valse	W-33	D	waltz
-C: W-33
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
@@ -5321,7 +5188,6 @@ A2| "D"ff f2 A2| ff f2 A2| f2 a2 f2| d4 A2| "A"ee e2 e2| ee e2 e2| e2 d2 e2| "D"
 X: 419
 T: Valse des Bois
 I: Valse des Bois	W-41	Em	waltz
-C: W-41
 C: Richard Forest
 M: 3/4
 L: 1/4
@@ -5338,7 +5204,6 @@ X: 420
 T: Valse des Jouets
 I: Valse des Jouets	W-19	D	waltz
 I: Waltz of the Toys	W-19	D	waltz
-C: W-19
 C: Michel Faubert
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
@@ -5352,7 +5217,7 @@ F Ad|"D"fe fg fe| "G"dB AF D2| "D"fe fg fe| "G"dB AF D2|     "Em"ed ef ed| "A"c3
 X: 421
 T: Varvindar Friska
 I: Varvindar Friska	M-2	Am	hambo
-C: M-2 \2511980 Matt Fichtenbaum
+C: Matt Fichtenbaum
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: hambo
@@ -5366,8 +5231,6 @@ K: Am
 X: 422
 T:Verret's
 R:Reel
-C:
-B:
 L:1/8
 M:C|
 K:D
@@ -5391,9 +5254,8 @@ K: Amix
 
 X: 424
 T:Waiting for Fish
-C:W-45
 R:waltz
-C:\251Susie Secco 1996
+C:Susie Secco
 D:
 Z:Transcribed to abc by Debbie Knight
 M:3/4
@@ -5405,7 +5267,7 @@ DF|"Dm"A2 AB AF | D4 F2 |"Gm"G2GB AG |"Dm"AF D2E2|
 
 X: 425
 T:Wake Up to Cape Breton
-C: \251Brenda Stubbert, SOCAN
+C: Brenda Stubbert
 M:C|
 L:1/8
 K:Emix
@@ -5429,7 +5291,7 @@ DE|"G"GABd g2g2|"C"(3fgf ec"Am7"A3 A-|"D"ABde fd ed | fd ed "G"BG2D|
 X: 427
 T: Walpole Cottage
 I: Walpole Cottage	M-6	D/A	reel
-C: M-6 \251Pat Shaw
+C: Pat Shaw
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: reel
@@ -5452,7 +5314,6 @@ F2| "Bm"B3c d2cB| "F#7"c2f4 e2| "Bm"d2B2 "F#7"c2^A2| "Bm"B6 "E7"B2|
 X: 428
 T: Wearing of the Green
 I: Wearing of the Green	S-W	D	square
-C: S-W
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: square
@@ -5503,7 +5364,6 @@ K: D
 X: 432
 T: When the Work's All Done This Fall
 I: When the Work's All Done This Fall	S-W	C	square
-C: S-W
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: square
@@ -5514,7 +5374,7 @@ ED|: "C"C2 C2 E2 G2| c2 c4 Bc| "D7"d2 d2 d2 c2| A6 c2|
 X: 433
 T: Whiskey Before Breakfast
 I: Whiskey Before Breakfast	R-69	D	reel	Set 26
-C: \251 Andy DeJarlis
+C: Andy DeJarlis
 M: C|
 R: reel
 K: D
@@ -5560,7 +5420,7 @@ K: A
 
 X: 437
 T: Wing Commander Donald Mackenzie's
-C: \251Phil Cunningham
+C: Phil Cunningham
 M: C|
 L: 1/8
 R: reel
@@ -5621,7 +5481,6 @@ K:Bm clef=treble
 X: 442
 T: You Call Everybody Darling
 I: You Call Everybody Darling	S-Y	G	square
-C: S-Y
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
 R: square
@@ -5645,7 +5504,6 @@ K: G
 X: 444
 T: Young Jane
 I: Young Jane	W-2	G	waltz
-C: W-2
 M: 3/4
 Z: Transcribed to abc by Mary Lou Knack
 R: waltz
