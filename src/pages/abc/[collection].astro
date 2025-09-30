@@ -11,6 +11,7 @@ export async function getStaticPaths() {
   return [
     { params: { collection: 'old-time-jam-tunes' } },
     { params: { collection: 'irish-session-top100' } },
+    { params: { collection: 'mandolin-cafe-bluegrass' } },
     { params: { collection: 'open-hymnal' } },
     { params: { collection: 'roaring-jelly-2024' } },
   ];
@@ -19,6 +20,7 @@ export async function getStaticPaths() {
 const filenameMap: Record<string, string> = {
   'old-time-jam-tunes': 'old_time_jam_tunes_collection.abc',
   'irish-session-top100': 'irish_session_top100_collection.abc',
+  'mandolin-cafe-bluegrass': 'mando_cafe_bluegrass.abc',
   'open-hymnal': 'open_hymnal_collection.abc',
   'roaring-jelly-2024': 'roaring_jelly_collection.abc'
 };
@@ -32,6 +34,7 @@ const searchRoots = [
 const titleMap: Record<string, string> = {
   'old-time-jam-tunes': 'Old-Time',
   'irish-session-top100': 'The Session',
+  'mandolin-cafe-bluegrass': 'Mandolin Cafe Bluegrass',
   'open-hymnal': 'Open Hymnal',
   'roaring-jelly-2024': 'Roaring Jelly'
 };
