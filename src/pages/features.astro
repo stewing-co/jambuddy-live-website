@@ -6,8 +6,8 @@ import Layout from '../layouts/Layout.astro';
   <!-- Hero Section -->
   <section class="bg-black text-white py-20 rounded-lg border border-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold mb-6">Play Smarter. See More. Practice Faster.</h1>
-      <p class="text-xl text-gray-300 max-w-4xl mx-auto">Everything you need in one place: real‑time key & chord detection, next‑chord prediction, MIDI playback, visual metronome, tuner, swipeable chord charts, and an instant ABC sheet viewer/editor.</p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">JamBuddy features, straight from the practice room.</h1>
+      <p class="text-xl text-gray-300 max-w-4xl mx-auto">Here’s a transparent look at what the Android app does today: live key and chord detection, Circle of Fifths, note visualizers, multi-instrument chord charts, a tunes library with ABC, lyrics, audio, looping, recording, and all the practice tools I wanted in one place.</p>
     </div>
   </section>
 
@@ -28,7 +28,7 @@ import Layout from '../layouts/Layout.astro';
             </svg>
           </div>
           <h3 class="text-xl font-bold text-white mb-4">🎼 ABC Sheet Viewer & Editor</h3>
-          <p class="text-gray-300">Type or paste ABC, or use curated collections—see clean, responsive sheet music instantly. Visual transpose, tempo, tablature layers (guitar, mandolin, ukulele), and MIDI playback/export included.</p>
+          <p class="text-gray-300">Type or paste ABC, or import your own collections—clean notation renders instantly. Transpose visually, toggle tablature layers (guitar, mandolin, ukulele), print PNGs, and keep charts side by side with lyrics and notes.</p>
         </div>
 
         <!-- Key & Chord Detection -->
@@ -39,7 +39,7 @@ import Layout from '../layouts/Layout.astro';
             </svg>
           </div>
           <h3 class="text-xl font-bold text-white mb-4">🎧 Live Key & Chord Detection</h3>
-          <p class="text-gray-300">Jam with anything—phone speaker, Bluetooth, or room audio. See detected key and chords around the Circle of Fifths in real time.</p>
+          <p class="text-gray-300">Jam with anything—phone speaker, Bluetooth, or room audio. The Circle of Fifths, Nashville numbers, chord confidence, and bass-aware detection stay in sync as you play.</p>
         </div>
 
         <!-- Next Chord Prediction -->
@@ -50,18 +50,18 @@ import Layout from '../layouts/Layout.astro';
             </svg>
           </div>
           <h3 class="text-xl font-bold text-white mb-4">🔮 Next‑Chord Prediction</h3>
-          <p class="text-gray-300">Get suggestions for what comes next based on common progressions in the current key—great for improvisation and teaching harmony.</p>
+          <p class="text-gray-300">See four likely chords, complete with the correct fingering chart for your chosen instrument. Lock a key, swap tunings, and keep the progression moving.</p>
         </div>
 
-        <!-- MIDI Playback -->
+        <!-- Audio Player -->
         <div class="bg-gray-800 p-8 rounded-2xl shadow-md">
           <div class="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center mb-6">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-white mb-4">🎹 MIDI Playback & Export</h3>
-          <p class="text-gray-300">Hear your ABC instantly. Control tempo, transpose visually, and export as MIDI or PNG for sharing and printing.</p>
+          <h3 class="text-xl font-bold text-white mb-4">�️ Audio Player, Loops & Recorder</h3>
+          <p class="text-gray-300">Attach your own tracks, slow them down without changing pitch, save named loops, and capture fresh ideas with the built-in recorder.</p>
         </div>
 
         <!-- Customization -->
@@ -73,21 +73,24 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <h3 class="text-xl font-bold text-white mb-4">🎨 Customize Your Experience</h3>
           <p class="text-gray-300">
-            Multiple themes & custom color schemes, adjustable interval colors, and flexible layouts for phones and tablets.
+            Multiple themes & custom color schemes, adjustable interval colors, per-window focus layouts, and detection thresholds you can dial in for your room.
           </p>
         </div>
 
-        <!-- Built for Musicians -->
+        <!-- Builder Story -->
         <div class="bg-gray-800 p-8 rounded-2xl shadow-md">
           <div class="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center mb-6">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-white mb-4">🚀 Perfect for Musicians & Educators</h3>
-          <p class="text-gray-300">
-            Musicians enjoy offline practice with minimal latency chord recognition. Educators love the instant feedback for students, budget-friendly one-time purchase, and ad-free classroom environment perfect for focused learning.
-          </p>
+          <h3 class="text-xl font-bold text-white mb-4">🧪 Why I built this</h3>
+          <div class="text-gray-300 space-y-3 text-sm leading-relaxed">
+            <p>I’m a data scientist (business analytics background) who normally writes R and Python. I wanted to learn Kotlin and mandolin at the same time, so I started gluing together the tools I kept wishing existed while practicing.</p>
+            <p>I have twin boys, so most of this ships after bedtime or in the cracks between work and life. I’m also taking a bluegrass mandolin class at the Frank Hamilton School in Decatur, GA, which keeps exposing rough spots in my ear and timing.</p>
+            <p>I test JamBuddy at local jams: I’ll hear a tune I don’t know, pull a quick ABC via search, drop it into a collection, and lean on the Circle of Fifths panel when my ear blanks on the change.</p>
+            <p>No ads. No accounts. Just a one‑time purchase and incremental improvements when I can earn them. If you end up using it and something feels off, send a note—those usually become the next build.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -97,187 +100,134 @@ import Layout from '../layouts/Layout.astro';
   <section class="py-20 bg-gray-900/80 rounded-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">How Musicians & Educators Use JamBuddy</h2>
-        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-          Real-world applications for learning, teaching, and performing
-        </p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">How people are using JamBuddy right now</h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">These are the workflows I lean on.</p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <!-- Musicians Column -->
         <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">
           <div class="flex items-center mb-6">
             <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
               <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 class="text-2xl font-bold text-white">For Musicians</h3>
+            <h3 class="text-2xl font-bold text-white">During a jam or rehearsal</h3>
           </div>
-          
           <div class="space-y-6">
             <div class="flex items-start space-x-4">
-              <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <div class="w-8 h-8 bg-blue-600/70 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                 <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
               <div>
-                <h4 class="text-lg font-semibold text-white mb-2">Learn Songs By Ear</h4>
-                <p class="text-gray-300">Point JamBuddy at any music source to instantly identify chords and play along with your favorite songs.</p>
+                <h4 class="text-lg font-semibold text-white mb-2">Follow the song</h4>
+                <p class="text-gray-300">Circle of Fifths, Nashville numbers, and note histogram update with every chord.</p>
               </div>
             </div>
 
             <div class="flex items-start space-x-4">
-              <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <div class="w-8 h-8 bg-blue-600/70 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                 <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
               <div>
-                <h4 class="text-lg font-semibold text-white mb-2">Perfect Your Timing</h4>
-                <p class="text-gray-300">Use the visual metronome and strum patterns to develop rock-solid rhythm and timing skills.</p>
+                <h4 class="text-lg font-semibold text-white mb-2">Plan the next change</h4>
+                <p class="text-gray-300">See four likely next chords with fingerings for your instrument at a glance.</p>
               </div>
             </div>
 
             <div class="flex items-start space-x-4">
-              <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <div class="w-8 h-8 bg-blue-600/70 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                 <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
               <div>
-                <h4 class="text-lg font-semibold text-white mb-2">Jam Session Ready</h4>
-                <p class="text-gray-300">Access chord progressions and next-chord predictions to stay confident in any musical situation.</p>
+                <h4 class="text-lg font-semibold text-white mb-2">Quick retune</h4>
+                <p class="text-gray-300">Pop over to the chromatic tuner without leaving the layout.</p>
               </div>
             </div>
 
             <div class="flex items-start space-x-4">
-              <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <div class="w-8 h-8 bg-blue-600/70 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                 <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
               <div>
-                <h4 class="text-lg font-semibold text-white mb-2">Create & Record</h4>
-                <p class="text-gray-300">Compose original songs with integrated recording, lyrics editing, and chord progression tools.</p>
+                <h4 class="text-lg font-semibold text-white mb-2">Capture an idea</h4>
+                <p class="text-gray-300">Hit record, save the loop, and attach it to the tune for later.</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Educators Column -->
         <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">
           <div class="flex items-center mb-6">
             <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
               <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
               </svg>
             </div>
-            <h3 class="text-2xl font-bold text-white">For Educators</h3>
+            <h3 class="text-2xl font-bold text-white">At home practice & writing</h3>
           </div>
-          
           <div class="space-y-6">
             <div class="flex items-start space-x-4">
-              <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <div class="w-8 h-8 bg-green-600/70 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                 <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
               <div>
-                <h4 class="text-lg font-semibold text-white mb-2">Instant Feedback</h4>
-                <p class="text-gray-300">Real-time chord recognition provides immediate feedback, helping students correct technique instantly.</p>
+                <h4 class="text-lg font-semibold text-white mb-2">Slow it down</h4>
+                <p class="text-gray-300">Drop audio speed to 0.5x, set loop markers, and drill the hard bars.</p>
               </div>
             </div>
 
             <div class="flex items-start space-x-4">
-              <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <div class="w-8 h-8 bg-green-600/70 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                 <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
               <div>
-                <h4 class="text-lg font-semibold text-white mb-2">Lesson Planning</h4>
-                <p class="text-gray-300">Organize songs, chord progressions, and practice materials for structured, engaging lessons.</p>
+                <h4 class="text-lg font-semibold text-white mb-2">Mark up tunes</h4>
+                <p class="text-gray-300">Edit ABC, lyrics, PDFs, and notes in one place—no internet needed.</p>
               </div>
             </div>
 
             <div class="flex items-start space-x-4">
-              <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <div class="w-8 h-8 bg-green-600/70 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                 <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
               <div>
-                <h4 class="text-lg font-semibold text-white mb-2">Progress Assessment</h4>
-                <p class="text-gray-300">Visual chord accuracy and theory displays help track student development and adjust instruction.</p>
+                <h4 class="text-lg font-semibold text-white mb-2">Dial the detector</h4>
+                <p class="text-gray-300">Tweak confidence thresholds, bass boost, and rolling memory for your instrument.</p>
               </div>
             </div>
 
             <div class="flex items-start space-x-4">
-              <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <div class="w-8 h-8 bg-green-600/70 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                 <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
               <div>
-                <h4 class="text-lg font-semibold text-white mb-2">Classroom Ready</h4>
-                <p class="text-gray-300">Works offline with no ads or distractions—perfect for focused learning environments with budget-friendly one-time purchase.</p>
+                <h4 class="text-lg font-semibold text-white mb-2">Switch layouts</h4>
+                <p class="text-gray-300">Save stacked or single-pane focus modes for mandolin, guitar, or teaching a friend.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Testimonials -->
-      <div class="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div class="bg-gray-800 shadow-lg rounded-2xl p-8 text-white border border-gray-700">
-          <h4 class="text-xl font-bold mb-4 text-blue-400">Musicians Say:</h4>
-          <div class="space-y-3">
-            <div class="flex items-start space-x-3">
-              <svg class="w-5 h-5 text-blue-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span class="text-gray-300">"Game-changer for learning songs by ear"</span>
-            </div>
-            <div class="flex items-start space-x-3">
-              <svg class="w-5 h-5 text-blue-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span class="text-gray-300">"Perfect for bluegrass jams—no more guessing chords!"</span>
-            </div>
-            <div class="flex items-start space-x-3">
-              <svg class="w-5 h-5 text-blue-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span class="text-gray-300">"Built-in tuner means one less app to juggle"</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-gray-800 shadow-lg rounded-2xl p-8 text-white border border-gray-700">
-          <h4 class="text-xl font-bold mb-4 text-green-400">Educators Say:</h4>
-          <div class="space-y-3">
-            <div class="flex items-start space-x-3">
-              <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span class="text-gray-300">"Students love the instant feedback—accelerates learning"</span>
-            </div>
-            <div class="flex items-start space-x-3">
-              <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span class="text-gray-300">"No ads or internet needed—perfect for classrooms"</span>
-            </div>
-            <div class="flex items-start space-x-3">
-              <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span class="text-gray-300">"One-time purchase fits our school budget perfectly"</span>
-            </div>
-          </div>
-        </div>
+      <div class="mt-12 text-center text-gray-400 text-sm">
+        No paid testimonials (yet) — if you end up using JamBuddy, I’d love to hear how.
       </div>
     </div>
   </section>
