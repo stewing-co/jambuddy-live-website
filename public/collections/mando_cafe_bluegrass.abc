@@ -20,12 +20,12 @@ T:Blue Ridge Cabin Home
 C:Certain & Stacey
 N:Transcribed by Wendy Anthony
 L:1/8
-Q:1/4=120
 M:4/4
 K:G
+Q:1/4=120
 GA |: [g2B2G2G,2] Bz/B/ BB AG | "C"A[EC] z4 FG | "D"[A2D2A,2] Az/A/ AA FE | 
 "G"[D4G,4] z2 GA | [g2B2G2G,2] Bz/B/ BB AG | "C"A[EC] z4 FG | "D"[A2D2A,2] Az/A/ Dc BA | 
-|1 [g4B4G4G,4] z2 GA :|2 [g8B8G8G,8] | 
+|1 "G"[g4B4G4G,4] z2 GA :|2 "G"G[g8B8G8G,8] |] 
 
 X:3
 T:Cripple Creek
@@ -269,7 +269,6 @@ eg | "A"a2 g2 a2 e=g | "D"f/=g/f df "A"ec Ac | "E"BA GF EG BG | "A"Ac BG Ac eg |
 |"A"ea ea fe ae | "D"ea ec "A"ae cA | "E"BA GF EG BG | "A"Ac BG Ac eg |
 | ag bg a/g/f e=g | "D"fe df "A"ec Ac | "E"BA GF ED CB, | "A"A,C EF A4 | 
 
-
 X:17
 T:Acorn Hill
 C:John Reischman
@@ -285,7 +284,6 @@ de |: "D"fg fe dc de | fd ed Bc dB | AF DF AB AG | "A"[A2E2] [AE][AE] [A2E2] FE 
 |"D"DA FD AF DF | "G"GA Bd gf ec | "A"Ac ef af eg | "D"fd dd d2 de :|
 |: fg "D"af dc de | |fg af bf ae | fg af df ed | "Em"B2 [eB][eB] BB Bd |
 | ef ga gf ed | Bc de dA cB | |"A"Ac ef af eg |1 f"D"d dd dd de :|2 f"D"d dd d4 ||
-
 
 X:18
 T:Ah Spring
@@ -399,7 +397,6 @@ K:D
 |: "D"[a2A2] ^f/a/f ed de | ^fd e^c d2 de | [a2A2] ^f2 ed d2 | "G"[BD][BD] [BD][dD] [B4D4] |
 | "D"[a2A2] ^f2 ed de | ^fd e^c d2 de | ^fd e^c "G"dA B2 | "D"[AA][AA] [AA]B A4 :| 
 
-
 X:25
 T:Apple Blossom
 C:Major Franklin
@@ -422,7 +419,6 @@ F2 EF AF DF | BA FA Bc dB | AF EA FD (3zCB, | A,2 G,A, D2 B,D | F2 EF AF D2 |
 BA FA Bc dB | AF EA FD D2 | (3=CB,A, z2 ^C/[D7/2D7/2] | [FD][FD] z[FD] [F4D4] | 
 BA FA Bc dB | AF EA FE DB, | A,D B,A, DB, A,D | G/F/E FG AF DF | BA FA Bc dB | 
 AF EA FD D2 | 
-
 
 X:26
 T:Applebutter
@@ -459,7 +455,6 @@ e3[g_B] [^g2=B2] (3[gB][gB][gB] | e^f e^c dc Bc | "A"A2 A^c BA ^F2 | A2 (3EEE ^F
 "E"ED E^F ^GA Be | e3[g_B] [^g2=B2] (3[gB][gB][gB] | e^f e^c dc Bc | "A"A2 A^c BA ^Fe | 
 A2 AB ^ce ^f^g | a2 a2 a2 (3e^f^g | a2 e2 g2 ge | ^f2 fe =f2 e2 | (3a^g^f e2 (3d^cB A2 | 
 (3^G^FE D2 A,4 | 
-
 
 X:28
 T:Arkansas Traveler
@@ -655,3 +650,548 @@ A,C EG Ac d^d | [^g/4^d/4][a/4e/4][a/e/][a/e/][a/e/] [a/e/][a/e/][a/e/][a/e/] [a
 "Am"[A/4G/4]A/4[A/A/][A/A/][A/A/] [A/A/][A/A/][A/A/][A/A/] [A/A/][A/A/][A/A/][A/A/] EG | 
 [AG]A Ac B/c/B Aa | "Am"^gd "D"^cG "Em"^FC "F"B,G, | "Am"[^D/4^G,/4][E/4A,/4][E/A,/][E/A,/][E/A,/] [E/A,/][E/A,/][E/A,/][E/A,/] [E4A,4] | 
 
+X:38
+T:Big Mon
+C:Bill Monroe
+A:Dan Huckabee
+N:From John Baldry's "Bluegrass And Old-Time Mandolin"  
+N:Transcribed by Mike Stangeland
+L:1/8
+Q:1/4=240
+M:4/4
+K:A
+|: "A"A2 AB cB AF | "G"=GF GA BA GF | "A"EF AB cd ef | "E"=gf ed cB A2 | 
+"A"AG AB cB AF | "G"=GF GA BA GF | "A"EF AB cd ef | "E"ed cB "A"A4 :|
+|: "A"cd ef e2 AB | cB AF EF EC | B,C E=G FG AB | "E"cB Ac B4 | 
+"A"cd ef e2 AB | cB AF EF EC | B,C E=G FG AB | "E"cB AG "A"A4 :| 
+
+X:39
+T:Big Sandy River
+C:Traditional
+N:
+L:1/8
+Q:1/4=235
+M:4/4
+K:A
+fg |: "A"a2 c2 d2 ^d2 | ef e=c ^cA F=F | "E"ED EF GF GA | BA Bc de fg | "A"a2 c2 d2 ^d2 | 
+ef e=c ^cA F=F | "E"EF GA Bd cB |1 "A"AG AB A2 eg :|2 "A"AG AB A2 EF |: "A"AG AB cB Bc | 
+"D"dc de fe df | "E"e^d ef ge fg | "A"af ed cA BG | AG AB cA Bc | "D"dc de fe df | 
+"E"e^d ef ge fg |1 "A"ag ab a2 EF :|2 "A"ag ab a4 |] 
+
+X:40
+T:Big Sciota
+C:Sierra Hull
+N:Transcribed by Larry Tanner
+R:bluegrass
+S:https://www.mandolincafe.com/te/tabledit_files/BigSciota-G-Hull.tef
+L:1/8
+Q:1/4=210
+M:4/4
+K:G
+D2 E2 F2 |: "G"GF GB "D"AG Ac | "G"BA GB AG EF | GF GB "D"AG Ac | "G"B2 [B2G2] [B2G2] DF | 
+GF GA Bc d=f | "C"ed cB cd eg | "D"fe dc BA Gc |1 "G"B[BG] [BG][BG] [B2G2] DF :|2 "G"B[BG] [BG][BG] [B2G2] ef |] 
+|: g2 ga ba ge | "D"fa ab a2 eg | ag ab ag ed | "C"e2 de e2 ef | ge dg ed Bd | 
+"Em"e2 de e2 ef | "D"ge dc BA Gc |1 "G"B2 [BG][BG] [B2G2] ef :|2 "G"B2 [BG][BG] [B4G4] |]
+
+X:41
+T:Big Timber
+C:Bull Hamilton
+A:Big Timber
+N:Transcribed by Mike Stangeland
+L:1/8
+Q:1/4=240
+M:4/4
+K:F
+z6 A=B |: "D7 (no 3rd)"=Bc cc BA G2 | GA AA AA A=B | =Bc cc BA {d}e2 | d2 dd dd A=B | 
+"C"=Bc cc BA G2 | "A"GA AA AA AA | AD GD FD EF |1 D2 DD DA A=B :|2 D2 DD D3A | 
+|: "Dm"de fe de fe | "C"ce ge fe de | "Dm"de fe de fe | df fd "A"g2 gg | "Dm"de fe de fe | 
+"C"ce ge fe de | gf ed cA GF |1 E"A"C EF "Dm"D3A :|2 E"A"C EF "Dm"D4 | 
+
+X:42
+T:Bill Cheatum
+C:Traditional
+A:David Peters
+N:Transcribed by Kim Davis  Special Thanks to Kristi Sberna
+R:bluegrass
+S:https://www.mandolincafe.com/te/tabledit_files/BillCheatham-A-Peters.tef
+L:1/8
+Q:1/4=230
+M:4/4
+K:A
+|: "A"EF AB c2 AB | cB Ac BA FE | "D"DF Ac d2 de | fe df ed BA | "A"EF AB c2 AB | 
+cB Ac BA Bc | "D"de fg af ed |1 c"E"A (3BcB "A"A4 :|2 c"E"A (3BcB "A"A2 af |: "A"ec ea "D"fd fa | 
+"E"ge gb "A"a2 fg | "A"af ec fg af | "E"ec Ac B2 af | "A"ec ea "D"fd fa | "E"ge gb "A"a2 fg | 
+"A"af ec fg af |1 e"E"c (3BcB "A"A2 af :|2 e"E"c (3BcB "A"A4 |]
+
+X:43
+T:Bill Cheatham
+C:Traditional
+N:Transcribed by Simon Shartel
+R:bluegrass
+S:https://www.mandolincafe.com/te/tabledit_files/BillCheatham1-A-Trad-fiddle.tef
+L:1/8
+Q:1/4=220
+M:4/4
+K:A
+z8 |: "A"E2 [e2c2] [e2c2] AB | cB Ac BA FE | "D"D2 d2 d2 de | fg af ed cB | "A"A2 [e2c2] [e2c2] AB | 
+cB Ac BA Bc | "D"dc de fg af |1 "E"ed cB "A"A2 F2 :|2 "E"ed cB "A"A2 af |: "A"ec ea "D"fd fa | 
+"E"ge fg "A"a2 af | "A"ec ea "D"fd fa | "A"ef ec "E"B2 af | "A"ec ea "D"fd fa | 
+"E"ge fg "A"a2 eg | "A"ag ae fg af |1 "E"ed cB "A"A2 af :|2 "E"ed cB "A"A4 | 
+
+X:44
+T:Bill's Dream
+C:Bill Monroe
+N:Arr. Baldassari
+S:https://www.mandolincafe.com/te/tabledit_files/BillsDream-G-Baldassari.tef
+L:1/8
+Q:1/4=220
+M:4/4
+K:C
+dc | "G"B2 G2 B2 G2 | Bd dB d2 g^f | "C"e2 c2 e2 c2 | eg ga g2 g2 | "G"Bd de dB GB | 
+eA dA cA B2 | "D"A2 AA [A2E2] [A2F2] | [A6^F6] dc | "G"B2 G2 B2 G2 | Bd dB d2 g^f | 
+"C"e2 c2 e2 c2 | eg ga g2 g2 | "G"Bd de dB GB | "D"cB AG ^FD EF | "G"G2 [_BG][=BB] [BG][BG] [BG][BG] | 
+[B6B6] g^f | "C"e2 c2 e2 c2 | eg ga g4 | "G"Bd de dc Bc | d4 d2 g^f | 
+"C"e2 c2 e2 c2 | eg ga g4 | "G"Bd de dc B2 | "D"A6 dc | "G"B2 G2 B2 G2 | Bd dB dd g^f | 
+"C"e2 c2 e2 c2 | eg ga g2 g2 | "G"Bd de dB GB | "D"cB AG ^FD EF | "G"G2 [_BG][=BB] [BG][BG] [BG][cG] | [B8B8] |]
+
+X:45
+T:Billy in the Lowground
+C:Traditional
+N:Transcribed by Simon Sharatel
+R:bluegrass
+S:https://www.mandolincafe.com/te/tabledit_files/BillyintheLowground1-C-Trad.tef
+L:1/8
+Q:1/4=210
+M:4/4
+K:C
+CA, |: "C"G,A, CD EG AB | cB cd cA G2 | "Am"AB AG EG AB | cA Gc AG ED | "C"CB, CD EG AB | 
+cA Bd cA G2 | "Am"Ac AG ED CD |1 "G"EC DB, "C"CG, A,C :|2 "G"EC DB, "C"C2 dc |]
+|: e2 g2 g2 ef | ge ag ed c2 | "F"fg a2 a2 fg | ed cB cd ef | "C"ge ga g2 ed | 
+cB cd c2 cB | "Am"Ac ec dc AB | "G"cA GE "C"C4 :| 
+
+
+X:46
+T:Black Mountain Rag
+C:Traditional
+R:bluegrass
+S:https://www.mandolincafe.com/te/tabledit_files/BlackMountainRag-A-Freeman.tef
+N:Arranged by Dan Freeman
+L:1/8
+Q:1/4=220
+M:4/4
+K:A
+[c2A2] [cA][cA] [c2A2] [cA][cA] | [c2A2] [cA][cA] [c2A2] AB | "A"[ec]e [fc]c [ec][fA] [eA]B | 
+[ec]e [fc]c [e2c2] [eA]B | [ec]e [fc]c [ec][fA] [eA]=c | "E"BA FE "A"[e2A2] [eA]B | 
+[ec]e [fc]c [ec][fA] [eA]B | [ec]e [fc]c [e2c2] [eA]B | [ec]e [fc]c [ec][fA] [eA]=c | 
+B"E"A FE "A"[e4A4] | "A"[c2E2] [cE][cE] [c2E2] [cE][cE] | [cE]B AF E2 C2 | [c2E2] zB A2 F2 | 
+"E"EF ED "A"CB, [E2A,2] | "A"[c2E2] [cE][cE] [c2E2] [cE][cE] | [cE]B AF E2 C2 | 
+[c2E2] zB A2 F2 | "E"EF ED "A"CB, A,2 | "A"[E2C2] [EC][EC] [EC][EA,] [EB,][D=G,] | 
+[E2A,2] [EA,][EA,] [EB,][EA,] [E2C2] | "D"[F2D2] [FD][FD] [FD][FD] [FD]D | [AF]z A2 zA F2 | 
+"A"[E2C2] [EC][EC] [EC][EA,] [EB,][D=G,] | [E2A,2] [EA,][EA,] [EB,][EA,] [E2C2] | 
+"E"[E2B,2] [EB,][EB,] [EB,][EB,] [EB,][EB,] | [E2B,2] [EB,][EB,] [EB,][EB,] [EB,][EB,] | 
+"A"[E2C2] [EC][EC] [EC][EA,] [EB,][D=G,] | [E2A,2] [EA,][EA,] [EB,][EA,] [E2C2] | 
+"D"[F2D2] [FD][FD] [FD][FD] [FD]D | [AF]z A2 zA F2 | "A"[E2C2] [EC][EC] [EC][EC] [E2C2] | 
+"E"[E2B,2] [EB,][EB,] [EB,][EC] [E2B,2] | "A"[E2A,2] [EA,][EA,] {=C}^CE FE | [c2A2] [cA][cA] [c2A2] AB | 
+"A"[ec]e [fc]c [ec][fA] [eA]B | [ec]e [fc]c [e2c2] [eA]B | [ec]e [fc]c [ec][fA] [eA]=c | 
+"E"BA3 A2 [eA]B | [ec]e [fc]c [ec][fA] [eA]B | [ec]e [fc]c [e2c2] [eA]B | [ec]e [fc]c [ac][fc] e=c | 
+B"E"A FE "A"[A4E4] | "A"[c2E2] [cE][cE] [c2E2] [cE][cE] | [cE]B AF E2 C2 | [c2E2] zB A2 F2 | 
+"E"EF ED "A"CB, A,2 | "A"[c2E2] [cE][cE] [c2E2] [cE][cE] | [cE]B AF E2 C2 | [c2E2] zB A2 F2 | 
+"E"EF ED "A"CB, A,2 | "A"[c2E2] [cE][cE] [cE]A BA | [A2A2] [AA][AA] Ac ee | "D"[a2f2] [af][af] [af]a ba | 
+=c'b ac' ba fe | "A"[c2E2] [cE][cE] [cE]A BA | [A2A2] [AA][AA] [AA][AA] [AA]A | 
+"E"B2 F3B BB | =G2 BB ^G4 | "A"[c2E2] [cE][cE] [cE]A BA | [A2A2] [AA][AA] [AA][A3A3] | 
+"D"[a2f2] [af][af] [af]a [ae]e | [a2d2] [ad][ad] [ad][ad] [a2d2] | "A"[c2E2] [cE][cE] [cE][dE] [cE]A | 
+"E"[B2G2] [BG][BG] [BG]c BG | "A"A2 AA cd ^de | a8 ||
+
+X:47
+T:Blacks Fork
+C:Matt Flinner
+A:The View From Here
+N:Transcribed by  Mike Stangeland
+R:bluegrass
+S:https://www.mandolincafe.com/te/tabledit_files/BlacksFork-A-Flinner-Guitar.tef
+L:1/8
+Q:1/4=250
+M:4/4
+K:A
+z6 {d}e2 |: "A"ec ea fg af | ec Ac "E"B2 e2 | "A"ec ea fg af | =c'^c' c'b ab af | 
+ec ea fg af | "A"ec Ac "E"B2 AB | (3"A"BcB AG "F#m"F2 FF |1 G"E"A BG "A"A2 e2 :|2 G"E"A BG "A"A2 Bc |] 
+|: "A"zB AG "F#m"F2 AF | "A"GA BG "E"E2 E2 | "A"ef ed cB Ac |1 B"E"A GB "A"A2 Bc :|2 B"E"A GB "A"AE AB |] 
+"A" "E"[e6B6] [e2B2] | zc BA [e2B2] =c^c | "A"ef ed cB Ac | "E"BA GB "A"AE AB |
+ "E"[e6B6] [e2B2] |zc BA [e2B2] e2 | "A"ef ed cB Ac | "E"BA GB "A"A4 || 
+
+X:48
+T:Blackberry Blossom
+C:Traditional
+N:Arranged by Tim O'Brien
+R:bluegrass
+S:https://www.mandolincafe.com/te/tabledit_files/BlackberryBlossom-G-TimOBrien.tef
+L:1/8
+Q:1/4=240
+M:4/4
+K:C
+e^f |: "G"ga bg "D"^fg af | "C"e^f ge "G"dB AG | "C"E^F GE "G"DF GA | "A"BG Bd "D"A2 e^f | 
+"G"ga bg "D"^fg af | "C"e^f ge "G"dB AG | "C"E^F GE "G"DF GA |1 B"D"G A^F "G"G2 e^f :|2 B"D"G A^F "G"G2 GF |] 
+|: "Em"E2 BB dB e2 | EE BB dB AG | E2 BB dB e^f | "B7"g^f af gf ed | "Em"E2 BB dB e2 | 
+EE BB dB AG | "C"E^F GE "G"DF GA |1 B"D"G A^F "G"G2 GF :|2 B"D"G A^F "G" G4 |] 
+
+X:49
+T:Blake's March
+C:Norman Blake
+A:Natasha's Waltz
+N:Transcribed by Mike Stangeland  
+R:bluegrass
+S:https://www.mandolincafe.com/te/tabledit_files/BlakesMarch-G-Blake.tef
+L:1/8
+Q:1/4=236
+M:4/4
+K:G
+z6 GA |: "G"BG DB, G,B, DG | "C"EC EG "G"DC B,A, | G,B, DG EF GA | "D"B2 A2 A2 GA | 
+"G"BG DB, G,B, DG | "C"EC EG "G"DC B,A, | "D"G,B, DG FG AF |1 F"G"G G[BG] [B2G2] GA :|2 F"G"G GG G4 |] 
+|: "G"bd' d'd' d'd' d'e | ab ba g2 gf | "C"ed ef ga ge | "G"Bd dd d2 dd | "C"de ee ef e2 | 
+"G"AB BB Bd B2 | "D"GA AA AB AF | "G"FG G[BG] [B4G4] :| 
+
+X:50
+T:Blue Eagle
+C:Traditional
+N:Arranged by Mike Stangeland
+R:bluegrass
+S:https://www.mandolincafe.com/te/tabledit_files/BlueEagle-D-Trad.tef
+L:1/8
+Q:1/4=220
+M:4/4
+K:D
+FE |: "D"DF Ad (3BdB AF | DF Ad Bc dB | F2 AF BF AF | "A"EF ED B,2 A,2 | "D"A,D zF ED FE | 
+"G"DE FG AB de | "A"gf ed cd eg |1 f"D"e d2 d2 FE :|2 f"D"e d2 d2 Bc |]
+|: "D"d2 (3efg a2 (3fga | "Bm"b2 fb "A"af ec | "D"de fg af ef | "A"gf ed cA Bc |
+ "D"d2 (3efg a2 (3fga | "Bm"b2 fb "A"af ed | "G"gf ed "A"cd eg |1 f"D"e d2 d2 Bc :|2 f"D"e d2 d4 |] 
+
+X:51
+T:Blue Night 
+C:Linda Riha solo
+R:bluegrass
+S:"https://www.mandolincafe.com/te/tabledit_files/BlueNight-B-O'Brien.tef"
+N:Transcribed by Kim Davis and Mike Stangeland
+L:1/8
+Q:1/4=240
+M:4/4
+K:A
+B2 Bc ^d2 | "B"f2 ff ff ff | f2 ag fe dc | B2 BB BB BB |
+|B2 BB Bc de | f2 ff ff ff | f2 ag fe dB | "E"de [ee][ee] [ee][ee] [ee][ee] |
+| [e2e2] [ee][ee] d2 e2 | "B"ef ff f2 ff | "E"fe de [e2e2] [ee][ee] | {e}"B"fb bb b2 bd' |
+| ba fe de f2 | "F#"f2 [af][af] [af][af] [af][af] | [a2f2] ba fe d^d | "B"B2 BB Bd ef |
+|b8 | (3[fd][fd][fd] (3[fd][fd][fd] (3[fd][fd][fd] (3[fd][fd][fd] | "E"[g8e8] | "F#"[f4c4] [a4f4] | "B"[b4f4] [b4d4] ||
+
+X:52
+T:Blue Railroad Train
+C:Sam Bush
+R:bluegrass
+S:https://www.mandolincafe.com/te/tabledit_files/BlueRailroadTrain-F-Bush.tef
+N:Transcribed by Edward Ashley
+L:1/8
+Q:1/4=185
+M:4/4
+K:F
+CD F2 | {_A}=A2 cd _AG FD | {_A}=A8 | c=B _B{_A}=A2F DC | F7/1C | DF CD FD GF | 
+_AF GD F7/2C/ | DF G2 (3_AGF D2 | FC DF CD FG | F2 F2 CD F2 | {B}(3ccc (3ccc {B}(3ccc (3ccc | 
+(3cB_A F3F (3CDF | CD _A=A _a=a f2 | _e7/1_d | df g2 fg fg | _af g2 f2 f_d | df gf _af dc | 
+fd cf dc _A=A | _A=A FC DE F2 | (3AAA (3AAA (3AAAF | F4 CD F2 | {_A}=A2 cd _AG FD | 
+{_A}=A8 | c=B _B{_A}=A2F DC | F7/1C | DF CD FD GF | _AF GD F7/2C/ | DF G2 (3_AGF D2 | 
+FC DF CD FG | F2 F2 CD F2 | {B}(3ccc (3ccc {B}(3ccc (3ccc | (3cB_A F3F (3CDF | 
+CD _A=A _a=a f2 | _e7/1_d | df g2 fg fg | _af g2 f2 f_d | df gf _af dc | fd cf dc _A=A | 
+_A=A FC DE F2 | (3AAA (3AAA (3AAAF | F8 | 
+
+X:54
+T:Blue Grass Special
+C:Bill Monroe
+N:Arranged by Baldassari
+R:bluegrass
+S:https://www.mandolincafe.com/te/tabledit_files/BluegrassSpecial-A-Baldassari.tef
+L:1/8
+Q:1/4=185
+M:4/4
+K:C
+"Kick Off"z6 A2 | "A"cB/c/ BA cB/c/ BA | cB/c/ BA E2 AA | cB/c/ BA cB/c/ BA | 
+ce cB A^F EF | "D"D^F Ac BA FA | c2 B2 A^F2E | "A"A2 A2 A,^C EE | A2 A2 A2 AA | 
+"E"cA Bc AE2E | c2 B2 A^F EF | "A"[A2E2] [A2E2] [AE][A2E2][AE] | [A8E8] | "Second Break"z6 c^c | 
+"A"A2 c^c A2 =c^c | A{c}^c A{=c}^c A{=c}^c AA | A2 A2 AA2A | G2 G2 G2 GA | "D"d^f aa aa a2 | 
+a/^c'/a ae ^d/e/e c^c | "A"A2 AA E/^D/=D C^C | A2 A2 A2 AD | "E"^Ge2e e2 e2 | 
+a^c' ae ^de c/^c/c | "A"A2 AA E/^D/=D {C}^CA | A4 A4 | z8 | "A"A,^C E^F A^c ee | 
+ag2[eA] [eA]^c AA | A,^C E^F A^c e2 | a2 ge c{B}c2A | "D"D^F Ac BA FA | cB/c/ BA cB/c/ BA | 
+"A"[A2E2] [AE]D A,^C E^F | A2 A2 A2 AA | "E"cA Bc AE2D | c2 B2 A^F EF | "A"[A2E2] [A2E2] [AE][A2E2][AE] | 
+[A2E2] [A2E2] [AE][AE] [A2E2] | z8 | "A"[^c'/a/][c'/a/][c'/a/][c'/a/] [c'/a/][c'/a/][c'/a/][c'/a/] [c'/a/][c'/a/][c'/a/][c'/a/] [c'/a/][c'/a/][c'/a/][c'/a/] | 
+[^c'/a/][c'/a/][c'/a/][c'/a/] [c'/a/][c'/a/][c'/a/][c'/a/] [c'/a/][c'/a/][c'/a/][c'/a/] [c'/a/][c'/a/][c'/a/][c'/a/] | 
+[^c'/a/][c'/a/][c'/a/][c'/a/] [c'/a/][c'/a/][c'/a/][c'/a/] [c'/a/][c'/a/][c'/a/][c'/a/] [c'/a/][c'/a/][c'/a/][c'/a/] | 
+[^c'/a/][c'/a/][c'/a/][c'/a/] [e/a/][e/a/][e/a/][e/a/] [e/a/][e/a/][e/a/][e/a/] [e/A/][e/A/][e/A/][e/A/] | 
+"D"[^f/d/][f/d/][f/d/][f/d/] [f/d/][f/d/][f/d/][f/d/] [f/d/][f/d/][f/d/][f/d/] [f/d/][f/d/][f/d/][f/d/] | 
+[^f/d/][f/d/][f/d/][f/d/] [f/d/][f/d/][f/d/][f/d/] [f/d/][f/d/][f/d/][f/d/] [f/d/][f/d/][f/d/][f/d/] | 
+"A"[^c/A/][c/A/][c/A/][c/A/] [c/A/][c/A/][c/A/][c/A/] [cA]E C^C | [^c4A4] cd e2 | 
+"E"[^g/e/][g/e/][g/e/][g/e/] [g/e/][g/e/][g/e/][g/e/] [g/e/][g/e/][g/e/][g/e/] [g/e/][g/e/][g/e/][g/e/] | 
+[^g2e2] ec ^cA =c^c | "A"A2 AA E/^D/=D C^C | A8 | z8 | A2 A2 A2 AA | "A"cB/c/ BA cB/c/ BA | 
+cB/c/ BA ED A,D | cB/c/ BA cB/c/ BA | cB/c/ BA A2 A2 | "D"D^F Ac BA FA | cA Bc A^F ED | 
+"A"A,^C E^F A^c e2 | a2 ^ge ec2A | "E"EB2D BD AA | c2 B2 A^F EF | "A"[A2E2] [A2E2] [AE][A2E2][AE] | 
+[A8E8] | z8 | "A"A,^C E^F A^c ee | ag2[eA] [eA]^c BA | A,^C E^F A^c e2 | a2 ge cB2A | 
+"D"D^F Ac BA FA | cA Bc A^F ED | "A"A,^C E^F A^c ee | a2 ^ge cA2D | "E"DB2D B2 AA | 
+[e/c/][e/c/][ec] [e2B2] [e2B2] ^FE | "A"[A2E2] [A2E2] [A/E/][A/E/][AE] [A2E2] | 
+[A/E/][A/E/][AE] [A2E2] [A4E4] ||
+ 
+X:55
+T:Bluegrass Stomp
+C:Bill Monroe
+A:16 All Time Greatest Hits
+N:Transcribed by John Baldry in "Bluegrass and Old-Time Mandolin"
+R:bluegrass
+S:https://www.mandolincafe.com/te/tabledit_files/BluegrassStomp-G-Baldry.tef
+L:1/8
+Q:1/4=210
+M:4/4
+K:D
+z4 zD FA | "D"d2 cd AD zD | d2 cd AD zD | d2 cd AD zD | "D7"=c2 Bc AD zD | "G"{^A,}B,D E=F zE DD | 
+AA zA =FE DB, | "D"D2 (3[D=C][DC][DC] (3[DB,][DB,][DB,] (3[D^A,][DA,][DA,] | [D2A,2] [D2A,2] [D2A,2] AA | 
+"A"=c2 Bc AD2D | dd cd A=F ^FF | "D"D2 DD (3=CCC (3B,B,B, | A,2 [D2A,2] [D2A,2] DD | 
+(3[dA][dA][dA] (3[dA][dA][dA] (3[dA][dA][dA] (3[dA][dA][dA] | (3[dA][dA][dA] (3[dA][dA][dA] (3[dA][dA][dA] (3[e=c][ec][ec] | 
+(3[fd][fd][fd] (3[fd][fd][fd] (3[fd][fd][fd] (3[e=c][ec][ec] | (3"D7"[dA][dA][dA] (3[dA][dA][dA] (3[dA][dA][dA] (3[FD][FD][FD] | 
+"G"(3[BG][BG][BG] (3[BG][BG][BG] (3[BG][BG][BG] (3[BG][BG][BG] | (3[BG][BG][BG] (3[BG][BG][BG] (3DDD (3FFF | 
+(3"D7"[dA][dA][dA] (3[dA][dA][dA] (3[dA][dA][dA] (3[AF][AF][AF] | (3[FD][FD][FD] (3[FD][FD][FD] F2 G2 | 
+"A"(3[cA][cA][cA] (3[cA][cA][cA] (3[cA][cA][cA] (3[cA][cA][cA] | A2 ^GA GA GA | 
+"D"D2 DD DD FA | d2 A2 F2 D2 | DD FA d3d | d2 {c}dd {c}dA zA | d2 dd =cA F^G | 
+"D7"AA ^GA {=F}^FD2D | "G"[B2G2] [B2G2] [B2G2] [B2G2] | "D"[B2G2] [B2G2] [BG][BG] [B2G2] | 
+DD FA df ab | "A"af dd A2 A2 | A,A, EA c4 | "D"G4 A2 GG | =F^F =F^F dD {=F}^FA | 
+D2 [d2F2D2] D2 [d2F2D2] | 
+
+X:56
+T:Bluegrass Twist
+C:Bill Monroe
+N:Arranged by Ronnie McCoury
+R:bluegrass
+S:https://www.mandolincafe.com/te/tabledit_files/BluegrassTwist-G-McCoury.tef
+L:1/8
+Q:1/4=206
+M:4/4
+K:C
+z4 zD ED | "D"F/^F/d =F^F d4 | g_b gf dc _B=B | "G"G2 [GG,][GG,] D/^C/=C _B,/=B,/G | 
+[G4G,4] z[DG,] [EG,][DG,] | "G"[GG,][GG,] [GG,][GG,] [GG,][GG,] [GG,][GG,] | {_B}=BG {_B}=BG {_B}=BG Bd | 
+gg gg gg g_b | gf dc {_B}=BG F{^D}E | "C"CC EG _B=B GE | CC EG {_B}=Bd c{_B}=B | 
+"G"G2 [dDG,][dDG,] D/^C/=C _B,/=B,/G | [G2G,2] [G2G,2] [G2G,2] [GG,]D | "D"F/^F/d =F^F d2 d2 | 
+g_b g{f}^f dc _B=B | "G"G2 GD F/E/D F/E/D | [D8G,8] ||
+
+X:57
+T:Border Ride
+C:Mark Briere solo
+N:Transcribed by Mike Stangeland
+R:bluegrass
+S:https://www.mandolincafe.com/te/tabledit_files/BorderRide-A-McReynolds.tef
+L:1/8
+Q:1/4=288
+M:4/4
+K:A
+c2 d2 ^d2 | e2 c2 d2 B2 | c2 A2 B2 G2 | A2 A2 G2 F2 | E8 |
+|: "A"[c'2a2] [c'4a4] [d'2b2] | [c'4a4] [b4g4] | [a2f2] [a4f4] [b2g2] | [a4f4] [g4e4] | [af][af] [a2f2] [ge][ge] [g2e2] | 
+[fd][fd] [f2d2] [ec][ec] [e2c2] | "E"[dB][dB] [dB][dB] [dB][dB] [cA][cA] | [BG][BG] [BG][BG] [BG][BG] [AF][AF] | 
+[FD][FD] [F2D2] [FC][FC] [F2C2] | [DB,][DB,] [DB,][DB,] [D4B,4] | [b2g2] [b4g4] [c'2a2] | 
+[bg][bg] [b2g2] [af][af] [a2f2] | [g2e2] [g4e4] [a2f2] | [ge][ge] [ge][ge] [fd][fd] [fd][fd] | 
+[ec][ec] [ec][ec] [fd][fd] [fd][fd] | [ec][ec] [ec][ec] [dB][dB] [dB][dB] | "A"[cA][cA] [cA][cA] [BG][BG] [BG][BG] | [AF][AF] [AF][AF] [A4E4] :| 
+|"E"e2 d2 G2 e2 | d2 G2 ed G2 | e2 d2 G2 e2 | d2 G2 ed G2 | 
+[b2g2] [b4g4] [c'2a2] | [bg][bg] [bg][bg] [af][af] [af][af] | [g2e2] [g4e4] [a2f2] | 
+[ge][ge] [ge][ge] [fd][fd] [fd][fd] | ef ge fg ef | gf eg fe fg | "A"ae =gf ed cB | 
+AB cB A=G FE | "D"DE FG AB de | fe df ed BA | "A"c2 [e2e2] [e2e2] [e2e2] | ef ed cB AF | 
+"E"EF GA Bc de | ge dc BA GB | "A"AB cB AG FG | ED CB, A,B, CE | "D"DE FG AB de | 
+fe df ed BA | "A"c2 [e2e2] [e2e2] [e2e2] | ef ed cB A2 | "E"bg ef gf gf | ef ed cB GB | "A"AB cB AF EF | A8 | 
+
+X:58
+T:Boston Boy
+C:David Grisman 
+A:Rounder
+R:bluegrass
+S:https://www.mandolincafe.com/te/tabledit_files/BostonBoy-C-Grisman.tef
+L:1/8
+Q:1/4=100
+M:2/4
+K:C
+z3G,/A,/ |: "C"C/A,/C/D/ E/G/E/G/ | "F"F/E/F/E/ F/E/D/F/ | "G"G/F/G/A/ B/d/B/d/ | "C"c/B/c/B/ A/G/E/D/ | 
+|C/A,/C/D/ E/G/E/G/ | "F"F/E/F/E/ F/E/D/F/ | "G"G/F/G/A/ B/d/B/d/ | |1 c/"C"B/c/d/ cG,/A,/ :|2 c/"C"B/c/d/ c2|]
+|: "C"e/g/e/d/ c/A/c/e/ | g/e/g/a/ g/e/d/c/ | "G"B/A/G/B/ A/G/G/B/ | "C"dc3 |
+| e/g/e/d/ c/A/c/e/ | g/e/g/a/ g/e/d/c/ | "G"B/A/G/B/ A/G/E/G/ | "C"D/4E/4D/C3 :| 
+
+X:59
+T:Bostony
+C:John Hartford solo
+A:Wild Hog in the Redbrush
+N:Transcribed by Mike Stangeland
+R:bluegrass
+S:https://www.mandolincafe.com/te/tabledit_files/Bostony-G-Hartford.tef
+L:1/8
+Q:1/4=223
+M:4/4
+K:G
+de |: "G"gf gb a2 f2 | ge ga g2 dc | Bc de ge ga |
+ "D7"b2 a2 a4 | c'4 e4 | fe fg f2 fe | BA Bc dB Ac |1 B2 "G"G2 G2 de :|2 B2 "G"G2 G2 GE |]
+|: "G"DE GA BA Bd | e2 d2 d2 B2 | "D7"cB AG FD EF | 
+|"G"A2 G2 G2 GE | DE GA BA Bd | e2 d2 d2 B2 | "D7"cB AG FD EF | |1 "G"A2 G2 G2 GE :|2 "G"A2 G2 G4 | 
+
+X:60
+T:Bound to Ride
+C:Adam Steffey solo
+A:Bound to Ride
+N:Transcribed by Kim Davis
+R:bluegrass
+S:https://www.mandolincafe.com/te/tabledit_files/BoundtoRide-E-Steffey.tef
+L:1/8
+Q:1/4=220
+M:4/4
+K:E
+{=d}"E"ee ef e2 e2 | ef fg f2 fg | "B"ag ag fe gf | =d^d fe =d^d fe | "F#"dc c2 d2 ef | 
+fg f2 fg ag | "B"ag fe gf e=d | df e=d ^df e=d | df e=d ^df e=d | de fa bf ab | 
+fb ea fe df | e=d ^df ed Bd | Ad BF ED B,2 | B,B, B,2 ^A,2 [D2=A,2] ||
+
+X:61
+T:Boys, Them Buzzards Are Flying
+C:Gary Harrison
+N:Transcribed by Tristan Scroggins
+R:bluegrass
+S:https://www.mandolincafe.com/te/tabledit_files/BoysThemBuzzardsAreFlyin-A-Harrison.tef
+L:1/8
+Q:1/4=200
+M:4/4
+K:C
+ee | e2 e2 ^cB A^F | A2 A2 ^FE ^CE | D2 ^FD GD FD | ^CE2^F E2 ee | e2 e2 ^cB A^F | 
+A2 A2 ^FE ^CE | DE ^FD GD FD | ^CE z^F E2 AA | A^F E2 A3B A4 |
+|: z2 B^c zB cB | A3B A4 | z2 B^c zB cB | AB AG ^FD zD | D2 E^F F2 FD | 
+GD ^FD ^CE zF | E2 AA A^F E2 |1 A3B A4 :|2 A8 |] 
+
+X:62
+T:Brown County Breakdown
+C:Bill Monroe
+N:Arranged by Linda Rhia
+R:bluegrass
+S:https://www.mandolincafe.com/te/tabledit_files/BrownCountyBreakdown-E-Monroe.tef
+L:1/8
+Q:1/4=235
+M:4/4
+K:E
+B,C |: "E"E2 EE E2 GB | G2 GG G2 Bc | e2 ee e2 gb | g2 gg g2 B,C |
+| E2 EE E2 GB | G2 GG G2 Bc | ec BG "A"cB GF |1 G"B"B GF "E"E2 B,C :|2 G"B"B GF "E"E4 |] 
+|: "E"B,C EF GF EF | GB zc BG FE | B,C EF GF EF | "B"GB zc B4 |
+| "E"B,C EG FE F=G | GB zc B2 Bc | ec BG cB GF |1 B"B"G FD "E"E4 :|2 B"B"G FD "E"E4 |]
+|: "E"[e=d]e [ee][ee] [e2e2] [e2e2] | gb gf e2 Bc | "D"=dc df ed Bc | =de dA "B"B2 BB |
+ "E"[e=d]e [ee][ee] [e2e2] [e2e2] | gb gf e2 Bc | =dc Bd cB Ac | "B"BA GF "E"E4 :| 
+
+X:63
+T:Buffalo Gals
+C:Aubrey Haynie
+N:Transcribed by Mike Stangeland
+R:bluegrass
+S:https://www.mandolincafe.com/te/tabledit_files/BuffaloGals-A-Haynie.tef
+L:1/8
+Q:1/4=240
+M:4/4
+K:A
+[AA][eA] |: "A"A2 [e2B2] [e2c2] [e2e2] | [fA][eA] [eA]a =c^c c2 | "E"ef ec B2 c{c}e | "A"ef e2 B=c ^ce |
+| A2 [e2B2] [e2c2] e2 | [fA][eA] [eA]a =c^c c2 | "E"ef ec BA F2 | |1 [AF]"A"[AA] [AA][AB] [A2A2] [AA][eA] :|2 [AF]"A"[AA] [AA][AB] [A2A2] fg |]
+| "A"ae g2 (3fgf eg | fa ed c2 c{c}e | "E"ef ec B2 c{c}e | "A"ef ed ce fg | 
+|ae g2 (3fgf eg | fa ed c2 c{c}e | "E"ef ec BA FF | "A"[AA][eA] [eA][eB] [e2A2] fg |
+| ae g2 (3fgf eg | fa ed c2 c{c}e | "E"ef ec B2 a2 | "A"ze fe B=c ^ce | 
+|ae g2 (3fgf eg | fa ed c2 c{c}e | "E"ef ed cE FE | "A"[AA][eA] [eA][eB] [e4A4] || 
+
+X:63
+T:Bugle Call Rag
+C:Arr. by John Baldry 
+N:From "Bluegrass and  Old-Time Mandolin"
+R:bluegrass
+S:https://www.mandolincafe.com/te/tabledit_files/BugleCallRag-G-Baldry.tef
+L:1/8
+Q:1/4=245
+M:4/4
+K:G
+"Bobby Osborn style break""G"D2 | G2 GB G2 G2 | B2 Bd B2 GB | d2 B2 G2 D2 | G2 e2 =f2 ^f2 | 
+|"C"ga gf ef ga | ge cd ef ga | "G"ge dB AG FA | BG E2 D2 D2 |
+ "D"DE FD EF DE | FD EF D2 B,2 | "G"G,A, B,C DE DE | "G7"=FG FG FG FD |
+ | "C"CB, CD EG AB | cd e=f ga ge | "G"de gf ge dc | BA GB AG FG |
+ | "D"DF Ad ^cd e=f | fe dB AG FA | "G"GD =FE DG, (3B,^A,=A, | G,6 D2 | 
+ |G2 GB G2 G2 | B2 Bd B2 GB | d2 B2 G2 D2 | G2 g2 f2 =f2 |
+ |"C"eg gg gg gg | bg eg eg gg | "G"ge dg eg eg | =fe dc BA FG |
+ | "D"AD DD DD DD | DD DD DD DD | "G"{^C}DG,2G, G,G, G,G, | G,8 | 
+ |"C"CC CC CC CC | ^A,=A, G,_B, A,G, B,A, | "G"G,A, ^A,B, DE FG | Ac BA GB AG | 
+|"D"DF AB ^cd e=f | fe dc BA FA | "G"GD =FE DB, ^A,=A, | G,6 D2 |
+| G2 GB G2 G2 | B2 Bd B2 GB | d2 B2 G2 D2 | G2 G,2 A,2 B,2 | 
+|"Monroe style break""C"CC CD EG GA | ^A=A G_B AG Gg | "G"gd dB BG GB |
+| BG G^A BG GE | "D"DD DD FA AB | dA cA BA FD | "G"GG GG GG GG |
+ GD ^A,=A, G,G, A,B, | "C"CC CD EG GA | ^A=A G_B =BG G_B | "G"d^c =c^A BG G=A | 
+|^AG G2 AA GG | "D"ED FA Bd dA | DF AB d2 dA | "G"DF AB dA cB |
+| GG GG GD DE | G6 D2 | G2 GB G2 G2 | B2 Bd B2 GB | 
+|d2 B2 G2 D2 | G2 [^A2G2] [A2G2] [A2G2] | "C"G[c2G2C2][cGC] [cGC][cGC] [cGC][cGC] | [c2G2] [cGC][cGC] [cGC][cGC] [cGC][cGC] |
+| "G"G,2 B,D GB de | gd dB BG GD | "D"DD DE FA Ad | df fa ad' d'a |
+| "G"[DG,]B, B,^A, [DG,]B Bg | gd dB BG GD | "C"CC CE EG GA | ^A=A _B=B AG GB | 
+"G"gd dB BG A^A | BG GG G2 GE | "D"DD DD FA Ad | df fa ad' d'a | 
+|"G"[D2G,2] [D^A,][DB,] [DG,][DG,] [D2B,2] | [D6G,6] DD | GD GB G2 GG | BG Bd B2 GB | d2 BG D2 DD | G8 |
+
+X:64
+T:Bull at the Wagon
+C:Traditional
+N:Transcribed by Kim Davis
+R:bluegrass
+S:https://www.mandolincafe.com/te/tabledit_files/BullattheWagon-A-Trad.tef
+L:1/8
+Q:1/4=260
+M:4/4
+K:A
+AB |: "A"ce cB ce cB | ce ag fe cA | "E"Bc BA Bc BA | Bc fg fe cB | 
+|"A"ce cB ce cB | AA ce ad cA | "E"[e3B3]e ag fe |1 c"E"A B2 "A"A2 B2 :|2 c"E"A BA "A"A2 A2 |]
+|: "A"Bc ee ag fb | "E"ge fg fe cA | fg fe cB AF | [e2B2] F[eB] z3A | 
+|"A"zc ee ag fb | "E"ge fg fe cA | fg fe cB AG |1 "A"A2 G[AA] z2 E2 :|2 "A"A2 G[AA] z2 EA, |]
+|: A,A, A,A, A,2 A,C | "E"B,B, B,B, B,2 B,2 | EF GA Bc df | ed ce ed c2 |
+| "A"[AEA,][AEA,] [AEA,][AEA,] [A2E2A,2] A,C | "E"[EB,][EB,] [EB,][EB,] [E2B,2] B,2 | EF GA Bc dB |1 c"E"A BA "A"A2 A,2 :|2 "E"cA BA "A"A4 | 
+
+X:65
+T:Bull's Eye
+C:Bull Harmon
+N:Transcribed by Richard A Taylor
+R:bluegrass
+S:https://www.mandolincafe.com/te/tabledit_files/BullsEye-Em-Harmon.tef
+L:1/8
+Q:1/4=120
+M:4/4
+K:C
+| ed B_B AG ED | ED B,D B,A, G,E, | [^f8d8A8E8B,8] |: "Em"AB e2 de e2 |
+| Bd eg ^fd fd | ed ee e2 ag | "Bm"^fd fd B4 | "Em"AB e2 de e2 | 
+ |Bd eg ^fd fd | ea ed ed B_B | "B7"B_B AG E4 :|
+ |: "Em"E,D EE, DE3 | zE DB, D_B, A,G, | E,B, DE DE3 | A,_B, =B,^D "B7"[^f4B4A4] | 
+|"Em"BA GE AG ED | GE DB, ED B,/A,/B, | DE DB, EB, D_B, | "B7"B,D _B,/A,/"Em"G, E,4 :| 
+|GA Bd B/A3/2 GE | AG ED GE DB, | "B7"DB, A,G, "Em"E,4 |
+
+X:66
+T:Bullet Man
+C:Ricky Skaggs solo
+A:California Autumn
+R:bluegrass
+S:https://www.mandolincafe.com/te/tabledit_files/BulletMan-G-Skaggs.tef
+L:1/8
+Q:1/4=215
+M:4/4
+K:C
+D2 E2 ^F2 | "G"Gd BG "F#"^F^c _BF | "B"B^c B^G ^FG =F^F | "E"AB AF "A"^FD B,2 | 
+|"D"zE ^Fd2D EF | "G"Gd BG "F#"^F^c _BF | "B"B^c B^G ^FG =F^F | "E"AB AF ^FE {A,}B,2 | 
+|"A"EB, ^C2 B,A,3 | "E"B,^C E^F ^GB2E | ^F^G B2 Ge3 | "A"AB ^ce ^fa fe |
+| {B}^c^f ec BA ^FD | "E"ED E^F ^G=G ^GB | {^c}e2 E2 E^F EF | "G"Gd BG "F#"^F^c _BF |
+|"B"B^c B^G ^FG =F^F | "E"dB AE "A"^FD B,2 | "D"D2 {E}^F2 (3DFd  | 
+
+X:67
+T:Bury Me Beneath the Willow Tree
+C:John Reischman solo
+A:No Hurry
+N:Transcribed by Jeff Hoelter
+R:bluegrass
+S:https://www.mandolincafe.com/te/tabledit_files/BuryMeBeneathTheWillow-A-Reischman.tef
+L:1/8
+Q:1/4=210
+M:4/4
+K:A
+EF AB cd | "A"de ee ze f2 | e2 ee {B}c2 (3BcB | "D"A2 AA AF BF | A2 EF AF AF | 
+|"A"E2 [AE]E [AE]F AB | [eB][ec] [ec][ec] cd c2 | "E"B2 BF GB GF | "A"E2 EF AB cd | 
+|"A"{d}(3eee (3eee e2 ef | e2 ee B2 ee | "D"(3BcB A3A BF | A2 AA EF A2 | "A"Bc zc B2 c2 | 
+|"E"dc BA GA BG | "A"A2 EF zE C2 | A,4 [e2e2] ef | "A"e2 ee B2 Bc | cc3 AB A2 | 
+|"D"AB BB A2 F2 | EF z2 AB AF | "A"E2 EE EF AB | c2 Bc d2 c2 | "E"Bc BA GA GF | 
+|"A"EF GA BA GB | "A"A2 E3E F2 | zF =G3G F2 | "D"D4 {E}F2 AF | A2 AA EF A2 | "A"Bc cc B2 c2 | 
+|"E"dc BA GA BG | "A"AE F2 E2 B,2 | B,C z4 F2 | "A"[cA]A3 [B=G]G3 | [dB]B2A cA z2 | 
+|"D"AF z2 =G2 F2 | EF z2 FE D2 | "A"E2 EE B,C EE | EF AB cB A2 | "E"B2 FG BG F2 | 
+|"A"E2 EF AF AF | "A"AB AF EF AB | c2 fe =gf ec | "D"d2 df af bf | a2 aa ef a2 | 
+|{b}"A"c'c' c'c' c'2 c'2 | "E"d'c' ba ga bg | "A"a2 ef e2 B2 | Bc7/1 || 
