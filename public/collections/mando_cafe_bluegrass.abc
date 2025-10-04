@@ -67,7 +67,7 @@ M:4/4
 K:A
 [eA][eB] |: "A"[e2c2] cd [ec][eB] [eA][eB] | [e2c2] cd [ec][eB] [eA][eB] | 
 [e2c2] [e2c2] [e2d2] [ec][ec] | "E"[e2c2] [e2B2] [e2B2] GA | [e2B2] [eB][ec] [eB]A GA | 
-[e2B2] [eB][ec] [eB]A GA | [e2B2] [e2d2] [e2c2] [eB][ec] |1 [e2B2] [e2A2] [e2A2] AB :|2 [e2B2] [e2A2] [e4A4] | 
+[e2B2] [eB][ec] [eB]A GA | [e2B2] [e2d2] [e2c2] [eB][ec] |1 [e2B2] [e2A2] [e2A2] AB :|2 [e2B2] [e2A2] [e4A4] |] 
 "A"[AE][AE] [AE][AE] [A2E2] AB | [e2c2] (3BcB [e2A2] [A2E2] | "D"[AF][AF] [AF][AF] [A2F2] Bc | 
 [f2d2] c2 B2 A2 | "E"[B3G3]F G2 A2 | [eB]G [eB][ec] [e2B2] E2 | "A"[AA]A [eA]e [e2A2] B2 | 
 {=c}^c2 [e2B2] [e2A2] [A2F2] | [A2E2] [AE]F [A2E2] AB | [e2c2] [e2B2] [e2A2] [A2E2] | 
@@ -5498,4 +5498,1647 @@ f2 =f4 BA | Bc ^dc Bc BD | FE DE FD EF | G2 z^A, z=A, z2 | G,4 z2 A,^A, | B,D E2
 B2 Bd c2 Ac | e2 ce =g2 eg | b=g a4 ea | c'b ba af ef | ac' e'e' c'a c'e' | d'2 d'e'/=f'/ f'e' d'b | 
 d'e' =g'f' e'f' g'e' | f'2 e'2 d'e' d'e | =c'd' c'e bc' be | ab ae ga ge | f2 fg ag f2 | 
 fe ^d2 dc df | ec eg ze fg | aa =g2 f2 ff | e=g f2 de =c^c | A8 | z8 | z8 | z8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:315
+T:Nashville Blues 
+C:Arranged by Mike Stangeland
+N:
+L:1/8
+Q:1/4=220
+M:4/4
+K:F
+z2 A2 c2 A2 | "Dm"cd Dd dD d2 | "F"c2 D2 d2 D2 | "Dm"GA AA AG F2 | CD DD {_D}=D2 D2 | 
+cd Dd dD d2 | "F"c2 D2 d2 D2 | "A7"GA cc AG F2 | GA cc AG F2 | "Dm"D2 {c}d2 dd dA | 
+"F"c2 cc cA d2 | "Dm"GA cc AG F2 | CD [AD][AD] {_D}=D2 [A2D2] | GA AA AG FG | 
+(3FGF D2 G2 F2 | D2 [AD][AD] {_D}=D2 [A2D2] | "D"F_G AA FG A2 | "Dm"GA AA AG FG | 
+(3"A7"FGF D2 G2 F2 | "Dm"D2 A,C DF DC | D2 DE FG Ac | [d2A2] [dA][dA] [dA][dA] [dA][dA] | 
+"F"[c4A4] [d4A4] | {G}"Dm"AA Ac AG FE | D2 A,C DE FG | [dA][dA] [dA][dA] [dA][dA] [d2A2] | 
+"F"[cA][cA] [cA][cA] [d4A4] | "A7"[cG][cG] [cG][cG] [cG][cG] [cG][cG] | [_dG][dG] [dG][dG] [dG][dG] [dG][dG] | 
+"Dm"[d2A2] [dA][dA] [dA][dA] [dA][dA] | "F"[c4A4] [d4A4] | {G}"Dm"AA Ac AG FE | 
+[A8D8] | {G}AA Ac AG FE | D2 G,A, CD (3EFE | [A2D2] [AD][AD] [AD][AD] [AD][AD] | 
+"D"[d2_G2] [dG][dG] [d4G4] | "Dm"[dA][dA] [dA][dA] dc Ad | "A7"cA Gc AG FC | "Dm"D2 cd AG EC | 
+D2 AA AA cA | cd dd d2 fe | "F"dc AG FA dc | "Dm"AG FE DC DE | D2 FE FG Ac | cd dd dA cd | 
+"F"cA Gc AG A=B | "A7"cA Ec AE Ac | _dA Ed AE Ad | "Dm"dd dd dA FD | "F"A,C DF ED CE | 
+"Dm"DF G_A =A_A GF | D2 A2 c2 A2 | dd dd df dc | Ac A_A GF DC | D2 [AD][AD] [AD][AD] [AD][AD] | 
+"D"[A_GD][AGD] [AGD][AGD] [A4G4D4] | "Dm"fe dA ed AF | {G}"A7"_A=A _AG FD CF | 
+"Dm"[A8D8] | z8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:316
+T:Nashville Skyline Rag
+C:Ricky Skaggs
+N:From "Holiday in Japan - The New South"
+L:1/8
+Q:1/4=223
+M:4/4
+K:C
+"C"g4 g4 | "F"g2 ag ^d=d cG | "C"Ac d^d eg ag | "F"c'c2c' c'c2^d | "C"eg a2 c'2 a2 | 
+"F"^g_b ge =ga ge | {d}"G"eg ^d=d cG Ac | "C"zE EE F2 ^F2 | Gc eg ^f^d cA | "F"FA cf ec AG | 
+"C"^FA c^d =dc Bd | "F"cG EC [AD]^F ^D2 | "C"A^F ^D2 {E}F4 | "F"^FD ^DF zG, A,B, | 
+"G"{E}G2 D^D =DC A,G, | "C"CE Gc z4 | "D"a^g =g^f d^c =cB | cB _BA ^F=F E^D | 
+"G"DE GB DF ^GB | Ac eg _B^c eg | "E"^g2 b2 =g^g e^f | ^ge ^fg ef g2 | "A"g2 ^de g2 {d}eA | 
+dc3 A4 | "C"C3/2C/ EC E2 {F}G2 | "F"zc2d eg3 | "C"zc'3 _b2 c2 | "F"a2 g2 ag eg | 
+"C"e^d cd eg ag | "F"c'g ^ga ga =ge | "G"g^d e2 [a4d4] | "C"[a2^d2] [a6d6] | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:317
+T:Nashville Skyline Rag
+C:Bob Dylan 
+N:Basic version plus a Don Rigsby   inspired transription from  JD Crowe "Flashback"  TablEdited by Tim Lee 
+L:1/8
+Q:1/4=250
+M:4/4
+K:C
+z4 zG, A,B, |: "C"CB, CD EF GE | "F"FE FG AB cA | "C"CB, CD EF GE | "F"FE FG FE DB, | 
+"C"CB, CD EF GE | "F"FE FG AB cA | "G"G^F GA Bc dB |1 "C"c2 [cG][cG] [c2G2] A,B, :|2 c2 [cE][cE] [cE]{E}^F3 | 
+"D"D2 {^c}dd dd dd | "D"Bc BA GD E^F | "G"GF ED CB, A,B, | "G"G,2 D2 D2 ^D2 | 
+"E"E2 [e^G][eG] [eG][eG] [eG][eG] | "E"[e^G][eG] [^d2=G2] [=d2^F2] [d2F2] | "A"c^c e=c ^ce =c^c | 
+"A"A2 G,4 A,B, | "C"CB, CD EF GE | "F"FE FG2[AA] cd | "C"c2 cd [e2e2] ga | "F"g2 c'2 a_b ag | 
+"C"c'c' c'c' c'2 ^d'z | "F"c'c' c'c' c'2 _bz | ga ge dc Bd | c8 | z8 | z2 e2 f2 ^f2 | 
+"2nd version"ge ce ge ce | g2 a2 {b}c'2 a2 | ga g2 {^d}eA =dA | cd cG Ac G2 | 
+cd cd eg ag | c'2 _ba ga g2 | {d}eA dA cd cG | c6 G,B, | CB, CD ED CD | FE FG Ac dc | 
+zd Ac de ga | g2 c'2 _ba ga | g2 {d}eA dA cd | cG Ac Ac AG | F2 GA cd eg | ed cG c4 | 
+{g}a2 g2 f^f dA | cB Ac BA FA | _B=B _B=B AF EF | ED B,2 G,2 A,2 | B,2 D2 E2 ^F2 | 
+A2 B2 ^ce ^f2 | a2 (3e^f^g ae fg | ^fe ^cA Bc A2 | {G}A2 c2 d2 c2 | {d}e2 g2 a2 {b}c'2 | 
+_ba ga g2 cd | eg eg ed cG | Ac Ac AG F2 | GA cd eg ed | cG cG D^D =D^D | [c4E4C4] [c4E4C4] | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:318
+T:Natchez Under The Hill
+C:Howard Nash
+N:TablEdited by Kim Davis  and Mike Stangeland
+L:1/8
+Q:1/4=230
+M:4/4
+K:G
+z6 DF | "G"G2 GA GE DB, | ^A,B, EB, DE GA | B^A Bd "G#dim"B=A GA | "D7"Bc ^cd ed ef | 
+"G"gb ae dg ed | BA GB AG EG | DE GA Bc ^cd | "D7"^A=A FD G2 DF | GF GA GE DB, | 
+^A,B, EB, DE GA | ^AB de "G#dim"A=A GA | "D7"B[gd] ze [g2d2] ef | "G"gb ae dg ed | 
+cA dc ^A=A GE | DE GA ^AB G=F | "D7"ED ^A,B, G,2 Dc | "G"Bd de dB GA | Bd ze d3e | 
+"C"z4 [e3B3]d | ed Bd ed ef | "G"gb ae dg ed | ce dB c^A G^D | DE GA ^AB =AG | 
+"D7"=FD ^A,B, G,D zc | "G"Bc de dB GA | Bd de dB gf | "C"e2 ef ed Bd | ed ef e=f ^fa | 
+"G"gb ge dg ed | ^A=A G_B =BG EB, | DE GA ^AB de | "D7"^A=A FD "G"G2 DE | "G#dim"c^A =Ac {_B}=BG E^D | 
+"G#dim"DE GA ^AB c^c | "G"de ^A=A G[gB] z2 | z8 | z8 | z8 | z8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:319
+T:Natchez Under the Hill 
+C:Gerald Jones
+N:TablEdited by Richard A Taylor
+L:1/8
+Q:1/4=206
+M:4/4
+K:G
+z6 DF | "G"G2 GA GE DB, | ^A,B, EB, DE GA | B2 Bd BA GA | "D"Bd2e d2 ef | "G"gb ge "G7"dg ed | 
+"C"BA GB AG EG | "D"DE GA BG AG | ED FD "G"G2 DF | GF GA GE DB, | ^A,B, EB, DE GA | 
+B^A Bc B=A GA | "D"B[gd] [g2d2] [g2d2] ef | "G"gb ge "G7"dg ed | "C"^A=A GB AG EG | 
+"D"DE GA BG AG | ED FD "G"G2 dc | Bd de dB GA | Bd2e d4 | "Em"[e4e4] [e3B3]B | 
+ed ef "C"e2 ef | "G"gb ge "G7"dg ed | "C"BA GB AG EG | "D"DE GA BG AG | ED FD "G"G2 dc | 
+Bd2e dB GA | Bd de d4 | "Em"[e4e4] [e3B3]B | ed ef "C"e2 ef | "G"gb ge "G7"dg ed | 
+"C"^A=A GB AG EG | "D"DE GA BG AG | ED FD "G"G4 | z8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:320
+T:Nellie Kane
+C:Tim O'Brien
+N:TablEdited by Mike Stangeland  From John Baldry's "Bluegrass and  Old-Time Mandoloin" 
+L:1/8
+Q:1/4=210
+M:4/4
+K:E
+z3B B2 c2 |: {=d}"E"e2 ee e2 ee | cB Gc BG Be | ce ee cB Gc | BG Be BG Be | ce ee e2 ee | 
+cB Gc BG Be | ce Be GF E2 | "C#m"FG BG Be GB | "B"ce Be FE FG |1 "E"E[gBEB,] [gBEB,][gBEB,] [gBEB,][gBEB,] [gBEB,][gBEB,] | 
+[g2B2E2B,2] BB B2 c2 :|2 E"E"[EB,] [EB,][EB,] [EB,][EB,] [EB,][EC] | [E8B,8] | 
+z8 | z8 | z8 | "."z8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:321
+T:New Chance Blues
+C:by Norman Blake (key of A)
+N:arr. by S.M. Block  2/2018
+L:1/8
+Q:1/4=244
+M:4/4
+K:C
+z2 E2 ^F2 ^G2 |: "A"[e2A2] [e2^c2] [e2B2] [ec]B | [eA]^c e2 "G"[g2B2] E^F | "A"[e2A2] [e^c]B [eA]c e2 | 
+"C"[c'e][c'e] [c'e]c' [c'2e2] E^F | "A"[e2A2] [e2^c2] [e2B2] [ec]B | [eA]^c e2 "G"[g2B2] e^f | 
+ge ^fd "E"ed ^cB |1 A2 [A^C]A [A2A2C2] E^F :|2 A[A^C] A[AC] [A4A4C4] | "G"[g2B2] [g2B2] [bd]b [bd]b | 
+ga ge dg ed | Bc dB GA Bd | "A"[ae]a [ae]a [ae]a [a2e2] | "G"[g2B2] [g2B2] dg ed | 
+Bc dB GA BG | "D"D^F AB dB AF | "G"GE DB, G,4 | "G"[g2B2] [g2B2] ge dg | ed Bc dB GA | 
+Bd BA GA Bd | "A"[ae]a [ae]a [ae]a [a2e2] | "G"[g2B2] [g2B2] ge dg | ed Bc dB GA | 
+"D"D^F AB dB AF | "G"GE DB, G,4 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:322
+T:New Five Cent Piece
+C:Adam Steffey
+N:TablEdited by Larry Tanner
+L:1/8
+Q:1/4=195
+M:4/4
+K:D
+z6 FE |: "D"D2 fe fg fe | "G"df ed Bc dB | "D"AB AG FG A2 | "A"e2 ef e2 FG | "D"A2 fe fg fe | 
+"G"d2 B2 Bc dB | "D"AB AG "A"FD EF |1 D2 DE D2 FE :|2 D2 DE D2 AB |: "D"A[AF] [A2F2] [A2F2] AB | 
+A[AF] [A2F2] [A2F2] AB | A2 FF GD FD | "A"E2 EF E2 FG | "D"Ad AF DF AF | "G"GA Bc dc dB | 
+|1 "D"AB AG "A"FD EF | D2 B,D D2 AB :|2 "D"AB AG "A"FD EF | D2 B,D D4 | z8 | z8 | 
+z8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:323
+T:Nine Pound Hammer
+C:Roland White solo
+N:From the Album "Appalachian Swing"  Tabledited by Mike Stangeland
+L:1/8
+Q:1/4=239
+M:4/4
+K:A
+z[AE] [A2E2] [A2E2] [AF]A | "A"[AA][AA] [AA][AA] [AA][AA] [AA][AA] | [AA][AA] A=c Bc Bc | 
+"D"A2 [AF][AF] [AF][AF] [AF][AF] | FF A=c Bc Bc | "A"[AA][AA] [AA][AA] [AA][AA] [A2F2] | 
+"E"EB B=c BA FE | "A"[A2A2] [A2A2] [AA][AA] [AA][AA] | [A2A2] {d}ee ef ee | cB AA AA AA | 
+AA AA ef ee | "D"=cB AA AA =F^F | A2 AA AA AA | "A"AA AA AA FA | "E"E2 E2 EF GB | 
+"A"A2 Ac BA FE | A2 [A2E2] [A2E2] [A2E2] | "A"[aA][aA] [aA][aA] [aA][aA] ae | 
+z=c Bc cB cB | AA {=F}^FF FA AA | "D"=cB Ac BA F2 | "A"A,B, CE F=G A=c | "E"B=c Bc cB AF | 
+"A"A2 Ac BA FE | A2 AA AA Ae | af ec (3B=cB AF | ea fe A=c Bc | "D"A2 FF FA AA | 
+=cB Ac BA F2 | FA =c^c =cB AF | "E"E2 EE EF GB | "A"A2 Ac BA FE | A8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:324
+T:Nine Pound Hammer
+C:Alan Bibey
+N:TablEdited by Steve Keating
+L:1/8
+Q:1/4=250
+M:4/4
+K:A
+"A"z6 a2 | za za z=g z^d | =g^d ed ed =d=c | (3d^d=d =c=G Ac Ac | "D"AG AG =G=F ^Fd | 
+FF dA E=G A=c | "A"ca zB =g2 (3fgf | "E"ef e^d =gd ed | (3"A"d^d=d =cA c^c A=G | 
+Ad ee e=g ad' | =c'^c' a=g a2 za | a=g a=c' d'^d' e'e' | (3"D"e'e'e' (3e'e'e' (3^d'e'e' (3e'e'z | 
+^d'=d' =c'a ^d'/e'/z c'^c' | "A"a2 ze (3^de=g a=c' | "E"c'/=c'/d' z2 c'b za | 
+"A"z^d (3=gag eg ed | z^d/=d/ z=c (3d^d=d c^c | A=G E^D =D=C A,=G, | [^DG,][EA,] z[EA,] [E4A,4] | 
+z8 | z8 | z8 | z8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:325
+T:No Banjos In Heaven
+C:
+N:TablEdited by Richard Schwartz
+L:1/8
+Q:1/4=120
+M:4/4
+K:D
+"See "Notes"""for words"z6 Ad | "D"f2 zf gf ed | "G"eB z4 zd | "A"e3/2e/ ee cc cB | 
+"D"A4 z3/2z3/2d | f2 ff g2 fd | "G"eB z4 cd | "A"e/e/e ef ge Bc | "D"d6 cd | "A"e2 ze c2 cc | 
+"D"BA z6 | "E"e2 ze B2 cd | "A"e4 "Bb"=f4 | "D"ff ff gf ed | "G"eB z6 | "A"e2 ef ge Bc | 
+"D"d8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:326
+T:Nobody Knows You When You're Down & Out 
+C:Noah Wall - Down Home Blues
+N:mandolin: Tommy Norris - TablEdited by Philippe Colleu
+L:1/8
+Q:1/4=192
+M:4/4
+K:C
+"96 bpm""C"z2 [e3G3]C [^d2^F2C2] | "G7"[d3F3B,3][cG] zA BA | "C"c3c/B/ AG Ad/z/ | 
+"E7"ee e2 e2 BA | "A7"B^c z[ec] ze B[eA] | ze A3A A_B | "Dm"{^c}d2 dd/_B/ AG A=B | 
+"A7"AG FE D^C CC | "Dm"^C/z/D DF F^G/z/ A[dA] | zA [dA][eA] ze e[AF] | "F"z[f2A2F2]f [fAF]f [fA][^fA^D] | 
+"F#°"z^D [^fAD]f [fAD]A [eg]A | "C"[eg]A [^fA]A [=f^G]A [e=G]A | "A7"z[e2^c2A2^C2][ec] [e3c3A3C3]=c/z/ | 
+"D7"(3BAF (3F^FF (3AzB (3czd | (3ez^f (3fza (3zza za/g/ | "G7"^fA bz2b zd' | zd' d'2 d'[c'2g2]^d' | 
+"C"[^d'^f][e'2g2]d' [d'f][e'2g2]e | "E7"e[e'^g] z[e'g] z[e'g] ze | "A7"[^d'e]e'2[d'e] [d'e]e'3 | 
+(3azg' (3zz[g'a] (3zz[g'a] (3[g'a]z[g'a] | "Dm"[g'a]e f'A e'A d'2 | "A7"[c'e]e ae ge fe | 
+"Dm"e2 dd2[d'2d2]G | A_B AG FE zC | "F"zD DE F2 DD | "F#°"DE ^F2 DF/z/ GA | "C"cA dA eA ^dA | 
+"A7"[e3^c3][a2c2][ac] [ac]e | "D7"^fe d2 cB AF | "G7"GF/z/ ED B,A, G,G, | "C"[DC]G, [EC]G, [FC]G, [^FC]G, | 
+"G7"[G4B,4] [B4F4] | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:327
+T:North Carolina Breakdown
+C:
+N:Transcribed by Tristan Scroggins  Based on Michael Cleveland's  version from "Flame Keeper"
+L:1/8
+Q:1/4=290
+M:4/4
+K:G
+DF | GF GD EG ED | GF GA Bd ef | gf gf ed ef | ge dB AG ED | GB AG EB, DF | GF GA Bd ef | 
+gb ge de ge | dB AF G2 DF | GB AG EB, DF | GF GA Bd ef | g2 fg ed ef | ge dB AG ED | 
+GB AG EB, DF | GF GA Bd ef | gb ge de ge | dB AF G4 | [E3B,3][EB,] [E2B,2] [EG,][EA,] | 
+[EB,][EA,] [EB,][EC] [EB,][EA,] [E2G,2] | [E/B,/][G/D/][GD] [GD][GD] [G3D3][GD] | 
+[GD][GD] [GD][GD] [GD][EB,] [D2G,2] | [E3B,3][EB,] [E2B,2] ga | ba gb ag ed | 
+gb ge de ge | dB AF G4 | [E3B,3][EB,] [E2B,2] [EG,][EA,] | [EB,][EA,] [EB,][EC] [EB,][EA,] [E2G,2] | 
+[E/B,/][G/D/][GD] [GD][GD] [G3D3][GD] | [GD][GD] [GD][GD] [GD][EB,] [D2G,2] | 
+[E3B,3][EB,] [E2B,2] ga | ba gb ag ed | gb ge de ge | dB AF G4 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:328
+T:Oakridge Rendezvous
+C:Doyle Lawson
+N:Transcribed by  Steve Margulis
+L:1/8
+Q:1/4=230
+M:4/4
+K:D
+z8 | [e4A4] [e4A4] | [e4A4] [e4A4] |: "A"ac'2c' a2 ac' | ef ed cB A2 | ac'2c' a2 ac' | 
+ef ec A2 A2 | ac'2c' a2 ac' | ef ed cA cd | ec e"D"a fa ed | "E"cA BA "A"cB A2 :|: "D"AB de f2 [f2d2] | 
+"G"fg ga "D"f2 fa | "A"ef ed cB AB | ce cB AF ED | "G"Gg ed ge dB | "E"BA ^GF EF GB | 
+|1 A"A"^G FE AG FE | A^G FE AG FE :|2 A"A"B cA "E"BA ^GE | "A"A8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:329
+T:Okeechobee Wind
+C:Jesse McReynolds - CD - Bending The Rules
+N:TablEdited by Wendy Anthony  28 Oct 2004
+L:1/8
+Q:1/4=176
+M:3/4
+K:D
+z6 | "D"Dd DD dD | "C"E=c EE cD | "G"DB =cD BG | "D"AF DD B,D | "D"Dd DD dD | 
+"C"E=c EE cE | "G"DB =cD BF | "A"AE CD B,D | "D"A,d DD dD | "C"E=c EE cD | "G"DD {B}=cc BG | 
+"D"AF D2 D2 | "D"d'b ag a=f | "D"ed =cA Ac | "D"d=c AA GF | "D"D2 D4 | "D"Dd DD dD | 
+"C"E=c EE cD | "G"DB =cD Bd | "D"AF DD B,D | "D"A,d DA, dD | "C"A,=c EA, cD | 
+"G"G,B DG, BD | "A"ec AA FA | "D"A,d DA, dD | "C"A,=c EA, cD | "G"G,B =cc BG | 
+"D"AF D2 A,2 | "D"DC ED FE | "D"GF AG BA | "D"dc ed gf | "D"d2 f2 f3/2g/ | "C"[=c'/g/][c'/g/][c'/g/][c'/g/] [c'/g/][c'/g/][c'/g/][c'/g/] [c'/g/][c'/g/][c'/g/][c'/g/] | 
+"C"[b/f/][=c'/g/][c'/g/][c'/g/] [c'/g/][c'/g/][c'/g/][c'/g/] [c'/g/][c'/g/][c'/g/][c'/g/] | 
+"C"[b/f/][=c'/g/][c'/g/][c'/g/] [c'/g/][c'/g/][c'/g/][c'/g/] [c'/g/][c'/g/][c'/g/][c'/g/] | 
+"C"[e/=c/][e/c/][e/c/][e/c/] [e/c/][e/c/][e/c/][e/c/] [e/c/][e/c/][e/c/][e/c/] | 
+"D"[e/=c/][a/f/][a/f/][a/f/] [a/f/][a/f/][a/f/][a/f/] [a/f/][a/f/][a/f/][^g/=f/] | 
+"D"[a/f/][a/f/][a/f/][a/f/] [a/f/][a/f/][a/f/][a/f/] [a/f/][a/f/][a/f/][^g/=f/] | 
+"D"[a/f/][a/f/][a/f/][a/f/] [a/f/][a/f/][a/f/][a/f/] [a/f/][a/f/][a/f/][a/f/] | 
+"D"[f/d/][f/d/][f/d/][f/d/] [f/d/][f/d/][f/d/][f/d/] [f/d/][f/d/][f/d/][f/d/] | 
+"C"[=c'/g/][c'/g/][c'/g/][c'/g/] [c'/g/][c'/g/][c'/g/][c'/g/] [c'/g/][c'/g/][c'/g/][c'/g/] | 
+"C"[b/f/][=c'/g/][c'/g/][c'/g/] [c'/g/][c'/g/][c'/g/][c'/g/] [c'/g/][c'/g/][c'/g/][c'/g/] | 
+"C"[b/f/][=c'/g/][c'/g/][c'/g/] [c'/g/][c'/g/][c'/g/][c'/g/] [c'/g/][c'/g/][c'/g/][c'/g/] | 
+"C"[e/=c/][e/c/][e/c/][e/c/] [e/c/][e/c/][e/c/][e/c/] [e/c/][e/c/][e/c/][e/c/] | 
+"D"[e/=c/][a/f/][a/f/][a/f/] [a/f/][a/f/][a/f/][a/f/] [a/f/][a/f/][a/f/][^g/=f/] | 
+"D"[a/f/][a/f/][a/f/][a/f/] [a/f/][a/f/][a/f/][a/f/] [a/f/][a/f/][a/f/][^g/=f/] | 
+"D"[a/f/][a/f/][a/f/][a/f/] [a/f/][a/f/][a/f/][a/f/] [a/f/][a/f/][a/f/][a/f/] | 
+"D"[f/d/][f/d/][f/d/][f/d/] [f/d/][f/d/][f/d/][f/d/] [f/d/][f/d/][f/d/][f/d/] | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:330
+T:The Oklahoma Rooster
+C:Dave Cotton
+N:From John Baldry  Tabledited By Mike Stangeland    
+L:1/8
+Q:1/4=245
+M:4/4
+K:D
+z6 (3FG^G |: "D"A2 AB dB de | fe fg a2 ag | "A7"ef af ed cA | "D"de dB AF G^G | 
+A2 AB dB d2 | ef ef ga gf | "A7"ga gf ed cA |1 d2 de d2 (3FG^G :|2 d2 de fg a2 | 
+|: "B"[b3^d3]c' [b4d4] | z2 Bc de f2 | "A"[a3c3]b [a4c4] | z2 AB cd e2 | "G"[g6B6] [g2B2] | 
+"D"[f2A2] fg ag fa | "A7"ga gf ed ce |1 d2 d2 ef ga :|2 d"D"c de d4 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:331
+T:Old Bones
+C:Charlie Derrington
+N:Transcribed by   Mike Stangeland
+L:1/8
+Q:1/4=250
+M:4/4
+K:D
+z8 |: "D"fa aa ad fa | fA df ed Ad | fa aa ae fa | "A"e2 [ed]e [e2e2] [e2A2A2] | 
+"D"fa aa ad fa | fd df ed BA | de fa fe df |1 e"A"A Bc "D"d2 A2 :|2 e"A"A Bc "D"d2 dc | 
+|: "Bm"B2 Bd "A"A2 Ad | "Bm"B2 Bd "A"AF EF | "Bm"B2 Bd "A"A2 AB | "A"AF EF "D"AF ED | 
+"Bm"B2 Bd "A"A2 Ad | "Bm"B2 Bd "A"A2 Ad | "Bm"B2 Bd "A"AB AF |1 A"A"F EF "D"D2 ^AB :|2 A"A"F EF "D"D4 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:332
+T:Old Dangerfield
+C:by Bill Monroe
+N:arranged & TablEdit by S.M. Block  
+L:1/8
+Q:1/4=258
+M:4/4
+K:A
+z6 {=G}AA |: "A"[A2A2] =GE D=C A,=G, | A,2 AA =cA c^c | A2 =GE D=C A,C | "E"DE D=C "A"A,2 (3DE=G | 
+A2 =GE D=C A,=G, | A,2 AA =cA c^c | A2 =GE D=C A,C |1 D"E"E D=C "A"A,2 AA :|2 D"E"E D=C "A"A,2 A,A, | 
+|: "A"A,=C E=G A2 AA | "D"DE FA d2 dd | "A"A,=C E=G A2 AA | "E"EG Bd e2 ee | "A"A,=C E=G A2 AA | 
+"D"DE FA d2 AB | "A"=cB A=G ED =CD |1 ^D"E"E A2 "A"A2 A,A, :|2 ^D"E"E A2 "A"A2 e2 | 
+M:2/4
+e2 e2 | 
+M:4/4
+|: "A"=g[ae] [ae][ae] [ae][ae] [ae][ae] | [a2e2] aa ac' ae | "E"[^d=G][e^G] [eeG][eeG] [eeG][eeG] [eeG][eeG] | 
+[e2e2G2] ef =gf e2 | [=fc][^fd] [fd][fd] [fd][fd] [fd][fd] | [f2d2] AB =cB A=G | 
+"A"[c=G][cA] [cA][cA] [cA][cA] [cA][cA] | [c2A2] AB =cB A2 | "G"[^AF][B=G] [BG][BG] [BG][BG] [BG][BG] | 
+[B2=G2] =cB AG ED | "A"[AD][AE] [AE][AE] [AE][AE] [AE][AE] | [A2E2] =GF ED =C2 | 
+"D"[FD][FD] [FD][FD] [FD][FD] [FD][FD] | "E"[F2D2] DE D=C A,=G, | "A"[E2A,2] [EA,][EA,] [EA,][EA,] [EA,][EA,] | 
+|1 [E2A,2] ee e2 =g2 :|2 [E8A,8] | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:333
+T:Old Dangerfield
+C:Bill Monroe - Arr. Mike Stangeland
+N:Arranged ofr guitar   by Mike Stangeland
+L:1/8
+Q:1/4=230
+M:4/4
+K:A
+z6 =GA |: A2 =GE D=C A,=G, | A,2 AB =cB A=G | A2 =GE D=C A,C | "E"DE D=C "Am"A,2 =GA | 
+A2 =GE D=C A,=G, | A,2 AB =cB cB | A2 =GE D=C A,C |1 DE D=C "Am"A,2 =GA :|2 DE D=C "Am"A,2 A,B, | 
+|: "Am"=CD E=G A2 GF | "D"DF =GA d2 A,B, | "Am"=CD E=G A2 AG | "E"GB e2 e2 =CB, | 
+"Am"A,=C E=G A2 AD | "D"DF AB =cB A=G | "Am"A2 =GE D=C A,C |1 DE D=C "Am"A,2 A,A, :|2 DE D=C "Am"A,2 A,B, | 
+M:2/4
+"Am"=CD E=G | 
+M:4/4
+|: "Am"A2 AB A=G EG | A2 AB =cB A=G | "E"E2 E,=G, A,B, D^D | E2 D^D E=G ED | "D"D2 d=c AG =G=F | 
+D=C D^D ED =DC | "Am"A,2 =CD ^DE =G^G | A2 ed =cA =G=F | "G"=G2 GB AG ED | =G2 AA AB A2 | 
+"Am"E=G AG ED =CD | E2 A2 AB =c^c | "D"d2 de fd cd | "E"de ea ed c=G | "Am"A2 A=G E^D =D=C | 
+|1 A,4 "Am"=CD E=G :|2 A8 | z8 | z8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:334
+T:Old Ebeneezer Scrooge
+C:Bill Monroe
+N:
+L:1/8
+Q:1/4=198
+M:4/4
+K:A
+z8 | z8 |: "G"E2 AA =cB A=G | "F"=G2 Bd BA GA | "G"E2 AA =cB A=G | "D"E=G GB "G"A2 A2 | 
+E2 AA =cB A=G | "F"=G2 Bd BA GA | "G"E2 AA =cB A=G |1 E"D"=G GB "G"A2 A2 :|2 E"D"=G GB "G"A2 de | 
+|: "G"e2 ee =ge e2 | "C"=ga ag ag ed | "G"e2 ee =gf eA | "D"=cA Bd A=G E2 | "G"A=c de =ga af | 
+"C"=gf eg fe dc | "G"A2 =cB A=G GE |1 E"D"=G GB "G"A2 ee :|2 E=G "D"GB A2 =CD | 
+[A2E2] [AE]=c BA =GE | "F"=G2 B,D EG FD | "G"[A2E2] [A2E2] AE F=G | "D"A=c de dc A2 | 
+"G"[A2E2] [AE]=c BA =GE | "F"=G2 B,D EG FD | "G"EF =GA =cA cA :| "D"E=G GB "G"A2 A2 | 
+|: "G"A,=C E=G "F"FA FG | "D"E2 AA "G"=cA cA | A,=C E=G "F"FA FG | "D"E=G GB "G"A2 A2 | 
+A,=C E=G "F"FA FG | "D"E2 AA "G"=cA cA | A,=C E=G "F"FA FG | "D"E=G GB "G"A2 A2 :| 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:335
+T:Old Ebenezer Scrooge
+C:by Bill Monroe (key: A modal)
+N:transcr. from recording  by S.M. Block 11/2019
+L:1/8
+Q:1/4=260
+M:4/4
+K:C
+|: "A"E2 AA cB AG | "G"G2 Bd BA AA | "A"A,2 AA cB AG | "E"EG GB "A"A2 A2 | "A"E2 AA cB GG | 
+"G"G2 Bd BA AA | "A"A,2 AA cB AG |1 E"E"G GB "A"A2 A2 :|2 E"E"G G"A"B Ad ee | 
+|: "A"e2 ee ge ee | "D"ea aa aa ac' | "A"e2 ee ge dA | "E"cA Bd AG E2 | "A"{d}ee ee ge ee | 
+"D"ea aa aa ac' | "A"e2 cB AG GD |1 E"E"G GB "A"Ad ee :|2 E"E"G G"A"B A2 [G2D2] | 
+|: "A"[A2E2] [A2E2] [A2E2] [A2E2] | "G"G,2 B,D GD ^FD | "A"[AE][AE] [AE][AE] [AE][AE] AA | 
+"E"A^c de ec A2 | "A"[AE][AE] [AE][AE] [AE][AE] [AE][AE] | "G"G,2 B,D GD ^FD | 
+"A"A,C EG ^FA FG |1 E"E"G GB "A"A2 [G2D2] :|2 E"E"G GB "A"A2 [A2D2] |: "A"A,C EG "G"^FA FG | 
+"E"EE EA "A"cA cA | "A"A,C EG "G"^FA FG | "E"EE Ec "A"A2 [A2E2] | "A"A,C EG "G"^FA FG | 
+"E"EE EA "A"cA cA | "A"A,C EG "G"^FA FG |1 E"E"G GB "A"A2 A2 :|2 E"E"G GB "A"A2 ee | 
+a"A"e ge ^fe AA | cA BA AG EC | A,C EG ^FA FG | EG A[eA] [e4A4E4] | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:336
+T:The Old Home Place
+C:Dean Webb - Arranged by David Ogershok
+N:TablEdited by David Ogershok
+L:1/8
+Q:1/4=170
+M:4/4
+K:G
+z8 | z2 DE FG A^A | "G"^AB Bd B=A GG | "B7"F^D FA Bc BA | "C"GF GA GE GE | "G"D6 ^AB | 
+de =fe d2 DE | =FG FE DB, C^C | "D7"DB cA =F^F =F^F | D8 |: "G"DE GA B4 | "B7"B,^A, B,^D FA BA | 
+"C"G2 FG AG EG | "G"D6 ga | bg ab ge de | "D7"=fe d^A BG ED | "G"GG ^A,B, A,B, A,B, | 
+|1 G,2 z2 G,B, C^C | D2 z2 [A2F2] [A2F2] | [A6F6] GA | Bd AB GA GF | Gz Bd cB AG | 
+Az AB ^c=c ^cd | ee ef gf e^c | dA cG AE =FE | D8 :|2 G,2 z6 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:337
+T:Old Joe Clark
+C:Traditional
+N:Tabledited by  Mike Stangeland
+L:1/8
+Q:1/4=230
+M:4/4
+K:A
+z6 cd |: "A"e^d ef =gf ga | ef ed cB Ac | e^d ef =gf gf | "E"e^d ef e2 c=d | "A"e^d ef =gf gf | 
+ef ed cB AB | "A"cA Bc "E"BA GB |1 A"A"G AB A2 cd :|2 A"A"G AB A2 F=G | "A"AG AB cB cd | 
+ef ed cB AF | AG AB cB AF | "G"=GF GA G2 FG | "A"AG AB cB cd | ef ed cB AB | c"A"A Bc "E"BA GB :| A"A"G AB A4 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:338
+T:Old Joe Clark
+C:
+N:TablEdited by Rod B.
+L:1/8
+Q:1/4=240
+M:4/4
+K:A
+z6 cd |: "A"ea fa =ge fa | ec de cA cd | ea fa =ge fd | "E"eA ce eA cd | "A"ea fa =ge fa | 
+ec de [e2c2] [e2A2] | [eA][eA] cA "E"BA GB |1 "A"[e2A2] ae cA cd :|2 "A"[e2A2] ae ce Ee | 
+|: "A"[e2A2] (3EFA AB cd | [e2A2] de ce Be | [e2A2] ae (3=cBe ^ce | "G"=GB dB de Be | 
+"A"[e2A2] (3EFA AB cd | [e2A2] [e2d2] ce Be | [e2A2] cA "E"BA GB |1 "A"A2 ae cA Ee :|2 "A"[e8A8] | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:339
+T:Old Joe Clark
+C:Sam Bush
+N:Transcribed by John Strong 4/99
+L:1/8
+Q:1/4=206
+M:4/4
+K:C
+"A"e^f ef gb (3fgf | e^f ed [e^c][ec] [ec]d | e^c e^f ge fe | "E"[ee]e e^f e2 ^cd | 
+"A"e^f ef gb (3fgf | e^f ed ^cB Ac | (3B^cB Ac "E"BA ^GB | "A"A2 ^FA [e2A2A2] ^ce | 
+e2 e2 e^f gf | e^f ed ^cB AB | ^cd e^f ge fe | {^c}"E"ee e^f ef e^g | "A"a^g bg a^f ea | 
+^f^g af ec ^ca | ^cB Ac "E"BA ^GB | "A"A2 [eAA][eAA] [e2A2A2] ^FA | [eAA][eAA] [eAA][eAA] [eB][eB] (3B^cd | 
+e^f ed ^cB A^F | E^F AB ^cB AF | "E"E^F ^GA BA GB | "A"AB ^cd ea e^g | a^g bg a^f ea | 
+e^g a^f "E"ed ^cB | "A"A2 [eA][eB] [e2A2] [A^F]A | [e2A2] [eA][eA] [eA]B ^cd | 
+e^c dB cA B^G | AB ^cA (3B=cB A^c | "E"BA ^G^F EF GB | "A"A2 [e2A2A2] AA AB | 
+ed z2 [eB]^c [ec]A | B^c Ac "E"BA ^GB | "A"A8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:340
+T:Old Mountaineer
+C:Bill Monroe - Arr. Mike Compton
+N:TablEdited by Mike Stangeland
+L:1/8
+Q:1/4=243
+M:4/4
+K:G
+z8 | "G"eg gg g2 g2 | ga bb gd de | "F"=f2 fa fd cA | "D"BA Bd "G"BG [G2G,2] | 
+eg gg g2 g2 | ga bb gd de | "F"=fe fa fd c^A | "D"BB Bd "G"BG [G2G,2] | eg gg g2 gf | 
+ga bb gd de | "F"=ff fa fd c^A | "D"^AB Bd "G"BG [G2G,2] | eg gg g2 gg | ga bb gd de | 
+"F"=ff fa fd c^A |: "D"^AB Bd "G"BG DB, | "G"B,C ^CD GF =F=C | "F"CC DE =FD EC | 
+"G"B,C ^CD GF =FD | "D"DF Ad cA FD | "G"B,C ^CD GF =F=C | "F"CC DE =FD D2 | "G"gg =fa fd cA :| "D"^AB Bd "G"BG [G2G,2] | 
+"G"[cD][dD] [dD][dD] [d2D2] [d2D2] | [dD][cD] [cD][dD] [c2D2] [d2D2] | [cD][dD] [dD][dD] [d4D4] | 
+[cD][dD] [cD][dD] [cD]G G2 | [cD][dD] [dD][dD] [d4D4] | dc Bc dd gg | "G"gg =fa "F"fd cA | 
+"D"A^A B"G"d BG [G2G,2] | "G"[cD][dD] [dD][dD] [d4D4] | [dD][AD] [cD][AD] [c2D2] [d2D2] | 
+[cD][dD] [dD][dD] [d4D4] | [cD][dD] [cD][dD] [cD]G [G2G,2] | cd dd d4 | dc Bc dd gg | 
+"G"g=f af "F"dc AA | "D"^AB dB "G"GD3 |: "G"[D2G,2] [DG,][DG,] [DG,][DG,] [DG,]B | 
+c4 Bd d2 | [D2G,2] [DG,][DG,] [DG,][DG,] [DG,]B | cA Bd BG [G2G,2] | [D2G,2] [DG,][DG,] [DG,][DG,] [DG,]B | 
+cc Bc dd dg | "G"gg =fa "F"fd cA | "D"^AB Bd "G"BG D2 :| 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:341
+T:The Old Rugged Cross
+C:Words and Music by George Bennard
+N:TablEdited by Richard Schwartz
+L:1/8
+Q:1/4=100
+M:3/4
+K:G
+z4 Bc | "G"d3^c e2 | d4 dd | "C"e3^d f2 | "A"e4 ee | "D"f3e d2 | "D7"c2 d2 c2 | 
+"G"B6 | z4 Bc | "G"d3^c e2 | d4 dd | "C"e3^d f2 | "A"e4 ee | "D"f3e d2 | "D7"c'2 b2 a2 | 
+"G"g6 | z4 fg | "D"a3a a2 | a2 g2 f2 | "G"g6 | z4 gf | "C"e3e e2 | g2 f2 e2 | 
+"G"d6 | z4 dg | "G"b3b b2 | b2 c'2 b2 | "C"e6 | z4 c'c' | "G"b3a g2 | "D"d2 f2 a2 | 
+"G"g6 | z6 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:342
+T:Old Sport
+C:
+N:Transcribed by Tristan Scroggins  Based on Texas Shorty's version  from "Old Sport"
+L:1/8
+Q:1/4=180
+M:4/4
+K:A
+AF | EG Ac BA ef | ec Ac BA FA | EG Ac BA ef | ec Ac B2 AF | EG Ac BA ef | ec Ac BA FA | 
+A,C EG Ac af | ec BG A2 [A/G/]A/[AA] | [A2A2] Ac BA ef | ec Ac c/B/A FA | EG Ac BA af | 
+ec Ac BA FA | EG Ac BA ef | ec Ac BA FA | A,C EG Ac af | ec BG A2 (3efg |: a2 ae fe cA | 
+af ec BA FE | ag ae fe cB | Ab2c' b2 ab | c'a (3=c'^c'=c' a^c' ba | ec af ec BG | 
+Ac eg ab af |1 ec BG A2 g/a/a :|2 ec BG A2 (3efg | ag ae fa ed | cB AG A2 e2 | 
+ef ed (3=cBA FB | AF EC A,4 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:343
+T:Old Tennessee River
+C:Bill Monroe - Mike Compton solo
+N:Transcribed by  Mike Stangeland
+L:1/8
+Q:1/4=206
+M:4/4
+K:E
+"Bill Monroe intr"z2 B,=D EA (3[eB][eB][eB] | (3[eB][eB][eB] [e2B2] [eB]=G FE | 
+(3B,B,B, B,2 =G,A, B,=D | (3[BE][BE][BE] (3[BE][BE][BE] (3[BE][BE][BE] (3[BE][BE][BE] | 
+[B4E4] B=d Bd | "Jimmy Campbell f""E"^AB z=A B=d Bd | E3=D E=G EG | "D"=D2 {F}=G2 GF ED | 
+"E"B,3A B=d Bd | ^AB z=A B=d Bd | E2 B,C EG Ae | "B7"B3B {c}=dB cd | B3A B=d Bd | 
+"E"^AB z=A B=d Bd | E3=D E=G EG | "D"=D2 {F}=G2 GF ED | "E"B,4 B,C EG | (3BBB (3BBB (3BBB ^AB | 
+"B7"A=G E=D GE DB, | (3"E"EEE (3EEE E=D E=G | E2 BB B=d Bd | =de ee =ge g2 | e=d Bd A=G EG | 
+(3BBB (3BBB A=G EG | E=D BB B=d Bd | =de ee =ge g2 | e=d BG EG Ae | "B7"B2 BB {c}=dB cd | 
+B3B B=d Bd | "E"=de (3eee de (3eee | =ge ze zg e=d | B3=d A=G E=D | E=D B,D EG B=d | 
+"B7"^AB (3BBB (3BBB BA | A=G E=D G^G EC | (3"E"EEE (3EEE E=D EF | E2 E=D Bc BG | 
+E4 AB AF | "D"=D4 Bc BG | "E"E2 E=D B,C EB | =G^G zA Bc BG | E4 AB AF | "D"=D4 B,C EG | 
+"B7"B3=d ^dB cd | B3A B=d Bd | "E"^AB z=A B=d Bd | E3=D E=G EG | "D"=D2 {F}=G2 GF ED | 
+"E"B,4 B,C EG | (3BBB (3BBB (3BBB ^AB | "B7"A=G E=D GE DB, | (3"E"EEE (3EEE E=D E=G | 
+E8 | "Monroe mandolin "A[eB] [eB][eB] [eB]=d Bd | E3E E=G EG | "D"=D2 DD EF EF | 
+"E"B,B, B,=D EE E2 | [BG][BG] [BG][BG] z[BG] [B2G2] | [BE][BE] [BE][A=D] [BE][BE] A2 | 
+"B7"[BF][BF] [BF][BF] [BF][BF] [B2F2] | [B2F2] [BF][BF] z[BF] [B2F2] | "E"A[eB] [eB][eB] [eB]=d BA | 
+E3E E=G EG | "D"=D2 DD EF EF | "E"B,2 B,=D ED ED | [BG][BG] [B2G2] [BG][BG] [BG][BG] | 
+"B7"[B2F2] [BF][BF] DF =DC | "E"[B2E2B,2] [BEB,][B2E2B,2][BEB,] [BEB,][BEB,] | 
+[B2E2B,2] [BEB,][B3E3B,3] [eB][eB] | ce ze ee e2 | Be e{f}=g fe cA | B2 B{F}=G {F}GE EB, | 
+B,2 [B2E2B,2] BB B=d | e[ee] [ee][ee] [ee][ee] [ee][ee] | =g[ee] [ee][ee] [ee][ee] ec | 
+"B7"B2 [BF][BF] [BF][BF] [BF][BF] | [B2F2] [BF][BF] [=dF][BF] Bd | "E"ee ee ee ee | 
+e2 e2 B2 =d2 | =GF E2 [EB,][EB,] [EB,]=D | [E2B,2] [E2B,2] [EB,][EB,] [EB,][EB,] | 
+[BG][BG] [BG][B2G2][BG] F=D | "B7"[BE][BF] [B2F2] [BF][BF] [B2F2] | "E"[EB,][EB,] [EB,][EB,] [EB,][EB,] [EB,][EB,] | 
+[E4B,4] Bc BG | "Campbell finishe""."E4 AB AF | "D"=D4 Bc BG | "E"E2 E=D B,C EB | 
+=G^G2A Bc BG | E4 AB AF | "D"=D4 B,C EG | "B7"B3=d ^dB cd | B3A B=d Bd | "E"^AB z=A B=d Bd | 
+E3=D E=G EG | "D"=D2 {F}=G2 GF ED | "E"B,4 B,C EG | (3BBB (3BBB (3BBB ^AB | "B7"A=G E=D GE DB, | 
+(3"E"EEE (3EEE E=D E=G | E8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:344
+T:OldTown-E-Bald.tef
+C:
+N:TablEdited by Larry Tanner
+L:1/8
+Q:1/4=250
+M:4/4
+K:C
+|: "E"E^F ^GA B^c e2 | [^ge][ge] [ge][ge] [ge][ge] [g2e2] | E^F ^GA B^c e2 | "A"[ge][ge] [ge][ge] [ge][ge] [g2e2] | 
+E^F ^GA B^c e2 | "E"[^ge][ge] [ge][ge] [ge][ge] [g2e2] | {g}^ge =g^f e^c Bc | 
+e2 {^c}e2 e4 :|: {g}^g4 {=g}^g4 | ^g^f e^c B4 | c^c e2 cB A^F | ^GB2G B4 | {g}^g4 {=g}^g4 | 
+^g^f e^c B2 A=c |1 ^c"A"a2c a2 A_B | "G"Bg2B g4 :|2 ^c"A"a2c a4 | "E"^g^f e^c BA ^G^F | 
+E8 | z8 | z8 | z8 | z8 | z8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:345
+T:On And On
+C:Bill Monroe - Arr. John Baldry
+N:
+L:1/8
+Q:1/4=255
+M:4/4
+K:A
+z8 | z2 ee fe ge | "A"ag ae fg af | ef ed cB AB | "D"=cd cB AB A=G | "A"FE zE E2 CB, | 
+A,=G, A,B, C=C ^CD | ED EF =GF GA | "E"BA B=c ^ce f=g | g8 | "A"z2 a2 a2 e=g | 
+a=g ed =cA cd | "D"=cA cd cA cd | "A"=cA zA A2 e=g | a=c' a=g eg e^d | "E"dA =cd ^de =dc | 
+"A"A2 =c2 (3dcA =Gc | A8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:346
+T:ON THE MOVE   
+C:David Grier - Jason Carter Solo
+N:From The Jason Carter CD "On The Move"  Tabledited By Mike Stangeland
+L:1/8
+Q:1/4=235
+M:4/4
+K:A
+z2 EF AB cd |: "A"e2 ef e2 e=f | "D"fa f=f "C#m"ed cd | "Bm"Bc BA FA BA | {=c}"E"^cA Bc BA FE | 
+"A"e2 ef e2 e=f | "D"fa f=f "C#m"ed cd | "Bm"Bc BA FA BA | {=c}"E"^cA Bc "A"A4 :|: B2 =G^G B3B | 
+Bc BA GF E2 | B2 =G^G "D"B3B | "A"Bc eg "D"ag ec | "E"B2 =G^G B2 BB | Bc BA "A"GF E2 | 
+"D"DF Ac de fg | "E"af ed "A"cB A2 :| 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:347
+T:One-Legged Man
+C:Buck White
+N:TablEdited by Terry G Martin
+L:1/8
+Q:1/4=212
+M:4/4
+K:G
+z8 | z8 |: "G"G,A, B,D GE DG | ED B,E DB, A,B, | G,A, B,D EF GA | Bd Bd "Em"e2 e2 | 
+"G"G,A, B,D GE DG | ED B,E D2 eg | bg dg2B dB | "D"AF DF "G"G4 :|: "G"D2 DG BG BG | 
+"D7"D2 DA cA cA | "G"D2 DG B2 A^c | "D"dA ^ce dA FE | "G"D2 DG BG BG |1 D2 DA c2 A^c | 
+"G"dB ^ce dc B2 | "D"GB AF "G"G4 :|2 D2 DA c2 eg | "G"bg dg2B dB | "D"AF DF "G"G4 | 
+G,A, B,D GE DG | ED B,A, G,4 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:348
+T:Opposition Creek
+C:John McIltrot
+N:From "Plectrology III"  Tabledited by Kim Davis  and Mike Stangeland
+L:1/8
+Q:1/4=240
+M:4/4
+K:D
+z6 AB |: "D"=cA G=F D2 [DD]D | z2 =FD AG FD | =cA G=F D=C DF | "C"=FD E=C "D"D2 AB | 
+=cA G=F D2 [DD]D | z2 =FD AG FD | =cd d=f dc A=F | "A"GA G=F D2 [BD]=c :|: "D"[d2D2] {c}d2 D2 {c}d2 | 
+dd d=f dc/=c/ A=F | "F"D2 DE =FG A=c | "C"A=F GA GF ED | "D"=CE DC A,C DC | DE =FG AF GA | 
+=cd d=f dc A=F | "A"GA G=F "D"D2 =c2 :|: "D"z2 [d4F4D4] [d2F2D2] | "D"z2 [d4F4D4] [d2F2D2] | 
+"D"z2 [d4F4D4] [d2F2D2] | "C"[=c4E4G,4] "D"[A4D4A,4] | "D"z2 [d4F4D4] [d2F2D2] | 
+"D"z2 [d4F4D4] [d2F2D2] | "D"[A4D4D4] "C"[=c4E4G,4] | "A"[A4E4A,4] "D"[A4D4A,4] :|: "D"z2 [d4F4D4] [d2F2D2] | 
+"D"z2 [d4F4D4] [d2F2D2] | "D"z2 [d4F4D4] [d2F2D2] | "C"z2 [=c4E4=C4] [c2E2C2] | 
+"D"z2 [d4F4D4] [d2F2D2] | "D"z2 [d4F4D4] [d2F2D2] | "D"[A4D4D4] "C"[=c4E4G,4] | 
+"A"[A4E4A,4] "D"[A4D4A,4] :| =FD =cG cA dc | =cA a=f [a4A4] | z8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:349
+T:Over the Waterfall
+C:Traditional - Beginner version
+N:Tabledited   by Mike Stangeland
+L:1/8
+Q:1/4=210
+M:4/4
+K:D
+z6 de |: "D"f2 a2 gf ec | de dB A2 de | fa gf eg fe | cd [fd][fd] [f2d2] de | 
+f2 a2 (3fgf eg | fe dB A2 AB | "C"[e2=c2] [e2c2] [ec]B AF |1 G2 [BG][BG] [B2G2] de :|2 G2 GG G2 FG | 
+|: "D"AF DF BG DG | AB AG FE DF | A2 dB "A"cd ec | "D"dA FA D2 FG | A2 D2 (3"C"ABA GB | 
+"D"AB AG FE D[AE] | [A2F2] [A2F2] [AE][AD] [D2B,2] |1 [DG,]"D"[DA,] [DA,][DB,] [D2A,2] FG :|2 [A2D2A,2] [ADA,][ADB,] [A4D4A,4] | 
+z8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:350
+T:Paddy on the Landfill
+C:Capo 3rd Fret
+N:TablEdited by Vance Henry
+L:1/8
+Q:1/4=219
+M:4/4
+K:Bb
+|: "Em"G,A, B,D G2 FG | "D"AG FA "Em"G2 G=E | "D"F2 AF BF AF | "G"BA GF "D"GF DF | 
+"C"G2 BG AG BG | "D"F2 AF BF AF | "Em"BA GF "C"DF GA | "D"Bc AB "Em"G4 :|: g2 dg fg dg | 
+g2 dg "D"fd cd | "Em"g2 dg fg dg | "C"ga bg "D"ag fd | "Em"g2 dg fg dg | g2 dg "D"fd cA | 
+"Em"BA GF "C"DF GA | "D"Bc AB "Em"G4 :| 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:351
+T:Paddy On The Turnpike
+C:Monroe
+N:Transcribed by  Don Grieser  Tabledited by  Larry Tanner
+L:1/8
+Q:1/4=240
+M:4/4
+K:G
+z6 DF |: "G"Gg g^a g2 gg | dg g^a g2 gg | "F"dA de =fe dg | ed [gd][gd] [g2d2] DF | 
+"G"GD GA Bd de | =fe dg ed cA | BA GB "D"AG FD |1 G2 GG G2 [GG,][GG,] :|2 G2 GG G2 G,G, | 
+|: "G"G,^A, B,D GG GA | BA GB AG G2 | "F"=FF FG FF FF | GD GA ^A=A G2 | "G"G,^A, B,D DG GA | 
+Bd de =fe dd | "D"BA GB AG FD |1 G2 GG G2 G,G, :|2 G2 GG G4 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:352
+T:Panhandle Rag
+C:Based on Chris Thile arrangement
+N:Transcribed by  Larry Tanner
+L:1/8
+Q:1/4=200
+M:4/4
+K:D
+z8 | z2 {^g}a2 f2 e2 | "A"[f2=c2] [f2^c2] A2 DE | "D"FA B=c BA F=F | "A"EA zE A2 z=c | 
+ce ze f2 a2 | "E"g^g ga g2 =g2 | (3f^gf ef ge fg | "A"a2 a2 ^ga gf | "E"zf ^ga cf ce | 
+"A"[f2=c2] [f2^c2] A2 D=F | "D"FA B=c BA F=F | "A"EA ^GB Ac =cd | ce ze {=f}^f2 a2 | 
+"E"g^g ga g=g f2 | (3f^gf ef ge fg | "A"ae cf ec =c^c | "A7"AF A2 AB A2 | "D"=cA BA cA BA | 
+=cA BA cA Bc | "A"cf d=c ^cA FA | "A7"zA ^G=G zA BA | "D"=cA BA cA BA | =cA BA cA Bc | 
+"A"ce fe bc' ^gf | "E"e2 e'2 ^d'2 =d'2 | {=c'}"A"^c'a f^d =d3=F | "D"FA B=c BA FE | 
+"A"FA zA3 =c^c | e2 ez f2 ae | {g}"E"^gb ge =g2 f2 | ef {=c}^ce dc AF | "A"AF zE FA Bc | 
+A8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:353
+T:Panhandle Rag
+C:Brad Davis and Greenbroke - Pickin' at the Pavillion Festival in Montrose, Co (2006)
+N:mandolin: John Moore - TablEdited by Philippe Colleu
+L:1/8
+Q:1/4=212
+M:4/4
+K:C
+"(106 bpm)"z3a za b2 | "D"d'4 d'3d' | "G"zd' zb zd' b2 | "D"d'2 b2 ab ab | c'a (3f^fa =f/e/d B2 | 
+"A"dd cA c^G Ac | ^G/A/c cG Ac G/A/c | "D"c^G Ac (3GAc (3GAc | (3^GAc (3GAc (3GAc (3GAc | 
+(3^GAA (3FED F^F AE/=F/ | "G"EB, D^F Ad cA | "D"Gc AF ^FD B,A, | D2 DF ^FA BA | 
+"A"c/z/^c eB/=c/ B^F A^c | Aa ^ge =ge f^f | "D"dA F^F dA ^c=c | "D7"z4 zA EE | 
+(3"G"FED EE (3FED EE | (3FED _B,=B, DE DA | (3"D"FEE DF ^Fd ^c=c | "D7"z2 cA cA A_B | 
+"G"Bd ef ed Bd | BA F^F A=F EB, | "A"DC2B,2_B, (3zB,z | [E4A,4] zD A,C | "D"DC DC F^F D2 | 
+"G"zD A,C DC F^F | "D"D3D A,C DF | ^Fd DF d2 AB | "A"^ca cA c^g zA | g2 ef ed BA | 
+"D"dA (3cBA F^F DB, | DD G,C/z/ DC/z/ DA | D8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:354
+T:Past The Point Of Rescue
+C:Kate MacKenzie - Age of Innocence
+N:mandolin: John Reischman - TablEdited by Philippe Colleu
+L:1/8
+Q:1/4=210
+M:4/4
+K:C
+"105 bpm""D"A,2 [A2D2A,2] A,2 [A2D2A,2] | A,2 [A2D2A,2] [ADA,][DA,] [DA,][DA,] | 
+A,2 [A2D2A,2] [ADA,][DA,] A,A, | [ADA,]D EG AB cd | "Am"d/z/e e3e ab | c'2 b2 a/b/a e2 | 
+"G"[ge][ge] [ge][ge] ze [c'g]c' | c'[bg] zg [c'2g2] [b2g2] | "F"fg af g2 f/g/f | 
+"C"ef ed cA cA | "G"Bc dc BA GB | "Am"AG AB cB AG | AG ED CE DC | A,8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:355
+T:Peaches and Cream
+C:Alan Munde
+N:TablEdited by Larry Tanner
+L:1/8
+Q:1/4=220
+M:4/4
+K:C
+z2 GA Bc de |: "C"[ge][ge] [ge][ge] [ge][ge] [ge][ge] | [g2e2] GA Bc de | "A"[af][af] [af][af] [af][af] [af][af] | 
+[a2e2] GA Bc d2 | "Dm"[af][af] [af][af] [af][af] [af][af] | [af][af] [ae][ae] [a2f2] [a2e2] | 
+"G"[gd][gd] [gd][gd] [gd][gd] [gd][gd] |1 [g2d2] GA Bc de | "Dm"[af][af] [af][af] [af][af] [af][af] | 
+[af][af] [ae][ae] [a2f2] [a2e2] | "G"[gd][gd] [gd][gd] [gd][gd] [gd][gd] | [g2d2] de fe dc | 
+B2 Bc dc Bc | BA GA G2 F2 | "C"EE EE EE F2 | E2 GA Bc de :|2 [g4d4] "C7"[f4c4] | 
+"F"a2 f2 c3f | zg2a g2 f2 | "Fm"^g2 f2 c3f | "Bb7 (b5)"zg2^g =g2 f2 | "C"g2 e2 c3_B | 
+Bf2e2B3 | "A"_B=B e4 Be | z4 [e4A4] | "Dm"DE FG A4 | "G7"G^F GA BG AB | "C"c4 AB c2 | 
+[e2c2] "Second Break"GA Bc de |: "C"[ec][ec] [ec][ec] [ec][ec] [ec][ec] | [e2c2] GA Bc de | 
+"A"[e^c][ec] [ec][ec] [ec][ec] [ec][ec] | [e2^c2] GA B=c d2 | "Dm"[fd][fd] [fd][fd] [fd][fd] [fd][fd] | 
+[fd][fd] [fc][fc] [f2d2] [f2c2] | "G"[fB][fB] [fB][fB] [fB][fB] [fB][fB] |1 [f2B2] GA Bc de | 
+"Dm"[fd][fd] [fd][fd] [fd][fd] [fd][fd] | [fd][fd] [fc][fc] [f2d2] [f2c2] | "G"[fB][fB] [fB][fB] [fB][fB] [fB][fB] | 
+[f2B2] de fe dc | B2 Bc dc Bc | BA GA G2 F2 | "C"EE EE EE F2 | E2 GA Bc de :|2 [f4B4] "C7"[f4c4] | 
+"F"a2 f2 c3f | zg2a g2 f2 | "Fm"^g2 f2 c3f | "Bb7 (b5)"zg2^g =g2 f2 | "C"g2 e2 c3_B | 
+Bf2e2B3 | "A"_B=B e4 Be | z8 | "Dm"DE FG A4 | "G7"G^F GA BG AB | "C"c4 AB c2 | 
+[e8c8] | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:356
+T:Pick-A-Lilly
+C:Mike Lilly & Wendy Miller
+N:"Newgrass Instrumentals" Homestead 90017  Transcribed by John Baldry in  "Bluegrass and Old-Time Mandolin"  Tabledited by Mike Stangeland
+L:1/8
+Q:1/4=250
+M:4/4
+K:C
+z2 e2 f2 ^f2 |: "C"ga gf ef ed | cd c_B AB AG | "F"FG FE D2 C_B, | A,2 [FA,]A, [F2A,2] A,A, | 
+"G"G,A, B,B, B,D GG |1 GA Bd g4 | [g2B2D2G,2] f2 e2 d2 | "C"c2 e2 f2 ^f2 :|2 G"G"A Bd g2 ga | 
+gf ef e2 d2 | "C"c2 B2 c2 ^c2 | 
+K:G
+"G"dd dB BA de | g2 dg ga ge | "D7"ff fg fd d^c | c2 c2 cc c2 | DE FA AB de | 
+fa fe dc ^AB | "G"GA ^AB G=F D2 | G,2 G,G, G,2 D2 | G,A, B,D DE GA | BB dg gg ae | 
+"D7"f2 fg fd ^c2 | c2 cc c2 fg | a2 a2 fg fe | dc zc cA ^AB | "G"G2 B2 G2 F2 | 
+=F2 e2 =f2 ^f2 | 
+K:C
+[e8c8E8] | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:357
+T:Pike County Breakdown Monroe tape
+C:Trad Arr. by Bill Monroe
+N:Bill Monroe Music Inc. (BMI)
+L:1/8
+Q:1/4=126
+M:2/4
+K:A
+|: "A"F/[A/A/]A/A/ AA/A/ | "s"c/[e/e/]e/e/ e/e/e/A/ | "E"c/B/A/c/ B/A/G/B/ | "A"AA/A/ A"s"A/[e/e/] | 
+[ee]e ee | f/a/a/a/ a/a/a/e/ | "G"=g/f/e/g/ f/e/d/f/ | "E""s"[ee]e/e/ ee/e/ | 
+[ee]e ee | f/a/a/a/ a/a/a/e/ | "G"=g/f/e/g/ f/e/d/f/ | "E"[ee]e eG,/A,/ | "A"A,/C/C/E/ E/F/F/A/ | 
+A/c/"s"c/e/ e/f/e/c/ | c/B/A/c/ B/A/G/B/ |1 AA/A/ AD/E/ :|2 AA/A/ A2 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:358
+T:Pike County Breakdown
+C:Bill Monroe
+N:
+L:1/8
+Q:1/4=260
+M:4/4
+K:A
+z8 | zA A2 A2 A2 | "A"[AA][AA] [AA][AA] [AA][AA] [AA][AA] | [ee][ee] [ee][ee] [ee][ee] [ee][ee] | 
+"E"cB Ac BA GB | "A"[AA][AA] [AA][AA] [AA][AA] [AA][AA] | [ee][ee] [ee][ee] [ee][ee] [ee][ee] | 
+[ee][ae] [ae][ae] [ae][ae] [ae][ae] | =gf eg fe df | "E"e2 [ee][ee] [ee][ee] [ee][ee] | 
+"A"[ee][ee] [ee][ee] [ee][ee] [ee][ee] | [ee][ae] [ae][ae] [ae][ae] [ae][ae] | 
+=gf eg fe df | e2 [ee][ee] [ee][ee] [ee][ee] | [AA][AA] [AA][AA] [AA][AA] [AA][AA] | 
+[ee][ee] [ee][ee] [ee][ee] [ee][ee] | "E"cB Ac BA GB | "A"[AA][AA] [AA][AA] [A4A4] | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:359
+T:Pike County Breakdown
+C:
+N:Arranged and Tabbed by Mark Kilinski  TablEdited by David Williams
+L:1/8
+Q:1/4=245
+M:4/4
+K:G
+GD3 E2 F2 | GE GG GA Bc | dG DG d2 GA | BA GB AG FA | GE GG G2 D2 | GE GG GA Bc | 
+dG DG d2 de | =fe df ed c2 | dA DA d2 D2 | GE GG GA Bc | dG DG d2 de | =fe df ed ce | 
+dc Bd cB ^A=A | G2 GA ^AB c^c | de dc B2 GA | BA GB AG FA | GE GG G2 D2 | G2 {E}G2 G2 {E}G2 | 
+G2 {E}G2 G2 GA | ^A=A G_B AG FA | GE GG G2 D2 | GE GG GA Bc | dG DG d2 de | =fe de fe de | 
+=fg fe dc BA | GF GG ^AB G=A | ^AG ED G2 DE | =FE DF ED B,A, | D2 {C}D2 D2 A,2 | 
+G,2 A,^A, B,D ED | =FE DF ED B,A, | DB, A,=F, ^F,A, ^A,=A, | G,G, G,G, G,G,3 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:360
+T:Powder Creek
+C:
+N:Arranged By  Mike Stangeland
+L:1/8
+Q:1/4=222
+M:4/4
+K:G
+z6 B,D |: "Em"E2 B,E G2 EG | B2 GB d2 Bd | de ee e2 d2 | {A}"G"B2 [BD][BD] [B2D2] AB | 
+"C"Bc z2 [e4e4] | "D"DF A^c d2 d=c | "Em"BA GB AG FE | "B7"^D2 B,4 B,=D | "Em"E2 B,E G2 EG | 
+B2 GB d2 Bd | de ee e2 d2 | {A}"G"B2 BB B2 AB | "C"Bc cd e2 c2 | "B7"AB Bc BA GF | 
+"Em"E2 [EB,][EB,] [EB,][EB,] [EB,][EB,] | [E2B,2] B,D EG AB | ed Be ge dg | bg af gf ed | 
+ed Be ge dg | bg af gf ed | "C"[e4c4] [e4e4] | "D"DF A^c d2 d=c | "Em"BA GB AG FE | 
+"B7"^D2 B,4 AB | "Em"ed Be ge dg | bg af gf ed | ed Be ge dg | bg af gf ed | "C"Bc cd e2 c2 | 
+"B7"AB Bc BA GF | "Em"E2 [EB,][EB,] [EB,][EB,] [EB,][EB,] |1 [E2B,2] (3BdB AG FA :|2 [E8B,8] | 
+z8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:361
+T:Rabbit in a Log
+C:Arr. Tim O'Brien
+N:From:  Learn to Play   the Professional Way
+L:1/8
+Q:1/4=220
+M:4/4
+K:C
+z2 [AD][AD] [A2E2] [A2F2] | "D"[A2^F2] [AA][AA] [AA][AA] FG | [AG][AA] [AA][AA] [AA][AA] ^FA | 
+BA ^FB AF EF | [A2D2] [AD][AD] [A2E2] [A2F2] | [A^F][AA] [AA][AA] [AA][AA] FA | 
+BA ^FB AF DF | "A"[AE][AE] [AE][AE] [AE][AE] [AD][A^F] | [A2E2] [AD][AD] [A2E2] [A2F2] | 
+"D"[A^F][AA] [AA][AA] [A2A2] [AF][AG] | [AG][AA] [AA][AA] [AA][AA] ^FA | BA ^FB AF EF | 
+[A2D2] [AD][AD] [A2E2] [A2F2] | [A^F][AG] [AA][AA] [AA][AA] [AF]G | "A"AB A^F EG FE | 
+"D"[A2D2] [AD][AE] [AD][DB,] [DA,][DB,] | [D2D2] [DD][DD] [D2D2] [D2D2] | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:362
+T:Rachel
+C:
+N:TablEdited by Tristan Scroggins  Based on Tommy Jackson's version from  Square Dances Without Calls
+L:1/8
+Q:1/4=160
+M:4/4
+K:C
+D2 | z^F A^c d2 F2 | GA Bd gd Bd | A^c ea g^f eg | ^fd Bd AG ^FE | D^F A^c dA FD | 
+GA Bd gd Bd | A^c ea ge cA | [^f2d2] [f4d4] D2 | zE ^FA dA FD | GA Bd gd Bd | 
+A^c ea g^f eg | ^fd Bd AG ^FE | DE ^FA dA FD | GA Bd g2 B2 | AB ^ce ae cA | [^f2d2] [f4d4] Ad | 
+|: ^f4 g4 | ba ^fg a4 | A^c ea g^f eg | ^fd Bd A^c d2 | e/^f3/2 z2 g4 | ba ^fg a4 | 
+A^c ea ge cA |1 [^f2d2] [f4d4] Ad :|2 [^f2d2] [f6d6] | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:363
+T:Ragtime Annie
+C:Traditional
+N:Tabledited by   Mike Stangeland
+L:1/8
+Q:1/4=215
+M:4/4
+K:D
+z6 FE |: "D"DF BF Ac BF | Ac BF A2 EF | DF BF Ac BF | "A"AB cd c2 cB | AB cA BA cB | 
+AB cA B2 B/c/B | AB cd eg fe |1 d2 cd Bd AF :|2 d"D"c ec de fg | a4 af dB | A2 AB A2 de | 
+fg af gf ed | "G"B2 [g2B2] [g2B2] ef | "A"g2 ef gf ef | g2 ef gf ef | gf ed cB AG | 
+"D"F2 [AF][AF] [A2F2] fg | af bf af de | fd eg fe dA | =cd fg ag fa | "G"g2 gg g2 ef | 
+gd ga b2 ag | "D"fd fg a2 ef | "A"gf ed cA Bc | "D"dc ec d4 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:364
+T:Rank Stranger
+C:Curley Lambert
+N:  Transcribed by   James Watts
+L:1/8
+Q:1/4=155
+M:3/4
+K:F
+z4 FF | GA cc d2 | "F"[f/c/][f/c/][f/c/][f/c/] [f/c/][f/c/][f/c/][f/c/] [f/c/][f/c/][f/c/][f/c/] | 
+[f/c/][f/c/][f/c/][f/c/] [f/c/][f/c/][f/c/][f/c/] [f/c/][f/c/][f/c/][f/c/] | [f2c2] [fc]c dc | 
+"C"[c/G/][c/A/][c/A/][c/A/] [c/A/][c/A/][cA] [cA][cG] | "F"[A4F4] FF | "Bb"[F/C/][F/D/][F/D/][F/D/] [F/D/][F/D/][F/D/][F/D/] [F/D/][F/D/][F/D/][F/D/] | 
+"F"[F6C6] | z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 | 
+z6 | z6 | z6 | z6 | z6 | z6 | z6 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:365
+T:Rank Stranger
+C:Ricky Skaggs - intro & turnaround
+N:From the "Bluegrass Rules" CD  Transcribed by Mike Stangeland
+L:1/8
+Q:1/4=155
+M:3/4
+K:F
+z4 FF | A2 c2 d2 | "F"[f/c/][f/c/][f/c/][f/c/] [f/c/][f/c/][f/c/][f/c/] [f/c/][f/c/][f/c/][f/c/] | 
+[f/c/][f/c/][f/c/][f/c/] [f/c/][f/c/][f/c/][f/c/] [f/c/][f/c/][f/c/][f/c/] | [f2c2] [fc]f dc | 
+"C"[c/G/][c/A/][c/A/][c/A/] [c/A/][c/A/][cA] [cA][cG] | "F"[A4F4] FF | "Bb"{C}DF FG FD | 
+"F"[A6F6C6] | z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 | 
+z6 | z6 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:366
+T:Rawhide
+C:Chris Thile (Merlefest Allstar Jam, 1998)
+N:TablEdited by Steve Keating
+L:1/8
+Q:1/4=320
+M:4/4
+K:C
+"First Break"z2 C2 E2 F2 | "C"[cG][cG] [cG][cG] [cG][cG] [cG][AG] | [cG][cG] [cG][cG] [cG][cG] [cG][AG] | 
+[cG][cG] [cG][cG] [cG][cG] [cE][cE] | [E2_B,2] [E2B,2] z[EB,] [EB,][EB,] | "F"[F2A,2] [F2A,2] [FA,][FA,] [FA,][FA,] | 
+[FA,][FA,] [FA,][FA,] [FA,][FA,] [FA,][DA,] | "C"A,/_B,/C zD EG GA | cA GG ED CD | 
+"F"EF FF F2 FG | G/A/c cA cc f2 | "C"[ge][ge] [ge][ge] [ge][gd] c[cA] | [c2G2] [c2G2] z[cG] ED | 
+"G"G,A, B,D GG GB | dd d2 dB GD | "C"C2 zC [EC][EC] [cEC][cEC] | [cE]A z2 G2 F2 | 
+[cG][cG] [cG][cG] [cG][cG] [cG][AG] | [c/G/][B/^F/][BF] [BF][BF] [BF][BF] [BF][AF] | 
+[cG][cG] [cG][cG] [cG][cE] [cE][cE] | [E2_B,2] [E2B,2] z[EB,] [EB,][EB,] | "F"[F2A,2] [F2A,2] [FA,][FA,] [FA,][FA,] | 
+[FA,][FA,] [FA,][FA,] [FA,][FA,] [FA,][FG,] | "C"{_B,}=B,C zD EG GA | cA GF EC CD | 
+{E}"F"FF FF FG Ac | c2 zc cc dc | "C"[gd]e [g2e2] ed cA | [c2G2] zc zA AA | "G"G,A, zA, B,A, B,C | 
+DC DE FE B,B, | "C"CB, CD EG AB | c2 c2 zE EE | "E"E2 E^F ^GF GA | BA B^c d^f ed | 
+ed BA Bd g^g | e^f ed ed e^c | "A"a2 cB gB BA | ^fA ef ed ed | ^cA =c^c AB A^G | 
+G2 G2 AA E^F | "D"d^F zd ^fa bf | ab d'2 c'^c' a^f | ab ag ag f^f | d2 d2 dA ^FD | 
+"G"G,4 D4 | B4 g4 | gb ge dc BA | _B=B GF zF ED | "C"C8 | "Second Break"z6 A,B, | 
+CC CD EG cc | zG _BB zG AG | FC ^DE C=D CB, | _B,2 B,2 zG, D^G, | A,F A,A, F2 G,G | 
+Ac cA c^d eg | de ae ga c'e | ge dc de zg | zg d^d dd dg | d^d dg d=d cA | dA cd cA cA | 
+G2 FE CE DC | G,C B,G B,C DE | FE FG Ac zA | Bc zd eg ae | ga c'2 ga c'a | d/e/e ea _ba ba | 
+ga ee g^d eg | ^d=d cA dA cd | cA cG Ac dA | cd ^dg d=d cd | ^dg zf g2 zg | _bg gg c'3d' | 
+zd' zg c'2 zc' | gg c'f' zf' c'c' | c'_b ^fg bf =fc | ff {f}^dc df gd | cc' bg d'/e'/z c'_b | 
+c'_b g2 g2 ba | g2 ze ag z2 | de ea ^d=d cA | c2 c2 zA ^DE | ED E^F ^GF GA | BA B^c d^f ed | 
+ed BA Bd ed | g^g e^f ef ge | ae ^cA z2 d'/e'/e' | e'e' e'e' e'^c' ae | ^c'a e^c ae cA | 
+e^c ee AB cA | d2 d^f bf ab | a^f bf a2 ef | de dB dB AA | G^G AA zA zA | gf ^cd fc =cG | 
+cD _B/=B/z GE DE | FE FE DC B,A, | G,2 [DG,][DG,] [DG,][DG,] [D2G,2] | z8 | z8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:367
+T:Red Apple Rag 
+C:
+N:Transcribed by Tristan Scroggins  Based on Aubrey Haynie's version  from "Bluegrass '96"
+L:1/8
+Q:1/4=288
+M:4/4
+K:G
+B,A, | G,A, B,C DF GA | Bd BA GE DB, | CB, CD EG cd | eg ^d=d c4 | DE FG A^c d=f | 
+fa (3faf ed ef | gd (3Bc^c dB GA | BG EF GD B,A, | G,A, B,C DF GA | [fB][ad] [fB]A GE DB, | 
+CB, CD EG cd | eg ^d=d c4 | DE FG A^c d=f | fb (3fbf ed ef | ge dc BG AF | G2 [g6B6] | 
+eg2g g2 ga | bg ag ed BA | c2 (3dcB cd ef | ga fg (3efg ag | fg fd ef eB | de dB AG EF | 
+GG dG FF dF/=F/ | Ec E^D =DB DB, | G,2 g4 ga | bg ag ed BA | c2 (3dcB cd ef | 
+ga fg (3efg ag | fd fa bc' ba | fa f=f ed BA | f=f ed Bc d[f^A] | [eA][=f^A] [e=A][f_B] [eA]G ED | 
+G8 | z6 B,A, | "Alternate [A] pa"G,A, B,C DF GA | Bd BA GE DB, | CB, CD EG cd | 
+eg ed c4 | DE FG A^c d=f | fa fe de =f^f | gd BG ^dc AF | GD B,G, ^DC B,A, | G,A, B,C DF GA | 
+Bd BA GE DB, | CB, CD EG cd | eg ed c4 | DE FG A^c d=f | fa fe de =f^f | gd BG ^dc AF | 
+G2 [g6B6D6G,6] | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:368
+T:Red Apple Rag 
+C:Joe Carr
+N:Transcribed By  Larry Tanner
+L:1/8
+Q:1/4=220
+M:4/4
+K:G
+[BF][BG] [BG][BG] [B2G2] [BG][BG] | [BG]z [BG][BG] [B2G2] B,A, |: "G"G,B, DG EF GA | 
+Bd BA GE DB, | "C"CB, CD EG cd | eg ec z2 FE | "D"DF Ad B^c de | fa fe df ed | 
+ef ge dB AF |1 GE DB, G,2 B,A, :|2 G2 G2 G2 Bc |: dg ed g2 ag | ^ab bb g2 g2 | 
+"C"c2 cd eg fg | a2 g2 eg fe | "D"fg fe df ed | fa fe df ed | ef ge dB AF |1 "G"G2 [B2G2] [B2G2] Bc :|2 "G"GE DB, G,4 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:369
+T:Red Haired Boy
+C:Traditional - Bluegrass version
+N:Tabeldited by   Simon Shartel  
+L:1/8
+Q:1/4=220
+M:4/4
+K:A
+z8 | "A"EF AB A2 cd | ef ec "D"d2 cd | "A"e2 A2 A2 dc | "G"BA =GF G2 GF | "A"EF AB AB cd | 
+ea ec "D"dA cd | "A"ef ab af ed | "E"cB A2 "A"A2 F2 | "A"EF AB A2 cd | ef ec "D"d2 cd | 
+"A"e2 A2 A2 dc | "G"BA =GF G2 GF | "A"EF AB AB cd | ea ec "D"dA cd | "A"ef ab af ed | 
+"E"cB A2 "A"A2 ef |: "G"=ga gf e2 ag | "D"fd ec d2 cd | "A"e2 A2 cd c2 | "G"BA =GF G2 GF | 
+"A"EF AB AB cd | ef ec "D"d2 cd | "A"ef ab af ed |1 c2 A2 "A"A2 ef :|2 c2 A2 "A"A4 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:370
+T:Red Haired Boy
+C:Traditional
+N:TablEdited by Rod B.
+L:1/8
+Q:1/4=220
+M:4/4
+K:A
+z8 | EA zB AB cd | ed ce d2 cd | eA ze A2 dc | BA =GF GB AG | EF AE cB F2 | AB Ac d2 (3Bcd | 
+e2 fg af ed | cA BG A2 {=F}^F2 | E2 A2 AB cd | ef ec dB cd | e2 A2 cd cA | BA =GF GB FG | 
+EF Ac ea c'e' | c'a ec d2 cd | e/f/g ab af ed | cA FE A2 ef | =g2 (3fgf e2 ag | 
+fd ec d2 cd | ef ec A2 dc | BA =GF G2 GF | EA zB A2 cd | ef ec d2 cd | e2 a2 af ed | 
+c2 (3BcB A2 ef | =gf ee/f/ gf eg | fe dc dB cd | ea ed cB Ac | BA =GF E4 | (3EFA =c^c A2 AA | 
+BA Bc d2 D^D | E=G =c^c A=c ^cA | =c^c AF A4 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:371
+T:Redwing
+C:Arr. Willie McCranie
+N:From "The Comando Sessions 1"  Transcribed by Mike Stangeland
+L:1/8
+Q:1/4=231
+M:4/4
+K:G
+z2 D2 vE2 vF2 |: "G"G2 GF GA Bc | d2 de dG AB | "C"cB ce g2 e2 | "G"d2 dd dd dd | 
+"D"Bc Bc A2 GA | "G"Bc BA GF GB |1 A2 G2 F2 G2 | "D"AG FE D2 DF :|2 A"D"B AG FD EF | 
+"G"G4 g2 g2 | "C"{^d}e4 c2 cc | Gc cd e2 g2 | "G"d2 dA B2 BB | B2 dd ed d2 | "D"d2 {=F}^FF FF FF | 
+F2 dd ed de | "G"d2 G2 [gBGD][gBG] [g2B2G2] | [g2B2G2] B2 g2 B2 | {d}"C"ee ee c2 cc | 
+Gc cd [g2e2] [g2e2] | "G"d2 dA B2 BB | BB de zd d2 | "D"d2 {=F}^FF FF FF | F2 cc BA EF | 
+"G"G2 [GB,][GB,] z[GB,] [GB,][GB,] | [G4B,4] =F2 ^F2 | 
+K:Bb
+"Gm"G2 GA BA Bc | d2 de dc BA | "Cm"c2 cB f2 e2 | "Gm"d2 de dc Ac | "Cm"cd cB A2 GA | 
+"Gm"Bc BA G2 _G=G | "A7"AB AG _G=G AG | "D7"GA Bc d2 d2 | "Gm"G2 GA BA Bc | d2 dd dc BA | 
+"Cm"cB cd f2 e2 | "Gm"d2 de dc Ac | "Cm"cd cB A2 GA | "Gm"Bc BA G2 _G=G | "A7"A2 D2 "D7"_G2 A2 | 
+"Gm"G2 G2 gf fe | "Cm"d2 c2 d2 e2 | g2 f2 e2 d2 | "Gm"d2 c2 BA z2 | G2 GA Bc d2 | 
+"D7"c2 BA zG zF | _G2 GG GD FG | "Gm"G2 GA BA Bc | d2 d2 gf e2 | "Cm"d2 c2 d2 e2 | 
+g2 f2 e2 d2 | "Gm"d2 c2 BA z2 | G2 GA Bc d2 | "D7"c2 BA zG zF | _G2 GG GD FG | 
+"G"G2 [G=B,][G2B,2][GB,] [GB,][GB,] | [G8=B,8] | z8 | z8 | z8 | z8 | z8 | z8 | 
+z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:372
+T:Red Wing - Blaine Sprouse
+C:
+N:Tabledited by Vance Henry
+L:1/8
+Q:1/4=220
+M:4/4
+K:G
+z2 D2 E2 F2 | "G"GF GA BA Bc | d2 z3c B2 | "C"c2 de g2 [g2e2] | "G"[g6d6] AB | 
+"D"cd cB AF Ad | "G"Bc BA G3B | "A"AG E2 F2 G2 | "D"AB =F^F EF DF | "G"G/F/E DG BA Bc | 
+d2 z3c B2 | "C"c2 de g2 [g2e2] | "G"[g6d6] AB | "D"cd cB AF Ad | "G"Bd BA G3B | 
+"A"AG EG "D"FD EF | "G"GA Bd gf =fg | "C"d"B Part"e2g ed cA | ce ga g/f/=f e2 | 
+"G"[g4d4] [g4B4] | z2 [g2e2] [g2^d2] [g2e2] | "D"[f^c][f3d3] [d4F4] | z2 ef ed Bc | 
+"G"d^c =cd BG EF | "G7"GF =FG EG cd | "C"de2g ed cA | ce ga g/f/=f e2 | "G"[g4d4] [g4B4] | 
+z2 [g2e2] [g2^d2] [g2e2] | "D"[f^c][f3d3] [d4F4] | zB c2 B/c/B AF | "G"G2 zE DC B,A, | 
+G,4 z2 DE | "2nd Variation "GD G,B, DG Bc | d2 z3c B2 | "C"c2 de g2 [g2e2] | "G"[g6d6] AB | 
+"D"cB cd cB Ac | "G"BG Bd BA GB | "A"AG E2 F2 G2 | "D"AB =F^F EF DF | "G"G/F/E DG BA Bc | 
+d2 z3c B2 | "C"c2 de g2 [g2e2] | "G"[g6d6] AB | "D"cB cd cB Ac | "G"BG Bd BA GB | 
+"A"AG ED "D"FE D2 | "G"[G4B,4] gf =fg | "C"de2g ed cA | ce ga g/f/=f e2 | "G"[g4d4] [g4B4] | 
+z2 eg ed Bc | "D"d^c =cd B/c/B AG | FD FE DF EF | "G"GD EG BG Bc | "G7"dc Bd ge g2 | 
+"C"de2g ed cA | ce ga g/f/=f e2 | "G"[g4d4] [g4B4] | z2 eg ed B2 | "D"[f^c][f3d3] [d4F4] | 
+zB c2 B/c/B AF | "G"G2 zE DC B,A, | G,B, DF G4 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:373
+T:Redwood Hill
+C:Russ Carson - Last Chance
+N:solo Dominick Leslie - TablEdited by Philippe Colleu
+L:1/8
+Q:1/4=240
+M:4/4
+K:C
+"120 bpm"z7/1c | "Bb"ce _bg fb gf | ^cd gd fd =c_B | "F"_Bc df c2 [fc][fc] | [f2c2] [fc][fc] [fc][fd] [fd]c | 
+"Gm"^c/=c/_B cB Ac B^F | A^F GA _Bc df/z/ | "D"^fd gd =f/z/^f d^c | d2 ^f3/2z/ g^d ^gd | 
+"Eb"g^d2g {d}g_b c'g | _bc' ^c'd' bf a=c' | "Bb"ba _bf e^d =d_B | cA _BA Bc df | 
+"C"e2 ed cd ^dg | "F7"^d=d c_B AB cA | "Bb"_B2 {A}BG FD GD | FD C_B, B,C DF | 
+"Gm"D8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:374
+T:Reuben
+C:arranged by Lee Marcus
+N:TablEdited by Lee Marcus
+L:1/8
+Q:1/4=246
+M:4/4
+K:D
+z2 A,=C D=F GD | GA A=c ^G=G =F2 | GA A=c A2 G/A/A | A=c A^G =GD =F^F | D=C A,C D=F GD | 
+{G}A2 A2 A2 d=c | AG ^G=c A=G =F^F | D=C A,D =F/^F/D G=F/^F/ | D2 A,=C D=F GD | 
+GA A=c ^G=G =FD | {G}A2 =cd D2 c2 | A^G =cA G=G =F^F | D=C DG =F^F G^G | A=c d=f ed c^c | 
+AG ^G=c A=G =F^F | D2 [D2A,2] G/A/G =F^F | D8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:375
+T:Road to Columbus
+C:Larry Rice solo
+N:From the album "Rice Brothers I"I  Transcribed by Tim Lee
+L:1/8
+Q:1/4=240
+M:4/4
+K:A
+z4 E2 EE | "A"[=cE][^cE] z[cE] [cE]z [ec][eB] | A2 AA AB A2 | "D"=F^F [eA][eA] z2 AA | 
+A2 E2 A2 B2 | "A"=ce [e^c][ec] z[eA] [ec][eB] | A2 AB cA Bc | "E"BF GB GF E2 | 
+EE F2 AA2[=c^D] | [cE]"A"[cE] cA [ec][eB] A2 | AA AB A=F ^FA | "D"BA =cB A=F ^FA | 
+BA =cB AF EA | A"A"=c ^ce ef =gf | "E"ec BA FB [e2A2] | "A"AA3 [AA][AA] [A2A2] | 
+z2 [e2e2] a2 b2 | "A"c'c' c'c' c'e ab | a2 ab a=f ^fa | "D"ba =c'b a=f ^fa | "D"ba =c'b ac' ^c'e | 
+"A"=c'b a2 fe ab | "A"af ef ea be | "E"^ae ge ^de eA | "E"^dA =dc A=c ^ce | "A"fe af e=c ^ce | 
+"A"fe =gf e=c ^cA | "D"=cB AD FB3 | "D"{d}fa ba =c'2 b2 | "A"=c'2 b2 c'2 b2 | 
+"E"=c'2 b2 be ef | a2 AB cA a2 | [a8c8A8] | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:376
+T:Road to Columbus
+C:Based on Kenny Baker's solo on "Baker Plays Monroe"
+N:Tabledited by  Jeff Hoelter
+L:1/8
+Q:1/4=230
+M:4/4
+K:A
+z4 zE FA | =c2 c2 ^cB AF | EF AB cB AF | A3A (3EFE C2 | A,4 E2 EE | "A"C2 A,3C EF | 
+A2 AA AA AA | "D"F2 [d2A2] [dA][dA] [d2A2] | [=c2A2] [cA][cA] [c2A2] AB | "A"ce cB AB AF | 
+EF EC CC CC | "E"C2 B,4 zC | B,4 E2 EE | "A"C2 A,3C EF | A2 AA AA AA | "D"F2 [d2A2] [dA][dA] [d2A2] | 
+[=c2A2] [cA][cA] [c2A2] AB | "A"ce cB AB AF | "E"EF AB cB AB | "A"A2 AA AA AB | 
+A4 EF AB | "A"c2 [cA][cA] [cA]B cB | A2 AA B2 A2 | "D"F2 A2 AA AB | A2 AA EF AB | 
+"A"c2 [cA][cA] [cA]B cB | A2 cc cc cc | "E"c2 [B2G2] [BG][BG] [BG][cG] | [B4G4] EF AB | 
+"A"c2 [cA][cA] [cA]B cB | A2 AA B2 A2 | "D"F2 A2 AA AB | A6 fg | "A"ag ab af ec | 
+"E"BA cB AF EF | "A"AB cB AF EC | A,8 | z8 | "Alternate B Part"z4 e2 {=g}a2 | 
+{b}"A"c'2 [c'a][c'a] [c'a]b c'b | a2 aa b2 a2 | "D"f2 a2 aa ab | a2 aa ef ab | 
+"A"c'2 [c'a][c'a] [c'a]b c'b | a2 c'c' c'c' c'c' | "E"c'2 [b2g2] [bg][bg] [bg][c'g] | 
+[b4g4] ef ab | "A"c'2 [c'a][c'a] [c'a]b c'b | a2 aa b2 a2 | "D"f2 a2 aa ab | a6 fg | 
+"A"ag ab af ec | "E"BA cB AF EF | "A"AB cB AF EC | A,8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:377
+T:Road to Columbus
+C:Bill Monroe
+N:Tabeldited by   Mike Stangeland
+L:1/8
+Q:1/4=230
+M:4/4
+K:A
+z6 EE |: "A"C2 A,3C EF | AG Ac BA =GE | "D"F2 d2 d2 dd | =cc zc cc AB | "A"ce c=c AB AF | 
+|1 EF AF ED CE | "E"C2 B,2 B,B, B,C | [D2B,2] [D2B,2] E2 EE :|2 E"E"F AB =cB cB | 
+"A"A2 F2 EC B,C | A,3E EF A2 |: {B}"A"c2 cc ce cB | AA AA BB AA | "D"{E}F2 AF AF AB | 
+|1 A"D"A zA EF AB | "A"cB ce cB AF | EC EF AB ce | "E"[e2c2] [e2B2] [e=c][eB] [eB][e^c] | 
+[e3B3]E =F^F A2 :|2 A"D"F A=c ^cd ef | "A"ag ab af ed | "E"cA =cB AF EF | "A"AB =cB AF EC | 
+A,8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:378
+T:Road to Spencer
+C:Ricky Skaggs
+N:From the CD   "History of the Future"  Transcribed by  Mike Stangeland
+L:1/8
+Q:1/4=240
+M:4/4
+K:B
+z8 |: "B"FB BF B2 Bc | de fd ed B=A | "A"=G=A A2 A^G AB | c/B/=A FE F2 CA | "B"FB BF B2 Bc | 
+de fd ed Bc | "B"df ed "A"BG FG | "F#m"=AB cA "B"B2 B2 :|: {e}"B"f2 f2 f2 fg | 
+=af eg fd B2 | "E"[e2e2] [e2e2] [ee]d ef | g/f/e fd ed Bc | "B"df fg f2 fg | =af eg fd Bc | 
+"B"df ed "A"BG FG | "F#m"=AB cA "B"B2 FE :| "B"=D^D EF B2 Bc | de fd f/e/d BG | 
+"A"=G=A A2 A2 AB | c/B/=A FE F2 CE | "B"FB FB B2 Bc | de fd Bc df | "B"=aB gB "A"fB e=d | 
+"F#m"dB GF "B"B2 BB | {F}"B"GB BG BB FB | BG BB FB BG | "A"G=A EE EF zA | G=A FA GA FA | 
+"B"E=A DE FA BF | Bc de fd fg | "B"=af ge "A"d/f/z b2 | "F#m"=af ed "B"B4 |: {e}"B"f2 f2 f2 fg | 
+=af eg fd B2 | "E"[e2e2] [e2e2] [ee]d ef | {g}fe fd ed Bc | "B"df fg f2 fg | =af eg fd Bc | 
+"B"df ed "A"BG FG | "F#m"=AB cA "B"B2 B2 :| 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:379
+T:Roanoke
+C:Bill Monroe
+N:
+L:1/8
+Q:1/4=260
+M:4/4
+K:G
+z6 ef | gf ga ge dB | AG FA G2 DE | =F2 F2 (3FED ^A,2 | G,6 GE |: "G"DC B,A, G,A, B,D | 
+EF GB AG FE | DC B,A, G,A, B,D | "D"EF GA "G"G2 GE | DC B,A, G,A, B,D | EF GA Bd ef | 
+gf ga ge dB |1 A"D"G FA "G"G2 =FE :|2 "D"AG FA "G"G4 |: "G"[b2d2D2] [bdD][bdD] [b2d2D2] [b2d2D2] | 
+z[ac] [a2c2] [g4B4] | "C"[e2G2G,2] [eGG,][eGG,] [e2G2G,2] [e2G2G,2] | z[d=F] [d2F2] [c4E4] | 
+"G"[b2d2D2] [bdD][bdD] [b2d2D2] [b2d2D2] | z[ac] [a2c2] [g4B4] | "D"DE FA dA FD | 
+|1 G"G"E DB, G,4 :|2 G"G"E DB, G,2 ef | gf ga ge dB | AG FA GD EF | GB AG EF GE | 
+DC B,A, G,4 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:380
+T:Roanoke
+C:Bill Monroe
+N:Tabledited by  Mike Stangeland
+L:1/8
+Q:1/4=270
+M:4/4
+K:G
+z6 ef | gf ga ge dB | AG FA G2 DE | =F2 F2 ED B,A, | G,6 GE |: "G"DC B,A, G,A, B,D | 
+EF GB AG FE | DC B,A, G,A, B,D | "D"EF GA "G"G2 GE | "G"DC B,A, G,A, B,D | EF GA Bd ef | 
+gf ga ge dB |1 A"D"G FA "G"G2 =FE :|2 A"D"G FA "G"G4 |: [b2d2] [bd][bd] [b2d2] [bd][bd] | 
+[b2d2] [a2c2] [g4B4] | "C"[e2G2] [eG][eG] [e2G2] [eG][eG] | [e2G2] [d2=F2] [c4E4] | 
+[b2d2] [bd][bd] [b2d2] [bd][bd] | [b2d2] [a2c2] [g4B4] | "D"DE FA dA FD |1 G"G"E DB, G,4 :|2 G"G"E DB, G,2 ef | 
+gf ga ge dB | AG FA GD EF | GB AG EF GE | DC B,A, G,4 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:381
+T:Rocky Road Blues
+C:Big Mon
+N:TablEdited by Richard A Taylor
+L:1/8
+Q:1/4=120
+M:4/4
+K:F
+z8 | "F"C2 D2 FA _A=A | cf2c2A _AG | F4 {G}_AG/A/ GF | C7/1D | "Bb"B,D F_A GF AG | 
+F_A =A_A =AF DC | "F"F4 _A,=A, CD | F4 zD _E=E | "C"c_E =Ec3 cd | f{_a}=a fc Bc _A=A | 
+"F"F4 FC A,C | F8 | "F"[_acD][acD] z[acD] [acD][acD] [acD][acD] | [_acD][acD] [acD][acD] [a2c2D2] fc | 
+ef fc _a=a fc | ef cB "F7"_A=A _A=A | "Bb"_AF FF A=A _A=A | FF FF _AA AA | "F"FF _EE CC B,B, | 
+_A,=A, F2 FD _E=E | "C"c_E =Ec df c2 | (3aaa fc BF _A=A | "F"F2 CB,2C _A,B, | 
+F8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:382
+T:Rollin in My Sweet Baby's Arms
+C:John Baldry
+N:
+L:1/8
+Q:1/4=240
+M:4/4
+K:C
+z8 | z2 D2 DE G2 | "Melody Break""G"A[gB] z[gB] [gB][gB] [gB][gB] | [^f_B]B BB AA AA | 
+GG GD ED _B,=B, | G,2 G,A, B,D E^F | G[gB] z[gB] [g2B2] [gB][gB] | [gd][gd] [gd][gd] [gB][gB] [gB]A | 
+"D"[d2A2] [dA][dA] [dA][dB] [dB][dA] | [d2A2] [dA][dA] G2 A2 | "G"[dB][dB] z[dB] [dB]A AG | 
+G2 GA AB Bc | "C"cc zc cc cc | E2 [cE][cE] [c2G2] [c2E2] | "G"DG2G GG EF | "D"^Fd dd dc _B=B | 
+"G"G2 GD FE/F/ ED | G2 D2 E2 ^F2 | "Begin fiddle sty""G"G^F GD EF GE | DE DC B,A, G,A, | 
+G,2 A,_B, =B,D ED | G2 DD ED ^FD | G^F GA Bd BA | GE DG ED B,G, | "D"A,G, A,B, CB, CD | 
+ED EF ^F2 FF | "G"G^F GA BA Bc | d^c de ga ge | "C"cB ce e^f ge | [g2e2] [ge][ge] [ge][ge] [g2e2] | 
+"G"z2 [g2d2] [g2d2] de | "D"^fe dc BA G^F | "G"G2 GD ED B,A, | G,2 A,_B, =B,D ED | 
+"Begin blues styl""G"_B=B G2 G2 F^F | A_B AG FD _B,=B, | G,2 _B,=B, CD FD | G2 [B2G2] [B2G2] GA | 
+_B=B de fg fe | dc dc _B=B GD | "D"{F}^Fd zd d2 [g2^c2] | [^f2c2] [fc][fc] [fc][fc] [f2c2] | 
+"G"_B=B eg _bg bg | eg ec {_B}=BG zF | "C"[B^D][cE] [c2E2] [c2E2] [c2E2] | [_B2E2] [BE][BE] [BE][BE] [B2E2] | 
+"G"[B2G2] [B2G2] DF GA | "D"_BA GF DF DC | "G"_B,G, zB, zD FD | [B2G2] [B6G6] | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:383
+T:Rose of Old Kentucky
+C:Alan Bibey
+N:TablEdited by Steve Keating
+L:1/8
+Q:1/4=240
+M:4/4
+K:G
+"G"z2 D2 D2 E2 | EG GG G2 GA | BA Gd ^A/B/=A GE | "C"G2 ^Ac c[ec] [e2e2c2] | [e2e2c2] c^A G=A Bc | 
+"G"Ac dd d2 zd | z2 ed ^A=A GB | "D"AB dA =f^f dB | dB e^A B=A _BA | "G"G=F G2 [GG,][GG,] [GG,][GG,] | 
+z^A Bd =A/_B/A GE | "C"G2 [cG][ecG] [cG][ecG] [cG][cG] | [e2c2G2] ^Ac ad' zc' | 
+"G"z^a bg =ag =fg | (3"D"d=fd cG ^A/B/G cB | "G"G=F G4 DD | =FE ^D2 =D^C DF | 
+(3^CD=F C/=C/^A, CC A,B, | G,8 | z8 | z8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:384
+T:Sailor's Hornpipe
+C:
+N:TablEdited by Vance Henry
+L:1/8
+Q:1/4=240
+M:4/4
+K:G
+z6 gf |: "G"g2 G2 G2 dc | BG Bd g2 fg | "A"a2 A2 A2 ag | "D"fe d^c d2 ef | "G"gf ed ed cB | 
+"C"cB AG AG FE | "D"DG FA GB Ac |1 "G"B2 G2 G2 gf :|2 "G"B2 G2 G2 dc |: "G"Bd gd Bd gd | 
+"C"e2 c2 c2 ed | "A"^ce ae ce ae | "D"f2 d2 d2 ef | "G"gf ed ed cB | "C"cB AG AG FE | 
+"D"DG FA GB Ac |1 "G"B2 G2 G2 dc :|2 "G"B2 G2 G2 ba |: "Harmony ""G"b2 B2 B2 ge | 
+dB dg b2 ab | "A"^c'2 ^c2 c2 c'b | "D"ag f2 f2 ga | "G"ba gf gf ed | "C"ed cB cB AG | 
+"D"FB Ac Bd ce |1 "G"d2 B2 B2 ba :|2 "G"d2 B2 B2 ge |: "G"dg bg dg bg | "C"g2 e2 e2 gf | 
+"A"ea ^c'a ea c'e | "D"a2 f2 f2 ga | "G"ba gf gf ed | "C"ed cB cB AG | "D"FB Ac Bd ce | 
+|1 "G"d2 B2 B2 ge :|2 "G"d2 B2 B4 | "Ending"G,B, A,C B,D CE | DG FA GB Ac | Bd ce dg fa | 
+g4 [b4g4D4G,4] | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:385
+T:Sally Ann
+C:Traditional
+N:TablEdited by Dan Freeman
+L:1/8
+Q:1/4=220
+M:4/4
+K:D
+z8 | z2 [e2A2] [e2B2] [e2c2] | "D"[f2d2] [fd]e dB AF | "G"G[BG] zB [B2G2] [BG]B | 
+[B2G2] Bd BA FD | "D"F[AA] z[dA] [d2A2] AB | Fd ze dB AF | "G"GB zG [B2G2] BB | 
+[B2G2] Bd BA FD | "D"F[AA] z[dA] [d2A2] [dA][dA] | [d2A2] [A2F2] [A2E2] [A2D2] | 
+EF zA F2 DE | FD EF "A"ED B,A, | "D"B,=C DD [F2D2] FA | [d2A2] [A2F2] [A2E2] [A2D2] | 
+EF zA F2 DE | FD EF "A"ED B,A, | "D"B,=C DD D2 AB | {=F}^Fd zF dF Ad | "G"B[=fB] z[fB] [f2B2] A^A | 
+Bd dA BA FA | "D"F[AA] z[dA] [d2A2] AB | {=F}^Fd zF dF Ad | "G"B[=fB] z[fB] [f2B2] Bf | 
+Bg aa a2 aa | {=f}"D"^fd4z F[AA] | [AA][AD] [AF][AD] [AE][AD] [DB,][AD] | E{=F}^F zA F2 DE | 
+FD EF "A"ED B,A, | "D"B,=C DD [F2D2] FA | [AA][AD] [AF][AD] [AE][AD] [DB,][AD] | 
+E{=F}^F zA F2 DE | FD EF "A"ED B,A, | "D"B,=C D[DD] DF Ac | dc de dB AF | "G"GB zG B2 GA | 
+BA Bd BA FD | "D"F[AA] z[AA] DF Ac | dc de dB AF | "G"GB zG B2 GA | BA Bd BA FD | 
+"D"F[AA] z[AA] [A2A2] F[AA] | [AA][AD] [AF][AD] [AE][AD] [DB,][AD] | E{=F}^F zA F2 DE | 
+FD EF "A"ED B,A, | "D"B,=C DD [F2D2] FA | [AA][AD] [AF][AD] [AE][AD] [DB,][AD] | 
+E{=F}^F zA F2 DE | FD EF "A"ED B,A, | "D"B,=C DD [F4D4] | {A}Bd dd dd dB | AF EF D2 DE | 
+=FE FE DF ED | B,C DB, [D4A,4] | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:386
+T:Sally Goodin
+C:Roland White
+N:From the album " The Kentucky Colonels   Live in Sweden", Arr. John Baldry  Tabledited by  Mike Stangeland
+L:1/8
+Q:1/4=250
+M:4/4
+K:A
+z8 |: "A"AB cB A2 AB | cB AA FA AA | AB cB A2 F2 | "E"EE EE "A"FA AA :|: "A"AB cd e2 ee | 
+fe ee ce ee | fe cB A2 FF | "E"EE EE "A"FA AA :| "A"[ec][eB] [eA][ec] [eB][eA] [eA][eB] | 
+[ec][eB] [eA][AF] [eA][eA] [eA][eB] | [ec][eB] [eA][ec] [eB][eA] [AF][FC] | "E"A,C DE "A"FA AA | 
+Ac Bc A2 AB | cB AB FA Ac | e2 Bc AF EF | "E"CD ^DE "A"FA AA | AB cd e2 cd | ef ed c2 =c^c | 
+e2 ef e2 cA | "E"Bc BA "A"FA AA | AB cd eA cd | ef ee {=c}^cc ce | a2 f2 {B}cc cA | 
+"E"Bc BA "A"FA ef | a2 ff {=c}^cc cA | ac cA BA Ac | a2 ff {=c}^cc cA | "E"cA BB "A"cA AA | 
+a2 A2 {=c}^cc cc | eA Ac BA AA | a2 A2 {=c}^cc cc | "E"Bc cA "A"BA ab |: c'b bb a2 ab | 
+c'b aa fa ab | c'b ba a2 f2 |1 e"E"e ee f"A"a ab :|2 e"E"e ee f"A"a aa | a{=c'}^c' c'c' c'c' c'c' | 
+a{=c'}^c' c'c' c'c' c'c' | a{=c'}^c' c'c' c'c' c'c' | "E"ba bc' "A"ba ab | c'b bb a2 ab | 
+c'b bb a2 ab | c'b ba af ff | "E"ed cB "A"A2 AB |: "A"cB [e2A2] [e2A2] AB | cB AA FA AB | 
+cB AF zE zC |1 E"E"E EE F"A"A AB :|2 E"E"E EE F"A"A AA |: "A"AA ff ee ff | A2 ff e2 f2 | 
+AA ff ee ff | "E"fe =c^c "A"A2 AA :|: "A"aa ze fe ef | a2 f2 e2 ef | af ff ef ff | 
+"E"fe =c^c "A"A2 AA :|: "A"AB cB A2 AB | cB AA FA AA | AB cB A2 F2 | "E"EE EE "A"FA AA :|: "A"AB cd e2 ee | 
+fe ee ce ee | fe cB A2 FF |1 E"E"E EE F"A"A AA :|2 E"E"E EE F"A"A z2 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:387
+T:Sally Goodin (Chord Comping)
+C:
+N:TablEdited by Brian Summers
+L:1/8
+Q:1/4=120
+M:4/4
+K:A
+|: [EA,][acEA,] C[AEC] D[dFD] ^D[fAD] | E[acAE] C[cFC] B,[dFB,] G,[BEG,] :| z8 | 
+z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 | 
+K:C
+z8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:388
+T:Sally Johnson
+C:Traditional
+N:Arranged for mandolin by  Mike Stangeland
+L:1/8
+Q:1/4=250
+M:4/4
+K:G
+z6 ge |: "G"de ga ba ba | gb ag ef ge | de ga ba ba | gb ag "Em"[e2B2] ge | "G"de ga ba ba | 
+gb ag ef ge | ga ge dB AG |1 F"D"D EF "G"G2 ge :|2 F"D"D EF "G"G4 |: "G"^AB GB =AG EG | 
+DE GA BA GA | BA GB AG EG | DE GA "Em"BA G2 | "G"^AB GB =AG EG | DE GA Bd ef | 
+gf ga ge dB | "D"AG FA "G"G4 :| 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:389
+T:Salt Creek
+C:Traditional - Bill Monroe Solo
+N:Transcribed By   John Bird
+L:1/8
+Q:1/4=270
+M:4/4
+K:A
+z6 E2 |: "A"[A=G][AA] [AA][AA] [A2A2] [AA][AA] | BA cA "D"dd d2 | "G"[B=G][BG] [BG][BG] [B2G2] [BG][BG] | 
+=cB A=G "E"E2 EE | "A"[A=G][AA] [AA][AA] [A2A2] [AA][AA] | BA cA "D"dd d2 | "G"=gf ed cA Ac | 
+|1 B"E"A GB "A"A2 E2 :|2 B"E"A GB "A"A2 AA |: "A"fa aa aa aa | ab af e2 ef | "G"=gg gg g2 gg | 
+=ga ga ed cA | "A"fa aa aa aa | ab af e2 ef | "G"=gf gf ef ed |1 c"E"A Bc "A"A2 AA :|2 c"E"A Bc "A"A2 E2 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:390
+T:Salt Creek
+C:Traditional 
+N:Tabledited by   Mike Stangeland
+L:1/8
+Q:1/4=225
+M:4/4
+K:A
+z8 | "A"A2 AA A2 AB | cA B"D"c d2 A2 | "G"BA =GA BA GA | BA =GF "E"E2 E2 | "A"A2 AA A2 AB | 
+cA Bc "D"d2 ed | "G"ce fg af ed | cA Bc A4 | "A"A2 AA A2 AB | cA Bc "D"d2 A2 | 
+"G"BA =GA BA GA | BA =GF "E"E4 | "A"A2 AA A2 AB | cA B"D"c d2 ed | "G"ce fg af ed | 
+"E"cA B"A"c A4 | "A"a2 aa a2 ab | c'e be ab ae | "G"=ga gf ef ga | =gf ed cB A2 | 
+"A"a2 aa a2 ab | c'e be ab ae | =ga gf ef ed | "E"cA B"A"c A4 | a2 aa a2 ab | 
+c'e be ab ae | "G"=ga gf ef ga | =gf ed cB A2 | "A"a2 aa a2 ab | c'e be ab ae | 
+"G"=ga gf ef ed | "E"cA Bc "A"A4 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:391
+T:Salt Spring, 1st Break
+C:John Reischman and the Jaybirds
+N:TablEdited by John Strong
+L:1/8
+Q:1/4=240
+M:4/4
+K:A
+|: ce ze ez2e | {e}f2 e2 A2 ef | ze e2 A2 B2 | Bc ze Bc ze | B3e B3e | Bc B2 Ae Bc | 
+ze B2 A2 G2 | F2 Ae F2 Ae | AB ze B3e | Bc B2 Ae Bc | ze B2 A2 D2 | EF FA EF FA | 
+EF A2 AF AF | B2 A2 EF AA | F2 E2 AA EF | E2 Ae EF FE :|: EF FA FG GA | A2 Ae Bc ce | 
+F2 AA G2 GA | A2 AA AA A2 | F2 AA G2 GA | A2 Ae Bc ce | B2 FG ee Be | FG Be Be [e2B2] :| 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:392
+T:Salty
+C:Kenny Baker
+N:Transcribed by David Peters  Tabledited by Kim Davis   and Mike Stangeland  Special thanks  to Kristi Sberna
+L:1/8
+Q:1/4=210
+M:4/4
+K:G
+z7/1d |: "G"ga bg dg ed | fg ed Bd ef | ga/g/ ed Bd/B/ AG | EG/E/ DB, "Gdim"^A,3A,/=A,/ | 
+"G"G,B, DG EF GA | "C"^Ad ^cd/c/ BG EG | "D"Bd ^cd BG ED |1 G6 g2 :|2 G6 ^A2 | 
+"B7"B^c df a2 a2 | B^c df b2 (3aba | "E7"^g2 (3gag f2 (3fgf | ed B^G E2 ^cE | 
+"A7"A^c aA ca Ac | ag fe ^cA Bc | "D"dA cB AF EF | Bc AF ED EF | "G"GF GA B^A Bc | 
+d^c de fe fa | (3gag ed (3BdB AG | (3EGE DB, "Gdim"^A,2 A,=A, | "G"G,B, DG EF GA | 
+"C"^Ad (3^cdc BG EG | "D"Bd BG G2 F2 | "G"G8 | "G"[g8B8] | "Gdim"[e4^A4] Bc/B/ =A2 | 
+"G"[g8B8] | "Gdim"[e8^A8] | "G"[g4B4] "Gdim"[e4^A4] | "G"[g4B4] "Gdim"[e3^A3]A | 
+"D"Bd ^c^A BG ED | "G"G8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:393
+T:Salty Dog
+C:Traditional
+N:
+L:1/8
+Q:1/4=250
+M:4/4
+K:A
+z8 | z2 EF GA Be | "A"cA ce cA ce | "Gb"dA de cA ce | "B"Bc BG FG Bc | ^df gf eb f=g | 
+"E"gf eg fe df | ea fe =cB AE | "A"FA zE FA EF | A8 | "A"=c'^c'2=c' ^c'2 a2 | 
+"Gb"ga2g a2 f2 | "B"Bc BG FG Bc | ^df gb z4 | "E"=g^g b3g fg | ef ec BA GB | "A"A4 =c^c ef | 
+a8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:394
+T:Salty Dog Blues
+C:Tim O'Brien
+N:
+L:1/8
+Q:1/4=240
+M:4/4
+K:A
+z8 | z2 EE F2 A2 | "A"[e=c][e^c] [ec][ec] [e2c2] [ec][ec] | "F#"[fd][fc] [fc][fc] [f2c2] c^d | 
+"B"BF Bc ^dc de | fe fg ag fe | "E"gf eg fe df | ed Bd BA GB | "A"AF EF EC B,C | 
+A,2 EE EF AB | "A"ce c=c BA ^A^c | "F#"fc ef cB ^Ac | "B"BA Bc ^dc de | fe fg ag fe | 
+"E"=g^g =g^g ef ed | Bd BA GE FG | "A"AG Ac BA GB | A8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:395
+T:Salty Dog "B" Break
+C:Arr. Joe Carr
+N:Merlin's Magical   Mandolin Method
+L:1/8
+Q:1/4=215
+M:4/4
+K:C
+z2 ^F2 ^G2 _B2 | "B"B^c B^G ^FG Bc | ^d^f ^gf bf gb | ^f^g fd ^df gf | d^c Bc B4 | 
+"E"E^G BG EG B^c | d^f d^c B^G ^FG | "B"Bd ^d2 ^f^g f2 | b8 | "E"B,^C E^F EC B,C | 
+E^F ^GB ^cB e2 | "B"^F^G B^c ^d^f ^g2 | b8 | "Gb"_b^g ^fb gf ^dg | ^f^g d^c B^G cB | 
+"B"B4 d^d ^f^g | [b2^d2] [b2d2] [b4d4] | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:396
+T:Salty Dog Blues
+C:David Grisman
+N:Tabkledited by Mike Stangeland  From a Frets Magazine / June 1988 column
+L:1/8
+Q:1/4=230
+M:4/4
+K:G
+z8 | "G"B,D EG ED GA | "E7"Bd BA [e4e4] | "A"ef (3gfe ^cf ec | B^c BA GB AG | 
+"D"F2 FD EF ED | FB AB cB AF | "G"GF GA Bc de | b2 Bc de a2 | Bc de ge de | "E7"g^g =g^g =gd BA | 
+"A"z2 ^cA Bc2A | d2 ^cA Bc2B | (3"D"cBA FB AF EF | DE DC B,G, A,B, | "G"G,A, B,D ED EF | 
+GF GA Bc d2 | g8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:397
+T:Salvation
+C:Simon Bradley 
+N:Tabledited by  Mikel Black
+L:1/8
+Q:1/4=214
+M:4/4
+K:A
+z8 |: "A"EG AE GA EG | Ae cA BA FA | "Bm"B3c "C#m"BA FA | "D"BA cA "E"BA FA | 
+"A"EG AE GA EG | Ae cA BA FA | "D"c3A Bc AF |1 E2 AB "A"cB AF :|2 E2 AB "A"cB A2 | 
+|: "A"Bc eB ce Bc | ef {g}fe dB Ae | "D"f3g fe ce | "E"ag ae fe cB | "A"cd ec "Bm"de fg | 
+"C#m"ag ae "D"fe ce | "Bm"fe cA "D"B2 AB | "E"cB A"A"F EF A2 :| 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:398
+T:Santa Claus
+C:Bill Monroe
+N:TablEdited by Clyde H Clevenger
+L:1/8
+Q:1/4=120
+M:4/4
+K:G
+"G"d/d'/b/a/ g/e/d/e/ d/B/A/G/ GD/D/ | "C"D/E/G/B/ A/G/G/A/ "G"B[GG,] [GG,]^c/d/ | 
+"G"d/d'/b/a/ g/e/d/e/ d/B/A/G/ GD/D/ | "A"E/GF/ G/G/F/F/ "D"[dF][dF] [dF]A/A/ | 
+"G"d/d'/b/a/ g/e/d/e/ d/B/A/G/ GD/D/ | "C"E/G/G/B/ A/G/G/A/ "B7"{^A}BB/B/ BD/D/ | 
+"C"E/GB/ A/G/G/A/ "G"B/A/G/E/ "E"Ee/e/ | "A"d/BB/ "D"A/B/A/F/ "G"GG/G/ Ge/f/ | 
+"G"g/d/e/f/ g/d/e/g/ g/a/g/e/ d/c/B/A/ | "C"G/G/G/B/ A/G/G/B/ "G"BG, [gBG]e/g/ | 
+"G"g/a/e/g/ g/e/g/g/ g/a/g/e/ d/B/B/d/ | "A"A/^c/c/[a/c/] [a/c/][a/c/][a/c/][A/D/] "D"[dF]z [dF]e/f/ | 
+"G"g/d/e/f/ g/d/e/g/ g/a/g/e/ d/c/B/A/ | "C"G/G/G/B/ A/G/G/A/ "B7"^A/Bz3/2D | 
+"C"E/GB/ A/G/G/A/ "G"B/A/G/E/ "E"z/ee/ | "A"d/B/B/B/ "D"A/B/A/G/ "G"G[gBG] [g2B2G2] | 
+z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:399
+T:Santa Claus
+C:Kenny Baker
+N:TablEdited by  Larry Tanner
+L:1/8
+Q:1/4=220
+M:4/4
+K:G
+"G"B^A Bd z3A | Bd BA G4 | "C"EG z2 A2 ^A2 | "G"B2 z2 z4 | B^A Bd z3A | Bd BA G4 | 
+"A"A^G Aa2e f2 | "D"d2 ^c2 =c4 | "G"B^A Bd z3A | Bd BA G4 | "C"EG z2 A2 ^A2 | 
+"B"[B7/1F7/1]^D | "C"EG zA2G z2 | "G"BA GE "E"z2 e2 | "A"dB d^A "D"BG EF | "G"G2 G2 G2 ef | 
+g2 ef g2 ef | gf ed2B AG | "C"E2 G2 AG A^A | "G"Bd Bd z2 ef | g2 ef g2 ef | gf ed2B A2 | 
+"A"A^G Aa2e f2 | "D"[f2d2] [f2^c2] [f2=c2] ef | "G"g2 ef g2 ef | gf ed2B AG | 
+"C"EG z2 A2 ^A2 | "B"[B2F2] [BF][BF] [B4F4] | "C"EG zA2G z^A | "G"BA GE "E"ze z2 | 
+"A"de dB2A GE | "G"G2 [GB,][GB,] [G4B,4] | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:400
+T:Santa Claus
+C:Kenny Baker
+N:TablEdited by Vance Henry
+L:1/8
+Q:1/4=225
+M:4/4
+K:G
+"G"^A/B3/2 z2 d3=A | Bd BA GB AG | "C"EF GB AG EG | "G"^A/B3/2 z2 z4 | ^A/B3/2 z2 d3=A | 
+Bd BA G3G | "A"A2 AB AG FG | "D"AB AF (3EFE D2 | "G"^A/B3/2 z2 d3=A | Bd BA GB AG | 
+"C"EF GB AG EG | "B"[B8F8] | "C"EF GB AG EG | "G"Bd BG "E"E2 eB | "A"de dB "D"AG ED | 
+"G"G6 ef | gf ef gf ef | gf ed eg ed | "C"BA GB AG EG | "G"B6 ef | g2 ef g2 ef | 
+gf ge d^c Bc | "A"Aa2e fa e^c | "D"d6 ef | "G"gf ef gf ef | gf ed eg ed | "C"BA GB AG EG | 
+"B"[B8F8] | "C"EF GB AG EG | "G"Bd BG "E"E2 eB | "A"de dB "D"AG ED | "G"G8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:401
+T:Sassafras
+C:Buck White  Ricky Skaggs solo added by Larry Tanner
+N:Transcribed  by   Mike Stangeland
+L:1/8
+Q:1/4=232
+M:4/4
+K:A
+z8 | z=c ^ce fa fe | a4 "D"[d3F3A,3]"A"[cEA,] | z2 af ef dc | dc A2 "D"[d3F3A,3]"A"[cEA,] | 
+z=c ^ce fa fe | a2 a2 "D"[d3F3A,3]"A"[cEA,] | z2 af ec Bc | A4 "D"[d3F3A,3]"A"[cEA,] | 
+[e3A3E3A,3][eAEA,] [eAEA,][e3A3E3A,3] | "C"=G2 A2 =c2 e=g | ze =ga zg a2 | "F"=c'2 a=g =fa gf | 
+d=c Ad cA =FF | "E"EE E^D E2 [B2E2B,2] | [BEB,][B2E2B,2]B, CE F2 | "A"[c2A2] [c2A2] [cA][cA] [cA][cA] | 
+[c2A2] [c2A2] AB d2 | "D"e2 Bd2A B2 | [d2F2A,2] [dFA,][d2F2A,2][dFA,] [dFA,]F | 
+"A"EF Ac Be cf | ea fe a3a | "E"bg af ge fd | ec dB cA Bc | "A"ee c2 a2 ea | c'c' ac' e'e' e'e' | 
+"D7"e'd'2=c'2b2a | za2f aa fe | "A"ce dc2d cB | zc BA2c BA | "E"GB AG "D"FA GF | 
+"C"EG FE "E"DC B,C | "A"A,2 A,B, CE FE | AB ce fa fe | a2 a2 "D"[d3F3A,3]"A"[cEA,] | 
+za fe fe dc | dc A2 "D"[d3F3A,3]"A"[cEA,] | zB, CE FA FE | A2 A2 "D"[d3F3A,3]"A"[cEA,] | 
+zA A,2 AA,2A | A,2 A,2 "D"[d3F3A,3]"A"[cEA,] | z4 zG, A,B, | "C"=C2 C2 EC E=F | 
+F=G F=F E=C B,^A, | "F"A,=C E=G =FG A=c | d=f2A fA fA | "E"eE eE dE dE | =cE cB/c/ BA GE | 
+"A"AB ca g=g =f^f | =g=f ^fd Bd =cB | {=c}"D7"BA =GA =F^F AB | =cA [=gd][ae] dc dc | 
+"A"cA FE AA, zA | A,B, CE FE {=G}^G2 | "E"zE zF GB cB | e2 ^d2 =d2 c{=c}B | BA FE B{=c}B BA | 
+FE B{=c}B BA FE | "D7"FA B2 =c2 B2 | e2 d2 {B}=cA FE | "A"AE FA E^D =DB, | CE FA zE F{=G}^G | 
+"E"eG =G{=F}^F "D"dF =F{^D}E | "C"=c3c "E"BA FE | "A"AE =GF (3EFE CE | A,8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:402
+T:Say Old Man Can You Play The Fiddle
+C:Traditional
+N:TablEdited by Kim Davis  and Mike Stangeland
+L:1/8
+Q:1/4=220
+M:4/4
+K:G
+z8 | "Em"E6 EF | "D"GE D"Em"G EF G2 | E6 EF | "D"GE D"Em"G EE E2 | E6 EF | "D"GE A"Em"d BG G2 | 
+E6 EF | "D"GE D"Em"G E3[AD] | "Em"[B2E2] [B2E2] [B2E2] [B2E2] | [B2E2] AG "D"EF GA | 
+"Em"[B2E2] [B2E2] AB zA | "D"G2 A"Em"G DE2[AD] | [B2E2] [B2E2] [B2E2] [B2E2] | 
+[B2E2] AG "D"EF GA | "Em"Be ef ed BA | "D"G2 AG "Em"DE zA | "Em"Bc BA Bc BA | 
+BG AG "D"EF GA | "Em"Bc BA Bc BA | "D"G2 AG DE2[AD] | "Em"[B2E2] [B2E2] [B3E3][AD] | 
+[B2E2] AG "D"EF GA | "Em"Be ef ed BA | "D"G2 A"Em"G DE ze | 
+K:A
+"E"e2 ge fe ge | "D"fe de fg af | "E"e2 ge fe ge | "D"fe de (3"E"fgf e2 | "E"e2 ge fe ge | 
+"D"fe de fg af | "E"ed Bd ef ge | "D"fe de "E"fe e2 | "E"e2 ge be ge | "D"fe de fg af | 
+"E"e2 ge be ge | "D"fe de (3"E"fgf e2 | "E"e2 ge be ge | "D"fe de fg af | "E"ed Bd ef ge | 
+"D"fe de "E"fe e2 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:403
+T:Scotland
+C:Bill Monroe - Arr. Andriano Sofo
+N:Tabledited by Kim Davis  and Mike Stangeland
+L:1/8
+Q:1/4=220
+M:4/4
+K:A
+z6 [AA][AB] |: "A"[A2c2] [AA]"(A part)"[Ac] [A2d2] [Ac][Ad] | [e2A2] [Ac][AA] (3[AB]c[AB] [AA][AB] | 
+[A2c2] [AA][Ac] [A2d2] [Ac][Ad] |1 [eA]"E"[Ac] [AB][Ac] "A"[A2A2] [AA][AB] :|4 [eA]"E"[Ac] [AB][Ac] "A"[A3A3][eA] | 
+|: "A"[a2A2] "(B part 1)"[aA][bA] [aA][fA] [eA][fA] | [=gA][fA] [eA]d cB [e2A2] | 
+[a2A2] [aA][bA] [a2A2] [eA][fA] | "E"[=gA][fA] [eA]c "A"[e4A4] | [a2A2] [aA][bA] [a2A2] [eA][fA] | 
+[=gA][fA] [eA]d cB [eA]B | "A"Bc [eA]c "D"d2 cd |1 [eA]"E"c Bc "A"[e3A3][eA] :|2 [eA]"E"c Bc [e4A4] | 
+|: "A"[D=G,][EA,] z2 [e4A4] | z2 de [e=c]^c [e2A2] | [D=G,][EA,] zC [E2A,2] =gf | 
+|1 e"E"d =c^c "A"[e4A4] :|2 e"E"d =c^c "A"[e2A2] [AA][AB] | [a2A2] [aA]"(B Part 2)"[bA] [aA][fA] [eA][fA] | 
+[=gA][fA] [eA]d cB [e2A2] | [a2A2] [aA][bA] [a2A2] [eA][fA] | "E"[=gA][fA] [eA]"A"c [e4A4] | 
+e=g ab ag ef | [=gA][fA] [eA]d cB [eA]B | (3"A"cBA Bc "D"dB cd | "E"[eA]c Bc "A"[e4A4] | 
+"A"[a3A3][bA] [a2A2] [eA][fA] | [=gA][fA] [eA][ed] [ec]e [e2A2] | [eA]g [aA][bA] [aA][fA] [eA][fA] | 
+"E"[=gA][fA] [eA]"A"[ec] (3cec [e2e2] | eg ab af ef | [=gA][fA] [eA]d cB [eA]B | 
+"A"Bc [eA]c "D"d2 cd | "E"[eA]c Bc "A"[e4A4] | "A"[D=G,][EA,] z2 [e4A4] | z2 de [e=c]^c [e2A2] | 
+[D=G,][EA,] zC [E2A,2] =gf | "E"ed =c^c "A"[e4A4] | [D=G,][EA,] z2 [e4A4] | z2 de [e=c]^c [e2A2] | 
+"A"ae (3=gag "D"ed =cA | "E"=c^c A=G "A"E^D =D=C | (3"A"cec [eA]"(D part ending)"e (3cec [eA][fA] | 
+[=gA][bA] [gA][fA] [eA][ed] [ec][eB] | (3cec [eA]e Aa =gf | "E"ed cB "A"[e2A2] [eA]e | 
+(3cec [eA]e (3cec [eA][fA] | [=gA][bA] [gA][fA] [eA][ed] [ec][eB] | ce (3cec Aa =gf | 
+"E"ed cB "A"[e2A2] [eA]e | (3cec [eA]e (3cec [eA][fA] | [=gA][bA] [gA][fA] [eA][ed] [ec][eB] | 
+(3cec [eA]e Aa =gf | "E"ed cB "A"[e2A2] [eA]e | (3cec [eA]e (3cec [eA][fA] | [=gA][bA] [gA][fA] [eA][ed] [ec][eB] | 
+ce ce [aA]=g fe | ed =c^c z4 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+
+X:404
+T:She's Gone, Gone, Gone
+C:J.D. Crowe & the New South - My home ain't in the Hall of Fame
+N: solo Jimmy Gaudreau - TablEdited by Philippe Colleu
+L:1/8
+Q:1/4=180
+M:4/4
+K:C
+"(124 bpm)"z2 FG _B^c/z/ df | "Bb"g2 gf gf g_b | gf g_b gf gg | "Eb"f^d c_B dc B^F/z/ | 
+G_B GF ^DF GB | "F"FD F^D A_B =Bc | fA f_B fg f^c/z/ | "Bb"df ^c/z/=c _BF GB | 
+zF _B^c/z/ df g2 | [_b4_B4] [bB][bB] [bB]b | _B2 Bd/z/ ^f_b c'b | "Eb"^c'_b =c'2 b^f/z/ gb | 
+^c'_b =c'b b^f/z/ gb | "F"^c'2 =c'2 _b^f/z/ gb | fd e_b ^dA ^c/z/=d | "Bb"_BB dB ^d^c/z/ =dd | 
+[d2_B2] _b2 ^gf ^d^c/z/ | df ^d^c/z/ =d_B G[BD] | z8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:405
+T:Silver Bell
+C:Traditional
+N:Tabledited by  Jim Coon
+L:1/8
+Q:1/4=120
+M:2/4
+K:G
+zB c^c |: dd/B/ cc/A/ | BB/G/ A/B/A/F/ | GB D2 | zB AG | FA D2 | zc BA |1 GB d2 | 
+zB c^c :|2 G3F | =FE F^F | 
+K:C
+|: G3/2G/ ^FG | A2 f2 | e3/2e/ ec | G2 e2 | d3/2d/ dB |1 G2 f2 | e3/2e/ ec | GE F^F :|2 GB dB | 
+c4 | "D"zB c^c | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | 
+z4 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:406
+T:Sinkin' Creek
+C:The Dillards - Arr. John Baldry
+N:From " The Dillards Live -- Almost"   Elektra EKL 265/EKS/-7265
+L:1/8
+Q:1/4=231
+M:4/4
+K:A
+z8 |: "A"e^d ce a2 a2 | e^d ce "G"=gf gf | "A"e^d ce ag af | "E"ef ed "A"cA A2 :|: "A"AG AA c=c ^ce | 
+ef ed "G"cB A2 | "A"AG AA c=c ^ce | "E"ee ab "A"c'b a2 :|: [e=c]"A"^c e2 a2 aa | 
+e2 ef "G"=gf gf | "A"ee2e a=c' a=g | "E"e=g e^d "A"=d=c A2 :|: c"A"d ^de a2 a2 | 
+cd ^de "G"=gf gf | "A"cd ^de ag af | "E"ef ed "A"cB A2 :|: A,"A"=G, A,B, C=C ^CD | 
+EF ED "G"CB, A,=G, | "A"A,=G, A,B, C=C ^CD | "E"EF A"A"B cA z2 :| z8 | z8 | z8 | 
+z8 | 
+%:Created with TablEdit 3.05 b1 https://tabledit.com/
+
+X:407
+T:Sitting On Top Of The World
+C:John Moore
+N:TablEdited by John Strong
+L:1/8
+Q:1/4=270
+M:4/4
+K:A
+z2 EF AB cd | "A"ed ee e2 ef | (3=gfe =c^c e=c BF | A=c ^ce fe =c^c | A=G2G z2 E=F | 
+"D"FA BA (3=cBA FB | Aa =ge d^d e=c | "A"BA =G^G A2 E=G | A=G AA AA EF | A2 EF A=G AG | 
+=c^c A=G AG EG | ED =CE D^D ED | D^D =D=C DC A,=G, | A,B, CD EF A=c | "E"ce fe {=c}^cA FB | 
+"A"A=c ^ce fe =c^c | AE FA E=C ^CE | A8 | 
 %:Created with TablEdit 3.05 b1 https://tabledit.com/
