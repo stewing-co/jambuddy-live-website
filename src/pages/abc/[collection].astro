@@ -78,7 +78,7 @@ const pageTitle = titleMap[slug] ?? 'ABC Collection';
 ---
 
 <Layout title={`${pageTitle} – ABC Collection`} description={`View and edit the ${pageTitle} ABC collection in your browser.`} fullWidth>
-  <section class="w-full px-2 sm:px-4 lg:px-6 xl:px-10 2xl:px-16 py-10">
+  <section class="w-full px-2 sm:px-4 lg:px-6 xl:px-10 2xl:px-16 py-10 min-h-screen">
     <div class="flex items-center gap-3 mb-6">
       <a href="/abc" class="text-sm text-gray-300 hover:underline">← Back to ABC</a>
       <h1 class="text-3xl font-bold text-white">{pageTitle}</h1>
@@ -86,75 +86,105 @@ const pageTitle = titleMap[slug] ?? 'ABC Collection';
 
     {abcText ? (
       <>
-  <div class="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(420px,1.9fr)_minmax(520px,1.15fr)] xl:grid-cols-[minmax(440px,1.95fr)_minmax(560px,1.05fr)]">
+  <div class="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(420px,1.9fr)_minmax(520px,1.15fr)] xl:grid-cols-[minmax(440px,1.95fr)_minmax(560px,1.05fr)] min-h-[calc(100vh-240px)]">
           <!-- Left column: selection + controls + rendered song -->
-          <div class="lg:col-span-1 h-[70vh] flex flex-col space-y-3">
-            <div class="p-3 rounded bg-gray-800 border border-gray-700">
-              <div class="flex items-center gap-2">
-                <button id="prevTune" class="px-2 py-1 bg-gray-700 text-white rounded">&#9664;</button>
-                <select id="tuneSelect" class="flex-1 min-w-0 bg-black text-gray-200 border border-gray-700 rounded p-2 text-sm"></select>
-                <button id="nextTune" class="px-2 py-1 bg-gray-700 text-white rounded">&#9654;</button>
-                <button id="showFull" class="px-2 py-1 bg-gray-700 text-white rounded text-xs">Full</button>
-              </div>
-              <div class="mt-2 flex items-center gap-4 flex-wrap">
+          <div class="lg:col-span-1 flex flex-col space-y-3 min-h-[calc(100vh-260px)]">
+            <div class="rounded border border-gray-700 bg-gray-800 p-3" data-ignore-print>
+              <div class="flex flex-wrap items-center gap-3">
                 <div class="flex items-center gap-2">
-                  <button id="transposeDown" class="px-2 py-1 bg-gray-700 text-white rounded" title="Transpose down">&#9837;</button>
-                  <span id="currentKeyLabel" class="text-gray-100 font-semibold min-w-[2ch] text-center">K?</span>
-                  <button id="transposeUp" class="px-2 py-1 bg-gray-700 text-white rounded" title="Transpose up">&#9839;</button>
-                </div>
-                <div class="flex items-center gap-2">
-                  <input id="tempoSlider" type="range" min="40" max="220" value="120" class="w-16" />
-                  <span id="tempoLabel" class="text-gray-300 text-sm">120 BPM</span>
-                  <label class="text-sm text-gray-300 flex items-center gap-2">
-                    Render height
-                    <input id="renderScale" type="range" min="20" max="100" value="60" class="w-28" />
-                    <span id="renderScaleLabel" class="text-gray-300 text-sm">60%</span>
-                  </label>
-                  <button id="playToggle" class="px-3 py-1 bg-green-600 hover:bg-green-500 text-white rounded">Play</button>
-                  <button
-                    id="playbackModeToggle"
-                    class="px-3 py-1 rounded bg-blue-600 hover:bg-blue-500 text-white"
-                    title="Playback Mode: Chords + Melody"
-                    type="button"
-                  >
-                    🎵 Mixed
-                  </button>
-                  <button
-                    id="highlightToggle"
-                    class="px-3 py-1 rounded border border-amber-500 text-amber-400 hover:bg-amber-500 hover:text-black"
-                    aria-pressed="false"
-                    type="button"
-                  >
-                    Highlight notes: Off
+                  <button id="prevTune" class="rounded bg-gray-700 px-2 py-1 text-white" title="Previous tune" type="button">&#9664;</button>
+                  <select id="tuneSelect" class="min-w-0 flex-1 rounded border border-gray-700 bg-black p-2 text-sm text-gray-200"></select>
+                  <button id="nextTune" class="rounded bg-gray-700 px-2 py-1 text-white" title="Next tune" type="button">&#9654;</button>
+                  <button data-print-trigger class="rounded bg-gray-700 p-2 text-white hover:bg-gray-600" title="Print tune" aria-label="Print tune" type="button">
+                    🖨️
                   </button>
                 </div>
               </div>
             </div>
 
-            <!-- Tabulature selection under play controls -->
-            <div class="p-3 rounded bg-gray-800 border border-gray-700">
-              <label class="block text-sm text-gray-300 mb-2">Tablature layer</label>
-              <select id="layerSelect" class="w-full bg-black text-gray-200 border border-gray-700 rounded p-2 text-sm">
-                <option value="none">None (Staff only)</option>
-                <option value="guitar">Guitar</option>
-                <option value="mandolin">Mandolin</option>
-                <option value="ukulele">Ukulele</option>
-                <option value="baritone">Baritone Ukulele</option>
-              </select>
-              <label class="text-sm text-gray-300 mt-2 block"><input id="stripChords" type="checkbox" class="mr-2" /> Strip quoted chords for tabs</label>
-            </div>
+            <details class="group rounded border border-gray-700 bg-gray-900/70 px-4 py-3 text-gray-200" data-ignore-print>
+              <summary class="flex cursor-pointer items-center justify-between gap-3 text-sm font-semibold uppercase tracking-wide text-gray-300 transition group-open:text-white">
+                Playback &amp; Controls
+                <span class="text-xs font-medium text-gray-400 group-open:text-blue-300">Toggle</span>
+              </summary>
+              <div class="mt-4 space-y-3">
+                <div class="rounded border border-gray-700 bg-gray-800 p-3">
+                  <div class="flex flex-wrap items-center gap-3">
+                    <div class="flex items-center gap-2">
+                      <button id="transposeDown" class="rounded bg-gray-700 px-2 py-1 text-white" title="Transpose down">&#9837;</button>
+                      <span id="currentKeyLabel" class="min-w-[2ch] text-center font-semibold text-gray-100">K?</span>
+                      <button id="transposeUp" class="rounded bg-gray-700 px-2 py-1 text-white" title="Transpose up">&#9839;</button>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-3">
+                      <div class="flex items-center gap-2">
+                        <input id="tempoSlider" type="range" min="40" max="220" value="120" class="w-20" />
+                        <span id="tempoLabel" class="text-sm text-gray-300">120 BPM</span>
+                      </div>
+                      <label class="flex items-center gap-2 text-sm text-gray-300">
+                        Render height
+                        <input id="renderScale" type="range" min="20" max="100" value="60" class="w-28" />
+                        <span id="renderScaleLabel" class="text-sm text-gray-300">60%</span>
+                      </label>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-2">
+                      <button id="playToggle" class="rounded bg-green-600 px-3 py-1 text-white hover:bg-green-500">Play</button>
+                      <button
+                        id="playbackModeToggle"
+                        class="rounded bg-blue-600 px-3 py-1 text-white hover:bg-blue-500"
+                        title="Playback Mode: Chords + Melody"
+                        type="button"
+                      >
+                        🎵 Mixed
+                      </button>
+                      <button
+                        id="highlightToggle"
+                        class="rounded border border-amber-500 px-3 py-1 text-amber-400 hover:bg-amber-500 hover:text-black"
+                        aria-pressed="false"
+                        type="button"
+                      >
+                        Highlight notes: Off
+                      </button>
+                      <div class="flex items-center gap-2">
+                        <button
+                          id="metronomeToggle"
+                          class="rounded border border-blue-400 px-3 py-1 text-blue-200 transition hover:bg-blue-500/20 hover:text-white"
+                          aria-pressed="false"
+                          type="button"
+                        >
+                          Metronome: Off
+                        </button>
+                        <span id="metronomeDisplay" class="min-w-[4ch] text-xs font-semibold text-blue-200 opacity-60"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-        <div class="p-3 rounded bg-gray-900 border border-gray-800 flex-1 min-h-0 overflow-auto">
-          <div id="paper" class="min-h-full h-full"></div>
+                <div class="rounded border border-gray-700 bg-gray-800 p-3">
+                  <label class="mb-2 block text-sm text-gray-300">Tablature layer</label>
+                  <select id="layerSelect" class="w-full rounded border border-gray-700 bg-black p-2 text-sm text-gray-200">
+                    <option value="none">None (Staff only)</option>
+                    <option value="guitar">Guitar</option>
+                    <option value="mandolin">Mandolin</option>
+                    <option value="ukulele">Ukulele</option>
+                    <option value="baritone">Baritone Ukulele</option>
+                  </select>
+                  <label class="mt-2 block text-sm text-gray-300"><input id="stripChords" type="checkbox" class="mr-2" /> Strip quoted chords for tabs</label>
+                </div>
+              </div>
+            </details>
+
+        <div class="flex-1 rounded border border-gray-800 bg-gray-900 p-3 abc-print-target">
+          <div id="paper" class="h-full min-h-[60vh] md:min-h-[calc(100vh-320px)]"></div>
         </div>
           </div>
 
           <!-- Middle column: ABC editor -->
-          <div class="lg:col-span-1 h-[70vh] flex flex-col space-y-2">
+          <div class="lg:col-span-1 flex flex-col space-y-2 min-h-[calc(100vh-260px)]" data-ignore-print>
             <div class="flex justify-end gap-2 flex-wrap">
               <div class="flex gap-2">
                 <button id="exportTuneAbc" class="px-3 py-1 bg-gray-700 text-white rounded" title="Export selected tune as .abc">Tune .abc</button>
                 <button id="exportFullAbc" class="px-3 py-1 bg-gray-700 text-white rounded" title="Export full collection as .abc">Full .abc</button>
+                <button id="printSheet" data-print-trigger type="button" class="px-3 py-1 bg-gray-700 text-white rounded" title="Print the rendered sheet music">Print</button>
                 <button id="exportPng" class="px-3 py-1 bg-gray-700 text-white rounded" title="Export rendered sheet as .png">PNG</button>
                 <button id="exportMidi" class="px-3 py-1 bg-gray-700 text-white rounded" title="Export MIDI">MIDI</button>
               </div>
@@ -205,6 +235,30 @@ const pageTitle = titleMap[slug] ?? 'ABC Collection';
     #paper .abc-current-note rect {
       fill: #f59e0b !important;
       stroke: #f59e0b !important;
+    }
+    @media print {
+      body.abc-printing * {
+        display: none !important;
+      }
+      body.abc-printing [data-ignore-print] {
+        display: none !important;
+      }
+      body.abc-printing .abc-print-target,
+      body.abc-printing .abc-print-target * {
+        display: block !important;
+        visibility: visible !important;
+      }
+      body.abc-printing .abc-print-target {
+        position: static !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+        background: transparent !important;
+      }
+      body.abc-printing #paper {
+        margin: 0 auto;
+      }
     }
   </style>
   <script src="/abc/viewer.js" defer></script>

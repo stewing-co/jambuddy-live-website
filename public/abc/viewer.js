@@ -38,7 +38,14 @@
       // cursor state
       _cursorBallInit: false,
       cursorBallEl: null,
-      _highlightLocked: false
+      _highlightLocked: false,
+      // metronome/count-in state
+      metronomeEnabled: false,
+      metronomeTimer: null,
+      metronomeBeat: 0,
+      metronomeDisplayEl: null,
+      metronomeCountCancel: false,
+      isCountingIn: false
     },
 
     instruments: {
@@ -166,6 +173,39 @@
         });
       }
 
+      // Metronome toggle wiring
+      const metToggle = q('metronomeToggle');
+      const metDisplay = q('metronomeDisplay');
+      if (metDisplay) this.state.metronomeDisplayEl = metDisplay;
+      if (metToggle) {
+        const updateMetLabel = () => {
+          metToggle.textContent = this.state.metronomeEnabled ? 'Metronome: On' : 'Metronome: Off';
+          metToggle.setAttribute('aria-pressed', this.state.metronomeEnabled ? 'true' : 'false');
+          if (!this.state.metronomeEnabled) {
+            this.clearMetronomeDisplay();
+          } else if (!this.state.isPlaying && !this.state.isCountingIn) {
+            this.updateMetronomeDisplay('Ready');
+          }
+        };
+        updateMetLabel();
+        metToggle.addEventListener('click', async () => {
+          this.state.metronomeEnabled = !this.state.metronomeEnabled;
+          if (!this.state.metronomeEnabled) {
+            this.state.metronomeCountCancel = true;
+            this.stopMetronomeLoop();
+            this.clearMetronomeDisplay();
+          } else {
+            this.state.metronomeCountCancel = false;
+            if (this.state.isPlaying) {
+              await this.startMetronomeLoop(true);
+            } else {
+              this.updateMetronomeDisplay('Ready');
+            }
+          }
+          updateMetLabel();
+        });
+      }
+
       // Tempo slider
       const tempoSlider = q('tempoSlider');
       const tempoLabel = q('tempoLabel');
@@ -218,6 +258,12 @@
       if (exportTuneBtn) exportTuneBtn.addEventListener('click', () => this.exportAbcCurrent());
       const exportFullBtn = q('exportFullAbc');
       if (exportFullBtn) exportFullBtn.addEventListener('click', () => this.exportAbcFull());
+      document.querySelectorAll('[data-print-trigger]').forEach(btn => {
+        btn.addEventListener('click', (ev) => {
+          try { if (ev && typeof ev.preventDefault === 'function') ev.preventDefault(); } catch (_) {}
+          this.printSheet();
+        });
+      });
       const exportPngBtn = q('exportPng');
       if (exportPngBtn) exportPngBtn.addEventListener('click', () => this.exportPng());
       const exportMidiBtn = q('exportMidi');
@@ -457,6 +503,141 @@
       return text;
     },
 
+    getActiveAbcText: function() {
+      const input = document.getElementById(this.state.inputId);
+      return input ? (input.value || '') : '';
+    },
+
+    getBeatsPerMeasureFromAbc: function(abc) {
+      if (!abc) return null;
+      const m = abc.match(/^M:\s*([^\r\n]+)/m);
+      if (!m) return null;
+      const raw = m[1].trim();
+      if (!raw) return null;
+      if (raw === 'C') return 4;
+      if (raw === 'C|') return 2;
+      const frac = raw.match(/^(\d+)\s*\/\s*(\d+)/);
+      if (frac) {
+        const num = parseInt(frac[1], 10);
+        const den = parseInt(frac[2], 10);
+        if (Number.isFinite(num) && num > 0 && Number.isFinite(den) && den > 0) return num;
+      }
+      const asInt = parseInt(raw, 10);
+      return Number.isFinite(asInt) && asInt > 0 ? asInt : null;
+    },
+
+    getActiveBeatsPerMeasure: function() {
+      const beats = this.getBeatsPerMeasureFromAbc(this.getActiveAbcText());
+      return beats || 4;
+    },
+
+    delay: function(ms) {
+      return new Promise((resolve) => setTimeout(resolve, Math.max(0, ms || 0)));
+    },
+
+    updateMetronomeDisplay: function(message) {
+      const el = this.state.metronomeDisplayEl;
+      if (!el) return;
+      if (!message) {
+        el.textContent = '';
+        el.classList.remove('opacity-100');
+        el.classList.add('opacity-60');
+        return;
+      }
+      el.textContent = message;
+      el.classList.add('opacity-100');
+      el.classList.remove('opacity-60');
+    },
+
+    clearMetronomeDisplay: function() {
+      this.updateMetronomeDisplay('');
+    },
+
+    playMetronomeClick: async function(strong, ctx) {
+      try {
+        const ac = ctx || await this.ensureAudioContext();
+        const now = ac.currentTime + 0.003;
+        const osc = ac.createOscillator();
+        const gain = ac.createGain();
+        const peak = strong ? 0.22 : 0.14;
+        const freq = strong ? 1760 : 1320;
+        osc.type = 'square';
+        osc.frequency.setValueAtTime(freq, now);
+        gain.gain.setValueAtTime(0.0001, now);
+        gain.gain.linearRampToValueAtTime(peak, now + 0.01);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.18);
+        osc.connect(gain);
+        gain.connect(ac.destination);
+        osc.start(now);
+        osc.stop(now + 0.2);
+      } catch (err) {
+        console.warn('Metronome click failed:', err);
+      }
+    },
+
+    startMetronomeLoop: async function(skipImmediate) {
+      try { this.stopMetronomeLoop(); } catch (_) {}
+      if (!this.state.metronomeEnabled || this.state.isCountingIn) return;
+      const tempo = this.state.currentTempo || 120;
+      if (!tempo || !isFinite(tempo) || tempo <= 0) return;
+      const interval = 60000 / tempo;
+      const beatsPerMeasure = this.getActiveBeatsPerMeasure();
+      const ac = await this.ensureAudioContext();
+      this.state.metronomeBeat = skipImmediate ? 1 : 0;
+      const fireBeat = () => {
+        if (!this.state.metronomeEnabled || this.state.isCountingIn) {
+          this.stopMetronomeLoop();
+          return;
+        }
+        this.state.metronomeBeat = (this.state.metronomeBeat % beatsPerMeasure) + 1;
+        const isStrong = this.state.metronomeBeat === 1;
+        this.playMetronomeClick(isStrong, ac);
+        this.updateMetronomeDisplay(`Beat ${this.state.metronomeBeat}`);
+      };
+      if (!skipImmediate) fireBeat();
+      this.state.metronomeTimer = setInterval(fireBeat, interval);
+    },
+
+    stopMetronomeLoop: function() {
+      if (this.state.metronomeTimer) {
+        try { clearInterval(this.state.metronomeTimer); } catch (_) {}
+        this.state.metronomeTimer = null;
+      }
+      this.state.metronomeBeat = 0;
+    },
+
+    performCountIn: async function() {
+      if (!this.state.metronomeEnabled) return true;
+      const tempo = this.state.currentTempo || 120;
+      if (!tempo || !isFinite(tempo) || tempo <= 0) return true;
+      const beats = this.getActiveBeatsPerMeasure();
+      const interval = 60000 / tempo;
+      const ac = await this.ensureAudioContext();
+      this.state.isCountingIn = true;
+      this.state.metronomeCountCancel = false;
+      this.state.metronomeBeat = 0;
+      for (let i = beats; i >= 1; i--) {
+        if (this.state.metronomeCountCancel) {
+          this.state.isCountingIn = false;
+          this.clearMetronomeDisplay();
+          return false;
+        }
+        this.updateMetronomeDisplay(`Count-in: ${i}`);
+        this.playMetronomeClick(i === beats, ac);
+        await this.delay(interval);
+      }
+      if (this.state.metronomeCountCancel) {
+        this.state.isCountingIn = false;
+        this.clearMetronomeDisplay();
+        return false;
+      }
+      this.updateMetronomeDisplay('Go!');
+      await this.delay(Math.min(interval / 3, 200));
+      this.state.isCountingIn = false;
+      this.updateMetronomeDisplay('Beat 1');
+      return true;
+    },
+
     getProgramForPlaybackMode: function() {
       switch (this.state.playbackMode) {
         case 'chords': return 24; // Acoustic Guitar
@@ -582,6 +763,21 @@
     play: async function() {
       try {
         if (!window.ABCJS?.synth) throw new Error('abcjs synth not available');
+        const wantsMetronome = !!this.state.metronomeEnabled;
+        if (wantsMetronome) {
+          if (!this.state.isPlaying) {
+            this.state.isPlaying = true;
+            this.updatePlayButton();
+          }
+          this.state.metronomeCountCancel = false;
+          const proceed = await this.performCountIn();
+          if (!proceed) {
+            this.state.isPlaying = false;
+            this.updatePlayButton();
+            return;
+          }
+        }
+        this.stopMetronomeLoop();
         // Bump a play session id so any stale async callbacks from previous
         // runs won't clear highlights after the user stops playback.
         this.state.playSession = (this.state.playSession || 0) + 1;
@@ -624,6 +820,11 @@
         if (this.state.playFinishTimer) { try { clearTimeout(this.state.playFinishTimer); } catch(_) {} this.state.playFinishTimer = null; }
         if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
         const startResult = this.state.synth.start();
+        if (this.state.metronomeEnabled) {
+          await this.startMetronomeLoop(wantsMetronome);
+        } else {
+          this.clearMetronomeDisplay();
+        }
         this.state.isPlaying = true;
         this.updatePlayButton();
         // Reapply render scaling after playback starts
@@ -637,6 +838,8 @@
               this.updatePlayButton();
               if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
               this.clearHighlight();
+              this.stopMetronomeLoop();
+              this.clearMetronomeDisplay();
               this.state.finishTimeout = null;
             }, Math.ceil(d * 1000) + 250);
           }
@@ -649,6 +852,8 @@
             this.updatePlayButton();
             if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
             this.clearHighlight();
+            this.stopMetronomeLoop();
+            this.clearMetronomeDisplay();
             if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
           }).catch(() => {
             if (this.state.playSession !== __playSession) return;
@@ -656,6 +861,8 @@
             this.updatePlayButton();
             if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
             this.clearHighlight();
+            this.stopMetronomeLoop();
+            this.clearMetronomeDisplay();
             if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
           });
         } else {
@@ -670,6 +877,8 @@
                 this.state.playFinishTimer = null;
                 if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
                 this.clearHighlight();
+                this.stopMetronomeLoop();
+                this.clearMetronomeDisplay();
                 if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
                 return;
               }
@@ -680,11 +889,19 @@
         }
       } catch (e) {
         console.error('Play failed:', e);
+        this.stopMetronomeLoop();
+        if (!this.state.isCountingIn) this.clearMetronomeDisplay();
+        this.state.isPlaying = false;
+        this.updatePlayButton();
         alert('Playback failed. Ensure soundfonts exist under /abcjs/soundfonts/FluidR3_GM/acoustic_grand_piano-mp3/.');
       }
     },
 
     stop: function() {
+      this.state.metronomeCountCancel = true;
+      this.stopMetronomeLoop();
+      if (!this.state.isCountingIn) this.clearMetronomeDisplay();
+      this.state.isCountingIn = false;
       try { if (this.state.synth) this.state.synth.stop(); } catch(_) {}
       try { if (this.state.synthControl) this.state.synthControl.stop(); } catch(_) {}
       if (this.state.playFinishTimer) { try { clearTimeout(this.state.playFinishTimer); } catch(_) {} this.state.playFinishTimer = null; }
@@ -703,6 +920,7 @@
 
     restartPlayback: async function() {
       try {
+        this.stopMetronomeLoop();
         const vObj = this.render(true, true);
         await this.ensureSynth(vObj);
         if (this.state.enableHighlight) {
@@ -724,6 +942,11 @@
         if (this.state.playFinishTimer) { try { clearTimeout(this.state.playFinishTimer); } catch(_) {} this.state.playFinishTimer = null; }
         if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
         const startResult = this.state.synth.start();
+        if (this.state.metronomeEnabled) {
+          await this.startMetronomeLoop(true);
+        } else {
+          this.clearMetronomeDisplay();
+        }
         this.state.isPlaying = true;
         this.updatePlayButton();
         try { this.applyRenderScale(); } catch(_) {}
@@ -735,6 +958,8 @@
               this.updatePlayButton();
               if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
               try { this._clearCursor(); } catch(_) {}
+              this.stopMetronomeLoop();
+              this.clearMetronomeDisplay();
               this.state.finishTimeout = null;
             }, Math.ceil(d * 1000) + 250);
           }
@@ -745,12 +970,16 @@
             this.updatePlayButton();
             if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
             try { this._clearCursor(); } catch(_) {}
+            this.stopMetronomeLoop();
+            this.clearMetronomeDisplay();
             if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
           }).catch(() => {
             this.state.isPlaying = false;
             this.updatePlayButton();
             if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
             try { this._clearCursor(); } catch(_) {}
+            this.stopMetronomeLoop();
+            this.clearMetronomeDisplay();
             if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
           });
         } else {
@@ -762,6 +991,8 @@
                 this.state.playFinishTimer = null;
                 if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
                 try { this._clearCursor(); } catch(_) {}
+                this.stopMetronomeLoop();
+                this.clearMetronomeDisplay();
                 if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
                 return;
               }
@@ -772,6 +1003,8 @@
         }
       } catch (e) {
         console.error('Restart playback failed:', e);
+        this.stopMetronomeLoop();
+        this.clearMetronomeDisplay();
       }
     },
 
@@ -1377,6 +1610,93 @@
   Viewer.getCurrentTitle = function(abc) {
     const m = (abc||'').match(/^T:\s*(.+)$/m);
     return m ? m[1].trim() : null;
+  };
+
+  Viewer.printSheet = function() {
+    try {
+      if (!window.ABCJS || typeof ABCJS.renderAbc !== 'function') {
+        alert('Printing requires abcjs to be loaded.');
+        return;
+      }
+
+      const raw = this.getActiveAbcText() || '';
+      const normalized = this.normalizeAbc(raw);
+      const filtered = this.filterHeaders(normalized);
+      const hasTab = this.state.layer && this.state.layer !== 'none';
+      const tabSpec = hasTab ? this.instruments[this.state.layer] : null;
+      const abcForPrint = (hasTab && this.state.stripChordsForTabs)
+        ? this.simplifyForTab(filtered)
+        : filtered;
+      if (!abcForPrint || !abcForPrint.trim()) {
+        alert('Nothing to print yet.');
+        return;
+      }
+
+      const printWindow = window.open('', '_blank', 'noopener=yes,width=960,height=720');
+      if (!printWindow) {
+        alert('Allow pop-ups to print the music.');
+        return;
+      }
+
+      const renderOpts = {
+        add_classes: true,
+        responsive: 'resize',
+        visualTranspose: this.state.vt,
+        print: true
+      };
+      if (hasTab && tabSpec) renderOpts.tablature = [tabSpec];
+
+      const styles = `
+        :root { color-scheme: light; }
+        @page { size: auto; margin: 12mm; }
+        html, body { margin: 0; padding: 24px; background: #ffffff; color: #000000; font-family: "Libre Baskerville", "Times New Roman", serif; }
+        .print-container { max-width: 960px; margin: 0 auto; }
+        svg { width: 100% !important; height: auto !important; display: block; }
+        .abcjs-container { width: 100% !important; }
+        .abcjs-highlight, .abcjs-cursor, .abcjs-box-second { display: none !important; }
+      `;
+
+      const runRender = () => {
+        try {
+          const paperEl = printWindow.document.getElementById('printPaper');
+          if (!paperEl) return;
+          paperEl.innerHTML = '';
+          ABCJS.renderAbc(paperEl, abcForPrint, renderOpts);
+          setTimeout(() => {
+            try { printWindow.focus(); printWindow.print(); } catch (_) {}
+            setTimeout(() => { try { printWindow.close(); } catch (_) {} }, 300);
+          }, 150);
+        } catch (err) {
+          console.error('Print render failed:', err);
+          try { printWindow.close(); } catch (_) {}
+          alert('Printing is not available right now.');
+        }
+      };
+
+      const html = `
+        <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <meta charset="utf-8">
+            <title>Print Music</title>
+            <style>${styles}</style>
+          </head>
+          <body>
+            <div id="printPaper" class="print-container"></div>
+          </body>
+        </html>
+      `;
+
+      printWindow.document.open();
+      printWindow.document.write(html);
+      printWindow.document.close();
+
+      if (printWindow.document.readyState === 'complete') runRender();
+      else printWindow.addEventListener('load', runRender, { once: true });
+    } catch (e) {
+      console.error('Print failed:', e);
+      alert('Printing is not available right now.');
+    }
   };
 
   Viewer.exportAbcCurrent = function() {
