@@ -3,33 +3,35 @@ import Layout from '../layouts/Layout.astro';
 
 const pageTitle = 'Interactive Chord Chart Browser';
 const pageDescription =
-  'Explore JamBuddy chord charts directly in your browser. Select an instrument, browse fingerings, and light up the fretboard by interval degrees like 1, b3, and 5.';
+  'Explore JamBuddy chord charts directly in your browser. Select an instrument, browse fingerings, and light up the fretboard by interval degrees.';
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
   <section class="space-y-10">
-    <header class="text-center space-y-4">
-      <h1 class="text-4xl font-extrabold text-white tracking-tight">{pageTitle}</h1>
-      <p class="text-lg text-gray-300 max-w-3xl mx-auto">
-        This browser mirrors the JamBuddy Android chord chart window. Choose an instrument, pick a chord,
-        and toggle interval degrees (1, b3, 5, etc.) to view every matching tone on the vertical fretboard.
-      </p>
-      <p class="text-sm text-gray-400">
-        Data sourced from the JamBuddy chord fingerings CSV. Everything runs locally in your browser—no audio required.
-      </p>
-    </header>
-
-    <div class="browser-shell bg-black/70 border border-gray-700 rounded-2xl shadow-2xl overflow-hidden">
-      <div class="gradient-border"></div>
+  <div class="browser-shell rounded-2xl shadow-2xl overflow-hidden">
       <div class="browser-grid">
         <div class="visual-pane">
-          <div class="tab-bar" role="tablist" aria-label="Chord chart views">
-            <button type="button" class="tab-button" data-tab="chord" aria-selected="true" role="tab" id="tab-btn-chord">
-              Chord Diagram
-            </button>
-            <button type="button" class="tab-button" data-tab="fretboard" aria-selected="false" role="tab" id="tab-btn-fretboard">
-              Fretboard Overlay
-            </button>
+          <div class="tab-header">
+            <div class="tab-bar" role="tablist" aria-label="Chord chart views">
+              <button type="button" class="tab-button" data-tab="chord" aria-selected="true" role="tab" id="tab-btn-chord">
+                Chord Diagram
+              </button>
+              <button
+                type="button"
+                class="tab-button"
+                data-tab="fretboard"
+                aria-selected="false"
+                role="tab"
+                id="tab-btn-fretboard"
+              >
+                Fretboard Overlay
+              </button>
+            </div>
+            <div id="legend-row" class="legend-row tab-legend" hidden>
+              <div id="interval-legend" class="legend-chips">
+                <span class="legend-chip legend-chip-muted">Select intervals to highlight chord tones</span>
+              </div>
+            </div>
           </div>
 
           <div class="tab-panels">
@@ -49,11 +51,6 @@ const pageDescription =
               aria-labelledby="tab-btn-fretboard"
               hidden
             >
-              <div class="legend-row">
-                <div id="interval-legend" class="legend-chips">
-                  <span class="legend-chip legend-chip-muted">Select intervals to highlight chord tones</span>
-                </div>
-              </div>
               <div class="fretboard-frame">
                 <svg id="fretboard-svg" class="fretboard-svg" role="img" aria-label="Instrument fretboard visualization"></svg>
               </div>
@@ -107,26 +104,9 @@ const pageDescription =
   </section>
 
   <style>
-    .gradient-border {
-      position: relative;
-    }
-    .gradient-border::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 1.5rem;
-      padding: 2px;
-      background: linear-gradient(135deg, rgba(16, 185, 129, 0.6), rgba(129, 140, 248, 0.4), rgba(236, 72, 153, 0.4));
-      -webkit-mask:
-        linear-gradient(#000, #000) content-box,
-        linear-gradient(#000, #000);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      pointer-events: none;
-    }
-
     .browser-shell {
       position: relative;
+      background: rgba(15, 23, 42, 0.55);
     }
 
     .browser-grid {
@@ -134,17 +114,24 @@ const pageDescription =
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
-      padding: 2.5rem 2rem;
+      padding: 2rem 1.75rem;
     }
 
     .visual-pane {
-      position: relative;
-      background: linear-gradient(165deg, rgba(15, 23, 42, 0.9), rgba(17, 24, 39, 0.65));
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      border-radius: 1.25rem;
-      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 0.5rem 0;
       min-height: 520px;
-      box-shadow: inset 0 0 0 1px rgba(30, 41, 59, 0.45);
+    }
+
+    .tab-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
     }
 
     .tab-bar {
@@ -153,8 +140,13 @@ const pageDescription =
       padding: 0.35rem;
       background: rgba(15, 23, 42, 0.8);
       border: 1px solid rgba(148, 163, 184, 0.3);
-      margin-bottom: 1.5rem;
+      margin-bottom: 0;
       gap: 0.35rem;
+    }
+
+    .tab-legend {
+      flex: 1 1 auto;
+      justify-content: flex-end;
     }
 
     .tab-button {
@@ -192,13 +184,13 @@ const pageDescription =
 
     .diagram-shell {
       min-height: 320px;
-      border-radius: 1.15rem;
-      border: 1px dashed rgba(148, 163, 184, 0.35);
-      background: rgba(15, 23, 42, 0.65);
+      border-radius: 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      background: rgba(15, 23, 42, 0.45);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 1rem;
+      padding: 1.25rem;
     }
 
     .diagram-placeholder {
@@ -254,8 +246,8 @@ const pageDescription =
     .fretboard-frame {
       position: relative;
       border-radius: 1.15rem;
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      background: linear-gradient(180deg, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.6));
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      background: rgba(15, 23, 42, 0.55);
       padding: 1rem 2rem;
       display: flex;
       justify-content: center;
@@ -273,17 +265,14 @@ const pageDescription =
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      background: rgba(15, 23, 42, 0.6);
-      border: 1px solid rgba(148, 163, 184, 0.3);
-      border-radius: 1.25rem;
-      padding: 1.25rem;
+      padding: 0.5rem 0;
       min-width: 260px;
     }
 
     .control-group {
       border-radius: 1rem;
-      border: 1px solid rgba(148, 163, 184, 0.3);
-      background: rgba(15, 23, 42, 0.55);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      background: rgba(15, 23, 42, 0.35);
       overflow: hidden;
       transition: border-color 0.25s ease, transform 0.25s ease;
     }
@@ -305,7 +294,7 @@ const pageDescription =
       text-transform: uppercase;
       font-size: 0.75rem;
       letter-spacing: 0.08em;
-      background: rgba(15, 23, 42, 0.55);
+  background: transparent;
     }
 
     .control-group > summary::after {
@@ -436,11 +425,11 @@ const pageDescription =
       }
 
       .visual-pane {
-        padding: 1.1rem;
+        padding: 0.75rem 0;
       }
 
       .control-pane {
-        padding: 1rem;
+        padding: 0.75rem 0;
       }
 
       .two-col {
@@ -450,6 +439,10 @@ const pageDescription =
       .fretboard-frame {
         min-height: 520px;
         padding: 1rem 0.75rem;
+      }
+
+      .tab-legend {
+        justify-content: center;
       }
     }
   </style>
@@ -521,6 +514,7 @@ const pageDescription =
     const CHORD_DIAGRAM_CONTAINER = document.querySelector('#chord-diagram-container');
     const FRETBOARD_SVG = document.querySelector('#fretboard-svg');
     const INTERVAL_LEGEND = document.querySelector('#interval-legend');
+    const LEGEND_ROW = document.querySelector('#legend-row');
     const TAB_BUTTONS = Array.from(document.querySelectorAll('.tab-button'));
     const TAB_PANELS = Array.from(document.querySelectorAll('.tab-panel'));
 
@@ -591,6 +585,9 @@ const pageDescription =
         const shouldShow = panel.dataset.panel === tabId;
         panel.toggleAttribute('hidden', !shouldShow);
       });
+      if (LEGEND_ROW) {
+        LEGEND_ROW.toggleAttribute('hidden', tabId !== 'fretboard');
+      }
       persistState();
     }
 
@@ -1044,24 +1041,25 @@ const pageDescription =
 
       for (let stringIndex = 0; stringIndex < stringCount; stringIndex += 1) {
         const x = paddingLeft + stringIndex * stringSpacing;
-        const stringLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-        stringLine.setAttribute('x1', x.toString());
-        stringLine.setAttribute('y1', paddingTop.toString());
-        stringLine.setAttribute('x2', x.toString());
-        stringLine.setAttribute('y2', (height - paddingBottom).toString());
-        stringLine.setAttribute('stroke', 'rgba(148, 163, 184, 0.35)');
-        stringLine.setAttribute('stroke-width', '2.5');
-        FRETBOARD_SVG.appendChild(stringLine);
+    const stringLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    stringLine.setAttribute('x1', x.toString());
+    stringLine.setAttribute('y1', paddingTop.toString());
+    stringLine.setAttribute('x2', x.toString());
+    stringLine.setAttribute('y2', (height - paddingBottom).toString());
+    stringLine.setAttribute('stroke', 'rgba(148, 163, 184, 0.35)');
+    stringLine.setAttribute('stroke-width', '2.5');
+    FRETBOARD_SVG.appendChild(stringLine);
 
-        const openNoteLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-        openNoteLabel.setAttribute('x', x.toString());
-        openNoteLabel.setAttribute('y', (paddingTop - 20).toString());
-        openNoteLabel.setAttribute('text-anchor', 'middle');
-        openNoteLabel.setAttribute('fill', '#e2e8f0');
-        openNoteLabel.setAttribute('font-size', '14');
-        openNoteLabel.setAttribute('font-weight', '600');
-        openNoteLabel.textContent = stringNotes[stringIndex];
-        FRETBOARD_SVG.appendChild(openNoteLabel);
+    const openNoteLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    openNoteLabel.setAttribute('x', x.toString());
+    openNoteLabel.setAttribute('y', (paddingTop - fretSpacing * 0.5).toString());
+    openNoteLabel.setAttribute('text-anchor', 'middle');
+    openNoteLabel.setAttribute('dominant-baseline', 'middle');
+    openNoteLabel.setAttribute('fill', '#e2e8f0');
+    openNoteLabel.setAttribute('font-size', '14');
+    openNoteLabel.setAttribute('font-weight', '600');
+    openNoteLabel.textContent = stringNotes[stringIndex];
+    FRETBOARD_SVG.appendChild(openNoteLabel);
       }
 
       const activeIntervals = Array.from(state.selectedIntervals).sort((a, b) => a - b);
@@ -1097,7 +1095,7 @@ const pageDescription =
           if (!style) continue;
 
           const x = paddingLeft + stringIndex * stringSpacing;
-          const y = fret === 0 ? paddingTop : paddingTop + fret * fretSpacing;
+          const y = fret === 0 ? paddingTop : paddingTop + (fret - 0.5) * fretSpacing;
 
           const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
           circle.setAttribute('cx', x.toString());
