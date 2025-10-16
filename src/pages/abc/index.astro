@@ -15,8 +15,13 @@ const filenameMap: Record<string, string> = {
   'roaring-jelly-2024': 'roaring_jelly_collection.abc'
 };
 
+// During build, we need to find the public directory relative to the project root
+// The currentDir will be in .astro/build or similar during SSG
 const searchRoots = [
-  '../../../public/collections',
+  '../../../public/collections',           // Dev: from src/pages/abc
+  '../../public/collections',              // Build: from .astro output
+  './public/collections',                  // Build: from project root
+  'public/collections',                    // Build: alternative
   '../../../../jb_android/app/src/main/assets/tunes',
   '../../../../jb_ios/jb_ios/Resources/Tunes'
 ];
@@ -46,6 +51,34 @@ function loadCollection(slug: string) {
   }
 
   const attempts: string[] = [];
+  
+  // First, try to find project root by looking for package.json
+  let projectRoot = currentDir;
+  let depth = 0;
+  const maxDepth = 10;
+  
+  while (depth < maxDepth) {
+    const packageJsonPath = path.join(projectRoot, 'package.json');
+    if (fs.existsSync(packageJsonPath)) {
+      // Found project root, add direct path to public/collections
+      const directPath = path.join(projectRoot, 'public', 'collections', filename);
+      if (!attempts.includes(directPath)) {
+        attempts.push(directPath);
+      }
+      if (fs.existsSync(directPath)) {
+        try {
+          const content = fs.readFileSync(directPath, 'utf8');
+          return { content, attempts, source: directPath };
+        } catch (error) {
+          const message = error instanceof Error ? error.message : String(error);
+          attempts[attempts.length - 1] = `${directPath} (read failed: ${message})`;
+        }
+      }
+      break;
+    }
+    projectRoot = path.dirname(projectRoot);
+    depth++;
+  }
 
   for (const root of searchRoots) {
     const candidate = path.resolve(currentDir, root, filename);
