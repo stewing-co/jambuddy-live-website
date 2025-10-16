@@ -1632,12 +1632,6 @@
         return;
       }
 
-      const printWindow = window.open('', '_blank', 'noopener=yes,width=960,height=720');
-      if (!printWindow) {
-        alert('Allow pop-ups to print the music.');
-        return;
-      }
-
       const renderOpts = {
         add_classes: true,
         responsive: 'resize',
@@ -1648,30 +1642,38 @@
 
       const styles = `
         :root { color-scheme: light; }
-        @page { size: auto; margin: 12mm; }
-        html, body { margin: 0; padding: 24px; background: #ffffff; color: #000000; font-family: "Libre Baskerville", "Times New Roman", serif; }
-        .print-container { max-width: 960px; margin: 0 auto; }
-        svg { width: 100% !important; height: auto !important; display: block; }
-        .abcjs-container { width: 100% !important; }
-        .abcjs-highlight, .abcjs-cursor, .abcjs-box-second { display: none !important; }
+        @page { size: letter portrait; margin: 1cm; }
+        body {
+          margin: 0;
+          padding: 0;
+          background: #ffffff;
+          color: #000000;
+          font-family: "Libre Baskerville", "Times New Roman", serif;
+        }
+        .print-container {
+          width: calc(8.5in - 2cm);
+          margin: 0 auto;
+        }
+        .print-container svg {
+          width: 100% !important;
+          height: auto !important;
+          preserve-aspect-ratio: xMinYMin meet;
+        }
+        .abcjs-highlight, .abcjs-cursor, .abcjs-box-second {
+          display: none !important;
+        }
       `;
 
-      const runRender = () => {
-        try {
-          const paperEl = printWindow.document.getElementById('printPaper');
-          if (!paperEl) return;
-          paperEl.innerHTML = '';
-          ABCJS.renderAbc(paperEl, abcForPrint, renderOpts);
-          setTimeout(() => {
-            try { printWindow.focus(); printWindow.print(); } catch (_) {}
-            setTimeout(() => { try { printWindow.close(); } catch (_) {} }, 300);
-          }, 150);
-        } catch (err) {
-          console.error('Print render failed:', err);
-          try { printWindow.close(); } catch (_) {}
-          alert('Printing is not available right now.');
-        }
-      };
+      const safeSvg = (() => {
+        const svg = paper.querySelector('svg');
+        if (!svg) return '';
+        const clone = svg.cloneNode(true);
+        clone.removeAttribute('width');
+        clone.removeAttribute('height');
+        clone.setAttribute('preserveAspectRatio', 'xMinYMin meet');
+        clone.setAttribute('style', 'display:block;width:100%;height:auto;');
+        return new XMLSerializer().serializeToString(clone);
+      })();
 
       const html = `
         <!DOCTYPE html>
@@ -1682,17 +1684,31 @@
             <style>${styles}</style>
           </head>
           <body>
-            <div id="printPaper" class="print-container"></div>
+            <div class="print-container">${safeSvg}</div>
           </body>
         </html>
       `;
 
-      printWindow.document.open();
-      printWindow.document.write(html);
-      printWindow.document.close();
+      const blob = new Blob([html], { type: 'text/html' });
+      const blobUrl = URL.createObjectURL(blob);
+      const printWindow = window.open(blobUrl, '_blank', 'noopener=yes,width=960,height=720');
+      if (!printWindow) {
+        URL.revokeObjectURL(blobUrl);
+        alert('Allow pop-ups to print the music.');
+        return;
+      }
+      setTimeout(() => {
+        try { URL.revokeObjectURL(blobUrl); } catch (_) {}
+      }, 60000);
 
-      if (printWindow.document.readyState === 'complete') runRender();
-      else printWindow.addEventListener('load', runRender, { once: true });
+      const finish = () => {
+        setTimeout(() => {
+          try { printWindow.focus(); printWindow.print(); } catch (_) {}
+          setTimeout(() => { try { printWindow.close(); } catch (_) {} }, 300);
+        }, 120);
+      };
+      if (printWindow.document.readyState === 'complete') finish();
+      else printWindow.addEventListener('load', finish, { once: true });
     } catch (e) {
       console.error('Print failed:', e);
       alert('Printing is not available right now.');
