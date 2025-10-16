@@ -1053,7 +1053,7 @@ const pageDescription =
           if (!style) continue;
 
           const x = paddingLeft + stringIndex * stringSpacing;
-          const y = paddingTop + fret * fretSpacing + fretSpacing / 2;
+          const y = fret === 0 ? paddingTop : paddingTop + fret * fretSpacing;
 
           const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
           circle.setAttribute('cx', x.toString());
