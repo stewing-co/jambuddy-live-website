@@ -539,6 +539,51 @@ const pageDescription =
       activeTab: 'chord'
     };
 
+    const STORAGE_KEY = 'jamBuddyChordBrowserState';
+
+    function getStorage() {
+      if (typeof window === 'undefined') {
+        return null;
+      }
+      try {
+        return window.localStorage;
+      } catch (error) {
+        console.warn('ChordBrowser: localStorage unavailable', error);
+        return null;
+      }
+    }
+
+    function loadPersistedState() {
+      const storage = getStorage();
+      if (!storage) return null;
+      try {
+        const raw = storage.getItem(STORAGE_KEY);
+        if (!raw) return null;
+        const parsed = JSON.parse(raw);
+        return parsed && typeof parsed === 'object' ? parsed : null;
+      } catch (error) {
+        console.warn('ChordBrowser: failed to parse stored state', error);
+        return null;
+      }
+    }
+
+    function persistState() {
+      const storage = getStorage();
+      if (!storage) return;
+      try {
+        const payload = {
+          instrumentId: state.instrumentId,
+          chordRoot: state.chordRoot,
+          chordQuality: state.chordQuality,
+          selectedIntervals: Array.from(state.selectedIntervals),
+          activeTab: state.activeTab
+        };
+        storage.setItem(STORAGE_KEY, JSON.stringify(payload));
+      } catch (error) {
+        console.warn('ChordBrowser: failed to persist state', error);
+      }
+    }
+
     function setActiveTab(tabId) {
       state.activeTab = tabId;
       TAB_BUTTONS.forEach((button) => {
@@ -549,6 +594,7 @@ const pageDescription =
         const shouldShow = panel.dataset.panel === tabId;
         panel.toggleAttribute('hidden', !shouldShow);
       });
+      persistState();
     }
 
     function normaliseNoteName(note) {
@@ -904,6 +950,7 @@ const pageDescription =
           wrapper.dataset.active = state.selectedIntervals.has(value).toString();
           renderIntervalLegend();
           renderFretboard();
+          persistState();
         });
 
         const dot = document.createElement('span');
@@ -1078,20 +1125,50 @@ const pageDescription =
       }
     }
 
-    function syncIntervalsWithChordQuality() {
+    function syncIntervalsWithChordQuality(force = false) {
+      if (!force && state.selectedIntervals.size) return;
       const defaults = chordIntervalsForSuffix(state.chordQuality);
       state.selectedIntervals = new Set(defaults);
     }
 
     async function initialise() {
       await loadChordData();
+
+      const persisted = loadPersistedState();
+      if (persisted) {
+        if (persisted.instrumentId && state.chordsByInstrument[persisted.instrumentId]) {
+          state.instrumentId = persisted.instrumentId;
+        }
+        if (typeof persisted.chordRoot === 'string') {
+          state.chordRoot = persisted.chordRoot;
+        }
+        if (typeof persisted.chordQuality === 'string') {
+          state.chordQuality = persisted.chordQuality;
+        }
+        if (Array.isArray(persisted.selectedIntervals)) {
+          const intervals = persisted.selectedIntervals
+            .map((value) => Number(value))
+            .filter((value) => Number.isInteger(value));
+          if (intervals.length) {
+            state.selectedIntervals = new Set(intervals);
+          }
+        }
+        if (persisted.activeTab === 'fretboard' || persisted.activeTab === 'chord') {
+          state.activeTab = persisted.activeTab;
+        }
+      }
+
+      INSTRUMENT_SELECT.value = state.instrumentId;
       updateInstrumentDependentControls();
-      syncIntervalsWithChordQuality();
+      if (!state.selectedIntervals.size) {
+        syncIntervalsWithChordQuality(true);
+      }
+
       renderIntervalCheckboxes();
       renderIntervalLegend();
       renderChordDiagram();
       renderFretboard();
-      setActiveTab('chord');
+      setActiveTab(state.activeTab);
 
       TAB_BUTTONS.forEach((button) => {
         button.addEventListener('click', () => setActiveTab(button.dataset.tab));
@@ -1100,11 +1177,12 @@ const pageDescription =
       INSTRUMENT_SELECT.addEventListener('change', () => {
         state.instrumentId = INSTRUMENT_SELECT.value;
         updateInstrumentDependentControls();
-        syncIntervalsWithChordQuality();
+        syncIntervalsWithChordQuality(true);
         renderIntervalCheckboxes();
         renderChordDiagram();
         renderIntervalLegend();
         renderFretboard();
+        persistState();
       });
 
       CHORD_ROOT_SELECT.addEventListener('change', () => {
@@ -1112,15 +1190,17 @@ const pageDescription =
         renderChordDiagram();
         renderIntervalLegend();
         renderFretboard();
+        persistState();
       });
 
       CHORD_QUALITY_SELECT.addEventListener('change', () => {
         state.chordQuality = CHORD_QUALITY_SELECT.value;
-        syncIntervalsWithChordQuality();
+        syncIntervalsWithChordQuality(true);
         renderIntervalCheckboxes();
         renderChordDiagram();
         renderIntervalLegend();
         renderFretboard();
+        persistState();
       });
 
       INTERVAL_CLEAR_BUTTON.addEventListener('click', () => {
@@ -1128,6 +1208,7 @@ const pageDescription =
         renderIntervalCheckboxes();
         renderIntervalLegend();
         renderFretboard();
+        persistState();
       });
     }
 

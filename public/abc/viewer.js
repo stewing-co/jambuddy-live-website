@@ -2,6 +2,18 @@
  * Depends on abcjs-basic-min.js being loaded first.
  */
 (function(global) {
+  const STORAGE_KEY = 'jamBuddyAbcViewerState';
+
+  function getStorage() {
+    if (typeof window === 'undefined') return null;
+    try {
+      return window.localStorage;
+    } catch (error) {
+      console.warn('ABCViewer: localStorage unavailable', error);
+      return null;
+    }
+  }
+
   const Viewer = {
     state: {
       vt: 0,
@@ -47,6 +59,8 @@
       metronomeCountCancel: false,
       isCountingIn: false
     },
+    collectionSelections: {},
+    preferencesLoaded: false,
 
     instruments: {
       guitar: { instrument: 'guitar', tuning: ["E,","A,","D","G","B","e"], label: 'Guitar' },
@@ -55,9 +69,76 @@
       baritone: { instrument: 'violin', tuning: ["D,","G,","B,","E"], label: 'Baritone' }
     },
 
+    loadPersistedState: function() {
+      if (this.preferencesLoaded) return;
+      this.preferencesLoaded = true;
+      const storage = getStorage();
+      if (!storage) return;
+      try {
+        const raw = storage.getItem(STORAGE_KEY);
+        if (!raw) return;
+        const data = JSON.parse(raw);
+        if (!data || typeof data !== 'object') return;
+        if (typeof data.enableHighlight === 'boolean') {
+          this.state.enableHighlight = data.enableHighlight;
+        }
+        if (typeof data.metronomeEnabled === 'boolean') {
+          this.state.metronomeEnabled = data.metronomeEnabled;
+        }
+        if (data.selectedTunes && typeof data.selectedTunes === 'object') {
+          this.collectionSelections = { ...data.selectedTunes };
+        }
+      } catch (error) {
+        console.warn('ABCViewer: failed to load persisted state', error);
+      }
+    },
+
+    persistState: function() {
+      const storage = getStorage();
+      if (!storage) return;
+      try {
+        const payload = {
+          enableHighlight: !!this.state.enableHighlight,
+          metronomeEnabled: !!this.state.metronomeEnabled,
+          selectedTunes: this.collectionSelections || {}
+        };
+        storage.setItem(STORAGE_KEY, JSON.stringify(payload));
+      } catch (error) {
+        console.warn('ABCViewer: failed to persist state', error);
+      }
+    },
+
+    getCollectionSlug: function() {
+      const selectEl = document.getElementById('tuneSelect');
+      if (selectEl && selectEl.dataset && selectEl.dataset.collection) {
+        return selectEl.dataset.collection;
+      }
+      const container = document.querySelector('[data-abc-collection]');
+      if (container) {
+        const slug = container.getAttribute('data-abc-collection');
+        if (slug) return slug;
+      }
+      return null;
+    },
+
+    persistSelectedTune: function(x) {
+      const slug = this.getCollectionSlug();
+      if (!slug) return;
+      if (!this.collectionSelections) {
+        this.collectionSelections = {};
+      }
+      if (x == null || x === '') {
+        delete this.collectionSelections[slug];
+      } else {
+        this.collectionSelections[slug] = String(x);
+      }
+      this.persistState();
+    },
+
     init: function(inputId, paperId) {
       this.state.inputId = inputId;
       this.state.paperId = paperId;
+      this.loadPersistedState();
       // Wire controls if present
       const q = (id) => document.getElementById(id);
 
@@ -96,6 +177,12 @@
         const tuneSel = q('tuneSelect');
         if (tuneSel) {
           this.populateTuneSelect(tuneSel);
+          const slug = tuneSel.dataset ? tuneSel.dataset.collection : null;
+          const storedX = slug && this.collectionSelections ? this.collectionSelections[slug] : null;
+          if (storedX && (this.state.tunes || []).some(t => String(t.x) === String(storedX))) {
+            tuneSel.value = String(storedX);
+            this.selectTuneByX(storedX);
+          }
           tuneSel.addEventListener('change', () => {
             const x = tuneSel.value;
             this.selectTuneByX(x);
@@ -153,6 +240,7 @@
           // Toggle state
           this.state.enableHighlight = !this.state.enableHighlight;
           this.updateHighlightControl(highlightToggle, this.state.enableHighlight);
+          this.persistState();
           if (this.state.enableHighlight) {
             // If a visual object is available and playback is active, install timing
             try {
@@ -190,6 +278,7 @@
         updateMetLabel();
         metToggle.addEventListener('click', async () => {
           this.state.metronomeEnabled = !this.state.metronomeEnabled;
+          this.persistState();
           if (!this.state.metronomeEnabled) {
             this.state.metronomeCountCancel = true;
             this.stopMetronomeLoop();
@@ -409,17 +498,31 @@
         opt.textContent = `${t.title}`;
         selectEl.appendChild(opt);
       });
+      const slug = selectEl.dataset ? selectEl.dataset.collection : null;
+      if (slug && this.collectionSelections && this.collectionSelections[slug]) {
+        selectEl.value = String(this.collectionSelections[slug]);
+      }
     },
 
     selectTuneByX: function(x) {
       const input = document.getElementById(this.state.inputId);
       if (!input) return;
-      if (!x) { input.value = this.state.fullAbc; this.state.selectedX = null; this.state.selectedIndex = -1; this.stop(); this.render(); return; }
+      if (!x) {
+        input.value = this.state.fullAbc;
+        this.state.selectedX = null;
+        this.state.selectedIndex = -1;
+        this.stop();
+        this.render();
+        this.persistSelectedTune(null);
+        return;
+      }
       const idx = (this.state.tunes || []).findIndex(t => String(t.x) === String(x));
       if (idx >= 0) {
         const hit = this.state.tunes[idx];
         this.state.selectedX = hit.x;
         this.state.selectedIndex = idx;
+        const selectEl = document.getElementById('tuneSelect');
+        if (selectEl) selectEl.value = String(hit.x);
         input.value = hit.abc;
         // Update tempo slider from selected tune
         const tempoSlider = document.getElementById('tempoSlider');
@@ -435,6 +538,7 @@
         input.value = this.setAbcTempo(input.value, bpmFromAbc, unitFromAbc);
         this.stop();
         this.render();
+        this.persistSelectedTune(hit.x);
       }
     },
 
