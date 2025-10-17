@@ -14,6 +14,7 @@ export async function getStaticPaths() {
     { params: { collection: 'mandolin-cafe-bluegrass' } },
     { params: { collection: 'open-hymnal' } },
     { params: { collection: 'roaring-jelly-2024' } },
+    { params: { collection: 'nigel-gatherer-collection' } },
   ];
 }
 
@@ -22,7 +23,8 @@ const filenameMap: Record<string, string> = {
   'irish-session-top100': 'irish_session_top100_collection.abc',
   'mandolin-cafe-bluegrass': 'mando_cafe_bluegrass.abc',
   'open-hymnal': 'open_hymnal_collection.abc',
-  'roaring-jelly-2024': 'roaring_jelly_collection.abc'
+  'roaring-jelly-2024': 'roaring_jelly_collection.abc',
+  'nigel-gatherer-collection': 'nigel_gatherer_collection.abc'
 };
 
 // During build, we need to find the public directory relative to the project root
@@ -37,19 +39,21 @@ const searchRoots = [
 ];
 
 const titleMap: Record<string, string> = {
-  'old-time-jam-tunes': 'Old-Time',
-  'irish-session-top100': 'The Session',
-  'mandolin-cafe-bluegrass': 'Mandolin Cafe Intermediate Bluegrass',
-  'open-hymnal': 'Open Hymnal',
-  'roaring-jelly-2024': 'Roaring Jelly Old-Time'
+  'old-time-jam-tunes': 'JamBuddy (Old-Time)',
+  'irish-session-top100': 'The Session (Irish)',
+  'mandolin-cafe-bluegrass': 'Mando Cafe (Bluegrass)',
+  'open-hymnal': 'Open Hymnal (Christian)',
+  'roaring-jelly-2024': 'Roaring Jelly (Old-Time)',
+  'nigel-gatherer-collection': 'Nigel Gatherer (Scottish)'
 };
 
 const collections = [
-  { slug: 'old-time-jam-tunes', title: 'Old-Time' },
-  { slug: 'irish-session-top100', title: 'The Session' },
-  { slug: 'mandolin-cafe-bluegrass', title: 'Mandolin Cafe Intermediate Bluegrass' },
-  { slug: 'open-hymnal', title: 'Open Hymnal' },
-  { slug: 'roaring-jelly-2024', title: 'Roaring Jelly Old-Time' }
+  { slug: 'old-time-jam-tunes', title: 'JamBuddy (Old-Time)' },
+  { slug: 'irish-session-top100', title: 'The Session (Irish)' },
+  { slug: 'mandolin-cafe-bluegrass', title: 'Mando Cafe (Bluegrass)' },
+  { slug: 'open-hymnal', title: 'Open Hymnal (Christian)' },
+  { slug: 'roaring-jelly-2024', title: 'Roaring Jelly (Old-Time)' },
+  { slug: 'nigel-gatherer-collection', title: 'Nigel Gatherer (Scottish)' }
 ];
 
 const currentDir = fileURLToPath(new URL('.', import.meta.url));
