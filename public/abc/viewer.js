@@ -57,7 +57,8 @@
       metronomeBeat: 0,
       metronomeDisplayEl: null,
       metronomeCountCancel: false,
-      isCountingIn: false
+      isCountingIn: false,
+      leadInEnabled: true
     },
     collectionSelections: {},
     preferencesLoaded: false,
@@ -85,6 +86,9 @@
         if (typeof data.metronomeEnabled === 'boolean') {
           this.state.metronomeEnabled = data.metronomeEnabled;
         }
+        if (typeof data.leadInEnabled === 'boolean') {
+          this.state.leadInEnabled = data.leadInEnabled;
+        }
         if (data.selectedTunes && typeof data.selectedTunes === 'object') {
           this.collectionSelections = { ...data.selectedTunes };
         }
@@ -100,6 +104,7 @@
         const payload = {
           enableHighlight: !!this.state.enableHighlight,
           metronomeEnabled: !!this.state.metronomeEnabled,
+          leadInEnabled: !!this.state.leadInEnabled,
           selectedTunes: this.collectionSelections || {}
         };
         storage.setItem(STORAGE_KEY, JSON.stringify(payload));
@@ -262,36 +267,91 @@
       }
 
       // Metronome toggle wiring
-      const metToggle = q('metronomeToggle');
-      const metDisplay = q('metronomeDisplay');
-      if (metDisplay) this.state.metronomeDisplayEl = metDisplay;
-      if (metToggle) {
-        const updateMetLabel = () => {
-          metToggle.textContent = this.state.metronomeEnabled ? 'Metronome: On' : 'Metronome: Off';
-          metToggle.setAttribute('aria-pressed', this.state.metronomeEnabled ? 'true' : 'false');
-          if (!this.state.metronomeEnabled) {
-            this.clearMetronomeDisplay();
-          } else if (!this.state.isPlaying && !this.state.isCountingIn) {
-            this.updateMetronomeDisplay('Ready');
+      const metToggleEls = ['metronomeToggle', 'metronomeToggleBlank']
+        .map(id => q(id))
+        .filter(Boolean);
+      const metDisplayEls = ['metronomeDisplay', 'metronomeDisplayBlank']
+        .map(id => q(id))
+        .filter(Boolean);
+      if (metDisplayEls.length && !this.state.metronomeDisplayEl) {
+        this.state.metronomeDisplayEl = metDisplayEls[0];
+      }
+      const syncMetDisplayCopies = () => {
+        if (!this.state.metronomeDisplayEl || metDisplayEls.length < 2) return;
+        metDisplayEls.forEach(el => {
+          if (el !== this.state.metronomeDisplayEl) {
+            el.textContent = this.state.metronomeDisplayEl.textContent;
+            el.className = this.state.metronomeDisplayEl.className;
           }
-        };
+        });
+      };
+      const updateMetLabel = () => {
+        const enabled = !!this.state.metronomeEnabled;
+        metToggleEls.forEach(btn => {
+          btn.textContent = enabled ? 'Metronome: On' : 'Metronome: Off';
+          btn.setAttribute('aria-pressed', enabled ? 'true' : 'false');
+          btn.classList.toggle('bg-blue-500/20', enabled);
+          btn.classList.toggle('text-white', enabled);
+          btn.classList.toggle('text-blue-200', !enabled);
+        });
+        if (!enabled) {
+          this.clearMetronomeDisplay();
+        } else if (!this.state.isPlaying && !this.state.isCountingIn) {
+          this.updateMetronomeDisplay('Ready');
+        }
+        syncMetDisplayCopies();
+      };
+      if (metToggleEls.length) {
         updateMetLabel();
-        metToggle.addEventListener('click', async () => {
-          this.state.metronomeEnabled = !this.state.metronomeEnabled;
-          this.persistState();
-          if (!this.state.metronomeEnabled) {
-            this.state.metronomeCountCancel = true;
-            this.stopMetronomeLoop();
-            this.clearMetronomeDisplay();
-          } else {
-            this.state.metronomeCountCancel = false;
-            if (this.state.isPlaying) {
-              await this.startMetronomeLoop(true);
+        metToggleEls.forEach(btn => {
+          btn.addEventListener('click', async () => {
+            this.state.metronomeEnabled = !this.state.metronomeEnabled;
+            this.persistState();
+            if (!this.state.metronomeEnabled) {
+              this.state.metronomeCountCancel = true;
+              this.stopMetronomeLoop();
+              this.clearMetronomeDisplay();
             } else {
-              this.updateMetronomeDisplay('Ready');
+              this.state.metronomeCountCancel = false;
+              if (this.state.isPlaying) {
+                await this.startMetronomeLoop(this.state.leadInEnabled);
+              } else {
+                this.updateMetronomeDisplay('Ready');
+              }
             }
-          }
-          updateMetLabel();
+            updateMetLabel();
+          });
+        });
+      }
+
+      const leadInToggleEls = ['leadInToggle', 'leadInToggleBlank']
+        .map(id => q(id))
+        .filter(Boolean);
+      const updateLeadInUi = () => {
+        const enabled = !!this.state.leadInEnabled;
+        leadInToggleEls.forEach(btn => {
+          btn.textContent = enabled ? 'Lead-in: On' : 'Lead-in: Off';
+          btn.setAttribute('aria-pressed', enabled ? 'true' : 'false');
+          btn.classList.toggle('bg-indigo-500/20', enabled);
+          btn.classList.toggle('text-white', enabled);
+          btn.classList.toggle('text-indigo-200', !enabled);
+        });
+      };
+      if (leadInToggleEls.length) {
+        updateLeadInUi();
+        leadInToggleEls.forEach(btn => {
+          btn.addEventListener('click', () => {
+            this.state.leadInEnabled = !this.state.leadInEnabled;
+            if (!this.state.leadInEnabled) {
+              this.state.metronomeCountCancel = true;
+              if (this.state.isCountingIn) {
+                this.state.isCountingIn = false;
+                this.clearMetronomeDisplay();
+              }
+            }
+            this.persistState();
+            updateLeadInUi();
+          });
         });
       }
 
@@ -711,7 +771,7 @@
     },
 
     performCountIn: async function() {
-      if (!this.state.metronomeEnabled) return true;
+      if (!this.state.leadInEnabled) return true;
       const tempo = this.state.currentTempo || 120;
       if (!tempo || !isFinite(tempo) || tempo <= 0) return true;
       const beats = this.getActiveBeatsPerMeasure();
@@ -738,7 +798,11 @@
       this.updateMetronomeDisplay('Go!');
       await this.delay(Math.min(interval / 3, 200));
       this.state.isCountingIn = false;
-      this.updateMetronomeDisplay('Beat 1');
+      if (this.state.metronomeEnabled) {
+        this.updateMetronomeDisplay('Beat 1');
+      } else {
+        this.clearMetronomeDisplay();
+      }
       return true;
     },
 
@@ -868,7 +932,9 @@
       try {
         if (!window.ABCJS?.synth) throw new Error('abcjs synth not available');
         const wantsMetronome = !!this.state.metronomeEnabled;
-        if (wantsMetronome) {
+        const wantsLeadIn = !!this.state.leadInEnabled;
+        this.state.metronomeCountCancel = false;
+        if (wantsLeadIn) {
           if (!this.state.isPlaying) {
             this.state.isPlaying = true;
             this.updatePlayButton();
@@ -880,6 +946,8 @@
             this.updatePlayButton();
             return;
           }
+        } else if (wantsMetronome && !this.state.isPlaying && !this.state.isCountingIn) {
+          this.updateMetronomeDisplay('Ready');
         }
         this.stopMetronomeLoop();
         // Bump a play session id so any stale async callbacks from previous
@@ -925,7 +993,7 @@
         if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
         const startResult = this.state.synth.start();
         if (this.state.metronomeEnabled) {
-          await this.startMetronomeLoop(wantsMetronome);
+          await this.startMetronomeLoop(this.state.leadInEnabled);
         } else {
           this.clearMetronomeDisplay();
         }
