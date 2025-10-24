@@ -242,8 +242,10 @@
     updateOctaveControls: function() {
       const shift = Number.isFinite(this.state.octaveShift) ? this.state.octaveShift : 0;
       const display = shift > 0 ? `+${shift}` : String(shift);
-      const disableDown = shift <= this.state.minOctaveShift;
-      const disableUp = shift >= this.state.maxOctaveShift;
+      const min = this.state.minOctaveShift;
+      const max = this.state.maxOctaveShift;
+      const disableDown = shift <= min;
+      const disableUp = shift >= max;
       ['octaveLabel', 'octaveLabelBlank'].forEach(id => {
         const el = document.getElementById(id);
         if (el) el.textContent = display;
@@ -255,6 +257,20 @@
       ['octaveUp', 'octaveUpBlank'].forEach(id => {
         const btn = document.getElementById(id);
         if (btn) btn.disabled = disableUp;
+      });
+      const shiftStr = String(shift);
+      ['octaveSelect', 'octaveSelectBlank'].forEach(id => {
+        const sel = document.getElementById(id);
+        if (!sel) return;
+        Array.from(sel.options).forEach(opt => {
+          const optVal = Number(opt.value);
+          if (Number.isFinite(optVal)) {
+            opt.disabled = optVal < min || optVal > max;
+          }
+        });
+        if (sel.value !== shiftStr) {
+          sel.value = shiftStr;
+        }
       });
     },
 
@@ -285,19 +301,30 @@
       if (up) up.addEventListener('click', () => { this.state.vt++; if (transposeInfo) transposeInfo.textContent = this.state.vt + ' st'; this.render(); });
       if (renderBtn) renderBtn.addEventListener('click', () => this.render());
 
-      const applyOctaveDelta = (delta) => {
-        const current = Number.isFinite(this.state.octaveShift) ? this.state.octaveShift : 0;
-        const next = Math.min(this.state.maxOctaveShift, Math.max(this.state.minOctaveShift, current + delta));
+      const setOctaveShift = (value) => {
+        const numeric = Number(value);
+        if (!Number.isFinite(numeric)) return;
+        const rounded = Math.round(numeric);
+        const next = Math.min(this.state.maxOctaveShift, Math.max(this.state.minOctaveShift, rounded));
         if (next === this.state.octaveShift) return;
         this.state.octaveShift = next;
         this.persistState();
         this.updateOctaveControls();
         this.render();
       };
+      const applyOctaveDelta = (delta) => {
+        const current = Number.isFinite(this.state.octaveShift) ? this.state.octaveShift : 0;
+        setOctaveShift(current + delta);
+      };
       const octaveDownEls = [q('octaveDown'), q('octaveDownBlank')].filter(Boolean);
       const octaveUpEls = [q('octaveUp'), q('octaveUpBlank')].filter(Boolean);
       octaveDownEls.forEach(btn => btn.addEventListener('click', () => applyOctaveDelta(-1)));
       octaveUpEls.forEach(btn => btn.addEventListener('click', () => applyOctaveDelta(1)));
+      const octaveSelectEls = [q('octaveSelect'), q('octaveSelectBlank')].filter(Boolean);
+      octaveSelectEls.forEach(sel => sel.addEventListener('change', evt => {
+        const val = evt?.target?.value;
+        setOctaveShift(val);
+      }));
       this.updateOctaveControls();
 
       const clefSel = q('clefSelect');

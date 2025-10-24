@@ -167,6 +167,16 @@ const pageTitle = titleMap[slug] ?? 'ABC Collection';
                           <option value="bass">Bass</option>
                         </select>
                       </label>
+                      <label class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-gray-300">
+                        Octave
+                        <select id="octaveSelect" class="rounded border border-gray-700 bg-gray-800 px-2 py-1 text-sm text-gray-100">
+                          <option value="2">+2</option>
+                          <option value="1">+1</option>
+                          <option value="0" selected>0</option>
+                          <option value="-1">-1</option>
+                          <option value="-2">-2</option>
+                        </select>
+                      </label>
                     </div>
                     <div class="flex flex-wrap items-center gap-3">
                       <div class="flex items-center gap-2">
@@ -215,20 +225,18 @@ const pageTitle = titleMap[slug] ?? 'ABC Collection';
                         </button>
                         <span id="metronomeDisplay" class="min-w-[4ch] text-xs font-semibold text-blue-200 opacity-60"></span>
                       </div>
+                      <label class="flex items-center gap-2 text-sm text-gray-300">
+                        Tab layer
+                        <select id="layerSelect" class="rounded border border-gray-700 bg-black p-2 text-sm text-gray-200">
+                          <option value="none">None (Staff only)</option>
+                          <option value="guitar">Guitar</option>
+                          <option value="mandolin">Mandolin</option>
+                          <option value="ukulele">Ukulele</option>
+                          <option value="baritone">Baritone Ukulele</option>
+                        </select>
+                      </label>
                     </div>
                   </div>
-                </div>
-
-                <div class="rounded border border-gray-700 bg-gray-800 p-3">
-                  <label class="mb-2 block text-sm text-gray-300">Tablature layer</label>
-                  <select id="layerSelect" class="w-full rounded border border-gray-700 bg-black p-2 text-sm text-gray-200">
-                    <option value="none">None (Staff only)</option>
-                    <option value="guitar">Guitar</option>
-                    <option value="mandolin">Mandolin</option>
-                    <option value="ukulele">Ukulele</option>
-                    <option value="baritone">Baritone Ukulele</option>
-                  </select>
-                  <label class="mt-2 block text-sm text-gray-300"><input id="stripChords" type="checkbox" class="mr-2" /> Strip quoted chords for tabs</label>
                 </div>
               </div>
             </details>
@@ -288,6 +296,16 @@ const pageTitle = titleMap[slug] ?? 'ABC Collection';
                             <option value="bass">Bass</option>
                           </select>
                         </label>
+                        <label class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-gray-300">
+                          Octave
+                          <select id="octaveSelectBlank" class="rounded border border-gray-700 bg-gray-800 px-2 py-1 text-sm text-gray-100">
+                            <option value="2">+2</option>
+                            <option value="1">+1</option>
+                            <option value="0" selected>0</option>
+                            <option value="-1">-1</option>
+                            <option value="-2">-2</option>
+                          </select>
+                        </label>
                       </div>
                       <div class="flex flex-wrap items-center gap-3">
                         <div class="flex items-center gap-2">
@@ -336,20 +354,18 @@ const pageTitle = titleMap[slug] ?? 'ABC Collection';
                           </button>
                           <span id="metronomeDisplayBlank" class="min-w-[4ch] text-xs font-semibold text-blue-200 opacity-60"></span>
                         </div>
+                        <label class="flex items-center gap-2 text-sm text-gray-300">
+                          Tab layer
+                          <select id="layerSelectBlank" class="rounded border border-gray-700 bg-black p-2 text-sm text-gray-200">
+                            <option value="none">None (Staff only)</option>
+                            <option value="guitar">Guitar</option>
+                            <option value="mandolin">Mandolin</option>
+                            <option value="ukulele">Ukulele</option>
+                            <option value="baritone">Baritone Ukulele</option>
+                          </select>
+                        </label>
                       </div>
                     </div>
-                  </div>
-
-                  <div class="rounded border border-gray-700 bg-gray-800 p-3">
-                    <label class="mb-2 block text-sm text-gray-300">Tablature layer</label>
-                    <select id="layerSelectBlank" class="w-full rounded border border-gray-700 bg-black p-2 text-sm text-gray-200">
-                      <option value="none">None (Staff only)</option>
-                      <option value="guitar">Guitar</option>
-                      <option value="mandolin">Mandolin</option>
-                      <option value="ukulele">Ukulele</option>
-                      <option value="baritone">Baritone Ukulele</option>
-                    </select>
-                    <label class="mt-2 block text-sm text-gray-300"><input id="stripChordsBlank" type="checkbox" class="mr-2" /> Strip quoted chords for tabs</label>
                   </div>
                 </div>
               </details>
