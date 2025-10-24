@@ -14,9 +14,91 @@
     }
   }
 
+  function normalizeClefMode(raw) {
+    if (raw === null || typeof raw === 'undefined') return 'treble';
+    const value = String(raw).trim().toLowerCase();
+    switch (value) {
+      case 'auto':
+        return 'auto';
+      case 'treble':
+      case 'g':
+      case 'treble8':
+      case 'treble-8':
+      case 'treble_8':
+        return 'treble';
+      case 'alto':
+      case 'c3':
+        return 'alto';
+      case 'tenor':
+      case 'c4':
+        return 'tenor';
+      case 'bass':
+      case 'f':
+        return 'bass';
+      default:
+        return 'treble';
+    }
+  }
+
+  function applyClefOverride(abcText, clefMode) {
+    try {
+      if (!abcText || typeof abcText !== 'string') return abcText;
+      const target = normalizeClefMode(clefMode);
+      if (target === 'auto') return abcText;
+      const clefRegex = /(clef\s*=\s*)([^\s]+)/i;
+      let appliedToVoice = false;
+      const processed = abcText.split('\n').map(line => {
+        const trimmed = line.trimStart();
+        if (!trimmed.startsWith('V:') || trimmed.startsWith('[V:')) return line;
+        const leading = line.substring(0, line.length - trimmed.length);
+        const commentIndex = trimmed.indexOf('%');
+        let body = commentIndex >= 0 ? trimmed.slice(0, commentIndex) : trimmed;
+        const comment = commentIndex >= 0 ? trimmed.slice(commentIndex) : '';
+        if (clefRegex.test(body)) {
+          body = body.replace(clefRegex, (_, prefix) => prefix + target);
+        } else {
+          const needsSpace = body.length > 0 && !/\s$/.test(body);
+          body = body + (needsSpace ? ' ' : '') + 'clef=' + target;
+        }
+        appliedToVoice = true;
+        return leading + body + comment;
+      });
+      if (!appliedToVoice) {
+        let updatedKey = false;
+        const keyRegex = /^K:\s*/i;
+        return processed.map(line => {
+          if (updatedKey) return line;
+          const trimmed = line.trimStart();
+          if (!keyRegex.test(trimmed)) return line;
+          const leading = line.substring(0, line.length - trimmed.length);
+          const commentIndex = trimmed.indexOf('%');
+          let body = commentIndex >= 0 ? trimmed.slice(0, commentIndex) : trimmed;
+          const comment = commentIndex >= 0 ? trimmed.slice(commentIndex) : '';
+          if (clefRegex.test(body)) {
+            body = body.replace(clefRegex, (_, prefix) => prefix + target);
+          } else {
+            const needsSpace = body.length > 0 && !/\s$/.test(body);
+            body = body + (needsSpace ? ' ' : '') + 'clef=' + target;
+          }
+          updatedKey = true;
+          return leading + body + comment;
+        }).join('\n');
+      }
+      return processed.join('\n');
+    } catch (error) {
+      console.warn('ABCViewer: applyClefOverride failed', error);
+      return abcText;
+    }
+  }
+
   const Viewer = {
     state: {
       vt: 0,
+      octaveShift: 0,
+      minOctaveShift: -3,
+      maxOctaveShift: 3,
+      clef: 'auto',
+      clefUserOverride: false,
       // headerVisibility removed — header toggles are handled in native apps only
       layer: 'none', // none|guitar|mandolin|ukulele|baritone
       stripChordsForTabs: false,
@@ -89,6 +171,15 @@
         if (typeof data.leadInEnabled === 'boolean') {
           this.state.leadInEnabled = data.leadInEnabled;
         }
+        if (typeof data.clef === 'string') {
+          this.state.clef = normalizeClefMode(data.clef);
+          this.state.clefUserOverride = true;
+        }
+        if (typeof data.octaveShift === 'number' && Number.isFinite(data.octaveShift)) {
+          const rounded = Math.round(data.octaveShift);
+          const clamped = Math.min(this.state.maxOctaveShift, Math.max(this.state.minOctaveShift, rounded));
+          this.state.octaveShift = clamped;
+        }
         if (data.selectedTunes && typeof data.selectedTunes === 'object') {
           this.collectionSelections = { ...data.selectedTunes };
         }
@@ -105,6 +196,8 @@
           enableHighlight: !!this.state.enableHighlight,
           metronomeEnabled: !!this.state.metronomeEnabled,
           leadInEnabled: !!this.state.leadInEnabled,
+          clef: normalizeClefMode(this.state.clef),
+          octaveShift: this.state.octaveShift || 0,
           selectedTunes: this.collectionSelections || {}
         };
         storage.setItem(STORAGE_KEY, JSON.stringify(payload));
@@ -140,6 +233,31 @@
       this.persistState();
     },
 
+    getTotalTranspose: function() {
+      const semitoneShift = Number.isFinite(this.state.vt) ? this.state.vt : 0;
+      const octaveShift = Number.isFinite(this.state.octaveShift) ? this.state.octaveShift : 0;
+      return semitoneShift + (octaveShift * 12);
+    },
+
+    updateOctaveControls: function() {
+      const shift = Number.isFinite(this.state.octaveShift) ? this.state.octaveShift : 0;
+      const display = shift > 0 ? `+${shift}` : String(shift);
+      const disableDown = shift <= this.state.minOctaveShift;
+      const disableUp = shift >= this.state.maxOctaveShift;
+      ['octaveLabel', 'octaveLabelBlank'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = display;
+      });
+      ['octaveDown', 'octaveDownBlank'].forEach(id => {
+        const btn = document.getElementById(id);
+        if (btn) btn.disabled = disableDown;
+      });
+      ['octaveUp', 'octaveUpBlank'].forEach(id => {
+        const btn = document.getElementById(id);
+        if (btn) btn.disabled = disableUp;
+      });
+    },
+
     init: function(inputId, paperId) {
       this.state.inputId = inputId;
       this.state.paperId = paperId;
@@ -167,11 +285,66 @@
       if (up) up.addEventListener('click', () => { this.state.vt++; if (transposeInfo) transposeInfo.textContent = this.state.vt + ' st'; this.render(); });
       if (renderBtn) renderBtn.addEventListener('click', () => this.render());
 
+      const applyOctaveDelta = (delta) => {
+        const current = Number.isFinite(this.state.octaveShift) ? this.state.octaveShift : 0;
+        const next = Math.min(this.state.maxOctaveShift, Math.max(this.state.minOctaveShift, current + delta));
+        if (next === this.state.octaveShift) return;
+        this.state.octaveShift = next;
+        this.persistState();
+        this.updateOctaveControls();
+        this.render();
+      };
+      const octaveDownEls = [q('octaveDown'), q('octaveDownBlank')].filter(Boolean);
+      const octaveUpEls = [q('octaveUp'), q('octaveUpBlank')].filter(Boolean);
+      octaveDownEls.forEach(btn => btn.addEventListener('click', () => applyOctaveDelta(-1)));
+      octaveUpEls.forEach(btn => btn.addEventListener('click', () => applyOctaveDelta(1)));
+      this.updateOctaveControls();
+
+      const clefSel = q('clefSelect');
+      const clefSelBlank = q('clefSelectBlank');
+      const syncClefSelectValues = () => {
+        const val = normalizeClefMode(this.state.clef);
+        [clefSel, clefSelBlank].forEach(sel => {
+          if (sel) sel.value = val;
+        });
+      };
+      syncClefSelectValues();
+      const handleClefChange = (evt) => {
+        const val = normalizeClefMode(evt?.target?.value);
+        this.state.clef = val;
+        this.state.clefUserOverride = true;
+        syncClefSelectValues();
+        this.persistState();
+        this.render();
+      };
+      if (clefSel) clefSel.addEventListener('change', handleClefChange);
+      if (clefSelBlank) clefSelBlank.addEventListener('change', handleClefChange);
+
       const layerSel = q('layerSelect');
-      if (layerSel) {
-        layerSel.addEventListener('change', () => { this.state.layer = layerSel.value; this.render(); });
-      }
       const strip = q('stripChords');
+      const applyClefDefaultForLayer = () => {
+        if (!layerSel) return;
+        const layerValue = layerSel.value;
+        if (this.state.clefUserOverride) return;
+        const currentClef = normalizeClefMode(this.state.clef);
+        if (layerValue === 'bass' && currentClef !== 'bass') {
+          this.state.clef = 'bass';
+        } else if (layerValue !== 'bass' && currentClef === 'bass') {
+          this.state.clef = 'treble';
+        }
+      };
+      if (layerSel) {
+        const onLayerChange = () => {
+          this.state.layer = layerSel.value;
+          applyClefDefaultForLayer();
+          syncClefSelectValues();
+          this.persistState();
+          this.render();
+        };
+        applyClefDefaultForLayer();
+        syncClefSelectValues();
+        layerSel.addEventListener('change', onLayerChange);
+      }
       if (strip) strip.addEventListener('change', () => { this.state.stripChordsForTabs = !!strip.checked; this.render(); });
 
       // Tune selection (only on collection pages)
@@ -916,7 +1089,7 @@
         options: {
           soundFont,
           program: this.getProgramForPlaybackMode(),
-          midiTranspose: (this.state.vt || 0),
+          midiTranspose: this.getTotalTranspose(),
           gain: 0.7,
           // Apply playback mode settings
           chordsOff: this.state.playbackMode === 'melody',  // Disable chords for melody-only
@@ -1302,6 +1475,7 @@
         if (!global.ABCJS || !ABCJS.renderAbc) return;
         const input = document.getElementById(this.state.inputId);
         const paperEl = document.getElementById(this.state.paperId);
+        this.updateOctaveControls();
         if (!input || !paperEl) return;
         paperEl.innerHTML = '';
         // NEW: reset cursor state because the node was just removed
@@ -1325,17 +1499,20 @@
         const raw = input.value || 'X:1\nT:Example\nM:4/4\nL:1/8\nK:C\nCDEF GABc|';
         const norm = this.normalizeAbc(raw);
         const filtered = this.filterHeaders(norm);
-        const playbackFiltered = forPlayback ? this.filterAbcForPlaybackMode(filtered) : filtered;
+        const clefMode = normalizeClefMode(this.state.clef);
+        const clefAdjusted = applyClefOverride(filtered, clefMode);
+        const playbackFiltered = forPlayback ? this.filterAbcForPlaybackMode(clefAdjusted) : clefAdjusted;
 
         // Build render options; when a tablature layer is chosen, render staff + tab together in one pass
-        const hasTab = this.state.layer && this.state.layer !== 'none';
-        const tabSpec = hasTab ? this.instruments[this.state.layer] : null;
-        const paperWidth = Math.max(paperEl.clientWidth || paperEl.offsetWidth || 740, 320);
-        const baseOpts = { responsive: 'resize', add_classes: true, visualTranspose: this.state.vt, selectionColor: '#f59e0b', wrap: { preferredMeasuresPerLine: 5 } };
+  const hasTab = this.state.layer && this.state.layer !== 'none';
+  const tabSpec = hasTab ? this.instruments[this.state.layer] : null;
+  const paperWidth = Math.max(paperEl.clientWidth || paperEl.offsetWidth || 740, 320);
+  const totalTranspose = this.getTotalTranspose();
+  const baseOpts = { responsive: 'resize', add_classes: true, visualTranspose: totalTranspose, selectionColor: '#f59e0b', wrap: { preferredMeasuresPerLine: 5 } };
         const renderOpts = hasTab && tabSpec ? { ...baseOpts, tablature: [tabSpec] } : baseOpts;
 
         // Render the visible paper from the unmodified (display) ABC so playback filtering does not affect rendering
-        const abcForDisplay = (hasTab && this.state.stripChordsForTabs) ? this.simplifyForTab(filtered) : filtered;
+        const abcForDisplay = (hasTab && this.state.stripChordsForTabs) ? this.simplifyForTab(clefAdjusted) : clefAdjusted;
         const vDisplay = ABCJS.renderAbc(this.state.paperId, abcForDisplay, renderOpts);
         this.state.lastVisualObj = vDisplay && vDisplay[0];
         // If caller wants a visual object for playback, build it from the playback-filtered ABC but do not replace the visible rendering
@@ -1742,13 +1919,19 @@
 
   Viewer.updateKeyLabel = function(currentAbcFiltered) {
     const k = this.parseKeyFromAbc(currentAbcFiltered || this.state.fullAbc || '');
-    const el = document.getElementById('currentKeyLabel');
-    if (!el) return;
-    if (!k) { el.textContent = 'K?'; return; }
+    const labels = ['currentKeyLabel', 'currentKeyLabelBlank']
+      .map(id => document.getElementById(id))
+      .filter(Boolean);
+    if (!labels.length) return;
+    if (!k) {
+      labels.forEach(el => { el.textContent = 'K?'; });
+      return;
+    }
     const idx = (k.index + (this.state.vt||0)) % 12;
     // Prefer flats when transposing down, sharps when up
     const preferSharps = (this.state.vt||0) >= 0;
-    el.textContent = this.keyNameFor(idx, preferSharps, k.minor);
+    const label = this.keyNameFor(idx, preferSharps, k.minor);
+    labels.forEach(el => { el.textContent = label; });
   };
 
   // --- Export utilities ---
@@ -1807,7 +1990,7 @@
       const renderOpts = {
         add_classes: true,
         responsive: 'resize',
-        visualTranspose: this.state.vt,
+        visualTranspose: this.getTotalTranspose(),
         print: true
       };
       if (hasTab && tabSpec) renderOpts.tablature = [tabSpec];
@@ -1991,7 +2174,7 @@
       }
       if (ABCJS?.midi?.getMidiFile) {
         // 1) Prefer encoded data URI
-        let res = ABCJS.midi.getMidiFile(abc, { midiOutputType: 'encoded', midiTranspose: (this.state.vt||0) });
+  let res = ABCJS.midi.getMidiFile(abc, { midiOutputType: 'encoded', midiTranspose: this.getTotalTranspose() });
         if (typeof res === 'string') {
           if (res.startsWith('data:audio/midi')) {
             const fname = this.sanitizeFilename(this.getCurrentTitle(abc), 'tune') + '.mid';
@@ -2006,7 +2189,7 @@
           }
         }
         // 2) Try binary output and build a Blob
-        let bin = ABCJS.midi.getMidiFile(abc, { midiOutputType: 'binary', midiTranspose: (this.state.vt||0) });
+  let bin = ABCJS.midi.getMidiFile(abc, { midiOutputType: 'binary', midiTranspose: this.getTotalTranspose() });
         if (bin && (bin.byteLength || (typeof Uint8Array !== 'undefined' && bin instanceof Uint8Array))) {
           const blob = new Blob([bin], { type: 'audio/midi' });
           const fname = this.sanitizeFilename(this.getCurrentTitle(abc), 'tune') + '.mid';
@@ -2016,7 +2199,7 @@
         // 3) Try with the current visual object source
         const vObjAlt = this.state.lastVisualObj || this.render(true);
         if (vObjAlt) {
-          let res2 = ABCJS.midi.getMidiFile(vObjAlt, { midiOutputType: 'encoded', midiTranspose: (this.state.vt||0) });
+          let res2 = ABCJS.midi.getMidiFile(vObjAlt, { midiOutputType: 'encoded', midiTranspose: this.getTotalTranspose() });
           if (typeof res2 === 'string' && res2.startsWith('data:audio/midi')) {
             const fname = this.sanitizeFilename(this.getCurrentTitle(abc), 'tune') + '.mid';
             this.download(fname, 'audio/midi', res2);
@@ -2033,7 +2216,7 @@
       if (ABCJS?.synth?.CreateSynth) {
         const vObj = this.render(true, true);
         const synth = new ABCJS.synth.CreateSynth();
-        await synth.init({ visualObj: vObj, options: { midiTranspose: (this.state.vt||0) } });
+  await synth.init({ visualObj: vObj, options: { midiTranspose: this.getTotalTranspose() } });
         if (synth.downloadMidi) {
           const dataUrl = await synth.downloadMidi();
           if (dataUrl) {

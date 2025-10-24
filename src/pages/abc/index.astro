@@ -157,6 +157,16 @@ const pageTitle = titleMap[slug] ?? 'ABC Collection';
                       <button id="transposeDown" class="rounded bg-gray-700 px-2 py-1 text-white" title="Transpose down">&#9837;</button>
                       <span id="currentKeyLabel" class="min-w-[2ch] text-center font-semibold text-gray-100">K?</span>
                       <button id="transposeUp" class="rounded bg-gray-700 px-2 py-1 text-white" title="Transpose up">&#9839;</button>
+                      <label class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-gray-300">
+                        Clef
+                        <select id="clefSelect" class="rounded border border-gray-700 bg-gray-800 px-2 py-1 text-sm text-gray-100">
+                          <option value="auto">Original</option>
+                          <option value="treble">Treble</option>
+                          <option value="alto">Alto</option>
+                          <option value="tenor">Tenor</option>
+                          <option value="bass">Bass</option>
+                        </select>
+                      </label>
                     </div>
                     <div class="flex flex-wrap items-center gap-3">
                       <div class="flex items-center gap-2">
@@ -268,6 +278,16 @@ const pageTitle = titleMap[slug] ?? 'ABC Collection';
                         <button id="transposeDownBlank" class="rounded bg-gray-700 px-2 py-1 text-white" title="Transpose down">&#9837;</button>
                         <span id="currentKeyLabelBlank" class="min-w-[2ch] text-center font-semibold text-gray-100">K?</span>
                         <button id="transposeUpBlank" class="rounded bg-gray-700 px-2 py-1 text-white" title="Transpose up">&#9839;</button>
+                        <label class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-gray-300">
+                          Clef
+                          <select id="clefSelectBlank" class="rounded border border-gray-700 bg-gray-800 px-2 py-1 text-sm text-gray-100">
+                            <option value="auto">Original</option>
+                            <option value="treble">Treble</option>
+                            <option value="alto">Alto</option>
+                            <option value="tenor">Tenor</option>
+                            <option value="bass">Bass</option>
+                          </select>
+                        </label>
                       </div>
                       <div class="flex flex-wrap items-center gap-3">
                         <div class="flex items-center gap-2">
