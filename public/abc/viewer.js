@@ -95,8 +95,8 @@
     state: {
       vt: 0,
       octaveShift: 0,
-      minOctaveShift: -3,
-      maxOctaveShift: 3,
+      minOctaveShift: -2,
+      maxOctaveShift: 2,
       clef: 'auto',
       clefUserOverride: false,
       // headerVisibility removed — header toggles are handled in native apps only
