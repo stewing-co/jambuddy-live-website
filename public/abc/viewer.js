@@ -99,8 +99,9 @@
       maxOctaveShift: 2,
       clef: 'auto',
       clefUserOverride: false,
+  octaveUserOverride: false,
       // headerVisibility removed — header toggles are handled in native apps only
-      layer: 'none', // none|guitar|mandolin|ukulele|baritone
+  layer: 'none', // none|guitar|mandolin|ukulele|baritone|banjo|viola|bass|cello
       stripChordsForTabs: false,
       inputId: null,
       paperId: null,
@@ -149,7 +150,11 @@
       guitar: { instrument: 'guitar', tuning: ["E,","A,","D","G","B","e"], label: 'Guitar' },
       mandolin: { instrument: 'violin', tuning: ["G,","D","A","e"], label: 'Mandolin' },
       ukulele: { instrument: 'violin', tuning: ["G,","C","E","A"], label: 'Ukulele' },
-      baritone: { instrument: 'violin', tuning: ["D,","G,","B,","E"], label: 'Baritone' }
+      baritone: { instrument: 'violin', tuning: ["D,","G,","B,","E"], label: 'Baritone' },
+      banjo: { instrument: 'fiveString', tuning: ["D,","G,","B,","D","G"], label: 'Banjo' },
+  viola: { instrument: 'violin', tuning: ["C,","G,","D","A"], label: 'Viola' },
+  cello: { instrument: 'violin', tuning: ["C,,","G,,","D,","A,"], label: 'Cello' },
+  bass: { instrument: 'violin', tuning: ["E,,","A,,","D,","G,"], label: 'Bass' }
     },
 
     loadPersistedState: function() {
@@ -180,6 +185,9 @@
           const clamped = Math.min(this.state.maxOctaveShift, Math.max(this.state.minOctaveShift, rounded));
           this.state.octaveShift = clamped;
         }
+        if (typeof data.octaveUserOverride === 'boolean') {
+          this.state.octaveUserOverride = data.octaveUserOverride;
+        }
         if (data.selectedTunes && typeof data.selectedTunes === 'object') {
           this.collectionSelections = { ...data.selectedTunes };
         }
@@ -198,6 +206,7 @@
           leadInEnabled: !!this.state.leadInEnabled,
           clef: normalizeClefMode(this.state.clef),
           octaveShift: this.state.octaveShift || 0,
+          octaveUserOverride: !!this.state.octaveUserOverride,
           selectedTunes: this.collectionSelections || {}
         };
         storage.setItem(STORAGE_KEY, JSON.stringify(payload));
@@ -301,20 +310,29 @@
       if (up) up.addEventListener('click', () => { this.state.vt++; if (transposeInfo) transposeInfo.textContent = this.state.vt + ' st'; this.render(); });
       if (renderBtn) renderBtn.addEventListener('click', () => this.render());
 
-      const setOctaveShift = (value) => {
+      const setOctaveShift = (value, { userInitiated = false, skipRender = false } = {}) => {
         const numeric = Number(value);
         if (!Number.isFinite(numeric)) return;
         const rounded = Math.round(numeric);
         const next = Math.min(this.state.maxOctaveShift, Math.max(this.state.minOctaveShift, rounded));
-        if (next === this.state.octaveShift) return;
+        if (next === this.state.octaveShift) {
+          if (userInitiated && !this.state.octaveUserOverride) {
+            this.state.octaveUserOverride = true;
+            this.persistState();
+          }
+          return;
+        }
+        if (userInitiated) {
+          this.state.octaveUserOverride = true;
+        }
         this.state.octaveShift = next;
         this.persistState();
         this.updateOctaveControls();
-        this.render();
+        if (!skipRender) this.render();
       };
       const applyOctaveDelta = (delta) => {
         const current = Number.isFinite(this.state.octaveShift) ? this.state.octaveShift : 0;
-        setOctaveShift(current + delta);
+        setOctaveShift(current + delta, { userInitiated: true });
       };
       const octaveDownEls = [q('octaveDown'), q('octaveDownBlank')].filter(Boolean);
       const octaveUpEls = [q('octaveUp'), q('octaveUpBlank')].filter(Boolean);
@@ -323,7 +341,7 @@
       const octaveSelectEls = [q('octaveSelect'), q('octaveSelectBlank')].filter(Boolean);
       octaveSelectEls.forEach(sel => sel.addEventListener('change', evt => {
         const val = evt?.target?.value;
-        setOctaveShift(val);
+        setOctaveShift(val, { userInitiated: true });
       }));
       this.updateOctaveControls();
 
@@ -347,30 +365,50 @@
       if (clefSel) clefSel.addEventListener('change', handleClefChange);
       if (clefSelBlank) clefSelBlank.addEventListener('change', handleClefChange);
 
-      const layerSel = q('layerSelect');
+      const layerSelectEls = [q('layerSelect'), q('layerSelectBlank')].filter(Boolean);
       const strip = q('stripChords');
-      const applyClefDefaultForLayer = () => {
-        if (!layerSel) return;
-        const layerValue = layerSel.value;
-        if (this.state.clefUserOverride) return;
-        const currentClef = normalizeClefMode(this.state.clef);
-        if (layerValue === 'bass' && currentClef !== 'bass') {
-          this.state.clef = 'bass';
-        } else if (layerValue !== 'bass' && currentClef === 'bass') {
-          this.state.clef = 'treble';
+      const syncLayerSelectValues = (value) => {
+        layerSelectEls.forEach(sel => {
+          if (sel && sel.value !== value) sel.value = value;
+        });
+      };
+      const applyLayerDefaults = (layerValue, { skipRender = false } = {}) => {
+        if (!this.state.clefUserOverride) {
+          const currentClef = normalizeClefMode(this.state.clef);
+          if (layerValue === 'bass' || layerValue === 'cello') {
+            if (currentClef !== 'bass') this.state.clef = 'bass';
+          } else if (layerValue === 'viola') {
+            if (currentClef !== 'alto') this.state.clef = 'alto';
+          } else if (currentClef === 'bass' || currentClef === 'alto') {
+            this.state.clef = 'treble';
+          }
+        }
+        if (!this.state.octaveUserOverride) {
+          if (layerValue === 'bass') {
+            setOctaveShift(-1, { userInitiated: false, skipRender });
+          } else if (this.state.octaveShift !== 0) {
+            setOctaveShift(0, { userInitiated: false, skipRender });
+          }
         }
       };
-      if (layerSel) {
-        const onLayerChange = () => {
-          this.state.layer = layerSel.value;
-          applyClefDefaultForLayer();
+      if (layerSelectEls.length) {
+        const onLayerChange = (evt) => {
+          const nextValue = evt?.target?.value || 'none';
+          this.state.layer = nextValue;
+          syncLayerSelectValues(nextValue);
+          applyLayerDefaults(nextValue, { skipRender: true });
           syncClefSelectValues();
           this.persistState();
           this.render();
         };
-        applyClefDefaultForLayer();
+        const initialLayer = (this.state.layer && this.instruments[this.state.layer]) ? this.state.layer : (layerSelectEls[0].value || 'none');
+        this.state.layer = initialLayer;
+        applyLayerDefaults(initialLayer, { skipRender: true });
         syncClefSelectValues();
-        layerSel.addEventListener('change', onLayerChange);
+        syncLayerSelectValues(initialLayer);
+        layerSelectEls.forEach(sel => sel.addEventListener('change', onLayerChange));
+      } else {
+        this.state.layer = 'none';
       }
       if (strip) strip.addEventListener('change', () => { this.state.stripChordsForTabs = !!strip.checked; this.render(); });
 
