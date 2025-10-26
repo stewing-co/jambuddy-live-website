@@ -1459,3 +1459,381 @@ w: A life once full, now an em-pty vase. Wilt the blos-soms on his ear-ly grave.
 w: Walk a-way me boy, walk a-way me boy. And by mor-ning we'll be free.
 |FE"D"D2ED|FA"G"BB"D"A2| FFE DFF|"A"E2D"D"D3|
 w: Wipe that gol-den tear from your mo-ther, dear. And reaise what's left of the flag for me.
+% Frank Hamilton School – Intro to Irish Session Tunes
+% Updated 2025-10-26
+
+% WALTZES ----------------------------------------------------------
+X:102
+T:Sí Bheag Sí Mhór
+S:The Session: https://thesession.org/tunes/449#setting55400
+C:Traditional
+R:waltz
+M:3/4
+L:1/8
+Q:1/4=96
+K:D
+de|:"D"f2 fe d2|"Bm"d2 de d2|"G"B4 "A"A2|"D"F4 A2|"G"BA Bc d2|"A7"e4 de|"D"f2 f2 e2|"Bm"d4 f2|
+|"G"B4 e2|"D/A"A4 d2|"Bm"F4 E2|"Bm"D4 f2|"G"B4 e2|"A7"A4 dc|"D"d6|"D"d4 de:|
+|:"D"f2 fe d2|"A7"ed ef a2|"G"b4 a2|"D"f4 ed|"A7"e4 a2|"D"f4 e2|"D"d4 B2|"A"B4 A2|
+|"F#m"F4 E2|"Bm"D4 f2|"G"B4 e2|"A7"A4 a2|"G"ba gf ed|"A7"e4 dc|"D"d6|1 "D"d4 de:|2 "D"d6||
+
+X:103
+T:Planxty Irwin
+C:Turlough O'Carolan
+S:JamBuddy archives (transposed to G)
+R:air
+M:3/4
+L:1/4
+Q:1/4=88
+K:G
+D|:"G"g2 f|"C"Efg|"D7"D2 C|"G"BAG|"D7"C2 A|"G"BCD|"D"F2 G|"D7"A2 D|
+|"G"g2 f|"C"Efg|"D7"D2 C|"G"BAG|"D7"C2 A|"G"BCD|"D7"G2 F|"G"G2 "D7"D:|
+|:"G"g2 g|"G"gfg|"Am"a2 a|"D7"afD|"G"b2 b|B"D"a2 g|"A7"g f E|"D7"DEf|
+|"G"g2 f|"C"Efg|"D7"D2 C|"G"BAG|"D7"C2 A|"G"BCD|"D7"G2 F|"G"G2 "D7"D:|
+
+X:104
+T:Southwind
+S:O'Neill's Music of Ireland (public domain)
+C:Traditional
+R:waltz
+M:3/4
+L:1/8
+Q:1/4=90
+K:G
+|:"G"D2 G2 B2|"C"c2 B2 G2|"G"D2 G2 B2|"D"A2 F2 D2|
+"G"G2 B2 d2|"C"e2 d2 B2|"Am"A2 c2 e2|"D"d4 D2|
+"G"G2 B2 d2|"C"e2 d2 B2|"G"B2 d2 g2|"D"a2 f2 d2|
+"G"g2 f2 e2|"Em"e2 d2 B2|"C"c2 B2 A2|"D"A4 D2:|
+
+% POLKAS -----------------------------------------------------------
+X:105
+T:Britches Full Of Stitches, The
+S:The Session: https://thesession.org/tunes/1075#setting24427
+C:Traditional
+R:polka
+M:2/4
+L:1/8
+Q:1/4=120
+K:G
+|:"G"G>A BG|"C"AG BG|"G"G2 BG|"D"AG E2|
+|"G"G>A BG|"C"AG Bd|G>A "D"GE|"G"ED D2:|
+|:"G"d>e dB|"C"AG AB|"G"d>e dB|"D"AG E2|
+|"G"d>e dB|"C"AG AB|G>A "D"GE|"G"ED D2:|
+
+X:106
+T:Maggie in the Wood
+S:Dan Cobb Collection (public domain)
+C:Traditional
+R:polka
+M:2/4
+L:1/8
+Q:1/4=118
+K:G
+B/A/|"G"GD GA|"C"Be eg/e/|"G"dB AG/A/|"D"BA AB/A/|
+"G"GD GA|"C"Be eg/e/|"G"dB AB/A/|"G"G2 G:|
+e/f/|"G"gf ed|"C"ef ge|"G"dB AG/A/|"D"BA A|
+[1 "G"e/f/|gf ed|ef ge|dB AB/A/|"G"G2 G:|
+[2 "G"B/A/|GD GA|Be eg/e/|dB AB/A/|"G"G2 G||
+
+X:107
+T:Bill Sullivan's Polka
+S:Common session setting
+C:Traditional
+R:polka
+M:2/4
+L:1/8
+Q:1/4=120
+K:D
+|:"D"FA dA|FA dA|"G"B2 BA|"A"GE ED|
+"D"FA dA|FA dA|"G"B2 "A"BA|"D"GF FD:|
+|:"D"Ad fd|"G"Bd gd|"D"Ad fd|"A"ge ed|
+"D"Ad fd|"G"Bd gd|"D"Ad fd|"A"ge "D"fd:|
+
+X:108
+T:Ballydesmond Polka No. 3
+S:Nigel Gatherer Collection
+C:Traditional
+R:polka
+M:2/4
+L:1/8
+Q:1/4=122
+K:Am
+B|"Am"c2 B2|A2 G>A|"G"Bd ed|g3 d|
+"Am"ea ge|"G"dB GA/B/|"C"ce dB|"Am"A2 A:|
+z|"Am"ea ag/e/|"G"dg g>d|"Am"ea ab|"G"g2 ed|
+"Am"ea g/a/g/e/|"G"dB GA/B/|"C"ce dB|"Am"A2 A:|
+
+X:109
+T:Egan's Polka
+S:The Session: https://thesession.org/tunes/39#setting49794
+C:Traditional
+R:polka
+M:2/4
+L:1/8
+Q:1/4=120
+K:D
+|:"D"fA BA|fA BA|"G"d2"Em"e>f|"A"ed BA|
+"D"fA BA|fA BA|"G"d2"A"e>f|"D"ed d2:|
+|:"D"fa fe|"A"ed BA|"G"d2 e>f|"A"ed BA|
+"D"fa fe|"A"ed BA|"G"d2"A"e>f|"D"ed d2:|
+
+% MARCHES ---------------------------------------------------------
+X:110
+T:Coleman's March
+S:JamBuddy archives
+C:Traditional
+R:march
+M:4/4
+L:1/8
+Q:1/4=200
+K:D
+|:"D"F8|"G"G6 "D"FG|A2 AB AG F2|"A"E6 FG|
+|"D"A2 d2 "A"c4|"G"B2 BA "D"FE D2|"Em"E2 EF "A7"GFE2|1 "D"D4 AB AG:|2 "D"D4 DF Ac||
+|:"D"d8|"A"c8|"G"B2 Bc d cB2|"D"A6 FG|
+|"D"A2 d2 "A"c4|"G"B2 Bc "D"BA F2|"Em"E2 EF "A7"GF E2|1 "D"D4 DF Ac:|2 "D"D8|
+
+X:111
+T:Tralee Gaol
+S:Common session setting (minor variant)
+C:Traditional
+R:polka
+M:2/4
+L:1/8
+Q:1/4=118
+K:Am
+|:"Am"AB c/A/B/c/|"G"B>A GA|"Am"AB cA|"E"B>c BA|
+"Am"AB c/A/B/c/|"G"B/c/B/A/ GA|"Am"AB cA|"E"B>c BA:|
+|:"Am"ac' bc'|"G"bagA|"Am"ac' bc'|"E"Bd BA|
+"Am"ac' bc'|"G"bagB|"Am"c'a eA|"E"B>c BA:|
+
+% JIGS ------------------------------------------------------------
+X:112
+T:Gander in the Pratie Hole
+S:Nigel Gatherer Collection
+C:Traditional
+R:jig
+M:6/8
+L:1/8
+Q:1/4=108
+K:Ddor
+|:"Dm"FAD FAD|"C"GFG "Dm"EFG|"Dm"FAD FAD|"C"GED D3|
+"Dm"FAD FAD|"C"GFG "Dm"EFG|"Dm"fed ecA|"C"GED D3:|
+|"Dm"Add ded|"C"=cAB cAG|"Dm"Add ded|"C"=cAB c2 B|
+"Dm"Add ded|"C"=cAB cde|"Dm"fed ecA|"C"GED D3:|
+
+X:113
+T:Donnybrook Fair
+S:The Session: https://thesession.org/tunes/26#setting28093
+C:Traditional
+R:jig
+M:6/8
+L:1/8
+Q:1/4=113
+K:G
+|:"G"GFG "D"AGA|"Em"Bee dBA|BAB GAB|"Am"AGE DED|
+|"G"G2 G "D"A2 A|"Em"Bee dBA|B2 B "C"GAB|"D"AGF "G"G3:|
+|"Em"gfe fed|efe dBA|Bee dBA|Bee e2 f|1 gfe fed|efe dBA|"Am"BAB GAB|
+"D7"AGF "G"G2 f:|2 "Em"gfg "D"aga|"Em"bge dBA|"Am"B2 B GAB|"D7"AGF "G"G3||
+
+X:114
+T:Kesh Jig, The
+S:The Session: https://thesession.org/tunes/55#setting31538
+C:Traditional
+R:jig
+M:6/8
+L:1/8
+Q:1/4=113
+K:G
+|:"G"G3 GAB|"D"A3 ABd|"C"edd gdd|edB "D"dBA|
+"G"GAG GAB|"D"ABA ABd|"C"edd gdd|"D"BAF "G"G3:|
+|:"G"B2 B dBd|"C"ege dBA|"G"B2 B dBG|"D"A2 A AGA|
+"G"B2 B dBd|"C"ege dBd|"Am"gfg aga|"D"bgf "G"g3:|
+
+X:115
+T:Lilting Banshee, The
+S:The Session: https://thesession.org/tunes/60#setting34816
+C:Traditional
+R:jig
+M:6/8
+L:1/8
+Q:1/4=113
+K:Ador
+|:"Am"EAA EAA|"G"BAB G2 A|"Em"Bee edB|"G"dBA GED|
+|"Am"EAA EAA|"G"BAB G2 A|"Em"Bee edB|1 "G"dBA "Am"A3:|2 "G"dBA "Am"A2 d||
+|:"Am"eaa age|"G"dBA G2 A|"Em"Bee edB|"D"def "G"gfg|
+|"Am"eaa age|"G"dBA G2 A|"Em"Bee edB|1 "G"dBA "A"A2 d:|2 "G"dBA "A"A3||
+
+% REELS ------------------------------------------------------------
+X:116
+T:Banshee, The
+S:The Session: https://thesession.org/tunes/8#setting55315
+C:Traditional
+R:reel
+M:4/4
+L:1/8
+Q:1/4=120
+K:G
+|:"G"G2 GD EDED|GFGB d2 Bd|"C"eged BAGA|"D"BAGE E2 (3DEF|
+|"G"G2 GD EDED|GFGB d2 Bd|"C"eged BAGA|"D"BAGE E2 D2:|
+|:"Em"eaag egge|"G"dBBA B2 Bd|"C"e2 eB gBfB|"D"eBBA B3 z|
+|"Em"eaag efge|"G"dBBA B2 Bd|"C"eged BAGA|"D"BAGE E2 D2:|
+
+X:117
+T:Miss Monaghan's
+S:Common session setting
+C:Traditional
+R:reel
+M:4/4
+L:1/8
+Q:1/4=120
+K:G
+|:"G"DGBG dGBG|"C"EGcG "D"FAdf|"G"DGBG dGBg|"C"egfa "D"gfed|
+"G"DGBG dGBG|"C"EGcG "D"FAdf|"G"g2 ga "C"bgaf|"D"gefd "G"e2 dB:|
+|:"G"g2 ga bagf|"C"eagf "D"gfed|"G"g2 ga bagf|"C"eagf "D"gfed|
+"G"g2 ga bagf|"C"eagf "D"gfed|"G"g2 ga "C"bgaf|"D"gefd "G"e2 dB:|
+
+X:118
+T:Silver Spear, The
+S:The Session: https://thesession.org/tunes/182#setting45738
+C:Traditional
+R:reel
+M:4/4
+L:1/8
+Q:1/4=120
+K:D
+|:"D"FA ~A2 BAFA|"G"dfed "A"BcdA|"D"FA ~A2 BAFA|"G"dfed "A"~B2 A2|
+|"D"FA ~A2 BAFA|"G"dfed "A"Bdef|"G"~g3 e "D"~f3 e|"G"dfed "A"~B2 A2:|
+|:"D"fa ~a2 bfaf|"G"gfed "A"Bcde|"D"fa ~a2 bfaf|"G"gfed "A"~B2 A2|
+|"D"fa ~a2 bfaf|"G"gfed "A"Bdef|"G"~g3 e "D"~f3 e|1 "G"dfed "A"~B2 A2:|2 "G"dfed "D"~d4||
+
+X:119
+T:Little Beggar Man (Red Haired Boy)
+S:Common session setting
+C:Traditional
+R:reel
+M:4/4
+L:1/8
+Q:1/4=120
+K:Amix
+|:"A"A2 cA E2 cA|"G"B2 dB G2 dB|"A"A2 cA E2 cA|"G"B2 dB "A"A2 e2|
+"A"a2 ab a2 ab|"G"g2 fg g2 fg|"A"a2 ab a2 ab|"G"g2 fg "A"a2 e2:|
+|:"A"e2 fg a2 ag|"G"b2 ag e2 dB|"A"c2 ec A2 cA|"G"B2 dB "A"A2 e2|
+"A"a2 ab a2 ab|"G"g2 fg g2 fg|"A"a2 ag e2 cA|"G"B2 dB "A"A2 e2:|
+
+% HORNPIPE SET -----------------------------------------------------
+X:120
+T:Harvest Home, The
+S:The Session: https://thesession.org/tunes/49#setting21792
+C:Traditional
+R:hornpipe
+M:4/4
+L:1/8
+Q:1/4=138
+K:D
+"A"AF|:"D"DAFA DAFA|"D"defe dcBA|"A"eAfA gAfA|"Em"(3efe (3dcB "A7"(3ABA (3GFE|
+"D"DAFA DAFA|"D"defe dcBA|"A7"eAfA gfec|1 "D"d2 f2 d2 "A"AF:|2 "D"d2 f2 d2 cd||
+|:"A"eAA/G/A "D"fAA/G/A|"A7"gAfA "D"eAA/G/A|"A"eAfA gAfA|"Em"(3efe (3dcB "A7"(3ABA (3GFE|
+"D"DAFA DAFA|"D"defe dcBA|"A7"eAfA gfec|1 "D"d2 f2 d2 cd:|2 "D"d2 f2 d4||
+
+X:121
+T:Piper in the Meadow Straying, The
+S:Traditional Tune Archive (Patrick Cavanagh)
+C:Traditional
+R:set dance
+M:4/4
+L:1/8
+Q:1/4=112
+K:G
+"G"d2 d>c B2 B>A|"G"G>FG>A B2 G2|"C"A>Bc>A G2 F2|"G"G2 B2 B2 A2|
+"G"d2 d>c B2 B>A|"G"G>FG>A B2 G2|"C"A>Bc>A G2 F2|"G"G2 B2 G2 z2:|
+"G"A2 A>B c2 A2|"G"G>FG>B d2 B2|"G"d2 d>d e2 g2|"C"f>ed>^c d>AB>=c|
+"G"d>ed>c B>cB>A|"G"G>FG>A B2 G2|"C"A>Bc>A G2 F2|"G"G2 B2 B2 A2|
+"G"d>ed>c B>cB>A|"G"G>FG>A B2 G2|"C"A>Bc>A G2 F2|"G"G2 B2 G2 z2||
+
+X:122
+T:Boys of Blue Hill, The
+S:The Session: https://thesession.org/tunes/651#setting21789
+C:Traditional
+R:hornpipe
+M:4/4
+L:1/8
+Q:1/4=138
+K:D
+FA|:"Bm"BAFA "D"DA FA|"Bm"BA (3Bcd "A"e2 de|"D"fa gf "A7"egfe|"D"dfed "Bm"B2dA|
+"Bm"BAFA "D"DAFA|"Bm7"BA (3Bcd "Em"e2 de|"D"fagf "A7"egfe|1 "D"d2 f2 d2 FA:|2 "D"d2 f2 d2 fg||
+|:"D"afdf a2gf|"G"efga b2 ag|"D"fagf "A7"egfe|"D"dfed "Bm"B2 dA|
+BA FA "D"DA FA|"Bm7"BA (3Bcd "Em"e2de|"D"fagf "A7"egfe|1 "D"d2 f2 d2 fg:|2 "D"d2 f2 d2 z2||
+
+X:123
+T:King of the Fairies
+S:The Session: https://thesession.org/tunes/475#setting37954
+C:Traditional
+R:hornpipe
+M:4/4
+L:1/8
+Q:1/4=126
+K:Em
+B2|:"Em"EDEF GFGA|B2 B2 "G"G3 A|"Em"B2 E2 EFGE|"D"FGFE D3 B|
+"Em"EDEF GFGA|BAGB "G"d3 c|"Em"B2 E2 "D"GFED|"Em"E2 ED E2 B2:|
+|"Em"e2 e2 Bdef|"G"gagf "Em"e3 f|"Em"e2 B2 BAB^c|"D"ded^c BcdB|
+"Em"e2 e2 Bdef|"G"gagf "Em"efed|"Em"Bdeg "D"fedf|"Em"e2 ed e3 f|
+"G"g2 ge "D"f2 fd|"Em"edB^c "D"d3 e|"Em"dBAF "G"GAB^c|"D"dBAF "Em"GFED|
+B2 E2 EFGA|"G"B2 e2 "Em"edef|"Em"e2 B2 "D"BAGF|"Em"E2 ED E4||
+
+% BARNDANCES -------------------------------------------------------
+X:124
+T:Lucy Farr's
+S:Robert Fish Band via Nigel Gatherer
+C:Traditional
+R:polka
+M:2/4
+L:1/8
+Q:1/4=112
+K:G
+|:"G"Bc/B/ AG|"C"EG GA|"G"Bc/B/ AG|"G"Bd ed|
+|"G"Bc/B/ AG|"C"EG GA|"G"BG/B/ dB|"G"AG G2:|
+|:"G"gd ed|"D"Bd d2|"G"gd ed|"D"Bd A2|
+|"G"gd ed|"D"Bd ed|"G"Bc/B/ AG/A/|"G"BG G2:|
+
+X:125
+T:Gypsy Princess
+S:The Session: https://thesession.org/tunes/4577
+C:Traditional
+R:barndance
+M:4/4
+L:1/8
+Q:1/4=108
+K:A
+|:"C"c2 c2 c2 c2|"G"BcBA "F"F2 E2|"C"EFAB ceec|"G"cBBc B2 AB|
+"C"c2 c2 c2 c2|"G"BcBA "F"F2 E2|"C"EFAB ceec|1 "G"B2 A2 A2 AB:|2 "G"B2 A2 A2 (3ABc||
+|:"C"e2 e2 e2 e2|"G"cdcB "A"A2 (3cde|"C"f3 f f2 fa|"G"cdcB "A"A2 (3ABc|
+"C"e4 e2 ee|"G"cdcB "A"A2 (3cde|"C"a2 fe c2 Bd|1 "G"c2 A2 A2 (3ABc:|2 "G"c2 A2 A2 AB||
+
+% SONG TUNES -------------------------------------------------------
+X:126
+T:Red Is the Rose
+C:Traditional
+R:song air
+M:3/4
+L:1/4
+Q:1/4=80
+K:G
+|:"G"G2 G|"C"E2 G|"G"B2 A|"D"A2 D|
+"G"G2 G|"C"E2 G|"G"B2 A|"D"A3|
+"G"G2 B|"C"c2 B|"G"AG E|"D"D2 D|
+"G"G2 B|"C"c2 B|"G"AG E|"D"D3|
+"G"G2 B|"C"c2 B|"G"AG E|"D"D2 D|
+"G"G2 B|"C"c2 B|"G"AG E|"D"D3|
+"G"G2 G|"C"E2 G|"G"B2 A|"D"A2 D|
+"G"G2 G|"C"E2 G|"G"B2 A|"D"A3||
+
+X:127
+T:That Night in Bethlehem
+A: Don Oiche Ud I mBeithil
+R: reel
+M:3/4
+K:Amin
+L:1/4
+E|:"Am"A>B c|BAG|A3-|A2A|"C"c>d e|1 "G"d2BE|"Em"G3-|G2:|2 "G"B2A|"Am"A3-|A2 e||
+|"C"g2e|d>eg|"Am"a3-|a>b a|g2e|c>d e|"Em"e3-|e2E|
+|"Am"A>B c|B>AG|A3-|A2A|"C"c>d e|"Em"B2A|"Am"A3-|A2||
