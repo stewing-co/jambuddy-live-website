@@ -779,6 +779,20 @@
         current.lines.push(line);
       }
       pushCurrent();
+      const normalizeSortTitle = (title) => {
+        const trimmed = (title || '').trim();
+        const stripped = trimmed.replace(/^(?:the|an|a)\s+/i, '');
+        return (stripped || trimmed).toLocaleLowerCase();
+      };
+      tunes.sort((a, b) => {
+        const titleA = normalizeSortTitle(a.title);
+        const titleB = normalizeSortTitle(b.title);
+        if (titleA < titleB) return -1;
+        if (titleA > titleB) return 1;
+        const xA = Number(a.x) || 0;
+        const xB = Number(b.x) || 0;
+        return xA - xB;
+      });
       this.state.tunes = tunes;
       return tunes;
     },
@@ -2219,11 +2233,21 @@
             s.onerror = () => reject(new Error('Failed to load ' + src));
             document.head.appendChild(s);
           });
-          try {
-            await loadScript('https://cdn.jsdelivr.net/npm/abcjs@6.4.4/dist/abcjs-midi-min.js');
-          } catch (_) {
-            // Fallback CDN
-            await loadScript('https://unpkg.com/abcjs@6.4.4/dist/abcjs-midi-min.js');
+          const sources = [
+            '/abcjs/abcjs-midi-min.js',
+            'https://cdn.jsdelivr.net/npm/abcjs@6.4.4/dist/abcjs-midi-min.js',
+            'https://unpkg.com/abcjs@6.4.4/dist/abcjs-midi-min.js'
+          ];
+          for (const src of sources) {
+            try {
+              await loadScript(src);
+            } catch (error) {
+              console.warn('ABCViewer: MIDI plugin load failed for', src, error);
+              continue;
+            }
+            if (window.ABCJS && ABCJS.midi && typeof ABCJS.midi.getMidiFile === 'function') {
+              break;
+            }
           }
           this._loadingMidiPlugin = false;
           return !!(window.ABCJS && ABCJS.midi && typeof ABCJS.midi.getMidiFile === 'function');
