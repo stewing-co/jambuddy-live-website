@@ -2212,13 +2212,14 @@
       const abc = document.getElementById(this.state.inputId)?.value || '';
       // Ensure the MIDI plugin is present; try to lazy-load if missing
       const ensureMidi = async () => {
+        const hasSynthApi = () => !!(window.ABCJS && ABCJS.synth && typeof ABCJS.synth.getMidiFile === 'function');
+        const hasLegacyApi = () => !!(window.ABCJS && ABCJS.midi && typeof ABCJS.midi.getMidiFile === 'function');
         try {
-          if (window.ABCJS && ABCJS.midi && typeof ABCJS.midi.getMidiFile === 'function') return true;
+          if (hasSynthApi() || hasLegacyApi()) return true;
           if (this._loadingMidiPlugin) {
-            // Wait for an in-flight load
             return new Promise((resolve) => {
               const chk = () => {
-                if (window.ABCJS && ABCJS.midi && typeof ABCJS.midi.getMidiFile === 'function') resolve(true);
+                if (hasSynthApi() || hasLegacyApi()) resolve(true);
                 else setTimeout(chk, 100);
               };
               chk();
@@ -2234,23 +2235,24 @@
             document.head.appendChild(s);
           });
           const sources = [
-            '/abcjs/abcjs-midi-min.js',
-            'https://cdn.jsdelivr.net/npm/abcjs@6.4.4/dist/abcjs-midi-min.js',
-            'https://unpkg.com/abcjs@6.4.4/dist/abcjs-midi-min.js'
+            '/abcjs/abcjs-plugin-min.js',
+            'https://cdn.jsdelivr.net/npm/abcjs@6.4.4/dist/abcjs-plugin-min.js',
+            'https://unpkg.com/abcjs@6.4.4/dist/abcjs-plugin-min.js',
+            'https://cdn.jsdelivr.net/npm/abcjs@6.4.4/dist/abcjs-min.js'
           ];
           for (const src of sources) {
             try {
               await loadScript(src);
             } catch (error) {
-              console.warn('ABCViewer: MIDI plugin load failed for', src, error);
+              console.warn('ABCViewer: MIDI bundle load failed for', src, error);
               continue;
             }
-            if (window.ABCJS && ABCJS.midi && typeof ABCJS.midi.getMidiFile === 'function') {
+            if (hasSynthApi() || hasLegacyApi()) {
               break;
             }
           }
           this._loadingMidiPlugin = false;
-          return !!(window.ABCJS && ABCJS.midi && typeof ABCJS.midi.getMidiFile === 'function');
+          return hasSynthApi() || hasLegacyApi();
         } catch (_) {
           this._loadingMidiPlugin = false;
           return false;
@@ -2258,12 +2260,13 @@
       };
       const midiOk = await ensureMidi();
       if (!midiOk) {
-        alert('MIDI export not available. Ensure abcjs-midi-min.js is loaded.');
+        alert('MIDI export not available. Ensure abcjs-basic with synth support is loaded.');
         return;
       }
-      if (ABCJS?.midi?.getMidiFile) {
+      const midiGet = ABCJS?.synth?.getMidiFile || ABCJS?.midi?.getMidiFile;
+      if (typeof midiGet === 'function') {
         // 1) Prefer encoded data URI
-  let res = ABCJS.midi.getMidiFile(abc, { midiOutputType: 'encoded', midiTranspose: this.getTotalTranspose() });
+        let res = midiGet(abc, { midiOutputType: 'encoded', midiTranspose: this.getTotalTranspose() });
         if (typeof res === 'string') {
           if (res.startsWith('data:audio/midi')) {
             const fname = this.sanitizeFilename(this.getCurrentTitle(abc), 'tune') + '.mid';
@@ -2278,7 +2281,7 @@
           }
         }
         // 2) Try binary output and build a Blob
-  let bin = ABCJS.midi.getMidiFile(abc, { midiOutputType: 'binary', midiTranspose: this.getTotalTranspose() });
+        let bin = midiGet(abc, { midiOutputType: 'binary', midiTranspose: this.getTotalTranspose() });
         if (bin && (bin.byteLength || (typeof Uint8Array !== 'undefined' && bin instanceof Uint8Array))) {
           const blob = new Blob([bin], { type: 'audio/midi' });
           const fname = this.sanitizeFilename(this.getCurrentTitle(abc), 'tune') + '.mid';
@@ -2288,7 +2291,7 @@
         // 3) Try with the current visual object source
         const vObjAlt = this.state.lastVisualObj || this.render(true);
         if (vObjAlt) {
-          let res2 = ABCJS.midi.getMidiFile(vObjAlt, { midiOutputType: 'encoded', midiTranspose: this.getTotalTranspose() });
+          let res2 = midiGet(vObjAlt, { midiOutputType: 'encoded', midiTranspose: this.getTotalTranspose() });
           if (typeof res2 === 'string' && res2.startsWith('data:audio/midi')) {
             const fname = this.sanitizeFilename(this.getCurrentTitle(abc), 'tune') + '.mid';
             this.download(fname, 'audio/midi', res2);
@@ -2305,7 +2308,7 @@
       if (ABCJS?.synth?.CreateSynth) {
         const vObj = this.render(true, true);
         const synth = new ABCJS.synth.CreateSynth();
-  await synth.init({ visualObj: vObj, options: { midiTranspose: this.getTotalTranspose() } });
+        await synth.init({ visualObj: vObj, options: { midiTranspose: this.getTotalTranspose() } });
         if (synth.downloadMidi) {
           const dataUrl = await synth.downloadMidi();
           if (dataUrl) {
@@ -2315,7 +2318,7 @@
           }
         }
       }
-      alert('MIDI export not available. Ensure abcjs-midi-min.js is loaded.');
+      alert('MIDI export not available. Ensure abcjs-basic with synth support is loaded.');
     } catch (e) {
       console.error('MIDI export failed:', e);
       alert('MIDI export failed');
