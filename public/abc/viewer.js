@@ -255,32 +255,25 @@
       const max = this.state.maxOctaveShift;
       const disableDown = shift <= min;
       const disableUp = shift >= max;
-      ['octaveLabel', 'octaveLabelBlank'].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.textContent = display;
-      });
-      ['octaveDown', 'octaveDownBlank'].forEach(id => {
-        const btn = document.getElementById(id);
-        if (btn) btn.disabled = disableDown;
-      });
-      ['octaveUp', 'octaveUpBlank'].forEach(id => {
-        const btn = document.getElementById(id);
-        if (btn) btn.disabled = disableUp;
-      });
+      const octaveLabelEl = document.getElementById('octaveLabel');
+      if (octaveLabelEl) octaveLabelEl.textContent = display;
+      const octaveDownEl = document.getElementById('octaveDown');
+      if (octaveDownEl) octaveDownEl.disabled = disableDown;
+      const octaveUpEl = document.getElementById('octaveUp');
+      if (octaveUpEl) octaveUpEl.disabled = disableUp;
       const shiftStr = String(shift);
-      ['octaveSelect', 'octaveSelectBlank'].forEach(id => {
-        const sel = document.getElementById(id);
-        if (!sel) return;
-        Array.from(sel.options).forEach(opt => {
+      const octaveSelectEl = document.getElementById('octaveSelect');
+      if (octaveSelectEl) {
+        Array.from(octaveSelectEl.options).forEach(opt => {
           const optVal = Number(opt.value);
           if (Number.isFinite(optVal)) {
             opt.disabled = optVal < min || optVal > max;
           }
         });
-        if (sel.value !== shiftStr) {
-          sel.value = shiftStr;
+        if (octaveSelectEl.value !== shiftStr) {
+          octaveSelectEl.value = shiftStr;
         }
-      });
+      }
     },
 
     init: function(inputId, paperId) {
@@ -334,24 +327,21 @@
         const current = Number.isFinite(this.state.octaveShift) ? this.state.octaveShift : 0;
         setOctaveShift(current + delta, { userInitiated: true });
       };
-      const octaveDownEls = [q('octaveDown'), q('octaveDownBlank')].filter(Boolean);
-      const octaveUpEls = [q('octaveUp'), q('octaveUpBlank')].filter(Boolean);
-      octaveDownEls.forEach(btn => btn.addEventListener('click', () => applyOctaveDelta(-1)));
-      octaveUpEls.forEach(btn => btn.addEventListener('click', () => applyOctaveDelta(1)));
-      const octaveSelectEls = [q('octaveSelect'), q('octaveSelectBlank')].filter(Boolean);
-      octaveSelectEls.forEach(sel => sel.addEventListener('change', evt => {
+      const octaveDownBtn = q('octaveDown');
+      const octaveUpBtn = q('octaveUp');
+      if (octaveDownBtn) octaveDownBtn.addEventListener('click', () => applyOctaveDelta(-1));
+      if (octaveUpBtn) octaveUpBtn.addEventListener('click', () => applyOctaveDelta(1));
+      const octaveSelectEl = q('octaveSelect');
+      if (octaveSelectEl) octaveSelectEl.addEventListener('change', evt => {
         const val = evt?.target?.value;
         setOctaveShift(val, { userInitiated: true });
-      }));
+      });
       this.updateOctaveControls();
 
       const clefSel = q('clefSelect');
-      const clefSelBlank = q('clefSelectBlank');
       const syncClefSelectValues = () => {
         const val = normalizeClefMode(this.state.clef);
-        [clefSel, clefSelBlank].forEach(sel => {
-          if (sel) sel.value = val;
-        });
+        if (clefSel) clefSel.value = val;
       };
       syncClefSelectValues();
       const handleClefChange = (evt) => {
@@ -363,9 +353,8 @@
         this.render();
       };
       if (clefSel) clefSel.addEventListener('change', handleClefChange);
-      if (clefSelBlank) clefSelBlank.addEventListener('change', handleClefChange);
 
-      const layerSelectEls = [q('layerSelect'), q('layerSelectBlank')].filter(Boolean);
+      const layerSelectEls = [q('layerSelect')].filter(Boolean);
       const strip = q('stripChords');
       const syncLayerSelectValues = (value) => {
         layerSelectEls.forEach(sel => {
@@ -505,91 +494,70 @@
       }
 
       // Metronome toggle wiring
-      const metToggleEls = ['metronomeToggle', 'metronomeToggleBlank']
-        .map(id => q(id))
-        .filter(Boolean);
-      const metDisplayEls = ['metronomeDisplay', 'metronomeDisplayBlank']
-        .map(id => q(id))
-        .filter(Boolean);
-      if (metDisplayEls.length && !this.state.metronomeDisplayEl) {
-        this.state.metronomeDisplayEl = metDisplayEls[0];
+      const metToggleEl = q('metronomeToggle');
+      const metDisplayEl = q('metronomeDisplay');
+      if (metDisplayEl && !this.state.metronomeDisplayEl) {
+        this.state.metronomeDisplayEl = metDisplayEl;
       }
-      const syncMetDisplayCopies = () => {
-        if (!this.state.metronomeDisplayEl || metDisplayEls.length < 2) return;
-        metDisplayEls.forEach(el => {
-          if (el !== this.state.metronomeDisplayEl) {
-            el.textContent = this.state.metronomeDisplayEl.textContent;
-            el.className = this.state.metronomeDisplayEl.className;
-          }
-        });
-      };
       const updateMetLabel = () => {
         const enabled = !!this.state.metronomeEnabled;
-        metToggleEls.forEach(btn => {
-          btn.textContent = enabled ? 'Metronome: On' : 'Metronome: Off';
-          btn.setAttribute('aria-pressed', enabled ? 'true' : 'false');
-          btn.classList.toggle('bg-blue-500/20', enabled);
-          btn.classList.toggle('text-white', enabled);
-          btn.classList.toggle('text-blue-200', !enabled);
-        });
+        if (metToggleEl) {
+          metToggleEl.textContent = enabled ? 'Metronome: On' : 'Metronome: Off';
+          metToggleEl.setAttribute('aria-pressed', enabled ? 'true' : 'false');
+          metToggleEl.classList.toggle('bg-blue-500/20', enabled);
+          metToggleEl.classList.toggle('text-white', enabled);
+          metToggleEl.classList.toggle('text-blue-200', !enabled);
+        }
         if (!enabled) {
           this.clearMetronomeDisplay();
         } else if (!this.state.isPlaying && !this.state.isCountingIn) {
           this.updateMetronomeDisplay('Ready');
         }
-        syncMetDisplayCopies();
       };
-      if (metToggleEls.length) {
+      if (metToggleEl) {
         updateMetLabel();
-        metToggleEls.forEach(btn => {
-          btn.addEventListener('click', async () => {
-            this.state.metronomeEnabled = !this.state.metronomeEnabled;
-            this.persistState();
-            if (!this.state.metronomeEnabled) {
-              this.state.metronomeCountCancel = true;
-              this.stopMetronomeLoop();
-              this.clearMetronomeDisplay();
+        metToggleEl.addEventListener('click', async () => {
+          this.state.metronomeEnabled = !this.state.metronomeEnabled;
+          this.persistState();
+          if (!this.state.metronomeEnabled) {
+            this.state.metronomeCountCancel = true;
+            this.stopMetronomeLoop();
+            this.clearMetronomeDisplay();
+          } else {
+            this.state.metronomeCountCancel = false;
+            if (this.state.isPlaying) {
+              await this.startMetronomeLoop(this.state.leadInEnabled);
             } else {
-              this.state.metronomeCountCancel = false;
-              if (this.state.isPlaying) {
-                await this.startMetronomeLoop(this.state.leadInEnabled);
-              } else {
-                this.updateMetronomeDisplay('Ready');
-              }
+              this.updateMetronomeDisplay('Ready');
             }
-            updateMetLabel();
-          });
+          }
+          updateMetLabel();
         });
       }
 
-      const leadInToggleEls = ['leadInToggle', 'leadInToggleBlank']
-        .map(id => q(id))
-        .filter(Boolean);
+      const leadInToggleEl = q('leadInToggle');
       const updateLeadInUi = () => {
         const enabled = !!this.state.leadInEnabled;
-        leadInToggleEls.forEach(btn => {
-          btn.textContent = enabled ? 'Lead-in: On' : 'Lead-in: Off';
-          btn.setAttribute('aria-pressed', enabled ? 'true' : 'false');
-          btn.classList.toggle('bg-indigo-500/20', enabled);
-          btn.classList.toggle('text-white', enabled);
-          btn.classList.toggle('text-indigo-200', !enabled);
-        });
+        if (!leadInToggleEl) return;
+        leadInToggleEl.textContent = enabled ? 'Lead-in: On' : 'Lead-in: Off';
+        leadInToggleEl.setAttribute('aria-pressed', enabled ? 'true' : 'false');
+        leadInToggleEl.classList.toggle('bg-indigo-500/20', enabled);
+        leadInToggleEl.classList.toggle('text-white', enabled);
+        leadInToggleEl.classList.toggle('text-indigo-200', !enabled);
       };
-      if (leadInToggleEls.length) {
+      if (leadInToggleEl) {
         updateLeadInUi();
-        leadInToggleEls.forEach(btn => {
-          btn.addEventListener('click', () => {
-            this.state.leadInEnabled = !this.state.leadInEnabled;
-            if (!this.state.leadInEnabled) {
-              this.state.metronomeCountCancel = true;
-              if (this.state.isCountingIn) {
-                this.state.isCountingIn = false;
-                this.clearMetronomeDisplay();
-              }
+        leadInToggleEl.addEventListener('click', () => {
+          this.state.leadInEnabled = !this.state.leadInEnabled;
+          if (!this.state.leadInEnabled) {
+            this.state.metronomeCountCancel = true;
+            if (this.state.isCountingIn) {
+              this.state.isCountingIn = false;
+              this.clearMetronomeDisplay();
             }
-            this.persistState();
-            updateLeadInUi();
-          });
+          }
+          this.persistState();
+          updateLeadInUi();
         });
       }
 
@@ -1998,19 +1966,17 @@
 
   Viewer.updateKeyLabel = function(currentAbcFiltered) {
     const k = this.parseKeyFromAbc(currentAbcFiltered || this.state.fullAbc || '');
-    const labels = ['currentKeyLabel', 'currentKeyLabelBlank']
-      .map(id => document.getElementById(id))
-      .filter(Boolean);
-    if (!labels.length) return;
+    const labelEl = document.getElementById('currentKeyLabel');
+    if (!labelEl) return;
     if (!k) {
-      labels.forEach(el => { el.textContent = 'K?'; });
+      labelEl.textContent = 'K?';
       return;
     }
     const idx = (k.index + (this.state.vt||0)) % 12;
     // Prefer flats when transposing down, sharps when up
     const preferSharps = (this.state.vt||0) >= 0;
     const label = this.keyNameFor(idx, preferSharps, k.minor);
-    labels.forEach(el => { el.textContent = label; });
+    labelEl.textContent = label;
   };
 
   // --- Export utilities ---

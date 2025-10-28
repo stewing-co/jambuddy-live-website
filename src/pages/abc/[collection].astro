@@ -235,24 +235,22 @@ const pageTitle = titleMap[slug] ?? 'ABC Collection';
                         </button>
                         <span id="metronomeDisplay" class="min-w-[4ch] text-xs font-semibold text-blue-200 opacity-60"></span>
                       </div>
+                      <label class="flex items-center gap-2 text-sm text-gray-300">
+                        Tab layer
+                        <select id="layerSelect" class="rounded border border-gray-700 bg-black p-2 text-sm text-gray-200">
+                          <option value="none">None (Staff only)</option>
+                          <option value="guitar">Guitar</option>
+                          <option value="mandolin">Mandolin</option>
+                          <option value="ukulele">Ukulele</option>
+                          <option value="baritone">Baritone Ukulele</option>
+                          <option value="banjo">Banjo</option>
+                          <option value="viola">Viola</option>
+                          <option value="cello">Cello</option>
+                          <option value="bass">Bass</option>
+                        </select>
+                      </label>
                     </div>
                   </div>
-                </div>
-
-                <div class="rounded border border-gray-700 bg-gray-800 p-3">
-                  <label class="mb-2 block text-sm text-gray-300">Tablature layer</label>
-                  <select id="layerSelect" class="w-full rounded border border-gray-700 bg-black p-2 text-sm text-gray-200">
-                    <option value="none">None (Staff only)</option>
-                    <option value="guitar">Guitar</option>
-                    <option value="mandolin">Mandolin</option>
-                    <option value="ukulele">Ukulele</option>
-                    <option value="baritone">Baritone Ukulele</option>
-                    <option value="banjo">Banjo</option>
-                    <option value="viola">Viola</option>
-                    <option value="cello">Cello</option>
-                    <option value="bass">Bass</option>
-                  </select>
-                  <label class="mt-2 block text-sm text-gray-300"><input id="stripChords" type="checkbox" class="mr-2" /> Strip quoted chords for tabs</label>
                 </div>
               </div>
             </details>
@@ -278,141 +276,6 @@ const pageTitle = titleMap[slug] ?? 'ABC Collection';
 
           <!-- Right column removed: simplified to two-column layout -->
         </div>
-
-        <!-- Blank Editor Option -->
-        <details class="mt-8 group rounded border border-gray-700 bg-gray-900/60 px-4 py-3 text-gray-200" data-ignore-print>
-          <summary class="flex cursor-pointer items-center justify-between gap-3 text-sm font-semibold uppercase tracking-wide text-gray-300 transition group-open:text-white">
-            Open Blank Editor
-            <span class="text-xs font-medium text-gray-400 group-open:text-blue-300">Toggle</span>
-          </summary>
-          <p class="mt-4 text-sm text-gray-300 mb-4">Want to paste your own ABC? Use this blank editor with the same full-featured playback and export tools.</p>
-
-          <div class="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[minmax(420px,1.9fr)_minmax(520px,1.15fr)] xl:grid-cols-[minmax(440px,1.95fr)_minmax(560px,1.05fr)] min-h-[calc(100vh-240px)]">
-            <!-- Left column: collapsible controls + rendered song -->
-            <div class="lg:col-span-1 flex flex-col space-y-3 min-h-[calc(100vh-260px)]">
-              <details class="group rounded border border-gray-700 bg-gray-900/70 px-4 py-3 text-gray-200">
-                <summary class="flex cursor-pointer items-center justify-between gap-3 text-sm font-semibold uppercase tracking-wide text-gray-300 transition group-open:text-white">
-                  Playback &amp; Controls
-                  <span class="text-xs font-medium text-gray-400 group-open:text-blue-300">Toggle</span>
-                </summary>
-                <div class="mt-4 space-y-3">
-                  <div class="rounded border border-gray-700 bg-gray-800 p-3">
-                    <div class="flex flex-wrap items-center gap-3">
-                      <div class="flex items-center gap-2">
-                        <button id="transposeDownBlank" class="rounded bg-gray-700 px-2 py-1 text-white" title="Transpose down">&#9837;</button>
-                        <span id="currentKeyLabelBlank" class="min-w-[2ch] text-center font-semibold text-gray-100">K?</span>
-                        <button id="transposeUpBlank" class="rounded bg-gray-700 px-2 py-1 text-white" title="Transpose up">&#9839;</button>
-                        <label class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-gray-300">
-                          Clef
-                          <select id="clefSelectBlank" class="rounded border border-gray-700 bg-gray-800 px-2 py-1 text-sm text-gray-100">
-                            <option value="auto">Original</option>
-                            <option value="treble">Treble</option>
-                            <option value="alto">Alto</option>
-                            <option value="tenor">Tenor</option>
-                            <option value="bass">Bass</option>
-                          </select>
-                        </label>
-                        <label class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-gray-300">
-                          Octave
-                          <select id="octaveSelectBlank" class="rounded border border-gray-700 bg-gray-800 px-2 py-1 text-sm text-gray-100">
-                            <option value="2">+2</option>
-                            <option value="1">+1</option>
-                            <option value="0" selected>0</option>
-                            <option value="-1">-1</option>
-                            <option value="-2">-2</option>
-                          </select>
-                        </label>
-                      </div>
-                      <div class="flex flex-wrap items-center gap-3">
-                        <div class="flex items-center gap-2">
-                          <input id="tempoSliderBlank" type="range" min="40" max="220" value="120" class="w-20" />
-                          <span id="tempoLabelBlank" class="text-sm text-gray-300">120 BPM</span>
-                        </div>
-                        <label class="flex items-center gap-2 text-sm text-gray-300">
-                          Render height
-                          <input id="renderScaleBlank" type="range" min="20" max="100" value="60" class="w-28" />
-                          <span id="renderScaleLabelBlank" class="text-sm text-gray-300">60%</span>
-                        </label>
-                      </div>
-                      <div class="flex flex-wrap items-center gap-2">
-                        <button
-                          id="playbackModeToggleBlank"
-                          class="rounded bg-blue-600 px-3 py-1 text-white hover:bg-blue-500"
-                          title="Playback Mode: Chords + Melody"
-                          type="button"
-                        >
-                          🎵 Mixed
-                        </button>
-                        <button
-                          id="highlightToggleBlank"
-                          class="rounded border border-amber-500 px-3 py-1 text-amber-400 hover:bg-amber-500 hover:text-black"
-                          aria-pressed="false"
-                          type="button"
-                        >
-                          Highlight notes: Off
-                        </button>
-                        <div class="flex items-center gap-2">
-                          <button
-                            id="metronomeToggleBlank"
-                            class="rounded border border-blue-400 px-3 py-1 text-blue-200 transition hover:bg-blue-500/20 hover:text-white"
-                            aria-pressed="false"
-                            type="button"
-                          >
-                            Metronome: Off
-                          </button>
-                          <button
-                            id="leadInToggleBlank"
-                            class="rounded border border-indigo-400 px-3 py-1 text-indigo-200 transition hover:bg-indigo-500/20 hover:text-white"
-                            aria-pressed="true"
-                            type="button"
-                          >
-                            Lead-in: On
-                          </button>
-                          <span id="metronomeDisplayBlank" class="min-w-[4ch] text-xs font-semibold text-blue-200 opacity-60"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="rounded border border-gray-700 bg-gray-800 p-3">
-                    <label class="mb-2 block text-sm text-gray-300">Tablature layer</label>
-                    <select id="layerSelectBlank" class="w-full rounded border border-gray-700 bg-black p-2 text-sm text-gray-200">
-                      <option value="none">None (Staff only)</option>
-                      <option value="guitar">Guitar</option>
-                      <option value="mandolin">Mandolin</option>
-                      <option value="ukulele">Ukulele</option>
-                      <option value="baritone">Baritone Ukulele</option>
-                      <option value="banjo">Banjo</option>
-                      <option value="viola">Viola</option>
-                      <option value="cello">Cello</option>
-                      <option value="bass">Bass</option>
-                    </select>
-                    <label class="mt-2 block text-sm text-gray-300"><input id="stripChordsBlank" type="checkbox" class="mr-2" /> Strip quoted chords for tabs</label>
-                  </div>
-                </div>
-              </details>
-
-              <div class="flex-1 rounded border border-gray-800 bg-gray-900 p-3 abc-print-target">
-                <div id="paperBlank" class="h-full min-h-[60vh] md:min-h-[calc(100vh-320px)]"></div>
-              </div>
-            </div>
-
-            <!-- Middle column: editor + exports -->
-            <div class="lg:col-span-1 flex flex-col space-y-2 min-h-[calc(100vh-260px)]">
-              <div class="flex justify-end gap-2 flex-wrap mb-1">
-                <div class="flex gap-2">
-                  <button id="playToggleBlank" class="px-3 py-1 bg-green-600 text-white rounded hover:bg-green-500" type="button">Play</button>
-                  <button id="exportTuneAbcBlank" class="px-3 py-1 bg-gray-700 text-white rounded" title="Export current as .abc">Tune .abc</button>
-                  <button id="exportFullAbcBlank" class="px-3 py-1 bg-gray-700 text-white rounded" title="Export full text as .abc">Full .abc</button>
-                  <button id="printSheetBlank" data-print-trigger type="button" class="px-3 py-1 bg-gray-700 text-white rounded" title="Print the rendered sheet music">Print</button>
-                  <button id="exportPngBlank" class="px-3 py-1 bg-gray-700 text-white rounded" title="Export rendered sheet as .png">PNG</button>
-                  <button id="exportMidiBlank" class="px-3 py-1 bg-gray-700 text-white rounded" title="Export MIDI">MIDI</button>
-                </div>
-              </div>
-              <textarea id="abcInputBlank" class="w-full flex-1 min-h-0 p-3 font-mono text-sm rounded bg-black text-gray-200 border border-gray-700 resize-none" placeholder="Paste or type ABC notation here..."></textarea>
-            </div>
-          </div>
-        </details>
       </>
     ) : (
       <div class="p-4 rounded bg-red-900/40 border border-red-800 text-red-200">
