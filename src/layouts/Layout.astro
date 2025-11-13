@@ -51,11 +51,10 @@ const resolvedContentClass = contentClass ?? baseContentClass;
     
     <!-- Google tag (gtag.js) -->
     <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-JXYZHXEJND"></script>
-    <script type="text/partytown">
+    <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-JXYZHXEJND');
     </script>
     

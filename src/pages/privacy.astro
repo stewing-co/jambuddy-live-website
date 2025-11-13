@@ -7,7 +7,7 @@ import Layout from '../layouts/Layout.astro';
   <section class="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-20" aria-labelledby="privacy-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h1 id="privacy-heading" class="text-4xl md:text-5xl font-bold mb-6">Privacy Policy</h1>
-      <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">JamBuddy processes everything locally on your device. No accounts. No analytics. No data leaves your phone or tablet.</p>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">JamBuddy processes everything locally on your device. No accounts. No subscriptions. Your music data never leaves your phone or tablet.</p>
       <div class="mt-8 flex flex-wrap justify-center gap-3 text-sm" aria-label="Privacy guarantees">
         <span class="px-4 py-2 rounded-full bg-white/10 border border-white/10">No Tracking</span>
         <span class="px-4 py-2 rounded-full bg-white/10 border border-white/10">Offline by Design</span>
@@ -22,20 +22,46 @@ import Layout from '../layouts/Layout.astro';
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="prose prose-lg max-w-none text-gray-700">
         <p class="mb-8">
-          <strong>Last updated:</strong> June 7, 2025
+          <strong>Last updated:</strong> January 13, 2025
         </p>
 
   <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Information We Collect</h2>
-        <p>JamBuddy does <strong>not</strong> collect, store, or share any personal information or usage data. The app's real-time chord recognition, advanced tuning capabilities, metronome, and song library operate entirely locally on your device and do not transmit any data externally.</p>
+        
+        <h3 class="text-xl font-semibold text-gray-900 mb-3 mt-6">Mobile App</h3>
+        <p>The JamBuddy mobile app does <strong>not</strong> collect, store, or share any personal information. The app's real-time chord recognition, advanced tuning capabilities, metronome, and song library operate entirely locally on your device.</p>
+        <p class="mt-4">The app uses <strong>Firebase Analytics</strong> to collect anonymous usage statistics including:</p>
+        <ul class="list-disc pl-6 mt-2 space-y-2">
+          <li>App opens and session duration</li>
+          <li>Screen views and feature usage (which tools you use most)</li>
+          <li>Device type, OS version, and app version</li>
+          <li>General location data (country/region level only)</li>
+        </ul>
+        <p class="mt-4">This data is <strong>anonymous</strong> and cannot be linked to you personally. It helps us understand which features are most valuable and where to focus development efforts. No audio data, song content, or practice sessions are ever transmitted.</p>
+        
+        <h3 class="text-xl font-semibold text-gray-900 mb-3 mt-6">Website</h3>
+        <p>Our website (jambuddy.live) uses <strong>Google Analytics</strong> to understand visitor behavior and improve the site experience. This collects:</p>
+        <ul class="list-disc pl-6 mt-2 space-y-2">
+          <li>Pages visited and time spent on each page</li>
+          <li>Referral source (how you found our site)</li>
+          <li>Device type, browser, and screen resolution</li>
+          <li>Anonymous IP address (anonymized to protect your privacy)</li>
+        </ul>
+        <p class="mt-4">Google Analytics uses cookies to track these metrics. You can opt out by using browser extensions like Google Analytics Opt-out or adjusting your browser's privacy settings.</p>
 
   <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-12">2. Why We Don’t Collect Data</h2>
   <p>Privacy reduces cognitive friction. JamBuddy works fully disconnected: chord recognition, tuning, metronome, and song handling stay sandboxed locally. There's nothing to upload, sync, or monetize.</p>
 
   <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-12">3. Third-Party Services</h2>
-  <p>No third‑party SDKs, analytics libraries, crash reporters, or advertising frameworks are embedded. The app ships as a self‑contained client.</p>
+  <p>We use the following third-party services:</p>
+  <ul class="list-disc pl-6 mt-2 space-y-2">
+    <li><strong>Firebase Analytics</strong> (mobile app only) - Anonymous usage statistics to improve the app. <a href="https://firebase.google.com/support/privacy" class="text-blue-600 hover:text-blue-700" target="_blank" rel="noopener">Firebase Privacy Policy</a></li>
+    <li><strong>Google Analytics</strong> (website only) - Website traffic analysis. <a href="https://policies.google.com/privacy" class="text-blue-600 hover:text-blue-700" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+  </ul>
+  <p class="mt-4">We do <strong>not</strong> use advertising networks, crash reporters that collect personal data, or any services that sell your information to third parties.</p>
 
   <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-12">4. Data Security</h2>
-  <p>Because no personal data is collected, traditional breach risk is minimized. Local processing means audio never leaves memory contexts controlled by your OS.</p>
+  <p>Your music data stays on your device. Audio processing, chord recognition, and tuning happen entirely locally—no audio ever leaves your device.</p>
+  <p class="mt-4">The anonymous analytics data we collect is transmitted securely over HTTPS and stored by Google (Firebase/Google Analytics) in compliance with their security standards. This data cannot be used to identify you personally and is retained for a limited time as specified by Google's data retention policies.</p>
 
   <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-12">5. Children’s Privacy</h2>
   <p>JamBuddy is appropriate for all ages. With no accounts or collection, there is no storage or transmission of data from children.</p>
