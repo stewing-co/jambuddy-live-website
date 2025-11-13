@@ -49,6 +49,16 @@ const resolvedContentClass = contentClass ?? baseContentClass;
     <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192x192.png" />
     <link rel="manifest" href="/manifest.json" />
     
+    <!-- Google tag (gtag.js) -->
+    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-JXYZHXEJND"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-JXYZHXEJND');
+    </script>
+    
     <title>{title}</title>
   </head>
   <body class="min-h-screen">
