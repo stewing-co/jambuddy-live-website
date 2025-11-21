@@ -1389,18 +1389,18 @@ L:1/8
 Q:1/4=120
 M:6/8
 K:C
-|"Ex.1"G,B,D GBd | gdB GDB, | G,6 | 
-|"Ex.2"EGB egb | e'bg eBG | E6 | 
-|"Ex.3"D^FA d^fa | d'a^f dA^F | D6 | 
-|"Ex.4"B,D^F Bd^f | b^fd B^FD | B,6 | 
-|"Ex.5"A,^CE A^ce | ae^c AE^C | A,6 | 
-|"Ex.6"^FA^c ^fa^c' | ^f'^c'a ^f^cA | ^F6 | 
-|"Ex.7"E^GB e^gb | e'b^g eB^G | E6 | 
-|"Ex.8"^CE^G ^ce^g | ^c'^ge ^c^GE | ^C6 | 
-|"Ex.9"B,^D^F B^d^f | b^f^d B^F^D | B,6 | 
-|"Ex.10"^G,B,^D ^GB^d | ^g^dB ^G^DB, | ^G,6 | 
-|"Ex.11"^F_B^c ^f_b^c' | ^f'^c'_b ^f^c_B | ^F6 | 
-|"Ex.12"^D^F_B ^d^f_b | ^d'_b^f ^d_B^F | ^D6 | 
+|G,B,D GBd | gdB GDB, | G,6 | 
+|EGB egb | e'bg eBG | E6 | 
+|D^FA d^fa | d'a^f dA^F | D6 | 
+|B,D^F Bd^f | b^fd B^FD | B,6 | 
+|A,^CE A^ce | ae^c AE^C | A,6 | 
+|^FA^c ^fa^c' | ^f'^c'a ^f^cA | ^F6 | 
+|E^GB e^gb | e'b^g eB^G | E6 | 
+|^CE^G ^ce^g | ^c'^ge ^c^GE | ^C6 | 
+|B,^D^F B^d^f | b^f^d B^F^D | B,6 | 
+|^G,B,^D ^GB^d | ^g^dB ^G^DB, | ^G,6 | 
+|^F_B^c ^f_b^c' | ^f'^c'_b ^f^c_B | ^F6 | 
+|^D^F_B ^d^f_b | ^d'_b^f ^d_B^F | ^D6 | 
 
 X:102
 T:Whiskey before Breakfast
