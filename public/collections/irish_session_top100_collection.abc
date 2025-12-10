@@ -1670,9 +1670,10 @@ R: reel
 M:3/4
 K:Amin
 L:1/4
-E|:"Am"A>B c|BAG|A3-|A2A|"C"c>d e|1 "G"d2BE|"Em"G3-|G2:|2 "G"B2A|"Am"A3-|A2 e||
-|"C"g2e|d>eg|"Am"a3-|a>b a|g2e|c>d e|"Em"e3-|e2E|
-|"Am"A>B c|B>AG|A3-|A2A|"C"c>d e|"Em"B2A|"Am"A3-|A2||
+E|:"Am"A2-A1/2 c1/2|BAG|A3-|A2A|"C"c>d e|1 "G"B2A |"Em"G3-|G2 E:|2 "G"B2A|"Am"A3-|A2 e||
+|:"C"g2e|d>eg|"Am"a3-|a>b a|g2e|c>d e|"Em"e3-|e2E|
+|"Am"A>B c|B>AG|A3-|A2A|"C"c>d e|"Em"B2A|"Am"A3-|1A2 e :|2A3||
+
 
 X: 128
 T: Shoe The Donkey
