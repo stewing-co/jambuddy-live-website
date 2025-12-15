@@ -18,10 +18,10 @@ import Layout from '../layouts/Layout.astro';
             JamBuddy for Android.
           </h1>
           <p class="text-lg md:text-2xl text-gray-200 max-w-3xl md:max-w-4xl md:ml-0 mx-auto leading-relaxed">
-            Visualizations to help your eyes train your ear, browse and edit collections of tunes with playable, rendered sheet music and tabs, transpose them into any key with a click, swipe through chord charts for guitar, mandolin, uke, or bass, slow audio down, loop the tough bars, save loops, record ideas, transcribe into ABC with your instrument, and keep your ABC songbook, lyrics, and backing tracks in one offline place. There's also a built-in metronome and a tuner. All with no accounts, no subscriptions and no ads, ever.
+            Real-time chord detection with neural network pitch detection. See chords on an interactive Circle of Fifths, get next-chord predictions, browse chord charts for guitar, mandolin, ukulele, or bass. Slow audio down without changing pitch, loop tricky sections, record ideas, and transcribe melodies to ABC notation. Keep your sheet music, lyrics, and backing tracks in one offline place—with a built-in tuner and metronome. No accounts, no subscriptions, no ads.
           </p>
           <p class="mt-4 text-base md:text-lg text-gray-300 max-w-2xl md:ml-0 mx-auto leading-relaxed">
-            Built nights and weekends by a guy who didn't want to pay $5 a month for a Strum Machiene that didn't even give him sheet music. And who wanted to learn more Kotlin and the latest trends in Android UI design. With a wife with a PhD in Ethnomusicology to help with the theory.
+            Built by a musician who wanted real practice tools without monthly fees. One purchase, full access forever.
           </p>
         </div>
       </div>
@@ -51,8 +51,8 @@ import Layout from '../layouts/Layout.astro';
   <section class="py-24" aria-labelledby="core-pillars-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-  <h2 id="core-pillars-heading" class="text-4xl md:text-5xl font-bold text-white mb-6">Every window earns its place</h2>
-  <p class="text-xl text-gray-300 max-w-4xl mx-auto">Watch a live updating circle of fifths, which rotates to always show the current key at 12 o'clock, and circles the notes in the current chord, along with other visualizations like a chord histogram, spectrogram, timeline, plus practice tools, chord charts, and your tunes library side by side. Nothing here is marketing fluff—just the things I've wanted to make myself as I practice.</p>
+  <h2 id="core-pillars-heading" class="text-4xl md:text-5xl font-bold text-white mb-6">Three Windows, Everything You Need</h2>
+  <p class="text-xl text-gray-300 max-w-4xl mx-auto">A live Circle of Fifths that rotates to show the current key at 12 o'clock and highlights detected chords. Seven visualization modes including histogram, spectrogram, and timeline. Five practice tools. A complete tunes library with sheet music, tabs, lyrics, and audio—all arranged in customizable layouts.</p>
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -70,11 +70,11 @@ import Layout from '../layouts/Layout.astro';
               </svg>
             </div>
             <h3 class="text-3xl font-bold mb-6 text-white">Listen</h3>
-            <p class="text-gray-300 mb-6 text-lg leading-relaxed">Real-time chord detection with the chord chart and fretboard for the currently playing chord and the likely next chords based on the current chord and key.</p>
+            <p class="text-gray-300 mb-6 text-lg leading-relaxed">Real-time chord detection via CREPE neural network. See chord root, quality, and bass note on an interactive Circle of Fifths with next-chord predictions based on music theory.</p>
             <div class="space-y-2 text-blue-300 font-medium">
               <div class="flex items-center justify-center"><span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>Circle of Fifths + Nashville numbers</div>
-              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>Chord histogram, spectrogram & waveform views</div>
-              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>Adjustable detection and bass boost settings</div>
+              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>Seven visualization modes</div>
+              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>Adjustable sensitivity and key lock</div>
             </div>
           </div>
         </div>
@@ -89,10 +89,10 @@ import Layout from '../layouts/Layout.astro';
               </svg>
             </div>
             <h3 class="text-3xl font-bold mb-6 text-white">Learn</h3>
-            <p class="text-gray-300 mb-6 text-lg leading-relaxed">Lock in timing with the visual metronome, strum-pattern coach, chromatic tuner, and looping audio player. Slow tracks down without changing pitch and save per-song loops for tough spots.</p>
+            <p class="text-gray-300 mb-6 text-lg leading-relaxed">Precision chromatic tuner, visual metronome with strum patterns (20-300 BPM), and audio slowdown from 5% to 250% without pitch change. Loop sections, record takes, and track progress.</p>
             <div class="space-y-2 text-purple-300 font-medium">
-              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>Metronome + 20+ strum patterns</div>
-              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>Playback speed control & saved loops</div>
+              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>Metronome + strum patterns</div>
+              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>Phase-vocoder tempo control</div>
               <div class="flex items-center justify-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>Multi-instrument tuner</div>
             </div>
           </div>
@@ -107,12 +107,12 @@ import Layout from '../layouts/Layout.astro';
                 <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
               </svg>
             </div>
-            <h3 class="text-3xl font-bold mb-6 text-white">Write</h3>
-            <p class="text-gray-300 mb-6 text-lg leading-relaxed">Keep your ABC charts, lyrics, PDFs, audio, and set notes together. Edit progressions, attach recordings you captured in-app, and organize tunes by key, genre, or groove.</p>
+            <h3 class="text-3xl font-bold mb-6 text-white">Play</h3>
+            <p class="text-gray-300 mb-6 text-lg leading-relaxed">Thousands of tunes included: Irish Session Top 100, Roaring Jelly Old-Time, Nigel Gatherer, Mandolin Café Bluegrass, OpenHymnal. Import ABC, PDFs, images, audio. Transpose, print sheet music, and render tablature.</p>
             <div class="space-y-2 text-green-300 font-medium">
-              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>ABC sheet music + lyric editor</div>
-              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Attach audio, PDFs & images</div>
-              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Built-in recorder for quick demos</div>
+              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>ABC sheet music + live transcription</div>
+              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Tablature for guitar, ukulele, mandolin</div>
+              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Built-in recorder for ideas</div>
             </div>
           </div>
         </div>
@@ -123,7 +123,7 @@ import Layout from '../layouts/Layout.astro';
   <!-- Feature Showcase with Carousels -->
   <section class="py-20 bg-gray-900 rounded-lg mt-8" aria-labelledby="carousel-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 id="carousel-heading" class="text-3xl md:text-4xl font-bold text-white mb-12 text-center">See JamBuddy in Action (The app has been improving faster than I've been updating these)</h2>
+      <h2 id="carousel-heading" class="text-3xl md:text-4xl font-bold text-white mb-12 text-center">See JamBuddy in Action</h2>
       <div class="relative max-w-4xl mx-auto">
         <div class="carousel-container overflow-hidden rounded-lg">
           <div class="carousel-track flex transition-transform duration-300" id="main-carousel" role="region" aria-label="Feature screenshots">
@@ -183,8 +183,8 @@ import Layout from '../layouts/Layout.astro';
   <section id="education" class="py-20 bg-gradient-to-br from-green-900/20 via-blue-900/20 to-purple-900/20 rounded-xl" aria-labelledby="education-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 id="education-heading" class="text-4xl md:text-5xl font-bold text-white mb-6">What you actually get</h2>
-        <p class="text-xl text-gray-300 max-w-3xl mx-auto">Every pane, dialog, and toggle comes from a real practice need. Here’s how they add up.</p>
+        <h2 id="education-heading" class="text-4xl md:text-5xl font-bold text-white mb-6">Everything Included</h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">Every feature built for real practice needs. Here's what you get.</p>
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
