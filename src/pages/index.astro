@@ -71,10 +71,10 @@ import Layout from '../layouts/Layout.astro';
             </div>
             <h3 class="text-3xl font-bold mb-6 text-white">Listen</h3>
             <p class="text-gray-300 mb-6 text-lg leading-relaxed">Real-time chord detection via CREPE neural network. See chord root, quality, and bass note on an interactive Circle of Fifths with next-chord predictions based on music theory.</p>
-            <div class="space-y-2 text-blue-300 font-medium">
-              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>Circle of Fifths + Nashville numbers</div>
-              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>Seven visualization modes</div>
-              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>Adjustable sensitivity and key lock</div>
+            <div class="space-y-2 text-blue-300 font-medium text-left">
+              <div class="flex items-start"><span class="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Circle of Fifths + Nashville numbers</span></div>
+              <div class="flex items-start"><span class="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Seven visualization modes</span></div>
+              <div class="flex items-start"><span class="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Adjustable sensitivity and key lock</span></div>
             </div>
           </div>
         </div>
@@ -90,10 +90,10 @@ import Layout from '../layouts/Layout.astro';
             </div>
             <h3 class="text-3xl font-bold mb-6 text-white">Learn</h3>
             <p class="text-gray-300 mb-6 text-lg leading-relaxed">Precision chromatic tuner, visual metronome with strum patterns (20-300 BPM), and audio slowdown from 5% to 250% without pitch change. Loop sections, record takes, and track progress.</p>
-            <div class="space-y-2 text-purple-300 font-medium">
-              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>Metronome + strum patterns</div>
-              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>Phase-vocoder tempo control</div>
-              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>Multi-instrument tuner</div>
+            <div class="space-y-2 text-purple-300 font-medium text-left">
+              <div class="flex items-start"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Metronome + strum patterns</span></div>
+              <div class="flex items-start"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Phase-vocoder tempo control</span></div>
+              <div class="flex items-start"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Multi-instrument tuner</span></div>
             </div>
           </div>
         </div>
@@ -109,10 +109,10 @@ import Layout from '../layouts/Layout.astro';
             </div>
             <h3 class="text-3xl font-bold mb-6 text-white">Play</h3>
             <p class="text-gray-300 mb-6 text-lg leading-relaxed">Thousands of tunes included: Irish Session Top 100, Roaring Jelly Old-Time, Nigel Gatherer, Mandolin Café Bluegrass, OpenHymnal. Import ABC, PDFs, images, audio. Transpose, print sheet music, and render tablature.</p>
-            <div class="space-y-2 text-green-300 font-medium">
-              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>ABC sheet music + live transcription</div>
-              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Tablature for guitar, ukulele, mandolin</div>
-              <div class="flex items-center justify-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Built-in recorder for ideas</div>
+            <div class="space-y-2 text-green-300 font-medium text-left">
+              <div class="flex items-start"><span class="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></span><span>ABC sheet music + live transcription</span></div>
+              <div class="flex items-start"><span class="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Tablature for guitar, ukulele, mandolin</span></div>
+              <div class="flex items-start"><span class="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Built-in recorder for ideas</span></div>
             </div>
           </div>
         </div>
@@ -129,34 +129,34 @@ import Layout from '../layouts/Layout.astro';
           <div class="carousel-track flex transition-transform duration-300" id="main-carousel" role="region" aria-label="Feature screenshots">
             <!-- All Features Images -->
             <!-- Real-time Chord Recognition -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/circle_and_song_chords.png" alt="Real-time chord recognition interface" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Real-Time Chord Recognition</h4><p class="text-gray-300">Live chord detection with Circle of Fifths visualization showing key relationships and chord progressions.</p></div></div>
+            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/circle_viz.png" alt="Real-time chord recognition with Circle of Fifths" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Real-Time Chord Recognition</h4><p class="text-gray-300">Live chord detection with Circle of Fifths visualization showing key relationships and chord progressions.</p></div></div>
             
-            <!-- Comprehensive Tuner -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/tuner.png" alt="Chromatic tuner interface" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Chromatic Tuner</h4><p class="text-gray-300">Precise chromatic tuner with visual feedback for all stringed instruments.</p></div></div>
-            
-            <!-- Chord Library Browser -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/chord_browser_chord_chart.png" alt="Chord library browser screen" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Comprehensive Chord Library</h4><p class="text-gray-300">Browse and learn chord fingerings for guitar, ukulele, mandolin and more with detailed chord charts.</p></div></div>
-            
-            <!-- Song Manager -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/tunes_manager_list.png" alt="Song library management list" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Song Library Management</h4><p class="text-gray-300">Organize and manage your personal collection of songs with lyrics, chords, and backing tracks.</p></div></div>
-            
-            <!-- Metronome -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/metronome_and_next_chord.png" alt="Metronome with next chord predictions" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Metronome & Next Chord Predictions</h4><p class="text-gray-300">Built-in metronome with strum patterns and intelligent next chord predictions.</p></div></div>
-            
-            <!-- Full Screen Chord Charts -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/full_size_chord_chart.png" alt="Full screen chord chart view" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Full Screen Chord Charts</h4><p class="text-gray-300">Large, clear chord charts for easy reading during practice and performance.</p></div></div>
+            <!-- Next Chord Predictions -->
+            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/just%20next%20chords.png" alt="Next chord predictions with fingering charts" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Next Chord Predictions</h4><p class="text-gray-300">See four likely next chords with fingering charts for your instrument.</p></div></div>
             
             <!-- Sheet Music Support -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/sheet_music_phone.png" alt="Sheet music screen" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Sheet Music Support</h4><p class="text-gray-300">View and manage sheet music alongside your chord progressions and lyrics.</p></div></div>
+            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/sheet%20music%20with%20guitar%20tab.png" alt="Sheet music with tablature" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Sheet Music & Tablature</h4><p class="text-gray-300">ABC notation rendered as sheet music with optional guitar, mandolin, or ukulele tablature.</p></div></div>
             
             <!-- Audio Player -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/song_player_and_looping.png" alt="Audio player and looping interface" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Audio Player & Looping</h4><p class="text-gray-300">Play and loop audio tracks while following chord progressions and lyrics.</p></div></div>
+            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/slow%20down%20and%20looping%20with%20saving.png" alt="Audio player with slowdown and looping" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Audio Slowdown & Looping</h4><p class="text-gray-300">Slow down audio without changing pitch, set loop markers, and save practice sections.</p></div></div>
             
-            <!-- Chord Editor -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/tunes_manager_chord_editor.png" alt="Chord editor progression builder" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Chord Editor</h4><p class="text-gray-300">Create and edit chord progressions with an intuitive chord sequence editor.</p></div></div>
+            <!-- Comprehensive Tuner -->
+            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/tuner2.png" alt="Chromatic tuner interface" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Chromatic Tuner</h4><p class="text-gray-300">Precise chromatic tuner with visual feedback for all stringed instruments.</p></div></div>
             
-            <!-- Multi-Instrument Support -->
-      <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/full_size_chord_chart_mando.png" alt="Mandolin chord chart instrument support" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Multi-Instrument Support</h4><p class="text-gray-300">Support for guitar, ukulele, mandolin, banjo, and more stringed instruments.</p></div></div>
+            <!-- Chord Library Browser -->
+            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/guitar%20and%20uke%20chords.png" alt="Guitar and ukulele chord charts" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Multi-Instrument Chord Charts</h4><p class="text-gray-300">Browse chord fingerings for guitar, ukulele, mandolin, bass, and more.</p></div></div>
+            
+            <!-- Song Library -->
+            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/collections.png" alt="Tunes library collections" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Thousands of Tunes Included</h4><p class="text-gray-300">Irish Session Top 100, Bluegrass standards, Old-Time favorites, and more—all included free.</p></div></div>
+            
+            <!-- Live Transcription -->
+            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/live%20capture.png" alt="Live melody transcription" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Live Transcription</h4><p class="text-gray-300">Play a melody and watch it transcribe to ABC notation in real-time.</p></div></div>
+            
+            <!-- Two-Window Layout -->
+            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/sheet%20music%20and%20circle.png" alt="Two-window layout with Circle and Sheet Music" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Flexible Two-Window Layouts</h4><p class="text-gray-300">Combine any two windows in stacked or side-by-side arrangements.</p></div></div>
+            
+            <!-- Fretboard View -->
+            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/fretboard%20view.png" alt="Fretboard visualization" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Fretboard Visualization</h4><p class="text-gray-300">Watch notes light up on the fretboard as chords are detected.</p></div></div>
           </div>
         </div>
         <!-- Carousel controls -->
