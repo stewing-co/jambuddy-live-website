@@ -1604,19 +1604,17 @@ K:G
 "G"g2 ga bagf|"C"eagf "D"gfed|"G"g2 ga "C"bgaf|"D"gefd "G"e2 dB:|
 
 X:121
-T:Piper in the Meadow Straying, The
-S:Traditional Tune Archive (Patrick Cavanagh)
-C:Traditional
-R:set dance
-M:4/4
-L:1/8
-Q:1/4=112
-K:G
-"G"d2 d>c B2 B>A|"G"G>FG>A B2 G2|"C"A>Bc>A G2 F2|"G"G2 B2 B2 A2|
-"G"d2 d>c B2 B>A|"G"G>FG>A B2 G2|"C"A>Bc>A G2 F2|"G"G2 B2 G2 z2:|
-"G"A2 A>B c2 A2|"G"G>FG>B d2 B2|"G"d2 d>d e2 g2|"C"f>ed>^c d>AB>=c|
-"G"d>ed>c B>cB>A|"G"G>FG>A B2 G2|"C"A>Bc>A G2 F2|"G"G2 B2 B2 A2|
-"G"d>ed>c B>cB>A|"G"G>FG>A B2 G2|"C"A>Bc>A G2 F2|"G"G2 B2 G2 z2||
+T: The Piper In The Meadow Straying
+S:The Session: https://thesession.org/tunes/1469?orderby=popular#setting35825
+R: hornpipe
+M: 4/4
+L: 1/8
+K: Gmaj
+|:Bc|dedc B2BA|GFGA B2G2|ABcA G2F2|G2B2 B2 A2|
+dedc B3A|GFGA B2G2|ABcA G2F2|G2B2 G2:|
+|:D2|A3B c2A2|BABc d3B|cBcd e2g2|fed^c d2 (3AB=c|
+dedc B3A|GFGA B2G2|ABcA G2F2|G2B2 B2 A2|
+dedc B3A|G3A B2G2|ABcA GFEF|G2B2 G2:|
 
 X:124
 T:Lucy Farr's
@@ -1708,3 +1706,117 @@ K: Gmaj
 ed BG|A/B/A/G/ EG|FA DE/F/|G2 G:|
 |:d/c/|Bd ef|gd BG|Bd ef|g2 fg/f/|
 ed BG|A/B/A/G/ EG|FA DE/F/|G2 G:|
+
+X:131
+T: Sonny Brogan’s
+S:The Session: https://thesession.org/tunes/5476?orderby=popular#setting44753
+R: mazurka
+M: 3/4
+L: 1/8
+K: Dmaj
+|:DF "D" A2 AG|FA "D" d2 dA|BA "G" G2 GB|AG "A7" FG EF|
+DF "D" A2 AG|FA "D" d2 dA|BA "G" G2 Gg|"A7" fe "D" d2 d2:|
+|:Ad "D" f2 fa|gf "A7" e2 eg|fe "D" d2 df|ed "A7" cd Bc|
+Ad "D" f2 fa|gf "A7" e2 eg|fe "D" d2 df|"A7" ec "D" d2 d2:|
+
+X:131
+T: Da Slockit Light
+S:The Session: https://thesession.org/tunes/1863?orderby=popular#setting32504
+R: march
+M: 4/4
+L: 1/8
+K: Dmaj
+V:1
+FE |:D3 F A2 d2 |fedc d2 A2 |B2 d2 A2 d2 |BAGF EGFE |
+|D3 F A2 d2 |fedc d2 A2 |B2 G2 AGFE |1 D6 FE :|2 D6 g2 ||
+|f2 a2 e3 c |d3 e dcBA |f2 a2 e2 ^g2 |a6 g2 |f2 a2 e3 c |
+|d3 e dcBA |B2 G2 AGFE |D6 g2 |f2 a2 e3 c |d3 e dcBA |
+|B2 d2 A2 d2 |BAGF EGFE |D3 F A2 d2 |fedc d2 A2 |B2 G2 AGFE |D6 ||
+V:2
+z2 |:"D"A,2 D2 C2 F2 |"Bm"D4 A,4 |"G"G,2 G2 "D"F4 |"Em"G2 E2 "A"C2 A,2- |
+|"D"A,2 AG F2 FE |"Bm"D2 F2 A,2 C2 |"G"D2 B,2 "A"C2 A,2- |1 "D"A,2 A2 F4 :|2 "D"A,2 A2 F2 c2 ||
+|"D"d4 "A"c4 |"G"B4 BAGF |"D"D2 F2 "E7"^G2 B2 |"A"c3 d e2 d2- |"D"d4 "A"c4 |
+|"G"B4 "D"BAGF |"G"G2 B,2 "A"C2 AG |"D"F2 A2 B2 c2 |d2 D2 "A"c2 A2 |"G"B2 d2 "D"BAGF |
+|"G"GABG "D"F2 A2 |"Em7"G2 E2 "A"C2 A,2- |"D"A,2 D2 C3 B, |"F#7"^A,CDE "Bm"F2 D2 |"Em7"G3 E "A"F2 A,2 |"D"D6 ||
+
+X:132
+T: Hector The Hero
+S:The Session: https://thesession.org/tunes/1292?orderby=popular#setting14598
+R: waltz
+M: 3/4
+L: 1/8
+K: Gmaj
+|:GA|B3 AG2|e3 dB2|d6-|d4 GA|B3 AG2|e3 dB2|A6-|A4 GA|
+B3 AG2|e3 dB2|d3 GA2|B g3 e2|d3 GB2|A4 G2|G6-|G4:|
+Bd|e3 fe2|g3 fe2|d6-|d4 Bd|e3 dB2|d3 GB2|A6-|A4 Bd|
+e3 fe2|g3 fe2|d3 GA2|B g3 e2|d3 GB2|A4 G2|G6-|G4:|
+
+X:133
+T: Jacky Tar
+S:The Session: https://thesession.org/tunes/2020?orderby=popular#setting10389
+R: hornpipe
+M: 4/4
+L: 1/8
+K: Emin
+|:Bd|"Em"e2ed efge|"G" d2B2 B2dB|"D"ABde faef|"D" d2A2 A2Bd|
+"Em"e2ef g2fe|"G" dBGB d2cB|"D"AGFE DEFA|"Em"G2E2 E2:|
+|:GA|"Em"BGEG BGEG|"Em"BAGF E2FG|"D"AFDF AFDF|"D" AGFE D2EF|
+"Em"GFGB g2fe|"G" dBGB d2cB|"D"AGFE DEFA|"Em"G2E2 E2:|
+
+X: 134
+T: The Dawning Of The Day
+S:The Session: https://thesession.org/tunes/21371?orderby=popular#setting42656
+R: march
+M: 4/4
+L: 1/8
+K: Gmaj
+|:D|G>AGF TE2D2|{B}d>edc B2AB/A/|GDGA B2ge/c/|B2A2G2z:|
+g/f/|e>def g2fg|ab/a/ gf ed2g/f/|edef g2fg|ab/a/ gfe3e|
+fdef g2 g/f/e/d/|BgBg cBA2|GDGA B2ge/c/|B2A2G2z||
+
+X: 135
+T: The Devil Is Dead
+S:The Session: https://thesession.org/tunes/1990?orderby=popular#setting43713
+R: strathspey
+M: 4/4
+L: 1/8
+K: Dmaj
+d>B|:(3AAA A>B d>e f>e|d>B (3BBB g>B d>B|(3AAA A>B d>e f>g|1 a>b a>f e2d>B:|2 a>b a>f e2d2||
+A2 A>G F>G A2|(3BBB B>A B>c d2|(3AAA A>G F>G A>F|D>F A>F E2D2|
+A2 A>G F>G A2|(3BBB B>A B>c d>B|A>c d>A (3Bcd A>F|D>E F>D E2D2||
+
+X: 136
+T: Chanter's Tune
+S:The Session: https://thesession.org/tunes/2082#setting15474
+R: march
+M: 4/4
+L: 1/8
+K: Amix
+|:A2A2 e2dB|A2A2 g2fg|a2e2 e2dB|g2fg e2dB|
+A2A2 e2dB|A2A2 g2fg|a2e2 e2dB|A4 A4:|
+edef g2fg|edef g2fg|a2e2 e2dB|g2fg e2dB|
+A2A2 e2dB|A2A2 g2fg|a2e2 e2dB|A4 A4:|
+
+X:137
+T: The Wearing Of The Green
+S:The Session: https://thesession.org/tunes/4977?orderby=popular#setting4977
+R: march
+M: 4/4
+L: 1/8
+K: Dmaj
+DE|FFFE FAAF|FEEF E3 A|BGdc BAFD|EDDE D2 DE|
+FFFE FAAF|FEEF E3 A|BGdc BAFD|EDDE D2 dc||
+BAAF AFDE|FFFE F2 dc|BAAF AFDE|FEEF E2 DE|
+FFFE FAAF|FEEF E3 A|BGdc BAFD|EDDE D4||
+
+X: 138
+T: The Swallowtail
+S:The Session: https://thesession.org/tunes/106?orderby=popular#setting12675
+R: jig
+M: 6/8
+L: 1/8
+K: Edor
+|:GEE BEE|GEE BAG|FDD ADD|dcd AGF|
+GEE BEE|GEG B2c|dcd AGF|GEE E3:|
+|:Bcd e2f|e2f edB|Bcd e2f|edB d3|
+Bcd e2f|e2f edB|dcd AGF|GEE E3:|
