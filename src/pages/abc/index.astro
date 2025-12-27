@@ -9,6 +9,7 @@ import { fileURLToPath } from 'node:url';
 
 const filenameMap: Record<string, string> = {
   'old-time-jam-tunes': 'old_time_jam_tunes_collection.abc',
+  'frank-hamilton-school-old-time': 'fhs.abc',
   'irish-session-top100': 'irish_session_top100_collection.abc',
   'mandolin-cafe-bluegrass': 'mando_cafe_bluegrass.abc',
   'open-hymnal': 'open_hymnal_collection.abc',
@@ -29,6 +30,7 @@ const searchRoots = [
 
 const titleMap: Record<string, string> = {
   'old-time-jam-tunes': 'JamBuddy (Old-Time)',
+  'frank-hamilton-school-old-time': 'Frank Hamilton School (Old-Time)',
   'irish-session-top100': 'The Session (Irish)',
   'mandolin-cafe-bluegrass': 'Mando Cafe (Bluegrass)',
   'open-hymnal': 'Open Hymnal (Christian)',
@@ -38,6 +40,7 @@ const titleMap: Record<string, string> = {
 
 const collections = [
   { slug: 'old-time-jam-tunes', title: 'JamBuddy (Old-Time)' },
+  { slug: 'frank-hamilton-school-old-time', title: 'Frank Hamilton School (Old-Time)' },
   { slug: 'irish-session-top100', title: 'The Session (Irish)' },
   { slug: 'mandolin-cafe-bluegrass', title: 'Mando Cafe (Bluegrass)' },
   { slug: 'open-hymnal', title: 'Open Hymnal (Christian)' },

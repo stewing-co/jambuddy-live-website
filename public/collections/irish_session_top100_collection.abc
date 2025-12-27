@@ -7,14 +7,10 @@ K:A
 M:6/8
 L:1/8
 Q:1/4=113
-|: "A"e2e ecA| ecA "G"Bcd| "A"e2e ecA| "G"Bcd "E"cBA|
-| "A"e2e ecA| ecA "G"Bcd| "A"eae "D"fed| "E"cdB "A"A3:|
-|: "A"Ace Ace|"D"Adf Adf| "A"Ace Ace| "G"Bcd "E"c2B| 
-| "A"Ace Ace|"D"Adf Adf| "A"eae "D"fed| "E"cdB "A"A3:| 
-|:"A"a2a aec| a2a aec| a2a aec| "G"Bcd "E"cBA|
-| "A"a2a aec| a2a aec| eae "D"fed| "E"cdB "A"A3:|
-|: "A"c2c cBA| "D"d2d fed| "A"c2c cBA| "G"=G2=G BA=G|
-| "A"c2c cBA| "D"d2d fed| "A"eae "D"fed| "E"cdB "A"A3:|
+|: "A"e2e ecA| ecA "G"Bcd| "A"e2e ecA| "G"Bcd "E"cBA|"A"e2e ecA| ecA "G"Bcd| "A"eae "D"fed| "E"cdB "A"A3 :|
+|: "A"Ace Ace|"D"Adf Adf| "A"Ace Ace| "G"Bcd "E"c2B| "A"Ace Ace|"D"Adf Adf| "A"eae "D"fed| "E"cdB "A"A3 :|
+|: "A"a2a aec| a2a aec| a2a aec| "G"Bcd "E"cBA|"A"a2a aec| a2a aec| eae "D"fed| "E"cdB "A"A3 :|
+|: "A"c2c cBA| "D"d2d fed| "A"c2c cBA| "G"=G2=G BA=G|"A"c2c cBA| "D"d2d fed| "A"eae "D"fed| "E"cdB "A"A3 :|
 
 X:2
 T:Banish Misfortune
@@ -25,12 +21,9 @@ K:Dmix
 M:6/8
 L:1/8
 Q:1/4=113
-de|:"D"fed "C"cAG|"D"Add "C"cAG|"D"F2D DED|FEF "C"GFG|
-|"D"AGA "C"cAG|"D"AGA "C"cde|"D"fed "C"cAG|"D"Ad^c d2e:|
-|:"D"f2d d^cd|f2g agf|"C"e2c cBc|e2f gfe|
-|"D"f2g agf|"C"e2f gfe|"D"fed "C"cAG|"D"Ad^c d2e:|
-|:"D"f2g "C"e2f|"D"d2e "C"c2d|"D"ABA "C"GAG|"D"F2F GED|
-|"C"c3 cAG|AGA cde|"D"fed cAG|1 "C"Ad^c "D"d2e:|2 "C"Ad^c "D"d3||
+de|:"D"fed "C"cAG|"D"Add "C"cAG|"D"F2D DED|FEF "C"GFG|"D"AGA "C"cAG|"D"AGA "C"cde|"D"fed "C"cAG|"D"Ad^c d2e:|
+|:"D"f2d d^cd|f2g agf|"C"e2c cBc|e2f gfe|"D"f2g agf|"C"e2f gfe|"D"fed "C"cAG|"D"Ad^c d2e:|
+|:"D"f2g "C"e2f|"D"d2e "C"c2d|"D"ABA "C"GAG|"D"F2F GED|"C"c3 cAG|AGA cde|"D"fed cAG|1 "C"Ad^c "D"d2e:|2 "C"Ad^c "D"d3||
 
 X:3
 T:Banshee, The
@@ -41,10 +34,7 @@ K:G
 M:4/4
 L:1/8
 Q:1/4=120
-|:"G"G2 GD EDED|GFGB d2 Bd|"C"eged BAGA|"D"BAGE E2 (3DEF|
-|"G"G2 GD EDED|GFGB d2 Bd|"C"eged BAGA|"D"BAGE E2 D2:|
-|:"Em"eaag egge|"G"dBBA B2 Bd|"C"e2 eB gBfB|"D"eBBA B3 z|
-|"Em"eaag efge |"G"dBBA B2 Bd|"C"eged BAGA|"D"BAGE E2 D2:|
+|:"G"G2 GD EDED|GFGB d2 Bd|"C"eged BAGA|"D"BAGE E2 (3DEF|"G"G2 GD EDED|GFGB d2 Bd|"C"eged BAGA|"D"BAGE E2 D2:|:"Em"eaag egge|"G"dBBA B2 Bd|"C"e2 eB gBfB|"D"eBBA B3 z|"Em"eaag efge |"G"dBBA B2 Bd|"C"eged BAGA|"D"BAGE E2 D2:|
 
 X:4
 T:Blackthorn Stick, The
@@ -55,10 +45,7 @@ K:G
 M:6/8
 L:1/8
 Q:1/4=113
-d|:"G"gfg "C"ege|"G"dBG "C"AGE|"G"DGG "D7"FGA|"G"BGB"D7" A2 d|
-|"G"gfg "C"age|"G"dBG "C"AGE|"G"DGG "D7"FGA| "G"BGG G2 d:|
-|:"G"edd gdd|edd gdd|e2 e "C"gfg|"G"edB "D7"A2 d|
-|"G"gfg "C"age|"G"dBG "C"AGE|"G"DGG "D7"FGA|1"G"BGG G2 d:||2"G"BGG G3||
+d|:"G"gfg "C"ege|"G"dBG "C"AGE|"G"DGG "D7"FGA|"G"BGB"D7" A2 d||"G"gfg "C"age|"G"dBG "C"AGE|"G"DGG "D7"FGA| "G"BGG G2 d:|:"G"edd gdd|edd gdd|e2 e "C"gfg|"G"edB "D7"A2 d||"G"gfg "C"age|"G"dBG "C"AGE|"G"DGG "D7"FGA|1"G"BGG G2 d:|2"G"BGG G3||
 
 X:5
 T:Blarney Pilgrim, The
@@ -1820,3 +1807,19 @@ K: Edor
 GEE BEE|GEG B2c|dcd AGF|GEE E3:|
 |:Bcd e2f|e2f edB|Bcd e2f|edB d3|
 Bcd e2f|e2f edB|dcd AGF|GEE E3:|
+
+X:139
+T: Come Out, Ye Black And Tans
+S:The Session: https://thesession.org/tunes/25234#setting53044
+R: polka
+M: 2/4
+L: 1/8
+K: Ddor
+Ac | dd/d/ de | d2 cA | GG GA | G2Ac |
+dd de | dc de | d2 c2 | A2(AB) |
+cc cd | c2 BA | GE DE/D/ | C2DE |
+FF ED | AG FE | D2 C2 | D2 Ac |
+dd de | d>d cA | GG GA | G2Ac |
+dd de | dc de | d2 c2 | A2AB |
+cc cd | c2 BA | GE DE | C2DE |
+FF ED | AG FE | D2 C2 | D2 ||
