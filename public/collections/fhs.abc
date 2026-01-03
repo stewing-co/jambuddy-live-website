@@ -13,7 +13,7 @@ K: D
 X: 2
 T:Antelope Gap
 L:1/8
-C:Howard Rains
+C:JW Whatley
 S:http://www.taterjoes.com/Warehouse/Fiddle/D_AntelopeGap.pdf
 R:Reel
 M:4/4
@@ -26,7 +26,7 @@ egfe "D"d2 AB/2c/2|ddee f2 AB/2c/2|dcee f2 fd|
 "A" A2 AA B2 c2 |1 "D" cddc d2 dc/B/:|2 "D" cddcd2f2||
 
 X: 3
-T:Apple Jack
+T:Applejack
 C:Bob McQuillen
 R:Reel
 S:https://trillian.mit.edu/~jc/music/abc/mirror/kirby98.fsnet.co.uk/ap/Applejacks_Reel_1.abc
@@ -53,13 +53,14 @@ X: 5
 T:Avalon Quickstep
 L:1/8
 C:Willie Narmour and Shellie Smith
-S:https://tunearch.org/wiki/Avalon_Quickstep
+S:https://www.mandolincafe.com/te/tabledit_files/AvalonQuickstep-D-Narmour-Smith.tef
 R:Reel
 K:D
-(FG)|"D"ABAG (FG)A2|f2 d4 d2|ABAG "D"(FG) A2|"A"[E3A3][FA][E2A2] (FG)|
-"D"ABAG (FG) A2|f2 d4 ef|"G"(gf)ed "A"(cA)Bc|1 "D"d3dd2&#160;:|2 "D"d3dd2 fg|]
-|:"D"a2 fa- af a2|"G"b4 "D"a4|f2 d4 ef|"G"(gf)ed "A"(cd) e2|"D"b2 a4fg|
-"D"a2 fa- "D"afa2|"G"b4 "D"a4|f2 d4 ef|"G"(gf)ed "A"(cA)Bc|1 "D"d3dd2  fg:|2 "D"d3dd2 |]
+z6 FG |: "D""D"AB AG FG A2 | [f2d2] [d2F2] z2 FG | AB AG FG A2 | "A""A"[a3A3]b [a2A2] FG | 
+"D""D"AB AG FG A2 | [f2d2] [d2F2] z2 fa | "G""G"fe dc "A7""A7"BA c2 |1 [d2F2] [dF][eF] [d2F2] FG :|2 [d2F2] [dF][eF] [dF]e fg | 
+|: [a2A2] [aA][aA] [aA]f ga | "G""G"[b4d4] "A""A"[a3e3]g | "D""D"f2 [f4d4] ef | 
+"G""G"gf ed "A""A"cB A2 | "D""D"[b2d2] [a3f3]e fg | [a2A2] [aA][aA] [aA]f ga | 
+"G""G"[b4d4] "A""A"[a3e3]g | "D""D"f2 [f4d4] fa | "G""G"fe dc "A""A"BA c2 |1 [d2F2] [dF][eF] [dF]e fg :|2 [d8F8] |
 
 X: 6
 T: Barlow Knife
@@ -100,17 +101,18 @@ FG |: "D"A>B AF A2 de | f>e fa d2 dc | "G"BcdB "D"AFDF | "A"E2 E>F E2 FG |
 "D"A>B AF A2 de |fefa d2 dc | "G"B>c dB "D"AF"A"EF |1 "D"D2 DE D2 de :|2 "D"D2 DE D4|]
 
 X: 9
-T: Booth Shot Lincoln
-M:C
+T:Booth Shot Lincoln
+C:Traditional
+S:https://www.mandolincafe.com/te/tabledit_files/BoothShotLincoln-A-trad.tef
 L:1/8
-R:Reel
-S:https://tunearch.org/wiki/Booth_Shot_Lincoln_(1)
+Q:1/4=235
+M:4/4
 K:A
-(3AGF |: EDEF ED E2 | FA2F A2 (A2 | A)BcB Ac B2 | A F2 (F F2) GF | 
-EDEF ED E2 | F A2B A3(f | e)c2B AcBA |1 G A2 (A2 A) AF :|2 GA2(A2 A) AB || 
-ce2(e e3) e | fa2(a a3)f | ec3 AcBA | AF2F F2AB | ce2(e e3)e | fa2(a a3)f | 
-ec2B AcBA | G A2(A2A) AB | ce2(e e3)e | fa2(a a3)f | ec2c2c B BA | 
-AF2(F F2) AF | EDEF ED E2 | FA2B A3 (f | e)c2B AcBA | GA2 (A A4) ||
+z6 AF |: "A"E2 C2 E3E | "D"FA2F A4 | "A"z2 cB Ac BA | {E}"D"F6 AF | "A"E2 C2 E3E | 
+"D"FA2F A2 ef | "A"e2 cB "E"Ac Bc |1 A4 [E2A,2] AF :|2 A4 [E4A,4] |] {=c}"A"^ce2c e4 | 
+"D"[fA]a2f a2 fa | "A"e2 cB Ac BA | "D"[A2F2] FF [A4F4] | {=c}"A"^ce2c e4 | "D"[fA]a2f a2 fa | 
+"A"e2 cB "E"Ac Bc | "A"A4 [E4A,4] | {=c}"A"^ce2c e4 | "D"[fA]a2f a2 fa | "A"e2 cB Ac BA | 
+"D"[A6F6] FF | "A"E2 C2 E3E | "D"FA2F A2 ef | "A"e2 cB "E"Ac Bc | "A"A4 [E4A,4] |
 
 X: 10
 T:Boys My Money's all Gone 

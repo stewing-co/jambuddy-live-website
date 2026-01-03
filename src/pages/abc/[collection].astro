@@ -13,6 +13,7 @@ export async function getStaticPaths() {
     { params: { collection: 'frank-hamilton-school-old-time' } },
     { params: { collection: 'irish-session-top100' } },
     { params: { collection: 'mandolin-cafe-bluegrass' } },
+    { params: { collection: 'mandolin-cafe-jazz' } },
     { params: { collection: 'open-hymnal' } },
     { params: { collection: 'roaring-jelly-2024' } },
     { params: { collection: 'nigel-gatherer-collection' } },
@@ -24,6 +25,7 @@ const filenameMap: Record<string, string> = {
   'frank-hamilton-school-old-time': 'fhs.abc',
   'irish-session-top100': 'irish_session_top100_collection.abc',
   'mandolin-cafe-bluegrass': 'mando_cafe_bluegrass.abc',
+  'mandolin-cafe-jazz': 'mando_cafe_jazz.abc',
   'open-hymnal': 'open_hymnal_collection.abc',
   'roaring-jelly-2024': 'roaring_jelly_collection.abc',
   'nigel-gatherer-collection': 'nigel_gatherer_collection.abc'
@@ -45,6 +47,7 @@ const titleMap: Record<string, string> = {
   'frank-hamilton-school-old-time': 'Frank Hamilton School (Old-Time)',
   'irish-session-top100': 'The Session (Irish)',
   'mandolin-cafe-bluegrass': 'Mando Cafe (Bluegrass)',
+  'mandolin-cafe-jazz': 'Mando Cafe (Jazz/Swing/Blues)',
   'open-hymnal': 'Open Hymnal (Christian)',
   'roaring-jelly-2024': 'Roaring Jelly (Old-Time)',
   'nigel-gatherer-collection': 'Nigel Gatherer (Scottish)'
@@ -55,6 +58,7 @@ const collections = [
   { slug: 'frank-hamilton-school-old-time', title: 'Frank Hamilton School (Old-Time)' },
   { slug: 'irish-session-top100', title: 'The Session (Irish)' },
   { slug: 'mandolin-cafe-bluegrass', title: 'Mando Cafe (Bluegrass)' },
+  { slug: 'mandolin-cafe-jazz', title: 'Mando Cafe (Jazz/Swing/Blues)' },
   { slug: 'open-hymnal', title: 'Open Hymnal (Christian)' },
   { slug: 'roaring-jelly-2024', title: 'Roaring Jelly (Old-Time)' },
   { slug: 'nigel-gatherer-collection', title: 'Nigel Gatherer (Scottish)' }
