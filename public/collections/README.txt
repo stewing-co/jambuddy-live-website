@@ -5,6 +5,9 @@ Place exported ABC collection files here for production builds:
 - irish_session_top100_collection.abc
 - open_hymnal_collection.abc
 - roaring_jelly_collection.abc
+- mandozine_bluegrass.abc
+- mandozine_jazz.abc
+- mandozine_classical.abc
 - nigel_gatherer_collection.abc
 
 During local development inside the Android repo, the ABC pages read directly
