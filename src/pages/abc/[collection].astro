@@ -10,11 +10,8 @@ const { collection } = Astro.params;
 export async function getStaticPaths() {
   return [
     { params: { collection: 'old-time-jam-tunes' } },
-    { params: { collection: 'frank-hamilton-school-old-time' } },
     { params: { collection: 'irish-session-top100' } },
-    { params: { collection: 'mandozine-bluegrass' } },
-    { params: { collection: 'mandozine-jazz' } },
-    { params: { collection: 'mandozine-classical' } },
+    { params: { collection: 'mandozine' } },
     { params: { collection: 'open-hymnal' } },
     { params: { collection: 'roaring-jelly-2024' } },
     { params: { collection: 'nigel-gatherer-collection' } },
@@ -23,11 +20,8 @@ export async function getStaticPaths() {
 
 const filenameMap: Record<string, string> = {
   'old-time-jam-tunes': 'old_time_jam_tunes_collection.abc',
-  'frank-hamilton-school-old-time': 'fhs.abc',
   'irish-session-top100': 'irish_session_top100_collection.abc',
-  'mandozine-bluegrass': 'mandozine_bluegrass.abc',
-  'mandozine-jazz': 'mandozine_jazz.abc',
-  'mandozine-classical': 'mandozine_classical.abc',
+  'mandozine': 'mandozine.abc',
   'open-hymnal': 'open_hymnal_collection.abc',
   'roaring-jelly-2024': 'roaring_jelly_collection.abc',
   'nigel-gatherer-collection': 'nigel_gatherer_collection.abc'
@@ -46,26 +40,20 @@ const searchRoots = [
 
 const titleMap: Record<string, string> = {
   'old-time-jam-tunes': 'JamBuddy (Old-Time)',
-  'frank-hamilton-school-old-time': 'Frank Hamilton School (Old-Time)',
   'irish-session-top100': 'The Session (Irish)',
-  'mandozine-bluegrass': 'Mandozine (Bluegrass)',
-  'mandozine-jazz': 'Mandozine (Jazz/Swing/Blues)',
-  'mandozine-classical': 'Mandozine (Classical)',
+  'mandozine': 'Mandozine (Various)',
   'open-hymnal': 'Open Hymnal (Christian)',
   'roaring-jelly-2024': 'Roaring Jelly (Old-Time)',
-  'nigel-gatherer-collection': 'Nigel Gatherer (Scottish)'
+  'nigel-gatherer-collection': 'Nigel Gatherer (Various)'
 };
 
 const collections = [
   { slug: 'old-time-jam-tunes', title: 'JamBuddy (Old-Time)' },
-  { slug: 'frank-hamilton-school-old-time', title: 'Frank Hamilton School (Old-Time)' },
   { slug: 'irish-session-top100', title: 'The Session (Irish)' },
-  { slug: 'mandozine-bluegrass', title: 'Mandozine (Bluegrass)' },
-  { slug: 'mandozine-jazz', title: 'Mandozine (Jazz/Swing/Blues)' },
-  { slug: 'mandozine-classical', title: 'Mandozine (Classical)' },
+  { slug: 'mandozine', title: 'Mandozine (Various)' },
   { slug: 'open-hymnal', title: 'Open Hymnal (Christian)' },
   { slug: 'roaring-jelly-2024', title: 'Roaring Jelly (Old-Time)' },
-  { slug: 'nigel-gatherer-collection', title: 'Nigel Gatherer (Scottish)' }
+  { slug: 'nigel-gatherer-collection', title: 'Nigel Gatherer (Various)' }
 ];
 
 const currentDir = fileURLToPath(new URL('.', import.meta.url));
