@@ -5,6 +5,7 @@ Place exported ABC collection files here for production builds:
 - open_hymnal_collection.abc
 - roaring_jelly_collection.abc
 - mandozine.abc
+- practice.abc
 - nigel_gatherer_collection.abc
 
 During local development inside the Android repo, the ABC pages read directly

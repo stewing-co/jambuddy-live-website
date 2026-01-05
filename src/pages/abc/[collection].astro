@@ -12,6 +12,7 @@ export async function getStaticPaths() {
     { params: { collection: 'old-time-jam-tunes' } },
     { params: { collection: 'irish-session-top100' } },
     { params: { collection: 'mandozine' } },
+    { params: { collection: 'practice-techniques' } },
     { params: { collection: 'open-hymnal' } },
     { params: { collection: 'roaring-jelly-2024' } },
     { params: { collection: 'nigel-gatherer-collection' } },
@@ -22,6 +23,7 @@ const filenameMap: Record<string, string> = {
   'old-time-jam-tunes': 'old_time_jam_tunes_collection.abc',
   'irish-session-top100': 'irish_session_top100_collection.abc',
   'mandozine': 'mandozine.abc',
+  'practice-techniques': 'practice.abc',
   'open-hymnal': 'open_hymnal_collection.abc',
   'roaring-jelly-2024': 'roaring_jelly_collection.abc',
   'nigel-gatherer-collection': 'nigel_gatherer_collection.abc'
@@ -42,6 +44,7 @@ const titleMap: Record<string, string> = {
   'old-time-jam-tunes': 'JamBuddy (Old-Time)',
   'irish-session-top100': 'The Session (Irish)',
   'mandozine': 'Mandozine (Various)',
+  'practice-techniques': 'Practice Techniques',
   'open-hymnal': 'Open Hymnal (Christian)',
   'roaring-jelly-2024': 'Roaring Jelly (Old-Time)',
   'nigel-gatherer-collection': 'Nigel Gatherer (Various)'
@@ -51,6 +54,7 @@ const collections = [
   { slug: 'old-time-jam-tunes', title: 'JamBuddy (Old-Time)' },
   { slug: 'irish-session-top100', title: 'The Session (Irish)' },
   { slug: 'mandozine', title: 'Mandozine (Various)' },
+  { slug: 'practice-techniques', title: 'Practice Techniques' },
   { slug: 'open-hymnal', title: 'Open Hymnal (Christian)' },
   { slug: 'roaring-jelly-2024', title: 'Roaring Jelly (Old-Time)' },
   { slug: 'nigel-gatherer-collection', title: 'Nigel Gatherer (Various)' }
