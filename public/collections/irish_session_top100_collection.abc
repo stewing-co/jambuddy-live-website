@@ -1695,18 +1695,6 @@ ed BG|A/B/A/G/ EG|FA DE/F/|G2 G:|
 ed BG|A/B/A/G/ EG|FA DE/F/|G2 G:|
 
 X:131
-T: Sonny Brogan’s
-S:The Session: https://thesession.org/tunes/5476?orderby=popular#setting44753
-R: mazurka
-M: 3/4
-L: 1/8
-K: Dmaj
-|:DF "D" A2 AG|FA "D" d2 dA|BA "G" G2 GB|AG "A7" FG EF|
-DF "D" A2 AG|FA "D" d2 dA|BA "G" G2 Gg|"A7" fe "D" d2 d2:|
-|:Ad "D" f2 fa|gf "A7" e2 eg|fe "D" d2 df|ed "A7" cd Bc|
-Ad "D" f2 fa|gf "A7" e2 eg|fe "D" d2 df|"A7" ec "D" d2 d2:|
-
-X:131
 T: Da Slockit Light
 S:The Session: https://thesession.org/tunes/1863?orderby=popular#setting32504
 R: march
@@ -1823,3 +1811,31 @@ dd de | d>d cA | GG GA | G2Ac |
 dd de | dc de | d2 c2 | A2AB |
 cc cd | c2 BA | GE DE | C2DE |
 FF ED | AG FE | D2 C2 | D2 ||
+
+X:140
+T:Ballydesmond Polka No. 3
+S:Nigel Gatherer Collection
+C:Traditional
+R:polka
+M:2/4
+L:1/8
+Q:1/4=122
+K:Am
+B|"Am"c2 B2|A2 G>A|"G"Bd ed|g3 d|
+"Am"ea ge|"G"dB GA/B/|"C"ce dB|"Am"A2 A:|
+z|"Am"ea ag/e/|"G"dg g>d|"Am"ea ab|"G"g2 ed|
+"Am"ea g/a/g/e/|"G"dB GA/B/|"C"ce dB|"Am"A2 A:|
+
+X:141
+T:Sonny's
+S:Frank Hamilton School – Intro to Irish Session Tunes
+C:Traditional
+R:mazurka
+M:3/4
+L:1/8
+Q:1/4=122
+K:D
+DF |:"D" A2 AG|FA "D" d2 dA|BA "G" G2 GB|AG "A7" FG EF|
+DF "D" A2 AG|FA "D" d2 dA|BA "G" G2 Gg|1"A7" fe "D" d2 DF:|2 "A7" fe "D" d2 Ad|]
+|:"D" f2 fa|gf "A7" e2 eg|fe "D" d2 df|ed "A7" cd Bc|
+Ad "D" f2 fa|gf "A7" e2 eg|fe "D" d2 df|1"A7" ec "D" d2 Ad:|2 "A7" ec "D" d4|] 
