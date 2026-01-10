@@ -779,6 +779,8 @@ const pageDescription =
       const instrumentChords = state.chordsByInstrument[state.instrumentId] || {};
       const chordName = selectedChordName();
       const fingering = instrumentChords[chordName];
+      const instrument = INSTRUMENTS.find((item) => item.id === state.instrumentId) || INSTRUMENTS[0];
+      const stringNotes = instrument.strings;
 
       CHORD_DIAGRAM_CONTAINER.innerHTML = '';
 
@@ -863,7 +865,7 @@ const pageDescription =
       if (startFret > 1) {
         const label = document.createElementNS(svgNS, 'text');
         label.setAttribute('x', (width - paddingX + 12).toString());
-        label.setAttribute('y', (paddingTop + fretSpacing * 0.8).toString());
+        label.setAttribute('y', (paddingTop - 10).toString());
         label.setAttribute('fill', '#94a3b8');
         label.setAttribute('font-size', '12');
         label.setAttribute('font-weight', '500');
@@ -872,10 +874,16 @@ const pageDescription =
       }
 
       const dotRadius = Math.min(18, Math.max(14, stringSpacing * 0.35));
+      const chordRootIndex = noteIndex(state.chordRoot || 'C');
 
       for (let stringIndex = 0; stringIndex < stringCount; stringIndex += 1) {
         const fret = fingering[stringIndex];
         const x = paddingX + stringIndex * stringSpacing;
+        const openNoteIndex = noteIndex(stringNotes[stringIndex] || 'C');
+        const noteIndexOnString = (openNoteIndex + Math.max(fret, 0)) % 12;
+        const interval = (noteIndexOnString - chordRootIndex + 12) % 12;
+        const intervalLabel = labelForInterval(interval);
+        const intervalColor = colourForInterval(interval);
 
         if (fret === -1) {
           const xMark = document.createElementNS(svgNS, 'text');
@@ -891,15 +899,25 @@ const pageDescription =
         }
 
         if (fret === 0 && startFret === 1) {
-          const openMark = document.createElementNS(svgNS, 'text');
-          openMark.setAttribute('x', x.toString());
-          openMark.setAttribute('y', (paddingTop - 20).toString());
-          openMark.setAttribute('text-anchor', 'middle');
-          openMark.setAttribute('fill', '#34d399');
-          openMark.setAttribute('font-size', '16');
-          openMark.setAttribute('font-weight', '600');
-          openMark.textContent = 'O';
-          svg.appendChild(openMark);
+          const y = paddingTop - 20;
+          const circle = document.createElementNS(svgNS, 'circle');
+          circle.setAttribute('cx', x.toString());
+          circle.setAttribute('cy', y.toString());
+          circle.setAttribute('r', (dotRadius * 0.8).toString());
+          circle.setAttribute('fill', intervalColor);
+          circle.setAttribute('stroke', '#0f172a');
+          circle.setAttribute('stroke-width', '2');
+          svg.appendChild(circle);
+
+          const label = document.createElementNS(svgNS, 'text');
+          label.setAttribute('x', x.toString());
+          label.setAttribute('y', (y + 4).toString());
+          label.setAttribute('text-anchor', 'middle');
+          label.setAttribute('fill', '#0f172a');
+          label.setAttribute('font-size', '12');
+          label.setAttribute('font-weight', '700');
+          label.textContent = intervalLabel;
+          svg.appendChild(label);
           continue;
         }
 
@@ -910,10 +928,20 @@ const pageDescription =
         circle.setAttribute('cx', x.toString());
         circle.setAttribute('cy', y.toString());
         circle.setAttribute('r', dotRadius.toString());
-        circle.setAttribute('fill', '#22d3ee');
+        circle.setAttribute('fill', intervalColor);
         circle.setAttribute('stroke', '#0f172a');
         circle.setAttribute('stroke-width', '2.5');
         svg.appendChild(circle);
+
+        const label = document.createElementNS(svgNS, 'text');
+        label.setAttribute('x', x.toString());
+        label.setAttribute('y', (y + 4).toString());
+        label.setAttribute('text-anchor', 'middle');
+        label.setAttribute('fill', '#0f172a');
+        label.setAttribute('font-size', '13');
+        label.setAttribute('font-weight', '700');
+        label.textContent = intervalLabel;
+        svg.appendChild(label);
       }
 
       CHORD_DIAGRAM_CONTAINER.appendChild(svg);
