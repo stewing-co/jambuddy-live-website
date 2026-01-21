@@ -1,28 +1,29 @@
 X: 1
-T: Angeline the Baker (Song)
+T: Angeline the Baker
 L: 1/8
 C: Traditional
 R: Polka
 M: 4/4
 K: D
 |:"D"[A2D2] B2 d3 [AD] | B2 d6 | [A2D2] B2 d2 dA  | "G"[B4D4] [B4D4] |
-w: 1.~An-gel-ine the bak-er, lived on a vill-age gre-en,
-w: 2.~An-gel-ine the bak-er, age of for--ty th-ree, 
-w: 3.~Her father was a bak-er, his name was Un-cle S-am, 
-w: 4.~She said she cannot do hard work, be-cause she is not stout,
-w: 5.~Brought her out a brand new dress, nei-ther black nor br-own,
-w: 6.~Six-teen horses in my team, lea-der he w-as bl-ind,
+w: 1a.~An-gel-ine the bak-er, lived on a vill-age gre-en,
+w: 1b.~An-gel-ine the bak-er, age of for--ty th-ree, 
 | "D"[A2D2] B2 d2 e2 | f2 e2 d2 e2 | "D" f2 e2 "G"d2 B2 | "D"[A8D8] ] :|
 w: The way I always lo-ved her beats all you ev-er seen.
 w: Fed her su-gar can-dy, and she still won't mar-ry me.
-w: I ne-ver can for-get her, no mat-ter where I am.
-w: Bakes her bis-cuits ev-ery day, and purs the cof-fee out.
-w: It was the color of stor-my skies, before the rain came down.
-w: I dreamed that I was dy-ing, I saw my An-gel-ine.
 |: "D"af e2de d2 | af e2 d2 B2 |
 w: An-gel-ine the ba-ker, An-gel-ine I know, 
 | AB de fede | "G"fedBA4  :|
 w: Should have mar-ried An-gel-ine, some twen-ty years a-go.
+W: 2a. Her father was a baker, his name was Uncle Sam, 
+W: I never can forget her, no matter where I am.
+W: 2b. She said she cannot do hard work, because she is not stout,
+W: Bakes her biscuits every day, and pours the coffee out.
+W:
+W: 3a. Brought her out a brand new dress, neither black nor brown,
+W: It was the color of stormy skies, before the rain came down.
+W: 3b. Sixteen horses in my team, leader he was blind,
+W: I dreamed that I was dying, I saw my Angeline.
 
 X: 2
 T:Boil them Cabbage Down
@@ -34,21 +35,23 @@ K: Amaj
 Q:120
 |: "A"cc cc "D"d2 dd/2d/2 | "A"cc cA "E7" B4 |  
 w: Went up on the moun-tain just to give my horn a blow. 
-w: Pos-sum up a 'sim-mon tree,* Ra-coon on the ground. 
-w: Rac-coon has a bu-shy tail, Pos-sum's tail is* bare. 
-w: Some-one stole my ol' 'coon dog. Wish they'd bring him* back. 
 | "A"cc cc "D" dd d2 | "E7"cc BB "A" A4  | 
 w: Thought I heard my true love say, "Yon-der comes my beau."
-w: Ra-coon say to pos-sum, "Won't you shake them 'sim-mons down?"
-w: Rab-bit's got no tail at all, just a little bunch of~hair.
-w: He chased~the big~hogs through the fence and the little ones through the crack.
 |"A"cc cc "D"d4| "A" cc  cc "E7"B3 c| 
 w: Boil them cab-bage down, bake them hoe-cakes brown. The
 "A"cccc "D"dddd| "E7"ccBB  "A" A4 :|
 w:  on-ly song that I can sing is Boil them Cab-bage Down.
+W: 2. Possum up a 'simmon tree, Racoon on the ground. 
+W: Racoon say to possum, "Won't you shake them 'simmons down?"
+W:
+W: 3. Raccoon has a bushy tail, Possum's tail is bare. 
+W: Rabbit's got no tail at all, just a little bunch of hair.
+W:
+W: 4. Someone stole my ol' 'coon dog. Wish they'd bring him back. 
+W: He chased the big hogs through the fence and the little ones through the crack.
 
 X: 3
-T:Cluck Old Hen (Song)
+T:Cluck Old Hen
 R: Reel
 C: Traditional
 M: 4/4
@@ -56,18 +59,20 @@ L: 1/8
 K: Ador
 |"A"e2a2 "G"g3 g| "A"e2 a2 "G"d4 | "A"e2 a2 "G"g2 ag | "E"edc2"A"A4|
 w: 1.~My old hen she's a good old hen. She lays eggs for the rail-road men.
-w:2.~I had an'old hen, she had'a wooden leg. Best darn hen that ever laid an egg.
-w:3.~My old hen she's a good old hen. She lays eggs for the rail-road men.
-w:4.~My old hen she just wo-n't do. She lays eggs and tai--ters too
 |"A"e2a2 "G"g3 g| "A"e2 a2 "G"d4 | "A"e2 a2 "G"g2 ag |"E"edc2"A"A4|
 w:   Some-times eight and some-times ten, That's e-nough for the rail-*road men.
-w: Poured hot water down her wooden leg. Dang 'ol hen laid a hard boil-ed egg. 
-w: Some-times 1,* some-times 2, Some-times e-nough for the whole damn crew.
-w: First time she cackled cackled in'the lot. Next time she cack-les cackle in the pot.
 | "Am"A2A2 "C"[c4e4] | "Am"A2A2 "G"G3G | "Am"A2AA c2d2 | "E"edc2 "Am"A4 |
 w:Cluck old hen cluck and sing,     You ain't laid an egg since way-* last spring.
 |: "Am"A2A2 "C"[c4e4] | "Am"A2A2 "G"G3G | "Am"A2AA c2d2 | "E"edc2 "Am"A4 :|
 w:   Cluck old hen cluck and squ-all,   Ain't laid an egg since way-* last fall.
+W: 2. I had an'old hen, she had'a wooden leg. Best darn hen that ever laid an egg.
+W: Poured hot water down her wooden leg. Dang 'ol hen laid a hard boiled egg. 
+W:
+W:3. My old hen she's a good old hen. She lays eggs for the rail-road men.
+W: Sometimes 1, sometimes 2, Sometimes enough for the whole damn crew.
+W:
+W:4. My old hen she just won't do. She lays eggs and taiters too
+W: First time she cackled cackled in'the lot. Next time she cackles cackle in the pot.
 
 X: 4
 T:Crawdad Song
@@ -78,43 +83,49 @@ L:1/4
 K:D
 | "D" D D/2D/2 D D|F D/2D/2 (B, A,)|B,-, D3|
 w:You get a line and I'll get a po-le Hon-ey,
-w:Get up old man you slept too _la-te Hon-ey,
-w:Yon-der come~a man with~a sack on his ba-ck Hon-ey,
-w:The man fall down and he bust his sa-ck Hon-ey,
-w:What~you gon-na do when~the lake goes _dr-y Hon-ey,
-w:What~you gon-na do when~the craw-fish _di-e Hon-ey,
-w:Craw-dad sit-tin' on~the ri-ver _ba-nk, Hon-ey,
-w:Look at the craw-dad crawl-'in _ro-und Hon-ey,
 |F A/2A/2 A A|B A/2A/2 A2| "A" A-E3|
 w:You get a line and I'll get a pole Ba-be,
-w:Get up old man you slept too _la-te Hon-ey,
-w:Yon-der come~a man with~a sack on his back Ba-be,
-w:The man fall down and he bust his sack Ba-be,
-w:What~you gon-na do when~the lake goes _dry Ba-be,
-w:What~you gon-na do when~the craw-fish _die Ba-be,
-w:Craw-dad _sittin' on~the ri-ver _bank, Ba-be,
-w:Look at the craw-dad crawl-'in _round, Ba-be,
 |"D"F A/2A/2 A A|B A/2A/2 F2|"G"E D D D/2D/2|
 w:You get a line and I'll get a pole, we'll go down to the
-w:Get up _old man you slept too late, craw-dad man done--
-w:Yon-der come~a man with~a sack on his back, pack'in all the craw-dads
-w:The man fall down and he bust his sack, hey look~at them craw-dads
-w:What~you gon-na do when~the lake goes _dry, sit~on the~bank and watch the,
-w:What~you gon-na do when~the craw-fish _die, sit on~the bank un-_,
-w:Craw-dad sittin' on~the river bank, pick-in' his teeth with a two
-w:Look at the craw-dad crawl-'in _round, he's the mayor of
 |F D D2|"D"F A3| "A"F2- E D|"D"D4|
 w:craw-dad hole, Hon-ey Ba--by mine!
-w:passed your gate, Hon-ey Ba--by mine!
-w:he can pack, Hon-ey Ba--by mine!
-w:back in back, Hon-ey Ba--by mine!
-w:craw-dads die, Hon-ey Ba--by mine!
-w:til I cry, Hon-ey Ba--by mine!
-w:by four plank, Hon-ey Ba--by mine!
-w:craw-dad town, Hon-ey Ba--by mine!
+W: 2. Get up old man you slept too late Honey,
+W:Get up old man you slept too late Honey,
+W:Get up old man you slept too late, crawdad man done
+W:passed your gate, Honey Baby mine!
+W:
+W:3.Yonder come a man with a sack on his back Honey,
+W:Yonder come a man with a sack on his back Babe,
+W:Yonder come a man with a sack on his back, pack'in all the crawdads
+W:he can pack, Honey Baby mine!
+W:
+W:4. The man fall down and he bust his sack Honey,
+W:The man fall down and he bust his sack Babe,
+W:The man fall down and he bust his sack, hey look at them crawdads
+W:back in back, Honey Baby mine!
+W:
+W:5. What you gonna do when the lake goes dry Honey,
+W:What you gonna do when the lake goes dry Babe,
+W:What you gonna do when the lake goes dry, sit on the bank and watch the,
+W:crawdads die, Honey Baby mine!
+W:
+W:6. What you gonna do when the crawfish die Honey,
+W:What you gonna do when the crawfish die Babe,
+W:What you gonna do when the crawfish die, sit on the bank un,
+W:til I cry, Honey Baby mine!
+W:
+W:7. Crawdad sittin' on the river bank, Honey,
+W:Crawdad sittin' on the river bank, Babe,
+W:Crawdad sittin' on the river bank, pickin' his teeth with a two
+W:by four plank, Honey Baby mine!
+W:
+W:8. Look at the crawdad crawl'in round Honey,
+W:Look at the crawdad crawl'in round, Babe,
+W:Look at the crawdad crawl'in round, he's the mayor of
+W:crawdad town, Honey Baby mine!
 
 X: 5
-T:Hot Corn, Cold Corn (Song)
+T:Hot Corn, Cold Corn
 C: Traditional
 R: Bluegrass
 M: 4/4
@@ -140,16 +151,16 @@ R:Bluegrass
 M:4/4
 L:1/8
 K:C
-"C"e4c4|G4c4|e2d2e2f2|e4d4|
-"F"c8-|c4A2A2|"C"G8|z8|
-"C"e4c4|G4c4|e2d2e2f2|e8|
-"C"e8-|"G"e2-c2 d2d2|"C"c8|
-W: Some glad morning when this life is o'er I'll fly away
-W: To the home on God's celestial shore I'll fly away
-W: I'll fly away, fly away, oh glory, I'll fly away, fly away, in the morning
+"C"e4c4|G4c4|e2d2e2f2|e4d4|"F"c8-|c4A2A2|"C"G8|
+w: Some glad morn-ing when this life is o'-er. I-'ll fly a-way
+"C"e4c4|G4c4|e2d2e2f2|e8|"C"e8-|"G"e2-c2 d2d2|"C"c8|
+w: To the home on God's cel-es-tial shore. I--'ll fly a-way
+W: I'll fly away, fly away, oh glory, I'll fly away, in the morning
 W: When I die, hallelujah by and by I'll fly away
+W:
 W: When the shadows of this life have gone
 W: Like a bird from prison bars has flown
+W:
 W: Just a few more weary days and then
 W: To a land where joys will never end
 
@@ -162,10 +173,13 @@ M:4/4
 L:1/8
 K:D
 "D"A2A4B2|d2d2e2d2|f2f4e2|d4z4|
+w: Lost all my mon-ey but a two dol-lar bill
 "D"f2f4e2|d4A4|"G"B2 d4B2|"D"A4z4|
-"D"A2A4B2|d2d2e2d2|f2f4e2|d4f4|
+w: Two dol-lar bill boys, two dol-lar bill
+"D"A2A4B2|d2d2e2d2|f2f4e2|d4z2f2|
+w: Lost all my mon-ey but a two dol-lar bill. I'm
 "D"a4f4|"A"e4f2e2|"D"d8|
-W: 1) Lost all my money but a two dollar bill
+w: on my long jour-ney home.
 W: 2) Cloudy in the West and it looks like rain
 W: 3) It’s dark and a raining and I want to go home
 W: 4) Homesick and lonesome and I’m feeling kind of blue
@@ -180,19 +194,30 @@ M:4/4
 L:1/8
 K:G
 B=c^c|"G"d8-|d2d2B2G2|B8|z2d2d2d2|
+w: It~was in the spr-ing one sun-ny day, my good gal 
 "C"A2 G6|z2G2_B2A2|"G"G6z2|z2D2E2G2|
+w: left me Lord she went away. And now she’s 
 "G"B8-|B2G2A2B2|"Em"A2G6|z4D2G2|
+w: go-ne but I don’t wor-ry, ‘cause I’m
 "G"B2B2B4|"D"A4B2A2|"G"G6 z2|
-W: It was in the spring one sunny day, my good gal left me Lord she went away
-W: Chorus: And now she’s gone but I don’t worry, ‘cause I’m sitting on top of the world
-W: She called me up from down in El Paso, said come back, daddy, Lord I need you so
-W: Ashes to ashes, dust to dust, show me a woman a man can trust
-W: Mississippi River, long, deep and wide, the woman I’m loving is on the other side
-W: You don’t like my peaches, don’t you shake my tree, get out of my orchard, let my peaches be
-W: Don’t you come here running, holding out your hand, I’ll get me a woman like you got your man
+w: sit-ting on top of the world
+W: 2. She called me up from down in El Paso, 
+W:said come back, daddy, Lord I need you so
+W:
+W: 3. Ashes to ashes, dust to dust, 
+W:show me a woman a man can trust
+W:
+W: 4. Mississippi River, long, deep and wide, 
+W:the woman I’m loving is on the other side
+W:
+W: 5. You don’t like my peaches, don’t you shake my tree, 
+W:get out of my orchard, let my peaches be
+W:
+W: 6. Don’t you come here running, holding out your hand, 
+W:I’ll get me a woman like you got your man
 
 X: 9
-T:Soldiers Joy (song)
+T:Soldier's Joy
 C:Traditional
 M:4/4
 L:1/8
@@ -203,24 +228,20 @@ F2|"D"A2 F2 D2 F2|A2 d2d2F2|"D"A2F2D2F2|G2E2E2F2 |
 w: I am my mo-ther's pride and joy, I am my mo-ther's pride and joy, I 
 "D"A2F2D2F2|"D"A2 d2d2e2 |"D"ffdd  e2c2|d2 d2 d4|!
 w: am my mo-ther's pride and joy, I play a lit-tle tune called Sol-dier's joy.
-w: Chick-en in the bread tray scrat-chin' out dough, Gran-ny will your dog bite? No, child, no.
-|"D"AAAA AA A2 | "D"A2 d2 d2 z2 | "D"f2 d2 e2 c2| "D"d2 d2 d2 z2 |!
-w: La-dies to the cen-ter and gents get chair Hold her don't you let her rest
-|"D"A2 AA AA AA|"D"AAdd d2 z2| "D"AAAA AAAA | "A"EEE E3 z2 |!
-w: Grass-hop-per sit-in on a sweet po-ta-to vine Grass-hop-per sit-in on a sweet po-ta-to vine
-|"D"A2 AA AA AA|"D"A2  ddd d2 e| "D"f2 dd ee c2| "D"d2 d2 d2 z2 |!
-w: Grass-hop-per sit-in on a sweet po-ta-to vine A-long comes a chick-en and says your mine!
-|"D"A2 AA AA AA-|"D"AA2dddd2 | "D"AAAA AAA2 | "A"A2EEE E3 |!
-w: I'm a gon-na get a dri-nk, don't you want to go? I'm a gon-na get a drink don't  you want to go
-|"D"A2 AA AA AA-|"D"AA2  ddd d2| "D"f2 d2 e2 c2| "D"d4 z4 |!
-w: I'm a gon-na get a dr-ink, don't you want to go? Hold on Sol-dier's joy.
-|"D"A2AAA2 AA|"D"A2d3 z2| "D"A2A2A2A2 | "A"F2E4 z4 |!
-w: Twen-ty-five cents for the mor-phine Fif-teen cents for the beer
-|"D"A2AAA2 AA|"D"A2d3 z2| "D"fff2 d2 e2 c2| "D"d4 z4 |!
-w: Twen-ty-five cents for the mor-phine Gon-na take me away from here
+W: 2. Chicken in the bread tray scratchin' out dough, Granny will your dog bite? No, child, no.
+W: Ladies to the center and gents get chair, hold her don't you let her rest
+W:
+W: 3. Grasshopper sitin on a sweet potato vine. Grasshopper sitin on a sweet potato vine
+W: Grasshopper sitin on a sweet potato vine, along comes a chicken and says your mine!
+W:
+W: 4. I'm a gonna get a drink, don't you want to go? I'm a gonna get a drink don't  you want to go
+W: I'm a gonna get a drink, don't you want to go? Hold on Soldier's joy.
+W: 
+W: 5. Twenty-five cents for the morphine, Fifteen cents for the beer
+W: Twenty-five cents for the morphine Gonna take me away from here
 
 X: 10
-T:Sourwood Mountain (Song)
+T:Sourwood Mountain
 A:William Marion Reece 
 M:C|
 L:1/8
@@ -229,17 +250,18 @@ K: A
 Q:120
 |:"A"e3ee2e2|fef2e2c2| e3e e2 e2| fe f2 e4|
 w:Chick-ens crowin on So-ur-wood Moun-tain. Hi di hi and di-dle oh day.
-w:My true loves a black* eyed dai-sy Hi di hi and di-dle oh day.
-w:Sar-ra, Sar-ra, let's* go walk-in'. Hi di hi and di-dle oh day.
 |e3ee2e2|fef2e2c2|A3AA2f2|ecB2A4:|
 w:So many pretty girls I* can't count 'em, Hi di hi and di-dle oh day.
-w:If I don’t get her* I’ll go crazy, Hi di hi and di-dle oh day.
-w:Kiss me quick and st-op your talk-in', Hi di hi and di-dle oh day.
 |:A3AA2A2|c2A2F2E2|A3AA2A2|cBc2 e4|
 w:Hey, old man I want your daugh-ter, Hi di hi and di-dle oh day.
-w:Big girls love, the little ones spite you, Hi di hi and di-dle oh day.
-w:My* true love is over the holler, Hi di hi and di-dle oh day.
 |A3AA2A2|c2A2F2E2|A3AA2f2|ecB2A4:|
 w:Bake my bread and carry my wa-ter, Hi di hi and di-dle oh day.
-w:Big dogs bark and little dogs bite you, Hi di hi and di-dle oh day.
-w:She won’t come and I won’t call her, Hi di hi and di-dle oh day.
+W: 2. My true loves a black eyed daisy Hi di hi and didle oh day.
+W:If I don’t get her I’ll go crazy, Hi di hi and didle oh day.
+W:Big girls love, the little ones spite you, Hi di hi and didle oh day.
+W:Big dogs bark and little dogs bite you, Hi di hi and didle oh day.
+W:
+W: 3. Sara, Sara, let's go walkin'. Hi di hi and didle oh day.
+W:Kiss me quick and stop your talkin', Hi di hi and didle oh day.
+W:My true love is over the holler, Hi di hi and didle oh day.
+W:She won’t come and I won’t call her, Hi di hi and didle oh day.
