@@ -17,32 +17,6 @@ K: D
 |  "D"a2f2 e2de | fde2  d3e | "D"f2e2 d2B2 | "A7"A4 A4 :|
 
 X: 2
-T: Angeline the Baker (Song)
-L: 1/8
-C: Traditional
-R: Polka
-M: 4/4
-K: D
-|:"D"[A2D2] B2 d3 [AD] | B2 d6 | [A2D2] B2 d2 dA  | "G"[B4D4] [B4D4] |
-w: 1.~An-gel-ine the bak-er, lived on a vill-age gre-en,
-w: 2.~An-gel-ine the bak-er, age of for--ty th-ree, 
-w: 3.~Her father was a bak-er, his name was Un-cle S-am, 
-w: 4.~She said she cannot do hard work, be-cause she is not stout,
-w: 5.~Brought her out a brand new dress, nei-ther black nor br-own,
-w: 6.~Six-teen horses in my team, lea-der he w-as bl-ind,
-| "D"[A2D2] B2 d2 e2 | f2 e2 d2 e2 | "D" f2 e2 "G"d2 B2 | "D"[A8D8] ] :|
-w: The way I always lo-ved her beats all you ev-er seen.
-w: Fed her su-gar can-dy, and she still won't mar-ry me.
-w: I ne-ver can for-get her, no mat-ter where I am.
-w: Bakes her bis-cuits ev-ery day, and purs the cof-fee out.
-w: It was the color of stor-my skies, before the rain came down.
-w: I dreamed that I was dy-ing, I saw my An-gel-ine.
-|: "D"af e2de d2 | af e2 d2 B2 |
-w: An-gel-ine the ba-ker, An-gel-ine I know, 
-| AB de fede | "G"fedBA4  :|
-w: Should have mar-ried An-gel-ine, some twen-ty years a-go.
-
-X: 3
 T:Antelope Gap
 L:1/8
 C:JW Whatley
@@ -57,7 +31,7 @@ egfe "D"d2 AB/2c/2|ddee f2 AB/2c/2|dcee f2 fd|
 "A"E3 F E2 A2-|A2 F2 A2 F2| egfe d2 dB|
 "A" A2 AA B2 c2 |1 "D" cddc d2 dc/B/:|2 "D" cddcd2f2||
 
-X: 4
+X: 3
 T:Applejack
 C:Bob McQuillen
 R:Reel
@@ -70,7 +44,7 @@ A,/2B,/2|:"D"DE/2F/2 DE/2F/2|"D"D/2E/2F/2A/2"G"Bd|"D"DE/2F/2D/2E/2 F/2A/2|"G"B/2
 |:"D"d/2e/2d/2B/2 "A7"Ad/2e/2|"D"f/2d/2e/2f/2 "G"e/2d/2B/2d/2|"D"d/2e/2d/2B/2 "A7"Ad/2B/2|"D"A/2d/2A/2F/2 "A7"EA/2B/2|
 "D"d/2e/2d/2B/2 "A7"Ad/2e/2|"D"f/2d/2e/2f/2 "Em"e/2d/2B/2d/2|"G"d/2e/2d/2B/2 "D"A/2d/2A/2F/2|1"A7"E/2D/2E/2F/2 "D"D A/2B/2:|2 1"A7"E/2D/2E/2F/2 "D"D2|]
 
-X: 5
+X: 4
 T:Arkansas Traveler
 L:1/4
 M:4/4
@@ -83,7 +57,7 @@ A, |: "D"D/F/E/D/ "G"B,B, | "D"A,A,D>D | "A"EE"D"FF | "A"E/F/E/D/ B,A, |
  (f/g/) |: "D"a/g/f/a/ "A" g/f/e/g/ |"D"f/e/d/f/ "A"e/d/ A | "D"dd"A"ee | "D"f/e/f/d/"A"ef/g/ |
 |"D"a/g/f/a/ "A"g/f/e/g/ | "D"f/e/d/f/ "A"e/d/B/A/ | "D"d/c/d/A/ "G"B/d/A/G/ | "A"F/D/E/F/ "D"D (f/g/):|
 
-X: 6
+X: 5
 T:Arpeggios: Grisman
 C:David Grisman
 L:1/8
@@ -103,7 +77,7 @@ K:C
 |^F_B^c ^f_b^c' | ^f'^c'_b ^f^c_B | ^F6 | 
 |^D^F_B ^d^f_b | ^d'_b^f ^d_B^F | ^D6 |
 
-X: 7
+X: 6
 T:Arpeggios: O'Brien
 C:Tim O'Brien
 L:1/8
@@ -119,7 +93,7 @@ K:C
 |: B,"B"^D ^FB ^d^f bf | "E"^ge B^G EB, ^G,B, | "F#"_B,^C ^F_B ^c^f _bf | "B"b^f ^dB ^F^D B,2 :|
 |: E"E"^G Be ^gb ge | a"A"e ^cA E^C A,C | "B"B,^D ^FB ^d^f bf | "E"^ge B^G EB, E2 :|
 
-X: 8
+X: 7
 T:Ash Grove Waltz
 C: Traditional
 M: 3/4
@@ -130,7 +104,7 @@ Q:100
 (3efg|:"D"a2fgab|a2g2f2|"A7"g2efga|g2f2e2|"D"f2defg|"Bm"f2e2d2|"A"c2a2"E"^g2|"A"a4(3ABc|
 "D"d2f2ag|f2d2d2|"G"e2gfed|"A"c2A2A2|"D"d2fedc|"G"B2G2B2|"D"A2d2"A"c2|"D"d4:||
 
-X: 9
+X: 8
 T:Avalon Quickstep
 L:1/8
 C:Willie Narmour and Shellie Smith
@@ -143,7 +117,7 @@ z6 FG |: "D""D"AB AG FG A2 | [f2d2] [d2F2] z2 FG | AB AG FG A2 | "A""A"[a3A3]b [
 "G""G"gf ed "A""A"cB A2 | "D""D"[b2d2] [a3f3]e fg | [a2A2] [aA][aA] [aA]f ga | 
 "G""G"[b4d4] "A""A"[a3e3]g | "D""D"f2 [f4d4] fa | "G""G"fe dc "A""A"BA c2 |1 [d2F2] [dF][eF] [dF]e fg :|2 [d8F8] |
 
-X: 10
+X: 9
 T: Barlow Knife
 C: Traditional
 R: Reel
@@ -158,7 +132,7 @@ ef | "G"g2gg "D"fgaf | "G"g2g2 "(D)"d2ef | "G"g2bg "D"f2af | "C"egfe "G"d2ef |
 | "D"A2Ad "G"BAG2 | "D"A2d2 "G"B2A2- | "D"A2Ad "G"BAGB | "D"A2[B2G2] "G"[B2G2]A2- |
 | "D"A2Ad "G"BAG2 | "D"A2d2 "G"B2A2- | "D"A2Ad "G"BAGB | "D"A2G2 "G"[B2G2] |]
 
-X: 11
+X: 10
 T:Benton’s Dream
 C: Traditional
 R:Reel
@@ -170,7 +144,7 @@ K:D
 |:F2|"G"G2BG AGBG|AB-BA B2D2|G2BG AGBG|AB-BA B2B2|
 "A"A3A- Ace^g|a2 a2 =gedc|A3c "E"BA^GB |[1 "A"A6 :|[2"A"A3A- Ace^g||["final" "A"A8 ||
 
-X: 12
+X: 11
 T:Bill Cheatham
 C: Traditional
 M:4/4
@@ -181,7 +155,7 @@ K: A
 |: "A"ecea "D"fdfa| "E"gefg "A"a2eg| "A"agae "D"fgaf| "A"ecBA "E"B2cd|
 | "A"ecea "D"fdfa| "E"gefg "A"a2eg| "A"agae "D"fgaf| "E"ecBc "A"A4 :|
 
-X: 13
+X: 12
 T: Billy in the Lowground
 M:C|
 L:1/8
@@ -192,7 +166,7 @@ K:C
 |:eg2g gage-|ec-cd c2 [G,2G2]|A2a2 abag|ea2b a2g2|
 eg2g gage-|ec-cd c2 [G,2G2]|A3B AG E2| [A,2E2][CE]A, [G,D][C3E3]:|
 
-X: 14
+X: 13
 T:Billy Wilson
 R:Reel
 C: Traditional
@@ -205,7 +179,7 @@ K:A
 |: "A"A4 ABcA | "D"F3E F2E2 | "A"A2A2 cBA2 | e3f e4 |
 |   "E"B4 BcBA | "D"F3E F2e2 | "A"a2g2 a2e2 | "E"ecB2 "A"A4 :|
 
-X: 15
+X: 14
 T:Black Mountain Rag
 C:Traditional
 M:2/4
@@ -219,7 +193,7 @@ A:JamBuddy 2025
 |:"D"FBAB|FBAA|FBAB|"A"FE "D"D2:|
 |:"D"F2 F2|FDB,A,|F2 F2|A,B, D2:|
 
-X: 16
+X: 15
 T:Blackberry Blossom
 M:4/4
 L:1/8
@@ -231,30 +205,7 @@ ef|:"G"gabg "D"fgaf|"C"efge "G"dBAG|"C"EFGE "G"DFGA|"A"BGBd "D"A2 ef|
 |:"Em"E2eB d2e2|E2eB dBAG|E2eB dBde|fbaf ed"B7"BG|
 |"Em"E2eB dBde|"B7"BedB "Em"dBAG|"G"EGFA "C"GBAc|1 "G"BG"D"AF "G"G2GF:|2 "G"BG"D"AF "G"G4]|
 
-X: 17
-T:Boil them Cabbage Down
-R: Reel
-C: Traditional
-M: 4/4
-L: 1/8
-K: Amaj
-Q:120
-|: "A"cc cc "D"d2 dd/2d/2 | "A"cc cA "E7" B4 |  
-w: Went up on the moun-tain just to give my horn a blow. 
-w: Pos-sum up a 'sim-mon tree,* Ra-coon on the ground. 
-w: Rac-coon has a bu-shy tail, Pos-sum's tail is* bare. 
-w: Some-one stole my ol' 'coon dog. Wish they'd bring him* back. 
-| "A"cc cc "D" dd d2 | "E7"cc BB "A" A4  | 
-w: Thought I heard my true love say, "Yon-der comes my beau."
-w: Ra-coon say to pos-sum, "Won't you shake them 'sim-mons down?"
-w: Rab-bit's got no tail at all, just a little bunch of~hair.
-w: He chased~the big~hogs through the fence and the little ones through the crack.
-|"A"cc cc "D"d4| "A" cc  cc "E7"B3 c| 
-w: Boil them cab-bage down, bake them hoe-cakes brown. The
-"A"cccc "D"dddd| "E7"ccBB  "A" A4 :|
-w:  on-ly song that I can sing is Boil them Cab-bage Down.
-
-X: 18
+X: 16
 T:Bonaparte Crossing the Rhine
 S: https://tunearch.org//wiki/Bonaparte_Crossing_the_Rhine_(1)
 M:C
@@ -266,7 +217,7 @@ FG |: "D"A>B AF A2 de | f>e fa d2 dc | "G"BcdB "D"AFDF | "A"E2 E>F E2 FG |
 |:"D"f>e fg a2 dc |"G" B>A Bc "D"d2 AA | "G"B>c dB "D"AFDF |"A" E2 E>F E2 FG | 
 "D"A>B AF A2 de |fefa d2 dc | "G"B>c dB "D"AF"A"EF |1 "D"D2 DE D2 de :|2 "D"D2 DE D4|]
 
-X: 19
+X: 17
 T:Bonaparte’s Retreat
 R: March
 M:2/4
@@ -283,7 +234,7 @@ K:D
 [2|"Am"=c4 "G"B4|"Am"A4 A2 B2|"Am"=c2 d2 "G"B2 c2|"Am"A4 A2 B2|
 |"Am"=c4 "G"B4|"Am"A4 A2 B2|"Am"=c2 d2 "G"B2 c2|"Am"A8||]
 
-X: 20
+X: 18
 T:Booth Shot Lincoln
 C: Traditional
 M:C
@@ -297,7 +248,7 @@ K:A
 |1"F#m"AF2a/f/|"A"ece e/e/ |"D"f/af/a A/B/ "A" |cc "E"B/c/ B | "A"A2 "D"a>f:|
 |2"F#m"AF2(3F/G/F/| "A"ECE E/E/ |"D"F/A B/Af | "A"ec "E"B/c/B | "A"A4||
 
-X: 21
+X: 19
 T:Boys My Money's all Gone 
 S:https://tunearch.org/wiki/Boys_My_Money%27s_All_Gone_(1)
 L:1/8
@@ -308,7 +259,7 @@ M:4/4
 |:"A"EGAB A2 AG|"A"EGAB =cBAG|"G"EFGF G2 GF|"G"EDEF GAGF|!
 "A"EGAB A2 AB|"A"cBcd e2 ef|"A"gfed (3cdcAF|1 "E"EFAB "A"A2 E2:|2 "E"EFAB "A"A4|]
 
-X: 22
+X: 20
 T:Buck Mountain
 L:1/8
 R: Reel
@@ -321,7 +272,7 @@ e3 a e2 fg|1 "A" a4 a2 b2|a2g2f2e2:|2"A"abag fdec| "D"d5 dB|]
 |:[AF][AF]- [A2F2] [A2F2] dc| "G" [BG][BG]-[B2G2][B3G3] e-|"A"efed cBAc|"D"dcde fedB|
 [AF][AF]-[A2F2] [A2F2] dc|"G"[BG][BG]-[B2G2] [B3G3] e-|"A"efed cABc|1"D" d6 dB:|2"D"d8|]
 
-X: 23
+X: 21
 T:Buffalo Gals
 T: John Hodges
 R: Reel
@@ -332,7 +283,7 @@ D|:"G"GA Bc|"G"ed B3/2B/2|"D7"dc Ac|"C"ed "D7"d/2c/2B/2A/2|"G"GA Bc|
 |"G"ed B3/2g/2|"C"fe "D7"cA|"G"G2 "D7"d2|"C"gf ef|"G"ed d3/2e/2|"D7"dc Ac|
 |"G"ed de/2f/2|"C"gf ef|"G"ed d3/2e/2|"D7"dc AF|"G"G2D2:|
 
-X: 24
+X: 22
 T:Bury Me Beneath the Willow
 M:4/4
 C: Traditional
@@ -343,7 +294,7 @@ K:G
  |: "G"d3 e d2 B-A| "C"G3 A G2 E2| "G"D2 GA BB cB|"D" A8| 
 |"G" d3 e d2 B-A | "C" G3 A G2 E2| "G"D2 G2 "D" FG AF| "G"G8:||
 
-X: 25
+X: 23
 T:Camp Meeting on the Fourth of July
 C: Traditional
 S:https://trillian.mit.edu/~jc/music/abc/Contra/reel/CampMeetingOnTheFourthOfJuly2.abc
@@ -356,7 +307,7 @@ DE |: "D"F2F2 FEDF | A2B2 AFDE | F2F2 ABAF | "A"EDEF E2 DE |
 |: "D"d2 d2 dcBA | "G"B2dB AF D2 |"D" d2 dedc BA | "G"BABc B2 (3ABc |
 "D"d2 d2ecBA | "G"B2 dB AFDE | "A"F2 ABAF E2 |1 "D"D4D2 (3ABc :|2 "D"D4D4 |]
 
-X: 26
+X: 24
 T:Campbell’s Farewell to Red Gap
 R:Reel
 C:Traditional
@@ -371,7 +322,7 @@ E|:"A"AA/B/ cc/d/|ea e>d|cA AB/c/|"G"dd/B/ GE|
 |"A"ea ag/f/|ea e>d|cA AB/c/|"G"dd/B/ GE|
 |"A"AA/B/ cc/d/|ea e>d|c/B/A B/A/G|A2 A|]
 
-X: 27
+X: 25
 T:Cherokee Shuffle
 C: Traditional
 R: Breakdown
@@ -383,7 +334,7 @@ F/2G/2|:"A"AA/2B/2 AA/2B/2|"A"c/2B/2A "D"FE/2F/2|"A"AA/2B/2c/2d/2e|"F#m"f/2e/2f/
  e|:"D"f/2e/2f/2g/2a/2e/2f/2e/2|"A"c/2d/2e/2f/2 ee|"D"f/2e/2f/2g/2"A"a/2e/2f|"E"e3"A7"e| 
 |"D"f/2e/2f/2g/2 a/2e/2f/2e/2|"A"c/2d/2e/2f/2ef/2g/2|"D"a/2e/2g/2f/2 "E7"e/2d/2c/2B/2|"A"AA/2B/2 A:|
 
-X: 28
+X: 26
 T:Chilly Winds
 C: Traditional
 M:4/4
@@ -395,7 +346,7 @@ A,2|:"Dm"D2D2 F2FG|"F"AGFG AGFG|"Dm"D2D2 F2FG|"Am"A3cA2A,2|
 |:"Dm"d2c2 A2c2|"Am"AGF2 "Dm"D2d2|"Dm"d2c2 A2c2|"Am"A3c A2c2|
 |"Dm"d2c2 A2c2|"Am"AGF2 "Dm"D2A2|"Dm"AGF2 "Am"D2C2|[1"Dm"D4 D2 d2:|][2"Dm"D8 ||]
 
-X: 29
+X: 27
 T:Chinquapin Hunting
 C: Traditional
 M:4/4
@@ -409,7 +360,7 @@ Q:120
 |BABc dcBc|"A"BA2 F A4|"G"Bdef edBd|
 |edef e2 ef | g2 (3f-gf e2 d2 |1 "A" c3 d cB A2:|2"A" [c8E8]||
 
-X: 30
+X: 28
 T:Cluck Old Hen
 R: barndance
 S:https://trillian.mit.edu/~jc/music/abc/mirror/oldfarmersball.com/barndance/Cluck_Old_Hen.abc
@@ -420,29 +371,7 @@ K: Ador
 |: "A"e2ae "G"g2ag | "A"e2ae "G"d2dd | "A"e2ae "G"g2ag | "E"ed"^#"c2 "A"A2AA :|
 |: "Am"A2A2 "C"[c4e4] | "Am"A2A2 "G"[G4B4] | "Am"A2AA "Am"cAcd | "E"edc2 "A"A2AA :|
 
-X: 31
-T:Cluck Old Hen (Song)
-R: Reel
-C: Traditional
-M: 4/4
-L: 1/8
-K: Ador
-|"A"e2a2 "G"g3 g| "A"e2 a2 "G"d4 | "A"e2 a2 "G"g2 ag | "E"edc2"A"A4|
-w: 1.~My old hen she's a good old hen. She lays eggs for the rail-road men.
-w:2.~I had an'old hen, she had'a wooden leg. Best darn hen that ever laid an egg.
-w:3.~My old hen she's a good old hen. She lays eggs for the rail-road men.
-w:4.~My old hen she just wo-n't do. She lays eggs and tai--ters too
-|"A"e2a2 "G"g3 g| "A"e2 a2 "G"d4 | "A"e2 a2 "G"g2 ag |"E"edc2"A"A4|
-w:   Some-times eight and some-times ten, That's e-nough for the rail-*road men.
-w: Poured hot water down her wooden leg. Dang 'ol hen laid a hard boil-ed egg. 
-w: Some-times 1,* some-times 2, Some-times e-nough for the whole damn crew.
-w: First time she cackled cackled in'the lot. Next time she cack-les cackle in the pot.
-| "Am"A2A2 "C"[c4e4] | "Am"A2A2 "G"G3G | "Am"A2AA c2d2 | "E"edc2 "Am"A4 |
-w:Cluck old hen cluck and sing,     You ain't laid an egg since way-* last spring.
-|: "Am"A2A2 "C"[c4e4] | "Am"A2A2 "G"G3G | "Am"A2AA c2d2 | "E"edc2 "Am"A4 :|
-w:   Cluck old hen cluck and squ-all,   Ain't laid an egg since way-* last fall.
-
-X: 32
+X: 29
 T:Cold Frosty Morn
 M:4/4
 L:1/8
@@ -455,7 +384,7 @@ K:Em
 |:"Em"B2e2e3f|e2d2B4|"G"B3c d3c|B2.G2.B2.G2.|!
 |"Em"E4"G"G4|"Am"AG A2 "Em"B4|"G"GFEG "D7"FE D2|"Em"[E4B4][E4B4]:||
 
-X: 33
+X: 30
 T:Coleman's March
 M:C
 L:1/8
@@ -467,51 +396,7 @@ DEFA |: d4 d4 | (c2 c)d cBAc | (B2 B)c dc B2 | (A4 A)GFG |
 |: F4 F4 | G4 G4 | (A2 A)B AFDF | (E4 E2) FG | 
 AB d2 (c2 c)A | BcBA FE D2 | (E2 E)F GF TE2 |1 D2 DF ABAG :|2 D8 ||
 
-X: 34
-T:Crawdad Song
-C:Traditional
-R: Reel
-M:4/4
-L:1/4
-K:D
-| "D" D D/2D/2 D D|F D/2D/2 (B, A,)|B,-, D3|
-w:You get a line and I'll get a po-le Hon-ey,
-w:Get up old man you slept too _la-te Hon-ey,
-w:Yon-der come~a man with~a sack on his ba-ck Hon-ey,
-w:The man fall down and he bust his sa-ck Hon-ey,
-w:What~you gon-na do when~the lake goes _dr-y Hon-ey,
-w:What~you gon-na do when~the craw-fish _di-e Hon-ey,
-w:Craw-dad sit-tin' on~the ri-ver _ba-nk, Hon-ey,
-w:Look at the craw-dad crawl-'in _ro-und Hon-ey,
-|F A/2A/2 A A|B A/2A/2 A2| "A" A-E3|
-w:You get a line and I'll get a pole Ba-be,
-w:Get up old man you slept too _la-te Hon-ey,
-w:Yon-der come~a man with~a sack on his back Ba-be,
-w:The man fall down and he bust his sack Ba-be,
-w:What~you gon-na do when~the lake goes _dry Ba-be,
-w:What~you gon-na do when~the craw-fish _die Ba-be,
-w:Craw-dad _sittin' on~the ri-ver _bank, Ba-be,
-w:Look at the craw-dad crawl-'in _round, Ba-be,
-|"D"F A/2A/2 A A|B A/2A/2 F2|"G"E D D D/2D/2|
-w:You get a line and I'll get a pole, we'll go down to the
-w:Get up _old man you slept too late, craw-dad man done--
-w:Yon-der come~a man with~a sack on his back, pack'in all the craw-dads
-w:The man fall down and he bust his sack, hey look~at them craw-dads
-w:What~you gon-na do when~the lake goes _dry, sit~on the~bank and watch the,
-w:What~you gon-na do when~the craw-fish _die, sit on~the bank un-_,
-w:Craw-dad sittin' on~the river bank, pick-in' his teeth with a two
-w:Look at the craw-dad crawl-'in _round, he's the mayor of
-|F D D2|"D"F A3| "A"F2- E D|"D"D4|
-w:craw-dad hole, Hon-ey Ba--by mine!
-w:passed your gate, Hon-ey Ba--by mine!
-w:he can pack, Hon-ey Ba--by mine!
-w:back in back, Hon-ey Ba--by mine!
-w:craw-dads die, Hon-ey Ba--by mine!
-w:til I cry, Hon-ey Ba--by mine!
-w:by four plank, Hon-ey Ba--by mine!
-w:craw-dad town, Hon-ey Ba--by mine!
-
-X: 35
+X: 31
 T:Cripple Creek
 C: Traditional
 R: Reel
@@ -521,7 +406,7 @@ K:A
 |:"A"aa e/2g/2f/2e/2|"D"df "E7"e2|"A"aa e/2f/2e/2d/2|"E7"c/2A/2B "A"A2:|
 |:"A"ce/2c/2 BA|"D"Bc "E7"E2|"A"ce/2c/2 BA|"E7"F/2E/2F/2G/2 "A"A2:|
 
-X: 36
+X: 32
 T: Cuckoo's Nest
 R: Polka
 M: 2/4
@@ -533,7 +418,7 @@ E>F GA|Be Bc|d/c/B/A/ FD|1 E2 EF:|2 E2 EB|]
 |:ee ef|eB Bc|dd dB|A/B/A/F/ DF|
 E>F GA|Be Bc|d/c/B/A/ FD|1 E2 EB:|2 E2 EF|]
 
-X: 37
+X: 33
 T:Cuffeys
 M:4/4
 L:1/8
@@ -545,7 +430,7 @@ ef|:"G"g2 ed BeBG|F2 GA BdBG|"D"D2 FA cBcd|edBc d2 ef|
 |"G"d2 d2 d2 d2|dedc Bc d2|"C"e3 f e2 e2|efed "D"Bdef|
 |:"G"g2 ga gfef|g2 ed BdBG|"D"D2 AB cBAF|1 "G"G4 ABBc:|2 "G"G8|]
 
-X: 38
+X: 34
 T:Cumberland Gap
 C: Traditional
 R: Reel
@@ -557,7 +442,7 @@ K:G
 [|: "G" D2 "Em" E2 GBAG | "Am" EAAB "D"A2 "Am"G2 | "G" D2 E2 "Am" GBAG | "C" EGGA "G" G4 |
 | D2 E2 "Em" GBAG | "Am" EAAB "D" A2 "Am" G2 | "G" D2 E2 "Em" GB"G"AG | "Am" EG"D7"GA "G"G4 :|]
 
-X: 39
+X: 35
 T:Dandy Lusk
 M:C
 L:1/8
@@ -567,7 +452,7 @@ GA |: "G"B2 (d2d2) (d2 | "C"e2)(d2 "G"d2)c2 | B2d2c2B2 | "D"~A2 GA "G"B2G2 :|
 GA|: BGBG "D"A2 BA | "G"G2A2B3B | "C"c2cc "D"A2BA | "G"G2A2B3A | 
 "G"BABG "D"A2BA | "G"G2A2B3B | "C"c2 cc A2 "D"BA | "G"[G,2G2]A2[G,3G3][A,A]:|
 
-X: 40
+X: 36
 T:Dry and Dusty
 M:C|
 L:1/8
@@ -579,7 +464,7 @@ d2 [df]d edBA|[df]e[df]d edBA|d2((3BcB A)GFG|1A2 D4 AB:|2A2 D4 (3dcB|]
 |:A2FD EDDE|F2 (A2A2)AB|A2 FD EDDE|F2(E2E2)((3dcB|
 A2)FD EDDE|F2 (A2A2)((3ABc|d2)((3BcB A)GFG|1A2 D4 (3dcB :|2 A2 D6 |]
 
-X: 41
+X: 37
 T:Dubuque
 C: Traditional
 R: Reel 
@@ -591,7 +476,7 @@ K: D
 |:"D"F/AF/ AB/A/ | F/E/D/F/ E/D/B, | "G"G/BG/ BG/A/ | "G"B/A/G/B/ A/G/E/D/ |
 | "D"F/AF/ AB/A/ | "D"F/E/D/F/ "Bm"E/D/B, | "D"F/E/D/F/ E/D/B, |1 "A7"A,/B,/D/E/ "D"F/E/D :|2 "A7"A,/B,/D/E/ "D"D2 |]
 
-X: 42
+X: 38
 T: Duck River
 R: Reel
 M: 4/4
@@ -603,7 +488,7 @@ A,2D2 DFED|FA2B A2AB|d2AB dBAG|FDEC D4:|
 |:{fg}a4 a2ag|fd2e d2B2|{ga}b4 b2ba|ged2 e4|
 {fg}a4 a2ag|fd2e d2AB|d2AB dBAG|FDEC D4:|
 
-X: 43
+X: 39
 T:Ebb and Flow
 C:Carl Jones
 M:4/4
@@ -615,7 +500,7 @@ F4F4|FEDC ~B,2A,2|DEFD GABG|~A2A2B2 ((3ABc)|1 d6D2:|2 d6 ((3ABc)||
 [M:6/4]BdAF ~E4-E2 ~A2|[M:4/4]defd e2c2|[M:6/4]dc~BA B4-B2 cd|
 [M:4/4]~A2F2GFED|CDEG FDEC|1D6A2:|2 D6|]
 
-X: 44
+X: 40
 T:Eeph Caught a Rabbit
 M:C|
 L:1/8
@@ -629,7 +514,7 @@ egec egec|efga gedc|+slide+[e3e3]a ged2 |[c3e3][ce] [c2e2]a2-|
 agec egec|e-gga gedc|BdBG BdBG|Bd-dB d2g-a|
 agec egec |eg-ga g2 ec |eg-ga ged2|[c3e3][ce][c2e2]||
 
-X: 45
+X: 41
 T:Eighth of January
 R:Reel
 C:Traditional
@@ -646,7 +531,7 @@ e/a/|"D"f/e/f/a/ f/e/d/f/|"G"e/f/e/d/ BB/d/|"A7"ee/f/ e/d/B/A/|"D"d/B/A/[F/A/] [
 |:f/g/|"D"a/f/b/f/ a/f/d/f/|a/f/b/f/ af/g/|a/f/b/f/ a/f/g/a/|"A7"f/d/e/c/ "D"df/g/|
 "D"a/f/b/f/ a/f/b/f/|a/f/b/f/ af/g/|a/f/b/f/ a/f/g/a/|"A7"f/d/e/c/ "D"d:|]
 
-X: 46
+X: 42
 T: Elk River Blues
 M: 4/4
 L: 1/8
@@ -657,7 +542,7 @@ z2 AA B2 d2|"C" e4 e4|z2 ef e2 d2|[M:2/4 ] BA G2|[M:4/4] "D" A4 A4|
 z2 DD E2 G2|"Am" A4 A4|z2 AB A2 G2|[M:2/4 ] ED E2|[M: 4/4] "G" G4 G4|
 z2 DD E2 G2|"Am" A4 A4|z2 AB A2 G2|[M:2/4 ] ED E2|[M: 4/4] "G" G4 G4|
 
-X: 47
+X: 43
 T:Farewell to Whiskey
 M:2/4
 L:1/8
@@ -669,7 +554,7 @@ GE|:"G"D2GA BAGA|"C"B2E2 EFGE|"G"D2GA BAGB|"Em"d2B2 B2d2|
 |:"G"d2g2 g2fg|"C"efge "D"d3B|"G"d2g2 g2fg|"C"e2f2"G"g4|
 |"C"efge "G"d2B2|"Am"cBAG "D"A2B2|"G"D2GA "D"BAGA|"G"B2G2 G4:|
 
-X: 48
+X: 44
 T:Feed her Candy and Tell Her Lies
 M:4/4
 R:reel
@@ -680,7 +565,7 @@ e2|:"A"a2e2 fecd|ecBc A2ef|a2a2 g2a2|"E"b4 b2 (3efg|
 B2|:"A"c4 B2c2|ecBc A2AB|c2c2 B2c2|"E"e4 e2 c2-|
 |c2c2 B2c2|"A"ecBc A2AB|cBAF "E"E2F2|"A"A4 A2:|
 
-X: 49
+X: 45
 T:Fisher’s Hornpipe
 C: James Fisher
 M:4/4
@@ -692,7 +577,7 @@ K:D
 cd|:"A7"ecAc ecge|"D"fdAd fdaf|"A"ecAc ecgf|"E7"edcB "A"A2A2|
 "G"BGDG BGdB|"D"AFDF AFdA|"G"BdcB "A7"AGFE|1"D"D2F2 D2 cd :| 2"D"D2F2 D4|]
 
-X: 50
+X: 46
 T:Flop Eared Mule
 R: Polka
 M: 2/4
@@ -703,7 +588,7 @@ M:4/4
 |:"D" f2 f2 d2 d2 | ABAG FE D2 |"A7" E2 EF GF E2 |1"D" DEFG A4 :|2 "D"D2 F2 D4 ||
 |:"A" efec efec | efed cB A2 |"E7" B2 Bc dc B2 |1"A" ABcd e4 :|2 "D"A2 c2 A4 ||
 
-X: 51
+X: 47
 T:Flowers of Edinburgh
 R:Reel
 C:Traditional
@@ -715,7 +600,7 @@ GE |: "G"D2DE G2GA | BGBd "C"cBAG | "D"FGFE DEFG | "D7"AFdF "C"E2GE |
  d |: "G"g2g2 gbag | "D"f2f2 fagf | "C" e2ef gfed | "Em" B2e2 "C" e2ge | 
 | "G"dBGB d2d2 | "C"edef "A7"g2fe | "D"dcBA GFGA |1 "G"B2 G2 G2 Bd :|2 "G"B2 G2 G4|]
 
-X: 52
+X: 48
 T:Fly Around My Pretty Little Miss
 M:C|
 L:1/8
@@ -727,7 +612,7 @@ S:https://tunearch.org//wiki/Fly_Around_My_Pretty_Little_Miss
 |:"D"a2a2f2a2|"G"b3a b2a2-|"D"a2a2 agf2|"A"e4 e2fg|
 "D"a2a2f2a2|"G"b3a b2 a2-|"A"a2 aa gf e2|"D"[d3f3][de][d4f4]:|
 
-X: 53
+X: 49
 T:Flying Indian
 L:1/8
 M:C
@@ -736,7 +621,7 @@ S:https://trillian.mit.edu/~jc/music/abc/mirror/kelticksong.ca/Flying_Indian.abc
 G4 B2G2|d2B2g3d|ed 2 edB2|1 G2A2 E2D2:|2 G6 d2||
 G4 a2ga|b2b2g2d2|ed B2 edB2|1 G2A2E2D2:|2 G8||
 
-X: 54
+X: 50
 T: Folding Down the Sheets
 R: Reel
 S:https://trillian.mit.edu/~jc/music/abc/session/PumpkinPatch/Folding_Down_the_Sheets/Folding_Down_the_Sheets_5-D-32-2.abc
@@ -746,7 +631,7 @@ K: D
 ag |: "D"f2d2 "A"cdec | "D"d2F2  A2dc | "G"B2G2 "D"A2F2 |1 "A"EDEF "D"D2 ag:|2"A"EDEF "D"D4]
 |: "A"edef    gfgf | "A"ece^g a2a2 |    c2a2 "G"B2g2 |1 "A7"f2fe "D"d2 f2:|2 "A7"f2e2 "D"d4 |]
 
-X: 55
+X: 51
 T:Georgia Railroad
 C: Traditional
 R: Reel
@@ -758,7 +643,7 @@ B|:"A"c3/2c/2cA/2B/2|cBAF|"Bm(7)"B3/2B/2BA/2B/2|"A"c/2B/2A"E"B2|
 |:"A"agfe|fe/2c/2BA|"A"agfe|"D"f/2d/2f"E"g2|
 |"A"agfe|fe/2c/2BA/2F/2|"Bm"AA/2B/2AF|"E"E/2F/2A"A"A2:|
 
-X: 56
+X: 52
 T: Getting Out of the Way of the Federals
 R: Barndance
 M: 4/4
@@ -769,7 +654,7 @@ B4 B2 AB|d2B2 BA G2|ABAG E2F2|1 G3AG2 GA:|2 G3AG2 Bd||
 |:g4 gage|d2B2 BA G2|g4 gfga|beef e3f|
 gaba g2 ge|eged BA G2|ABAG E2F2|1 G3AG2 Bd:|2 G3AG2 GA||
 
-X: 57
+X: 53
 T:Girl I Left Behind Me
 C: Traditional
 R: Reel
@@ -781,7 +666,7 @@ g/f/|:"G"ed B3/2G/|"C"A/B/A/G/ E3/2D/|"G"GG G/A/B/c/|d2 Bg/f/|
 d/c/|:"G"Bd df|gd BG|Bd ef|
 |"C"g2 "D"fg/f/|"G"ed c3/2A/|"C"BG E3/2G/|"D"FA DE/F/|"G"G2 G:|
 
-X: 58
+X: 54
 T:Give the Fiddler a Dram
 C: Traditional
 R: Reel
@@ -793,7 +678,7 @@ K: C
 ^A|:"G"Bg2^f "G7"gag=f|"C"ec~cB cdcB|"A"Aa2^g "A7"aba=g|"D"^fde^c "D7"ded=c|
 "G"Bg~g^f gag=f|"C"ec~cB cde2|"F"f3g fedc|"G"BGAF G2:|
 
-X: 59
+X: 55
 T:Going Down to Cairo
 M:C|
 L:1/8
@@ -807,7 +692,7 @@ d2d2[D3d3]c|B2d4dc|B2 BG ABAF|G6||
 |:((3DEF|G2)G2[F3A3][FA]|[GB][GA][G2B2][G3c3]c|B2 Bc BAGB| A2D4((3DEF|
 G2)G2[F3A3][FA]|[GB][GA][G2B2][G3c3]c|BAG2 AGFA|G6:|]
 
-X: 60
+X: 56
 T:Gold Rush
 S:https://tunearch.org/wiki/Gold_Rush
 M:4/4
@@ -819,7 +704,7 @@ AB|:"A"c2 e2 efed|"A" c2 e4 c (e|"A" e)afe cBAG|"Bm" F6 EF|
 |2"A" A2 AB A2 cB|:"A"ABAF E2 FE|"D" D2 E2 "A" C2- E(E|"A" E2) EE F2 A2|"F#m" BccB c2cB|
 "A" ABAF E2 FE|"D" D2 E2 C2- E(E|"E"E)FAB cBAF |1"A"A2 AB A2 cB:|2"A"A2 AB A4||
 
-X: 61
+X: 57
 T:Golden Slippers
 C: Traditional
 R: Reel
@@ -832,7 +717,7 @@ cB|:"D"A6d2|"D7"f2e2 d2A2|"G"B6e2|"Em"g2f2 "E7"e2d2|
 "A7"c2c2 cBcd|1e4 A4|"D"d3c "A7"d2e2|"D"f4 "A7"a4:|
 [2e4 g4|"D"f3g "A7"f2e2|"D"d4 d2|]
 
-X: 62
+X: 58
 T:Grasshopper Sittin’ on Sweet Potato Vine
 C: Traditional
 R: Reel
@@ -844,7 +729,7 @@ K:D
 |: "A"efed c2e2 | a2af "D"d2d2 | "G"BABA G2B2 |    d2B2 "D"A2A2 | 
 |  "A"efed c2e2 | a2af "D"d2d2 | "A"c2A2 B2c2 | "D"d3e     d4  :|
 
-X: 63
+X: 59
 T:Greasy Coat
 C: Traditional
 R:reel
@@ -855,7 +740,7 @@ K:G
 |"Am"ABcde2f2|"G"g4g4|ABcde2g2|"Am"a2aga4|
 |"Am"ABcde2f2|"G"g4"Em"e3d|"C"c2A2"Em"G2A2|"G"EG3"Am"A4:|
 
-X: 64
+X: 60
 T:Grub Spring
 M:C
 L:1/8
@@ -867,7 +752,7 @@ K:A
 |:"A"e4 e4 | "D"f2 fa fe c2 | "A"e4 e4 | "D"fefg a4 |!
 "A"[c3e3] [de] [c2e2] [d2f2]-|"D"[d2f2] fa fe c2 | "A"e4 "E"[B4e4] :|
 
-X: 65
+X: 61
 T: Haapavesi valssi
 C: Keith Murphy
 R: Waltz
@@ -880,7 +765,7 @@ K: D
 |: efg |"D"a2 ag fd | "G"g3 f- fg | "A7"eA Ag fg | e2 A2 fg |
 "D"a2 ag fd | "G"g3 f- fg | "Em"e2 eg "A7"e{d}c | "D"d3 :|
 
-X: 66
+X: 62
 T:Haste to the Wedding
 M:6/8
 R:Jig
@@ -891,7 +776,7 @@ K:D
 | "G"ede "A7"fdB | "D"A>BA "A7"faf | "D"d>ed d2 :: f/g/ | "D"a>fa afa | "G"b>gb "(A7)"bag |
 | "D"fga "Bm"agf | "Em"g>fg "A7"efg | "D"az2 "Bm"~f3 | "Em"ede "A7"fdB | "D"A>BA "A7"faf | "D"d>ed d2 :|
 
-X: 67
+X: 63
 T:Hector the Hero
 C: James Scott Skinner
 R: Air
@@ -904,7 +789,7 @@ Bc|:"Bb"d3/2c/2B|"Eb"g2f/2d/2|"Bb"f2-f/2g/2|"Bb"f2B/2c/2|"Gm"d2c/2B/2|"Eb"g2f/2d
 "Eb"g2e/2g/2|"Eb"b2a/2g/2|"Bb"f2-f/2g/2|"Bb"f2d/2f/2|"Gm"g2f/2d/2|"Gm"f2B/2d/2|"Cm"c2-c/2d/2|"F"c2d/2f/2|
 "Eb"g2e/2g/2|"Eb"b2a/2g/2|"Bb"f2e/2d/2|"Eb"b2e|"Bb"d2B/2d/2|"F"c2B|"Bb"B3-||1"Bb"Bdf:|2 "Bb"B3:|]
 
-X: 68
+X: 64
 T:Hollow Poplar
 C:Traditional
 R: Reel
@@ -915,7 +800,7 @@ Bc|:"G"d4d2 Bc|d2B2 AGAB|"C"c4 c2 AB|c2B2 AGEG|
 Bc|:"G"d4g4|g2f2e2d2|"D"fa-a2 a2 fg|a2f2 edef|
 |"G"gfef gfef|"C"g2 f2 edBA| "G"G2 BG "D7"AG F2|"G" G6:|
 
-X: 69
+X: 65
 T: Holloway
 R: Reel
 S:https://trillian.mit.edu/~jc/music/abc/Contra/reel/Holloway_D.abc
@@ -927,26 +812,7 @@ K: D
 |:"G"B4   d3e  | "D"fede fa3  | "Bm"b2b2- b2a2 |     b2af-  fed2 |
 | "G"B4   d3e  | "D"fede fa2f | "Bm"b2af- fedf | "A7"edc2 "D"d4 :|
 
-X: 70
-T:Hot Corn, Cold Corn (Song)
-C: Traditional
-R: Bluegrass
-M: 4/4
-L: 1/8
-Q: 180
-K: Gmaj
-AA|:"G" B2 G2 G2 E2|G2 GG E E3|"D" A2 A2 A2 F2| A A2 AF D3|
-w: 1.~Well it's up-stairs down-stairs out in the kit-chen, Up-stairs down-stairs out in the kit-chen,
-w: 2.~Well it's old Aunt Peggy won'y you fill 'em up again, Old Aunt Peggy won't you fill'em up ag-ain
-"G"B2 G2 G2 E2|G2 GG E D3|"D" A2 AA A2 AA | AAAA F D3 | "G" B4 G4 |
-w: Up-stairs down-stairs out in the kit-chen, See Unc-le Bill just a rar-in' and a pick-in, yes sir!
-w: Old Aunt Peggy won't you fill 'em up again, Ain't had a drink since I do-n't kn-ow wh-en, yes sir! 
-|"G"B2 G2 G2 E2|GGGG ED D2| "D" A2 A2 A2 F2|AAAA FD D2|
-w: Hot corn, cold corn, bring a-long a dem-i-john, Hot corn, cold corn, bring a-long a dem-i-john,
-"G" B2 G2 G2 E2|GGGG ED D|"D" A2 A2 AA A2|AAAA F D3 | B4 G4 :|
-w: Hot corn, cold corn, bring a-long a dem-i-john, Fare-well Unc-le Bill, see you in the morn-ing, yes sir!
-
-X: 71
+X: 66
 M:4/4
 T:Hunting the Buffalo
 C:Traditional
@@ -957,20 +823,7 @@ A2 |:"G"B4 BAGA | BAGFE2D2 |"G" B4BAGA | BABd"C"e2d2 |
 |:"C"E3DE2D2 | EDEFG2D2 |"C" EDEFG2GA |"G" B2B2 (3ABAG2 |
 |"C"E3DE2D2 | EDEFG2GA | "G"B2B2(3ABA G2 | "Em"E3DE2 :|
 
-X: 72
-T: I'll Fly Away
-C:Albert E. Brumley
-S:https://www.idahobluegrassassociation.org/beginner-jam/category/ill-fly-away
-R:Bluegrass
-M:4/4
-L:1/8
-K:C
-"C"e4c4|G4c4|e2d2e2f2|e4d4|
-"F"c8-|c4A2A2|"C"G8|z8|
-"C"e4c4|G4c4|e2d2e2f2|e8|
-"C"e8-|"G"e2-c2 d2d2|"C"c8|
-
-X: 73
+X: 67
 T:Indian Ate the Woodchuck
 S:https://tunearch.org//wiki/Indian_Ate_the_Woodchuck_(1)
 M:C|
@@ -982,19 +835,7 @@ AGFE DEFA|BeeB e2dB|AGFE DEFA|BABc d2:|
 a2|:fafa b2ae|feee e2a2|fafa b2ae|feBe   d2 d2|
 fafa b2ae|feee e2e2| b4 bc'ba|1feBc d2d2:|2 feBc d2||
 
-X: 74
-T:Irish Whiskey Before Breakfast
-C: Traditional
-M:4/4
-L:1/8
-R:Reel
-K:D
-|: "D"A,B,DE D2DE | F2BF ABAF | "G"G2BG F2"D"AF | "A"EDEF ED B,G, |
-|   "D"A,B,DE- D2DE- | F2BF ABAF- | "G"G2 BG "D"FGAF |1 "A"EDEF "D"D2DB, :|[2 "A"EDEF "D"D2 dB |]
-|: "D"A2 B2 d2cd | "A"efed cBA2 | e2ef e2 ef | gfed cABc |
-| "D"d2 fd "A"c2ec | "G"BABc "D"dBAF | "G"G2BG "D"F2AF |[1 "A"EDEF "D"D2dB :|[2 "A"EDEF "D"D4 |]
-
-X: 75 
+X: 68 
 T:Jenny's Gone to Linton
 M:C|
 L:1/8
@@ -1004,7 +845,7 @@ K:A
 |:Ac ce a2 ae|fe fg a2a2|Ac ce a2 ae|fa ec B2 A2:|
 |:ce ea fd df|ec ce d/c/B B2|ce ea fd df|ea ec B2 A2:||
 
-X: 76
+X: 69
 T:Joe Rock the Cradle
 M:4/4
 C:Traditional
@@ -1016,7 +857,7 @@ fg|:"D"a2a2 fefg|"D"a2a2 fefg | "D"a2a2 f2e2 |"D"[f3d3]e [f2d2] f2-|
 |:D2|"A"Acec Acec |"D"dcde f2f2|"G"gfgf g2a2|"D"f3gf4|
 |"A"Acec Acec |"D"dcde f2ef|"G"gfed "A"cABc|"D"d3c d2:|
 
-X: 77
+X: 70
 T:John Ryan's Polka
 M:2/4
 L:1/16
@@ -1028,7 +869,7 @@ d2d2 BcdB|A2F2 A2 de|f2d2 e2c2|d4 d4:|
 |:f2d2 d2 ef|g2f2 e2 de|f2d2 a2d2|fedf abag|
 f2d2 d2 ef|g2f2 e2 de|f2d2 e2c2|d4 d4:|]
 
-X: 78
+X: 71
 T: Johnny, Don't Get Drunk
 M: C|
 L: 1/8
@@ -1040,7 +881,7 @@ K: D
 |: "D"F2A2 A4 | FA2F A4 | "G"BABc dBAG | "A7"F2E2 E4 |  
 "D"FA2F A4 | "G"BABc d4 | BABc d2g2 | "A7"fdec "D"d4 :|
 
-X: 79
+X: 72
 T:Johnny, Johnny, Don’t Get Drunk
 C:Traditional
 S:https://JamBuddy.live
@@ -1053,7 +894,7 @@ K:D
 |: "D"FA-A2 A4 | FGAB A3A | "G"BABc dBAG | "A"FE-E2 E4 |
 |   "D"FA-A2 A2d2 | "G"BABc "D"d3A | "G"BABc dBAG | "A"FDEF "D"D4 :|
 
-X: 80
+X: 73
 T:Josie-O
 M:2/4
 L:1/8
@@ -1063,7 +904,7 @@ ed B/A/B/d/|ed g>d|ed B/A/G/B/|1 A G2 (3B/c/d/:|2 A G3||
 |:DG BB/B/|AB d>d|ed B/A/G/B/|AF G2:|
 |:gg g>a|b>a bg-|gg a/b/a/g/|ed d2:|]
 
-X: 81
+X: 74
 T: Julianne Johnson
 M: 4/4
 L: 1/8
@@ -1075,7 +916,7 @@ e2 | "D"fafe dfed | Bd- de d2fg | a2 a2-aab2 | "A" a8 |
 |: A2 | "G" B4 d3 A | BABc d3 A | BABc dA B2 | "D"A6- AA |
 | "G"BABc d2 AA | BABc d2 e2 | "D"f2ff  edB2 | "A7"A6 :|
 
-X: 82
+X: 75
 T:June Apple
 M: C|
 R: reel
@@ -1086,7 +927,7 @@ eg| "A"ageg ageg| aged cdef| "G"gfef gfef| gagf e2eg|
 |:ed| "A"c2cB A2AB| c2cd e2A2| "G"G2A2 Bc3| "D"d3e d4|
 "A"cdcB A2AB| cBcd e2A2| "G"GFGA BAG2|1 "A"A3B A2 :|2 "A"A6 |]
 
-X: 83
+X: 76
 T:La Bastringue
 C:Traditional
 S:https://JamBuddy.live
@@ -1098,7 +939,7 @@ K: D
 |:"D"D2FA dAFD| "C"=C2EG cGEC| "D"D2FA dAFD| "C"=fedc "D"dcA^F|
 "D"D2FA dAFD| "C"=C2EG cGEC| "D"D2FA dAde| "C"=fedc "D"d2d2 :|
 
-X: 84
+X: 77
 T:Laughing Marj
 C:Jim Mullany
 M:C|
@@ -1110,7 +951,7 @@ S:http://www.taterjoes.com/Warehouse/Fiddle/G_LaughingMarj.pdf
 |:"G" g3 d d2 g2-|gfgf g a3|"D" f4 d4|f2-fg fe d2|
 |"C" c3 G c2 c2-|cccc B2 c2| "D" d3d d2 d2-|1dedA BA G2:|2dedA B2 A2|]"G"G6 z2|
 
-X: 85
+X: 78
 T:LeaRay Wolf Chase (1027 Dogs)
 S:http://www.possummonorail.com/Warehouse/G_LeaRayWolfChase.pdf
 M:C|
@@ -1122,7 +963,7 @@ K:G
 "C"ABAG E2G2-|G2 (3EGE D2 G2|ABAG E2G2-|"G"G2 (3EGE D4|
 "C"ABAG E2 AB|AG E2 D2 E2|ABAG E2G2-|"G"G2 (3EGE D4|
 
-X: 86
+X: 79
 T: Liberty
 S: https://trillian.mit.edu/~jc/music/abc/Contra/reel/Liberty_RJ.abc
 M: C|
@@ -1133,7 +974,7 @@ K: D
 |:"D"A2AB AGFE | DFAd f2d2 | A2AB AGF2 | "A7"E3F E2FG ||
 "D"A2AB AGFE | DFAd f2ef | "G"gfed "A7"cABc | "D"d2f2 d4 :|
 
-X: 87
+X: 80
 T:Limping Sal
 S:https://tunearch.org/wiki/Limping_Sal
 M:2/4
@@ -1145,7 +986,7 @@ gg e/d/B/d/|gg f/g/a/f/|gg e/d/B/G/|A/G/E/F/ G:|
 |:G/E/|DB, D/E/G/A/|BB A/G/E/G/|DB, Dc|(3B/c/B/A/F GG/E/|
 DB, D/E/G/A/|BB A/G/E/G/|DB, Dd/c/|(3B/c/B A/F/ G:|]
 
-X: 88
+X: 81
 T:Little Dutch Girl
 R: Reel
 M: C|
@@ -1157,7 +998,7 @@ K: A
 |: "A"e2ef e2d2 | c3d c2AB | cBAc "D"d2c2 | "E"B3c B3e 
 |  "D"fefg a2f2 | "A"efed cBAB | cBAc "E"BAG2 | "A"A3B A4 :|
 
-X: 89
+X: 82
 T: Little Pine Siskin
 S: https://thesession.org/tunes/23681
 R: Reel
@@ -1171,7 +1012,7 @@ B4 d4|BAF2 B4|B2d2 BAF2|E3F EDB,A,|
 E4 E3F|EDB,2 A,4|E2F2 EDB,2|A,8|
 E4 E3F|EDEF A4|FEDF EDB,C|D3E D2||
 
-X: 90
+X: 83
 T:Liza Jane
 C:Traditional
 S:https://JamBuddy.live
@@ -1184,25 +1025,7 @@ K:A
 A2|: "A"B c2Bc3A| B2A4A2| Bc2B cBA2| "F#m"F6 E2|
 |"D"FA3 B3A|"E7" Bc3 B3A| "D"cBAF "E7"E2F2| "A"A6 :|
 
-X: 91
-T:Long Journey Home
-C:Traditional
-S:https://www.idahobluegrassassociation.org/beginner-jam/category/long-journey-home
-R:Bluegrass
-M:4/4
-L:1/8
-K:D
-"D"A2A4B2|d2d2e2d2|f2f4e2|d4z4|
-"D"f2f4e2|d4A4|"G"B2 d4B2|"D"A4z4|
-"D"A2A4B2|d2d2e2d2|f2f4e2|d4f4|
-"D"a4f4|"A"e4f2e2|"D"d8|
-W: 1) Lost all my money but a two dollar bill
-W: 2) Cloudy in the West and it looks like rain
-W: 3) It’s dark and a raining and I want to go home
-W: 4) Homesick and lonesome and I’m feeling kind of blue
-W: 5) There’s black smoke a rising and it surely is a train
-
-X: 92
+X: 84
 T:Mace Bell's Civil War March
 S: http://www.taterjoes.com/Warehouse/Fiddle/Am_MaceBellsCivilWarMarch.pdf
 R: Reel
@@ -1214,7 +1037,7 @@ ef g2|:"A"a3ge2[e2d2]|[e3c3] d [e2A2][f2A2]|"G"[g3A3][fA][g2A2][a2A2]|[e4A4]efg2
 |:"A"A4 A3B|A2G2E2G2|"C"c4 ed c2|"D"d4 ef g2|
 "A"a3g e2 [e2d2]|(3cdc A2A2G2|A3 G A2 [B2G2]|1A4 DE G2:|2A4 ef g2|]
 
-X: 93
+X: 85
 T:Man of Constant Sorrow
 C:Traditional
 S:https://JamBuddy.live
@@ -1228,7 +1051,7 @@ z2 de e2 dB|:"Am"A8-|A2 c2 BAG2|"G"B2 d6-|dBde ge g2|
 |"D"a8-|a2 a2 fede|"E7"e8-|e2 de e2 dB|
 |"Am"A8-|A2c2 BAGA|"G"B2d6-|dBde ge g2|"E7"e8-|e2 dB A2B2|"Am"A8-|A8|]
 
-X: 94
+X: 86
 T:Martha Campbell
 C:Traditional
 S:https://JamBuddy.live
@@ -1241,7 +1064,7 @@ K: D
 |:"G"ABde "F#m"fdfd|"Em"eded "A"ef3|"G"ABde "F#m"fdfd|"Em"edB2 "A"A4|
 |"G"ABde fdfd|"F#m"eded ef3|"Em"a4f3f|"A"efed BA3:|
 
-X: 95
+X: 87
 T:Midnight on the Water
 S:https://tunearch.org/wiki/Midnight_on_the_Water
 L:1/8
@@ -1255,7 +1078,7 @@ F2 d2 "G"B2|"D"A2F2 DE|"A"F2AFEF|1"D"D4 DE:|2"D"D4 (3ABc|]
 "G"{c}d3c de|dc BA Bc|"D"d3B AF|D4 DE|
 F2d2 "G"(Bd)|"D"A3(D DE)|"A"F2 (AFEF)|1 "D"D4 (3ABc :|2"D"D6:|]
 
-X: 96
+X: 88
 T:Miss McCloud’s Reel
 C:Traditional
 S:https://JamBuddy.live
@@ -1269,7 +1092,7 @@ K: D
 |: "D"D2FD     ADFD  | "D"F2FE (FGFE) | "D"D2FD     ADFD  | "A" E2ED  (EGFE) |
    "D"D2FD     ADFD  | "D"F2F2 (FGA2) | "G"B2(Bc)   BABc  | "D"(dBAF) "A"E4 :|
 
-X: 97
+X: 89
 T:Mississippi Sawyer
 C:Traditional
 S:https://JamBuddy.live
@@ -1281,7 +1104,7 @@ fg|: "D"a2af a2af| afa2 b2a2| "G"g2ef g2ef| gfg2 a2g2|
 |:fe| "D"d2fe d2fe| defg a4| "A"e2c2 A2c2| ABcd efec|
 |    "D"d2fe d2fe| defg a2ef| "A"gfed cABc| "D"d2f2 d2 :|
 
-X: 98
+X: 90
 T:Moonshine Kate
 R: Reel
 C:Chris Haigh
@@ -1294,7 +1117,7 @@ DE|:"D" F2 FE F  A2 A | "G" BAGF E2 (F2 | "D" F)EFG FEDF |"A" DE2 F E2 DE |
 |: "D" d2FG A2 dc |"G" d2FG "A" Acd e| "D" fafe dBAF | "A" DE2 F E2 DE |
 "D" F2 FE F A2 A |"G" BAGF E2 (F2 | "A" F)EFG FDEC |1 "D" D3 E D2  dc :|2  "D" D3 E D4|]
 
-X: 99
+X: 91
 T: Moses Hoe the Corn
 M: C|
 S: https://trillian.mit.edu/~jc/music/abc/Contra/reel/MosesHoeTheCorn_D_4.abc
@@ -1304,7 +1127,7 @@ K: D
 |:"G"B3d     BAG2 | "D"FGAB A2ag | fga2    a3a  |    b2a2   fed2  |
 | "G"B3d     BAG2 | "D"FGAB A2a2 | fgaf "A"edc2 |1 "D"d4 "D7"=c4 :|2 "D"d4 d4 |]
 
-X: 100
+X: 92
 T:Moses Hoe Your Corn
 C:Traditional
 S:https://JamBuddy.live
@@ -1317,7 +1140,7 @@ F: AAB
 |:"G"B3 d BA G2 |"D"FGAB A2 ag | fga2 a3a | b2a2 fe d2|
 |"G"B3 d BA G2 |"D"FGAB A2 a2| fgaf "A"ed c2 |1"D"d4 "D7"=c4:|2"D"d4 d4|]
 
-X: 101
+X: 93
 T:Nail that Catfish To a Tree
 L:1/8
 M:C
@@ -1331,7 +1154,7 @@ D2|"C"C4E4|C6 B2|"D"ABAG FGAB|A2F2 E/F/E D2|
 "C"C4E4|c6B2|"D"ABAG FGAB|A2F2 E/F/E D2|
 "C"C4E4|c6 Bc|"D"d2c2B2A2|"G"G2 z2 G2||
 
-X: 102
+X: 94
 T:Needle Case
 C:Traditional
 S:https://JamBuddy.live
@@ -1344,7 +1167,7 @@ K:D
 |: "D"ag fe|"G"A/2BB/2 BB|"D"ag fe|"G"B/2A/2B/2c/2 "D"df|"D"ag fe|
 |"G"A/2BB/2 BB|"A"A/2B/2c/2d/2 e/2f/2e/2d/2|"A"c/2A/2B/2c/2 "D"dd:|
 
-X: 103
+X: 95
 T:New Five Cents
 M:C|
 L:1/8
@@ -1356,7 +1179,7 @@ A,2|:"D"A,2f2 f(gfe)|d(fed) "Bm"B(cdB)|"D"A2(FD) (GD)(FD)|"A"e3f e2[D2A,2]|
 |:"D"A2 F2 F2(dB)|A(DFG F2)(dB)|A2(FD) (GD)(FD)|"A"E3F E2dB|
 "D"A(FDF) A(Fdc)|"G"B-[G2B2](A BcdB)|"D"A2(FD) "A"(ED)C2|1"D"D3(E D2)(dB):|2"D"D3(E D4)|]
 
-X: 104
+X: 96
 T:Niel Gow’s Lament
 R:Air
 C:Niel Gow
@@ -1371,7 +1194,7 @@ D/2B,/2|: A,>B,D ~D>ED| (EFA) B2 d| (AFD) (E>DE)|{DE}FDB, B,2 D/2B,/2|
 |(df)d (ec)A|(B/2A/2)(B/2c/2){Bc}d  (B/2A/2)(G/2F/2)(E/2D/2)|(F/2D/2)(A/2F/2)(d/2A/2) (B/2A/2)(G/2F/2)(E/2D/2)|{DE}FEE E2 D/2B,/2|
 |A,>B,D D>ED| (EF)A d2 c/2B/2| (AF)D {=C} B,2  A,| B,DDD2||
 
-X: 105
+X: 97
 T:Nixon's Farewell
 C:Curt Bouterse
 M:C|
@@ -1384,7 +1207,7 @@ S:https://tunearch.org/wiki/Nixon%27s_Farewell
 |:e2|"D"fdfd "G"gdgd|"D"fgfe d2e2|fdfd "G"gdgd|"A"e6e2|
 "D"fdfd "G"gdgd|"D"fgfe d2a2|fedf "A"e2c2|1 "D"d6:|2"D"D4D4||
 
-X: 106
+X: 98
 T:North Carolina Breakdown
 C: Arthur L. Smith
 M:2/4
@@ -1396,7 +1219,7 @@ d2|: "C"[e2g2][e2-g2-] [e2g2][e2-g2-]| [e2g2]g2 gag2| \
 |"G"[d2g2][d2-g2-] [d2g2][d2-g2-]| [d2g2][dg][dg] [B2g2][d2g2]|
 "C"[e4g4] g2b2-| b2b2 agef| "G"gage dBAB| "D"dBAF "G"G2 :|
 
-X: 107
+X: 99
 T:Old 1812
 S:https://tunearch.org//wiki/Eighteen-Twelve_March_(The)
 M:2/4
@@ -1409,7 +1232,7 @@ DFAd | AF Ag | fdef | d2 d2 :|
 |: fd de/f/ | gfed | cA/B/ A/B/c/d/ | eA A2 |
 fd de/f/ | gfed | cA/B/ A/B/c/e/ | dfd :|
 
-X: 108
+X: 100
 T:Old Aunt Jenny with Her Nightcap On
 S:https://tunearch.org/wiki/Old_Aunt_Jenny_with_Her_Night-Cap_On_(3)
 M:C|
@@ -1420,7 +1243,7 @@ g2 ga g2 ag|fded d2 ef|g2b2g2 d2 |BGAG G2 GG G2||
 e2d2 BGBd|e2e2 G2 GB|e2 ed BBAGB|AG2G G2 (Bc)|
 e2d2 BGBd|e2d2 G2 GB|e2e2 dBGB|AG G G2-G2||
 
-X: 109
+X: 101
 T:Old Chattanooga
 M:2/4
 L:1/8
@@ -1431,7 +1254,7 @@ D/)(D/E/)(D/ G)A|A/ B B/ BB/A/|B/A/e/A/ d/A/B/A/|(A/ B) (A/ B/)A/B:|
 |:gg/e/ g/(A/d)|e/A/d/(A/ B)B/(A/|B/)B/e/A/ d/A/B/A/|E>D E/D/E|
 gg/e/ g/(A/d)|e/A/d/(A/ B)B/(A/|B/)B/e/A/ d/A/B/A/|(A/ B) (A/ B/)A/B||
 
-X: 110
+X: 102
 T:Old French Reel
 R: Reel
 C:Traditional
@@ -1443,7 +1266,7 @@ K: D
 |: "A"efed c2A2 | AEAc e2dc | "G"BGBd gfed |"A"cAce a2 cd|
 | "A"efed c2A2 | AEAc e2dc | "G"BGBd gfed |"A"c2A2 A3 :|
 
-X: 111
+X: 103
 T:Old Jake Gillie
 L:1/8
 M:C|
@@ -1454,7 +1277,7 @@ defd e2 de|fd e2 d3e|fafe dfed|BA F2 D3||
 |:E|FABF A2 BA|FBAF EFDE|FBAF ABFB|AFEF D3:|
 |:z|a2 ab a2f2|abaf edfg|a2ab a2g2|fd e(d d2
 
-X: 112
+X: 104
 T:Old Joe CLark
 R:Reel
 S:https://tunearch.org/wiki/Old_Joe_Clark
@@ -1467,7 +1290,7 @@ K:D
 |:"A"A3 A A4|e2 d2 c4|A3 A A2 A2|"G"G4 z4|
 "A"A3 A A4|e2 d2 c4|A2 c2 "G"B2 G2|"A"A4 A2 z2:|
 
-X: 113
+X: 105
 T:Old Molly Hare
 C: Nathaniel Gow
 R: Reel
@@ -1477,7 +1300,7 @@ K: D
 de |: "D"f2fd f2fd | f2fd "A7"cAeA | "D"f2fd "G"gfed | "A7"cABc "D"defg :|
 |: "D"a2af "G"b2ba | "Em"g2ge "A7"a2ag | "D"f2fd "G"gfed |1 "A7"cABc "D"defg :|2 "A7"cABc "D"d4 |]
 
-X: 114
+X: 106
 T:Old Mother Flanagan
 M:C|
 L:1/8
@@ -1490,7 +1313,7 @@ EF|[A2A2][AA]c BAFA|+slide+[A2A2][A2c2] BAFF|EFAA A2+slide+c2|+slide+[e3e3][ea][
 f2af d2+slide+[d2f2]|ccec   cAAF|EFAA cAB2|
 A2 +slide+d2-d2+slide+fd |c2[e2e2] cABF |EFAA cA B2|[A3A3][AA][A2A2]||
 
-X: 115
+X: 107
 T: Old Yeller Dog Come Trottin' Through the Meetinghouse
 R: Reel
 S: https://trillian.mit.edu/~jc/music/abc/OldTime/reel/Old_Yeller_Dog_Come_Trottin_Through_the_Meetinghouse-G-32-4.abc
@@ -1502,7 +1325,7 @@ K: G
 |: d2 |"G"g4 e4 | d6 B2- | B2B2 BAG2 | "C"Ee d2 ||
 "G"g4 e4 | d3G e2d2- | "D"d2e2 dBA2 |1 "G"G4 G2 :|2 "G"G4 G4 |]
 
-X: 116
+X: 108
 T:On The Road To Boston
 S:https://tunearch.org/wiki/Road_to_Boston
 R: March
@@ -1513,7 +1336,7 @@ K:D t=8
 f2 fe/f/ | gfed | cdef | d2 AF/A/ |f2 fe/f/ | gfed | cdef | d2 d2 :|
 |: a2 ag/a/ | bagf | g2 gf/g/ | agfe |f2 fe/f/ | gfed | cdef | d2 d2 :|
 
-X: 117
+X: 109
 T:Ora Lee 
 M:C|
 L:1/8
@@ -1524,7 +1347,7 @@ D (3D/E/F/ G4 AB|"D"AGEG A3G|"D"~F2 D2 ED F2|1 "G"G6 GE:|2 "G"[G4B4]G2A2||
 |:"G"[D3B3] d BA G2|([D4B4]B2) [Gd][Ac]|BAGE D2G2|[G4B4] [Ac][Bd]|
 "C"[E4c4]c2B2|"D"A[GA][FA][GA] A3G|~F2D2 ED [F2A2]|1 [G2B4] G2A2:|2 ([G4B4]G4)||
 
-X: 118
+X: 110
 T:Over the Waterfall
 M:4/4
 C: Traditional
@@ -1535,7 +1358,7 @@ de|: "D"f2a2 "A"gfe2| "D"dedB A2de| f2a2 "A"gfe2| "D"d6 de||
 FG|: "D"A2AA "G"B2B2| "D"ABAG F2FG| A2d2 "A7"cde2| "D"d6FG|| 
 |    "D"A2AA "G"B2B2| "D"ABAG F2FG| A2AA "A7"GFE2| "D"D4 D4 :|
 
-X: 119
+X: 111
 T:Petronella
 C: Nathaniel Gow
 R: Reel
@@ -1547,7 +1370,7 @@ d/2A/2|:"D"FA/2F/2 "A7"EA/2F/2|"D"DD DF/2A/2|"G"dc/2d/2 "E7"ed|"A7"c/2d/2B/2c/2 
 |:"D"Ff/2d/2 Aa/2f/2|"Em"gg/2f/2 e/2d/2c/2B/2|"A7"Ae/2c/2 Ag/2e/2|"D"ff/2d/2 "A7"A/2d/2A/2F/2|
 |"D"Df/2d/2 Aa/2f/2|"Em"gg/2f/2 e/2d/2c/2B/2|"A7"Ae/2c/2 A/2g/2e/2c/2|1"D"d f d A/2G/2:|2"D" d4|]
 
-X: 120
+X: 112
 T:Pig Ankle Rag
 C: Traditional
 R: Rag
@@ -1562,7 +1385,7 @@ af |: "A7"gecA- A2af | gecA- AABA | "D"dABA dABA | dBAF- F2af|
 | "A7"ABcA BcAB | cABc- cBAF | "D"D2dA BdAB | dABd- dBdA |
 | "G"B4 d3e | "D"fa2a bafd | "A7"Acea fdec |1 "D"d2 [f4d6] cB :|2 "D"d8 |]
 
-X: 121
+X: 113
 T:Planxty Irwin
 C: Turlough O'Carolan
 R: Air
@@ -1574,7 +1397,7 @@ A|:"D"d2c|"G"Bcd|"A7"A2G|"D"FED|"A7"G2E|"D"FGA|"A"C2D|"A7"E2A|
 |:"D"d2d|"D"dcd|"Em"e2e|"A7"ecA|"D"f2f|F"A"e2d|"E7"dcB|"A7"ABc|
 |"D"d2c|"G"Bcd|"A7"A2G|"D"FED|"A7""Em"G2E|"D""Bm"FGA|"A7""Em"D2" ""A7"C|"D"D2"A7"A:||
 
-X: 122
+X: 114
 T:Polly Put the Kettle On
 C: Traditional
 R: March
@@ -1589,7 +1412,7 @@ d/2e/2|:"D"fd "A7"ge|"D"fd dd/2c/2|"G"BB e3/2d/2|"Em"cA "A7"GE|
 |"D"fa "A7"g/2f/2g/2e/2|"D"fd de/2f/2|"G"gb e/2f/2e/2d/2|"A7"cA Ad/2e/2|
 |"D"fd "A7/e"ge|"D/f"af "G"b3/2g/2|"D"fd "C"A=c|1"D"d3 d/2e/2:|2"D" d4|]
 
-X: 123
+X: 115
 T:Porter's Reel
 M:C|
 L:1/8
@@ -1601,7 +1424,7 @@ S:https://tunearch.org/wiki/Porter%27s_Reel
 |:"D"f3e (faf)(d|A3)A-A2AA|"G"B3A BABd|g2g2(gagf)|!
 "A"[e2e2][e2e2](efe)(d|c3)c- c2(cB|A2)AA (fafe)|1"D"d3d-d2ed:|2"D"d3-dd4|]
 
-X: 124
+X: 116
 T:Possum's Tail is Bare, The
 M:C|
 L:1/8
@@ -1612,7 +1435,7 @@ F2 FF FEDF|G2G2 B3B|A2F2E2C2|D4-D3:|
 |:FE|DFF2 A2B2|[E3=c3]c d2dc|BG G2 Bc d2|A3A A2 (3ABc|
 d2 dd dBAF|G2 G2 B3B| A2F2E2C2|D4-D3:||
 
-X: 125
+X: 117
 T:Pretty Betty Martin
 R:Reel
 C:Garry Harrison
@@ -1626,7 +1449,7 @@ K:A
 |:"A"a2g2f2e2|"D"d2c2B2A2|"E"GABc defg|"D"a2g2 fefg|
 "A"a2g2f2e2|"D"d2c2B2AB|"A"c2AB c2Ac|"E"BABc "A"A4:|]
 
-X: 126
+X: 118
 T:Railroading through the Rockies
 M:C
 L:1/8
@@ -1640,7 +1463,7 @@ K:D
 |:"D"d2) de (fe) d2|"G"(ed)ef (gf)e2|"D"d2 de (fe)d2|"A"e(cB)(c A2) ((3ABc|
 "D"d2) de (fe)d2|"G"(ed)e(f g2) ga|"A"b2 ag (ed)c2|"D"d8:|
 
-X: 127
+X: 119
 T:Red Haired Boy
 C: Traditional
 M:4/4
@@ -1654,7 +1477,7 @@ AF |: "A"E2A2 ABcd | efec "D"d2c-d | "A"edcB ABcA | "G"BAEF =G3F |
 |   "A"E2A2 ABcd | efec "D"d2c-d | "A"e2 a-g afed |\
 [1 "(E)"c2A2 "(A)"A2e-f :|[2 "(E)"c2A2 "(A)"A2AF |]
 
-X: 128
+X: 120
 T: Redwing
 C: George F. Handel
 S:https://trillian.mit.edu/~jc/music/abc/session/RJ/polka/Redwing-G-32-2.abc
@@ -1667,7 +1490,7 @@ D4 |:"G"G3G G2B2 | d6 B2 | "C"c2e2  g2e2 | "G"d6 B2 |
 |: g2f2 | "C"e4 e3e | e2g2 f2e2 | "G"d4 B4- | B2d2 e2d2 | "D7"d4 A4- |
 [1 A2d2 e2d2 | "G"d4 B4- | B4 :|[2 "D"A2c2 B2A2 | "G"G8- | G4 |]
 
-X: 129
+X: 121
 T:Road to Boston
 M:4/4
 C: Traditional
@@ -1678,7 +1501,7 @@ ee|: "D"f6 ef| g2f2 e2d2| "A"c2d2 e2f2| "D"d2A2 F2A2|
 |: "D"a6 ^ga| "B"b2a2 =g2f2| "Em"g6 fg| "A"a2g2 f2e2|
 | "D"f6 ef| "G"g2f2 e2d2| "A"c2d2 e2c2|1 "D"d2A2 d2 fg :|2 "D"d2A2d4 ||
 
-X: 130
+X: 122
 T:Road to Lisdoonvarna
 M:12/8
 L:1/8
@@ -1687,7 +1510,7 @@ K:Em
 |:E2B B2A B2c d3|F2A ABA D2E FED|E2B B2A B2c d3|cdc B2A B2E E2D:|
 |:e2f gfe d2B Bcd|c2A ABc d2B B3|e2f gfe d2B Bcd|cdc B2A B2E E3:|
 
-X: 131
+X: 123
 T:Rochester Schottische
 M:4/4
 R:Schottische
@@ -1700,7 +1523,7 @@ K:D
 |:"D"ABAG FEDF |"G"EDEF G2A2-|"D"ABAG FED2|"G"EDFDG2FG|
 |"D"ABAG FEDF |"G"EDEF G2A2-|"D"ABAG "A"FAE2|"D"D3ED4:||
 
-X: 132
+X: 124
 T:Rock the Cradle Lucy
 R: Reel
 M:2/4
@@ -1712,7 +1535,7 @@ f/e/f/g/ ed|ce-ef/g/|a/b/a/f/ ec|1[df]>[df] [df]:|2 [df]>[df] fD/E/||
 |:F/E/F ED|CE- E>D|E/>F/E/D/ B,C|D>D DD/E/|
 F/E/F ED|CE2A|A/B/A/F/ EC|1 D>D DD/E/:|2 D>D D||
 
-X: 133
+X: 125
 T:Roscoe
 R:Reel
 M:4/4
@@ -1724,7 +1547,7 @@ K:G
 |: e(g || "G"g2) gg edBA | dB A2G2 (g2 | g2) g2 e g3 | "D"a3b a2 (b2 |
 |"G"b)aba gedB | "C"c3 d c2 A(B | "D"B)dBB A F3 | "G"G3A G2 :|
 
-X: 134
+X: 126
 T:Sadie at the Backdoor
 C: Traditional
 R: Reel
@@ -1735,7 +1558,7 @@ a2|:"D"a2g2f2e2|d4>e4|f3g fe d2|"C"=c4>A4|
 DE|:"D"F2F2 ED E2|F2E2D2 =c2-|"C"=c2 B2 "A"AF E2|"D" D3E D3 E|
 |"D"F2F2ED3|"C"=c4 "G" B4|"D"f2>e2"G"d2B2|"A"AFE2"D"D4 :|
 
-X: 135
+X: 127
 T:Sailor’s Hornpipe
 M:2/4
 L:1/16
@@ -1748,7 +1571,7 @@ BA|"G"G2G,2 G,2DC|B,DG GBAG|"A7"A2A,2 A,2AG|"D7"FAd2 d2ef|
 |:DC|"G"B,DGD B,DGD|"C"E2C2 C2ED|"A7"^CEAE CEAE|"D7"F2D2 D2cB|
 |"C"c2e2 edcB|"C"cBAG "A7"AGFE|"G"DGFA "D7"GBAc|"G"B2G2 G2:|
 
-X: 136
+X: 128
 T: Saint Anne's
 R: Reel
 M: 4/4
@@ -1760,7 +1583,7 @@ de|:"D" f2fg "A" fedB|"D" A2F2F2A2|"G" B2GA BcdB|"D"A2F2 F2de|
 |:"D" f2d2 defg|"G" a2gf g2gf|"A" edcB Aceg|"D"b2a2 a2g2|
 "D"f2d2 defg|"G"a2gf g2gf|"A"edcB ABce|1 "D"f2f2 d2ag:|2 "D"f2"A"d2"D"d4||
 
-X: 137
+X: 129
 T: Sal's Got Mud Between Her Toes
 S: https://trillian.mit.edu/~jc/music/abc/OldTime/reel/Sals_Got_Mud_Between_Her_Toes_2-D-48-3.abc
 R: Reel
@@ -1772,7 +1595,7 @@ FF |:"D"A2A2 FEDE | F2A2 A2zA | B2A2 FEDE |1 "A7"F2E2 E2FF :|2 "A7"E2D2 "D"D2 AB
 "D"f2a2 fed2 | "G"B2d2 B2zB | "D"d2B2 AFEF | "A7"E2D2 "D"D2 AB:|
 |:"D"D2D2 DB,A,B, | D2D2 F4 | FED2 B,2A,2 |1 B,A,B,C D2 AB :|2 "A7"B,A,B,C "D"D4 |]
 
-X: 138
+X: 130
 T:Sally Goodin
 M:4/4
 L:1/8
@@ -1782,7 +1605,7 @@ K:A
 AB|:"A"cABc A2 AB|cABA F A2 B|cABc ABAF|[1"E"ECEA "A"F A2 B:|[2"E"ECEA "A"F A3|]
 |: "A"ABcd e2 cd|efed cAcd|efed cdcB||[1"E"ABAF "A"EF AB:|[2"E"ABAF "A"EF A]|
 
-X: 139
+X: 131
 T:Salt Creek
 C: Traditional
 M:4/4
@@ -1794,7 +1617,7 @@ E2|:"A"A3AA2A2|"G"BABc "D"d3A| "A"BA=GA BAGA|"G"BAG2E4|
 |:"A"ea2a a2a2|"A"aba=g e2ef|"G"=g2ga gede|"G"=gfga gedg|
 "A"ea2a a2a2|"A"aba=g e2ef|"G"=gfga gfed|1"A"(3cdc A2A2 e2:|2 "A"(3cdc A2A4 |]
 
-X: 140
+X: 132
 T:Sandy Boys
 S:Danny Miller
 M:C|
@@ -1807,7 +1630,7 @@ e2[e2e2] efge|d2[c2e2] [A2e2]AB|+slide+[c2e2][A2e2]+slide+[c2e2][A2e2]|d2-[d2f2]
 |:eg|abag egec|dA c2 A2ef|gagf efge|a2ag a2eg|
 abag egec|dA c2A2AB|cdec d2c2|1 A4-A2:|2 A4-A4||
 
-X: 141
+X: 133
 T:Sandy River Belle
 C: Traditional
 R: Reel
@@ -1819,7 +1642,7 @@ ef|:"G"[Bg]age d2ef|gabg "C"age[Bf]|"G"[Bg]aged2ed|"A"ea2b "D"a2e[_Bf]|
 |:"G"G2E2 DDEF|"Em"GGBG ed2B|"G"G2E2D2E2|"D"FEF2d3B|
 |"G"G2E2DDEF|"Em"GGBG ed2e/f/|"G"gage "C"dded|1 "D"BGAF "G"G2 (3DEF :|2"D"BGAF "G"G4|]
 
-X: 142
+X: 134
 T:Sarah Armstrong
 M:C
 L:1/8
@@ -1830,7 +1653,7 @@ A,2 [G,2D2] B,2 [G,2D2]|A,2 DE FE D2|E2 A2 A3B|AGFE D2:|
 |:d2 dA dAF[DA]|E2E2 EFGA|B2 Bc BAFE|D2 [D2d2] [Dd]ABc|
 d2 dA dAF[DA]|E2E2 EFGA|B2 Bc BAFE|D2 [D2d2][D2d2]:||
 
-X: 143
+X: 135
 T:Sarah Armstrong's Patty on the Turnpike
 M:C
 L:1/8
@@ -1841,7 +1664,7 @@ D2G2G2G2|BAGA B2d2|efgf e2d2|B2A2G2z2:|
 |:e2a2a2a2|ba^gab2a2|e3f g2 ge|d2 ge d2d2|
 e2a2a2a2|ba^gab2a2|e3f g2 ge|dcBA G2z2:|
 
-X: 144
+X: 136
 T:Seneca Square Dance
 M:4/4
 C: Traditional
@@ -1853,7 +1676,7 @@ D G |:"G"B2 B>B |d B-B2 | B2 B>B | "F" A "C" G-G A|
 |: "G" g2 g-g/e/ | d B-B2 | "G"g2 "D/F#" g.a | "Em" b e-e2|
 |"C" g/a/b/a/ g e| "G" d>B2 A/ G | "C" A/B/A/G/ "D" E F |1 "G"G2 B d :|2 "G" G4 |]
 
-X: 145
+X: 137
 T:Shady Grove
 C:Traditional
 R:Ballad
@@ -1864,7 +1687,7 @@ A|:"Am" A2AA A2AA|"G"B2A2G4|"Am"A2AA c2d2|e4e4|
 |:"G"BABA "Em"G3A|"G"B2BA "Em"G3G|"Am"A2A2"G"B2d2|"Am"e4e4|
 |"C"e2ef g2e2|"G"dB "Em"A2G3 A|"G"B2d2"Em"edB2|"Am"A4A4:|
 
-X: 146
+X: 138
 T:Shenandoah Falls
 R:Reel
 S:https://tunearch.org/wiki/Shenandoah_Falls
@@ -1876,7 +1699,7 @@ cd |"A"e2ef edcB | ABcA     "D"d4   | "A"cBcd "E"cBAc | "A"BAFD E2cd |
 |: G2 |"Bm"F4 B4 | BABA- AAB2 | "A"z2cA    BcAB |    cABc- cBA2 |
 "Bm"F4 B4 | BcBA  Bfed | "D"cBAc "E"BAGB | "A"A4    A2  :|
 
-X: 147
+X: 139
 T:Shoes and Stockings
 S:https://tunearch.org/wiki/Shoes_and_Stockings
 M:C|
@@ -1888,7 +1711,7 @@ G3G B2B2|cBcc d2d2-|"**"d2B2 c2 A2|G3G G2:||
 |:(ef|g2)g2 a2ga|b2b2 d4|"$"c2c2B2B2|cBcc d2(ef|
 g2)g2 a2a2|b2b2d4|c2 dc BAGB|AGFA G2:|
 
-X: 148
+X: 140
 T:Shove that Pig’s Foot a Little Farther in the Fire
 C:Traditional
 R:Reel
@@ -1899,27 +1722,7 @@ GA|:"G"BdBA G2 EF|"C"GAGE "G"D4|DE G2 B3c|"D"B2 A4 GA|
 |:"G"B (dd2)  dBdg|"C"edBc "G"d4|"C"g4g3d|"D"e2 d4 dd|
 |"G"B (dd2)  dBdg|"C"edBc "G"d4|BABd  "D"BAGB|1 "G"A2 G4 BA:|2 "G"A2 G6||
 
-X: 149
-T:Sitting on Top of the World
-C:Walter Vinson and Lonnie Chatmon
-S:https://www.idahobluegrassassociation.org/beginner-jam/category/sitting-on-top-of-the-world
-R: Bluegrass
-M:4/4
-L:1/8
-K:G
-B=c^c|"G"d8-|d2d2B2G2|B8|z2d2d2d2|
-"C"A2 G6|z2G2_B2A2|"G"G6z2|z2D2E2G2|
-"G"B8-|B2G2A2B2|"Em"A2G6|z4D2G2|
-"G"B2B2B4|"D"A4B2A2|"G"G6 z2|
-W: It was in the spring one sunny day, my good gal left me Lord she went away
-W: Chorus: And now she’s gone but I don’t worry, ‘cause I’m sitting on top of the world
-W: She called me up from down in El Paso, said come back, daddy, Lord I need you so
-W: Ashes to ashes, dust to dust, show me a woman a man can trust
-W: Mississippi River, long, deep and wide, the woman I’m loving is on the other side
-W: You don’t like my peaches, don’t you shake my tree, get out of my orchard, let my peaches be
-W: Don’t you come here running, holding out your hand, I’ll get me a woman like you got your man
-
-X: 150
+X: 141
 T: Snake River
 R: Reel
 M: 4/4
@@ -1931,7 +1734,7 @@ K: Dmaj
 |:AB|"C" =c2 =cA "G" B2 BG|"D" A2 AB AFDA|"C" =c2 =cA "G" B2 AG|"D" A2 d4 AB|
 "C" =c2 =cA "G" B2 BG|"D" A2 AB AF D2|" D" A,DDE "G" FD E2|"D" D6:|
 
-X: 151
+X: 142
 T: The Soldier's Return
 S:https://trillian.mit.edu/~jc/music/abc/mirror/BruceShawyer/strathspey/Soldiers_Return.abc
 R:Strathspey
@@ -1944,35 +1747,7 @@ B4 D3E D4 G3F|E3D EG3 A4 G2A2|B4 D4 c3B A2G2|E6 F2 G4 D4|
 G3A B2c2 d6 d2|e3d c2B2 A6 D2|G3A B2c2 d3e d2c2|B6 c2 d4 D2D2|
 G3A B2c2 d6 d2|e3d c2B2 A4 G3A|B4 D4 c3B A2G2|E6 F2 G4:|
 
-X: 152
-T:Soldiers Joy (song)
-C:Traditional
-M:4/4
-L:1/8
-R:Reel
-K:D
-Q:125
-F2|"D"A2 F2 D2 F2|A2 d2d2F2|"D"A2F2D2F2|G2E2E2F2 | 
-w: I am my mo-ther's pride and joy, I am my mo-ther's pride and joy, I 
-"D"A2F2D2F2|"D"A2 d2d2e2 |"D"ffdd  e2c2|d2 d2 d4|!
-w: am my mo-ther's pride and joy, I play a lit-tle tune called Sol-dier's joy.
-w: Chick-en in the bread tray scrat-chin' out dough, Gran-ny will your dog bite? No, child, no.
-|"D"AAAA AA A2 | "D"A2 d2 d2 z2 | "D"f2 d2 e2 c2| "D"d2 d2 d2 z2 |!
-w: La-dies to the cen-ter and gents get chair Hold her don't you let her rest
-|"D"A2 AA AA AA|"D"AAdd d2 z2| "D"AAAA AAAA | "A"EEE E3 z2 |!
-w: Grass-hop-per sit-in on a sweet po-ta-to vine Grass-hop-per sit-in on a sweet po-ta-to vine
-|"D"A2 AA AA AA|"D"A2  ddd d2 e| "D"f2 dd ee c2| "D"d2 d2 d2 z2 |!
-w: Grass-hop-per sit-in on a sweet po-ta-to vine A-long comes a chick-en and says your mine!
-|"D"A2 AA AA AA-|"D"AA2dddd2 | "D"AAAA AAA2 | "A"A2EEE E3 |!
-w: I'm a gon-na get a dri-nk, don't you want to go? I'm a gon-na get a drink don't  you want to go
-|"D"A2 AA AA AA-|"D"AA2  ddd d2| "D"f2 d2 e2 c2| "D"d4 z4 |!
-w: I'm a gon-na get a dr-ink, don't you want to go? Hold on Sol-dier's joy.
-|"D"A2AAA2 AA|"D"A2d3 z2| "D"A2A2A2A2 | "A"F2E4 z4 |!
-w: Twen-ty-five cents for the mor-phine Fif-teen cents for the beer
-|"D"A2AAA2 AA|"D"A2d3 z2| "D"fff2 d2 e2 c2| "D"d4 z4 |!
-w: Twen-ty-five cents for the mor-phine Gon-na take me away from here
-
-X: 153
+X: 143
 T:Soldiers Joy (tune)
 C:Traditional
 M:4/4
@@ -1986,32 +1761,7 @@ FG |: "D"AFDF AFDF | "D"A2 d2 d2 FG | "D"AFDF AFDF | "A"G2 E2 E2 FG |!
 |"D"fefg abaf | "G"edcd "A"efge | "D"fafd "A"egec |1 "D"d2 dd d2 de :||2 "D" d2 dd d4 |]
 |"D"AAAA A2A2 | "D"Ad d2 d2 z2| "D"AAAA A2 A2 | "A"A2 E2 E2 z2 |!
 
-X: 154
-T:Sourwood Mountain (Song)
-A:William Marion Reece 
-M:C|
-L:1/8
-R:Reel
-K: A
-Q:120
-|:"A"e3ee2e2|fef2e2c2| e3e e2 e2| fe f2 e4|
-w:Chick-ens crowin on So-ur-wood Moun-tain. Hi di hi and di-dle oh day.
-w:My true loves a black* eyed dai-sy Hi di hi and di-dle oh day.
-w:Sar-ra, Sar-ra, let's* go walk-in'. Hi di hi and di-dle oh day.
-|e3ee2e2|fef2e2c2|A3AA2f2|ecB2A4:|
-w:So many pretty girls I* can't count 'em, Hi di hi and di-dle oh day.
-w:If I don’t get her* I’ll go crazy, Hi di hi and di-dle oh day.
-w:Kiss me quick and st-op your talk-in', Hi di hi and di-dle oh day.
-|:A3AA2A2|c2A2F2E2|A3AA2A2|cBc2 e4|
-w:Hey, old man I want your daugh-ter, Hi di hi and di-dle oh day.
-w:Big girls love, the little ones spite you, Hi di hi and di-dle oh day.
-w:My* true love is over the holler, Hi di hi and di-dle oh day.
-|A3AA2A2|c2A2F2E2|A3AA2f2|ecB2A4:|
-w:Bake my bread and carry my wa-ter, Hi di hi and di-dle oh day.
-w:Big dogs bark and little dogs bite you, Hi di hi and di-dle oh day.
-w:She won’t come and I won’t call her, Hi di hi and di-dle oh day.
-
-X: 155
+X: 144
 T:Southern Aristocracy
 C:Traditional
 R:Reel
@@ -2023,7 +1773,7 @@ K:G
 |:"G" g2ff e2d2|"Em"e2ee e2e2-|"C"e2eg e2dB|"Em"B2BB B2z2|"C"edef gfe2|
 |"G"d2e d2BG2|1 "A7"B2 B^c2 BA2|"D7"d4 d2(3def:|2 "D7"B2Bd2 BA2|"G"G4 G2z2|]
 
-X: 156
+X: 145
 T:Spotted Pony
 C:Traditional
 S:https://tunearch.org/wiki/Spotted_Pony_(2)
@@ -2035,7 +1785,7 @@ K:D
 |:"D" f2 a2 "D/F#" f4 | "G" efed "G/B"B4 | "D" ABde "D/F#"fede | "A" f2a2 e4 | 
 |"D" f2 a2 "D7" f4 | "G/B" efed "G" B4 |"D" ABde "D/F#"fede | "A" f2e2 "D" d4 :|
 
-X: 157
+X: 146
 T:Squirrel Heads & Gravy
 M:4/4
 L:1/8
@@ -2047,7 +1797,7 @@ K:G
 |: "G"d2de dcBc | d2de d2Bc | d2de dcB2 | "D"A3B A2Bc |
 |   "G"d2de dcB2 | "C"cBcd e4 | "G"d2 ef g2d2 | "D"BG A2 "G"G4 :|
 
-X: 158
+X: 147
 T:Squirrel Hunters
 M:4/4
 C: Traditional
@@ -2058,7 +1808,7 @@ ee|:"Em"e2 e2 B2B2|efed B2 BA| "G" G2 Bc d2 Bc | dBcA Bc d2|
 |:"Am"e2 ge a2ag | edef gedB | "G" G2Bc d2Bc | "Em"dBcA Bcd2|
 |"Am"e2 ge a2ag | edef gedB | "G" G2Bc "Em" dABG |1 "D"A3 BA e2 :|2 "D"A3 BA E2|]
 
-X: 159
+X: 148
 T:Step Around Johnny
 C: Traditional
 R: Reel
@@ -2070,7 +1820,7 @@ K:D
 |:"D"F3EF2A2-|AGFE D2D2|"G"B3AB2A2-|"D"AGFED2E2|
 |sF3EF2A2-|AGFED2D2|"A"EDEF GFEF|"D"D3ED2:|
 
-X: 160
+X: 149
 T:Sugar Hill
 C: Traditional
 R: Reel
@@ -2082,7 +1832,7 @@ K:D
 |:"D"A B/2B/2 A G|"A"F E "D"D D/2D/2|F D/2D/2 F D|"G"B, B,/2B,/2 B, B,|
 |"D"A B/2B/2 A G|"A"F E "D"D D/2D/2|D B, "A"D B,|"D"D D/2D/2 D D:||
 
-X: 161
+X: 150
 T:Sugar in the Gourd
 C: Traditional
 R: Reel
@@ -2094,7 +1844,7 @@ K:A
 "D"ab/2a/2 "A"f/2e/2c|"A"e/2f/2e "E7"c2|"F#m"AB/2c/2 "Bm"B/2A/2F|\
 "E7"E/2F/2A "A"A2:|
 
-X: 162
+X: 151
 T: Swannanoa Waltz
 R: Waltz
 S: https://trillian.mit.edu/~jc/music/abc/Intl/waltz/SwannanoaWaltz_D.abc
@@ -2106,7 +1856,7 @@ DE |:"D"F2 F2 ED | "G"B,2 B,2 B,A, | "D"F3 F ED | "(A)"A2 AF DE |
 |:"D"d2 g2 f2 | "G"B4 {=cB}AB | "D"d2 g2 f2 | "(A)"a2 af dB |
 "D"d2 g2 f2 | "G"B4 {=cB}AB | "A7"d(g f)(d A)B |1 "D"d3 B AB :|2 "D"d6 |]
 
-X: 163
+X: 152
 T:Temperance Reel
 C: Traditional
 R: Reel
@@ -2117,7 +1867,7 @@ K:G
 | "Em"Beed e3f| geaf gfed| "D"Bdde d3e| geaf gfed|
 |    "Em"Beed e3f| geaf gfed| BEED EFGA |1 "D"BdAF "G"G2 B2 :|2"D"BGAF "G"GFED|]
 
-X: 164
+X: 153
 T:Tennessee Waltz, The
 R:Waltz
 C:King & Stewart 1948
@@ -2131,7 +1881,7 @@ D/>E/|:"D" F A D/>E/|"Dmaj7" F A d/>e/|"D7" f f e|"G" d B B/>c/|"D" d A F|"G" B 
 |:"D" f f3/2 f/|"F#7" e2 f/>e/|"G" d B d|"D" A2 "G" B/>c/|"D" d A F|"G" B "D" A F|"E7" E2 z|"A" z2 D/>E/|
 |"D" F A D/>E/|"Dmaj7" F A d/>e/|"D7" f a f/>e/|"G" d B A/B/4c/4|"D" d A F|"A7" G F E|"D" D3|1 D d/>e/:|2 D3|]
 
-X: 165
+X: 154
 T:That’s My Rabbit, My Dog Caught It
 L:1/8
 M:2/4
@@ -2142,7 +1892,7 @@ e>(A c2)|e>(e g)e/g/|(a/g/)a/g/ a/g/e/c/|1 e>(A c2):|2 e>(A c)c/A/||
 |:{D}GA/A/ c/(d/c/)c/|c/(d/c/)c/ c/(d/c/)c/|{D}GA/A/ c/(d/c/)c/|
 c/(d/c/)D/ G/D/E|{D}GA/A/ c/d/c/c/|c/d/c/c/ ce/g/|a/g/a/g/ g/e/c|e>(A c2):|
 
-X: 166
+X: 155
 T: Tippin' Back the Corn
 R: Reel
 S:https://natunelist.net/tippin-back-the-corn/
@@ -2154,7 +1904,7 @@ d2c2 B2A2 | "E"[BE]3(E [EB]2)AB- | BABc BAFE |"A" [AA,]3 (A,[AA,]2) :|
 |: CB,|"A"A,2A,A, A,F3 | [A,E]3F [EA,]4| A2AA Af3 | [eA]3f [Ae]2 ef- |
 "D"fef=g fedc | "E"BcBA F2AB- | BABc BAFE | "A"[AA,]3 (A,[AA,]2) :|
 
-X: 167
+X: 156
 T:Tombigbee Waltz
 C: Traditional
 R: Waltz
@@ -2166,7 +1916,7 @@ K: G
 |: "G"g2d | g2d | "C"e>de | "G"d2B | 
 | "D7"BAA | A2B/d/ |1 "C"e2"D7"d | "G"B2d :|2 "C"ed"D7"F | "G"G3 |]
 
-X: 168
+X: 157
 T:Turkey in the Straw
 C: Traditional
 M:4/4
@@ -2178,7 +1928,7 @@ BA|:"G"GFGA G2B,C|"G"DEDB, D2GA|"G"B2B2 "Em"BAGA|"Am"B2A2 "D7"A2BA|
 |:"G"Bd2B d2d2|"G7"Bd2B d4|"C"ce2c e2e2|"C"ce2c "D7"e2f2|
 "G"g2g2 d2d2|"G"Bd2B "D7"A2GA|"G"Bd2e "Em"dBGA|1"D7"B2A2 "G"G2A2:|2"D7"B2A2 "G"G4:|
 
-X: 169
+X: 158
 T:Valley Forge
 M:C|
 S:https://spuds.thursdaycontra.com/tunes/reels/ValleyForge.abc
@@ -2192,7 +1942,7 @@ Q:1/4=100
 "Am"C4A,2A,B,|C2CD CB,A,B,|CB,CD CB,A,G,|"D"A,D-DED4|
 "Am"C4A,2A,B,|C2CD CB,A,B,|CB,CD CB,A,2|"D"A,D-DED2|]
 
-X: 170
+X: 159
 T: Waiting for Nancy
 C: Curt Bouterse (1972)
 S: https://trillian.mit.edu/~jc/music/abc/OldTime/reel/Waiting_For_Nancy_PC-D-32-2.abc
@@ -2203,7 +1953,7 @@ K: D
 |:"A7"b2a2 b2a2 | b2a2 e2ef |[1 "G"g2f2 e2ef | gagf e4 :|[2 "G"g2f2 "A7"edc2 | "D"d3c d4 |]
 |:"C"=c4 e2ef | g2f2 e2ef |[1 g2f2 e2g2- | g2f2 e4 :|[2 gagf "A7"edc2 | "D"d3c d4 |]
 
-X: 171
+X: 160
 T:Walk Along John
 M:4/4
 L:1/8
@@ -2214,7 +1964,7 @@ K:G
 |:"G"GABd e2d2 | "C"dBde g4 | "G"GABd e2d2 | "D7"dBA2 "G"G4 |
 |"G"GABd e2d2 | "C"dBde g3a | "Em"b2a2 g2e2 | "D7"dBA2 "G"G4 :|
 
-X: 172
+X: 161
 T:Walk Up Georgia Row
 R: Reel
 M:C| 
@@ -2226,7 +1976,7 @@ c2e2e4|c3B c2AB | cBAF E2F2| A3B A2 AB:|
 |:cABc A2F2 | E3FE2AB | c2(3BcB A2F2 | A3B A2AB | 
 cBcB A2F2|E3F E2AB |c2(3BcB A2F2 | A3B A2AB :|
 
-X: 173
+X: 162
 T: Walking in My Sleep
 S: https://tunearch.org/wiki/Walking_in_My_Sleep_(1)
 L: 1/8
@@ -2237,7 +1987,7 @@ a2a2a2g2|[f3A3]f[f4A4]|f2f2edBF|”G”G3GG4:|
 |:”G”D4DEG2|B3BB4|B3AABc|”D”d3dd4|
 A2A2A2B2|”C”c3cc4|BcB2AGEF|”G”G3GG4:|
 
-X: 174
+X: 163
 T:Walking that Pretty Girl Home
 S:https://tunearch.org/wiki/Walking_that_Pretty_Girl_Home
 M:C|
@@ -2249,7 +1999,7 @@ G2G2GBBA|GAGE D2 DE|GGBB ABAF|GG-GG G2:|
 |:BB|dd-de d2GG|BABd BABB|d2de dBGB|[A3A3]A A2Bc|
 ddde dBGG|BABd BGDD|EEGG BBAF|G3G G2:|
 
-X: 175
+X: 164
 T:Washington's March
 M:C|
 L:1/8
@@ -2262,7 +2012,7 @@ Q:160
 |:"D"f2a2 f2a2|"A" edcd eg-g2|"D"f2a2f2a2|"A"ed c2 "D"d4|
 "D"f2a2 f2a2|"A" edcd eg-g2|"D"a2g2 fgf2|"A"edc2 "D"d4:|
 
-X: 176
+X: 165
 T: West Fork Gals
 S:https://trillian.mit.edu/~jc/music/abc/Intl/reel/WestForkGals_D3.abc
 M: C|
@@ -2272,7 +2022,7 @@ K: D
 | "G"g2g2 B4 | "A7"efed c2A2 | "A7"ABc2 "D"d4 :: "D"ABAG F2A2 | d2d2 F3A | "A7"G2F2 E3F |
 | G2F2 E4 | efed cABc | "D"d2A2 F2A2 | d2d2 "A7"efg2 | f2e2 "D"d4 :|
 
-X: 177
+X: 166
 T:Westphalia Waltz
 M:3/4
 L:1/8
@@ -2284,7 +2034,7 @@ K:G
 |:"G"g6|"Bm"f6|"Em"e2f2g2|"Bm"B6|"G"{Bc}B2A2B2|!{Bc}B2A2G2|"Am"c3Bcd|"D"c6|"Am"e6|"G#5"e6|"C"e2f2g2|"D"f4e2|!
 d3^ (3cde|1d2^c2=c2|"G"B4-Bc|B4d2:|2d2F2A2|"G"G6|G3|]
 
-X: 178
+X: 167
 T:Whiskey Before Breakfast
 M:4/4
 L:1/8
@@ -2298,7 +2048,7 @@ K:D
 |:"D"Ad2 Ad2 ((3ABc|d)cde fedA|"Em"Bdef e2 ef|"A"gfed cBAc|
 "D"d2 fd "A"c2 ec|"G"BABd "D"BAFD|"G"G2BG "D"F2AF|"A"EDEF "D"D4:|]
 
-X: 179
+X: 168
 T: Whiteface
 C: Joe Thrift
 S:https://trillian.mit.edu/~jc/music/abc/OldTime/reel/Whiteface-Em-24-3.abc
@@ -2309,7 +2059,7 @@ K: Em
 |: "G"G2GG G2A2 | "G/Bm"B2 BB A2 G2 | "Em"E2 EE E2 ED |[1 E2EE E2EF :|[2 E2EE E2ED ||
 |:: "C"C2 CC C2 CC | C2 CC C2 CC | "Em"B,2 B,B,  B,2 B,B, | B,A,B,C B,2 B,2 :|
 
-X: 180
+X: 169
 T:Will the Circle be Unbroken
 C:Gabriel & Habershon
 R:Ballad
@@ -2320,7 +2070,7 @@ K:G
  |  DE "G"G2 G4- | G4 B2d2 | d4 B4- | B4 G2A2 |\
 B4 B4 | "D"A4 B2A2 | "G"G8 :|]
 
-X: 181
+X: 170
 T:Wind that Shakes the Barley
 R: Reel
 C: Traditional
@@ -2332,7 +2082,7 @@ K: D
 |: "D"f2fd "A"g2ge | "D"f2fd "A"ecBA | "D"f2fd "A"g2ge | "D"afed "G"B2"D"d2 |
 |"D"f2fd "A"g2ge | "D"f2fd "A"edcA | "D"defg afba | "D"gfed "G"B2"D"d2 :|
 
-X: 182
+X: 171
 T: Winder Slide
 C: Joe LaRose
 R: Reel
@@ -2345,7 +2095,7 @@ de|: "D"f2fe f3e | f2 a4 de | fdec dc3 | "G"d3D d3B- |
 | BdB2 A3D | "A"F2 E4 FE | "D"DDFF DF3 | A3B A2AB- |
 | BdB2 A3D | "A"F2 E4 FE | DB,B,3 A,B,3 | "D"D2ef- fd"A"e2 |1 2 "D"d3D d2 AB :|2 "D"d3D d4 |]
 
-X: 183
+X: 172
 T:The Woodchopper's Breakdown
 C:Ned Landry
 S:https://trillian.mit.edu/~jc/music/abc/Quebec/montrealsession/Woodchoppers_Breakdown.abc
@@ -2358,7 +2108,7 @@ afdB AGFE | DFAdf2ef | gece Acec |1 dfec d2fg :|2 gece d2AF |]
 |: DFAd B2AF | DFAd B2AF | A,CEA ceaf | gfed cBAF |
 DFAd B2AF | DFAd B2AF | A,CEA ceaf | gecA d4 :|
 
-X: 184
+X: 173
 T: The Year of Jubilo
 R: March
 S: https://tunearch.org/wiki/Year_of_Jubilo
@@ -2370,7 +2120,7 @@ K: D
 |: d/c/ |"G"B>c dB d>e dc/B/ | "D"AFdF "A"E3 F/E/ |
 "D"DFFA Af f/e/d/B/ | Ad "A"e>c "D"d3 :|
 
-X: 185
+X: 174
 T:Yellow Rose of Texas
 L:1/8
 M:2/4
