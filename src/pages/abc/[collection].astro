@@ -10,6 +10,7 @@ const { collection } = Astro.params;
 export async function getStaticPaths() {
   return [
     { params: { collection: 'old-time-jam-tunes' } },
+    { params: { collection: 'bluegrass-jam-tunes' } },
     { params: { collection: 'irish-session-top100' } },
     { params: { collection: 'mandozine' } },
     { params: { collection: 'practice-techniques' } },
@@ -21,6 +22,7 @@ export async function getStaticPaths() {
 
 const filenameMap: Record<string, string> = {
   'old-time-jam-tunes': 'old_time_jam_tunes_collection.abc',
+  'bluegrass-jam-tunes': 'bluegrass_jam_tunes_collection.abc',
   'irish-session-top100': 'irish_session_top100_collection.abc',
   'mandozine': 'mandozine.abc',
   'practice-techniques': 'practice.abc',
@@ -42,6 +44,7 @@ const searchRoots = [
 
 const titleMap: Record<string, string> = {
   'old-time-jam-tunes': 'JamBuddy (Old-Time)',
+  'bluegrass-jam-tunes': 'JamBuddy (Bluegrass)',
   'irish-session-top100': 'The Session (Irish)',
   'mandozine': 'Mandozine (Various)',
   'practice-techniques': 'Practice Techniques',
@@ -52,6 +55,7 @@ const titleMap: Record<string, string> = {
 
 const collections = [
   { slug: 'old-time-jam-tunes', title: 'JamBuddy (Old-Time)' },
+  { slug: 'bluegrass-jam-tunes', title: 'JamBuddy (Bluegrass)' },
   { slug: 'irish-session-top100', title: 'The Session (Irish)' },
   { slug: 'mandozine', title: 'Mandozine (Various)' },
   { slug: 'practice-techniques', title: 'Practice Techniques' },
