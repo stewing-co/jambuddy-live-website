@@ -6,8 +6,8 @@ R: Polka
 M: 4/4
 K: D
 |:"D"[A2D2] B2 d3 [AD] | B2 d6 | [A2D2] B2 d2 dA  | "G"[B4D4] [B4D4] |
-w: 1a.~An-gel-ine the bak-er, lived on a vill-age gre-en,
-w: 1b.~An-gel-ine the bak-er, age of for--ty th-ree, 
+w: An-gel-ine the bak-er, lived on a vill-age gre-en,
+w: An-gel-ine the bak-er, age of for--ty th-ree, 
 | "D"[A2D2] B2 d2 e2 | f2 e2 d2 e2 | "D" f2 e2 "G"d2 B2 | "D"[A8D8] ] :|
 w: The way I always lo-ved her beats all you ev-er seen.
 w: Fed her su-gar can-dy, and she still won't mar-ry me.
@@ -15,14 +15,14 @@ w: Fed her su-gar can-dy, and she still won't mar-ry me.
 w: An-gel-ine the ba-ker, An-gel-ine I know, 
 | AB de fede | "G"fedBA4  :|
 w: Should have mar-ried An-gel-ine, some twen-ty years a-go.
-W: 2a. Her father was a baker, his name was Uncle Sam, 
+W: 2. Her father was a baker, his name was Uncle Sam, 
 W: I never can forget her, no matter where I am.
-W: 2b. She said she cannot do hard work, because she is not stout,
+W: She said she cannot do hard work, because she is not stout,
 W: Bakes her biscuits every day, and pours the coffee out.
 W:
-W: 3a. Brought her out a brand new dress, neither black nor brown,
+W: 3. Brought her out a brand new dress, neither black nor brown,
 W: It was the color of stormy skies, before the rain came down.
-W: 3b. Sixteen horses in my team, leader he was blind,
+W: Sixteen horses in my team, leader he was blind,
 W: I dreamed that I was dying, I saw my Angeline.
 
 X: 2
@@ -51,6 +51,36 @@ W: 4. Someone stole my ol' 'coon dog. Wish they'd bring him back.
 W: He chased the big hogs through the fence and the little ones through the crack.
 
 X: 3
+T:Church Street Blues
+C:Traditional
+R:Reel
+M:4/4
+L:1/8
+K:Em
+Q:216
+D|"D"Bd3d2A"G"B-|B A2 G3 E2|"D"D2G2 "A"A B3|"D"B4z4|
+w: Well I've been han-gin' o-ut of town, Lord, in that low down rain
+B2dd2 A3|"G"A2BG3ED|D2A2"D"A2B2|"A"G8|z8|
+w:Wat-chin' good time Cha-rlie Fran-cis _dri-vin' me in-sane
+"D"Bd3d3AB-|"G"B A2G2 E2D|"D"G3A3"A"A2|"D"B4z3A|
+w:Up on sha-dy Ch-ar-lotte Street, Lord, the green lights look red I
+B d3 d2 A2|"G"A2 B G3 ED|"D"DG3"A"A2BG-|"D"G8|
+w: wish I's back home on the farm Lord, _in my feat-her b-ed
+z4zG2D|"D"Bd3"G"e3d|"A"d A3 "D"G3 A|A2 A G3 GB-|"D"B4 z c3|
+w: And I got my-self a ro-ckin' chair To see if I could lo-se These
+"G"e4"F#m"d4|"Bm"zB3"A"A3G|"G"EG3"A"B2A2|"D"G8||
+w:thin dime, hard time _Hell on Church Street blues
+W:I found myself a picker friend who's read yesterday's news
+W:I folded up page twenty-one and stuck it in my shoes
+W:I gave me a nickel to the poor, my good turn for the day
+W:I folded up my own billfold, threw it far away
+W:
+W:Well, I wish I had some guitar strings, Old Black Diamond brand
+W:I'd string up this old Martin box and go and join some band
+W:But I guess I'm gonna stay right here, just pick and sing a while
+W:Try to make me a little change and give them folks a smile
+
+X: 4
 T:Cluck Old Hen
 R: Reel
 C: Traditional
@@ -58,7 +88,7 @@ M: 4/4
 L: 1/8
 K: Ador
 |"A"e2a2 "G"g3 g| "A"e2 a2 "G"d4 | "A"e2 a2 "G"g2 ag | "E"edc2"A"A4|
-w: 1.~My old hen she's a good old hen. She lays eggs for the rail-road men.
+w: My old hen she's a good old hen. She lays eggs for the rail-road men.
 |"A"e2a2 "G"g3 g| "A"e2 a2 "G"d4 | "A"e2 a2 "G"g2 ag |"E"edc2"A"A4|
 w:   Some-times eight and some-times ten, That's e-nough for the rail-*road men.
 | "Am"A2A2 "C"[c4e4] | "Am"A2A2 "G"G3G | "Am"A2AA c2d2 | "E"edc2 "Am"A4 |
@@ -74,7 +104,7 @@ W:
 W:4. My old hen she just won't do. She lays eggs and taiters too
 W: First time she cackled cackled in'the lot. Next time she cackles cackle in the pot.
 
-X: 4
+X: 5
 T:Crawdad Song
 C:Traditional
 R: Reel
@@ -124,7 +154,7 @@ W:Look at the crawdad crawl'in round, Babe,
 W:Look at the crawdad crawl'in round, he's the mayor of
 W:crawdad town, Honey Baby mine!
 
-X: 5
+X: 6
 T:Hot Corn, Cold Corn
 C: Traditional
 R: Bluegrass
@@ -143,7 +173,7 @@ w: Hot corn, cold corn, bring a-long a dem-i-john, Hot corn, cold corn, bring a-
 "G" B2 G2 G2 E2|GGGG ED D|"D" A2 A2 AA A2|AAAA F D3 | B4 G4 :|
 w: Hot corn, cold corn, bring a-long a dem-i-john, Fare-well Unc-le Bill, see you in the morn-ing, yes sir!
 
-X: 6
+X: 7
 T: I'll Fly Away
 C:Albert E. Brumley
 S:https://www.idahobluegrassassociation.org/beginner-jam/category/ill-fly-away
@@ -158,13 +188,13 @@ w: To the home on God's cel-es-tial shore. I--'ll fly a-way
 W: I'll fly away, fly away, oh glory, I'll fly away, in the morning
 W: When I die, hallelujah by and by I'll fly away
 W:
-W: When the shadows of this life have gone
+W: 2. When the shadows of this life have gone
 W: Like a bird from prison bars has flown
 W:
-W: Just a few more weary days and then
+W: 3. Just a few more weary days and then
 W: To a land where joys will never end
 
-X: 7
+X: 8
 T:Long Journey Home
 C:Traditional
 S:https://www.idahobluegrassassociation.org/beginner-jam/category/long-journey-home
@@ -180,12 +210,51 @@ w: Two dol-lar bill boys, two dol-lar bill
 w: Lost all my mon-ey but a two dol-lar bill. I'm
 "D"a4f4|"A"e4f2e2|"D"d8|
 w: on my long jour-ney home.
-W: 2) Cloudy in the West and it looks like rain
-W: 3) It’s dark and a raining and I want to go home
-W: 4) Homesick and lonesome and I’m feeling kind of blue
-W: 5) There’s black smoke a rising and it surely is a train
+W: 2. Cloudy in the West and it looks like rain
+W:
+W: 3. It’s dark and a raining and I want to go home
+W:
+W: 4. Homesick and lonesome and I’m feeling kind of blue
+W:
+W: 5. There’s black smoke a rising and it surely is a train
 
-X: 8
+X: 9
+T:Shady Grove
+C:Traditional
+R:Reel
+M:4/4
+L:1/8
+K:Em
+Q:135
+"Am"E>EE2"G"AG/E/ D z|"Am"E>E GA B2 z2|
+w:Sha-dy Grove, my lit-tle love Sha-dy Grove, I say 
+"C"d>d B>B "G"A>G DD/D/|F>F A"Am"F E2 z2|
+w:Sha-dy Grove my lit-tle love I'-m bound to go a-way
+EE EE/E/ "G"FE/D/ DD/E/-|"Am"EE G/G/A B2 z2|
+w:Cheeks as red as a bloom-ing rose And eyes are _the pret-ti-est brown 
+ "C"d>d B>BB>"G"AG/ D>F-|F/F/F/F/ AF "Am"E2z2
+w:She's the dar-ling of my _heart Sweet-_est lit-tle girl in town
+W:I wish I had a big fine horse
+W:And corn to feed him on
+W:And Shady Grove to stay at home
+W:And feed him while I'm gone
+W:
+W:Went to see my Shady Grove
+W:She was standing in the door
+W:Her shoes and stockin's in her hand
+W:And her little bare feet on the floor
+W:
+W:When I was a little boy
+W:I wanted a Barlow knife
+W:And now I want little Shady Grove
+W:To say she'll be my wife
+W:
+W:A kiss from pretty little Shady Grove
+W:Is sweet as brandy wine
+W:And there ain't no girl in this old world
+W:That's prettier than mine
+
+X: 10
 T:Sitting on Top of the World
 C:Walter Vinson and Lonnie Chatmon
 S:https://www.idahobluegrassassociation.org/beginner-jam/category/sitting-on-top-of-the-world
@@ -216,7 +285,7 @@ W:
 W: 6. Don’t you come here running, holding out your hand, 
 W:I’ll get me a woman like you got your man
 
-X: 9
+X: 11
 T:Soldier's Joy
 C:Traditional
 M:4/4
@@ -240,7 +309,7 @@ W:
 W: 5. Twenty-five cents for the morphine, Fifteen cents for the beer
 W: Twenty-five cents for the morphine Gonna take me away from here
 
-X: 10
+X: 12
 T:Sourwood Mountain
 A:William Marion Reece 
 M:C|
