@@ -155,6 +155,40 @@ W:Look at the crawdad crawl'in round, he's the mayor of
 W:crawdad town, Honey Baby mine!
 
 X: 6
+T:Cripple Creek
+C:Traditional
+R:Reel
+M:4/4
+L:1/8
+K:D
+|:"D"d2 d2 AcBA|"G"G2B2"A7"A4|
+w:I got a~gal at the head of the creek. 
+w: Kiss her on the mouth just~as sweet~as any wine
+"D"d2 d2 ABAG|"A7"FD E2 "D"D4:|
+w:I'm goin up~to see her 'bout the middle of~the week
+w: She wraps herself around me like a sweet potato vine
+|:"D"F2 AF E2 D2|"G"E2 F2 "A7"A,4|
+w: Going up Cripple Creek going at a run
+w: Going up Cripple Creek going in a whirl
+"D"F2 AF E2 D2|"A7"B,A,B,C "D"D4:|
+w: Go-ing up Cripple Creek to have a little fun
+w: Go-ing up Cripple Creek to see _my girl
+W:I got a girl and she loves me
+W:She’s as sweet as sweet can be
+W:She’s got eyes of baby blue
+W:And all my love for her is true
+W:
+W:Girls up Cripple Creek about half grown
+W:They jump on a man like a dog on a bone
+W:They sit their pretty selves down in the shade
+W:Waiting for the money that the men have made
+W:
+W:Cripple Creek wide Cripple Creek deep
+W:Wade old Cripple Creek before I sleep
+W:I roll my britches up to my knees
+W:And wade old Cripple Creek whenever I please
+
+X: 7
 T:Hot Corn, Cold Corn
 C: Traditional
 R: Bluegrass
@@ -173,7 +207,7 @@ w: Hot corn, cold corn, bring a-long a dem-i-john, Hot corn, cold corn, bring a-
 "G" B2 G2 G2 E2|GGGG ED D|"D" A2 A2 AA A2|AAAA F D3 | B4 G4 :|
 w: Hot corn, cold corn, bring a-long a dem-i-john, Fare-well Unc-le Bill, see you in the morn-ing, yes sir!
 
-X: 7
+X: 8
 T: I'll Fly Away
 C:Albert E. Brumley
 S:https://www.idahobluegrassassociation.org/beginner-jam/category/ill-fly-away
@@ -194,7 +228,7 @@ W:
 W: 3. Just a few more weary days and then
 W: To a land where joys will never end
 
-X: 8
+X: 9
 T:Long Journey Home
 C:Traditional
 S:https://www.idahobluegrassassociation.org/beginner-jam/category/long-journey-home
@@ -218,7 +252,7 @@ W: 4. Homesick and lonesome and I’m feeling kind of blue
 W:
 W: 5. There’s black smoke a rising and it surely is a train
 
-X: 9
+X: 10
 T:Shady Grove
 C:Traditional
 R:Reel
@@ -254,7 +288,7 @@ W:Is sweet as brandy wine
 W:And there ain't no girl in this old world
 W:That's prettier than mine
 
-X: 10
+X: 11
 T:Sitting on Top of the World
 C:Walter Vinson and Lonnie Chatmon
 S:https://www.idahobluegrassassociation.org/beginner-jam/category/sitting-on-top-of-the-world
@@ -285,7 +319,7 @@ W:
 W: 6. Don’t you come here running, holding out your hand, 
 W:I’ll get me a woman like you got your man
 
-X: 11
+X: 12
 T:Soldier's Joy
 C:Traditional
 M:4/4
@@ -309,7 +343,7 @@ W:
 W: 5. Twenty-five cents for the morphine, Fifteen cents for the beer
 W: Twenty-five cents for the morphine Gonna take me away from here
 
-X: 12
+X: 13
 T:Sourwood Mountain
 A:William Marion Reece 
 M:C|
