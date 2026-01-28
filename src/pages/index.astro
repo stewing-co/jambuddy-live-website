@@ -2,521 +2,417 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="JamBuddy – Real‑Time Jam Assistant">
-  <!-- Hero Section -->
-  <section class="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white rounded-xl shadow-2xl border border-gray-700 overflow-hidden" aria-labelledby="hero-heading">
-    <!-- Background pattern overlay -->
-    <div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-green-600/10"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <!-- Top row: logo left, headline/subhead right -->
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-        <div class="md:col-span-3 flex md:justify-start justify-center">
-          <img src="/images/logo/jam_buddy_round.png" alt="JamBuddy Logo" class="w-28 md:w-36 lg:w-40 filter drop-shadow-2xl" />
-        </div>
-        <div class="md:col-span-9 text-center md:text-left">
-          <h1 id="hero-heading" class="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-white via-blue-100 to-green-100 bg-clip-text text-transparent leading-tight">
-            JamBuddy for Android.
-          </h1>
-          <p class="text-lg md:text-2xl text-gray-200 max-w-3xl md:max-w-4xl md:ml-0 mx-auto leading-relaxed">
-            Real-time chord detection with neural network pitch detection. See chords on an interactive Circle of Fifths, get next-chord predictions, browse chord charts for guitar, mandolin, ukulele, or bass. Slow audio down without changing pitch, loop tricky sections, record ideas, and transcribe melodies to ABC notation. Keep your sheet music, lyrics, and backing tracks in one offline place—with a built-in tuner and metronome. No accounts, no subscriptions, no ads.
-          </p>
-          <p class="mt-4 text-base md:text-lg text-gray-300 max-w-2xl md:ml-0 mx-auto leading-relaxed">
-            Built by a musician who wanted real practice tools without monthly fees. One purchase, full access forever.
-          </p>
+<Layout title="JamBuddy – Sheet Music & Practice Tools for Musicians">
+  <!-- Header with Download -->
+  <header class="bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <img src="/images/logo/jam_buddy_round.png" alt="JamBuddy" class="w-12 h-12" />
+        <div>
+          <h1 class="text-xl font-bold text-white">JamBuddy</h1>
+          <p class="text-sm text-gray-400">Music Practice App for Android</p>
         </div>
       </div>
-
-      <!-- Buttons row below -->
-      <div class="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center mt-8">
-        <a href="https://play.google.com/store/apps/details?id=com.jambuddy.app&pcampaignid=web_share" target="_blank" rel="noopener" class="group bg-gradient-to-r from-green-600 to-green-700 text-white px-8 py-4 rounded-xl font-bold text-lg md:text-xl hover:from-green-700 hover:to-green-800 transition-all duration-300 flex items-center justify-center shadow-xl hover:shadow-2xl transform hover:scale-105">
-          <img src="/images/icons/google-play-badge.png" alt="Get it on Google Play" class="h-10 md:h-12 mr-3 transition-transform group-hover:scale-110" />
-          Download Now
-        </a>
-        <a href="/features" class="border-2 border-gray-300 text-gray-300 px-8 py-4 rounded-xl font-bold text-lg md:text-xl hover:bg-gray-300 hover:text-black transition-all duration-300 flex items-center justify-center backdrop-blur-sm hover:backdrop-blur-md transform hover:scale-105" aria-label="Explore all JamBuddy features">
-          Explore Features
-        </a>
-      </div>
-
-      <!-- Benefits row under buttons -->
-      <div class="flex flex-wrap justify-center gap-3 md:gap-4 mt-8" aria-label="Key benefits">
-        <div class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-200 flex items-center gap-2"><span class="w-2 h-2 bg-green-400 rounded-full"></span> Offline • No Ads</div>
-  <div class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-200 flex items-center gap-2"><span class="w-2 h-2 bg-blue-400 rounded-full"></span> Circle of Fifths + Next Chord Hints</div>
-  <div class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-200 flex items-center gap-2"><span class="w-2 h-2 bg-purple-400 rounded-full"></span> Chord Charts for Guitar, Ukulele, Mandolin & Bass</div>
-  <div class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-200 flex items-center gap-2"><span class="w-2 h-2 bg-emerald-400 rounded-full"></span> Slowdown, Looping & Audio Recorder</div>
-      </div>
+      <a href="https://play.google.com/store/apps/details?id=com.jambuddy.app&pcampaignid=web_share" target="_blank" rel="noopener" class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+        <img src="/images/icons/google-play-badge.png" alt="" class="h-6" />
+        Get on Google Play
+      </a>
     </div>
-  </section>
+  </header>
 
-  <!-- Real-time Workflow -->
-  <section class="py-24" aria-labelledby="core-pillars-heading">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-  <h2 id="core-pillars-heading" class="text-4xl md:text-5xl font-bold text-white mb-6">Three Windows, Everything You Need</h2>
-  <p class="text-xl text-gray-300 max-w-4xl mx-auto">A live Circle of Fifths that rotates to show the current key at 12 o'clock and highlights detected chords. Seven visualization modes including histogram, spectrogram, and timeline. Five practice tools. A complete tunes library with sheet music, tabs, lyrics, and audio—all arranged in customizable layouts.</p>
-      </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-        <!-- Listen / Detect -->
-        <div class="group relative">
-          <div class="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-blue-400 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-          <div class="relative text-center p-10 rounded-2xl bg-gray-800/90 backdrop-blur-sm shadow-xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300">
-            <div class="w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-8 shadow-lg group-hover:scale-110 transition-transform duration-300">
-              <svg class="w-12 h-12 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                <rect x="4" y="10" width="2" height="4" rx="1" />
-                <rect x="8" y="7" width="2" height="10" rx="1" />
-                <rect x="12" y="4" width="2" height="16" rx="1" />
-                <rect x="16" y="7" width="2" height="10" rx="1" />
-                <rect x="20" y="10" width="2" height="4" rx="1" />
-              </svg>
-            </div>
-            <h3 class="text-3xl font-bold mb-6 text-white">Listen</h3>
-            <p class="text-gray-300 mb-6 text-lg leading-relaxed">Real-time chord detection via CREPE neural network. See chord root, quality, and bass note on an interactive Circle of Fifths with next-chord predictions based on music theory.</p>
-            <div class="space-y-2 text-blue-300 font-medium text-left">
-              <div class="flex items-start"><span class="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Circle of Fifths + Nashville numbers</span></div>
-              <div class="flex items-start"><span class="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Seven visualization modes</span></div>
-              <div class="flex items-start"><span class="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Adjustable sensitivity and key lock</span></div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Learn -->
-        <div class="group relative">
-          <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-purple-400 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-          <div class="relative text-center p-10 rounded-2xl bg-gray-800/90 backdrop-blur-sm shadow-xl border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
-            <div class="w-24 h-24 bg-gradient-to-br from-purple-500 to-purple-700 rounded-full flex items-center justify-center mx-auto mb-8 shadow-lg group-hover:scale-110 transition-transform duration-300">
-              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
-              </svg>
-            </div>
-            <h3 class="text-3xl font-bold mb-6 text-white">Learn</h3>
-            <p class="text-gray-300 mb-6 text-lg leading-relaxed">Precision chromatic tuner, visual metronome with strum patterns (20-300 BPM), and audio slowdown from 5% to 250% without pitch change. Loop sections, record takes, and track progress.</p>
-            <div class="space-y-2 text-purple-300 font-medium text-left">
-              <div class="flex items-start"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Metronome + strum patterns</span></div>
-              <div class="flex items-start"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Phase-vocoder tempo control</span></div>
-              <div class="flex items-start"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Multi-instrument tuner</span></div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Write -->
-        <div class="group relative">
-          <div class="absolute -inset-0.5 bg-gradient-to-r from-green-600 to-green-400 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-          <div class="relative text-center p-10 rounded-2xl bg-gray-800/90 backdrop-blur-sm shadow-xl border border-gray-700 hover:border-green-500/50 transition-all duration-300">
-            <div class="w-24 h-24 bg-gradient-to-br from-green-500 to-green-700 rounded-full flex items-center justify-center mx-auto mb-8 shadow-lg group-hover:scale-110 transition-transform duration-300">
-              <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
-              </svg>
-            </div>
-            <h3 class="text-3xl font-bold mb-6 text-white">Play</h3>
-            <p class="text-gray-300 mb-6 text-lg leading-relaxed">Thousands of tunes included: Irish Session Top 100, Roaring Jelly Old-Time, Nigel Gatherer, Mandolin Café Bluegrass, OpenHymnal. Import ABC, PDFs, images, audio. Transpose, print sheet music, and render tablature.</p>
-            <div class="space-y-2 text-green-300 font-medium text-left">
-              <div class="flex items-start"><span class="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></span><span>ABC sheet music + live transcription</span></div>
-              <div class="flex items-start"><span class="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Tablature for guitar, ukulele, mandolin</span></div>
-              <div class="flex items-start"><span class="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Built-in recorder for ideas</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <!-- Quick Nav -->
+  <nav class="bg-gray-800/50 border-b border-gray-700 py-3 overflow-x-auto">
+    <div class="max-w-6xl mx-auto px-4">
+      <ul class="flex gap-6 text-sm text-gray-300 whitespace-nowrap">
+        <li><a href="#sheet-music" class="hover:text-white transition-colors">Sheet Music</a></li>
+        <li><a href="#three-windows" class="hover:text-white transition-colors">Three Windows</a></li>
+        <li><a href="#tunes-window" class="hover:text-white transition-colors">Tunes Window</a></li>
+        <li><a href="#visualization-window" class="hover:text-white transition-colors">Visualization</a></li>
+        <li><a href="#tools-window" class="hover:text-white transition-colors">Tools</a></li>
+        <li><a href="#chord-detection" class="hover:text-white transition-colors">Chord Detection</a></li>
+        <li><a href="#wear-os" class="hover:text-white transition-colors">Wear OS</a></li>
+      </ul>
     </div>
-  </section>
+  </nav>
 
-  <!-- Feature Showcase with Carousels -->
-  <section class="py-20 bg-gray-900 rounded-lg mt-8" aria-labelledby="carousel-heading">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 id="carousel-heading" class="text-3xl md:text-4xl font-bold text-white mb-12 text-center">See JamBuddy in Action</h2>
-      <div class="relative max-w-4xl mx-auto">
-        <div class="carousel-container overflow-hidden rounded-lg">
-          <div class="carousel-track flex transition-transform duration-300" id="main-carousel" role="region" aria-label="Feature screenshots">
-            <!-- All Features Images -->
-            <!-- Real-time Chord Recognition -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img src="/images/features/circle_viz.png" alt="Real-time chord recognition with Circle of Fifths" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Real-Time Chord Recognition</h4><p class="text-gray-300">Live chord detection with Circle of Fifths visualization showing key relationships and chord progressions.</p></div></div>
-            
-            <!-- Next Chord Predictions -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/just%20next%20chords.png" alt="Next chord predictions with fingering charts" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Next Chord Predictions</h4><p class="text-gray-300">See four likely next chords with fingering charts for your instrument.</p></div></div>
-            
-            <!-- Sheet Music Support -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/sheet%20music%20with%20guitar%20tab.png" alt="Sheet music with tablature" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Sheet Music & Tablature</h4><p class="text-gray-300">ABC notation rendered as sheet music with optional guitar, mandolin, or ukulele tablature.</p></div></div>
-            
-            <!-- Audio Player -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/slow%20down%20and%20looping%20with%20saving.png" alt="Audio player with slowdown and looping" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Audio Slowdown & Looping</h4><p class="text-gray-300">Slow down audio without changing pitch, set loop markers, and save practice sections.</p></div></div>
-            
-            <!-- Comprehensive Tuner -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/tuner2.png" alt="Chromatic tuner interface" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Chromatic Tuner</h4><p class="text-gray-300">Precise chromatic tuner with visual feedback for all stringed instruments.</p></div></div>
-            
-            <!-- Chord Library Browser -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/guitar%20and%20uke%20chords.png" alt="Guitar and ukulele chord charts" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Multi-Instrument Chord Charts</h4><p class="text-gray-300">Browse chord fingerings for guitar, ukulele, mandolin, bass, and more.</p></div></div>
-            
-            <!-- Song Library -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/collections.png" alt="Tunes library collections" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Thousands of Tunes Included</h4><p class="text-gray-300">Irish Session Top 100, Bluegrass standards, Old-Time favorites, and more—all included free.</p></div></div>
-            
-            <!-- Live Transcription -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/live%20capture.png" alt="Live melody transcription" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Live Transcription</h4><p class="text-gray-300">Play a melody and watch it transcribe to ABC notation in real-time.</p></div></div>
-            
-            <!-- Two-Window Layout -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/sheet%20music%20and%20circle.png" alt="Two-window layout with Circle and Sheet Music" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Flexible Two-Window Layouts</h4><p class="text-gray-300">Combine any two windows in stacked or side-by-side arrangements.</p></div></div>
-            
-            <!-- Fretboard View -->
-            <div class="carousel-slide"><div class="bg-gray-800 rounded-lg p-6 mx-2"><div class="aspect-w-16 aspect-h-10 mb-4"><img loading="lazy" decoding="async" src="/images/features/fretboard%20view.png" alt="Fretboard visualization" class="object-contain bg-gray-700 rounded" width="800" height="500" /></div><h4 class="text-xl font-bold text-white mb-2">Fretboard Visualization</h4><p class="text-gray-300">Watch notes light up on the fretboard as chords are detected.</p></div></div>
-          </div>
-        </div>
-        <!-- Carousel controls -->
-    <button class="carousel-btn carousel-prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-colors z-10" aria-label="Previous slides">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-          </svg>
-        </button>
-    <button class="carousel-btn carousel-next absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-colors z-10" aria-label="Next slides">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-          </svg>
-        </button>
-        
-        <!-- Slide indicators -->
-        <div class="flex justify-center mt-6 space-x-2" id="carousel-indicators">
-          <!-- Indicators will be generated by JavaScript -->
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Education Section -->
-  <section id="education" class="py-20 bg-gradient-to-br from-green-900/20 via-blue-900/20 to-purple-900/20 rounded-xl" aria-labelledby="education-heading">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 id="education-heading" class="text-4xl md:text-5xl font-bold text-white mb-6">Everything Included</h2>
-        <p class="text-xl text-gray-300 max-w-3xl mx-auto">Every feature built for real practice needs. Here's what you get.</p>
-      </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="group p-8 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-green-500/50 transition-all duration-300">
-          <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-4 text-center">Circle of Fifths + Key Lock</h3>
-          <p class="text-gray-300 text-center">See detected chords in context, pin a key when the band settles in, and reset instantly with a tap.</p>
-        </div>
-
-        <div class="group p-8 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-blue-500/50 transition-all duration-300">
-          <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-4 text-center">Chord Histogram & Visualizers</h3>
-          <p class="text-gray-300 text-center">Switch between histogram, spectrogram, waveform, heatmap, and timeline to see what the detector hears.</p>
-        </div>
-
-        <div class="group p-8 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
-          <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-4 text-center">Next Chord + Fingering Cards</h3>
-          <p class="text-gray-300 text-center">See four likely chords, complete with the right fingering chart for guitar, uke, mando, baritone, or bass.</p>
-        </div>
-
-        <div class="group p-8 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-yellow-500/50 transition-all duration-300">
-          <div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-4 text-center">Tunes Browser & Set Lists</h3>
-          <p class="text-gray-300 text-center">Filter by key, groove, or genre, jump into ABC charts, lyrics, PDFs, and keep track-specific notes in one place.</p>
-        </div>
-
-        <div class="group p-8 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-red-500/50 transition-all duration-300">
-          <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-4 text-center">Audio Player & Recorder</h3>
-          <p class="text-gray-300 text-center">Attach your own tracks, adjust tempo, set named loops, or capture ideas with the built-in recorder.</p>
-        </div>
-
-        <div class="group p-8 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-teal-500/50 transition-all duration-300">
-          <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 00-2 2z"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-4 text-center">Themes, Layouts & Focus Mode</h3>
-          <p class="text-gray-300 text-center">Dial in font scaling, theme colors, focus layouts, and window order so the info you need is always on top.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Quick Benefits -->
-  <section class="py-16">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="p-6 rounded-lg bg-gray-800 shadow-lg">
-          <h3 class="text-xl font-bold text-white mb-3">🎯 Real-time clarity</h3>
-          <p class="text-gray-300">Chord names, key confidence, note histogram, and next-chord hints stay in sync with what you hear.</p>
-        </div>
-        
-        <div class="p-6 rounded-lg bg-gray-800 shadow-lg">
-          <h3 class="text-xl font-bold text-white mb-3">🎧 Works with whatever’s playing</h3>
-          <p class="text-gray-300">Phone mic, Bluetooth speaker, or saved MP3—JamBuddy listens, slows down, and loops without needing the cloud.</p>
-        </div>
-        
-        <div class="p-6 rounded-lg bg-gray-800 shadow-lg">
-          <h3 class="text-xl font-bold text-white mb-3">🎸 Multi-instrument grip</h3>
-          <p class="text-gray-300">Instant chord charts for guitar, ukulele, mandolin, baritone uke, and bass, plus a tuner that handles them all.</p>
-        </div>
-        
-        <div class="p-6 rounded-lg bg-gray-800 shadow-lg">
-          <h3 class="text-xl font-bold text-white mb-3">🗂️ Local songbook</h3>
-          <p class="text-gray-300">Keep ABC charts, lyrics, PDFs, audio, and notes together. Filter by key, groove, or vibe in a tap.</p>
-        </div>
-        
-        <div class="p-6 rounded-lg bg-gray-800 shadow-lg">
-          <h3 class="text-xl font-bold text-white mb-3">🔧 Tweakable detection</h3>
-          <p class="text-gray-300">Adjust confidence thresholds, bass boost, and rolling history so the detector matches your instrument and room.</p>
-        </div>
-        
-        <div class="p-6 rounded-lg bg-gray-800 shadow-lg">
-          <h3 class="text-xl font-bold text-white mb-3">� Built by one musician</h3>
-          <p class="text-gray-300">No venture funding, no pushy upsells—just a side-hustle app updated after jams and before work.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-20">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">A quick note from the builder</h2>
-      <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
-        I’m Steve, the developer of JamBuddy. JamBuddy started as a neat python tool to match chords to templates via FFT. It became a way to learn Kotlin at the same time as mandolin and eventually evolved into a full-fledged app. All the things in it are there because I thought they'd help me learn or play better with others. If you find a bug or need a tweak, you’re emailing the person who built the thing.
+  <main class="max-w-6xl mx-auto px-4 py-12">
+    
+    <!-- Intro -->
+    <section class="mb-16">
+      <p class="text-lg text-gray-300 leading-relaxed max-w-3xl">
+        JamBuddy is a practice app built around readable sheet music. ABC notation renders at whatever size fits your screen—fiddle tunes stay legible even on a phone without scrolling. Add tablature, transpose to any key, play back with MIDI, and edit everything right in the app.
       </p>
-    </div>
-  </section>
+      <div class="mt-6 flex flex-wrap gap-3 text-sm">
+        <span class="px-3 py-1 bg-gray-800 rounded-full text-gray-300">Works offline</span>
+        <span class="px-3 py-1 bg-gray-800 rounded-full text-gray-300">No account required</span>
+        <span class="px-3 py-1 bg-gray-800 rounded-full text-gray-300">One-time purchase</span>
+        <span class="px-3 py-1 bg-gray-800 rounded-full text-gray-300">No ads</span>
+      </div>
+    </section>
 
-  <!-- CTA -->
-  <section id="download" class="relative bg-gradient-to-br from-blue-900 via-purple-900 to-blue-900 text-white py-24 rounded-xl overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-green-600/20"></div>
-    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
-        Ready to Jam Smarter?
+    <!-- ABC Sheet Music - LEAD FEATURE -->
+    <section id="sheet-music" class="mb-20">
+      <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+        <span class="w-10 h-10 bg-pink-600 rounded-lg flex items-center justify-center text-lg">🎼</span>
+        ABC Sheet Music Rendering
       </h2>
-      <p class="text-2xl mb-12 text-gray-200 leading-relaxed max-w-2xl mx-auto">
-        Grab JamBuddy, fire up a playlist, and let the Circle of Fifths, chord charts, loops, and recorder keep pace with you.
-      </p>
-      <div class="mb-8">
-        <a href="https://play.google.com/store/apps/details?id=com.jambuddy.app&pcampaignid=web_share" target="_blank" rel="noopener" class="group inline-flex items-center justify-center bg-gradient-to-r from-white/20 to-white/10 border-2 border-white/30 backdrop-blur-sm text-white px-12 py-6 rounded-2xl font-bold text-xl hover:from-white/30 hover:to-white/20 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-105">
-          <img src="/images/icons/google-play-badge.png" alt="Get it on Google Play" class="h-12 mr-4 transition-transform group-hover:scale-110" />
-          Get on Google Play
-        </a>
+      
+      <!-- Hero image: full screen sheet music -->
+      <div class="bg-gray-800 rounded-xl p-4 mb-8">
+        <img src="/images/features/full_screen_abc.png" alt="Full sheet music scaled to fit phone screen" class="rounded-lg w-full max-w-md mx-auto" />
+        <p class="text-sm text-gray-400 mt-3 text-center">Sheet music scales to fill your screen. The tune displays completely without scrolling.</p>
       </div>
-      <p class="text-gray-300 text-lg">Available now • Android 12.0+ • One-time purchase • Free updates whenever I get another weekend</p>
-    </div>
-  </section>
+      
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <div class="space-y-4 text-gray-300">
+          <h3 class="text-xl font-semibold text-white">Scales to fit your screen</h3>
+          <p>The sheet music renderer automatically sizes notation to fill the available space. A two-part fiddle tune displays large enough to read across the room on a tablet, or comfortably on a phone without scrolling. The app only scrolls vertically when necessary to keep the music from becoming too small.</p>
+          
+          <h3 class="text-xl font-semibold text-white mt-6">Tablature for fretted instruments</h3>
+          <p>Enable tablature and it appears below the standard notation. Supported instruments:</p>
+          <ul class="space-y-1 mt-2">
+            <li class="flex gap-2"><span class="text-pink-400">•</span> Guitar (standard tuning)</li>
+            <li class="flex gap-2"><span class="text-pink-400">•</span> Mandolin (GDAE)</li>
+            <li class="flex gap-2"><span class="text-pink-400">•</span> Ukulele (GCEA)</li>
+            <li class="flex gap-2"><span class="text-pink-400">•</span> Baritone Ukulele (DGBE)</li>
+          </ul>
+          <p class="mt-2">Tab shows fret numbers on string lines, making it easier to learn pieces if you read tab more fluently than standard notation.</p>
+
+          <h3 class="text-xl font-semibold text-white mt-6">Transpose and change clef</h3>
+          <p>Transpose any tune up or down by semitones—the notation updates instantly. Switch between treble, bass, alto, or tenor clef. Useful when adapting a tune to your instrument's range or matching a recording in a different key.</p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-gray-800 rounded-xl p-4">
+            <img src="/images/features/guitar and uke chords.png" alt="Tablature instrument selector showing Guitar, Mandolin, Ukulele options" class="rounded-lg w-full" />
+            <p class="text-sm text-gray-400 mt-3">Choose your instrument for tablature: Guitar, Mandolin, Ukulele, or Baritone Ukulele.</p>
+          </div>
+          <div class="bg-gray-800 rounded-xl p-4">
+            <img src="/images/features/sheet%20music%20with%20guitar%20tab.png" alt="Sheet music with guitar tablature" class="rounded-lg w-full" />
+            <p class="text-sm text-gray-400 mt-3">Standard notation with guitar tablature below.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sheet music + fretboard visualization -->
+      <div class="mt-8 bg-gray-800 rounded-xl p-6">
+        <div class="grid md:grid-cols-2 gap-6 items-center">
+          <div>
+            <img src="/images/features/abc_with_transcription_dialog.png" alt="Tablature instrument selector showing None, Guitar, Mandolin, Ukulele, Baritone Ukulele options" class="rounded-lg w-full" />
+            <p class="text-sm text-gray-400 mt-3 text-center">Select your instrument for tablature generation.</p>
+          </div>
+          <div>
+            <img src="/images/features/abc_with_fretboard_view.png" alt="Sheet music with fretboard showing chord positions" class="rounded-lg w-full" />
+            <p class="text-sm text-gray-400 mt-3 text-center">Sheet music with Visualization window showing chord positions on the fretboard.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- MIDI Playback -->
+      <div class="mt-12 bg-gray-800 rounded-xl p-6">
+        <h3 class="text-xl font-semibold text-white mb-4">MIDI Playback</h3>
+        <div class="grid md:grid-cols-3 gap-6 text-gray-300">
+          <div>
+            <h4 class="font-medium text-white mb-2">Melody</h4>
+            <p class="text-sm">Hear the tune played back so you can learn it by ear or check your reading.</p>
+          </div>
+          <div>
+            <h4 class="font-medium text-white mb-2">Chords</h4>
+            <p class="text-sm">If the ABC includes chord symbols, play back just the chords to practice soloing or singing over the changes.</p>
+          </div>
+          <div>
+            <h4 class="font-medium text-white mb-2">Both</h4>
+            <p class="text-sm">Melody and chords together give you a full backing track generated from the notation.</p>
+          </div>
+        </div>
+        <p class="text-gray-400 text-sm mt-4">Adjust playback speed from slow practice tempo to performance speed. The tempo slider works independently of any audio files attached to the tune.</p>
+      </div>
+
+      <!-- Editing -->
+      <div class="mt-8 grid md:grid-cols-2 gap-8">
+        <div class="bg-gray-800 rounded-xl p-6">
+          <img src="/images/features/tune_editing.png" alt="Editing ABC notation in JamBuddy" class="rounded-lg w-full mb-4" />
+          <h3 class="text-xl font-semibold text-white mb-4">Edit any tune</h3>
+          <p class="text-gray-300 text-sm">Every tune in JamBuddy is editable. Tap the edit button to modify the ABC notation directly. Fix a wrong note, add chord symbols, change the tempo marking, or rewrite a section. Changes save to your local library.</p>
+        </div>
+        <div class="bg-gray-800 rounded-xl p-6">
+          <img src="/images/features/live%20capture.png" alt="Live transcription capturing a melody" class="rounded-lg w-full mb-4" />
+          <h3 class="text-xl font-semibold text-white mb-3">Add tunes by playing</h3>
+          <p class="text-gray-300 text-sm">Use the live transcription tool to capture melodies. Play a monophonic line and watch it transcribe to ABC notation in real time. Edit the result and save it as a new tune in your library.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Three Window Architecture -->
+    <section id="three-windows" class="mb-20">
+      <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+        <span class="w-10 h-10 bg-cyan-600 rounded-lg flex items-center justify-center text-lg">📱</span>
+        Three-Window Layout
+      </h2>
+      
+      <div class="bg-gray-800 rounded-xl p-6 mb-8">
+        <p class="text-gray-300 mb-4">JamBuddy organizes its features into three main windows. You can show a single window or two windows, arranged in stacked or side-by-side layouts. Each window has a specific purpose:</p>
+        <div class="grid md:grid-cols-3 gap-6 mt-6">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-orange-600 rounded-xl flex items-center justify-center mx-auto mb-3 text-2xl">📚</div>
+            <h4 class="font-semibold text-white">Tunes Window</h4>
+            <p class="text-sm text-gray-400 mt-1">Sheet music, audio player, lyrics, and notes</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mx-auto mb-3 text-2xl">⭕</div>
+            <h4 class="font-semibold text-white">Visualization Window</h4>
+            <p class="text-sm text-gray-400 mt-1">Circle of Fifths showing notes in the current chord and key as 12 o'clock, current chord's chart, current chord's fretboard view, next chord's predictor, historgram, spectrogram and timeline visualizers</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-yellow-600 rounded-xl flex items-center justify-center mx-auto mb-3 text-2xl">🔧</div>
+            <h4 class="font-semibold text-white">Tools Window</h4>
+            <p class="text-sm text-gray-400 mt-1">Tuner, metronome, chord chart library, fretboard views, transcription</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-gray-800 rounded-xl p-4">
+          <img src="/images/features/sheet%20music%20and%20circle.png" alt="Two windows: sheet music and Circle of Fifths" class="rounded-lg w-full" />
+          <p class="text-sm text-gray-400 mt-3">Tunes and Visualization windows shown together.</p>
+        </div>
+        <div class="bg-gray-800 rounded-xl p-4">
+          <img src="/images/features/landscape%20circle%20and%20timeline.png" alt="Landscape layout with two windows" class="rounded-lg w-full" />
+          <p class="text-sm text-gray-400 mt-3">Landscape mode gives more room for side-by-side views on some devices.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tunes Window Detail -->
+    <section id="tunes-window" class="mb-20">
+      <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+        <span class="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center text-lg">📚</span>
+        Tunes Window
+      </h2>
+      
+      <p class="text-gray-300 mb-6">The Tunes window is where you browse, view, and practice your music. It has three modes you switch between with tabs:</p>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- ABC Tab -->
+        <div class="bg-gray-800 rounded-xl p-6">
+          <h3 class="text-xl font-semibold text-white mb-3">ABC Display</h3>
+          <p class="text-gray-300 text-sm mb-4">The primary view. Shows the rendered sheet music with optional tablature. Tap to transpose, toggle tab, change clef, or start MIDI playback. Pinch to zoom if you want manual control over the size.</p>
+          <ul class="text-sm text-gray-400 space-y-1">
+            <li>• Auto-scales to screen</li>
+            <li>• Guitar/mandolin/uke tab</li>
+            <li>• MIDI melody + chords</li>
+            <li>• Transpose ±12 semitones</li>
+          </ul>
+        </div>
+
+        <!-- Audio Tab -->
+        <div class="bg-gray-800 rounded-xl p-6">
+          <img src="/images/features/slow%20down%20and%20looping%20with%20saving.png" alt="Audio player with slowdown and loop controls" class="rounded-lg w-full mb-4" />
+          <h3 class="text-xl font-semibold text-white mb-3">Audio Mode</h3>
+          <p class="text-gray-300 text-sm">Attach MP3, WAV, or other audio files to any tune, or record directly in the app. The waveform player lets you slow down playback (5%–250%) without changing pitch, set loop points, and save named sections. The built-in recorder captures practice takes or melody ideas that save locally and can be played back in the app or shared as a file saved in the users defined folder.</p>
+        </div>
+
+        <!-- Notes Tab -->
+        <div class="bg-gray-800 rounded-xl p-6">
+          <h3 class="text-xl font-semibold text-white mb-3">Notes</h3>
+          <p class="text-gray-300 text-sm mb-4">A freeform text area for each tune. Write practice reminders, chord substitutions, performance notes, lyrics or anything else you want to remember about the piece.</p>
+          <p class="text-gray-400 text-sm">Notes are searchable from the tune browser, so you can find songs by what you wrote about them.</p>
+        </div>
+      </div>
+
+      <!-- Included Collections -->
+      <div class="mt-8 bg-gray-800 rounded-xl p-6">
+        <h3 class="text-xl font-semibold text-white mb-4">Thousands of tunes included</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-gray-700/50 rounded-xl p-4">
+            <img src="/images/features/tunes_manager_list.png" alt="Tune browser showing list of tunes" class="rounded-lg w-full mb-4" />
+            <p class="text-sm text-gray-400">Browse, search, and filter your tune library.</p>
+          </div>
+          <div class="text-gray-300">
+            <p class="mb-3">Pre-loaded tune collections:</p>
+            <ul class="space-y-1 text-sm">
+              <li class="flex gap-2"><span class="text-orange-400">•</span> Irish Session Tunes – reels, jigs, hornpipes</li>
+              <li class="flex gap-2"><span class="text-orange-400">•</span> Roaring Jelly Old-Time – clawhammer and fiddle tunes</li>
+              <li class="flex gap-2"><span class="text-orange-400">•</span> Nigel Gatherer's Collection – Scottish tunes</li>
+              <li class="flex gap-2"><span class="text-orange-400">•</span> Bluegrass Jam Tunes – bluegrass standards</li>
+              <li class="flex gap-2"><span class="text-orange-400">•</span> Old-Time Jam Tunes – traditional old-time music</li>
+              <li class="flex gap-2"><span class="text-orange-400">•</span> Mandozine – mandolin repertoire</li>
+              <li class="flex gap-2"><span class="text-orange-400">•</span> OpenHymnal – hymns and traditional songs</li>
+            </ul>
+          </div>
+          <div class="text-gray-300">
+            <p class="mb-3">Add your own tunes by:</p>
+            <ul class="space-y-1 text-sm">
+              <li class="flex gap-2"><span class="text-orange-400">•</span> Pasting or typing ABC notation</li>
+              <li class="flex gap-2"><span class="text-orange-400">•</span> Importing ABC files</li>
+              <li class="flex gap-2"><span class="text-orange-400">•</span> Using live transcription</li>
+              <li class="flex gap-2"><span class="text-orange-400">•</span> Attaching PDFs or images</li>
+            </ul>
+            <p class="mt-3 text-sm">Filter by key, time signature, genre, or custom tags. Create set lists for gigs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visualization Window Detail -->
+    <section id="visualization-window" class="mb-20">
+      <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+        <span class="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center text-lg">⭕</span>
+        Visualization Window
+      </h2>
+      
+      <p class="text-gray-300 mb-6">The Visualization window shows what the chord detector is hearing. Tabs let you switch between different views:</p>
+      
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-2">Circle of Fifths</h3>
+            <p class="text-gray-300 text-sm">The circle rotates so the detected key sits at 12 o'clock. The current chord is shown in the center of the circle and the notes in the chord get circled, showing their relationship to the key. Tap the key on the top bar to lock a key if its know so it stops trying to guess it.</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-2">Chord Charts</h3>
+            <p class="text-gray-300 text-sm">See fingering diagrams for the current chord on guitar, ukulele, mandolin, baritone uke, or bass. Swipe for alternate voicings. Next-chord predictions show four likely upcoming chords with their fingerings.</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-2">Visualization Tabs</h3>
+            <p class="text-gray-300 text-sm">Seven views to choose from: Circle of Fifths, Current Chord chart, Current Fretboard, Next Chords predictor, Histogram, Spectrogram, and Timeline. Each shows the detected audio differently to help you understand what's being heard.</p>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-gray-800 rounded-xl p-4">
+            <img src="/images/features/circle_viz.png" alt="Circle of Fifths with active chord detection" class="rounded-lg w-full" />
+            <p class="text-sm text-gray-400 mt-3">Circle of Fifths with detected chord highlighted.</p>
+          </div>
+          <div class="bg-gray-800 rounded-xl p-4">
+            <img src="/images/features/just%20next%20chords.png" alt="Next chord predictions with fingering charts" class="rounded-lg w-full" />
+            <p class="text-sm text-gray-400 mt-3">Next chord predictions with fingering diagrams.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools Window Detail -->
+    <section id="tools-window" class="mb-20">
+      <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+        <span class="w-10 h-10 bg-yellow-600 rounded-lg flex items-center justify-center text-lg">🔧</span>
+        Tools Window
+      </h2>
+      
+      <p class="text-gray-300 mb-6">The Tools window contains practice utilities. Each tool is on its own tab:</p>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Tuner -->
+        <div class="bg-gray-800 rounded-xl p-5">
+          <img src="/images/features/tuner2.png" alt="Chromatic tuner" class="rounded-lg w-full mb-4" />
+          <h3 class="text-lg font-semibold text-white mb-2">Tuner</h3>
+          <p class="text-gray-300 text-sm">Precision chromatic tuner for any instrument. Shows detected note, cents sharp/flat, and a visual needle. Reference pitch adjustable (default A=440Hz).</p>
+        </div>
+
+        <!-- Metronome -->
+        <div class="bg-gray-800 rounded-xl p-5">
+          <img src="/images/features/metronome-strum-patterns.png" alt="Metronome with strum patterns" class="rounded-lg w-full mb-4" />
+          <h3 class="text-lg font-semibold text-white mb-2">Metronome</h3>
+          <p class="text-gray-300 text-sm">20-300 BPM with tap tempo. Visual beat indicator. Optional strum patterns for guitar/ukulele practice. Time signatures: 4/4, 3/4, 6/8, and more.</p>
+        </div>
+
+        <!-- Transcription -->
+        <div class="bg-gray-800 rounded-xl p-5">
+          <img src="/images/features/live%20capture.png" alt="Live transcription" class="rounded-lg w-full mb-4" />
+          <h3 class="text-lg font-semibold text-white mb-2">Live Transcription</h3>
+          <p class="text-gray-300 text-sm">Play a monophonic melody and watch it transcribe to ABC notation in real time. Edit the result and save as a new tune. Great for capturing ideas or transcribing by ear.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chord Detection -->
+    <section id="chord-detection" class="mb-20">
+      <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+        <span class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-lg">🎵</span>
+        Real-Time Chord Detection
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <div class="space-y-4 text-gray-300">
+          <h3 class="text-xl font-semibold text-white">How it works</h3>
+          <p>JamBuddy uses a CREPE neural network for pitch detection combined with chroma feature analysis. Audio from your phone's mic is processed to identify sounding notes, then matched against chord templates to find the most likely chord.</p>
+          
+          <h3 class="text-xl font-semibold text-white mt-6">What you see</h3>
+          <ul class="space-y-2">
+            <li class="flex gap-2"><span class="text-blue-400">•</span> Chord name (root + quality, like "Am7" or "G")</li>
+            <li class="flex gap-2"><span class="text-blue-400">•</span> Bass note if different from root (slash chords)</li>
+            <li class="flex gap-2"><span class="text-blue-400">•</span> Confidence indicator</li>
+            <li class="flex gap-2"><span class="text-blue-400">•</span> Estimated key from chord history</li>
+          </ul>
+
+          <h3 class="text-xl font-semibold text-white mt-6">Detection settings</h3>
+          <p>Adjust sensitivity, confidence threshold, bass boost, and rolling history to match your instrument and room acoustics. Choose which chord types to detect (major/minor only, 7ths, extended) and enable diatonic filtering to prefer in-key chords.</p>
+        </div>
+        <div class="bg-gray-800 rounded-xl p-4">
+          <img src="/images/features/current%20chord.png" alt="Chord detection display" class="rounded-lg w-full" />
+          <p class="text-sm text-gray-400 mt-3">Current chord display with confidence level.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wear OS -->
+    <section id="wear-os" class="mb-20">
+      <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+        <span class="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center text-lg">⌚</span>
+        Wear OS Companion
+      </h2>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gray-800 rounded-xl p-4 text-center">
+          <img src="/images/features/watch-circle.png" alt="Circle of Fifths on Wear OS" class="rounded-lg w-32 mx-auto mb-4" />
+          <h3 class="font-semibold text-white">Circle of Fifths</h3>
+          <p class="text-sm text-gray-400">Real-time chord detection on your wrist.</p>
+        </div>
+        <div class="bg-gray-800 rounded-xl p-4 text-center">
+          <img src="/images/features/watch-guitar-chord.png" alt="Chord chart on Wear OS" class="rounded-lg w-32 mx-auto mb-4" />
+          <h3 class="font-semibold text-white">Chord Charts</h3>
+          <p class="text-sm text-gray-400">Quick fingering reference without reaching for your phone.</p>
+        </div>
+        <div class="bg-gray-800 rounded-xl p-4 text-center">
+          <img src="/images/features/watch-tuner.png" alt="Tuner on Wear OS" class="rounded-lg w-32 mx-auto mb-4" />
+          <h3 class="font-semibold text-white">Tuner</h3>
+          <p class="text-sm text-gray-400">Chromatic tuner for quick adjustments between songs.</p>
+        </div>
+      </div>
+      <p class="text-gray-400 text-sm mt-4">The Wear OS app runs standalone—no phone connection required during use.</p>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="mb-20">
+      <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+        <span class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center text-lg">👋</span>
+        About JamBuddy
+      </h2>
+      
+      <div class="bg-gray-800 rounded-xl p-6 text-gray-300">
+        <p class="mb-4">I'm Steve, the developer. JamBuddy started as a Python tool to match chords to templates via FFT. It became a way to learn Kotlin at the same time as mandolin and eventually evolved into this.</p>
+        <p class="mb-4">All the features exist because I thought they'd help me learn tunes or play better with others. If you find a bug or need a tweak, you're emailing the person who built it.</p>
+        <p>No venture funding, no pushy upsells—just a side-hustle app updated after jams and before work.</p>
+      </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section class="bg-gradient-to-r from-green-900/50 to-blue-900/50 rounded-2xl p-8 text-center">
+      <h2 class="text-2xl font-bold text-white mb-4">Get JamBuddy</h2>
+      <p class="text-gray-300 mb-6">Available now for Android 12.0+. One-time purchase, free updates.</p>
+      <a href="https://play.google.com/store/apps/details?id=com.jambuddy.app&pcampaignid=web_share" target="_blank" rel="noopener" class="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-bold text-lg transition-colors">
+        <img src="/images/icons/google-play-badge.png" alt="" class="h-8" />
+        Get on Google Play
+      </a>
+    </section>
+
+  </main>
 </Layout>
 
 <style>
-  .aspect-w-16 {
-    position: relative;
-    padding-bottom: 62.5%; /* 16:10 aspect ratio */
+  html {
+    scroll-behavior: smooth;
   }
   
-  .aspect-w-16 img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .carousel-container {
-    position: relative;
-  }
-  
-  .carousel-track {
-    display: flex;
-    transition: transform 0.3s ease;
-  }
-  
-  .carousel-slide {
-    flex: 0 0 33.3333%;
-    max-width: 33.3333%;
-    box-sizing: border-box;
-  }
-  
-  @media (max-width: 1024px) {
-    .carousel-slide {
-      flex: 0 0 50%;
-      max-width: 50%;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .carousel-slide {
-      flex: 0 0 100%;
-      max-width: 100%;
-    }
-    .carousel-btn {
-      display: none;
-    }
-  }
-  
-  .carousel-btn {
-    z-index: 10;
-  }
-  
-  .indicator {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.3);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .indicator.active {
-    background-color: rgba(255, 255, 255, 0.8);
+  section[id] {
+    scroll-margin-top: 120px;
   }
 </style>
-
-<script>
-  class Carousel {
-    currentSlide: number;
-    totalSlides: number;
-    track: HTMLElement | null;
-    prevBtn: HTMLButtonElement | null;
-    nextBtn: HTMLButtonElement | null;
-    indicatorsContainer: HTMLElement | null;
-    slidesPerView: number;
-    maxSlideIndex: number;
-
-    constructor() {
-      this.currentSlide = 0;
-      this.totalSlides = document.querySelectorAll('.carousel-slide').length;
-      this.track = document.getElementById('main-carousel');
-      this.prevBtn = document.querySelector('.carousel-prev');
-      this.nextBtn = document.querySelector('.carousel-next');
-      this.indicatorsContainer = document.getElementById('carousel-indicators');
-      this.slidesPerView = 1;
-      this.maxSlideIndex = 0;
-      
-      // Calculate slides per view based on screen size
-      this.updateSlidesPerView();
-      
-      this.init();
-    }
-    
-    updateSlidesPerView() {
-      const width = window.innerWidth;
-      if (width <= 768) {
-        this.slidesPerView = 1;
-      } else if (width <= 1024) {
-        this.slidesPerView = 2;
-      } else {
-        this.slidesPerView = 3;
-      }
-      this.maxSlideIndex = Math.max(0, this.totalSlides - this.slidesPerView);
-    }
-    
-    init() {
-      this.createIndicators();
-      this.bindEvents();
-      this.updateCarousel();
-      
-      // Update on resize
-      window.addEventListener('resize', () => {
-        this.updateSlidesPerView();
-        this.currentSlide = Math.min(this.currentSlide, this.maxSlideIndex);
-        this.updateCarousel();
-      });
-    }
-    
-    createIndicators() {
-      if (!this.indicatorsContainer) return;
-      this.indicatorsContainer.innerHTML = '';
-      
-      for (let i = 0; i <= this.maxSlideIndex; i++) {
-        const indicator = document.createElement('button');
-        indicator.className = `indicator ${i === 0 ? 'active' : ''}`;
-        indicator.addEventListener('click', () => this.goToSlide(i));
-        this.indicatorsContainer.appendChild(indicator);
-      }
-    }
-    
-    bindEvents() {
-      this.prevBtn?.addEventListener('click', () => this.prevSlide());
-      this.nextBtn?.addEventListener('click', () => this.nextSlide());
-      
-      // Add touch support for mobile
-      let startX = 0;
-      let currentX = 0;
-      let isDragging = false;
-
-      const track = this.track;
-      if (!track) return;
-      
-      track.addEventListener('touchstart', (e: TouchEvent) => {
-        startX = e.touches[0].clientX;
-        isDragging = true;
-      });
-      
-      track.addEventListener('touchmove', (e: TouchEvent) => {
-        if (!isDragging) return;
-        currentX = e.touches[0].clientX;
-        e.preventDefault(); // Prevent scrolling
-      });
-      
-      track.addEventListener('touchend', () => {
-        if (!isDragging) return;
-        isDragging = false;
-        
-        const diff = startX - currentX;
-        if (Math.abs(diff) > 50) { // Minimum swipe distance
-          if (diff > 0) {
-            this.nextSlide();
-          } else {
-            this.prevSlide();
-          }
-        }
-      });
-    }
-    
-    nextSlide() {
-      this.currentSlide = Math.min(this.currentSlide + 1, this.maxSlideIndex);
-      this.updateCarousel();
-    }
-    
-    prevSlide() {
-      this.currentSlide = Math.max(this.currentSlide - 1, 0);
-      this.updateCarousel();
-    }
-    
-  goToSlide(index: number) {
-      this.currentSlide = Math.max(0, Math.min(index, this.maxSlideIndex));
-      this.updateCarousel();
-    }
-    
-    updateCarousel() {
-      if (!this.track) return;
-      
-      const slideWidth = 100 / this.slidesPerView;
-      const translateX = -this.currentSlide * slideWidth;
-      this.track.style.transform = `translateX(${translateX}%)`;
-      
-      // Update indicators
-      if (!this.indicatorsContainer) return;
-      const indicators = this.indicatorsContainer.querySelectorAll<HTMLButtonElement>('.indicator');
-      indicators.forEach((indicator, index) => {
-        indicator.classList.toggle('active', index === this.currentSlide);
-      });
-    }
-  }
-  
-  // Initialize carousel when DOM is loaded
-  document.addEventListener('DOMContentLoaded', () => {
-    new Carousel();
-  });
-</script>
