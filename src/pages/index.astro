@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="JamBuddy – Sheet Music & Practice Tools for Musicians">
   <!-- Header with Download -->
-  <header class="bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
+  <header class="bg-gray-900 border-b border-gray-800">
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
       <div class="flex items-center gap-4">
         <img src="/images/logo/jam_buddy_round.png" alt="JamBuddy" class="w-12 h-12" />
@@ -238,6 +238,7 @@ import Layout from '../layouts/Layout.astro';
               <li class="flex gap-2"><span class="text-orange-400">•</span> Mandozine – mandolin repertoire</li>
               <li class="flex gap-2"><span class="text-orange-400">•</span> OpenHymnal – hymns and traditional songs</li>
             </ul>
+            <p class="mt-3 text-sm"><a href="/abc" class="text-orange-400 hover:text-orange-300">All collections available free on the web →</a></p>
           </div>
           <div class="text-gray-300">
             <p class="mb-3">Add your own tunes by:</p>
@@ -413,6 +414,6 @@ import Layout from '../layouts/Layout.astro';
   }
   
   section[id] {
-    scroll-margin-top: 120px;
+    scroll-margin-top: 80px;
   }
 </style>
