@@ -268,6 +268,40 @@ W: 3. Just a few more weary days and then
 W: To a land where joys will never end
 
 X: 10
+T:Kentucky Waltz
+C:Bill Monroe - Arr. Roland White
+N:
+R:bluegrass
+L:1/8
+Q:1/4=120
+M:3/4
+K:D
+z3A Bc | (3"D"[dF][dF][dF] [d2F2] cB | (3[AD][AD][AD] [A2D2] FD | (3[AF][AF][AF] (3[AF][AF][AF] (3[AF][AF][AF] |  
+[A2F2] [AF]A Bc | (3[dF][dF][dF] [d2F2] cB | (3[AD][AD][AD] [A2D2] FD | "A"(3[EC][EC][EC] (3[EC][EC][EC] (3[EC][EC][EC] | 
+(3[EC][EC][EC] [E2C2] AB | (3[ec][ec][ec] [e2c2] cB | (3[eA][eA][eA] [e2A2] GE | 
+(3[EC][EC][EC] (3[EC][EC][EC] (3[EC][EC][EC] | [E4C4] CB, | A,2 C2 E2 | "A7"A2 [c3E3]B | 
+"D"(3[dA][dA][dA] (3[dA][dA][dA] (3[dA][dA][dA] | (3[dA][dA][dA] [dA]f =fe | (3[fd][fd][fd] [f2d2] FB | 
+(3[fAD][fAD][fAD] [f2A2D2] FD | (3[AF][AF][AF] (3[AF][AF][AF] (3[AF][AF][AF] | 
+[A4F4] de | fa a2 f2 | (3"A"[ec][ec][ec] [e2c2] fe | (3"G"[gd][gd][gd] (3[gd][gd][gd] (3[gd][gd][gd] | 
+[g4d4] (3B=cd | (3[gd][gd][gd] [g2d2] d2 | e2 d2 e2 | "D"f2 d2 B2 | (3"B7"[fA][fA][fA] [f2A2] A^A | 
+"E7"[e/B/][e/B/][e/B/][e/B/] [e2B2] B=c | (3"A7"[ec][ec][ec] [e2c2] f2 | (3"D"[fd][fd][fd] (3[fd][fd][fd] (3[fd][fd][fd] | 
+[f6d6] |
+W:We were waltzing that night in Kentucky 
+W: 'Neath the beautiful harvest moon
+W: And I was the boy who was lucky
+W: But it all ended too soon
+W:  
+W:As I sit here alone in the moonlight
+W:I can see your smiling face
+W:And I long once more for your embrace
+W:In that beautiful Kentucky waltz
+W:  
+W:As I sit here alone in the moonlight
+W:I can see your smiling face
+W:And I long once more for your embrace
+W:In that beautiful Kentucky waltz
+
+X: 11
 T:Long Journey Home
 C:Traditional
 S:https://www.idahobluegrassassociation.org/beginner-jam/category/long-journey-home
@@ -291,7 +325,41 @@ W: 4. Homesick and lonesome and I’m feeling kind of blue
 W:
 W: 5. There’s black smoke a rising and it surely is a train
 
-X: 11
+X: 12
+T:Nine Pound Hammer
+C:Roland White solo
+N:From the Album "Appalachian Swing" Transcribed by Mike Stangeland
+R:bluegrass
+L:1/8
+Q:1/4=239
+M:4/4
+K:A
+z[AE] [A2E2] [A2E2] [AF]A | "A"[AA][AA] [AA][AA] [AA][AA] [AA][AA] | [AA][AA] A=c Bc Bc | 
+"D"A2 [AF][AF] [AF][AF] [AF][AF] | FF A=c Bc Bc | "A"[AA][AA] [AA][AA] [AA][AA] [A2F2] | 
+"E"EB B=c BA FE | "A"[A2A2] [A2A2] [AA][AA] [AA][AA] | [A2A2] {d}ee ef ee | cB AA AA AA | 
+AA AA ef ee | "D"=cB AA AA =F^F | A2 AA AA AA | "A"AA AA AA FA | "E"E2 E2 EF GB | 
+"A"A2 Ac BA FE | A2 [A2E2] [A2E2] [A2E2] | "A"[aA][aA] [aA][aA] [aA][aA] ae | 
+z=c Bc cB cB | AA {=F}^FF FA AA | "D"=cB Ac BA F2 | "A"A,B, CE F=G A=c | "E"B=c Bc cB AF | 
+"A"A2 Ac BA FE | A2 AA AA Ae | af ec (3B=cB AF | ea fe A=c Bc | "D"A2 FF FA AA | 
+=cB Ac BA F2 | FA =c^c =cB AF | "E"E2 EE EF GB | "A"A2 Ac BA FE | A8 |
+W:This nine pound hammer
+W:Is just a little too heavy... for my size
+W:Buddy, for my size
+W: 
+W:Roll on, Buddy... don't you roll so slow
+W:How can I roll when the wheels won't go?
+W:
+W:I went upon the mountain
+W:Just to see my honey
+W:And I ain't coming back
+W:Lord, I ain't coming back
+W:
+W:It's a long way to Hazard
+W:And a long way to Harlan
+W:Just to get a little booze
+W:Just to get a little booze
+
+X: 13
 T:Shady Grove
 C:Traditional
 R:Reel
@@ -327,7 +395,7 @@ W:Is sweet as brandy wine
 W:And there ain't no girl in this old world
 W:That's prettier than mine
 
-X: 12
+X: 14
 T:Sitting on Top of the World
 C:Walter Vinson and Lonnie Chatmon
 S:https://www.idahobluegrassassociation.org/beginner-jam/category/sitting-on-top-of-the-world
@@ -358,7 +426,7 @@ W:
 W: 6. Don’t you come here running, holding out your hand, 
 W:I’ll get me a woman like you got your man
 
-X: 13
+X: 15
 T:Soldier's Joy
 C:Traditional
 M:4/4
@@ -382,7 +450,7 @@ W:
 W: 5. Twenty-five cents for the morphine, Fifteen cents for the beer
 W: Twenty-five cents for the morphine Gonna take me away from here
 
-X: 14
+X: 16
 T:Sourwood Mountain
 A:William Marion Reece 
 M:C|
