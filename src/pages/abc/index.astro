@@ -15,7 +15,8 @@ const filenameMap: Record<string, string> = {
   'practice-techniques': 'practice.abc',
   'open-hymnal': 'open_hymnal_collection.abc',
   'roaring-jelly-2024': 'roaring_jelly_collection.abc',
-  'nigel-gatherer-collection': 'nigel_gatherer_collection.abc'
+  'nigel-gatherer-collection': 'nigel_gatherer_collection.abc',
+  'antifascist': 'antifascist_collection.abc'
 };
 
 // During build, we need to find the public directory relative to the project root
@@ -37,7 +38,8 @@ const titleMap: Record<string, string> = {
   'practice-techniques': 'Practice Techniques',
   'open-hymnal': 'Open Hymnal (Christian)',
   'roaring-jelly-2024': 'Roaring Jelly (Old-Time)',
-  'nigel-gatherer-collection': 'Nigel Gatherer (Various)'
+  'nigel-gatherer-collection': 'Nigel Gatherer (Various)',
+  'antifascist': 'JamBuddy (Antifascist)'
 };
 
 const collections = [
@@ -48,7 +50,8 @@ const collections = [
   { slug: 'practice-techniques', title: 'Practice Techniques' },
   { slug: 'open-hymnal', title: 'Open Hymnal (Christian)' },
   { slug: 'roaring-jelly-2024', title: 'Roaring Jelly (Old-Time)' },
-  { slug: 'nigel-gatherer-collection', title: 'Nigel Gatherer (Various)' }
+  { slug: 'nigel-gatherer-collection', title: 'Nigel Gatherer (Various)' },
+  { slug: 'antifascist', title: 'JamBuddy (Antifascist)' }
 ];
 
 const currentDir = fileURLToPath(new URL('.', import.meta.url));
