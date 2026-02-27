@@ -1,38 +1,41 @@
 X: 1
 T: Battle Hymn of the Republic
-A: Julia Ward Howe
-M:C|
-L:1/8
-K:Bb
-F2|"Bb"F3/ F/ F3/ E/ D3/ F/ B3/ c/|
-w:Mine eyes have seen the glo-ry of the
-d3/ d/ d3/ c/ B2 B3/ A/| "Eb" G3/ G/ G3/ A/ B3/ A/ B3/ G/|
-w:com-ing of the Lord; He is tramp-ling out the vin-tage where the
-"Bb"F3/ G/ F3/ D/ F2 "F7"F3/ F/|"Bb"F3/ F/ F3/ E/ D3/ F/ B3/ c/|
-w:grapes of wrath are stored; He has loosed the fate-ful light-ning of his
-d3/ d/ d3/ c/ B2 B2|c2 c2 B2 A2| B6 z2|
-w:ter-ri-ble swift sword; His truth is march-ing on.
-F3 E D3/ F/ B3/ c/|d4 "Gm"B2 B2|"Cm"c2 c2 "F"B2 A2| "Bb"B5||
-w: Glo-ry, glo-ry, Hal-le-lu-ja! His truth is march-ing on.
-W:I have seen Him in the watch-fires of a hundred circling camps,
-W:They have builded Him an altar in the evening dews and damps;
-W:I can read His righteous sentence by the dim and flaring lamps:
-W:His day is marching on.
-W:
-W:I have read a fiery gospel writ in burnished rows of steel:
-W:"As ye deal with My contemners, so with you My grace shall deal";
-W:Let the Hero, born of woman, crush the serpent with His heel,
-W:Since God is marching on.
-W:
-W:He has sounded forth the trumpet that shall never call retreat;
-W:He is sifting out the hearts of men before His judgment-seat;
-W:Oh, be swift, my soul, to answer Him! Be jubilant, my feet!
-W:Our God is marching on.
-W:
-W:In the beauty of the lilies Christ was born across the sea,
-W:With a glory in His bosom that transfigures you and me.
-W:As He died to make men holy, let us die to make men free,
-W:While God is marching on.
+C: words: Julia Ward Howe
+C: air:  "John Brown's Body"
+Q: "Allegretto."
+%R: air, march
+B: "The Everyday Song Book", 1927
+F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
+M: 4/4
+L: 1/8
+K: Bb
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+F-F | F> F F> E D> F B> c | d> d d> c B2 B> A |
+w: 1.~Mine* eyes have seen the glo-ry of the com-ing of the Lord; He is
+w: 2.~I have seen Him in the watch-fires of a hun-dred cir-cling camps; They have
+w: 3.~I have read a fier-y gos-pel writ in bur-nished rows of steel: "As ye
+w: 4.~He has sound-ed forth the trump-et that shall nev-er cal re-treat; He is
+w: 5.~In the beau-ty of the lil-ies Christ was born a-cross the sea; With a
+%
+G> G G> A B> A B> G | F> G F> D F2 F> F |
+w: tram-pling out the vin-tage where the grapes of wrath are stored; He hath
+w: build-ed Him an al-tar in the eve-ning dews and damp; I can
+w: deal with My con-tem-ners, so with you My grace shall deal." Let the
+w: sift-ing out the hearts of men be-fore His judge-ment-seat; Oh, be
+w: glo-ry in His bos-om that trans-fig-ures you and me; As He
+%
+F> F F> E D> F B> c | d> d d> c B2 B2 | c2 c2 B2 A2 | B4 z4 |]
+w: loosed the fate-ful light-ning of His ter-ri-ble swift sword, His truth is march-ing on.
+w: read His right-eous sen-tence by the dim and flar-ing lamps, His day is march-ing on.
+w: He-ro, born of wom-an, crush the ser-pent with His heel, Since God is march-ing on.
+w: swift, my soul, to an-swer Him! be ju-bi-lant, my feet! Our God is march-ing on.
+w: died to make men ho-ly, let us die to make men free, While God is march-ing on.
+%
+F3 E D> F B> c | d4 B2 z2 | G3 A B> A B> G | F4 D4 |
+w: Glo-ry! glo-ry! Hal-le-lu-jah!  Glo-ry! glo-ry! Hal-le-lu-jah!
+%
+F3 E D> F B> c | d4 B2 B2 | c2 c2 B2 A2 | B6 z |]
+w: Glo-ry! glo-ry! Hal-le-lu-jah! His truth is march-ing on.
 
 X: 2
 T: Last Night I Had the Strangest Dream
@@ -133,6 +136,64 @@ W:On the streets of  Minneapolis
 W:ICE out
 
 X: 4
+T: Tom Paine's Bones
+C: Graham Moore
+M:C|
+L:1/4
+K:D
+Q:135
+"D"z4|"A"z4|"Bm"z4|"G"z4||
+P: Verse
+|:D|"D"DDDF|"A"E/E/- E z A/A/|"Bm"B/B/ B d c|"G"B2zA|
+w: As I dreamed out one ev'nin __by a ri-ver of dis-con-tent _I
+"D" A A A F|"Bm" A A/B/-B F/F/|"G"F/E/E/E/ E/C/ D|
+w:bumped right in-to old Tom Paine as a ru-n-ning down the road he went
+"G"z z z/ D/D|"D"DDDF|"A" (3EEE z A|"Bm"BBd c/B/-|"G"B2zA|
+w: He said I can't stop right now my son King George is af-ter me, _He'll
+"D"AF/A/-AF|"Bm"A A/B/-BF/F/|"G"F/E/E/E/ E/D/C/D/-|D ||
+w:have a ro-pe a-round my thr-oat and they'll hang me on the li-ber-ty tr-ee
+P: Chorus
+A,/A, B,|"D"D3/ D/ D D|"A" A,2 z2|"Bm"B3/B/d d|"G"B3z|
+w: And I will dance to Tom Paine's bones dance to Tom Paine's bones
+"D" A A/F/ A A|"Bm"A A/B/-BD/E/|"G"F/E/E/D/-D C|"G" D z/ A,/ A, B,|
+w: Dance in the old-est boots I o-wn. to the rhy-th'm of T-om Paine's bones And I will
+"D"D3/D D D |"A"A,2 z2|"Bm"B3/B/ d d|"G"B3 z|
+w: dance to Tom Paine's bones dance to Tom Paine's bones
+"D"A A/F/ A A |"Bm" A A/B/-B D/E/|"G"F/E/E/D/-D C| D2 z2|
+w: dance in the old-est boots I own _to the rhy-thm of Tom _Paine's bones
+P: Vln
+"D"(vF/A/[F/d]) (uF/A/[F/d]) vF/A/|"A"(vE/A/[E/c/]) (uE/A/[E/c/]) vE/A/|"Bm"(vF/B/[F/d]) (uF/B/[F/d]) vF/B/|"G"(vF/B/[G/d]) (uG/B/[G/d]) vG/B/|
+"D"(vF/A/[F/d]) (uF/A/[F/d]) vF/A/|"Bm"[B/E/][A/D/]-[AD][A2F2]|"G"F/E/E/D/ D/C/-C| D/D/ E/D/ E/D/E/D/ :|
+W:Well, I only talked about freedom
+W:And justice for everyone
+W:But ever since the first word I spoke
+W:I′ve been looking down the barrel of a gun
+W:And they said I preached revolution
+W:Let me say in my defence
+W:That all I did wherever I went
+W:Was to talk a lot of common sense
+W:
+W:Chorus
+W:
+W:Well, old Tom Paine he ran so fast
+W:Left me standing still
+W:And then there was a piece of paper in my hand
+W:Standing at the top of the hill
+W:And it said, "This is the age of reason
+W:And these are the rights of man
+W:I kick off religion and monarchy"
+W:It was written there in Tom Paine's plan
+W:
+W:Chorus
+W:
+W:Well, old Tom Paine dead he lies
+W:Nobody laughs and nobody cries
+W:Where he′s gone or how he fares
+W:Nobody knows and nobody cares
+W:
+W:Chorus
+
+X: 5
 T:We Shall Overcome
 A:Traditional
 M:C|

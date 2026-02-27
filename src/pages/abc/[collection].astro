@@ -18,6 +18,7 @@ export async function getStaticPaths() {
     { params: { collection: 'roaring-jelly-2024' } },
     { params: { collection: 'nigel-gatherer-collection' } },
     { params: { collection: 'antifascist' } },
+    { params: { collection: 'everyday-songbook-1927' } },
   ];
 }
 
@@ -30,7 +31,8 @@ const filenameMap: Record<string, string> = {
   'open-hymnal': 'open_hymnal_collection.abc',
   'roaring-jelly-2024': 'roaring_jelly_collection.abc',
   'nigel-gatherer-collection': 'nigel_gatherer_collection.abc',
-  'antifascist': 'antifascist_collection.abc'
+  'antifascist': 'antifascist_collection.abc',
+  'everyday-songbook-1927': 'everyday_songbook.abc'
 };
 
 // During build, we need to find the public directory relative to the project root
@@ -53,7 +55,8 @@ const titleMap: Record<string, string> = {
   'open-hymnal': 'Open Hymnal (Christian)',
   'roaring-jelly-2024': 'Roaring Jelly (Old-Time)',
   'nigel-gatherer-collection': 'Nigel Gatherer (Various)',
-  'antifascist': 'JamBuddy (Antifascist)'
+  'antifascist': 'JamBuddy (Antifascist)',
+  'everyday-songbook-1927': 'Everyday Songbook 1927 (Various)'
 };
 
 const collections = [
@@ -65,7 +68,8 @@ const collections = [
   { slug: 'open-hymnal', title: 'Open Hymnal (Christian)' },
   { slug: 'roaring-jelly-2024', title: 'Roaring Jelly (Old-Time)' },
   { slug: 'nigel-gatherer-collection', title: 'Nigel Gatherer (Various)' },
-  { slug: 'antifascist', title: 'JamBuddy (Antifascist)' }
+  { slug: 'antifascist', title: 'JamBuddy (Antifascist)' },
+  { slug: 'everyday-songbook-1927', title: 'Everyday Songbook 1927 (Various)' }
 ];
 
 const currentDir = fileURLToPath(new URL('.', import.meta.url));
