@@ -1013,6 +1013,17 @@ GE| "G"DBB BAG| Bdd dBG| "C"cde "G"dBG| "Am"BAA "D"AGE|
     "G"g2b "D"afd| "C"efg "G"dBG| "C"cde "G"dBA| "D"AGF "G"G :|
 
 X: 81
+T: Eddie's Reel
+I: Eddie's Reel	R-42	G	reel
+M: C|
+R: reel
+K: G
+G2 |: "G"DGBd gag2| DGBd gag2| DGBd gfed| "D7"c4 cdcB|
+     "D7"AFAd fgf2| AFAd fgfe|1 d2d2 eged| "G"B4 BcBA :|2 "D7"d2d2 cAFA| "G"G6|]
+d2| "G"[B4b4] [B2b2][B2a2]| [B4g4] [B2g2]d2|  [B2b2][B2b2] [B2a2][B2g2]| "D7"[A4f4] [A2f2]d2|"D7"[A4a4] [A2a2][A2g2]| [A4f4] [Af][Ag][Af][Ae]| [D2d2][D2d2] [Ae][Ag][Ae][Dc]| "G"[D4B4] [D2B2]d2|
+    "G"[B4b4] [B2b2][B2a2]| [B6g6] z2| [B4b4] [B2b2][B2b2]| "C"[c4c'4] [c2c'2][A2e2]| "Am"[A4a4] [A2a2][A2g2]| "D7"[A4f4] [Af][Ag][Af][Ae]| d2d2 cAF[DA]| "G"G6 |]
+
+X: 82
 T: Ed Shaw's Waltz
 I: Ed Shaw's Waltz	W-22	D	waltz
 C: Ed Shaw
@@ -1025,17 +1036,6 @@ K: D
 "D"[A3d3f3]| [d2f2][Ae]| "G"[G2d2] "Em"[EB]| "D"[D3A3]|   [DA][GB][Fd]| AD "A"[Ge]| "D"DAG| [F3d3]|]
 "D"[d2f2a2] "G"[gb]| "D"[d2a2] "G"[Bg]| "D"[A2f2] "A"[Ge]| "D"[F3d3]|"D"[Af] "Em"[Ge] "D"[Fd]| "D"[Adf] "Em"[GBe] "D"[FAd]| [A3d3f3]| "G"[d3g3b3]|
 "D"[F2d2a2] "G"[Gdb]| "D"[F2d2a2] "G"[EBg]| "D"DA "A"[Ge]| "D"FA "A"[Ge]|"D"[Af] "Em"[Ge] "D"[B,Fd]| [A,Adf] "Em"[B,GBe] "D"[DFAd]| A,D "A"[CGe]| "D"[D3F3A3d3]|]
-
-X: 82
-T: Eddie's Reel
-I: Eddie's Reel	R-42	G	reel
-M: C|
-R: reel
-K: G
-G2 |: "G"DGBd gag2| DGBd gag2| DGBd gfed| "D7"c4 cdcB|
-     "D7"AFAd fgf2| AFAd fgfe|1 d2d2 eged| "G"B4 BcBA :|2 "D7"d2d2 cAFA| "G"G6|]
-d2| "G"[B4b4] [B2b2][B2a2]| [B4g4] [B2g2]d2|  [B2b2][B2b2] [B2a2][B2g2]| "D7"[A4f4] [A2f2]d2|"D7"[A4a4] [A2a2][A2g2]| [A4f4] [Af][Ag][Af][Ae]| [D2d2][D2d2] [Ae][Ag][Ae][Dc]| "G"[D4B4] [D2B2]d2|
-    "G"[B4b4] [B2b2][B2a2]| [B6g6] z2| [B4b4] [B2b2][B2b2]| "C"[c4c'4] [c2c'2][A2e2]| "Am"[A4a4] [A2a2][A2g2]| "D7"[A4f4] [Af][Ag][Af][Ae]| d2d2 cAF[DA]| "G"G6 |]
 
 X: 83
 T:Emma's Waltz
@@ -1118,17 +1118,6 @@ FA| "Bm"B3 F Bd| "F#m"cA F2 FA| "Bm"B3 F Be| "A"c4 dc|
 "Bm"fd Be "A"cA| "G"dB Gc "F#m"AF| "Bm"F2 B2 "F#m"A2| "Bm"B4 :|
 
 X: 89
-T: Far From Home
-I: Far From Home	R-43	G	reel
-M: C|
-R: reel
-K: G
-D2| "G"GEDE G2GA| B2BA Bcd2|    GEDE    G2GB| "Am"AGAB "D"AGEF|
-    "G"GEDE G2GA| B2BA Bcd2| "C"edef "G"gedc| "D"BGAF "G"G2 :|
-|:d2| "Em"g2ge "D"f2fd| "C"edef "G"edBd| gedB G2B2| "Am"AGAB AG E2|
-     "G"GEDE G2 GA| B2BA Bcd2| "C"edef "G"gedc| "D"BGAF "G"G2 :|
-
-X: 90
 T: Farewell to Whiskey
 I: Farewell to Whiskey	R-14	G	reel
 I: Ladies' Triumph	R-14	G	reel
@@ -1139,6 +1128,17 @@ GE| "G"D2G2 B2AG| "Am"A2E2 E3G| "G"D2G2 B2AG| "Bm"d2B2 B3d|
     "C"e2g2 "G"d2B2| "Am"cBAG "D"A2B2| "G"D2G2 "D"BAGA| "G"B2G2G2 :|
 |:Bc| "G"d2B2 g2B2| "Am"cBAG "D"A2Bc| "G"d2B2 g2d2| "C"e2g2 g3d|
     "C"e2g2 "G"d2B2| "Am"cBAG "D"A2B2| "G"D2G2 "D"BAGA| "G"B2G2G2 :|
+
+X: 90
+T: Far From Home
+I: Far From Home	R-43	G	reel
+M: C|
+R: reel
+K: G
+D2| "G"GEDE G2GA| B2BA Bcd2|    GEDE    G2GB| "Am"AGAB "D"AGEF|
+    "G"GEDE G2GA| B2BA Bcd2| "C"edef "G"gedc| "D"BGAF "G"G2 :|
+|:d2| "Em"g2ge "D"f2fd| "C"edef "G"edBd| gedB G2B2| "Am"AGAB AG E2|
+     "G"GEDE G2 GA| B2BA Bcd2| "C"edef "G"gedc| "D"BGAF "G"G2 :|
 
 X: 91
 T:Father Kelly's
@@ -1212,6 +1212,18 @@ M:C|
 	[2 "D"ABAF "G"G4||
 
 X: 97
+T: Forester's Hornpipe
+M: C|
+Z: Transcribed to abc by Mary Lou Knack
+R: hornpipe
+K: D
+fg| "D"a^gaf dfbg| a^gaf d2cd| "A"eAfA eAfA| edcB A2fg|
+    "D"a^gaf dfbg| a^gaf d2cd| "G"BGFG "A"Adce| "D"f2d2 d2:|
+|:cd| "A"edcB AGEG| "D"FAdf a2fa| "G"geBg "D"fdAf| "A"edcB A2cd|
+    "A"edcB AGEG| "D"FAdf afba| "G"gfed "A"cABc| "D"d2f2 d2:|
+| "D"d2z2 z4 |
+
+X: 98
 T: Forest Flower Waltz
 I: Forest Flower Waltz	W-23	Bm	waltz
 M: 3/4
@@ -1225,18 +1237,6 @@ efg| gfe| ed>e| "Bm"f3| "F#"F=F^F| "Em"d2c| "Bm"B3-| B2:|
 "Em"fe>_e| =e3| "Bm"ed>c| d3| "F#"F=F^F| "Em"d2c| "Bm"B3-|1 B2:|2 B|]
 |:b_b| "A"([c3a3]| a)bg| "D"([d3f3]| f)gf| "A"([c3e3]| e)fe| "D"([F3d3]| d)ed|
    "A"([E3c3]| c)dc| "Bm"[(D3(B3]| [D3)B3)]| "F#m"F=F^F| "Em"d2 c| "Bm"B3-|1 B :|2 B2|]
-
-X: 98
-T: Forester's Hornpipe
-M: C|
-Z: Transcribed to abc by Mary Lou Knack
-R: hornpipe
-K: D
-fg| "D"a^gaf dfbg| a^gaf d2cd| "A"eAfA eAfA| edcB A2fg|
-    "D"a^gaf dfbg| a^gaf d2cd| "G"BGFG "A"Adce| "D"f2d2 d2:|
-|:cd| "A"edcB AGEG| "D"FAdf a2fa| "G"geBg "D"fdAf| "A"edcB A2cd|
-    "A"edcB AGEG| "D"FAdf afba| "G"gfed "A"cABc| "D"d2f2 d2:|
-| "D"d2z2 z4 |
 
 X: 99
 T: Forked Deer
@@ -1417,17 +1417,6 @@ K:G
 "G"AB-BA BABc |BAGF GFDB,|"C"C2CE DB,CE|[1"D"D2G,2 A2G2 :|[2 "D"D2"G"G,2- G,4 |]
 
 X: 112
-T: Good For the Tongue
-M: C|
-Z: Transcribed to abc by Debby Knight
-R: hornpipe
-K: A
-"A"ABcd ecAe| "D"fA"E"gA "A"aAAA| "D"FAAA "A"EAAB| "Bm"cdBG "E"AGFE|
-"A"ABcd ecAe| "D"fA"E"gA "A"aAAA| "D"FAAA "A"EAAB| "E"cdBG "A"A4:|
-|:"A"eAAA eAAA| "D"aAfA "A"eAAA|"D"aAfA "A"eAAB| "Bm"cdBG "E"AGFE|
-"A"eAAA eAAA| "D"aAfA "A"eAAA|"D"aAfA "A"eAAB|  "E"cdBG "A"A4:|
-
-X: 113
 T: Goodbye My Lady Love
 I: Goodbye My Lady Love	S-G	Bm/D	square
 M: C|
@@ -1447,6 +1436,17 @@ K: D
 "A7"e2 e4 f2 |1 a2e2 c2A2| "D Bm7"d8-| "G7 F#7"d8 :|
 [2 "A7"a2gf- f4| e2 e4 f2| a2gf- f4| e2 e4 f2| a2e2 c2A2| "D"d8-| d8|]
 
+X: 113
+T: Good For the Tongue
+M: C|
+Z: Transcribed to abc by Debby Knight
+R: hornpipe
+K: A
+"A"ABcd ecAe| "D"fA"E"gA "A"aAAA| "D"FAAA "A"EAAB| "Bm"cdBG "E"AGFE|
+"A"ABcd ecAe| "D"fA"E"gA "A"aAAA| "D"FAAA "A"EAAB| "E"cdBG "A"A4:|
+|:"A"eAAA eAAA| "D"aAfA "A"eAAA|"D"aAfA "A"eAAB| "Bm"cdBG "E"AGFE|
+"A"eAAA eAAA| "D"aAfA "A"eAAA|"D"aAfA "A"eAAB|  "E"cdBG "A"A4:|
+
 X: 114
 T: Gordon Cot'e
 I: Gordon Cote	R-121	A	reel
@@ -1459,17 +1459,6 @@ E| "A"A2cA    EACE| A,CEA caga| "D"fdBd "A"ecAc| "Bm"BFBA "E"GBEG|
    "A"abag aece| "D"fefg "A"aecA| "D"FAdf "A"ecae| "E"dEFG "A"A3 :|
 
 X: 115
-T: Grand Picnic
-I: Grand Picnic		R-123	D	reel
-M: C|
-R: reel
-K: D
-"D"DFAB AFEF| DFAd fedf| "G"edBc "Em"dBAB| "A"AFE2 E2FE|
-"D"DFAB AFEF| DFAd fedf| "G"edBc "Em"dcdB |1 "A"AFE2 "D"D2FE :|2 "A"AFE2 "D"D2de|]
-|:"D" fefg a2a2| fefg a2fa| "G"g2ge "D"fedf| "Em"edef "A"edB2|
-"D"dcdA BAFE| DFAd fedf| "G"edBc "Em"dcdB | "A"AFE2 "D"D4 :|
-
-X: 116
 T: Grandfather's Clock
 I: Grandfather's Clock	S-G	G	square
 C: Henry Clay Work
@@ -1484,6 +1473,17 @@ K: G
           "G"G2DD EDD2 | B,z Dz B,z DD| \
           G2DD EDD2| B,z Dz B,z DD|
           "G"Gzz2 "D"Azz2| "G"B/B/B c>B "C"E2AA| "G/D"G4 "D7"F4| "G"G6|]
+
+X: 116
+T: Grand Picnic
+I: Grand Picnic		R-123	D	reel
+M: C|
+R: reel
+K: D
+"D"DFAB AFEF| DFAd fedf| "G"edBc "Em"dBAB| "A"AFE2 E2FE|
+"D"DFAB AFEF| DFAd fedf| "G"edBc "Em"dcdB |1 "A"AFE2 "D"D2FE :|2 "A"AFE2 "D"D2de|]
+|:"D" fefg a2a2| fefg a2fa| "G"g2ge "D"fedf| "Em"edef "A"edB2|
+"D"dcdA BAFE| DFAd fedf| "G"edBc "Em"dcdB | "A"AFE2 "D"D4 :|
 
 X: 117
 T:Granny Won't Your Dog Bite
@@ -1738,6 +1738,16 @@ A2|:"Dm"d3e fa|"Gm"!trill!g3f ed|"A"!trill!^c2 A3G| "Dm"{/G}F4 D2|"F"F2 EF AG |
 "Gm"{/c}B2 c3B|"Dm"A4 F2| "A"GF E2 D^C|"Dm"D4 A2-:|]
 
 X: 138
+T:Holloway
+M:C|
+L:1/8
+K:D
+|"D"fa2f a2fa-|abaf ed3|"G"B3A BABc |dcdA "A"FA3|
+"D"fa2f a2fa-|abaf ed3|"G"B3A BcdB |"A"AFEF "D"D4:|
+|:"G"B4 d3e|fede fa3|"Bm"b2 b2- b2a2|b2a f2ed2|
+"G"B4 d3e|fede fa2a|"Bm"b2a f2e df|"A"ed c2 "D"d4:|]
+
+X: 139
 T: Hollow Poplar
 M:C|
 L:1/8
@@ -1747,16 +1757,6 @@ Bc|"G"d4 d2 Bc|d2B2 AGAB|"C"c4c2AB|c2B2 AGEG|
 "G"DEGA Bdef|g2f2edBA|G2BG "D"AGF2|"G"G6:|]
 |:Bc|"G"d4g4|g2f2e2d2|"D"fa-a2a2fg|a2f2edef|
 "G"gfef gfef|"C"g2f2edBA|"G"G2BG "D"AGF2|"G"G6:|]
-
-X: 139
-T:Holloway
-M:C|
-L:1/8
-K:D
-|"D"fa2f a2fa-|abaf ed3|"G"B3A BABc |dcdA "A"FA3|
-"D"fa2f a2fa-|abaf ed3|"G"B3A BcdB |"A"AFEF "D"D4:|
-|:"G"B4 d3e|fede fa3|"Bm"b2 b2- b2a2|b2a f2ed2|
-"G"B4 d3e|fede fa2a|"Bm"b2a f2e df|"A"ed c2 "D"d4:|]
 
 X: 140
 T: Homeward Bound
@@ -1770,6 +1770,20 @@ A,| "D"D2DE FEDF| A2AF    "Em"ABde| "D"f<aed "G"B2dB| "D"AFEF "A"DB,A,B,|
    "D"fdfg afdf| "Em"e/e/eed "A"efg2| "D"f/g/aed "G"B2dB|1    "A"AFEF "D"D/D/DD :|2 "A"AFEF "D"DB,A,B, |]
 
 X: 141
+T:Hommage`a
+R:reel
+Z:transcribed to ABC by Debby Knight
+M:C|
+L:1/8
+K:A
+A ABcd|"A"eAAe AAeA | AAeA "D"f2ed | "A"ceAB cAeA | ceAc "A#dim"dedc |
+"E7/B"B3B BABc| "E"B3e efed | "A" c2B2 AcBA |"E"E3 A ABcd|
+"A"eAAe AAeA | AAeA "D"f2ed | "A"ceAB cAeA | ceAc "A#dim"dedc |
+"E7/B"B3B BABc| "E"e2d2 c2B2| "A"Afed "E"cdBc |"A"A2c2 "A7" B2 A2 |]
+|: "D"a4 "F#/C#"f4 |"Bm7"d3A "E7"d2f2 | "A" e3e "E/G#"efec | "F#m"A2c2 B2A2 |"E"B2BB BABc |
+"E"e2d2 c2B2 |1 "A"cBAc "E"ecef | "A"e2c2 "A+/C#"B2A2 :|	[2 "A"Afed "E"c2B2| "A"A3 |]
+
+X: 142
 T:Hommage a Jos. Bouchard
 I:Hommage a Jos. Bouchard	J-69	C/Am	jig
 R:jig
@@ -1786,7 +1800,7 @@ K: Am
 "E"eEE "Fdim"dEE| "F#dim"cEE "E7/G#"BAB |"Am"c2c cBc| AEE EAB| c2c cBc|
 "Bm7"BEE "E7"E3| "Bm7"d2d dcd| "E7"BEE E^GB| "E7"efe dcB|1 "Am7"A3 "G7"G3 |][2 "A - Last time"A3-A3|]
 
-X: 142
+X: 143
 T:Hommage à la belle Gaspésie
 M:C|                           % meter
 L:1/8                        % length of shortest note
@@ -1795,20 +1809,6 @@ EA|"A"c3 d cBAc|feef e2 EA|"A"c2 cd "A#dim"cBAc|"Bm7"edde d2 Bc|
 dcde dcBA|"E7"BABc B3 e|ecef edcB|[1cBcd cA:|[2"A"Ac (3BcB "A7"A3 A||
 |:"D"aA=gA "D/F#"(3faf "D/G#"ec|"A"Acef "F#m"ecAF|"Bm7"EEBE "E7"cE (3BcB|"A"ABcd "A7"ecBA|
 "D"aA=gA "D/F#"(3faf "D/G#"ec|"A"Acef "F#m"ecAF|"Bm7"EEBE "E7"cE (3BcB|"A"Ac (3BcB A4:|]
-
-X: 143
-T:Hommage`a
-R:reel
-Z:transcribed to ABC by Debby Knight
-M:C|
-L:1/8
-K:A
-A ABcd|"A"eAAe AAeA | AAeA "D"f2ed | "A"ceAB cAeA | ceAc "A#dim"dedc |
-"E7/B"B3B BABc| "E"B3e efed | "A" c2B2 AcBA |"E"E3 A ABcd|
-"A"eAAe AAeA | AAeA "D"f2ed | "A"ceAB cAeA | ceAc "A#dim"dedc |
-"E7/B"B3B BABc| "E"e2d2 c2B2| "A"Afed "E"cdBc |"A"A2c2 "A7" B2 A2 |]
-|: "D"a4 "F#/C#"f4 |"Bm7"d3A "E7"d2f2 | "A" e3e "E/G#"efec | "F#m"A2c2 B2A2 |"E"B2BB BABc |
-"E"e2d2 c2B2 |1 "A"cBAc "E"ecef | "A"e2c2 "A+/C#"B2A2 :|	[2 "A"Afed "E"c2B2| "A"A3 |]
 
 X: 144
 T: Honest John
@@ -1968,18 +1968,6 @@ K: Am
 "Dm"d4 e2| f2 e2 d2| "Am"c4 c2| A6| "E7"B4 B2| E2 ^F2 ^G2| "Am"A6-| A6|]
 
 X: 156
-T: I Want A Girl
-I: I Want A Girl	S-I	G	square
-M: C|
-Z: Transcribed to abc by Mary Lou Knack
-R: square
-K: G
-"G"D4 B,CD2| "C"G4 EFGA| "G"B2G2 "D7"B2A2| "G"G6z2| \
-"C"E4 GFG2| "G"D3E DCB,D| "A7"E2A2 A2B2| "D"A6z2|
-"G"B2B2 BAGB| "B7"A2A2 A4| "Em"G2G2 GFEG| "D7"F2F2 F2E2| \
-"G"D4 B,CD2| "C"G4 EFGA| "G"B2G2 "D7"B2A2| "G"G6z2|]
-
-X: 157
 T:Idlewild Jig
 M:6/8
 K:D
@@ -1988,7 +1976,7 @@ K:D
 "Bm"B2F F^EF |"Bm/A#"d2 B B^AB |"Bm/A" f2 B B^AB |"Bm/G#" b2f f^ef | "G"g2e "D"f2d |
 "A"e2c "D"d2A |1"G"Bcd A2 c | "A"B2 "F#m"AF2A:|2"G"Bcd A2F | "A"E2D B,2A,|]
 
-X: 158
+X: 157
 T: If You Knew Susie
 I: If You Knew Susie	S-I	A	square
 C: B.G. DeSylva, Joseph Meyer
@@ -2019,7 +2007,7 @@ w: you knew| Sus-ie, Like| I know| Sus-ie|
       "Bm7-5"d8| "E7"c2=c2 ^c2A2-| "A"A8- |1 A2E2 "E7"F2G2 :|2 "A - Last time"A2z2 A2 |]
 w: Oh,| oh what a girl!|_|_***|**
 
-X: 159
+X: 158
 T:Il Valzer di Mezzanotte
 K:Am
 M:3/4
@@ -2031,7 +2019,7 @@ E ABcd|"Am"e6|"Dm"f6|"Am"ed c4-|c2de dc|"E7"B6|d6|"Am"cBA4|
 c2 e3 c|"Bm"d6-|"D"d2e2 d2|"A"c2 z2 d2|"E"B2z2e2|"A"A3AA2|1"A"A6:|2"Am"AE AB=cd||
 [K:Am]"P lyrical""Am"e4c2|"Dm"d4B2|"Am"c4A2|"E7"B6|"Am"(e2f2)e2|"Dm"(d2e2)d2|"Am"(c2d2)c2|"E7"B|]
 
-X: 160
+X: 159
 T:Indian Point
 R:jig
 C:Rick Mohr
@@ -2045,7 +2033,7 @@ K:Emin
 |: A| "Em"Bef gfe |"C"cef gfe  |"D"dfg agf |"Em"gfe "D"fed |
 "Em"Bef gfe |"C"ceg a2a |"B"bag fgf|"Em"e3 e2 :|
 
-X: 161
+X: 160
 T:Ingonish Jig
 R:jig
 Z:Transcribed to abc by Mary Lou Knack
@@ -2056,7 +2044,7 @@ K:Edor
 |:"Em"BEE BEE| "D"FEF DFA| "Em"BEE BEE| "D"ABc "Bm"dcd|
 "Em"BEE BEE| "D"FEF DFA| "G"ABc "D"dAF |1 "Em"EFE E2e :|2 "Em"EFE E3 |]
 
-X: 162
+X: 161
 T:Inisheer
 K:G
 L:1/8
@@ -2066,6 +2054,15 @@ R: Waltz
 "G"B2 BA B<d|B2 BA B<d|"C"E3 B "D"A/G/F|[1 "G"G3 D3:|[2"G"G3 A Bd||
 |:"C"e2 ef ed|"Bm"B2 BA Bd|"Em"gf ed B/c/d|"C"e3 d B<d|"Am7"e3  d e<g|
 "G"B3 B AB/A/|"C"G3 B "D"A/G/F|[1"G"G3 A Bd:|[2"G"G3 D3|]["Final""G"G6|]
+
+X: 162
+T: Irishman's Heart to the Ladies
+I: Irishman's Heart to the Ladies	J-17	A	jig
+M: 6/8
+R: jig
+K: A
+a| "A"ecA "D"BAF| "A"AFE EFA| "Bm"Bdc BAB| "E"cBB B2 a|    "A"ecA "D"BAF| "A"AFE EFA| "Bm"Bdc "E7"BAB| "A"cAA A2 :|
+|:A| "A"cee "D"dff| "A"cee ecA| cde "D"eaf| "A"ecA "E"B2 A|    "A"cee "D"dff| "A"cee ecA| "Bm"Bdc "E7"BAB| "A"cAA A2 :|
 
 X: 163
 T: Irish Washerwoman, The
@@ -2079,15 +2076,46 @@ d/c/| "G"BGG DGG| BGB dcB| "D"cAA EAA| cAc edc|
    "C"egg "G"dgg| "C"cgg "G"Bgg| "D"cBc Adc| "G"BGG G2 :|
 
 X: 164
-T: Irishman's Heart to the Ladies
-I: Irishman's Heart to the Ladies	J-17	A	jig
-M: 6/8
-R: jig
-K: A
-a| "A"ecA "D"BAF| "A"AFE EFA| "Bm"Bdc BAB| "E"cBB B2 a|    "A"ecA "D"BAF| "A"AFE EFA| "Bm"Bdc "E7"BAB| "A"cAA A2 :|
-|:A| "A"cee "D"dff| "A"cee ecA| cde "D"eaf| "A"ecA "E"B2 A|    "A"cee "D"dff| "A"cee ecA| "Bm"Bdc "E7"BAB| "A"cAA A2 :|
+T: I Want A Girl
+I: I Want A Girl	S-I	G	square
+M: C|
+Z: Transcribed to abc by Mary Lou Knack
+R: square
+K: G
+"G"D4 B,CD2| "C"G4 EFGA| "G"B2G2 "D7"B2A2| "G"G6z2| \
+"C"E4 GFG2| "G"D3E DCB,D| "A7"E2A2 A2B2| "D"A6z2|
+"G"B2B2 BAGB| "B7"A2A2 A4| "Em"G2G2 GFEG| "D7"F2F2 F2E2| \
+"G"D4 B,CD2| "C"G4 EFGA| "G"B2G2 "D7"B2A2| "G"G6z2|]
 
 X: 165
+T: Jackson's Breakdown
+I: Jackson's Breakdown	S-J	D	square
+M: C|
+Z: Transcribed to abc by Mary Lou Knack
+R: square
+K: D
+"D"A2d2 fgfe| d2F2 A3d| "A7"c2E2 G3B| "D"A2D2 F4| \
+"D"A2d2 fgfe| d2F2 A3d| "A7"c2A2 B2c2| "D" d4 d4 :| [K:A]
+|:\
+"A"[c4e4] [c4e4]| e2a2 [c4e4]| "Bm"b2f2 "E7"g2e2| "A"a2c2 e4| \
+"A"[c4e4] [c4e4]| e2a2 [c4e4]| "Bm"b2f2 "E7"g2e2| "A"a4 a4 :|
+
+X: 166
+T: Jacqueline's Waltz
+I: Jacqueline's Waltz	W-17	A	waltz
+C: Tom Anderson 
+M: 3/4
+Z: Transcribed to abc by Mary Lou Knack
+R: waltz
+K: A
+AB| "A"c4 Bc| "E"d4 cd| "A"e2 c2 B2| A4 Bc|     "D"d2 c2 d2| "A"e2 c2 A2| "E"B6-| B4 AB|
+    "A"c4 Bc| "E"d4 cd| "A"e2 c2 A2| "D"a4 gf|     "A"e2 c2 A2| "E"d2 c2 B2| "A"A6-| A4:|
+fg| "A"a3e c2| "D"f2 d2 B2| "A"e3c B2| A4 Bc|     "D"d2 c2 d2| "A"e2 c2 A2| "E"B6-| B4 fg|
+    "A"a3e c2| "D"f2 d2 B2| "A"e2 f2 g2| "D"a4 c2|     "Bm"d2 c2 d2| "E"e2 c2 B2| "A"A6-| A4 fg|
+    "A"a3e c2| "D"f2 d2 B2| "A"e2 c2 B2| A4 Bc|     "D"d4 ef| "A"e2 c2 A2| "E"B6-| B4 AB|
+    "A"c4 Bc| "E"d4 cd| "A"e2 c2 A2| "D"a4 gf|     "A"e2 c2 A2| "E"d2 c2 B2| "A"A6-| A4|]
+
+X: 167
 T: J. B. Milne
 I: J. B. Milne	S-J	A	square
 Z: Transcribed to abc by Mary Lou Knack
@@ -2102,34 +2130,6 @@ cd| "A"efed c2A2| E2A2 c4| cedc B2A2| "Bm"d6Bc|
     "E"d2B2 e2B2| d2B2 e2B2| d2cd "E7"edcB| "A"c6cd|
     "A"e2c2 f2c2| e2c2 f2c2| (3aba ga "A7"baga| "D"f6fg|
     "D"abag fagf| "A"fecA E2gf| "E"(3efe ^de "E7"f2g2| "A"a6|]
-
-X: 166
-T: Jackson's Breakdown
-I: Jackson's Breakdown	S-J	D	square
-M: C|
-Z: Transcribed to abc by Mary Lou Knack
-R: square
-K: D
-"D"A2d2 fgfe| d2F2 A3d| "A7"c2E2 G3B| "D"A2D2 F4| \
-"D"A2d2 fgfe| d2F2 A3d| "A7"c2A2 B2c2| "D" d4 d4 :| [K:A]
-|:\
-"A"[c4e4] [c4e4]| e2a2 [c4e4]| "Bm"b2f2 "E7"g2e2| "A"a2c2 e4| \
-"A"[c4e4] [c4e4]| e2a2 [c4e4]| "Bm"b2f2 "E7"g2e2| "A"a4 a4 :|
-
-X: 167
-T: Jacqueline's Waltz
-I: Jacqueline's Waltz	W-17	A	waltz
-C: Tom Anderson 
-M: 3/4
-Z: Transcribed to abc by Mary Lou Knack
-R: waltz
-K: A
-AB| "A"c4 Bc| "E"d4 cd| "A"e2 c2 B2| A4 Bc|     "D"d2 c2 d2| "A"e2 c2 A2| "E"B6-| B4 AB|
-    "A"c4 Bc| "E"d4 cd| "A"e2 c2 A2| "D"a4 gf|     "A"e2 c2 A2| "E"d2 c2 B2| "A"A6-| A4:|
-fg| "A"a3e c2| "D"f2 d2 B2| "A"e3c B2| A4 Bc|     "D"d2 c2 d2| "A"e2 c2 A2| "E"B6-| B4 fg|
-    "A"a3e c2| "D"f2 d2 B2| "A"e2 f2 g2| "D"a4 c2|     "Bm"d2 c2 d2| "E"e2 c2 B2| "A"A6-| A4 fg|
-    "A"a3e c2| "D"f2 d2 B2| "A"e2 c2 B2| A4 Bc|     "D"d4 ef| "A"e2 c2 A2| "E"B6-| B4 AB|
-    "A"c4 Bc| "E"d4 cd| "A"e2 c2 A2| "D"a4 gf|     "A"e2 c2 A2| "E"d2 c2 B2| "A"A6-| A4|]
 
 X: 168
 T: Jelly Side Up
@@ -2184,6 +2184,17 @@ z2|:"D"defg aAfA| "G"gfed "A"ceAe| "D"defg aAfA| "G"gba^g "A"a4|
 "D"abaf "G"gfed| "Em"efgA "A"GFED| "D"F2AF "G"G2BG| "A"Addc "D"d4 :|
 
 X: 172
+T: Johnny, Don't Get Drunk
+I: Johnny, Don't Get Drunk	R-95	D	reel
+M: C|
+R: reel
+K: D
+"D"fefg a2g2| "A7"fdec "D"d4| "G"BABc dBAG| "A7"F2E2 E4|
+"D"fefg a2g2| "A7"fdec "D"d4| "G"BABc d2g2| "A7"fdec "D"d4 :|
+|:"D"F2A2 A4| FA2F A4| "G"BABc dBAG| "A7"F2E2 E4|
+"D"FA2F A4| "G"BABc d4| BABc d2g2| "A7"fdec "D"d4 :|
+
+X: 173
 T:John Stenson's #2
 R:reel
 D:Mark Simos, Ashokan '85, also similar in The Portland Collection
@@ -2194,17 +2205,6 @@ K:A
 "A"ABcA "E"B2cB| "A"ABcA "E"BAFE| "Bm"d2dc dfed |1 "E"cABc "A"A4 :|2 "E"cdBc "A"ABcd |]
 |: "A"edcd edcd| edcA "E"BAFE| "A"e2cd edcA| "Bm"B3c "E"BAFE|
 "A"edcd edcd| edcA "E"BABc| "Bm"d3c dfed|1 "E"cdBc "A"ABcd :|2 "E"cABc "A"A4 |]
-
-X: 173
-T: Johnny, Don't Get Drunk
-I: Johnny, Don't Get Drunk	R-95	D	reel
-M: C|
-R: reel
-K: D
-"D"fefg a2g2| "A7"fdec "D"d4| "G"BABc dBAG| "A7"F2E2 E4|
-"D"fefg a2g2| "A7"fdec "D"d4| "G"BABc d2g2| "A7"fdec "D"d4 :|
-|:"D"F2A2 A4| FA2F A4| "G"BABc dBAG| "A7"F2E2 E4|
-"D"FA2F A4| "G"BABc d4| BABc d2g2| "A7"fdec "D"d4 :|
 
 X: 174
 T: Joys of Quebec
@@ -2350,17 +2350,6 @@ K: Am % transposed from Dm
 |:"E"B2 E2 e3B|"Am"dcBc dcBA|"E"^G2 AB E2 ^F^G|[1,3"Am"A^GAB cBcA:|[2,4"Am"AEcB A4:|]
 
 X: 186
-T:L'évis Beaulieu
-R:reel
-Z:Transcribed to abc by Debbie Knight
-M:C|
-K:A
-ed|"A"c2AA AcBA | "D"FBAF "A"E3A |"Bm"BABc d2B2 |"E"AAAc efed |
-"A"c2AA AcBA | "D"FBAF "A"E3A |"Bm"BABc "E"dBed |1 "A"c2A2 A2 :|[2 "A"c2A2 A2ce |]
-|:"A"a2ab afed |cAce a2ef | "G"=g2ga ged=c   |B=GBd =g2e^g|
-"A"a2ab afed |cAce a2ee | "Bm"efec "E"dBed |1 "A"c2A2 A2ce  :|   [2 "A"c2A2 A4|]
-
-X: 187
 T: La Bastringue
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
@@ -2372,7 +2361,7 @@ K: D
 "D"D2FA dAFD| "C"=C2EG cGEC| "D"D2FA dAFD| "C"fedc "D"dcAF|
 "D"D2FA dAFD| "C"=C2EG cGEC| "D"D2FA dAde| "C"fedc "D"d2d2 :|
 
-X: 188
+X: 187
 T: La Belle-Mère Enragée
 M: C|
 L: 1/8
@@ -2386,80 +2375,7 @@ K:G
 	[2 "D"A2 F2 "G"G3 F|]
 The first note is in parentheses because it is only to be played the first time through.
 
-X: 189
-T: La Fée des Dents
-C: André Brunet
-R: jig
-M: 6/8
-L: 1/8
-K: Gmaj
-|: "G"B2D- DGA | Bdc BAG | "Am" c2 E- EFG |"D7" FAG FED |
-"G" B3 DGA | "Em" Bdc Bgf |"C"egd- dcB|"D7"AGF "G"G3 :|]
-|:"C6"	~e3 edB|ced dBc|"Bm" d2 B- BAG|\
-Bdc BAG |
-"C"e2c efg |"D7"afd- dcB | "C"ced cBA|"D7"AGF "G"G3 :|]
-
-X: 190
-T:La Gueussinette
-K:Bm treble
-M:3/4
-R:Waltz
-L:1/8
-K:Bm
-|:"Bm"B2 F2 B/c/d|B2 F4|BA Bc de|f6|"Em"g3 f eg|"Bm"f2 d2 B2|
-"C#m7(b5)"cB cd ed|"F#"c4 dc|"Bm"B2 F2 B/c/d|B2 F3 F|BA Bc de|fd B3 f|
-"Em"gf ed e/f/g|"Bm"fd BF Bd|"F#"cB ce dc|"Bm"B6:|
-|:"Em"g3 f eg|"Bm"f2 d2 B2|"G"BA Bc "A7"de|"D"f6|"Em"g3 f e/f/g|"Bm"f2 d2 B2|
-"C#m7(b5)"cB cd ed|"F#"c3 d ef|"Em"g3 f eg|"Bm"fd B3 F|"G"BA Bc "A"de|
-"D"f6|"Em"ga bg eg|"Bm"fd BF B/c/d|"F#"cBce dc|"Bm"B6:|]
-
-X: 191
-T: La Maison de Glace
-M: 6/8
-L: 1/8
-R: 6/8
-K: D
-"D"D3 DEF |"D/F#"ABA  AFA|"G"B3 Bcd|"A"cBA GFE|"D"D2D DEF|
-"D/F#"ABA  AFA|1 "G"B3 BAG|"A"F3 EFE:|     [2 "G"B3 Bcd| "A  F#m"c6 ||
-|:"Bm"B3- Bcd| "G"B3- Bcd|"D"fed "A"edc|"Bm"dcA "F#m"dcA|
-"Bm"B3- Bcd| "G"B3- Bcd|"D"fed "A"edc|[1 Adc  "D"d2c:|[2Adc  "D"d3||
-|"Bm"B2B- Bcd|"G"B2B- Bcd|
-
-X: 192
-T:La ronde des voyageurs
-M: C|
-L: 1/8
-R: reel
-K:Amin
-|:"Am"E3E A2 c2|e4-eede|"Dm"f3f f2 a2|"Am"e3a/2a/2 "D7"a4|
-"G"G4 B3d|d4-"Dm/F"dBde|1"E"f3d d2 B2|"Am"cAAB ~A2 E2:|[2 "E"f2 d2 B2 e2| "Am"A4 A4||
-K:Amaj
-"A"c3c c2 e2|"A/C#"A4-AAcd|e2a2"Cdim"g3f|"Bm"ggeg ~f2 ec|
-"Bm"d2zf d2c2|"E"BBGB EGBe|"B7"g3a gfeg|"E7"fedf ecAB|
-"A"cccc c2 e2|A4-AAcd|e2a2 "A+/C#"g3f|"D"b4f3g|"D"aaga "D#dim"~g2fg|
-"A/E"~f2ef "F#7"eAce|"B7"d'2b2 "E7"f3g|["Normal""A"afec A4|]["Trans" "A"azz2f3e|]
-
-X: 193
-K:Ador
-T:La Tuque Rouge
-M:C|
-L:1/8
-|:"Am"a2ab agef|"G"gfga gfed|"Am"eaab agef|"Em(G)"gedB "Am"cA A2|
-"Am"eaab agef|"G"gfga gfed|"Am"gfge "G"dBGB| "Em"cBAG "Am"A4:|
-|:"Am"EAAB AGAB|cded "D"cB c2|"G"DGGA GFGA|BcdB "Em"cBAG|
-"Am"A4 A3 B|AGAB "Am(C)"cdef|"G"gfge dBGB|"Em"cBAG "Am"A4:|
-
-X: 194
-T:La valse des pastoriaux
-M:3/4
-L:1/8                        
-K:G
-"1st time"D2y10|:"G"G2 GABc|d3 cBG|"Am"c2 cBAG|"D"A2 FADF|
-"G"GFGABc|d2 dcBG|"Am"cBAGFG|[1"D"A4D2:|[2"D"A3 gfd||
-|:"C"ede2"D"f2|"G"g3dBG|"Am"cBAGFG|"D"A3gfd|"C"edeg "D"(3fga|
-"G(Em)"g3 dBG|"Am"cBAGFG|[1"D"A3gfd:|[2"D"(3ABA FADF||["final""G"G4||
-
-X: 195
+X: 188
 T: Lad O'Beirne
 M: 6/8
 R: jig
@@ -2469,7 +2385,7 @@ K: D
 |:"D"f=f^f a^ga| f2d de=f| "C"e=ce gfg| "A"e2^c cde|
 "D"f=f^f "G"gfg| "D"agf "A"efg| "D"fed cBA| "A"GFE "D" D3:|
 
-X: 196
+X: 189
 T: Lads of Dunse, The
 I: Lads of Dunse, The	J-47	D	jig
 M: 6/8
@@ -2479,7 +2395,7 @@ B| "D"A2D DED| DED "G"B2A| Bcd "D"AFA| "G"BGE "A"E2d|    "D"A2D DED| DED "G"B2A|
 g| "D"fef d2e| fga "G"B2A| Bcd "D"AFA| "Em"BGE "A"E2g|    "D"fef d2e| fga "Em"B2A| "G"Bcd "A"AFd| "D"AFD D2g|
    "D"fef d2e| fga "G"B2A| "Em"Bcd "D"AFA| "G"BGE "A"E2f/g/|    "D"afa "A"geg| "Bm"fdf "A"ece| "G"dcB "A"AFd| "D"AFD D2 |]
 
-X: 197
+X: 190
 T:Lady Anne Montgomery
 M:C|
 L:1/8
@@ -2489,7 +2405,7 @@ A| "D"FADA FADA| FAdA "G"BAdA|"D"FADF "Em"EDEF| "A"DB,A,B, "D"D3E|
 |: e| "D"f3f fede| fedB ABde|   f2fe "Bm"fede| "Em"fgaf "A"efde|
 "D"f3f fede| fedB ABde|"G"fded "Em"BdAd| "A"egfe "D"d3:|
 
-X: 198
+X: 191
 T: Lady Lepley
 I: Lady Lepley	W-27	C	waltz
 C: Ed Pearlman
@@ -2503,7 +2419,7 @@ G|: "C"c2G| "G"d2G| "C"e>dc| "G"Bce/d/| "Am"c>BA| "Em"GAc| "F"A3-| "G"A2 G|
 "F"f/g/a2| "C"e/f/g2| "G"deg/f/| "C"e>dc| "F"f>af| "C"e/f/gG| "Dm"e>dc| "G"A2G|
 "C"c2G| "G/B"d2G| "Am"e>de| "C/E"ga_b| "F"a>gf| "C"e>dc|1"F"A>GF-| "G"F2 G:|2 "F"A/G/F2-| "G"F2 E/F/|] "C""^End"H[C3G3]|]
 
-X: 199
+X: 192
 T: Lady of the Lake
 I: Lady of the Lake	R-83	G	reel
 M: C|
@@ -2514,7 +2430,34 @@ K: G
 |:Bc| "G"dcBd g2gd| "C"edce a2ae| "D"f2fg fedf| "A"ed^ce "D"d2Bc|
     "G"dcBd g2gd| "C"edce a2ae| "D"fgfe dcBA| "G"G2B2 G2 :|
 
-X: 200
+X: 193
+T: La Fée des Dents
+C: André Brunet
+R: jig
+M: 6/8
+L: 1/8
+K: Gmaj
+|: "G"B2D- DGA | Bdc BAG | "Am" c2 E- EFG |"D7" FAG FED |
+"G" B3 DGA | "Em" Bdc Bgf |"C"egd- dcB|"D7"AGF "G"G3 :|]
+|:"C6"	~e3 edB|ced dBc|"Bm" d2 B- BAG|\
+Bdc BAG |
+"C"e2c efg |"D7"afd- dcB | "C"ced cBA|"D7"AGF "G"G3 :|]
+
+X: 194
+T:La Gueussinette
+K:Bm treble
+M:3/4
+R:Waltz
+L:1/8
+K:Bm
+|:"Bm"B2 F2 B/c/d|B2 F4|BA Bc de|f6|"Em"g3 f eg|"Bm"f2 d2 B2|
+"C#m7(b5)"cB cd ed|"F#"c4 dc|"Bm"B2 F2 B/c/d|B2 F3 F|BA Bc de|fd B3 f|
+"Em"gf ed e/f/g|"Bm"fd BF Bd|"F#"cB ce dc|"Bm"B6:|
+|:"Em"g3 f eg|"Bm"f2 d2 B2|"G"BA Bc "A7"de|"D"f6|"Em"g3 f e/f/g|"Bm"f2 d2 B2|
+"C#m7(b5)"cB cd ed|"F#"c3 d ef|"Em"g3 f eg|"Bm"fd B3 F|"G"BA Bc "A"de|
+"D"f6|"Em"ga bg eg|"Bm"fd BF B/c/d|"F#"cBce dc|"Bm"B6:|]
+
+X: 195
 T: Lake Bay Reel, The
 I: Lake Bay Reel, The	R-113	D	reel
 M: C|
@@ -2525,7 +2468,19 @@ K: D
 |:fg| "D"a2ab afdf| abaf d2ef| "A7"g2ga gecd| efec ABcA|
     "D"dcde fdef| "G"gfga bagf| "A7"efec Acec| Acec "D"d2 :|
 
-X: 201
+X: 196
+T: La Maison de Glace
+M: 6/8
+L: 1/8
+R: 6/8
+K: D
+"D"D3 DEF |"D/F#"ABA  AFA|"G"B3 Bcd|"A"cBA GFE|"D"D2D DEF|
+"D/F#"ABA  AFA|1 "G"B3 BAG|"A"F3 EFE:|     [2 "G"B3 Bcd| "A  F#m"c6 ||
+|:"Bm"B3- Bcd| "G"B3- Bcd|"D"fed "A"edc|"Bm"dcA "F#m"dcA|
+"Bm"B3- Bcd| "G"B3- Bcd|"D"fed "A"edc|[1 Adc  "D"d2c:|[2Adc  "D"d3||
+|"Bm"B2B- Bcd|"G"B2B- Bcd|
+
+X: 197
 T: Lamplighter's Hornpipe
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
@@ -2536,7 +2491,21 @@ cd| "A"ecec eagf| ecec eagf| ecec fedc| "E7"d2B2 B2cd|
 |:cd| "A"edcd e2fe| "E7"dcBc d2ed| "A"cAcA dcBA| "E"GABc B2cd|
     "A"edcd e2fe| "E"dcBc d2ed| "A"cagf "E"edcB| "A"A2c2 A2 :|
 
-X: 202
+X: 198
+T:La ronde des voyageurs
+M: C|
+L: 1/8
+R: reel
+K:Amin
+|:"Am"E3E A2 c2|e4-eede|"Dm"f3f f2 a2|"Am"e3a/2a/2 "D7"a4|
+"G"G4 B3d|d4-"Dm/F"dBde|1"E"f3d d2 B2|"Am"cAAB ~A2 E2:|[2 "E"f2 d2 B2 e2| "Am"A4 A4||
+K:Amaj
+"A"c3c c2 e2|"A/C#"A4-AAcd|e2a2"Cdim"g3f|"Bm"ggeg ~f2 ec|
+"Bm"d2zf d2c2|"E"BBGB EGBe|"B7"g3a gfeg|"E7"fedf ecAB|
+"A"cccc c2 e2|A4-AAcd|e2a2 "A+/C#"g3f|"D"b4f3g|"D"aaga "D#dim"~g2fg|
+"A/E"~f2ef "F#7"eAce|"B7"d'2b2 "E7"f3g|["Normal""A"afec A4|]["Trans" "A"azz2f3e|]
+
+X: 199
 T: Lassies of Dunse, The
 I: Lassies of Dunse, The	J-47	D	jig
 M: 6/8
@@ -2545,7 +2514,49 @@ K: D
 f/g/| "D"afd "A"ecA| "D"d2A A2=c| "G"BGB "D"AGF| "A"E2E E2f/g/|       "D"afd "A"ecA| "D"d2A A2G| FDF "A"ECE| "D"D3 D2:|
 |:F/G/| "D"AFA "G"BGB| "D"AFA d2A| "G"BGB "D"AGF| "A"E2E E2 f/g/|       "D"afa "A"geg| "Bm"fdf "A"ecA| "G"B/c/dB "A"c/d/ec| "D"d3 d2:|
 
+X: 200
+K:Ador
+T:La Tuque Rouge
+M:C|
+L:1/8
+|:"Am"a2ab agef|"G"gfga gfed|"Am"eaab agef|"Em(G)"gedB "Am"cA A2|
+"Am"eaab agef|"G"gfga gfed|"Am"gfge "G"dBGB| "Em"cBAG "Am"A4:|
+|:"Am"EAAB AGAB|cded "D"cB c2|"G"DGGA GFGA|BcdB "Em"cBAG|
+"Am"A4 A3 B|AGAB "Am(C)"cdef|"G"gfge dBGB|"Em"cBAG "Am"A4:|
+
+X: 201
+T:La valse des pastoriaux
+M:3/4
+L:1/8                        
+K:G
+"1st time"D2y10|:"G"G2 GABc|d3 cBG|"Am"c2 cBAG|"D"A2 FADF|
+"G"GFGABc|d2 dcBG|"Am"cBAGFG|[1"D"A4D2:|[2"D"A3 gfd||
+|:"C"ede2"D"f2|"G"g3dBG|"Am"cBAGFG|"D"A3gfd|"C"edeg "D"(3fga|
+"G(Em)"g3 dBG|"Am"cBAGFG|[1"D"A3gfd:|[2"D"(3ABA FADF||["final""G"G4||
+
+X: 202
+T: Leather Away the Wattle O
+I: Leather Away the Wattle O	R-39	D	reel
+M: C|
+Z: Transcribed to abc by Mary Lou Knack
+R: reel
+K: D
+fe| "D"d2A2 F2A2| d3d d2f2| "G"e2d2 c2d2| "A"e2f2 g2fg|
+    "D"(3a2g2f2 "A"g2e2| "D"d2c2 "A"A2F2| "Em"G2B2 "A"ABAG| "D"F2D2 D2 :|
+|:e2| "D"f2ff f2d2| "G"g2gg "A"g2e2| "D"f2ff f2a2| "Em"g2f2 "A"e2fg|
+    "D"a2f2 "A"g2e2| "D"d2c2 A2F2| "Em"G2B2 "A"ABAG| "D"F2D2 D2 :|
+
 X: 203
+K:G
+T: Le Diable Vert
+M:C|
+L:1/8
+DC|"G"B,G,B,D GDGB|ed (3ddd "G#°"(dB)GB|
+"Am7"cBAG FDEF|["1,3""D7"GBAG "D7+/D"FE:|["2,4""D7"GBAF "G"G2:|
+|:A2|"Em"[B3E3] [BE][B2E2] ef|"Em"gfeg "Bm"fB (3BB(B|"Em"e)BBe BBef|"Em"gB-{/c}BA "D"BAGA|
+"Em"BEBE B2 ef|"Em"gfeg "Bm"fB (3BB(B|"C"e)(f (3gfe) dBG(B|"D7"cB)AF G2:|
+
+X: 204
 T:Le 24 Juin
 M: C|
 L: 1/8
@@ -2559,16 +2570,6 @@ A2|"G"B2BB ABcA|GABG (3EGE DB,|G,B,DG "G#dim"B3 B|"Am"ABcA E2 AB|
 "Am"c2ec BcdB|"D"ABcA BAFE|DEFG ABcd|efge dcBA|
 "G"B2BB ABcA|GABG (3EGE DB,|G,B,DG "G#dim"B3 B|"Am"ABcA E2 AB|
 "Am"c2ec BcdB|"D"ABcA F3 f|fedc BAFA|GBAF "G"G2|]
-
-X: 204
-K:G
-T: Le Diable Vert
-M:C|
-L:1/8
-DC|"G"B,G,B,D GDGB|ed (3ddd "G#°"(dB)GB|
-"Am7"cBAG FDEF|["1,3""D7"GBAG "D7+/D"FE:|["2,4""D7"GBAF "G"G2:|
-|:A2|"Em"[B3E3] [BE][B2E2] ef|"Em"gfeg "Bm"fB (3BB(B|"Em"e)BBe BBef|"Em"gB-{/c}BA "D"BAGA|
-"Em"BEBE B2 ef|"Em"gfeg "Bm"fB (3BB(B|"C"e)(f (3gfe) dBG(B|"D7"cB)AF G2:|
 
 X: 205
 T: Le Printemps
@@ -2609,18 +2610,6 @@ K:D
 "D"A,4-A,2 "D7"D2|"G"B,4-B,2D2| "A7"C3D E2C2|["Normal""D"D4 D4:|]["Trans""D"D4z4||
 
 X: 208
-T: Leather Away the Wattle O
-I: Leather Away the Wattle O	R-39	D	reel
-M: C|
-Z: Transcribed to abc by Mary Lou Knack
-R: reel
-K: D
-fe| "D"d2A2 F2A2| d3d d2f2| "G"e2d2 c2d2| "A"e2f2 g2fg|
-    "D"(3a2g2f2 "A"g2e2| "D"d2c2 "A"A2F2| "Em"G2B2 "A"ABAG| "D"F2D2 D2 :|
-|:e2| "D"f2ff f2d2| "G"g2gg "A"g2e2| "D"f2ff f2a2| "Em"g2f2 "A"e2fg|
-    "D"a2f2 "A"g2e2| "D"d2c2 A2F2| "Em"G2B2 "A"ABAG| "D"F2D2 D2 :|
-
-X: 209
 T: Liberty
 I: Liberty	R-39	D	reel
 M: C|
@@ -2631,7 +2620,7 @@ K: D
 |:"D"A2AB AGFE| DFAd f2d2| A2AB AGF2| "A"E3F E2FG|
 "D"A2AB AGFE| DFAd f2ef| "G"gfed "A"cABc| "D"d2f2 d4 :|
 
-X: 210
+X: 209
 T: Limerick Rake, The
 I: Limerick Rake, The	W-13	Em	waltz
 M: 3/4
@@ -2643,7 +2632,7 @@ D2| "Em"E3 G F2| E2 D2 E2| G3 A B2| "Am"e4 e2| "Em"d3 B B2| "D"A2 F2 G2| A3 F E2
 |:e2| "Em"e3 B B2| e2 f2 e2| d3 B B2| d4 e2| d3 B B2| "D"A2 F2 G2| A3 F E2| D4 D2|
     "Em"E3 G F2| E2 D2 E2| G3 A B2| "Am"e4 e2| "Em"d3 B B2| "D"A3 F F2| "Em"E2 E4-| E4:|
 
-X: 211
+X: 210
 T: Little Burnt Potato
 M: 6/8
 Z: Transcribed to abc by Mary Lou Knack
@@ -2654,7 +2643,7 @@ f2g|: "D"a^ga bag| afd Ade| fdf g2f| "Em (G)"efe Bcd|
 |:"D"f2A f2A| fgf f2e| def afd| "G"g3 gef|
 "Em"gba gfe| "A"dcB A3|1 a^ga ba=g| "D"f3 fag:|2 "A"a^ga b2c| "D"d3|]
 
-X: 212
+X: 211
 T:Little Dutch Girl
 M:C|
 L:1/8
@@ -2664,7 +2653,7 @@ K:A
 |: "A"e2 ef e2d2|c3dc2 AB| cBAc "D"d2 c2|"E"B3c B3e|
 "D" fefg a2f2| "A"efed cBAB |cBAc "E"BAG2|"A"A3B A4:|]
 
-X: 213
+X: 212
 T: Little Rascals
 I: Little Rascals	W-31	C	waltz
 M: 3/4
@@ -2676,7 +2665,7 @@ K: C
 "C"E4 G2| "(Cdim)"A4 c2| "C"e6| "Cdim"a6| "C7"g4 e2| d4 c2| "F"c'6-| c'6|
 "(Fdim)"a4 a2| "C"g4 c2| "(Abdim)"f4 e2| "Am"A4 c2| "D"d4 e2| "G"G4 A2| "C"c6|]
 
-X: 214
+X: 213
 T: Liza Jane
 I: Liza Jane	R-99	A	reel
 M: C|
@@ -2687,7 +2676,7 @@ ef| "A"a2f2 e2ce| fecB A4| a2f2 e2c2| "D"f4 f2ef|
 |:BA| "A"c4 c3A| B2(A2 A)ABA| c2B2 A2E2| "D"(F6 F)E|
      "D"F2A2 "E"B3A| BAcA B2AB| "D"cBAF "E"E2F2| "A"A6 :|
 
-X: 215
+X: 214
 T: Looney Tunes
 I: Looney Tunes	S-C	D	square
 M: C|
@@ -2697,7 +2686,7 @@ K: D
 A2| "D"ddc2 B2A2| F6 A2| ddc2 B2=c2| "A"^c8| \
        c2A2 B2A2| c2A2 B2A2| A2_B2 =B2c2| "D"d2f2 d2 :|
 
-X: 216
+X: 215
 T: Lord Inchiquin
 I: Lord Inchiquin	W-4	D	waltz
 C: O'Carolan
@@ -2711,35 +2700,21 @@ A2| "A7"AB cd e2| e2 d2 e2| "D"f2 de fd| "A"e4 fe|   "D"de fg a2| a2 b2 g2| f2 d
    "D"de fg a2| "A7"a2 b2 g2| "D"f3 g e2| d4 f2|   "A7"gf e2 e2| e2 f2 d2| "E7"c3 d B2| "A"A4 ag|
    "D"f3 e d2| "Bm"d2 c2 B2| "D"A2 F2 A2| "G"g4 fe|   "D"d2 ed "A7"cB| "D"Ad z2 F2| "A7"E3 F D2| "D"D4|]
 
+X: 216
+T: Louis Cyr
+C:Jean-Claude Mirandette
+M: C|
+L: 1/8
+R: reel
+K: G
+"G"G,3B, D2B,D|EDEF G2"G/F#"GA|"Em"BAGB "D"AGFD|"C" EDEF "D"EDB,D|
+"G"G,3B, DDB,D|EDEF G2"G/F#"GA|"Am7"BAGB "Am7/C"AGFD|1 "D"EDEF "G"GEDB, :|\
+	[2 "D"EDEF "G"G2GA||
+[|:"G"BAGB A2GA|BAGB A2"G#dim"AB|"Am"cBAc "G/B"B2AB|"C"cABG "D"A2 GA|
+"G"BAGB A2GA|BAGB AG"G/F#"FD|"Em"E2 (3[eB][eB][eB] [e2B2] "B"(3[AF][AF][AF][|1F2 E2 "Em"E2 GA:|\
+	[2 F2 E2 "Em"E2 DB,||
+
 X: 217
-T: Louis Cyr
-C:Jean-Claude Mirandette
-M: C|
-L: 1/8
-R: reel
-K: G
-"G"G,3B, D2B,D|EDEF G2"G/F#"GA|"Em"BAGB "D"AGFD|"C" EDEF "D"EDB,D|
-"G"G,3B, DDB,D|EDEF G2"G/F#"GA|"Am7"BAGB "Am7/C"AGFD|1 "D"EDEF "G"GEDB, :|\
-	[2 "D"EDEF "G"G2GA||
-[|:"G"BAGB A2GA|BAGB A2"G#dim"AB|"Am"cBAc "G/B"B2AB|"C"cABG "D"A2 GA|
-"G"BAGB A2GA|BAGB AG"G/F#"FD|"Em"E2 (3[eB][eB][eB] [e2B2] "B"(3[AF][AF][AF][|1F2 E2 "Em"E2 GA:|\
-	[2 F2 E2 "Em"E2 DB,||
-
-X: 218
-T: Louis Cyr
-C:Jean-Claude Mirandette
-M: C|
-L: 1/8
-R: reel
-K: G
-"G"G,3B, D2B,D|EDEF G2"G/F#"GA|"Em"BAGB "D"AGFD|"C" EDEF "D"EDB,D|
-"G"G,3B, DDB,D|EDEF G2"G/F#"GA|"Am7"BAGB "Am7/C"AGFD|1 "D"EDEF "G"GEDB, :|\
-	[2 "D"EDEF "G"G2GA||
-[|:"G"BAGB A2GA|BAGB A2"G#dim"AB|"Am"cBAc "G/B"B2AB|"C"cABG "D"A2 GA|
-"G"BAGB A2GA|BAGB AG"G/F#"FD|"Em"E2 (3[eB][eB][eB] [e2B2] "B"(3[AF][AF][AF][|1F2 E2 "Em"E2 GA:|\
-	[2 F2 E2 "Em"E2 DB,||
-
-X: 219
 T: Louisiana Swing
 I: Louisiana Swing	S-L	G	square
 M: C|
@@ -2749,7 +2724,7 @@ K: G
 D2E2F2| "G"G4 B4| G2G2 D4| G2G2 B2B2| G2G2 D4| G2G2 E2D2| G2G2 E2D2| "D"D8-| D6 D2|
 "D7"F2F2 A2A2| F2F2 D3D| F2F2 A2A2| F2F2 D3D| d2d2 d2d2| d2c2 B2A2| "G"G8-| G2 |]
 
-X: 220
+X: 218
 T: Lovely Madness, A
 C: Beoga
 R: reel
@@ -2762,7 +2737,7 @@ K: Amin
 [|:"C"C2 EC GCEC | "Dm"D2 FD ADFD | "C/E"E2 GE cEGE | "F"F2 AF dFAF | "Am"e2-ed "Am/G"cBAG |
 "Am/F"AE (3EEE "Dm"FD (3DDD | "Em"DEEF EDB,D-  |1 "Em/G"DCB,C "G7"A,3 B, :|2 "Em/G"-DCB,C "A"A,4 |]
 
-X: 221
+X: 219
 T: Lover's Waltz, The
 I: Lover's Waltz, The	W-40	D	waltz
 C: Molly Mason & Jay Ungar
@@ -2775,31 +2750,30 @@ A df|| "D"a3a fd| "G"B3A GF| "D"A6-| A3A df|     a3a fd| "G"B3A GF| "Em"A6-| "A7
 "D"d4 dc| "Em7"d4 dc| "D/F#"d3d dc| "G"d2 g3f| "D"d4 dc| "Bm"d4 BA| "Em"B4- BA/B/| "A7"A4 dc|
 "G"B3c d2| "A"c2 d2 e2| "Bm"f3g fe| d4 dc| "G"B2 c2 d2| "A7"e2 d3c| "D (G)"d6-| "D"d3|]
 
+X: 220
+T: Lowery's Quadrille
+M: C|
+L: 1/8
+R: reel
+K:D
+"D"A,B,DE D2 DE|FABF A2 (3ABc|"G"d2 B2 A2 F2|["1,3""A"EDED E F3:|["2,4""A"(3B,CD-D2 "D"D4||
+"D"DEFA dB A2|"G"B4 B4|"D"A3B A F3|"A"E6 FE|
+"D"DEFA dB A2|"G"B4 B2 cB|"A"ABcd efge|"D"f d2 d d4|
+"D"f4 f4|fedA BA3|"A"a4 a4|abaf e d3|
+"D"f4 f4|fedA "G"BABc|"D"d2 B2 A2 F2|"A"(3B,CD-D2 "D"D4|]
+
+X: 221
+T:L'évis Beaulieu
+R:reel
+Z:Transcribed to abc by Debbie Knight
+M:C|
+K:A
+ed|"A"c2AA AcBA | "D"FBAF "A"E3A |"Bm"BABc d2B2 |"E"AAAc efed |
+"A"c2AA AcBA | "D"FBAF "A"E3A |"Bm"BABc "E"dBed |1 "A"c2A2 A2 :|[2 "A"c2A2 A2ce |]
+|:"A"a2ab afed |cAce a2ef | "G"=g2ga ged=c   |B=GBd =g2e^g|
+"A"a2ab afed |cAce a2ee | "Bm"efec "E"dBed |1 "A"c2A2 A2ce  :|   [2 "A"c2A2 A4|]
+
 X: 222
-T: Lowery's Quadrille
-M: C|
-L: 1/8
-R: reel
-K:D
-"D"A,B,DE D2 DE|FABF A2 (3ABc|"G"d2 B2 A2 F2|["1,3""A"EDED E F3:|["2,4""A"(3B,CD-D2 "D"D4||
-"D"DEFA dB A2|"G"B4 B4|"D"A3B A F3|"A"E6 FE|
-"D"DEFA dB A2|"G"B4 B2 cB|"A"ABcd efge|"D"f d2 d d4|
-"D"f4 f4|fedA BA3|"A"a4 a4|abaf e d3|
-"D"f4 f4|fedA "G"BABc|"D"d2 B2 A2 F2|"A"(3B,CD-D2 "D"D4|]
-
-X: 223
-T: Lowery's Quadrille
-M: C|
-L: 1/8
-R: reel
-K:D
-"D"A,B,DE D2 DE|FABF A2 (3ABc|"G"d2 B2 A2 F2|["1,3""A"EDED E F3:|["2,4""A"(3B,CD-D2 "D"D4||
-"D"DEFA dB A2|"G"B4 B4|"D"A3B A F3|"A"E6 FE|
-"D"DEFA dB A2|"G"B4 B2 cB|"A"ABcd efge|"D"f d2 d d4|
-"D"f4 f4|fedA BA3|"A"a4 a4|abaf e d3|
-"D"f4 f4|fedA "G"BABc|"D"d2 B2 A2 F2|"A"(3B,CD-D2 "D"D4|]
-
-X: 224
 T: MacLeod's Farewell
 M: C|
 L: 1/8
@@ -2811,7 +2785,7 @@ DE|"D"F2BF AFEF|(3DDD DE FABd|"Em7"eefd efed|ABeB "A"dBAG|
 "Bm"F2BF AFEF|"D"(3DDD DE FABd|"Em7"eefd efdB|1 "A"ABde "D"dABd:|\
 [2 "A"ABde "D"d2||
 
-X: 225
+X: 223
 T: Mademoiselle McCloud
 K:G
 M:C|
@@ -2821,7 +2795,7 @@ L:1/8
 |:"G".g2.f2 "D/F#"edBg-|"Em"gBBA "D/F#"Bdef|"G"gage "Em"d2fa|"Am" gedB "D"Adef|
 "G".g2.f2 "D/F#"edBg-|"Em"gBBA "D/F#"Bdef|"C"gage "A/C#"d2fa|"D" gedB "D/F#"A[1def:|[2cBA|]
 
-X: 226
+X: 224
 T: Maggie Brown's Favorite
 I: Maggie Brown's Favorite	J-27	G	jig
 M: 6/8
@@ -2834,7 +2808,7 @@ K: G
 "C"ece "G"dBd| "C"cac "G"BgB| "Am"Ace "G"dBG| "D"FAF DEF|
 "G"GAB "Am"EFG| ABc "D"def| "G"gdB "D"cAF| "G"G3 G2 g|]
 
-X: 227
+X: 225
 T: Maple Sugar
 I: Maple Sugar	S-M	D/A	square
 C: Ward Allen
@@ -2852,7 +2826,44 @@ F2 G2^G2 | "D"A4 A3B| A2G2 F2E2| F2 F4 G2| F4 G2F2| \
 "A"E4 E3F| E2C2 E2A2| c4 c3B| A2E2 G2A2| \
 "E7"B4 B3c| B2G2 F2G2|1 "A"A4 G4| "A7"=G2 :|2 "A"A8-| A2 |]
 
+X: 226
+T: Marche des Marchands des Fruits
+M: C
+R: march
+K: C
+g/ ga|"C"g>e ef e>c cc|dc "C#dim"Bc "Dm"f>f fg|"Dm"f>d de d>g ga|"G7"ba gf "C"e>g "G7"ga|
+"C"g>e ef e>c cc|dc "C7"Bc "F"a2 f>a|"F"a2 "Dm"f>a "C"g2 "Am"e>g|"Dm7"ag "G7"fd "G7"cG "G7"ce||
+|:"C"g2 g>a g/e/c/e/ ga| g2 e>e ee "C#dim"fe|"Dm7"d2 d>d "G"df ed|"C"c/G/c/e/ "G7"ag [1"C"cG "G7"ce:|2c3/2|]
+
+X: 227
+T:Marche des Trois Rivieres
+M:C|
+K:D
+A|:"D"A3 f e2 d2|(A4 A)B1/2 cB1/2|A3 f e2 d2|(A4 A)B1/2 cB1/2|
+"Em"A3 B c2 d2|"A"e6 aa|[1"Em"a2 e2 "A7"a2 e2|"D"(f4 "A"f3) A:|2"A"a2 g2 B2 c2|"D"ddAF "F#"D2 FF||
+|:"Bm"F2 B2 B2 FF|F2 B2 B2 FF|F2 B2 B2 F2|"Em"A2 G2 G2 AA|"A"A2 c2 c2 AA|
+"A"A2 c2 c3 [1E|"A"E3 d "A/G"d2 c2|"F#m/F#m/A"B2 c2 A2 FF:|[2B|"A"B2 A2 G2 E2|"D"DDFA d3:|["Trans"B|"A"B2 A2 G2 E2|"D"D2|]
+
 X: 228
+T: Marche du Mont Saint-Louis
+M: C
+R: march
+K: D
+ABc|"D"d2 "A7"e2 "D"f2 "A7"e2|"D"d4- dA"A"Bc|"D"d>cBA "D#m"BAGF| "A"F2E2- EABc|
+"Em7"e2f2 "A7"g>fed|"Em7"c4- "A7"caaa|"Em7"a2g2 "Aaug"B>c"A"BA|"D"d4- "A"dab>a||
+"D"a4- af"A7"e>d|"D"A4- "A"AF/G/ A/A/B/c/|"D/F#"dd/B/"Fdim"dd/B/"D/F#"dd/B/ "Fdim"d/e/d/B/|"Em"c4- "A7"cab>f|
+"Em7"a4- "A7"age>c|"Em7"A4- "A"AA/A/AA|"Em7"B2g2 "A7"B>cBA|"D"d4- d|]
+
+X: 229
+T:Marche Duvernay
+M:6/8
+K:D
+|:"D"f2 f f2 f|fed dcB|A2 A A2 A|"D"Add "D#dim"ded|"Em7"c2 c c2 c|
+|[1"A"cfe gba|"D"f2 f f2 f|fAB "A7"cBA:|2"A7"caa age|"D"dAB "A7"cBA|d2 A "D#dim"A2 B||
+|:"Em7"cBA cBA|"A7"cBA GFE|"A7"DFA dFB|A2 A "D#dim"A2 d|"Em7"cBA cBA|"A7"cBA GFE|
+[1"D"DFA d2 F|A3 "D#dim"d3:|[2"D"DFA dAF|DAB "A7"cBA:|["Trans"DAB "A7"cBA|D3 "A7"A3|]
+
+X: 230
 T:March of St. Timothy
 C: Judi Morningstar
 M:C|
@@ -2865,44 +2876,7 @@ dd| "D7"c2d2 A2c2| F2A2 D2dd| "G"B2d2 G2B2| D2G2 B,2dd|
 "D7"c2d2 A2c2| F2A2 D2dd| "G"B2d2 G2B2| D2G2 B,2G2|
 "C"E3F "C#dim"G2E2| "G"D2G2 "Em"B2d2| "Am"cBAG "D7"F2A2| "G"G8 |]
 
-X: 229
-T: Marche des Marchands des Fruits
-M: C
-R: march
-K: C
-g/ ga|"C"g>e ef e>c cc|dc "C#dim"Bc "Dm"f>f fg|"Dm"f>d de d>g ga|"G7"ba gf "C"e>g "G7"ga|
-"C"g>e ef e>c cc|dc "C7"Bc "F"a2 f>a|"F"a2 "Dm"f>a "C"g2 "Am"e>g|"Dm7"ag "G7"fd "G7"cG "G7"ce||
-|:"C"g2 g>a g/e/c/e/ ga| g2 e>e ee "C#dim"fe|"Dm7"d2 d>d "G"df ed|"C"c/G/c/e/ "G7"ag [1"C"cG "G7"ce:|2c3/2|]
-
-X: 230
-T:Marche des Trois Rivieres
-M:C|
-K:D
-A|:"D"A3 f e2 d2|(A4 A)B1/2 cB1/2|A3 f e2 d2|(A4 A)B1/2 cB1/2|
-"Em"A3 B c2 d2|"A"e6 aa|[1"Em"a2 e2 "A7"a2 e2|"D"(f4 "A"f3) A:|2"A"a2 g2 B2 c2|"D"ddAF "F#"D2 FF||
-|:"Bm"F2 B2 B2 FF|F2 B2 B2 FF|F2 B2 B2 F2|"Em"A2 G2 G2 AA|"A"A2 c2 c2 AA|
-"A"A2 c2 c3 [1E|"A"E3 d "A/G"d2 c2|"F#m/F#m/A"B2 c2 A2 FF:|[2B|"A"B2 A2 G2 E2|"D"DDFA d3:|["Trans"B|"A"B2 A2 G2 E2|"D"D2|]
-
 X: 231
-T: Marche du Mont Saint-Louis
-M: C
-R: march
-K: D
-ABc|"D"d2 "A7"e2 "D"f2 "A7"e2|"D"d4- dA"A"Bc|"D"d>cBA "D#m"BAGF| "A"F2E2- EABc|
-"Em7"e2f2 "A7"g>fed|"Em7"c4- "A7"caaa|"Em7"a2g2 "Aaug"B>c"A"BA|"D"d4- "A"dab>a||
-"D"a4- af"A7"e>d|"D"A4- "A"AF/G/ A/A/B/c/|"D/F#"dd/B/"Fdim"dd/B/"D/F#"dd/B/ "Fdim"d/e/d/B/|"Em"c4- "A7"cab>f|
-"Em7"a4- "A7"age>c|"Em7"A4- "A"AA/A/AA|"Em7"B2g2 "A7"B>cBA|"D"d4- d|]
-
-X: 232
-T:Marche Duvernay
-M:6/8
-K:D
-|:"D"f2 f f2 f|fed dcB|A2 A A2 A|"D"Add "D#dim"ded|"Em7"c2 c c2 c|
-|[1"A"cfe gba|"D"f2 f f2 f|fAB "A7"cBA:|2"A7"caa age|"D"dAB "A7"cBA|d2 A "D#dim"A2 B||
-|:"Em7"cBA cBA|"A7"cBA GFE|"A7"DFA dFB|A2 A "D#dim"A2 d|"Em7"cBA cBA|"A7"cBA GFE|
-[1"D"DFA d2 F|A3 "D#dim"d3:|[2"D"DFA dAF|DAB "A7"cBA:|["Trans"DAB "A7"cBA|D3 "A7"A3|]
-
-X: 233
 T: Margaret's Waltz
 I: Margaret's Waltz	W-18	A	waltz
 C: Pat Shaw 
@@ -2914,7 +2888,7 @@ c2| "A"E3F AB| c4 c2| "D"BA F2 A2| "E7"B4 c2|     "A"E3F AB| c3d e2| "E7"c4 B2| 
 cd| "C#m"e3f ge| "F#m"a4 a2| "D"fe d2 f2| "E7"e3d cB|    "A"A3B cd| "F#m"e4 e2| "D"cB A2 c2| "E7"B4 cd|
     "C#m"e3f ge| "F#m"a3g f2| "Bm"e2 d2 c2| "E7"B4 c2|     "A"E3F AB| c3d e2| "E7"c3A B2| "A"A4|]
 
-X: 234
+X: 232
 T: Marianne
 I: Marianne	S-M	F	square
 M: C|
@@ -2929,7 +2903,7 @@ P:
      "F"A2c2 F2AA| "C7"AGB4z2| G2BB E2GG| "F"GFA4z2|
      "F"AAcc F2AA| "C7"AGB4z2| G2BB E2GG| "F"GFF2 z2zC :|
 
-X: 235
+X: 233
 T: Marleen's Last Goodnight
 I: Marleen's Last Goodnight	W-28	G	waltz
 C: Bruce A. Randall
@@ -2943,7 +2917,7 @@ G/A/| "G"Bzd/B/| "D"ABA| "C"GEG| "G"D2G/A/| Bzd/B/| GAB| "A7"AEG| "D"F2G/A/|
 |:d/d/| "C"ece| g2f/e/| "G"dBd| g2 d/d/|"A"^cBA| "A7"AB^c| "D"d3-| "D7"d2G/A/|
       "G"Bzd/B/| "D"ABA| "C"GEG| "G"D2G/A/| Bdz/B/| "D"ABz/A/| "C"G3-| "G"G2:|
 
-X: 236
+X: 234
 T: Mason's Apron
 I: Mason's Apron	R-7	A	reel
 M: C|
@@ -2954,7 +2928,7 @@ ed| "A"c2A2 ABAF| EFAB dcBA| "Bm"d2B2 BcBA| Bcde gfed|
 |:ed| "A"cAeA fAeA| cAeA fedc | "Bm"dBfB gBfB| dBfB "E"gfed|
     "A"cAeA fAeA| cAeA fedc | "D"Bcde "Bm"fefa| "E"edcB "A"A2 :|
 
-X: 237
+X: 235
 T:Max Hobart's Jig
 C:Len Bittenson
 K:Dm
@@ -2964,7 +2938,7 @@ M:6/8
 |:"Gm"BGB BGB|"F"AFA AFA|"C"GEG GEG|"Dm"FA,D FGA|
 "Bb"BGB BGB|"F"AFA AFA|"A"GE^C A,EG|FE^C [1"Dm"DGA:|[2"Dm"D3|]
 
-X: 238
+X: 236
 T: Medway Jig, The
 I: Medway Jigs I, The	J-43	G	jig
 M: 6/8
@@ -2975,7 +2949,7 @@ GA| "G"BAB "C"cBc| "G"dBG "C"EFG| "G"DGA BAG| "D"ded dGA|    "G"BAG "C"cBA| "D"d
 d| "G"cAf "C"edg| "D"fef "G"gfg| "D"aga "G"bag| "A"fge "D"d2B|"G"b2g "D"agf| "C"efg "G"d2g| "C"efg "D"agf| "G"g3- g2d|
 "G"cAf "C"edg| "D"fef "G"gfg| "D"aga "G"bag| "A"fge "D"d2B|"G"b2g "D"agf| "C"age "G"d2B| "C"ced "D"cAF| "G"G3- G|]
 
-X: 239
+X: 237
 T: Midnight on the Water
 I: Midnight on the Water	W-24	D	waltz
 C: Luke Thomasson
@@ -2987,7 +2961,7 @@ A, DE| "D"F4 F2| "(DM7)"F4 FE| "(D6)"F2 A3 B| "D"AF D2 D<E|          F2 d2 "G"B2
 |:A Bc| "D"d4- dd| "(DM7)"dc BA Bc| "(D6)"d3 B AF| "D"D4 d2|      "Em"e4 ef| e2 d2 e2| "Bm"f3 a fe| dc BA Bc|
       "G"d4 de| d2 c2 B2| "D"A3 B AG| FE D[A,E] DE|         F2 d2 "G"B2| "D"A3 D ED| "A7"FB AF ED|1 "D"D3:|2 "D"d3|]
 
-X: 240
+X: 238
 I: May Day
 T: Miss McLeod's Reel
 I: Miss McLeod's Reel	R-23	A	reel
@@ -3001,7 +2975,7 @@ cB|: "A"A2a2 fefa| c2cB cdcB| A2ag fefa| "E"B2BA BdcB|
 "A"A2cA EAcA| c2cB cdcB| A2cA eAcA| "E"BcBA BdcB|
 "A"A2cA EAcA| cdcB cde2| "D"fgfe "A"cefg| afec "E"BdcB |] "A - go out on" HA2 |]
 
-X: 241
+X: 239
 T: Miss Susan Cooper
 R: reel
 Z: 1997 by John Chambers <jc@trillian.mit.edu>
@@ -3013,7 +2987,7 @@ K: D
 |: dc | "Bm"Bcde fBBc | def^g "E7"a2gf | "A"eAce a2^ga | "Em"=g2fd "A7"eAce |
 | "D"dfed "G"B2dB | "D"A2FA DAFA | "D"ABde fafd | "A7"eAce "D"d2 :|
 
-X: 242
+X: 240
 T: Miss Thompson
 I: Miss Thompson	R-107	D	reel
 M: C|
@@ -3024,7 +2998,7 @@ K: D
 |:cd| "A"ecec Acec| "D"fdfd Adfd| "G"gege "D"fdfd| "E7"edcB "A"A2FA|
     "G"BGBG DGBd| "D"AFAF DFAd| FAde "A7"fedc| "D"d2dc d2:|
 
-X: 243
+X: 241
 T: Mist On The Mountain, The
 C: Junior Crehan
 R: jig
@@ -3038,7 +3012,7 @@ a|"Am"age a2b|age edB|"G"AGE G2A|BAB GED|
 "Am"age a2b|age edB|"G"AGE G2A|BAB GED|
 "Am"EDE G2A|BAG ABd|"G"efg dBG|BAG "Am"A2|]
 
-X: 244
+X: 242
 T: Mist Over Tennessee
 I: Mist Over Tennessee	J-40	G	jig
 M: 6/8
@@ -3049,7 +3023,7 @@ K: G
 |:"G"b3 g3| ded B3| DGB DGB| "Am"c3 cBc|
 "D"a3 f3| d3 dBc| ded cBA|1 "G"B2c d2g:|2 "G"G3|]
 
-X: 245
+X: 243
 T: Money in Both Pockets
 I: Money in Both Pockets	J-9	D	jig
 M: 6/8
@@ -3060,7 +3034,7 @@ A| "D"d2F "A"FEF| "D"DFA AFD| d2F "A"FEF| "D"D2f fef|
 |:A| "D"dfa afd| "A"cea ecA| "D"dfa afd| "G"g3 fga|
    "G"bag "D"agf| "A"ede "D"fdB| ABA AFA| "G"BBB B2 :|
 
-X: 246
+X: 244
 T: Moon and Seven Stars, The
 I: Moon and Seven Stars, The	J-65	D	jig
 Z: Transcribed to abc by Mary Lou Knack
@@ -3072,7 +3046,7 @@ A| "D"d2A AGF| "G"GAB "D"A2A| "G"Bcd efg| "A"fed cBA|
 |: "A"e2A ABA| efg "D"f3| "A"efg "D"fed| "E"cdB "A"A2A|
 "G"BGB "D"A2A| "G"BGB "D"A2A| "G"Bcd efg| "A"Adc "D"d3 :|
 
-X: 247
+X: 245
 T: Moragh of Dunvegan
 I: Moragh of Dunvegan	W-9	D	waltz
 M: 3/2
@@ -3085,7 +3059,7 @@ K: D
 "D"F6| F2 E2 D2| F2 A4| A3 B c2|"G"d6| "D"d2 c2 d2| "Em"B4 A2| "A7"A6|
 "D"F6| "D7"F2 E2 F2| "G"B4 A2| "D"A6|"G"B6| "D"B2 A2 F2| "A7"E4 D2| "D"D2|]
 
-X: 248
+X: 246
 T: Morrison's Jig
 I: Morrison's Jig	J-26	E Dor	jig
 M: 6/8
@@ -3098,7 +3072,7 @@ K: Edor
 "Em"Bee fee| aee "D"fed| "Em"Bee fee| "D"faf def|
 "G"g2g gfe| def g2d| "D"edc d2A| "B7"BAG F3|] "Em - go out on"HE4|]
 
-X: 249
+X: 247
 T:Mortgage Burn, The
 C:Gordon MacLean
 R:Reel
@@ -3111,7 +3085,7 @@ AB|:"A"cEBE AEFE | "A"cEBE AEFA | "Bm"BFBc BFBc | "E"dBcA BAFA |
 "A"c2 Bc e2 ce | "D"fafe "A"c2 BA | "Bm"B2 AB "A"c2 Bc | "D"ecBA "E"F2 cB |
 "A"AFEF A2 AB |cBce "D"f2 af |"A"e2 cA "Bm"BcAF|"E"EAAB "A"A2|]
 
-X: 250
+X: 248
 T: Motel Henry
 C: Jean-Claude Mirandette
 O: Québec
@@ -3130,7 +3104,7 @@ K: A
 "D"fAAf- fgaf | "A"e2(3cBA e2(3cBA |\
 "D"fgaf "C#m"ecAa- | "Bm"afec "E"AE[A2E2] :|
 
-X: 251
+X: 249
 T: Mount Cashel's Brigade
 I: Mount Cashel's Brigade	R-12	A	march	Set 48
 M: C
@@ -3141,7 +3115,7 @@ E2| "A"A2c>B ABAF| E>FED C2E2| A2c>B ABcd| "E"B2e>f edcB|
     "A"e>fed c>dcB| A2AB cABc| "E"d>edc B>cBA| G2E>F GEFG|
     "A"A2A2 "E"GBGE| "D"F>EFG A2f2| "A"e>fec "E"dBGE| "A"A2A>B A2 |]
 
-X: 252
+X: 250
 T: Mr. Charles Graham's Welcome Home
 I: Mr. Charles Graham's Welcome Home	J-41	A Dor	jig
 C: Wm. Gow
@@ -3155,7 +3129,7 @@ e| "Am"a>^ga a2e| a>^ga a2e| "G"=g>bg e>ge| dBG G2e|
    "Am"a>^ga a2e| a>^ga a2e| "G"=g>bg e>ge| dBG G2A/G/|
    "Am"EAA A2G| BAA A2B| "G"d2e dBg| "Am"BAA A2|]
 
-X: 253
+X: 251
 T:Multnomah March
 C: Bob McQuillen
 K:A
@@ -3166,7 +3140,7 @@ AB|:"A"c>BAE|"D"FA2B|"A"c>BAB|"C#m"ce2c/e/|"D"f>efa|
 |:"A"e>fec|ea2f|e>cAB|"F#m"cf2c/B/|"D"AFF>E|
 FAA>[1F|"A"E>FAc|"E"cBcd:|[2f/|"E"e/c/-cB>A|"A"A2|]
 
-X: 254
+X: 252
 T: Music In The Glen
 M: C|
 L: 1/8
@@ -3181,7 +3155,7 @@ K:Amaj
 *Transition: After the A chord with the asterisk, backup drops out.
 If ending with this tune, tack on an A at the end.
 
-X: 255
+X: 253
 T: My Cape Breton Home
 I: My Cape Breton Home			W-34	G	waltz
 C: Jerry Holland
@@ -3194,7 +3168,7 @@ g| "G"g3g fg| "D"a2 f2 d2| "C"c3c Bc| "G"d2 B2 G2|       g3g fg| "D"a2 f2 d2| "A
 D| "G"D3G B2| "C"c3c Bc| "G"d3B G2| "Am"A2 G2 "D7"E2|    "G"D3G B2| "C"c3c Bc| "G"dg3 gf| "D7"d2 c2 A2|
    "G"D3G B2| "C"c3c Bc| "G"d3B G2| "Am"A2 G2 "D7"E2|    "G"Dg3 fg| "Am7"d2 c2 "D7"A2| "G"G6| G4-G|]
 
-X: 256
+X: 254
 T: My Home Waltz
 I: My Home Waltz	W-5	A	waltz
 C: Old-Time
@@ -3207,7 +3181,7 @@ ed| "A"c3 B A2| A2 c2 e2| "D"a2 g2 f2| "A"e4 d2|       c3 B c2| A2 B2 c2| "E7"d3
 E2| "A"A3 B c2| c3 B c2| e3 d c2| c4 e2|    "E7"d3 c d2| B2 c2 d2| "A"e3 c A2| A4 ce|
     "D"f3 d f2| a3 g f2| "A"e2 d2 c2| a4 d2|       c3 A c2| "G"B3 =G B2| "A"A3 B A2| A4|]
 
-X: 257
+X: 255
 T: My Little Girl
 I: My Little Girl	S-M	G	square
 M: C|
@@ -3219,7 +3193,7 @@ B,C^C| "G"D4- DDEF| A2G4FG| A2G2 D2E2| "D7"F4 zA,A,B,|
        "G"D4- DDEF| A2G4FG| "G7"A2G2 B2A2| "C"E4 zE^DE|
        "E7+5"c4- cB^GE| "A7"B2A4^GA| "D7"B2A2 F2D2| "G"G4 z|]
 
-X: 258
+X: 256
 T:Myra's Jig
 C:Ian Lowthian
 M:6/8
@@ -3233,7 +3207,7 @@ K:A
 "A"e2-e/"E/G#"f/-f2 "F#m"a-|afe cBA|"Bm"B>Ac "E7" BAF|1"A"A3- A2f:|\
 [2 "A"A3 z2e||
 
-X: 259
+X: 257
 T:Nail That Catfish to the Tree
 M:C|
 L:1/8
@@ -3244,7 +3218,7 @@ DE|"G"G2 BG AG BG|cB A2 [B4G4]|"D"ABAG FGAB|AGFD (3EFE D2|
 |:D2|"C"[C4E4] [A4D4]|[c4E4] c2c2|"D"ABAG FGAB|AGFD (3EFE D2|
 "C"[C4E4] [A4D4]|[1[c6E6] (A2|"D"A)BAG FDED|"G"(G[BG][B4G4]) :|[2[c6E6] (d2|"D"d)D cD BD A2|"G"(G[BG][B4G4])|]
 
-X: 260
+X: 258
 T: Needlecase
 M: C|
 L: 1/8
@@ -3255,7 +3229,7 @@ K: D
 |:FE|"D"D2d2 dBA2|"G"B3=c B4 |"D"A2AB AFDF|"A"E3F E2FE|
 "D"DFAB dBA2|"G"B3=c B2A2- |"A"ABcd edcA|BABc "D"d2:|
 
-X: 261
+X: 259
 T: Nelly Bly
 I: Nelly Bly	S-N	C	square
 M: C|
@@ -3268,7 +3242,7 @@ K: C
 "C"e4 c2c2| "F"c4 A2A2| "C"G2G2 E2C2| "G7"D6 D2| \
 "C"E2F2 G2G2| "F"A2B2 c4| "G7"B2c2 d2B2|1 "C"c4 c2d2 :|2 "C"c6 z2|]
 
-X: 262
+X: 260
 T: New Stove Jig, The
 M: 6/8
 L: 1/8
@@ -3281,7 +3255,7 @@ A|"D"f2A "A"e2A|"D"ded dAF| "D/F#"DFA "F°/F"ded|"Em"BGG G2f|
 "D"f2A "A"e2A|"D"ded dAF |DFA ded|"G"B3 z2A|
 "G"Bgg g2B|"D"Aff f2a|"A"gec ABc | "D"d3 d2|]
 
-X: 263
+X: 261
 T: Noel's Waltz
 I: Noel's Waltz	W-13	G	waltz
 Z: Transcribed to abc by Mary Lou Knack
@@ -3293,7 +3267,7 @@ D2| "G"G3 A Bc| d2 B2 d2| "C"e3 d ce| "G"d4 d2|    "D"c2 A3 c| "G"B2 G2 B2| "D"A
 Bc| "G"d4 Bc| d4 ed| "Am"c4 cB| A4 AB|    "D"c3 d ed| "D7"c2 B2 A2| "G"B3 A GB| "D"A4 D2|
     "G"G3 A Bc| d2 B2 d2| "C"e3 d ce| "G"d4 d2|    "D"c2 A2 c2| "G"B2 d2 G2| "D7"AB c2 F2| "G"G4|]
 
-X: 264
+X: 262
 T: North Carolina Breakdown
 C:Arthur L. Smith
 M: C|
@@ -3305,7 +3279,7 @@ D2| "G"G2G2 EDEF| GFGA Bdef| "C"g2f2 edef| "D"gage dBAF|
 |: d2| "C"[e2g2][e2-g2-] [e2g2][e2-g2-]| [e2g2]g2 gag2|    "G"[d2g2][d2-g2-] [d2g2][d2-g2-]| [d2g2][dg][dg] [B2g2][d2g2]|
 "C"[e4g4] g2b2-| b2b2 agef| "G"gage dBAB| "D"dBAF "G"G2 :|
 
-X: 265
+X: 263
 T: Off She Goes
 I: Off She Goes	J-8	D	jig
 M: 6/8
@@ -3316,7 +3290,7 @@ A| "D"F2A "G"G2B| "A"ABc "D"d2A| F2A "G"G2B| "D"AFD "A"E2D|
 |:g| "D"f/g/af d2f| "G"g/a/bg "Em"e2g| "D"f/g/af d2f| "A"ecA A2g|
    "D"f/g/af d2f| "G"g/a/bg "Em"e2g| "D"fed "G"g2f| "A"edc "D"d2 :|
 
-X: 266
+X: 264
 T:Old Bell Cow
 R:reel
 Z:transcribed to ABC by Debby Knight
@@ -3328,7 +3302,7 @@ K:AMix
 |: "A"e3f e2ed | cdef e2A2 | "G"d2d2 BAGB | dBd=c BG3 |
 "A"e3f e2ed | cdef efef | "G"gfgf efed | "A"cABc A4 :|
 
-X: 267
+X: 265
 T: Old Favorite
 R: jig
 M: 6/8
@@ -3338,7 +3312,7 @@ K: G
 |:"G"g3 "D"f3| "C"efe "G"d2B| ded d2B| ded Bdf| "G"g3 "D"f3|
 "C"efe "G"d2B|1 "D"dge dBA| "G"G3 G3 :|2 "G"dge dge| dge "D"dBA |]
 
-X: 268
+X: 266
 T: Old French
 I: Old French	R-6	D	reel
 M: C|
@@ -3350,7 +3324,7 @@ K: D
 |:cd| "A"efed c2A2| AEAc e2dc| "G"BGBd gfed |1 "A"cAce a2 :|2 "A"c2A2 A2 |]
 |:cd| "A"efed c2A2| AEAc e2dc| "G"BGBd gfed |1 "A"cAce a2 :|2 "A"c2A2 B2c2 |]
 
-X: 269
+X: 267
 T: Old Joe
 M: C|
 Z: Transcribed from "Frets", with slight changes, by Debby Knight
@@ -3361,7 +3335,7 @@ K: C
 |: "Am"A,4 C4| EA2_E DCA,G,| "Am"A,4 C4| "F7"_E3E DCA,G,|
 "Am"A,2A,2 C4| EA2_E DCA,C| "C"c2cA "F"GcAG| "G"ECDB, "C"C4 :|
 
-X: 270
+X: 268
 T: Old Rosin, the Beau
 I: Old Rosin, the Beau	W-2	G	waltz
 M: 3/4
@@ -3373,7 +3347,7 @@ D2| "G"G2 F2 G2| B2 A2 G2| d6| "C"e2 f2 g2|     "G"d2 B2 G2| G2 A2 B2| "Em"E6-| 
 Bc| "G"d2 B2 d2| d2 e2 f2| "C"g4 e2| g4 e2|     "G"d2 B2 G2| G2 A2 B2| "Em"E6-| E4 D2|
     "G"G2 F2 G2| B2 A2 G2| d6| "C"e2 f2 g2|     "G"d2 B2 G2| "D7"A2 B2 A2| "G"G6-| G4|]
 
-X: 271
+X: 269
 T:Old Woman Tossed Up in a Blanket, The
 N:O'Neill's - 771, modified by Debby Knight
 Z:Ornament (~) is a mordant
@@ -3385,18 +3359,7 @@ E|"A"AcB Bce|fec "E7"B2 A|"A"AcB cAB|"F#m"cAF "D"~F2 E|
 |:a|"D"~f3 fea|fea fec|"A (C#m)"ecf ecf|ecA "E7"B2 e|
 "A"aff "E"gee|"A"fec "E7"B2 A|"A"AcB cAB|"E7"cAA "A"A2:|
 
-X: 272
-T:On the Danforth
-R:Reel
-M:C|
-L:1/8
-K:A
-"A"c2cd c2 A2|"E"B2 c2 "D"F4|"F#m"A3 B c2 BA |"E"B2 "(A/E  E)"c2 c2 B2|
-"A"c2cd c2 A2|"E"B2 c2 "D"F4|"F#m"A3 B c2 BA |"E"B2 G2 "A"A4 :|
-|:"A"e3 f e2 d2|c2 A2 "Bm"B2 d2|"A/C#"c2 A2 "D"B2 d2|"A/E"cB A2 "E"B2 E2|
-"F#m"e3 f "E/G#"e2 d2|"A"c2 A2 "D"B2 d2|"A"cB A2 "E"B2 G2| "A"A4 "D"A4:|
-
-X: 273
+X: 270
 T: One-Horned Sheep
 I: One-Horned Sheep	J-64	G	jig
 Z: Transcribed to abc by Mary Lou Knack
@@ -3408,7 +3371,18 @@ K: G
 |: "G"GBd dBd| GAB d2D| GBd dcB| "D"cdc A2D|
 "G"GBd dBd| GAB def| "C"gfe dBG |1 "D"ABA G2D :|2 "D"ABc def |]
 
-X: 274
+X: 271
+T:On the Danforth
+R:Reel
+M:C|
+L:1/8
+K:A
+"A"c2cd c2 A2|"E"B2 c2 "D"F4|"F#m"A3 B c2 BA |"E"B2 "(A/E  E)"c2 c2 B2|
+"A"c2cd c2 A2|"E"B2 c2 "D"F4|"F#m"A3 B c2 BA |"E"B2 G2 "A"A4 :|
+|:"A"e3 f e2 d2|c2 A2 "Bm"B2 d2|"A/C#"c2 A2 "D"B2 d2|"A/E"cB A2 "E"B2 E2|
+"F#m"e3 f "E/G#"e2 d2|"A"c2 A2 "D"B2 d2|"A"cB A2 "E"B2 G2| "A"A4 "D"A4:|
+
+X: 272
 T: Opera Reel
 I: Opera Reel	R-52	D	reel
 M: C|
@@ -3419,7 +3393,7 @@ K: D
 |:fg| "D"afaf "A"gfge| "D"fafe "A"dcBA| "D"afaf "G"gfge| "A"faec "D" d2 :|
 |:(3ABc| "D"defd "A"efge| "D"faec "A"dcBA| "D"defd "G"efge| "A"faec "D"d2 :|
 
-X: 275
+X: 273
 T:Out On the Ocean 
 R:Jig
 M:6/8
@@ -3431,7 +3405,7 @@ K:A
 "F#m"f3 fec| "D"fgf fec| "C#m"efe efg| "E7"agf ecB|
 "A"A2B "A/C#"c2e| "D"faf "A/C#"ecB| "D"AFE "Bm"A2B| "E7"cAG "A"A3|]
 
-X: 276
+X: 274
 T: Paddy Fahey's
 M: 4/4
 L: 1/8
@@ -3443,7 +3417,7 @@ K: Ddor
 "Dm"a2 ^ga ABcA|"C"dcAG FD CE|"Bb"D2 A,D FEFG|"Am"Ad^ce "Dm"d4:|
 "Dm""_Dm"D2A,D FEFG|"_Dm"Ad"_Dm/E"d^c "_Dm/F"d2de|"Bb""_Gm"fedf "Gm""_Am"edcA|"Am""_Bb"dcAG "C""_C"FDEC|
 
-X: 277
+X: 275
 T:Paddy Killoran's
 R:jig
 D:From recording by J-P Loyer, Ojnab
@@ -3456,7 +3430,7 @@ K:G
 |:D|"G"GBd g3| "C"ece "G"d2B |"C"cBc "G"dBG |"Am7"AGA "D"BGE|
 "G"GBd g3| "C"ece "G"d2B |"C"cBc "G"dBG |[1"D"AGF "G"G2:|[2 "D"AGF "G"G3||
 
-X: 278
+X: 276
 T: Pat d'Budgie
 I: Pat d'Budgie	R-106	C	reel
 C: Graham Townsend
@@ -3468,7 +3442,7 @@ K: C
 |:"F"f2 fe fg a2| "C"gage c2 Bc| "G7"dedB G2 AB|1 "C"c2 cB cd e2 :|2 "C"c2 cB c3 e|]
 |:"C"g2 z2 "F"a2 z2| "C"gage c2 Bc| "G7"dedB G2 AB|1 "C"c2 cB cd e2 :|2 "C"c2 cB c2 z2|]
 
-X: 279
+X: 277
 T: Penobscot Memory
 I: Penobscot Memory	W-44	G	waltz
 R: waltz
@@ -3481,7 +3455,7 @@ D2|"G"DB3B2 | "F"A=F2G AF |"G"G3ABc |d2B2G2 |"C"ce3e2 |"G"d3B GB |"F"A6-|"D"A4 D
 "Em"E4 E2 |e3f ge |"D"fg fe d2-|d2f2a2 |"C"g4 g2-|g2 f2e2 |"G"d6-|d2 "B7"G2F2 |
 "Em"E4 E2 |"C"g4 g2 |"G"e d-d4 |"Em"e4 B2 |"Am"A3  B c2-|"D"c2 B2 A2 |"C"G6-|"G"G4|]
 
-X: 280
+X: 278
 T: Pet of the Pipers
 I: Pet of the Pipers	J-56	G	jig	Set 44
 M: 6/8
@@ -3492,7 +3466,7 @@ K: G
 |:"C"g3 efg| "D"agf "G"ged| "C"g3 efg| "D"agf "G"g2d|
 "C"gfe "G"dcB| "C"edc "G"BAG| "C"efg "G"dBG| "D"cAF "G"G3 :|
 
-X: 281
+X: 279
 T: Petronella
 I: Petronella	R-13	D	reel
 M: C|
@@ -3503,7 +3477,7 @@ dA| "D"F2AF "A"E2AF| "D"D2D2 D2FA| d2cd "E"e2d2| "A"cdBc A2dA|
 |:dA| "D"F2fd "D7"A2af| "G"g2gf "Em"edcB| "A"A2ec A2ge| "D"f2fd AdAF|
     "D"D2fd "D7"A2af| "G"g2gf "Em"edcB| "A"A2ec Agec| "D"d6 :|
 
-X: 282
+X: 280
 T:Phoenix, The
 R:Reel
 M:C|
@@ -3514,7 +3488,7 @@ de|"D"f2 df "A"edcA | "G"BAGB "D"AGFd | fddf "A"edcA | "G"BAGB "A"A2 ag |
 |:cd|"Bm"B3 B Bcde |f2 ef "A"edcd | "Bm"B3B Bcde | f2 df "A"edcd |
 "Bm"B2 Fd B2 Fd |BFBd "A"cBAc | "G"B3B Bcde|1"A"fedc "Bm"B2:|[2 "A"fedc "D"d2|]
 
-X: 283
+X: 281
 T:Pipe On The Hob, The
 M:6/8
 L:1/8
@@ -3527,7 +3501,7 @@ g|: "D"f2d d^cd|f2d d^cd|"C"edB c2d|"C"ede "A"age|
 [1 "D"f2d d^cd|f2d d^cd|"C"ede age|"A"ed^c "D"d2e:|
    [2 "D"fef "C"gfg |"D/B"afa "Am7"g2e|"D"fed "C"eag|"A"ed^c "D"d2|]
 
-X: 284
+X: 282
 T: Plaisir d'Amour
 I: Plaisir d'Amour	W-6	G	waltz
 M: 3/4
@@ -3540,7 +3514,7 @@ P: Alternate version
 D| "G"G6| "D"A2 BA GA| "G"B6| B4 z B| "C"[A6c6e6]| "G"B3 G B2| "D"A6| A4 z D|
    "C"E6| "D"F6| "G"G4 AB| "C"E2 A3 c| "G"B6| "D"A6| "G"G2D2B,2| [G,6G6]|]
 
-X: 285
+X: 283
 T: Planxty Fanny Power
 I: Planxty Fanny Power	W-26	G	waltz
 C: O'Carolan
@@ -3554,7 +3528,7 @@ K: G
 |:"G"dB/c/d| "G/F#"dB/c/d| "G/E"G2G| "G"G2G| "C"ec/d/e| "C/B"ec/d/e| "Am"A2A| "D"A2d/c/|
 "G"B>cd| "C"e>fg| "D"f>ga| d2c| "G"B>AG| "D7"A<cF| "G"G3-| G3:|
 
-X: 286
+X: 284
 T: Planxty George Brabazon
 I: Planxty George Brabazon	R-24	G	reel
 M: C|
@@ -3565,7 +3539,7 @@ e| "G"d2G2 cBAG| d2G2 cBAG| "Am"e2A2 ABcd| e2A2 "D7"ABcd|
 |:ga| "G"b2gb "B"a2fa| "Em"g2eg edcB| "Am"e2A2 ABcd| "D7"e2A2 A2ga|
     "G"b2gb "B"a2fa| "Em"g2eg edcB| "Am"cBAG "D7"DEGA| "G"B2G2 G2 :|
 
-X: 287
+X: 285
 T: Polska
 I: ???	M-3	G	hambo
 C: Matt Fichtenbaum
@@ -3585,7 +3559,7 @@ G>A B>G D>G| F>G A>F D2| d>c B>A G>E| D2 [B,4D4]:|
 |: e>d c3 e| d>c B4| d>c B>A G>F| G>A B>G D2|
    e>d c3 e| d>c B4| d>c B>A G>E| D2 [B,4D4]:|
 
-X: 288
+X: 286
 T: Port an Bhrathar
 I: Port an Bhrathar	J-57	D	jig	Set 45
 M: 6/8
@@ -3595,7 +3569,7 @@ K: D
 |: "G"B3 "D"BAF| "A"ABc "D"d2B| AFE "A"EFA |1 "D"AFE "A"EFA :|2 AFD "D"D3 |]
 |: "G"gag "D"fgf| "A"ede "Bm"fdB| "D"AFE "A"EFA |1 "D"AFE "A"E2f :|2 AFD "D"D3 |]
 
-X: 289
+X: 287
 T: Portland Fancy
 I: Portland Fancy	J-42	A/D	jig
 M: 6/8
@@ -3610,7 +3584,7 @@ K: A
 |:"D"F2A F2A| FAd f3| "A"ece gec| "D"dfe dAG|
 "D"F2A F2A| FAd f3| "A"ece gec| "D"d3 d3:|
 
-X: 290
+X: 288
 T:Puppeteer, The
 K:G
 M:6/8
@@ -3624,7 +3598,7 @@ D|:"G"G2 G "D"ABA|"G"G3 G2 A|B2B "Am7"cde|"G/B"d3 "Am7"dBc|
 B2 B AGF|GFE DCB,|CDE DCB,| [1A,3 A,B,C:| [2A,3 z2 D||
 "G"G2 G "D"ABA|"G"G6|
 
-X: 291
+X: 289
 T: Ragtime Annie
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
@@ -3639,7 +3613,7 @@ fg| "D"a2ab afd2| A6 fg| a2ab agf2| "G"g6 ef|
 [K:G]=c2 "D7"B2A2|:"G"[G6B6] AB| "C"[E6c6] cB| "D"A2f2 f2ef| "G"gfga gedc|
 "G"D2B2 B2AB| "C"E2c2 c2cB| "D"A2f2 f2ef|1 "G"gfga g2dc :|2 "G"g6 |]
 
-X: 292
+X: 290
 T: Rainy Night in Montague
 C: George Reynolds
 M: C|
@@ -3654,7 +3628,7 @@ K:Dmix
 "D"Addc dedc|AGAB c2 cB|"Am"AGEG AGED|1"D"D2 DD DEFG:|\
 	[2 "D"D2 DD D4|]
 
-X: 293
+X: 291
 T: Rakes of Clonmel
 I: Rakes of Clonmel	J-29	Am	jig
 M: 6/8
@@ -3664,7 +3638,7 @@ e/d/| "Am"cBA "G"BGE| "Am"EAA A2B| c>Bc A>Bc| "G"BGG G2e/^f/|       "C"g>fg ege|
 a| "Am"a^ga A2a| edA A2g| "G"g^fg G2g| dBG G2B|    "C"cBc C2c| "Dm"dcd D2d| "Am"edc "G"Bcd| "Am"ecA A2a|
    "Am"aea aed| cBc A2g| "G"gdg gdc| BAB G2A/B/|    "C"cBc C2c| "Dm"dcd D2d| "Am"edc "G"Bcd| "Am"ecA A2|]
 
-X: 294
+X: 292
 T: Rakes of Mallow, The
 I: Rakes of Mallow, The	R-3	G	reel
 I: Marlow	R-3	G	reel
@@ -3676,7 +3650,7 @@ K: G
 |:(3def| "G"g2fe d2c2| B2c2 d3B| g2fe d2c2| B2d2 "D"A3d|
        "G"g2fe d2c2| B2c2 d3B| "C"cBAG "D7"FGAc| "G"B2G2 G2 :|
 
-X: 295
+X: 293
 T:Rambling Pitchfork, The
 M:6/8
 K:D
@@ -3685,7 +3659,7 @@ K:D
 |: "D"d2 e fed|"A"ecA AFA|"D"dcd efg|"A"f/g/af gec|
 "D"d2 e fed|"A"ecA AGF|"G"G3 BGB| "A"AFD"D" D3:|
 
-X: 296
+X: 294
 T:Rannie MacLellan's Reel
 R:Reel
 C: Brenda Stubbert
@@ -3700,7 +3674,7 @@ K:D
 |:FG| "D"Addc d2 cA| "Em"Beed e2 de |"D"f2 af egfe|"G"dBAd "A"FEEF|
 "D"Dddc d2 cA|"Em"Beed e2 de|"D"f2 af "G"egfe|"A"dBAF "D"D2:|
 
-X: 297
+X: 295
 T: Rapp-Kalle's Waltz
 I: Rapp-Kalle's Waltz	W-12	D	waltz
 H: from Matt Fichtenbaum 3/81
@@ -3714,17 +3688,7 @@ dd| "D"d2 c2 B2| "G"G4 B2| (3BcB A2 D2| "D"F4 A2|       (3ABA G2 A,2| "A"C4 d2| 
 |2| "D"a2 fd fa| a2 fd fa| a2 g2 f2| "A"g4 g2|       g2 ec eg| g2 ec eg| g2 f2 e2| "D"f4 a2|
     "D"a2 fd fa| a2 fd fa| a2 g2 a2| "G"b4 g2|    "D"f3 g f2| "A"e3 f e2| A2 B2 c2| "D"ed cd fe| d4:|
 
-X: 298
-T: Red River Valley
-I: Red River Valley	S-R	G	square
-M: C|
-Z: Transcribed to abc by Mary Lou Knack
-R: square
-K: G
-D2G2| "G"B4 B2B2| "D7"B4 A2B2| "G"A2 G6-| G4 D2G2| B4 G2B2| d4 c2B2| "D7"A8-| A4 d2c2|
-      "G"B4 B2A2| G4 A2B2| "C"d2 c6-| c4 F2E2| "D7"D4 F2G2| A4 B2A2| "G"G8-| G4 |]
-
-X: 299
+X: 296
 T: Redican's
 M: 6/8
 L: 1/8
@@ -3735,7 +3699,17 @@ K: Ador
 |:"G"def ~g3|"Am"age edB|"G"def gab|"Am"age age|
 "G"def ~g3|"Am"age edB|"Am"edB "G"gdB|"Em"BAG "Am"~A3:|
 
-X: 300
+X: 297
+T: Red River Valley
+I: Red River Valley	S-R	G	square
+M: C|
+Z: Transcribed to abc by Mary Lou Knack
+R: square
+K: G
+D2G2| "G"B4 B2B2| "D7"B4 A2B2| "G"A2 G6-| G4 D2G2| B4 G2B2| d4 c2B2| "D7"A8-| A4 d2c2|
+      "G"B4 B2A2| G4 A2B2| "C"d2 c6-| c4 F2E2| "D7"D4 F2G2| A4 B2A2| "G"G8-| G4 |]
+
+X: 298
 T: Redwing
 I: Redwing	S-R	D	square
 M: C|
@@ -3745,7 +3719,7 @@ K: D
 A,4|: "D"D3D D2F2| A6 D2| "G"G2B2 d2B2| "D"A6 F2|      "G"G2GF E2G2| "D"F2FE D2F2|1 "E"E2B,2 C2D2| "A7"E6 A,2:|2 "E"E2B,2 "A7"C2E2| "D"D4 |]
 |:d2c2| "G"B4 B3B| B2d2 c2B2| "D"A4 F4-| F2A2 B2A2| "A7"A4 [1(E4|E2) A2 B2A2| "D"A4 F4-| F4:|[2G4| F4 E4| "D"D8-| D4|]
 
-X: 301
+X: 299
 T: Reel Bijoux
 M: C|
 L: 1/8
@@ -3757,16 +3731,7 @@ ag|:"D"fafd Adcd |"D#dim"Bdef "Em"g2gf|"A7"egec Acec|"D"defg "A7"a2 ag|
 |:"D"D2FA dAFA|"G"BABc "D"dBAF| "D"D2FA dAFD|"Em7"E2CE "A7"A,ECE|
 "D"D2 FA dAFA|"G"BABc defg| "D"a2 fa "G"gfed|1 "A7"cABc "D"dBAF:|[2 "A7"cABc "D"d2|]
 
-X: 302
-T: Reel d'Hotelier
-I: Reel d'Hotelier	R-114	D	reel
-M: C|
-R: reel
-K: D
-AG| "D"FDDD DFAd| "G"BGGF G2ed| "A"cAAA Aceg| "D"fddc d2 :|
-|:ef| "G"gagf g2b2| "D"abaf d2fa| "A"gece Aceg| "D"fddc d2 :|
-
-X: 303
+X: 300
 T:Reel de Bergerville
 R:reel
 M:C|
@@ -3777,7 +3742,7 @@ K:Bm
 |:"D"A2BA F2 (3ABc|dcde f2 d2|"D"A2 BA FDFA|dAFD "A7"E3B|
 "D"A2BA F2 (3ABc|dcde f2 d2| A2 BA FAdf| "A7"edce "D"d4:|
 
-X: 304
+X: 301
 T: Reel de Montreal
 I: Reel de Montreal	R-41	G/D	reel
 M: C|
@@ -3787,7 +3752,7 @@ d2| "G"g2fe dcBA| GBDG B2AG| "D7"FADF AcBA| "G"GBDG B2Bd|
     "G"g2fe dcBA| GBDG B2AG| "D7"FGAB cdef| "G"g2g2 g2 :| [K: D]|:z2 |"D"A2FA d2Ad| f2df a2ab| "A7"a2g2 e2g2| "D"b2a2 f2d2|
 "D"A2FA d2Ad| f2df a2ab| "A7"a2g2 e2c2| "D  (D7)"d4-d2 :|
 
-X: 305
+X: 302
 T: Reel de Peribonka
 I: Reel de Peribonka	R-114	G	reel
 M: C|
@@ -3798,7 +3763,7 @@ D2|: "G"GABA GEED| "D7"FGAG FDD2| "G"GABc dBge| "D7"dBAc "G"BGEF|
 |:B| "G"dBBA dBBe| dBBA B2Be| dBBA Bdge| "D7"dcAc "G"BGGB|
    "G"dBBA dBBe| dBBA B2GB| dBBA Bdge|1 "D7"dcAc "G"BGG :|2 "D7"dcAc "G"BGG2 |]
 
-X: 306
+X: 303
 T:Reel de Pointe-au-Pic
 R:Reel
 M:C|
@@ -3812,7 +3777,7 @@ g eg|\
 gg g2-gGBd|"Em"gg g2-gGBd|g^fga "E7"gedB|"Am"A3B c3d|"Am/G#"eaae a2-ag|"Am/G"eaag abag|
 "Am/F#"eaaga2 zA|"Cdim/Eb"c3c-c2z^f|"C"g^fga "Am7"gecd|"D7"egec "G7"dedB|"C"ccc2-c|]
 
-X: 307
+X: 304
 T: Reel des Acadiens
 I: Reel des Acadiens	R-125	A	reel
 C: E. Arsenault
@@ -3824,7 +3789,7 @@ af| "A"eece AAce| fece "D"feaf| "A"eece "D"feaf| "A"ecAc "E"B2af|
 |:A| "A"ABcd eeea| "D"feaf "A"ecBc| ABcd eeea| "B7"fecA "E"B2BB|
    "A"ABcd eeea| "D"feaf "A"ecBc| ABcd eeaf |1 "E"ecBc "A"A3 :|2 "E"ecBc "A"A2 |]
 
-X: 308
+X: 305
 T: Reel des Accordeonistes
 I: Reel des Accordeonistes	R-124	D	reel
 C: Marcel Messervier
@@ -3836,7 +3801,7 @@ FG| "D"A2df "G"edcB| "D"ABAG F2EF| "A"GAGF EBBB| "D"ABAG FDFG|
 |:A2| "G"(3BcB GB d2cB| "D"(3ABA FA dAFA| "A"GECE A,ECE| "D"DEFG A2FA|
     "G"(3BcB GB d2cB| "D"(3ABA FA d2cd| "A"efed cBAG| FABc "D"d2 :|
 
-X: 309
+X: 306
 T: Reel des Colons
 O: rep. de Bernard Morin
 R: reel
@@ -3850,7 +3815,7 @@ K: Edor
 "Em"EFGA BE {F}ED |EFGB "D"AD {F}ED |"Em"EFGA "G"BBGB | "D"AFAd BE {F}ED:|]
 "Em"EFGA BE {F}ED |EFGB  "D"Az3|{g}fded "Bm"edBc | "D"dBAF ^GE {F}ED|"E"E8|]
 
-X: 310
+X: 307
 T: Reel des Esquimaux
 M: C|
 L: 1/8
@@ -3861,7 +3826,7 @@ K: G
 |:Bc|"G"d3e dcBd|"C"g2ga "Am"gedc| "G"BGBd "G#dim"cBAG|"Am7"FGAB "D"A2Bc|
 "G"d3e dcBd|"C"gfga "Am7"gedc| "G"BGBd "Am7"cBAG|"D"FDEF "G"G2:|
 
-X: 311
+X: 308
 T: Reel des Menteries
 R: reel
 M: C|
@@ -3874,7 +3839,7 @@ K: D
 "D"d2Ad dfed | "A"cABc BAFA | "D"dcBA "D#dim"FAD2|"Em7"CDEF "A"GABc|
 "D"d2Ad dfed | "A"cABc BAFA | "D"dcBA FAD2|"A"EDCE "D"D2[D2A,2] |]
 
-X: 312
+X: 309
 T: Reel des Onions
 I: Reel des Onions	R-107	G	reel
 M: C|
@@ -3885,7 +3850,7 @@ K: G
 |:Bc| "G"d2g2 ggfg| "Am"a6 (3ABc| "D"d2a2 aaga| "G"b6 Bc|
     "G"d2g2 ggfg| "Am"a6 (3ABc| "D"d2a2 aaba|1 "G"g6 :|2 "G"g8 |]
 
-X: 313
+X: 310
 T:Reel des ti-minous
 R:reel
 M:C|
@@ -3898,7 +3863,16 @@ def|:"G"g2B2 d2 G2|B2D2 G3B|"D"A2FA DFAF| GABc ddef|
 "G"BdBA "G7/B"G2gf|"C"edef "Am"e2d2| "D"d2fe dcBA|1 GgdB "D"G2 A2:|\
 [2 GgdB "D"G4 |]
 
-X: 314
+X: 311
+T: Reel d'Hotelier
+I: Reel d'Hotelier	R-114	D	reel
+M: C|
+R: reel
+K: D
+AG| "D"FDDD DFAd| "G"BGGF G2ed| "A"cAAA Aceg| "D"fddc d2 :|
+|:ef| "G"gagf g2b2| "D"abaf d2fa| "A"gece Aceg| "D"fddc d2 :|
+
+X: 312
 T: Reel du Brae
 I: Reel du Brae		R-124	A Dor	reel
 M: C|
@@ -3909,7 +3883,7 @@ K: ADor
 |:"Am"eaab agea| gabg abef| "G"gage degd| egdB cABG|
 "Am"eaab agea| gabg abef| "C"gage "G"dBGB| cABG "Am"A2AA :|
 
-X: 315
+X: 313
 T:Reel du Faubourg
 R:Reel
 M:C|
@@ -3923,7 +3897,7 @@ K:G
 "G"b3 b"Am" bgfa | "G/B"gg(g2 g)dBG | "G"DGBd "A#dim"gfeg |"Am"fedf eAce |
  a3a a2g2 | "D"fefa f2~e2 | ~d2 ed ^cdef |["cont" "G"gfga g2||["Trans""G"g2z2zg eg|
 
-X: 316
+X: 314
 T: Reel du lapin
 M: C|
 L: 1/8
@@ -3934,7 +3908,7 @@ K:G
 [|:"G"dBGA BGBc |dB"G#dim"GBx "Am7"A2 AB| "D"cAFA DFAB|cAFA "D7"d2Bc|
 "G"dBGA BGBc |dB"G#dim"GBx "Am7"A2 AB| "D"cAFA D2 "^pizz"e2|"D"dcBA [1"G"G2 Bc:|[2"G"G4 ||
 
-X: 317
+X: 315
 T:Reel du Nord
 R:reel
 M:C|
@@ -3946,7 +3920,7 @@ K:Bm
 "Em"Acec "A"Acec| "D"dcdf a4| "A"Acec Acec|1 dfec "D"d2BB:|\
 [2 dfec "D"d4 |]
 
-X: 318
+X: 316
 T: Reel du père Bruneau
 M: C|
 L: 1/8
@@ -3958,7 +3932,7 @@ K: D
 "Cdim" A2 cB "A/C#" AGFE| "D"DdDd "A+"~B2 AB |"D"AAFA dFAd |fAd(f a) z2 B| "D/F#"A2 FA "Fdim"dFAd |
  "Em"c4{ec} B4{cB} | "A"E3 F G2 A2| "Em" c3 c c2 ~B2 | "A"A2 cB AGFE |"D"DDFA d2 ||
 
-X: 319
+X: 317
 T: Reel du Père Carignan
 M: C|
 L: 1/8
@@ -3971,7 +3945,7 @@ K:D
 "D"ABAF DFAd|"G"BdBG ABcd| "A7"efec Acef|1 gecA "D"dAAG:|\
 	[2 gecA "D"d4||
 
-X: 320
+X: 318
 T:Reel Eugene
 R:reel
 Z:Transcribed to abc by Mary Lou Knack
@@ -3982,7 +3956,7 @@ K:D
 |:"D"f2fe d2dB| AAdf "Do"b2f2| "Em"a2ag e2 (3cec| "A7"Aceg (3faf e2|
 "D"f2fe d2dB| AAdf "Do"b2f2| "Em"a2ag egec|1 "A7"dfec "D"d3e :|2 "A7"dfec "D"d4 |]
 
-X: 321
+X: 319
 T:Reel Saint-Jean
 M: C|
 L: 1/8
@@ -3996,7 +3970,7 @@ K:Dmaj
 "D"DCDE DEFG|"D/F#"A2AB AFED|"G"d2 Bd "D/F#"AFDE|1"A"FDEC "D"D2zA,:|[2 "A"FDEC "D"Df2e|]
 Transition: Skip the pickups
 
-X: 322
+X: 320
 T:Reel semeur
 I: Reel semeur	R-140	D	reel
 R:reel
@@ -4010,18 +3984,7 @@ A| "D"ABAG F2A2| f4 d4| ABAG  F2A2 | f4 d4  |
 |: "Em"a2(3gbg "A7"e2ce| "D"g2f2 "Bm"d3e| "Em"(3faf e2 "A7"B2c2 | "D"dcde "D#o"fedf|
 "Em"a2(3gbg "A7"eece| "D"g2f2 "Bm"d3c| "E7"B2g2 "A7"e2c2  |1 "D"dBAF "D#o"D2df :|[2 "D"dBAF D3|]
 
-X: 323
-T:Reel St-Simeon
-R:reel
-Z:Transcribed to abc by Mary Lou Knack
-M:C|
-K:D
-f| "D"a2fd A2df| aba^g "D#o"a3f| "Em"(3gag ec Acef| g2f2 "A7"g3f|
-"D"a2fd "Em7"A2df| "Do"aba^g "D"a3f| "Em"(3gag ec Acef| "A7"gf{g}fe "D"d3|]
-|:B| "D"A2f2 {g}fedc| "G"Bg (3ggg "Em"gfed| "A"ca (3aaa "A7"gece| "D"dcde "Do"fafd|
-"D"A2fg    fedc| "G"Bg (3ggg "Em"gfed| "A"ca (3aaa "A7"gece| "D"df"A"ec "D"d3 :|
-
-X: 324
+X: 321
 T: Reel St. Antoine
 I: Reel St. Antoine	R-132	A	reel
 R: reel
@@ -4032,7 +3995,18 @@ K: A
 |:"A"c3c cAce| dcBA "A#o"GABc| "Bm"d3d dBdf| edcB AGAB|
 "F#m"c3c cAce| "Bm"dcBA GABc| "E7"defg afed| cdBc "A"A4 :|
 
-X: 325
+X: 322
+T:Reel St-Simeon
+R:reel
+Z:Transcribed to abc by Mary Lou Knack
+M:C|
+K:D
+f| "D"a2fd A2df| aba^g "D#o"a3f| "Em"(3gag ec Acef| g2f2 "A7"g3f|
+"D"a2fd "Em7"A2df| "Do"aba^g "D"a3f| "Em"(3gag ec Acef| "A7"gf{g}fe "D"d3|]
+|:B| "D"A2f2 {g}fedc| "G"Bg (3ggg "Em"gfed| "A"ca (3aaa "A7"gece| "D"dcde "Do"fafd|
+"D"A2fg    fedc| "G"Bg (3ggg "Em"gfed| "A"ca (3aaa "A7"gece| "D"df"A"ec "D"d3 :|
+
+X: 323
 T: Reel á Gilbert
 C: Réjean Lizotte
 M: C|
@@ -4044,7 +4018,7 @@ K:A
 |:"A"e3f eca2|"D"f3a f2ed| "A"cdef "A#dim"ecAB|"Bm7"BABc "E7"BAF2|
 "A"e2ef eca2|"D"f2fg f2ed| "A"cdef "Bm7"ecAB|1 "E7"BABc B2cd:|[2 "E7"BABc "A"A2AF|]
 
-X: 326
+X: 324
 T:Reign Of Love
 R:reel
 M:C|
@@ -4055,7 +4029,7 @@ K:Emin
 |:"Em"e2B2d2A2-|A2BAG2F2|"D"A2GFE2A2|"G"B2G2"D"d4|
 "Em"e2B2d2A2-|A2BAG2F2|"D"A2GF EF D2|1"A"E8:|2"A"E6B,2|]
 
-X: 327
+X: 325
 T: Reunion Jig
 I: Reunion Jig	J-49	D	jig
 C: Bruce A. Randall
@@ -4067,7 +4041,7 @@ D| "D"FAB AFD| FAB cde| "Bm"fBA Bde| fBA "G"BdB|
 |:d| "D"fga fdg| fag fdf| "Em"ega bge| geb geg|
    "D"fda baf| def "A"edf| "Em"eBA "G"Bcd| "A"AFE "D"D2 :|
 
-X: 328
+X: 326
 T: Reverend Brother's Jig, The
 M: 6/8
 L: 1/8
@@ -4078,7 +4052,7 @@ K: Ador
 |:"Am"eaa aba|"G"gef ged|"Am"eaa aba|"G"ged cAA|
 "Am"eaa aba|"G"gef g3|"Am"a3 ged|"G"cAG "Am"A3:||
 
-X: 329
+X: 327
 T: Road to Boston
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
@@ -4089,7 +4063,7 @@ e2| "D"f6 ef| g2f2 e2d2| "A"c2d2 e2f2| "D"d2A2 F2A2|
 |:fg| "D"a6 ^ga| "B"b2a2 =g2f2| "Em"g6 fg| "A"a2g2 f2e2|
     "D"f6 ef| "G"g2f2 e2d2| "A"c2d2 e2c2| "D"d2A2 d2 :|
 
-X: 330
+X: 328
 T: Road to California
 I: Road to California	R-133	D	reel
 R: reel
@@ -4100,7 +4074,7 @@ A,2| "D"D2DE FEFE| DFAB AF- FA| "G"dcBA GFED| "A"CDE2 E2FE|
 |:"G"D2B2 B4| BABc dcBA| "D"F2A2 ABAG| FEFG ABAF|
 "G"D2B2 B4| BABc dcBA| "D"F2D2 DEFD|1 "A"EDC2 "D"D4 :|2 "A"EDC2 "D"D2 |]
 
-X: 331
+X: 329
 T:Road to Errogie, The
 S:Scottish reel, originally in B major
 Z:
@@ -4115,7 +4089,7 @@ ce|"A"a2-a a-a2ba|"A/C#"c'3b a3 e|"D"f2 ea- "A"ae f2-|"Bm"feae "E"fece|
 "A"a2-a a-a2ba|"A7/C#"c'3b a3 e|"D"f2 ea- "A"ae f2-|"Bm"feae "E"fece|
 "A"EA A2 "E"BABc|"A"eA A2 "E"Bcea|"D"f3f "A"ecAc|"E"BABc "A"A2|]
 
-X: 332
+X: 330
 T:Roaring Barmaid, The
 R:jig
 C:Tony O'Sullivan
@@ -4128,7 +4102,7 @@ K:G
 |:"G"deg b3 |"G/B"bab deg  |"C"b3 bag |"D"edB deg |
 "G"b3 bab |"G/B"agg bgg |"C"agg efg|"D"deg edB :| "G - go out on"G6 |]
 
-X: 333
+X: 331
 I: Smash the Windows
 T: Roaring Jelly
 I: Roaring Jelly	J-2	D	jig
@@ -4142,20 +4116,7 @@ a| "D"a2f d2f| A2a agf| "A"g2e c2e| A2g gfe|
    "D"agf fed| Adf agf| "A"gfe ecA| Ace gfe|
    "D"fed "A"gfe| "D"agf "G"bag| "D"fed "A"edc| "D"(d3 d2) |]
 
-X: 334
-T: Roaring Jelly
-M: 6/8
-Z: Transcribed to abc by Mary Lou Knack
-R: jig
-K: D
-A,| "D"DED F2A| d2f "A"ecA| "G"G2B "D"F2A| "A"E2F GFE|
-    "D"DED F2A| d2f "A"ecA| "G"Bgf "A"edc| "D"d3- d2 :|
-a| "D"a2f d2f| A2a agf| "A"g2e c2e| A2g gfe|
-   "D"f2 d "A"g2 e| "D"a2 f "G"bag| "D"fed "A"edc| "D"d3- d2 a|
-   "D"agf fed| Adf agf| "A"gfe ecA| Ace gfe|
-   "D"fed "A"gfe| "D"agf "G"bag| "D"fed "A"edc| "D"d3- d2 |]
-
-X: 335
+X: 332
 T: Robin's Nest, The
 L: 1/8
 R: jig
@@ -4165,7 +4126,7 @@ K: Cmaj
 |:"C"c3 "C/G"g^fg|"C"ea^f "C/E"gec|"Dm"A2 f fef|Adf "G"afd|
 "C"c3 "C/G"g^fg| "C"ea^f "C/E"g2 a|"C"gec "G"fdB|"C"cGE C3 :|
 
-X: 336
+X: 333
 T: Rock Valley
 M:6/8
 K:Am
@@ -4174,7 +4135,7 @@ K:Am
 |:"C"gag gag|"C"e2c cBA|"C"G2c B2c|"Dm"e2d d^cd|
 "C"gag gag|"C"e2c cBA|"G"G2c "G7"Bcd|["normal""C"cdc c3:|["Trans""C"c3]
 
-X: 337
+X: 334
 T: Rocky Road to Dublin
 M: C|
 L: 1/8
@@ -4185,7 +4146,7 @@ K: Amix
 |:"A"edeg abag|edeg abag| "G"edef gagf|edef g2 e2|
 "A"a3a -abag|egab a3g|"G"edef gage|"C"=c6 e2-:|
 
-X: 338
+X: 335
 T: Rolling Waves, The
 R: jig
 M: 6/8
@@ -4196,7 +4157,7 @@ K: Dmaj
 [|:"D"ABd e2 f|"Em7"d2c "A"B2 A|"D"ABd e2 f|"G"d2 A "A"B3|
 "D"ABd "D/C#"ede|"D/B"fdB "G"BAF|"D"AFE "D/F#"EFA|["Norm""G"B3 d3:|["Trans""G"!<(!B6!<)!||
 
-X: 339
+X: 336
 T: Rose by the Door, The
 I: Rose by the Door, The	W-29	D	waltz
 C: Andrea Hoag
@@ -4216,7 +4177,7 @@ W: Come dance through the night, your feet are so light.
 W: Your hands make such music, I ne'er saw the like.
 W: And when we are old, 'twill be better than gold, this day of the rose by the door.
 
-X: 340
+X: 337
 T: Rose in the Heather
 I: Rose in the Heather  J-13    D       jig
 M: 6/8
@@ -4228,7 +4189,7 @@ K: D
 |:"D"fdB ABd| faa afd| "G"gfg "D"fed| "Em"Bee "A"efg|
 "D"fdB ABd| faa afa| "G"baf "A"gfe| "D"fdc d3 :|
 
-X: 341
+X: 338
 T: Ruddy Turnstone, The
 I: Ruddy Turnstone, The	J-54	D/A	jig
 I: Noel Stone's Jig	J-54	D/A	jig
@@ -4241,7 +4202,7 @@ AG|: "D"FGA A2A| "Em"B3- BAG| "D"FDF GAB| "A7"E3- EAG|
 [K:A]|:^G| "A"A3 Bcd| e3- edc| "E"BGB dcB| "A"cBA "E"Bcd|
     "A"ecc c2e| "Bm"fdd B2A| "E7"GEG dcB|1 "A"A2E "E7"F2 :|2                                         | "A"A2z "A7"=G3|]
 
-X: 342
+X: 339
 T:Répertoire Gérard Lajoie
 R:reel
 M:C|
@@ -4253,7 +4214,7 @@ cd|:"A"e3e efed|cABc A2 F2|"A"EAAE AEAB|"Bm"cABc "E7"B2Ac|
 |:"D"AAFA "D7/F#"d3c|"G"B2GB "Em"e2 d2|"A7"cAce agec|"D"defd "A7"A2FG|
 "D"AAFA "D7/F#"d3c|"G"B2GB "Em"e2 d2|"A7"cAce agec|1dfec "D"d2FG:|[2 dfec "D"d2|]
 
-X: 343
+X: 340
 T: Saddle the Pony
 I: Saddle the Pony	J-8	G	jig	Set 43
 I: Red Stocking, The	J-8	G	jig	Set 43
@@ -4265,7 +4226,7 @@ K: G
 |:(3A/B/c/| "G"ded dcB| "D"def "G"gdB| ded dcB| "D"AFD AFD|
           "G"ded dcB| def gfg| "C"ecA "G"dBG| "D"FEF "G"G2 :|
 
-X: 344
+X: 341
 T:Sailor's Wife, The
 M:6/8
 L:1/8
@@ -4278,7 +4239,7 @@ K:Dminor
 "Dm"f2a agf|"C"e2g gec|"Gm"afd "A"ge^c|1 "Dm"d3 d2 e:|\
 [2 "Dm"d6|]
 
-X: 345
+X: 342
 T: Saint Anne's Reel
 I: Saint Anne's Reel	R-6	D	reel	Set 18
 I: Sainte Agathe	R-6	D	reel	Set 18
@@ -4290,7 +4251,7 @@ A2| "D"f2fg fedB| A2FG AFAd| "G"BGGF G2FG| "D"BAAF A2de|
 |:ag| "D"fdfa fdfa| "A"aggf g2gf| edcB ABce| "D"baa^g a2 a=g|
     "D"fdfa fdfa| "A"aggf g2gf| edcB ABce| "D"fdec d2 :|
 
-X: 346
+X: 343
 T: Saletan Special
 I: Saletan Special	S-S	G	square
 C: Bob McQuillen
@@ -4309,7 +4270,7 @@ G,2 B,2C2|
 "D7"d2c2 B2c2| "G"d3e d2B2| e2d2 B2G2| E2 D6-| D4 B2c2| d3e d2B2| "G7"A2G2 g2f2| "C"e8-| e4 e2f2|
 "C"g4 g3f| e2f2 g2a2| "G"g2 d6-| d4 B2d2| "A7"e3d e2g2| "D7"f2d2 f2a2| "G"g8-| g2 |]
 
-X: 347
+X: 344
 T:Sasha
 M:C
 L:1/4
@@ -4322,7 +4283,7 @@ w:both both both * knee knee knee) La la la la la la la la la la HEY!
 |:[K:D]"D"F2A2|d3e|dcBA|"Em"G3F|"A"E2A2|c3d|
 ["Optional 1st ending"cBAG|"D"F3E:|[2cABc|d2z2|]
 
-X: 348
+X: 345
 T: Saut du lapin
 M: C|
 L: 1/8
@@ -4335,7 +4296,7 @@ K: G
 "G"gdBG "G/F#"d2 ef|"G/E"gdBG "G/D"d3 D| "D"FdDd FdDd|1eAfA "G"[g3B3] g :|\
 [2 eAfA "G" [g2B2] z2||
 
-X: 349
+X: 346
 T: Say No More
 M: C|
 L: 1/8
@@ -4346,7 +4307,7 @@ ag| "C"ecag ecag | (3ege c2 c2 Bc|"G"dedc BGAB | "C" cdef "G"g2ag |
 "Am"cABc AGEG |"F"FE F2 "F#dim"A4| "G"G^FGA G=F DB,| "C"C6:|
 | "G"G^FGA G=F D2| "G"G^FGA G=F D2| "G"G^FGA G=F DB,|"C"C6|]
 
-X: 350
+X: 347
 T: Scollay's Reel
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
@@ -4357,19 +4318,7 @@ K: Em
 |:"Em"efge B2B2| g2g2 B4| "Am"c2BA "Em"G2G2| "D"FGAF D3F|
 "Em"E3F G3A| BABd e2d2| B3c "B7"BAFA| "Em"G2E2 E4 :|
 
-X: 351
-T: Scollay's Reel
-I: Scollay's Reel	R-19	Em	reel
-I: King of the Fairies	R-19	Em	reel
-M: C|
-R: reel
-K: Em
-"Em"E3F G3A| BcBA GEGA| B2E2 EFG2| "D"FGAF D2F2|
-"Em"E3F G3A| BcBA GEGA| B3c "B7"BAFA| "Em"G2E2 E4 :|
-|:"Em"efge B2B2| g2g2 B4| "Am"c2BA "Em"G2G2| "D"FGAF D3F|
-"Em"E3F G3A| BABd e2d2| B3c "B7"BAFA| "Em"G2E2 E4 :|
-
-X: 352
+X: 348
 T: Scotch Mary 
 M: C|
 L: 1/8
@@ -4382,7 +4331,7 @@ K:Dmix
 "D"d3c ABAG| FGAB "C"cABc| "D"dBcA BGAG|1 "C"FDEF "D"DABc:|\
 [2 "C"FDEF "D"D4|]
 
-X: 353
+X: 349
 T: Scotty O'Neil
 I: Scotty O'Neil	R-32	D	reel
 C: Bob McQuillen
@@ -4394,7 +4343,7 @@ AG| "D"F2D2 A2F2| "G"dedc BABc| "D"d2A2 G2F2| "A"F2 E4 AG|
 |:AG| "D"F2A2 f2e2| "G"d2c2 B3c| "D"d2A2 G2F2| "A"F2 E4 AG|
     "D"F2D2 f3e| "G"dedc BABc| "D"d2A2 "A"ABAG| "D"F2 D4 :|
 
-X: 354
+X: 350
 T:Screech Owl Reel
 R:Reel
 M:C|
@@ -4407,7 +4356,7 @@ K:Am
 "F"a2 a4 a2|"C"ge c2 "G"d4|"Dm"dcde fedc|"Bb"d2 d2 "Am"c2 A2|
 "F"A2 cA "G"B2dB|"F/A"c2 ec "G/B"d2 fd|"C"e2 ce "Dm"dcBA|"Em"E2 G2 "Am"A4|]
 
-X: 355
+X: 351
 T: Seamus O'Brien
 I: Seamus O'Brien	W-20	G	waltz
 M: 3/4
@@ -4419,7 +4368,7 @@ g>f| "G"e2 d2 BA| G4 DD| "C"E2 G2 E2| "G"D3E DC|        B,2 D2 GB| "Em"e2 d2 B2|
 B2| "Em"e3d ef| g2 f2 e2| "B"f2 B3c| B4 B2|    "Em"e3d ef| g2 f2 g2| "C"a6| "D"g4 f2|
     "G"e2 d2 BA| G4 DD| "C"E2 G2 c2| "C#dim"e3g fe|     "G"d2 B3G| "D"A2 E2 F2| "G"G4- GA| G4|]
 
-X: 356
+X: 352
 T: Seanamhac Tube Station
 M: 6/8
 L: 1/8
@@ -4433,7 +4382,7 @@ K:Gdor
 "Gm"GFD GFD | GFD "F"dcA | "Gm"dcA "F"dcA |["cont""Gm"~G3 "F"ABA ||
 ["trans""Gm"Gz2z3||
 
-X: 357
+X: 353
 T:Set Américain
 R:reel
 C:Théodore Duguay
@@ -4446,7 +4395,7 @@ K:D
 |: "Bm"B3c dcde| fefg "F#"fedc | "Bm"BABc dcBA | "Em"GFGA "F#"G2F2 |
 "Bm"BFBc dcde| fefg "F#"fedc| "Bm"BABc "F#"dcBA |1 "Bm"Bbfd "Bm"B2 "F#"dc  :| [2 "Bm"Bbfd B2 |]
 
-X: 358
+X: 354
 T: Shandon Bells
 I: Shandon Bells	J-25	D	jig
 M: 6/8
@@ -4457,7 +4406,7 @@ B| "D"AFD DFA| ded cBA| "Em"BGE EFA| "A7"B2 A Bcd|
 |:g| "D"f2 (d d)ed| faa afd| "A"cAA eAA| "A7"cBc efg|
    "D"f2 (d d)ed| faa afd| "G"Bcd "A7"ecA| "D"d3 d2:|
 
-X: 359
+X: 355
 T: Sheebag Sheemore
 I: Sheebag Sheemore	W-3	D	waltz
 C: O'Carolan
@@ -4470,7 +4419,7 @@ de| "D"f3 e d2| d3 e d2| "G"B4 A2| "D"F4 A2|    "G"BA Bc d2| "A"e4 de| "D"f4 (3e
 |:de| "D"f3 e d2| ed ef a2| "G"b4 a2| "D"f3 e d2|       "A"e4 a2| "D"f2 e2 d2| "G"d4 B2| "D"A4 BA|
     "D"F4 (3EFE| D4 f2| "G"B4 e2| "A"A4 a2|       "G"ba gf ed| "A"e4 dc| "D"d4 dc| d4:|
 
-X: 360
+X: 356
 T: Sheik of Araby, The
 I: Sheik of Araby, The	S-S	A	square
 C: T. Snyder
@@ -4483,7 +4432,7 @@ K: A
 "A"F6 E2| F6 "Cdim"E2| "E7"F8-| F6 E2| F6 E2| B6 =c2| "C#"c8-| c6 c2|
 "F#"d6 c2| d6 c2| "B7"c8-| c6 G2| "E7"F6 G2| E6 B2| "A"A8-| A4 |]
 
-X: 361
+X: 357
 T: Shepard's Wife, The
 I: Shepard's Wife, The	W-2	G	waltz
 M: 3/4
@@ -4495,7 +4444,7 @@ D2| "G"G4 A2| B4 c2| d4 g2| g2 f2 d2|    "C"e3 f g2| "G"d2 c2 B2| "A7"A2 B2 G2| 
 ga| "G"b4 b2| "D"a3 g f2| "Em"g4 g2| "Bm"g2 f2 d2|    "C"e3 f g2| "G"d2 c2 B2| "A7"A2 B2 G2| "D"F3 E D2|
     "G"b4 b2| "D"a3 g f2| "Em"g3 a g2| "Bm"f4 d2|    "C"e3 f g2| "D"a2 g2 f2| "G"g6| G4|]
 
-X: 362
+X: 358
 T: Ship in Full Sail
 I: Ship in Full Sail	J-56	G	jig	Set 45
 M: 6/8
@@ -4506,7 +4455,7 @@ K: G
 |:"G"dgg bgg| "D"aga "Em"bge| "G"dgg bgg| "D"a2a age|
 "G"dgg bgg| "D"aga "Em"bgd| "C"ege "G"dBG| "D"ABA "G"G3 :|
 
-X: 363
+X: 359
 T: Ships Are Sailing
 I: Ships Are Sailing	R-115	E Dor	reel
 M: C|
@@ -4517,7 +4466,7 @@ K: EDor
 |:ef | "G"gfga bgeg| "D"fefg afdf| "Em"gfga bgeg| "D"fedf "Em"e2ef|
      "G"gfga bgeg| "D"fefg afdf| "G"g2ge "D"f2fd |1     "Em"edef gf :|2 "Em"edef gfed |]
 
-X: 364
+X: 360
 T:Shove That Pig's Foot a Little Further in the Fire
 M:C|
 L:1/8
@@ -4527,7 +4476,7 @@ GA|"G"BdBA G2 E2|"C"GAGE "G"D4|DE G2 B3c| "D"B2 A4 GA|
 |:GA|"G"Bd-d2 dBdg|"C"edBc "G"d4|"C"g4 g3d|"D"e2 d4 dd|
 "G"Bd-d2 dBdg|"C"edBc "G"d4|BABd "D"BAGB|"G"A2 G4 :||
 
-X: 365
+X: 361
 T: Silver and Gold Two-Step
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
@@ -4537,7 +4486,7 @@ f2g2| "D"a4 f2d2| A4 d2f2| "A7"a2 g4 f2| g4 e2f2|"A7"g4 e2c2| A4 c2e2|1 "D"b2 a4
 F2G2| "D"A2f2 A2f2| Af3 f3f| "A7"f2 e4- e^d| e4 E2F2|"A7"G2e2 G2e2| Ge3 e3d| "D"e2 d4- dc| d4 F2G2|
       "D"A2f2 A2f2| Af3 "D7"f3f| "G"a4 g2e2| "Em"B4 c2d2|"A7"f2 e4 c2| A4 c2e2| "D"d4- dedc| d4 |]
 
-X: 366
+X: 362
 T:  Silver Spear, The
 M: C|
 L: 1/8
@@ -4547,7 +4496,7 @@ K: D
 |: "D"fa (3aaa bfaf | "G"gfed Bcde |  "D"fa (3aaa bfaf | "G"gfed "A"B2 A2 |
  "D"fa (3aaa bfaf | "G"gfed Bdef | "G"g3e "D"f3e | "A"dfed B2A2 :|
 
-X: 367
+X: 363
 T: Silver Spire, The
 M: C|
 L: 1/8
@@ -4558,7 +4507,7 @@ K: Dmaj
 |:"A"A,B,CD EFGE|"D"FDEF GABc|"G"dBBA "Bm/F#"Bcde|"Em"f2gf "A"e3c|
 "D"d2fd "A"c2ec|"G"BcdB "D"AFDF|"G"G2BG "D"FEDF|"A"EDCE "D"D4:|
 
-X: 368
+X: 364
 T:Simon Thoumire's
 R: jig
 M: 6/8
@@ -4572,7 +4521,7 @@ K: Gmaj
 K:Dminor
 |:"Dm""_F"fga fga|"Bb"fga agf|"C""_C"ecg ecg|"Am"efg gfe|"Bb""_Dm"f2a agf|"G""_C"e2g gec|"Am""_Gm"afd "_A"ge^c|1 "Dm""_Dm"d3 d2 e:|[2 "Dm""_Dm"d6|]
 
-X: 369
+X: 365
 T: Skippin' Cat
 I: Skippin' Cat		R-122	G	reel
 C: Jack Link
@@ -4584,7 +4533,7 @@ B,C| "G"DCB,C DCB,C| DGBG "C"c2 Bc| "G"dedc BAG=F| "C"EC3 C2B,C|
 |:"D"A3c "G"B2d2| "D"ABcA "G"BG3| "D"A3c Bdef| gedc "G"BG3|
 "D"A3c "G"B2d2| "D"ABcA "G"Bdef| "D"gage dBAc |1 "G"BG3 G4 :|2 "G"BG3 G2|]
 
-X: 370
+X: 366
 T: Skirmish
 K:D
 M:C|
@@ -4594,7 +4543,7 @@ de|"D"f4 edce|d4 ABAG|F2A2D2A2|"G"BAGF "A"E2 de|
 |:AG|"D"F2A2"A"E2A2|"D"F2A2"A"E2A2|"D"F2A2"A"E2A2|"G"BAGF "A"E2 DE|
 "D"F2A2"A"E2A2|"D"F2A2"A"E2A2|"D"F2A2 "A"EFGE|"A"F2E2"D"D2:|]
 
-X: 371
+X: 367
 T: Sliabh Russell
 M: 6/8
 L: 1/8
@@ -4605,7 +4554,7 @@ K: Ador
 |:"Am"eaa efg|agf "G"gfd|"Am"eaa efg|"D"afd "Em"e3|
 "Am"eaa efg|agf "G"gfd|"Am"edB cBA|"G"BAG "Am"ABd:|
 
-X: 372
+X: 368
 T: Sligo Creek
 R:reel
 Z:transcribed to abc by Mary Lou Knack
@@ -4617,7 +4566,7 @@ de| "Bm"f2ef dB~B2| f2ef df~f2| "A"a2ed cAAF| EFAB "F#m"c3e|
 |: BA| "G"GB~B2 Bcde| "D"f2ec defd| "A"eA (3.A.A.A cAFA| EFAB "F#m"c2BA|
 "G"GB~B2 Bcde| "D"f2ec defd| "A"ea (3.a.a.a faec| ABcA "Bm"B2 :|
 
-X: 373
+X: 369
 T: Slip-On Gang, The
 R: reel
 C: Damian McKee
@@ -4629,7 +4578,7 @@ K: A
 |:"E"BE (3EEE eBde | "A"cA (3AAA "A/C#"cAce | "D"fd (3ddd "A/C#"ec (3ccc | "Bm"d2cd "Bm/A"BAGA |
 "E/G#"BE (3EEE "E"eBde | "A"cA (3AAA cA"A/C#"ce | "D"fd (3ddd "A"ec Ac |1 "E"dBGB "A"A2GA :|2 "E"dBGB "A"A4 |]
 
-X: 374
+X: 370
 T: Smoke on the Water
 I: Smoke on the Water	S-S	G	square
 C: Zeke Clements
@@ -4648,7 +4597,7 @@ D2E2| "G"G2G2 G2A2| G2E2 D2E2| "C"G2G2 G2E2| "G"G4 D2E2| \
       "G"G2z2 G2z2| G2E2 D2E2| "C"G2 G4 E2| "G"G4 G2A2| \
          B2d2 d2e2| d2B2 G2A2| "D7"B2G2 A2F2| "G"G4 |]
 
-X: 375
+X: 371
 T:Snow Deer
 R:reel
 C:Bob Wills
@@ -4661,7 +4610,7 @@ c2 "C7"d2e2|"F"f4 A4-| A2c2 B2A2| "C"G4 e4-| e4 e3f|    "G"e2d2 d2cd-| d4 d3e| "
               "F"f4 A4-| A2c2 B2A2| "C"G4 e4-| e4 e3f|    "G7"e2d2 d2cd-|d2f2 e2d2| "C"c8 |["norm" c2 x2 |]["end" c8 |]
 _AAFA BBAB| ddBd f2f2| gef^f ge=f^f| g^f=fe-e4|
 
-X: 376
+X: 372
 T: Solomon Levi
 I: Solomon Levi	S-S	G	square
 M: 6/8
@@ -4676,7 +4625,7 @@ z2z2zd| "G"Hdzd dzd| dzd dzd| "C"eze eze| e4 ze|
 "B7"b3 fga| "Em"g3 e3| "B7"bc'b agf| "Em"e4 z2|
 "A7"a3 efg| "D"f3 d3| "A7"aba gfe| "D"ded cBA:|
 
-X: 377
+X: 373
 T: Sound of Jura, The
 I: Sound of Jura, The	W-32	G	waltz
 C: Eric Scott
@@ -4689,7 +4638,7 @@ GE| "G"D4 D2| "C"G2 A2 G2| "D"A4 A2| "G"d4 "C"ed|     "G"B4 B2| "D"A2 B2 d2| "G"
     "Em"E4 E2| B2 A2 A2| B2 d2 B2| e4 de|     "C"g4 ed| "G"B2 d2 e2| "C"e2 d2 e2| "D"A4 GE|
     "G"D4 D2| "C"A2 G2 A2| "D"B2 d2 A2| "G (Em)"B4 Bd|     "C"e3d e2| "G"B2 A2 B2| "D"A4 F2| "Em"E4|]
 
-X: 378
+X: 374
 T: South Wind
 I: South Wind	W-11	G	waltz
 H: from Robin C.
@@ -4701,7 +4650,7 @@ dc| "G"B3 A G2| B3 c d2| "D7"A4 AB| A4 dc|    "G"B3 A G2| "C"E2 D2 E2| "G"G4 G2|
 d2| "G"g4 g2| "C"g3 f e2| "G"d4 d2| d4 c2| B3 A G2| B3 c d2| "D7"A4 AB| A4 d2|
     "C"g4 g2| g3 f e2| "G"d4 BA| B4 dc| B3 A G2| "D7"A c3 F2| "G"G6| G4|]
 
-X: 379
+X: 375
 T:Speed the Plow
 R:Reel
 M:C
@@ -4712,7 +4661,7 @@ K:A
 |:"A"e2e2 "D"fedf | "A"ece2 "D"f3e | "D"fefg "Bm"afed | "E"c2<B2 B2cd |
 "A"e2e2 "D"fedf | "A"ece2 "D"f3"<("">)"e | "Bm"fefg afed | "E"cB3 "A"A4:|]
 
-X: 380
+X: 376
 T: Spel-Gulle's Polska
 I: Spel-Gulle's Polska	M-2	Dm	hambo
 M: 3/4
@@ -4725,7 +4674,7 @@ K: Dm
 |: "F"a2 f>a f>a| (3aga b>a g>f| "A"g2 e>g e>g| (3gfg a>g f>e|
    "Dm"d2 d>^c d>e| f2 f>e d^c/d/| "A"e2 e>^c AB/c/| "Dm"d2 d4:|
 
-X: 381
+X: 377
 T: Spootiskerry
 I: Spootiskerry	R-78	G	reel
 C: Ian Burns
@@ -4739,7 +4688,7 @@ ef| "Em"g2ed edB2| BABG "C"E2DE| "G"GABd "Em"eged| "A7"B2A2 "D7"A2ef|
     "Em"g2ed edB2| BABG "C"E2DE| "G"GABd "Em"eged| "A7"B2A2 "D7"A2DE|
     "G"G2DE GDEG| DEGA "G7"B2AB| "C"g2ed "Am"edBA| "D7"dBAB "G"G2 |]
 
-X: 382
+X: 378
 T: Spotted Dog, The
 M: 6/8
 L: 1/8
@@ -4750,7 +4699,7 @@ K: A
 |:"A"cee ece|"D"fec "A"ecA|"A"eaf "F#m"ecA|"Bm"EFA "E"B2A|
 "A"cee ece|"D"fec "A"e2 a|"D"f2a "A"e2a|"E"ABc "A"B2A:|
 
-X: 383
+X: 379
 T: Spotted Pony, The
 M: C|
 Z: Transcribed to abc by Mary Lou Knack
@@ -4761,7 +4710,7 @@ FE| "D"D2D2 "A"E2E2| "D"FDF2 "G"G4| "D"ABde fede| f2a2 "A"e2 FE|
 |:"D"f2a2 f4| "G"efed BcdB| "D"ABde fede| f2a2 "A"e4|
 "D"f2a2 f4| "G"efed BcdB| "D"ABAB dBAG |1 "A"F2E2 "D"D4 :|2 "A"F2E2 "D"D2|]
 
-X: 384
+X: 380
 T: Squirrel in the Tree
 I: Squirrel in the Tree	J-39	G	jig
 M: 6/8
@@ -4771,6 +4720,51 @@ d2c|: "G"BBB B2B| B2A GAB| "C"ccc c2B| c2d efg|
       "D"fff fff| fed cBA|1 "G"GBd "D"e2d| "G"B3 Bdc:|2 "G"GBd "D"b2a| "G"g3 d2|]
 |:g| "G"bbb b2b| b2a "C"gfe| "G"ddd d2e| d2c Bdg|
    "D"fff fff| fed cBA|1 "G"GBd "D"e2d| "G"B3 Bd:|2 "G"GBd "D"bfa| "G"g3 g2|]
+
+X: 381
+T: Stan Chapman
+I: Stan Chapman	J-62	A	jig
+C: Jerry Holland
+R: jig
+M: 6/8
+K: A
+F| "A"E3 EFA| "E"B3 Bce| "D"fea "F#m"fec| "Bm"ecA "E"BAF|
+   "A"E3 EFA| "E"B3 Bce| "D"fea "E"fec| "A"ecA A2 :|
+|:f| "A"e3 ecA| "D"f3 fga| "A"fec BAB| "F#m"cAF F2f|[1 "A"e3 ecA| "D"f3 fga|
+ fec "E"BAB| "A"cAA A2 :|[2 "A"ecA ecA| "D"fdf fga| fec "E"BAB| "A"cAA A2 |]
+
+X: 382
+T: Star of Munster, The
+M: C|
+L: 1/8
+K: Ador
+ "Am"c3A "G"BAGB | "Am"AGEF "G"GED2|"Am"EAAB cBcd | eaaf "em"gfed |
+  "Am"cBAc "G"BAGB | "Am"AGEF "G"GED2| "Am"EAAB cBcd  | "Em"edcB "Am"A4 :|
+|: "Am"a3b ageg | agab agef|"G"g2ga gfef|gfga gfe2 |
+ "Am"a3b ageg | agab agef| "G"g4 "Am"a4 |[1 "G"b3a gfe2 :|   [2 "G"b3a "Em"gfed ||
+
+X: 383
+T: Star of the County Down, The
+I: Star of the County Down, The	W-1	Am	waltz
+M: 3/4
+Z: Transcribed to abc by Mary Lou Knack
+R: waltz
+K: Am
+EG| "Am"A4 A2| "F"A3 G A2| "C"c4 c2| "G"d4 cd|     "C"e3 d c2| "Am"A3 G E2| "Em"G6-| G2 c2 B2|
+    "Am"A4 A2| "F"A3 G A2| "C"c4 c2| "G"d4 cd|     "Am"e3 d c2| "Dm"A4 G2| "Am"A6-| A4|]
+e2| "C"g4 e2| e3 d c2| "G"d4 d2| d4 cd|    "Am"e3 d c2| A3 G E2| "Em"G6-| G2 c2 B2|
+    "Am"A4 A2| "F"A3 G A2| "C"c4 c2| "G"d4 cd|     "Am"e3 d c2| "Dm"A4 G2| "Am"A6-| A4|]
+
+X: 384
+T: Staten Island
+I: Staten Island	R-6	D	reel
+M: C|
+R: reel
+K: D
+AG| "D"FDFG A2A2| dfed "D7"dcBA| "G"B2GB "D"A2FA| "A"G2E2 E2AG|
+    "D"FDFG A2A2| dfed "D7"dcBA| "D"d2d2 "A"efge| "D"f2d2 d2 :|
+|:fg| "D"a2fa "A"g2eg| "D"f2df "A"ecA2| "C"=c2c2 efge| =c2c2 efge|
+    "D"a2fa "A"g2eg| "D"f2df "A"ecA2| "D"d2d2 "A"efge| "D"f2d2 d2 :|
 
 X: 385
 T: St. Joseph's
@@ -4783,51 +4777,6 @@ K: D
 |:"D"Af2g fedc| "G"BG2B g4| "A7"e2ef edcB|1 ea2a abag :|2 Afec "D"d2dA |]
 
 X: 386
-T: Stan Chapman
-I: Stan Chapman	J-62	A	jig
-C: Jerry Holland
-R: jig
-M: 6/8
-K: A
-F| "A"E3 EFA| "E"B3 Bce| "D"fea "F#m"fec| "Bm"ecA "E"BAF|
-   "A"E3 EFA| "E"B3 Bce| "D"fea "E"fec| "A"ecA A2 :|
-|:f| "A"e3 ecA| "D"f3 fga| "A"fec BAB| "F#m"cAF F2f|[1 "A"e3 ecA| "D"f3 fga|
- fec "E"BAB| "A"cAA A2 :|[2 "A"ecA ecA| "D"fdf fga| fec "E"BAB| "A"cAA A2 |]
-
-X: 387
-T: Star of Munster, The
-M: C|
-L: 1/8
-K: Ador
- "Am"c3A "G"BAGB | "Am"AGEF "G"GED2|"Am"EAAB cBcd | eaaf "em"gfed |
-  "Am"cBAc "G"BAGB | "Am"AGEF "G"GED2| "Am"EAAB cBcd  | "Em"edcB "Am"A4 :|
-|: "Am"a3b ageg | agab agef|"G"g2ga gfef|gfga gfe2 |
- "Am"a3b ageg | agab agef| "G"g4 "Am"a4 |[1 "G"b3a gfe2 :|   [2 "G"b3a "Em"gfed ||
-
-X: 388
-T: Star of the County Down, The
-I: Star of the County Down, The	W-1	Am	waltz
-M: 3/4
-Z: Transcribed to abc by Mary Lou Knack
-R: waltz
-K: Am
-EG| "Am"A4 A2| "F"A3 G A2| "C"c4 c2| "G"d4 cd|     "C"e3 d c2| "Am"A3 G E2| "Em"G6-| G2 c2 B2|
-    "Am"A4 A2| "F"A3 G A2| "C"c4 c2| "G"d4 cd|     "Am"e3 d c2| "Dm"A4 G2| "Am"A6-| A4|]
-e2| "C"g4 e2| e3 d c2| "G"d4 d2| d4 cd|    "Am"e3 d c2| A3 G E2| "Em"G6-| G2 c2 B2|
-    "Am"A4 A2| "F"A3 G A2| "C"c4 c2| "G"d4 cd|     "Am"e3 d c2| "Dm"A4 G2| "Am"A6-| A4|]
-
-X: 389
-T: Staten Island
-I: Staten Island	R-6	D	reel
-M: C|
-R: reel
-K: D
-AG| "D"FDFG A2A2| dfed "D7"dcBA| "G"B2GB "D"A2FA| "A"G2E2 E2AG|
-    "D"FDFG A2A2| dfed "D7"dcBA| "D"d2d2 "A"efge| "D"f2d2 d2 :|
-|:fg| "D"a2fa "A"g2eg| "D"f2df "A"ecA2| "C"=c2c2 efge| =c2c2 efge|
-    "D"a2fa "A"g2eg| "D"f2df "A"ecA2| "D"d2d2 "A"efge| "D"f2d2 d2 :|
-
-X: 390
 T: Svensk-Anna's Waltz
 I: Svensk-Anna's Waltz	W-12	D	waltz
 H: from Matt Fichtenbaum 3/81
@@ -4840,7 +4789,7 @@ A FG| "D"A2 f3 e| "G"d2 c2 B2| "D"A2 F2 FG| A3 A FG| A2 f3 e| d2 c2 d2| "A"e3 f 
 |:A FG| "D"A4 f2| A3 F GA| "G"B4 g2| B4 B2|     "A"c2 E2 EF| G3 F GA| B2 A2 G2| "D"FG FD FG|
      "D"A4 f2| A3 F GA| "G"B4 g2| B4 B2|      "A"c3 d cB| A2 f2 e2| "D"d3 e dc| d3:|
 
-X: 391
+X: 387
 T: Swallow's Nest, The
 I: Swallow's Nest, The	J-57	D	jig	Set 45
 M: 6/8
@@ -4851,7 +4800,7 @@ A/c/| "D"dcd fdc| dAG FED| FAd "A"cAF| E=CE "A7"GFE|
 |:f/g/| "D"a>ba fdf| "A7"gag ecA| "D"fef "A7"gfg| ecA GFE|
       "D"DFA dAF| "Em"EGB "A7"efg |1 "D"f/f/df "A7"gec| edc "D"d2 :|2      "D"f2f "A"gec| edc "D"d2 :|
 
-X: 392
+X: 388
 T: Sweet Baby James Waltz
 I: Sweet Baby James Waltz	W-21	A	waltz
 C: Aram Hollman
@@ -4869,7 +4818,7 @@ K: A
        "Bm"B4 (3::2B2 c| "C#m"B2 A2 E2| "D"F2 (A2 (3::2A2)A| "E"B4 (3::2e2 d|
        "F#m"c2 (F2 (3::2F2)E| "D"F2 (A2 (3::2A2)B| "A"A6-| A4|]
 
-X: 393
+X: 389
 T: Sweet Nell
 R: reel
 C: Jamie Gans
@@ -4882,7 +4831,7 @@ K: A
 |: "A"e4 a3g | "D"f2 d4 e2| "A" a2f2 ec3 | "E"B3BB2AB |
 "A"cABc AGFG| "A"AG3 "D"F4| "E" EFAB cABG |1 "A"A3A A2 cd:|2 "A"A3A A4 |]
 
-X: 394
+X: 390
 T: Swinging on a Gate
 I: Swinging on a Gate	R-35	G	reel
 M: C|
@@ -4893,7 +4842,7 @@ K: G
 |:"G"gfga bagf| "Em"gfed B2AG| "Am"EAAB cBAG| EAAB "D"cdef|
 "G"gfga bagf| "Em"gfed edBd| "Am"cABG "C"AGEG| "D"DGGA "G"G4 :|
 
-X: 395
+X: 391
 T: Take Me Out to the Ballgame
 I: Take Me Out to the Ballgame	W-31	F	waltz
 C: Albert von Tilzer
@@ -4906,7 +4855,7 @@ K: F
 "F"F2 z2 f2| d2 c2 A2| "C"c6| G4 A2| "F"F4 G2| "F7"A2 B2 c2| "Bb"d6-| d2 d2 e2|
 "Bb"f2 z4| "Bdim (Bb)"f2 z4| "F"f2 e2 d2| "D7"c2 =B2 c2| "G7"d6| "C"e6| "F"f6-| f2 z4|]
 
-X: 396
+X: 392
 T: Tam Lin
 R: reel
 K: Dm
@@ -4914,7 +4863,7 @@ G,|: "Dm"A,2DA, FA,DA,| "Bb"B,2DB, FB,DB,| "C"C2EC GCEG|[1,3 "Am"FEDC DCA,G, :|[
 |:"Dm"dcAG F2 D2|dcAG F2 D2|"C"cE (3EEE cEdE|cE (3EEE c=Bc^c|
 "Dm"dcAG F2 D2|dcAG F2 D2|"Bb"B,3A, B,CDE|"Am"FEDC "Dm"D4:|
 
-X: 397
+X: 393
 T: Temperance Reel
 I: Temperance Reel	R-10	G	reel
 M: C|
@@ -4925,7 +4874,7 @@ K: G
 |:B2| "Em"Beed e3f| geaf gfed| "D"Adde d3e| feaf gfed|
     "Em"Beed e3f| geaf gfed| BEED EFGA |1 "D"BdAF "G"G2 :|2"D"BGAF "G"GFED|]
 
-X: 398
+X: 394
 T: Tenpenny Bit, The
 M: 6/8
 Z: Transcribed to abc by Mary Lou Knack
@@ -4937,7 +4886,7 @@ K: ADor
 |:B| "Am"A2a aga| "Em"bge dBG| "Am"A2a aga| "Em"bge g2d|
    "Am"e2a aga| "Em"bge dBd| edB gBB| "Am"BAA A2 :|
 
-X: 399
+X: 395
 T: Three Flowers, The
 I: Three Flowers, The	W-10	G	waltz
 M: 3/4
@@ -4949,7 +4898,7 @@ e2| "G"d4 d2| B4 g2| "D"f4 f2| A4- AB| c4 A2| F4 A2| "G"G6-| G6|
 "G"d4 d2| "C"e4 g2| "D"a6| b4 a2| "G"g4 e2| "D"d4 e2| "G"g6-| g2 f2 e2|
 "G"d4 d2| B4 g2| "D"f4 f2| A4- AB| c4 A2| F4 A2| "G"G6-| G4|]
 
-X: 400
+X: 396
 T: Tierspolska
 I: Tierspolska	M-1	G	hambo
 C: Matt Fichtenbaum
@@ -4963,7 +4912,7 @@ D| "G"G2 B>D G>B| "C"(3cBc e>c A>G| "D"F2 A>D F>A| "G"d>e ~d>c B>A|
 |:G4| "G"(3GBd g2 g>g| "D"g>f f2 f>f| "C"f>e c>e g>e| "G"e>d d>B G>B|
       "C"c/d/c/B/ c>d e>c| "G"c>B B>c d2| "D"D2 F>A c>A|1 "G"(3FEF :|2 "G"(3FEF G3|]
 
-X: 401
+X: 397
 T: Tillie's a Treasure
 I: Tillie's a Treasure	W-35	A	waltz
 C: Leslie Fuller
@@ -4976,7 +4925,7 @@ K: A
 |:cd| "A"e6| "E7"d6| "A"c6| "E7"B6| "A"A4 A2| A2 B2 c2| "E7"c2 B2 A2| B4 cd|
     "A"e6| "E7"d6| "A"c6| "E7"B6| "A"A4 A2| "E7"A2 B2 G2| "A"A6-| A4 :|
 
-X: 402
+X: 398
 T: Timmy Clifford's
 Z: Transcribed to abc by Mary Lou Knack
 R: jig
@@ -4988,7 +4937,7 @@ K: G
 "C"efe "G"d2B| BAG GBd| "C"efe "G"d2B| BAG "D"A2g/f/|
 "C"efe "G"d2B| BAG GAB| "C"c3 "G"B3|1 "D"AGF "G"GBd :|2 "D"AGF "G"GDB,|]
 
-X: 403
+X: 399
 T: Tipperary So Far Away
 I: Tipperary So Far Away	W-10	G	waltz
 M: 3/4
@@ -5000,7 +4949,7 @@ d2| "G"G4 B2| d4 g2| "C"e3 d e2| "D"d4 BA| "G"B2 G2 A2| "C"G4 G2| "G"G6-| G4 B2|
 B2| "G"d4 d2| "D"e4 f2| "G"g4 g2| "D"f2 e2 d2| "C"e4 e2| "G"e2 d2 B2| "D"d6-| d2 B2 A2|
     "G"G4 B2| d4 g2| "C"e3 d e2| "D"d4 BA| "G"B2 G2 A2| "C"G4 G2| "G"G6-| G4|]
 
-X: 404
+X: 400
 T: Tipsy Sailor, The
 I: Tipsy Sailor, The	J-51	Em	jig
 H: Scottish jig
@@ -5011,7 +4960,7 @@ D| "Em"E2B- BAB| E2B- BAB| "D"ded d^cB| AFD DEF|    "Em"E2B- BAB| E2B- BAB| "D"A
 f| "Em"eBe gfe| Bef gfe| "D"fdA FAd| fdf "B7"agf|    "Em"eBe gfe| Bef gfe| "D"fdf gfg| "Em"bge e2f|
    "Em"eBe gfe| Bef gfe| "D"fdA FAd| fdf "B7"agf|    "Em"gba gfe| "D"fag fed| B/c/dB AFA| "Em"BGE E2|]
 
-X: 405
+X: 401
 T: Tobin's Favorite
 I: Tobin's Favorite	J-19	D	jig
 M: 6/8
@@ -5022,7 +4971,7 @@ A/F/|: "D"DFA ddd| "A"ecA cde| "D"fff "G"ggg| "A"ecA GFE|
 |:"D"dfa agf| "G"e/f/ge "Em"efg| "D"fef "G"ggg| "A"ecA GFE|
 "D"DFA ddd| "A"ecA efg| "D"f/g/af "A"gec| edc "D"ddd:|
 
-X: 406
+X: 402
 T: Tongadale
 R: reel
 C: Taigh na Teud Farquhar MacDonald
@@ -5034,7 +4983,7 @@ K: Amin
 |:A,B, | "Am"CA,EA, FA,EA, | GA,EA, "F"FEDC | "G"B,G,DG, EG,DG, | FG,EG, "Em"DCA,B, |
 "Am"CA,EA, FA,EA, | GA,EA, "F"FEDC | "G"B,G,DG, EDCB, |["normal""Am"CA,A,G, A,2 :|]["Trans""Am"A,3 z "E7"A3^F|]
 
-X: 407
+X: 403
 T: Top of Cork Road
 M: 6/8
 Z: Transcribed to abc by Mary Lou Knack
@@ -5045,7 +4994,7 @@ f/e/| "D"dAF DFA| "G"Bed "A"cBA| "D"dcd "A"efg| "D"fdf "A"ece|
 |:g| "D"fdf fga| "A"ecd efg| "Bm"dcd fed| "F#m"cAA A2c|
    "G"BGB Bcd| "D"AFA ABc| "G"dcd "A"efg| "D"fdd d2 :|
 
-X: 408
+X: 404
 T: Tournera Trois
 Z: 2006 John Chambers <jc@trillian.mit.edu>
 S: MS of unknown origin
@@ -5057,7 +5006,7 @@ K: Bm
 [| "A"cd e3 g | "D"g2 f4 | "Em"e3 g fe | "Bm"e2 d4 | "C"=cd ef gc | "Bm"Bd f4 | "C#m"fg f3 F | "F#"fg f4 |
 | "Bm"bf dB FD | "Em"GA B4 | "A"cd e3 E | "D"G2 F4 | "C"=cd ef gc | "Bm"Bd f3 g | "F#"f3 e dc | "Bm"B6 |]
 
-X: 409
+X: 405
 T:Trail of the Lonesome Pine, The
 I:Trail of the Lonesome Pine, The	S-T	F	square
 M:C|
@@ -5075,7 +5024,7 @@ P:
 P:Last time
  [2 "D7"B4 d2B2| d4 B4| "G"G8-| G4 |]
 
-X: 410
+X: 406
 T: Trip to Duro
 I: Trip to Duro	R-89	D	reel
 M: C|
@@ -5088,7 +5037,7 @@ K: D
 "D"fdec "G"d3e| "D"fded "Bm"B2Bc| dBBA "G"dBBA| "D"FADE "A7"FEE2|
 "D"D2FD A2FA| defd "G"B2Bc| dBBA "D"FAdB| "A"AFGE "D"FDD2|]
 
-X: 411
+X: 407
 T: Troll Soup
 M: C|
 L: 1/8
@@ -5099,7 +5048,7 @@ K:F#min
 |:"F#m"f3a fecA|"Bm"B3c BAFA|"F#m"f3a fe c2|"C#m"effe "F#m"f2 ce|
 "F#m"f2fa fecA|"Bm"B3c BAF2|"F#m"ABBA cBAF|"C#m"EFFE "F#m"F3z:|]
 
-X: 412
+X: 408
 T:Trows o' Truggles Water, The
 M:6/8
 K:DDor
@@ -5110,7 +5059,7 @@ K:DDor
 "Am"AcB ABc|ded cAG|"F"AcB ABc|dcB A2 !>!e-|
 "Dm"edc dcB|cBA BAG|"F"ABA GEC|["normal""G"DED D3|]["Trans""G".D2zz3|]
 
-X: 413
+X: 409
 T:Turkey in the Pea Patch
 M: C|
 L: 1/8
@@ -5123,7 +5072,7 @@ K:D
 |:"D"d2fd "G"BcdB|"D"AdBA FG A2|"A"Acdf edef |"G"gfed "A"cABc|
 "D"defd "G"BcdB|"D"ABAG F2DF|"A"E2C2A,2EG|["cont" FDEF "D"D4:|["trans"FDEF "D7"D DED
 
-X: 414
+X: 410
 T:Turtle in the Grass
 M:C|
 L:1/8
@@ -5135,7 +5084,7 @@ dc|:"D"B2 A2F3A|"D"E2D4 dc|"D" B2 A2 FA-A2|"G"B6 dc|
 "G"G2 A2 "A"B3A|"D"E2 D2"Bm" B,2 A,B,|"G"DA,DF"A"E2 E2|[1"D"D4-DDEF:|[2"D"D6||
 ["Trans""D7"D6|]
 
-X: 415
+X: 411
 T: Twilight In Portroe
 M: C|
 L: 1/8
@@ -5146,7 +5095,7 @@ K: Amaj
 |:"A"c2ec fcec|ABcA "E"BAFA|"A"~E3F "F#m"ABcA|"Bm"defg "E"aefe|
 "A"c2ec fcec|ABcA "E"BAFA|"A"~E3F ABcA|1 "D"dfed "E"cAAB:|2 "E"dfed "A"cAA2||
 
-X: 416
+X: 412
 T: Two Rivers
 I: Two Rivers	W-43	Bm	waltz
 C: Larry Unger
@@ -5159,7 +5108,7 @@ dc| "Bm"B4BA| Bc dB AF| "F#m"F2A2AB| A4dc|     "Bm"B4BA| Bc dc de| "G"f4 B2| "A"
 "Bm"f2B2f2| f2B2f2| "A"e2A2e2| e2Bc de| "Bm"f2B2f2| f2B2f2| "G"a4c2| "A"a4a2|
 "Bm"b3d' ba| f2d2d2| "G"Bf fB ff| "A"e2c2A2| "Bm"B3d BA| "F#m"F4ED|1 "G"E6-| "A"E2 Bc de :|2 "G"E6-| "A"E2 z2 |]
 
-X: 417
+X: 413
 T: Union Street Session
 C: Paul S. Cranford
 R: reel
@@ -5171,7 +5120,7 @@ K: Dmaj
 |:c|"D"{c}d2 fd "G"gd"D"fa|"A"eA A/A/A cdec|"D"{c}d2 fd "Em"!trill!g2 fg|"A"aeeg !trill!f2 ec|
 "D"{c}d2 fd "G"gd"D"fa|"A"eA A/A/A cdeg|"D"!trill!f2 ed "Em"{d}e2 cd|"A7"{d}e2 dc "D"{c}d2 A:|
 
-X: 418
+X: 414
 T: Valse
 I: Valse	W-33	D	waltz
 M: 3/4
@@ -5185,7 +5134,7 @@ A2| "D"ff f2 A2| ff f2 A2| f2 a2 f2| d4 A2| "A"ee e2 e2| ee e2 e2| e2 d2 e2| "D"
 |:"Bm"B2 d2 e2| f6| "Em"d2 c2 d2| e6| "Bm"d2 B2 d2| "A"c6| B2 c2 A2| "Bm"B6 :|
 |:"Bm"f3e de| f2 d2 B2| "A"e3d cd| e2 d2 B2| "Bm"f3e de| f2 d2 B2| "A"d2 c2 A2| "Bm"B6 :|
 
-X: 419
+X: 415
 T: Valse des Bois
 I: Valse des Bois	W-41	Em	waltz
 C: Richard Forest
@@ -5200,7 +5149,7 @@ B,| "Em"E>DE| "Bm7"F>EF| "Em7"GAG| "Bm7"FED| "Em"E3| "Bm7"DB,D| "Em"E3-| "B7sus"
 "G"B3| BcB| "D"Add| dcB| "Em"G3| GAG| "Bm7"F3-| FGA|
 "G"BAB| "C"cde| "Em"BAG| "Am"AGF| "Em7"G2G| "Bm7"FED| "Em"E3-| "(B7sus)"E2 |]
 
-X: 420
+X: 416
 T: Valse des Jouets
 I: Valse des Jouets	W-19	D	waltz
 I: Waltz of the Toys	W-19	D	waltz
@@ -5214,7 +5163,7 @@ F Ad|"D"fe fg fe| "G"dB AF D2| "D"fe fg fe| "G"dB AF D2|     "Em"ed ef ed| "A"c3
 |:d dc| "D"dA FA dA| "G"B3d dB| "A"cA Bc de| "D"f3f df|      "Bm"bf df bf| "Em"g3e ed| "A7"ce Ac ae| "D"f3d dc|
       "Bm"BF FB BF| "G"G3e ed| "A"cB AG FE| "F#"F4- F2|      "G"GF GA Bc| "D"de f3f| "A7"ge ce BA| "D"d3:|
 
-X: 421
+X: 417
 T: Varvindar Friska
 I: Varvindar Friska	M-2	Am	hambo
 C: Matt Fichtenbaum
@@ -5228,7 +5177,7 @@ K: Am
 |: "C"e2 e>f g>e| "G"d2 d>c B2| "Am"c2 c>d e>c| "E"B2 B>^G E2|
    "Am"A2 A>B A>B| c2 c>d c>d| "E"e2 e>d B>c| "Am"A2 A4:|
 
-X: 422
+X: 418
 T:Verret's
 R:Reel
 L:1/8
@@ -5239,7 +5188,7 @@ K:D
 |: "D"FDA,D FDDF| "C"E=CEG B2 AG  |"D"FDAD FAAA|"G"BA"A"cA "D"d2 AG|
 "D"FDA,D FDDF| "C"E=CEG B2 AG|"D"FAdf "Em7"edce |1 "A"dfec "D"d2 AG:|[2 "A"dfec "D"d4||
 
-X: 423
+X: 419
 T: Vladimir's Steamboat
 M: C|
 L: 1/8
@@ -5252,7 +5201,7 @@ K: Amix
 | "A"aa- aa a2a2-|a2ga bagf|efed cdef|"G"gea^g "E"e4|
 "A"abag "G"egab|"A"aega bagf|efed cdef|"E"ecdc "A"A4|
 
-X: 424
+X: 420
 T:Waiting for Fish
 R:waltz
 C:Susie Secco
@@ -5265,7 +5214,7 @@ DF|"Dm"A2 AB AF | D4 F2 |"Gm"G2GB AG |"Dm"AF D2E2|
 |: "Dm"f2 fa gf |"C"e3g fe |"Bb"de d2 "A"^c2| A4 AB |
 "F"cd cB A2 |"C"GA GF E2 |"Dm"D2E2 "C"C2|1 "Dm"D3 A de:|2 "Dm" D4|]
 
-X: 425
+X: 421
 T:Wake Up to Cape Breton
 C: Brenda Stubbert
 M:C|
@@ -5276,7 +5225,7 @@ e|"E"BEEF "D"(DEF)D|"E"E/E/E GB "A"eBcA|"E"BEEF "D"(DEF)A|B2AF DEFA|
 |:f|"Em"eBBg "G"efge|"D"!trill!fdcd "Bm"(AB)df|"Em"eBBg "G"efge|"Bm"dBAF "Em"E/E/E Ef
 |"Em"eBBg "G"efge|"D"fdcd (AB)df|"G"!trill!gefd "D"ecdA|"Bm"B/c/d AF "Em"E2z:|
 
-X: 426
+X: 422
 T:Walnut Gap
 M:C|
 L:1/8
@@ -5288,7 +5237,7 @@ DE|"G"GABd g2g2|"C"(3fgf ec"Am7"A3 A-|"D"ABde fd ed | fd ed "G"BG2D|
 |:"G"G,B,DG BAGF|"C"ECEG c3 D-|"D"DEFG A2 (A/B/c/d/)|e2 d4 B2|
 "G"e2 dB- BAGD|"C"Ec2E c3 D-|"D"DFAF dFAF|"G"G- [G3B,3] [G4B,4]:|
 
-X: 427
+X: 423
 T: Walpole Cottage
 I: Walpole Cottage	M-6	D/A	reel
 C: Pat Shaw
@@ -5311,7 +5260,7 @@ F2| "Bm"B3c d2cB| "F#7"c2f4 e2| "Bm"d2B2 "F#7"c2^A2| "Bm"B6 "E7"B2|
    "D"f3e f2d2| "A7"e2c2 A2Bc| "Bm"d3c d2B2| "F#7"A6 A2|
    "G"B3c d2B2| "D"A2d2 f2a2| "Em"f2d2 "A7"e2c2| "D"d8 |]
 
-X: 428
+X: 424
 T: Wearing of the Green
 I: Wearing of the Green	S-W	D	square
 M: C|
@@ -5327,7 +5276,7 @@ dc| "D"B2A2 A2F2| A2A2 D2E2| F2E2 F2G2| F4 d2c2| \
 DE| "D"F2F2 F2F2| F2A2 A2F2| "A7"F2E2 E2F2| E6 A2| \
     "G"B2G2 d2c2| "D"B2A2 F2D2| "A7"E2D2 D2E2| "D"D6 :|
 
-X: 429
+X: 425
 T:Weedwalker
 M: C|
 L: 1/8
@@ -5337,7 +5286,7 @@ v"D"f4 f3 v(f |e2)  d2 B2 A2 |"G"B3 u(c d2) dB |"A"AF E2 "D"D4 :|
 |: v"Bm"B4      B3   (B  |"D"A2) F2 E2 D2 |v"Bm"B4 B3 (B |"D"A2) F2 A4      |
  u"G"B2 vB2- Bu(B AB) |"D"A2  F2 E2 D2 |  "A"E4 E4    |"D"D4   u(DE) FA :|
 
-X: 430
+X: 426
 T: West End, The
 I: West End, The	R-21	D	reel
 M: C|
@@ -5350,7 +5299,7 @@ fg| "D"afdf a2a2| "A"gece g2g2| "D"fedc "Em"d2ed| "A"c2A2 A2fg|
     "D"afdf a2a2| "A"gece g2g2| "D"fedc    d2ed| "A"c2A2 A2AG|
     "D"FGAF D2d2| "A"cdec A3f | "G"gfed "A"Bdce| "D"d6 |]
 
-X: 431
+X: 427
 T: Westfork Girls
 I: Westfork Girls	R-31	D	reel
 M: C|
@@ -5361,7 +5310,7 @@ K: D
 |:"D"ABAG F2A2|    d2d2 F3A| "A"G2F2 E3F| G2F2 E4|
 "A"efed cABc| "D"d2A2 F2A2| d2d2 "A"efg2| "D"f2d2 d4 :|
 
-X: 432
+X: 428
 T: When the Work's All Done This Fall
 I: When the Work's All Done This Fall	S-W	C	square
 M: C|
@@ -5371,7 +5320,7 @@ K: C
 ED|: "C"C2 C2 E2 G2| c2 c4 Bc| "D7"d2 d2 d2 c2| A6 c2|
  "G"B2 B2 B3 B| B2 B4 A2|1 "G" G2 G2 A2 G2| "C"E6 D2 :|2 "C"G2 F2 E2 D2| C6 |]
 
-X: 433
+X: 429
 T: Whiskey Before Breakfast
 I: Whiskey Before Breakfast	R-69	D	reel	Set 26
 C: Andy DeJarlis
@@ -5382,7 +5331,7 @@ K: D
 |:"D"F2d2 d2Bc| dcdA BAFA| "Em"e4 e2ef| gfed "A7"cABc |
 "D"d2fd "A"c2ec| "G"BABd "D"BAFD| "G"G2BG "D"F2AF| "A7"EDEF "D"D2 z2 :|
 
-X: 434
+X: 430
 T:Wild One
 M:6/8
 L:1/8
@@ -5395,7 +5344,7 @@ K:Dmin
 |: "Dm"d2c A2c|"F"dcA cdc|"Bb"d2c A2G|"Am"FGE FED |
 "Dm"d2c A2c|"F"dcA cdc|"Bb"dcA "Dm"cdF| "Am"EDC "Dm"D3:|
 
-X: 435
+X: 431
 T: Willafjord
 I: Willafjord	R-91	D	reel
 M: C|
@@ -5406,7 +5355,7 @@ K: D
 |:e2| "D"f2df zAdf| "Em"geaf gfed| "D"f2df zAdf| "A7"e2ce zAce|
     "D"f2df zAdf| "Em"geaf gfed| "A"ABcd efge| "D"f2d2 d2 :|
 
-X: 436
+X: 432
 T: Winchell's Falls
 C: Noah VanNostrand
 M: 4/4
@@ -5418,7 +5367,7 @@ K: A
 |: "E"vB3 (c B2) AB |"A"c2 e6 |"D"v(f a2) u(a- ab) af |"A"e2 u(c2- cB A2) |
 "E"vB3 (c B2) AB |"F#m"c2 e2 cB AF |"A"EF Au(c "E"BA) GB |[1"A"A4 u(AB) ce :|[2"A"A6 EF |]
 
-X: 437
+X: 433
 T: Wing Commander Donald Mackenzie's
 C: Phil Cunningham
 M: C|
@@ -5430,7 +5379,7 @@ K: F#min
 |:"A"aefe c2Bc|"F#m"AFEF ABce|"D"faba fbaf|"E7"ecAB BAce|
 "A"aefe c2Bc|"F#m"AFEF ABce|"D"faba fbaf|1"E7"ecBc "A"Aa a/2a/2a:|2"E7"ecBc "A"A3B|]
 
-X: 438
+X: 434
 T: Wissahickon Drive
 I: Wissahickon Drive	R-134	A	reel
 C: Liz Carroll
@@ -5442,7 +5391,7 @@ K: A
 |:"A"a2ga baga| "D"fAde fagf| "A"eAce aece| aedc "E"B2fg|
 "A"a2ga baga| "D"fAde fagf| "A"eAce "D"aedc| "E"BEGB "A"A4 :|
 
-X: 439
+X: 435
 T:Woodbridge Breakdown
 C: Andy De Jarlis
 K:A
@@ -5452,7 +5401,7 @@ M:C|
 |:"A"ea- aa abaf|"A"ea- aa abaf|"Em"edef =g2 gf|"G"=gedB =GABd|
 "A"ea- aa abaf|ea- aa a2 ef|"G"=gefd efed|"A"c2 "E7"BG "A"A4:|
 
-X: 440
+X: 436
 T: Woodchopper's Reel
 I: Woodchopper's Reel	R-73	D	reel
 M: C|
@@ -5463,7 +5412,7 @@ K: D
 |:"D"DFAd (3BdB AF| DFAd (3BdB Az| "A"A,CEA ceaf| gfed cBAF|
 "D"DFAd (3BdB AF| DFAd (3BdB Az| "A"A,CEA ceaf| (3gfe cA "D"d4 :|
 
-X: 441
+X: 437
 T:Wren, The
 R:Reel
 M:C|
@@ -5478,7 +5427,7 @@ K:Bm clef=treble
 |:"Bm"B,3A, B,CDC|B,2 B,2 "A"C3D|"A"EA,CE EFED |C2 C2 "(F#m)"DCB,A,|
 "G"B,3A, B,CDC|B,2 B,2 "A"C3D|"A"EA,CE EFED |["Normal"C2 B,2 "Bm"B,2 A,2:|["Ending"C2 B,2 "Bm"B,4|]
 
-X: 442
+X: 438
 T: You Call Everybody Darling
 I: You Call Everybody Darling	S-Y	G	square
 M: C|
@@ -5490,7 +5439,7 @@ K: G
 "G"d3d edBd| b2g2- g3g| agfg "G7"agf=f| "C"e4- e3^d|
 "C"e^def g3e| "G"d^cdg "E"b3d| "A7"e^de^e "D7"fef=d| "G"g8 |]
 
-X: 443
+X: 439
 T: You Married My Daughter But Yet You Didn't
 I: You Married My Daughter But Yet You Didn't	R-30	G	reel
 M: C|
@@ -5501,7 +5450,7 @@ K: G
 |:"G"BcdB G2BB| G2BB d2c2| "D"ABcA F2AA| F2AA "G"e2d2|
 "G"BcdB G2BB| G2BB d2c2| "D"ABcA F2fe| dBA2 "G"G4 :|
 
-X: 444
+X: 440
 T: Young Jane
 I: Young Jane	W-2	G	waltz
 M: 3/4
@@ -5513,7 +5462,7 @@ K: G
 Bc| "G"d2 B2 d2| g3 f g2| "C"e4 e2| "Am"A4 B2|    "D7"c3 d e2| d2 B2 A2| "G"G6| "D7"F4 (3DEF |
     "G"G3 A B2| A2 B2 d2| "C"e4 e2| "G"d4 e2|       G3 A2 B| "D7"A4 G2| "G"G6-| G4|]
 
-X: 445
+X: 441
 T: Young Tim Murphy
 I: Young Tim Murphy	J-48	D	jig
 C: Hartnett

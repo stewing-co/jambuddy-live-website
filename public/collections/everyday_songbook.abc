@@ -35,41 +35,6 @@ w: Q, R, S, and T, U, V, (dou-ble-you), and X, Y, Z.
 w: Hap-py, hap-py shall we be, When we've learned our A, B, C.
 
 X: 3
-T: America the Beautiful
-T: ("MATERNA.")
-C: words: Katharine Lee Bates, 1904.
-O: music: Samuel A. Ward.
-%R: air, march
-B: "The Everyday Song Book", 1927
-F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
-M: 4/4
-L: 1/4
-K: C
-"^mf"G | G>E EG | G>D DE | FG  AB | G3 ||
-w: 1.~O beau-ti-ful for spa-cious skies, For am-ber waves of grain,
-w: 2.~O beau-ti-ful for pil-grim feet,   Whose stern, im-pass-sioned stress
-w: 3.~O beau-ti-ful for he-roes proved   In lib-er-at-ing strife,
-w: 4.~O beau-ti-ful for pa-triot dream   That sees be-yond the years
-%
-G | G>E EG | G>D Dd | ^cd eA | d3 ||
-w: For pur-ple moun-tain, maj-es-ties       A-bove the fruit-ed plain!
-w: A thor-ough-fare for free-dome beat      A-cross the wil-der-ness!
-w: Who more than self their coun-try loved, And mer-cy more than life.
-w: Thine al-a-bas-ter cit-ies gleam,        Un-dimmmed by hu-man tears!
-%
-"!f"G | e>e d"^,"yc | c>B B"^,"yc | dB AG | c3 ||
-w: A-mer-i-ca! A-mer-i-ca! God shed his grace on thee,
-w: A-mer-i-ca! A-mer-i-ca! God mend thine ev-'ry flaw,
-w: A-mer-i-ca! A-mer-i-ca! May God thy god re-fine,
-w: A-mer-i-ca! A-mer-i-ca! God shed his grace on thee,
-%
-c | c>A Ac | c>G GG | Ac Gd | c3 |]
-w: And crown thy good with broth-er-hood, From sea to shin-ing sea!
-w: Con-firm thy soul in self-con-trol,    Thy lib-er-ty in law!
-w: Till all suc-cess be no-ble-ness,      And ev-'ry gain di-vine!
-w: And crown thy good with broth-er-hood, From sea to shin-ing sea!
-
-X: 4
 T: America.
 T: (My Country, Tis of Thee.)
 N: This is version 1, for ABC software that doesn't understand voice overlays.
@@ -107,7 +72,70 @@ V: 2 clef=bass middle=D
 [dG]>[dG][dG] | [dD] [dF][dA] | [dD]>[dD][dD] | [dG] [e/G]d/ [c/G]B/ | [dG]>[dA] [dB] | [c/c]e/ [dd] [cD] | [B3G3G,3] |]
 %%text First sung in Park Street Church, Boston, July 4, 1832
 
+X: 4
+T: America the Beautiful
+T: ("MATERNA.")
+C: words: Katharine Lee Bates, 1904.
+O: music: Samuel A. Ward.
+%R: air, march
+B: "The Everyday Song Book", 1927
+F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
+M: 4/4
+L: 1/4
+K: C
+"^mf"G | G>E EG | G>D DE | FG  AB | G3 ||
+w: 1.~O beau-ti-ful for spa-cious skies, For am-ber waves of grain,
+w: 2.~O beau-ti-ful for pil-grim feet,   Whose stern, im-pass-sioned stress
+w: 3.~O beau-ti-ful for he-roes proved   In lib-er-at-ing strife,
+w: 4.~O beau-ti-ful for pa-triot dream   That sees be-yond the years
+%
+G | G>E EG | G>D Dd | ^cd eA | d3 ||
+w: For pur-ple moun-tain, maj-es-ties       A-bove the fruit-ed plain!
+w: A thor-ough-fare for free-dome beat      A-cross the wil-der-ness!
+w: Who more than self their coun-try loved, And mer-cy more than life.
+w: Thine al-a-bas-ter cit-ies gleam,        Un-dimmmed by hu-man tears!
+%
+"!f"G | e>e d"^,"yc | c>B B"^,"yc | dB AG | c3 ||
+w: A-mer-i-ca! A-mer-i-ca! God shed his grace on thee,
+w: A-mer-i-ca! A-mer-i-ca! God mend thine ev-'ry flaw,
+w: A-mer-i-ca! A-mer-i-ca! May God thy god re-fine,
+w: A-mer-i-ca! A-mer-i-ca! God shed his grace on thee,
+%
+c | c>A Ac | c>G GG | Ac Gd | c3 |]
+w: And crown thy good with broth-er-hood, From sea to shin-ing sea!
+w: Con-firm thy soul in self-con-trol,    Thy lib-er-ty in law!
+w: Till all suc-cess be no-ble-ness,      And ev-'ry gain di-vine!
+w: And crown thy good with broth-er-hood, From sea to shin-ing sea!
+
 X: 5
+T: An Explanation
+C: Hanoverian Folksong.
+C: words: Charles Hendricks.
+Q: "Moderato."
+%R: march
+B: "The Everyday Song Book", 1927
+F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
+M: 4/8
+L: 1/8
+K: D
+[|\
+D D D F | A A A A | B c d B |
+w: 1.~Boys and girls, when days are balm-y, wear their light-est
+w: 2.~Then when wraps and coats are dear to chil-dren ev-'ry-
+%
+A3 A | G G G G | F F F F | E F G E |
+w: clothes, And wrap them-selves up warm as squir-rels soon as win-ter
+w: where, The trees be-gin to shed their leaves and stand quite cold and
+%
+D3 D | G G G G | F2 D2 | B c d B | A4 |
+w: shows; But trees are ver-y fun-ny, for in warm-est hours
+w: bare. * May-be ev-'ry  sum-mer, just like me and you,
+%
+G G G G | F F F F | E F G E | D4 |]
+w: They are dressed in man-y leaves, and some-time man-y flow'rs.
+w: They out-grow their clothes and wait till spring weaves them a-new.
+
+X: 6
 T: Annie Laurie.
 C: music: [Alicia] Lady John Scott 1834/5
 C: words: [William] Douglass of Fingland (1672?-1748)
@@ -135,7 +163,7 @@ w: voice is low and sweet, And she's a'~the world to me, And for
 [c3E3] [BG] [A2F2] ([cF2]A) | [G2E2] [E4C4] ([EC]>[DB,]) | ([CC][c2E2]) [EC] [D3B,3] [CC] | [C4-C4-][CC] z |]
 w: bon-nie An-nie* Lau-rie, I'd* lay* me doon and dee.....*
 
-X: 6
+X: 7
 T: The Ash Grove
 O: Welsh
 %R: air, waltz
@@ -158,7 +186,7 @@ w: fore me, Fond mem-o-*ries* wa-ken as free-ly I roam; With soft whis-pers*
 c2 A2 A2 | B2 (dc) (BA) | G2 E2 E2 | A2 (dc) (AG) | F2 D2 F2 | E2 A2 G2 | A4 |]
 w: la-den its leaves rus-*tle* o'er me, The Ash grove,* the* Ash grove that shelt-ered my home.
 
-X: 7
+X: 8
 T: Auld Lang Syne
 C: words: Robert Burns
 O: Scotch Folksong
@@ -186,7 +214,7 @@ w: For auld* lang* syne, my dear,     For auld* lang* syne;
 d | c> A A F | G> F G A | (F>D) (DC) | F3 |]
 w: We'll tak' a cup o' kind-ness yet  For auld* lang* syne.
 
-X: 8
+X: 9
 T: Battle Hymn of the Republic
 C: words: Julia Ward Howe
 C: air:  "John Brown's Body"
@@ -224,7 +252,7 @@ w: Glo-ry! glo-ry! Hal-le-lu-jah!  Glo-ry! glo-ry! Hal-le-lu-jah!
 F3 E D> F B> c | d4 B2 B2 | c2 c2 B2 A2 | B6 z |]
 w: Glo-ry! glo-ry! Hal-le-lu-jah! His truth is march-ing on.
 
-X: 9
+X: 10
 T: The Bees
 %R: air, waltz
 B: "The Everyday Song Book", 1927
@@ -244,7 +272,7 @@ w: Zzz________ Zzz________ Take
 [G2=E2] [A_E] | [B2D2] [BD] | ([dF][cE]) [AC] | [B2D2] !pp![FF] | [G2=E2] [A_E] | [B2D2] [BD] | ([dF][cE]) [AC] | [B2D2] |]
 w: care, be-ware, the drone* is there; Zzz________
 
-X: 10
+X: 11
 T: Bingo
 %R: air
 B: "The Everyday Song Book", 1927
@@ -258,7 +286,7 @@ w: John-ny had a lit-tle dog, And Bin-go was his name, sir. B-i-n-g-o go,
 A A A2 B B B2 | G G G2 A A A2 | F F E F G2 G2 :|
 w: B-i-n-g-o- go, B-i-n-g-o- go, Bin-go was his name, sir.
 
-X: 11
+X: 12
 T: Bird in the Greenwood Tree
 O: German (Swabian Tune)
 N: Copyright, 1916, by the Cable Company.
@@ -276,7 +304,7 @@ B d G | A c E | F D A | G3 |]
 w: Chant-ing so cheer-i-ly  From morn till night.
 w: Up in the heav-en blue,  In sun-shine bright.
 
-X: 12
+X: 13
 T: Birds Are Singing
 C: Jesca
 Q: "Allegretto."
@@ -304,7 +332,7 @@ w: now* go forth in glad-ness,     Ev-'ry-where we now may* roam.
 w: scent-*ed flow-ers waft-ed,     And the songs of night-in-*gales.
 w: trees* which now have bud-ded,   Thro' the new-born world a-*gain!
 
-X: 13
+X: 14
 T: The Blacksmith.
 C: W. A. Mozart
 %R: march
@@ -333,7 +361,7 @@ w: fire in the fur-nace a-glow-ing         Bright its spark-le and flash, loud i
 w: sledge on the an-vil a-ring-ing,        Fills the air with its loud, clang-ing sound.
 w: hand, but his heart's true and mel-low, Like his an-vil, he stands for the right.
 
-X: 14
+X: 15
 T: The Blue-bells of Scotland
 O: Scotch
 %R: air, march
@@ -359,7 +387,7 @@ w: He dwelt in Bon-nie Scot-land, where* blooms the sweet blue bell,
 w: And it's oh, in my heart,* I* wish him safe at home.
 w: And it's oh, in my heart,* I* loved my lad-die well.
 
-X: 15
+X: 16
 T: The Boat Song
 C: C. M. Con Weber
 Q: "Moderato."
@@ -391,7 +419,7 @@ w: sun - ny banks break -* ing, An - swer your | ca - dence with mu - sic a- gai
 w: wel - come be-fore** us,     Back* thro' the twi - light we'll cheer - ful-ly hie.*
 [V:2] [b3B3] [b2B2] [bB] | [e'3e3] [b3e3] | [a3A3] [a2c2] [c'e] | [e'3e3] [b2e2] [be] | [a3-B3] [aB2]b [aB] | [g3-e3] [g2e2]z |]
 
-X: 16
+X: 17
 T: The Bold Little Fish
 C: Elsie B. Johns
 %R: waltz
@@ -420,7 +448,7 @@ w: la; To harm me, to harm me, tra la* la* la* la."
 w: la; But fish-ie knew bet-ter, tra la* la* la* la.
 w: la; The mon-ster did eat him, tra la* la* la* la.
 
-X: 17
+X: 18
 T: Bonnie Laddie, Highland Laddie.
 O: Scotch Folksong
 %R: air, march
@@ -452,7 +480,7 @@ w: Tar-tan plaid and High-*land* trew,* Bon-nie lad-die,* High-land lad-die.
 w: Wi' his friends would live* or* dee,* Bon-nie lad-die,* High-land lad-die.
 w: Weel ye ken it is* his* own,* Bon-nie lad-die,* High-land lad-die.
 
-X: 18
+X: 19
 T: The Bugle Call
 N: Copyright, 1916, by The Cable Company.
 %R: air, march
@@ -467,7 +495,7 @@ w: The bu-gle is call-ing, "A-wake!" it seems to say.
 F | B2 F B | d2 B d | f d B F | B3 |]
 w: The sun it is ris-ing\-\- A-rise! for it is day.
 
-X: 19
+X: 20
 T: The Butterfly
 C: J. H.
 N: Copyright, 1916, by the Cable Company.
@@ -484,7 +512,7 @@ e> d c | B> A G | c B D | E3 |]
 w: Wan-dered a-way with the brown bum-ble-bee.
 w: But in the au-tumn no hon-ey had he.
 
-X: 20
+X: 21
 T: Can a Little Child like me?
 C: words: Mary Mapes Dodge.
 C: music: W. R. Bassford.
@@ -518,7 +546,7 @@ w: Fa-ther, we thank Thee! Fa-ther, we thank Thee!
    B2 d d | d2 G c | (B2 A2) | B2 z2 |]
 w: Fa-ther in heav-en, we thank_ Thee!
 
-X: 21
+X: 22
 T: Captain Jinks
 Q: "(A Game Song. For Directions: See page 9)
 %R: air, jig
@@ -541,7 +569,7 @@ w: ar-my.  2.~I teach the la-dies how to dance, how to dance, how to dance, I
 d2 d d2 d | d2 c c2 c | c2 B B c ^d | e3 "^D.C."E2 |]
 w: teach the la-dies how to dance, for that's the style in the ar-my.
 
-X: 22
+X: 23
 T: Carrousel
 N: (Singing Game: See page 8.)
 O: Swedish
@@ -563,7 +591,7 @@ w: Hur-ry up~ get a mate~ Or you'll sure-ly be too late, Ha! Ha! Ha!
    A2 A A A2 z2 | B B B B B G A B | c2 c c c3 z :|
 w: Hap-py are we, An-der-son and Pet-er-son, and Carl-strom and me!
 
-X: 23
+X: 24
 T: Cheerily the Huntsman
 %R: air, jig
 B: "The Everyday Song Book", 1927
@@ -584,7 +612,7 @@ w: What his ar-row slay-eth,    He for boot-*y takes.
 |: G/ A/ | B2 G/ A/ B2 G/ A/ | B3 G2 E | F2 F F E F | "^Repeat pp."E2 zz2 :|
 w: La, la, la, la, la, la, la, la, la, la, La, la, la, la, la, la, la.
 
-X: 24
+X: 25
 T: The Child and the Star.
 C: Elliott.
 %R: _
@@ -605,7 +633,7 @@ w: Have you got a home like me, And a fa-ther kind to see?
 w: But when morn be-gins to break, I my home-ward jour-ney take.
 w: And a lov-ing Fa-ther, too, Who com-mands what I'm to do.
 
-X: 25
+X: 26
 T: Christmas Carol
 C: Jessie L. Gaynor
 %R: air, march
@@ -636,7 +664,7 @@ V: 3 clef=bass middle=d
 e4 | A2 A2 | d2 D2 | f2 d2 | ^d2 e2 |
 [g2B2] [g-G][gB] | [g4c4] | [a2c2] [a^c-][^ac] | [b4d4] | dA d>[gG] | [g3G3]z |]
 
-X: 26
+X: 27
 T: Christmas Carrolling Song
 O: Traditional English.
 Q: "In marching rhythm"
@@ -668,7 +696,7 @@ w: Love and joy come to you, And to you glad Christ-mas, too, And God bless* you
 ([BG] [GG]) [FF] [EE] | [FF]> [GG] [AA] [FF] | ([B-D][BE]) [AF] [BG] | ([c-A][cG]) [d^F] [AF] | [BG] [GG] ([FF] [EE]) | [F2F2] |]
 w: send* you a Hap-*py New Year,* And God send* you a Hap-py New* Year.
 
-X: 27
+X: 28
 T: Christmas Song
 N: Copyright, 1916, by The Cable Company.
 O: Old German
@@ -690,7 +718,7 @@ G2 B | d2 B | A2 c | c2 A | GB A | G2 |]
 w: voi-ces raise    In songs of praise our voi-*ces raise.
 w: Thou dost sleep, And watch we'll keep while Thou* dost sleep.
 
-X: 28
+X: 29
 T: Columbia, the Gem of the Ocean
 C: words: D. T. Shaw.
 C: music: David T. Shaw.
@@ -731,7 +759,7 @@ w: When* borne by the red, white and blue,    When* borne by the red, white and 
 w: The* boast of the red, white and blue,     The* boast of the red, white and blue     With her
 w: Three* cheers for the red, white and blue, Three* cheers for the red, white and blue The*
 
-X: 29
+X: 30
 T: Come, Birds!
 O: German
 Q: "Allegretto."
@@ -754,7 +782,7 @@ w: there a feath-er   Neat-ly wov-en all to-geth-er;
 w: Bees be-gin to hum,     Hap-py bird-lings, come!
 w: Sun-beams want to gild, Hap-py bird-lings, build!
 
-X: 30
+X: 31
 T: Come, Let Us Learn to Sing
 %R: air, march
 B: "The Everyday Song Book", 1927
@@ -771,7 +799,7 @@ w: voi-ces ring, Do re me fa sol la ti do. Let us sing with o-pen sound,
    c2 A2 c2 A2 | f2 d2 c4 | f2 e d c2 B2 | A4 G4 | F6 z2 |]
 w: With our voi-ces full and round, Do ti la sol fa mi re do.
 
-X: 31
+X: 32
 T: Come, Thou Almighty King
 C: words: Charles Wesley
 C: music: Felice Giardini
@@ -793,7 +821,7 @@ B> A G | G B d | d> e d | c B A | G3 |]
 w: to-ri-ous,     Come, and reign o-ver us, An-cient of days.
 w: word suc-cess, Spir-it of ho-li-ness!    On us de-scend.
 
-X: 32
+X: 33
 T: Contentment
 N: Copyright, 1916, by The Cable Company.
 C: words: Robert Louis Stevenson
@@ -811,7 +839,7 @@ w: The world is so full of a num-ber of things,
 A | B2 A G | A2 B c | d2 c E | F3 |]
 w: I'm sure we should all be as hap-py as kings.
 
-X: 33
+X: 34
 T: Cradle Song.
 T: (Wiegenlied.)
 C: words: Karl Simrock.
@@ -842,7 +870,7 @@ w: love; They will guard thee from harm, thou shalt wake in my
 w: blest, Lay thee down now and rest,     may thy slum-ber be blest.
 w: arm,   They will guard thee from harm, thou shalt wake in my arm.
 
-X: 34
+X: 35
 T: Cuckoo, You Sing So Clear
 O: German
 Q: "Allegretto."
@@ -862,7 +890,7 @@ w: Soft breez-es blow-ing,    Spring-time, spring-time, soon will be here.
 w: Flow'rs will be bloom-ing, Spring-time, spring-time, has-ten a-long,
 w: Glad-ly fore-tell-ing      Spring-time, spring-time, beau-ti-ful spring.
 
-X: 35
+X: 36
 T: The Dairy Maids
 O: Old Englsih Tune.
 N: From the "Modern Music Series, Primer," copyright 1901. Used by per. of Silver, Burdett & Co.
@@ -882,7 +910,7 @@ w: Down we go with our pails in hand,    Ma-ry, Mol-ly and I.*
 w: While we call o'er the mead-ow thyme, Ma-ry, Mol-ly and I.*
 w: Oh! we're sor-ry when sum-mer's done, Ma-ry, Mol-ly and I.*
 
-X: 36
+X: 37
 T: Dancing In the Sun
 C: G. F.
 N: Copyright, 1916, by The Cable Company.
@@ -905,7 +933,7 @@ D B B | B A G | E c c | c d e | f2 F | F3 |]
 w: gai-ly they're trip-ping, A-danc-ing and pranc-ing to mu-sic's sound.
 w: Mid-ges dance air-i-ly,   Ev-'ry-thing's glad in the sun-shine free.
 
-X: 37
+X: 38
 T: Dancing Song
 C: words: Amelia M. Sontag.
 C: music: Rhenish Folksong.
@@ -931,7 +959,7 @@ w: see how we fly;   One, two, three; one two three; Pol-ly and I.
 
 %%center PART FOUR.
 
-X: 38
+X: 39
 T: Darkness Has All Fled
 C: Ritter.
 Q: "Moderato."
@@ -954,7 +982,7 @@ c2 d | e3 | f2 f | (e d) c "^rit."| (d c) B | A2 z |]
 w: thanks do give For all things* we do* re-ceive!
 w: and our play   Not an an-*gry word* to say!
 
-X: 39
+X: 40
 T: Deck the Hall
 O: Old Welsh Air
 %R: air, march
@@ -981,7 +1009,7 @@ w: Troll the an-cient Yule-tide car-ol, Fa, la, la, la, la, la, la, la, la.
 w: While I tell of Yule-tide treas-ure, Fa, la, la, la, la, la, la, la, la.
 w: Heed-less of the wind and weath-er,  Fa, la, la, la, la, la, la, la, la.
 
-X: 40
+X: 41
 T: Dickory, Dickory Dock.
 C: Elliott.
 %R: _
@@ -996,7 +1024,7 @@ w: Dick-o-ry, dick-o-ry dock; The mouse ran up the clock, The
 Az A c2c | Bz B d3 | c d c B A G | Fzz z2z |]
 w: clock struck one, The mouse ran down; Dick-o-ry, dick-o-ry, dock.
 
-X: 41
+X: 42
 T: Did You Ever See a Lassie?
 C:
 %R: waltz
@@ -1015,7 +1043,7 @@ A2 D2 D2 | B2 G2 G B | d3 e d c | B2 G2 G2 | A2 D2 D2 | G4 |]
 w: this way and that way; Did you ev-er see a las-sie do This way and that?
 %%text (For Game Directions: See page 7.)
 
-X: 42
+X: 43
 T: Ding, Dong, Bell
 C: Mother Goose
 %R: air, march
@@ -1033,7 +1061,7 @@ w: Lit-tle John-y Green; Who pulled her out? Big John* Stout.
    d2 d2 c2 c2 | B2 B2 A2 A2 | B2 B2 A2 A2 | G2 G2 F4 :|
 w: What a naught-y boy was that, To drown our lit-tle Pus-sy-cat!
 
-X: 43
+X: 44
 T: Dixie
 C: Words and Music by Dan Emmett.
 Q: "Allegro."
@@ -1071,7 +1099,7 @@ w: take my stand To lib and die in Dix-ie; A-way, A-way, A-
 G2 E c3 e | d2 c4 E2 | C6 E2 | D6 A2 | G2 E2 He3 c | d2 c4 |]
 w: way down south in Dix-ie, A-way, A-way, A-way down south in Dix-ie.
 
-X: 44
+X: 45
 T: Down On the Shore
 N: Copyright, 1912, by the Cable Co.
 C: Mary Sanford Morrison
@@ -1112,7 +1140,7 @@ w: Home-ward we go to the Rock-a-by Sand,           Say-ing "Good-night" to the 
 [V:2] [e=A3E3]dc [c_A3E3]=Bc | [eG3E3]cB H[G2E2]z | [G=A,3]EG [BD3]GF | [E6G,6] |]
 [V:3] Fz (fb) z(f | B)z g Hb2z | Fz (fB) za | E2B [g2e2]z |]
 
-X: 45
+X: 46
 T: Eskimo
 C: words: Lydia Avery Coonley.
 C: music: Jessie L. Gaynor.
@@ -1163,7 +1191,7 @@ B2-[f2B2] | B2-[f2B2] | F2-[f2c2F2-] | F2-[f2c2F2-] |  d4 | B2-[f2B2] | A4 | F2 
 [c4F4] | [c4F4] | [c4F4] | [c4F4] | [c4F4] | [c4F4] | [c4F4] | [c4F4] |
 B2-[f2B2] | B2-[f2B2] | F2-[a2f2F2] | D2-[a2f2D2] | A2-[a2A2] | A2-[g2A2] | d4 | [A2D2]z2 |]
 
-X: 46
+X: 47
 T: Evening
 C: C. H. Rinck
 %R: air, march
@@ -1183,7 +1211,7 @@ w: O-ver field and for-est,  And the world doth rest.
 w: And it flow-eth on-ward   With un-ceas-ing moan.
 w: God a-lone can give thee  Eve-ning's true re-pose.
 
-X: 47
+X: 48
 T: Evening Hymn.
 C: Franz Abt.
 %R: jig, waltz
@@ -1209,7 +1237,7 @@ w: Thou wilt keep me, guard-ed,  Thou wilt hear* my prayer;
 c2 B c2 B | (B2 e) G3 | !p!(F^E) F A2 G | "^dim. . ."E3- Ezz |]
 w: All my faith re-pos - es  In* Thy heav'n-ly care!*
 
-X: 48
+X: 49
 T: The Everyday Song Book
 B: "The Everyday Song Book", 12th ed., published 1927 by the Cable Company, Chicago
 F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
@@ -1235,34 +1263,6 @@ K:
 %%center 1104 CABLE BUILDING . CHICAGO
 
 %%sep 5 5 300
-
-X: 49
-T: An Explanation
-C: Hanoverian Folksong.
-C: words: Charles Hendricks.
-Q: "Moderato."
-%R: march
-B: "The Everyday Song Book", 1927
-F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
-M: 4/8
-L: 1/8
-K: D
-[|\
-D D D F | A A A A | B c d B |
-w: 1.~Boys and girls, when days are balm-y, wear their light-est
-w: 2.~Then when wraps and coats are dear to chil-dren ev-'ry-
-%
-A3 A | G G G G | F F F F | E F G E |
-w: clothes, And wrap them-selves up warm as squir-rels soon as win-ter
-w: where, The trees be-gin to shed their leaves and stand quite cold and
-%
-D3 D | G G G G | F2 D2 | B c d B | A4 |
-w: shows; But trees are ver-y fun-ny, for in warm-est hours
-w: bare. * May-be ev-'ry  sum-mer, just like me and you,
-%
-G G G G | F F F F | E F G E | D4 |]
-w: They are dressed in man-y leaves, and some-time man-y flow'rs.
-w: They out-grow their clothes and wait till spring weaves them a-new.
 
 X: 50
 T: The Farmer
@@ -1912,28 +1912,6 @@ w: Could-n't put Hump-ty Dump-ty to-geth-*er a gain.
 %%center PART TWO
 
 X: 76
-T: The Hunt Is Up
-O: Old English Folksong.
-Q: "Somewhat quickly."
-%R: jig
-N: This is version 1, for ABC software that doesn't understand crescendo symbols.
-B: "The Everyday Song Book", 1927
-F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
-N: In bar 6, "gone a" looks like "gona".
-M: 6/8
-L: 1/8
-K: D
-A | d2 A (F>!mf!G) A | d- d A (F>G) A | (B>A) G F>E D | E3- E2 ||
-w: 1.~The hunt is up,* the hunt* is up,* And it* is well* nigh day;*
-w: 2.~The east is bright* with morn-*ing light,* And dark-*ness it* is fled;*
-w: 3.~The hors-es snort* to be at the sport,* The dogs* are run-*ning free;*
-%
-A | (BG) A B2 A/- A/ | (G>F) G A2 A "^cres."|  (B> c) d (c>d) e | !f!d3- d2 |]
-w: And Har-ry, our King, is* gone a hunt-ing, To bring* his deer* to bay.*
-w: The mer-*ry horn wakes* up* the morn, To leave* his i-*dle bed.*
-w: The woods* re-joice at the mer-*ry noise Of hey! tan-ta-ra,* tee! tee!*
-
-X: 77
 T: A Hunting We Will Go
 O: English
 %R: jig
@@ -1962,6 +1940,28 @@ w: hunt-ing we will go,_ A hunt-ing we will go,_ A
 %
 (AB) c (de) f | (GAB Hc2) E | (F>E) F G2 G | C3- C2 |]
 w: hunt-*ing we* will go,___ A hunt-*ing we will go._
+
+X: 77
+T: The Hunt Is Up
+O: Old English Folksong.
+Q: "Somewhat quickly."
+%R: jig
+N: This is version 1, for ABC software that doesn't understand crescendo symbols.
+B: "The Everyday Song Book", 1927
+F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
+N: In bar 6, "gone a" looks like "gona".
+M: 6/8
+L: 1/8
+K: D
+A | d2 A (F>!mf!G) A | d- d A (F>G) A | (B>A) G F>E D | E3- E2 ||
+w: 1.~The hunt is up,* the hunt* is up,* And it* is well* nigh day;*
+w: 2.~The east is bright* with morn-*ing light,* And dark-*ness it* is fled;*
+w: 3.~The hors-es snort* to be at the sport,* The dogs* are run-*ning free;*
+%
+A | (BG) A B2 A/- A/ | (G>F) G A2 A "^cres."|  (B> c) d (c>d) e | !f!d3- d2 |]
+w: And Har-ry, our King, is* gone a hunt-ing, To bring* his deer* to bay.*
+w: The mer-*ry horn wakes* up* the morn, To leave* his i-*dle bed.*
+w: The woods* re-joice at the mer-*ry noise Of hey! tan-ta-ra,* tee! tee!*
 
 X: 78
 T: The Hurdy Gurdy Man
@@ -2033,48 +2033,6 @@ A D D D2 (D/E/) | F B A G He d | c C C C2 |]
 w: give her some food And* pus-sy will love me be-cause I am good.
 
 X: 81
-T: I See You
-N: (Game Song. For directions see page 8.)
-O: Swedish
-%R: air, march
-B: "The Everyday Song Book", 1927
-F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
-M: 2/4
-L: 1/8
-K: G
-"^I"B | G2 D B | G2 D z | B B/ B/ A A/ A/ | G G D |
-w: I see you, I see you, Tra, la, la, la, la, la, la, la, la;
-%
-"^I"B | G2 D B | G2 D z | B B/ B/ A A/ A/ | G G G |] "^II"B |
-w: I see you, I see you, Tra, la, la, la, la, la, la, la, la. If
-%
-B d d B | A c c A | G B B G | F A A A |
-w: I see you then you see me, If I take you then you take me. If
-%
-B d d B | A c c A | G B B G | F A G2 |]
-w: you see me then I see you, If you take me then I take you.
-
-X: 82
-T: In Summer.
-C: music: C.M. von Weber.
-C: words: Translated from the German.
-Q: "Allegretto."
-%R: march
-B: "The Everyday Song Book", 1927
-F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
-M: 2/4
-L: 1/8
-K: Bb
-[| .B2 .d2 | c2 zF | G F G A | B2 zF | F d d c | (BG) F |]
-w: 1.~Hum, bee, hum, For sum-mer days are come. The joy-ous fields of clov-*er
-w: 2.~Sing, birds, sing, Let sum-mer car-ols ring. The whole round world re-joic-*es
-w: 3.~Play, child, play, For sum-mer flies a-way. With bird and bee go rov-*ing,
-F | G A B c | F2 Bz | .B2 .d2 | f3 (d/B/) | F (F/B/) d c | B2 z |]
-w: Are white for the, dear rov-er. Hum, bee, hum, For* sum-mer* days are come.
-w: In myr-i-ads of voi-ces. Sing, birds, sing, Let* sum-mer* car-ols ring.
-w: Each sun-ny hour im-prov-ing. Play, child, play, For* sum-mer* flies a-way.
-
-X: 83
 T: Indian
 N: Copyright, 1899, by A. Flanagan, Publisher.
 C: words: Lydia Avery Coonley.
@@ -2106,6 +2064,48 @@ w: This fair land was all your own Ere Co-lum-bus made it known.
 [V:2] [dBD2]>[cA] [BGD2][cA] | [BG][AD] [GB,] D/E/ | [FD2]>G [FE2]c | [B2D2] z2 |]
 [V:3] [d2G2] [d2G2] | [d2G2] [d-G][d_G] | [d2F2] [f2F2] | [f2B2] B,2 |]
 %
+
+X: 82
+T: In Summer.
+C: music: C.M. von Weber.
+C: words: Translated from the German.
+Q: "Allegretto."
+%R: march
+B: "The Everyday Song Book", 1927
+F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
+M: 2/4
+L: 1/8
+K: Bb
+[| .B2 .d2 | c2 zF | G F G A | B2 zF | F d d c | (BG) F |]
+w: 1.~Hum, bee, hum, For sum-mer days are come. The joy-ous fields of clov-*er
+w: 2.~Sing, birds, sing, Let sum-mer car-ols ring. The whole round world re-joic-*es
+w: 3.~Play, child, play, For sum-mer flies a-way. With bird and bee go rov-*ing,
+F | G A B c | F2 Bz | .B2 .d2 | f3 (d/B/) | F (F/B/) d c | B2 z |]
+w: Are white for the, dear rov-er. Hum, bee, hum, For* sum-mer* days are come.
+w: In myr-i-ads of voi-ces. Sing, birds, sing, Let* sum-mer* car-ols ring.
+w: Each sun-ny hour im-prov-ing. Play, child, play, For* sum-mer* flies a-way.
+
+X: 83
+T: I See You
+N: (Game Song. For directions see page 8.)
+O: Swedish
+%R: air, march
+B: "The Everyday Song Book", 1927
+F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
+M: 2/4
+L: 1/8
+K: G
+"^I"B | G2 D B | G2 D z | B B/ B/ A A/ A/ | G G D |
+w: I see you, I see you, Tra, la, la, la, la, la, la, la, la;
+%
+"^I"B | G2 D B | G2 D z | B B/ B/ A A/ A/ | G G G |] "^II"B |
+w: I see you, I see you, Tra, la, la, la, la, la, la, la, la. If
+%
+B d d B | A c c A | G B B G | F A A A |
+w: I see you then you see me, If I take you then you take me. If
+%
+B d d B | A c c A | G B B G | F A G2 |]
+w: you see me then I see you, If you take me then I take you.
 
 X: 84
 T: Isle of Beauty
@@ -3056,49 +3056,6 @@ w: la, tra la la la! Ech-oes sound a-far! Tra la la la, tra la la la!
 %%text 1) 2nd Verse: Music sounds afar, etc. 3rd Verse: Hark the soft guitar, etc.
 
 X: 120
-T: The Mill
-O: Old Folk Tune
-%R: air, jig, march
-B: "The Everyday Song Book", 1927
-F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
-N: Final 8th-rest omitted to fix the rhythm between verses.
-M: 6/8
-L: 1/8
-K: G
-D | G G G G A B | B A A A2 d | B z z z2 D |
-w: 1.~Clip, clap! goes the mill by the swift run-ning brook, clip, clap!  By
-w: 2.~Then round goes the wheel and a-round goes the stone,  clip, clap!  The
-%
-G G G G A B | B A A A2 d | B z z z2 (G/B/) |
-w: day and by night is the mill-er at work,        clip, clap! He*
-w: wheat in the grain be-comes flour to take home, clip, clap! The*
-%
-d d d d e d | d c c c2 c/- c/ | B> B B
-w: grinds us the corn to make bread for the year,  And with plen-ty of
-w: Ba-ker's man kneads it, and rolls it, and bakes To* make for good
-%
-d c B | B A A  A2 d | B z B A z A | G z z z2 |]
-w: this we've no hun-ger to fear,       Clip, clap! clip, clap! clip, clap!
-w: chil-dren sweet bis-cuits and cakes, Clip, clap! clip, clap! clip, clap!
-
-X: 121
-T: The Mill-Wheel
-%R: air, march
-B: "The Everyday Song Book", 1927
-F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
-M: 4/8
-L: 1/8
-K: D
-[| D E F G | A G F E | D2 D2 | D4 | D E F G |
-w: Round and round the mill-wheel's go-ing, Click, click, clack! Clear and bright the
-%
-A G F E | D2 D2 | D4 | E E E E | F4 |
-w: wa-ter's flow-ing, Click, click clack! If the wa-ter flows,
-%
-G G G G | A4 | B c d c | B A G F | E2 E2 | D4 |]
-w: if the mill-wheel goes, You for bread, my dear, will nev-er, nev-er lack.
-
-X: 122
 T: The Miller of the Dee
 C: music: Old English Air
 C: words: Charles Kingsley (attr.)
@@ -3125,6 +3082,49 @@ w: No* Law-yer, sur-geon, of doc-tor E'er had* a groat from me;*
 %
 E | A2 A ^G> ^F E | c2 c B2 (e/d/) | c> B A (B>A) ^G | A3- A2 |]
 w: I care for no-bod-y, no, not I, and* no-bod-y cares* for me.*
+
+X: 121
+T: The Mill
+O: Old Folk Tune
+%R: air, jig, march
+B: "The Everyday Song Book", 1927
+F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
+N: Final 8th-rest omitted to fix the rhythm between verses.
+M: 6/8
+L: 1/8
+K: G
+D | G G G G A B | B A A A2 d | B z z z2 D |
+w: 1.~Clip, clap! goes the mill by the swift run-ning brook, clip, clap!  By
+w: 2.~Then round goes the wheel and a-round goes the stone,  clip, clap!  The
+%
+G G G G A B | B A A A2 d | B z z z2 (G/B/) |
+w: day and by night is the mill-er at work,        clip, clap! He*
+w: wheat in the grain be-comes flour to take home, clip, clap! The*
+%
+d d d d e d | d c c c2 c/- c/ | B> B B
+w: grinds us the corn to make bread for the year,  And with plen-ty of
+w: Ba-ker's man kneads it, and rolls it, and bakes To* make for good
+%
+d c B | B A A  A2 d | B z B A z A | G z z z2 |]
+w: this we've no hun-ger to fear,       Clip, clap! clip, clap! clip, clap!
+w: chil-dren sweet bis-cuits and cakes, Clip, clap! clip, clap! clip, clap!
+
+X: 122
+T: The Mill-Wheel
+%R: air, march
+B: "The Everyday Song Book", 1927
+F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
+M: 4/8
+L: 1/8
+K: D
+[| D E F G | A G F E | D2 D2 | D4 | D E F G |
+w: Round and round the mill-wheel's go-ing, Click, click, clack! Clear and bright the
+%
+A G F E | D2 D2 | D4 | E E E E | F4 |
+w: wa-ter's flow-ing, Click, click clack! If the wa-ter flows,
+%
+G G G G | A4 | B c d c | B A G F | E2 E2 | D4 |]
+w: if the mill-wheel goes, You for bread, my dear, will nev-er, nev-er lack.
 
 X: 123
 T: The Minstrel Boy
@@ -3527,57 +3527,6 @@ B | c A F F | B G E E | F G A B | E3 |]
 w: The par-tridge whirs, the frost-ed burrs Are here for you and me.
 
 X: 137
-T: O No, John
-N: This is version 1, for ABC software that doesn't understand multi-column text.
-N: From "English Folk-Songs," by Permission of H. W. Gray company.
-%R: air, march
-B: "The Everyday Song Book", 1927
-F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
-M: C
-L: 1/8
-P: John:
-K: G
-D2 | G2 G2 A2 A2 | d2 dc B2 A2 | D2 G2 A2 A2 |
-w: 1.~On yon-der hill there stands a* crea-ture; Who she is I
-%
-d2 c2 A4 | d2 d c B2 G2 | c2 AG F2 D |
-w: do not know, I'll go and court her for her* beau-ty;
-%
-G2 B2 E2 G2 | F2 D2 D4 | d4 c2 A2 | B2 G2 (F E) D | G4 z2 |]
-w: She must an-swer Yes or No, Tra, la-la, la-la, la-la-la, la.
-w: | | O No, John! No, John! No, * John! No!
-%
-W: The Lady:
-W: 2 My father was a Spanish captain -- Went to sea a month ago.
-W:   First he kissed me, then he left me -- Bade me always answer No.
-W:     Tra la-la, la-la, la-la-la, la.
-W:
-W: John:
-W: 3 O Madam, in your face is beauty, On your lips red roses grow.
-W:   Will you take me for your lover?  Madam, answer Yes or No.
-W: The Lady:   O No, John! No, John! No, John! No.
-W:
-W: John:
-W: 4 O Madam, I will give you jewels; I will make you rich and free;
-W:   I will give you silken dresses: Madam, will you marry me?
-W: The Lady: O No, John! No, John! No, John! No.
-W:
-W: John:
-W: 5 O Madam, since you are so cruel, And that you do scorn me so,
-W:   If I may not be your lover, Madam, will you let me go?
-W: The Lady: O No, John! No, John! No, John! No.
-W:
-W: John:
-W: 6 Then I will stay with you forever, If you will not be unkind.
-W:   Madam, I have vowed to love you; Would you have me change my mind?
-W: The Lady: O No, John! No, John! No, John! No.
-W:
-W: John:
-W: 7 O hark! I hear the church bells ringing; Will you come and be my wife?
-W:   Or, dear madam, have settled To live single all your life?
-W: The Lady: O No, John! No, John! No, John! No.
-
-X: 138
 T: The Oak-Tree
 C: Mary Howitt.
 N: This is version 1, for ABC software that doesn't understand voice overlays.
@@ -3609,7 +3558,7 @@ w: That grow-eth now and still shall grow When we are low-ly laid.
 w: And of its tim-ber stout and strong    We'll build a ves-sel good.
 w: But sail, a no-ble mer-chant ship.     Up-on the bound-less sea.
 
-X: 139
+X: 138
 T: Oats and Beans
 N: (Singing Game. For directions, see p. 9.)
 %R: air, jig
@@ -3635,7 +3584,7 @@ w: ring and take one in. 4.~So now you're mar-ried you must o-bey, You must be t
 A2 c B2 B | e2 e d2 d | c2 c B2 B | A2 A G2 G | F2 F E2 z |]
 w: all you say; You must be wise, you must be good, And help your wife to chop the wood.
 
-X: 140
+X: 139
 T: October's Bright, Blue Weather.
 C: music: Gruenberger.
 C: words: Helen Hunt Jackson.
@@ -3673,7 +3622,7 @@ w: O suns and skies and clouds of* June, And flow'rs of June, to-geth-er
 [B2G2] | [B3G3] [cA] [B2G2] [A2F2] | [G2E2] ([GE][AF]) [B2G2] [B2G2] | [c2A2] [f2A2] [e2G2] [d2F2] | [f2A2] [e2G2] z2 |]
 w: Ye can-not ri-val for one* hour Oc-to-ber's bright, blue weath-er!
 
-X: 141
+X: 140
 T: Oh! Dear, What Can the Matter Be?
 O: English
 Q: "Fast."
@@ -3701,7 +3650,7 @@ B G e B G E | C E A G A F | E3- E "^D. S."G "^:S:"A |]
 w: bunch of blue rib-bons, To tie up my bon-ny brown hair._   And it's
 w: off the blue rib-bons   That tie up my bon-ny brown hair._ And it's
 
-X: 142
+X: 141
 T: Oh, Season of the Christmas Child
 N: Copyright, 1909, by Stanley R Avery  Used by permission
 C: words: Rev. James E. Freeman, D. D.
@@ -3760,7 +3709,7 @@ d | [dG2] d [dD2] d | [dA2] c [fD2] d | [dG2] d [dD2] d | [dA]> ^GA [c'c] |
 [dF] | [dG] [dD] [dG] [dD] | [dA] [dG] [dF] [fc] | [gB] [dA] [dG] [=f=F] | ([eE]> [^f^F] [^g^G]) |
 [eE] [aA]> [bB] [c'c] [fF] | [bB] [^d^D] [eE] [g=d] | [gc] [^g/c]a/ [bd] [dD] | [g3G3] |]
 
-X: 143
+X: 142
 T: Old Black Joe.
 C: Stephen C. Foster 1860.
 C: Arr. by J. S. Fearis.
@@ -3791,7 +3740,7 @@ w: "Old Black Joe!"  I'm com-ing,  I'm com-ing,  For my head is bend-ing
 [A3F3] [dF] | [cE]>[dF] [eG] [cE] [dF] [BG] [AF] [BD] | H[F2D2] H[E2C2] H[D4D4] |]
 w: low;  I hear those gen-tle voi-ces call-ing, "Old Black Joe!"
 
-X: 144
+X: 143
 T: Old Dog Tray
 C: Stephen C. Foster
 %R: _
@@ -3818,7 +3767,7 @@ B A F D B3 B | B c E A G2 F2 | G6 z2 |]
 w: nev-er, nev-er find A bet-ter friend than old dog Tray.
 % %text _
 
-X: 145
+X: 144
 T: Old Folks at Home
 C: Stephen C. Foster. 1851.
 %R: air, march
@@ -3851,7 +3800,7 @@ w: All de world is sad and drear-y, Ev-'ry-where I roam;
    F4 E D F E | D2 d2 B d3 | A4 F> D E2 E> E | D6 z2 |]
 w: Oh! dark-ies, how my heart grows wear-y, Far from de old folks at home.
 
-X: 146
+X: 145
 T: Once I Saw a Little Bird
 O: Old Scotch
 %R: air, march
@@ -3871,6 +3820,57 @@ w: bird, you must stop, stop, stop!"  Then I went* to the salt-box, so my
 F2 A A d2 d e | f e d c (ed) c B | Az Fz Fz |]
 w: "How do you do?"     When he shook his lit-tle tail* and a-way he flew!
 w: plan would not fail, And I put a lit-tle pinch* on his tail, tail, tail!
+
+X: 146
+T: O No, John
+N: This is version 1, for ABC software that doesn't understand multi-column text.
+N: From "English Folk-Songs," by Permission of H. W. Gray company.
+%R: air, march
+B: "The Everyday Song Book", 1927
+F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
+M: C
+L: 1/8
+P: John:
+K: G
+D2 | G2 G2 A2 A2 | d2 dc B2 A2 | D2 G2 A2 A2 |
+w: 1.~On yon-der hill there stands a* crea-ture; Who she is I
+%
+d2 c2 A4 | d2 d c B2 G2 | c2 AG F2 D |
+w: do not know, I'll go and court her for her* beau-ty;
+%
+G2 B2 E2 G2 | F2 D2 D4 | d4 c2 A2 | B2 G2 (F E) D | G4 z2 |]
+w: She must an-swer Yes or No, Tra, la-la, la-la, la-la-la, la.
+w: | | O No, John! No, John! No, * John! No!
+%
+W: The Lady:
+W: 2 My father was a Spanish captain -- Went to sea a month ago.
+W:   First he kissed me, then he left me -- Bade me always answer No.
+W:     Tra la-la, la-la, la-la-la, la.
+W:
+W: John:
+W: 3 O Madam, in your face is beauty, On your lips red roses grow.
+W:   Will you take me for your lover?  Madam, answer Yes or No.
+W: The Lady:   O No, John! No, John! No, John! No.
+W:
+W: John:
+W: 4 O Madam, I will give you jewels; I will make you rich and free;
+W:   I will give you silken dresses: Madam, will you marry me?
+W: The Lady: O No, John! No, John! No, John! No.
+W:
+W: John:
+W: 5 O Madam, since you are so cruel, And that you do scorn me so,
+W:   If I may not be your lover, Madam, will you let me go?
+W: The Lady: O No, John! No, John! No, John! No.
+W:
+W: John:
+W: 6 Then I will stay with you forever, If you will not be unkind.
+W:   Madam, I have vowed to love you; Would you have me change my mind?
+W: The Lady: O No, John! No, John! No, John! No.
+W:
+W: John:
+W: 7 O hark! I hear the church bells ringing; Will you come and be my wife?
+W:   Or, dear madam, have settled To live single all your life?
+W: The Lady: O No, John! No, John! No, John! No.
 
 X: 147
 T: Onward, Christian Soldiers
@@ -4191,22 +4191,6 @@ w: Some like the blue sky, and some like the snow."
 w: And I have brought them, dear sis-ter, for you."
 
 X: 162
-T: Round:  At Summer Morn.
-O: Old English.
-%R: waltz
-B: "The Everyday Song Book", 1927
-F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
-M: 3/8
-L: 1/8
-K: A
-[V:1] E | (AE) A | (BE) B | (cE) c | d3 | (cB) A | D E2 | A2 |]
-w: At sum-*mer morn* the mer-*ry lark her-*alds in the day;
-[V:2] c | c2 c | B B2 | A A2 | G3 | (AB) c | (BA) G | A2 |]
-w: At e-ven-tide sad Phi-lo-mel breathes* her plain-*tive lay,
-[V:3] z | e3 | G3 | A3 | B3 | (cd) e | (dc) B | A2 |]
-w: War-bling sweet-ly all* her grief* a-way.
-
-X: 163
 T: Round: Are You Sleeping?
 O: Old French
 Q: "Moderato."
@@ -4223,6 +4207,22 @@ w:    Fr\`e-re Jac-ques, Fr\`e-re Jac-ques, Dor-mez-vous, dor-mez-vous?  Son-nez
 B2 G2 d e d c | B2 G2 "^4"G2 D2 | G4 G2 D2 | G4 |]
 w: ring-ing, Morn-ing bells are ring-ing; Ding, ding, dong, ding, ding, dong.
 w: ti-nes,   son-nez les ma-ti-nes,       Bim, bim, bom, bim, bim, bom.
+
+X: 163
+T: Round:  At Summer Morn.
+O: Old English.
+%R: waltz
+B: "The Everyday Song Book", 1927
+F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
+M: 3/8
+L: 1/8
+K: A
+[V:1] E | (AE) A | (BE) B | (cE) c | d3 | (cB) A | D E2 | A2 |]
+w: At sum-*mer morn* the mer-*ry lark her-*alds in the day;
+[V:2] c | c2 c | B B2 | A A2 | G3 | (AB) c | (BA) G | A2 |]
+w: At e-ven-tide sad Phi-lo-mel breathes* her plain-*tive lay,
+[V:3] z | e3 | G3 | A3 | B3 | (cd) e | (dc) B | A2 |]
+w: War-bling sweet-ly all* her grief* a-way.
 
 X: 164
 T: Round: Be You to Others Kind and True
@@ -4599,6 +4599,25 @@ V: 2 clef=bass middle=D
 %%sep 2 5 300
 
 X: 182
+T: The Snowbirds
+C: words: H.G.
+C: music: B.J.Relemann
+%R: air, waltz
+B: "The Everyday Song Book", 1927
+F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
+M: 3/4
+L: 1/4
+K: E
+[| E E E | F F F | G A B | B3    | E E E |
+w: Ma-ny dear snow-birds come troop-ing a-long, Mak-ing the
+%
+   F F F | G A B | B2  B | c e c | B G B |
+w: air full of twit-ter-ing song; They flut-ter and twin-kle a-
+%
+   A G F | G2  B | c e c | B G B | A G F | E3 |]
+w: bout in the trees, And let us come tow'rd them as near as we please.
+
+X: 183
 T: The Snow
 C: G.M.S.
 N: Copyright, 1916, by the Cable Company.
@@ -4619,25 +4638,6 @@ w: In won-drous rai-ment white is gleam-ing, Flow'rs save and
 %
 e3 z | B2 c d | e3 z | A4 | c2 B2 | A4- | A2 z2 |]
 w: warm, Hid from the storm, Sleep safe and warm._
-
-X: 183
-T: The Snowbirds
-C: words: H.G.
-C: music: B.J.Relemann
-%R: air, waltz
-B: "The Everyday Song Book", 1927
-F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
-M: 3/4
-L: 1/4
-K: E
-[| E E E | F F F | G A B | B3    | E E E |
-w: Ma-ny dear snow-birds come troop-ing a-long, Mak-ing the
-%
-   F F F | G A B | B2  B | c e c | B G B |
-w: air full of twit-ter-ing song; They flut-ter and twin-kle a-
-%
-   A G F | G2  B | c e c | B G B | A G F | E3 |]
-w: bout in the trees, And let us come tow'rd them as near as we please.
 
 X: 184
 T: Soldier Boy
@@ -4998,20 +4998,6 @@ w: 1.~Hear the bell strike the hour  High and clear from the tow'r.
 w: 2.~"Ten o'-clock; tir-ed folks,   Go to sleep," say the clocks.
 
 X: 198
-T: Thank You, Pretty Cow
-%R: air, march
-B: "The Everyday Song Book", 1927
-F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
-M: 2/4
-L: 1/8
-K: F
-[| A2 (cA) | F2 F2 | G2 (FG) | (A2 F2) | A2 (cA) | F2 F2 | G2 (AG) | F4 |
-w: Thank you,* pret-ty cow, that* made* Pleas-ant* mild to | soak my* bread;
-%
-   f2 (ed) | (cA) F2 | d2 (cB) | A4 | (FG) A2 | (Bc) d2 | c2 E2 | F4 |]
-w: Ev-'ry* day* and ev-'ry* night, Warm* and fresh,* and sweet and white.
-
-X: 199
 T: Thanksgiving
 C: music: Jessie L. Gaynor
 C: words: J. L. G.
@@ -5059,7 +5045,7 @@ A6 | F6 | =A6 | B6 | B,6 | e2 E2 z2 |]
 %%endtext
 %%sep 0 1 500
 
-X: 200
+X: 199
 T: Thanksgiving Pie
 C: Anon.
 C: Tunes: Chimes of Dunkirk
@@ -5076,6 +5062,20 @@ w: Thanks-giv-ing Day is near, Oh, pump-kins, you should fear,
 %
 B | c B c d | e (d/c/) B A | G2 F2 | E3 |]
 w: Un-less you wish quite soon to* lie In moth-er's pie.
+
+X: 200
+T: Thank You, Pretty Cow
+%R: air, march
+B: "The Everyday Song Book", 1927
+F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
+M: 2/4
+L: 1/8
+K: F
+[| A2 (cA) | F2 F2 | G2 (FG) | (A2 F2) | A2 (cA) | F2 F2 | G2 (AG) | F4 |
+w: Thank you,* pret-ty cow, that* made* Pleas-ant* mild to | soak my* bread;
+%
+   f2 (ed) | (cA) F2 | d2 (cB) | A4 | (FG) A2 | (Bc) d2 | c2 E2 | F4 |]
+w: Ev-'ry* day* and ev-'ry* night, Warm* and fresh,* and sweet and white.
 
 X: 201
 T: The Three Blind Mice
@@ -5143,6 +5143,72 @@ c G | E G | c G | E2 | c B | B A | A G | C |]
 w: Cocked his shin-ing eye and said, "Ain't you 'shamed, you sleep-y head?"
 
 X: 204
+T: Tom and His Friend
+N: Copyright, 1916, by The Cable Company
+C: words: Mary Blake:
+C: music: J. H.
+%R: air, waltz
+B: "The Everyday Song Book", 1927
+F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
+M: 3/4
+L: 1/4
+K: F
+|: c c A | c c A | B c d | c3 | A A F | A A F |
+w: 1.~Lit-tle pink Pig-gy-wig lives in the yard,     Lambs in the mead-ow with
+w:    Dick-y-bird lives in the top of a tree,        Fish-y-wish down in the
+w: 2.~Pig-gy-wig roots with his queer lit-tle snout, Lamb-kin goes run-ning and
+w:    Dick-y-bird sings in the top of his tree,      Fish-y-wish swims miles and
+%
+G F E F3 :| G G A | F G A | B B c | A3 |
+w: Rov-er on guard; | Pol-ly-wog lives in a lit-tle brown pool;
+w: depths of the sea; | ~ ~ ~ | ~ ~ ~ | ~ ~ ~ | ~ |
+w: frisk-ing a-bout; | Pol-ly-wog kicks all day long in his pool;
+w: miles in the sea; | ~ ~ ~ | ~ ~ ~ | ~ ~ ~ | ~ |
+%
+F A c | f e d | c B G | F3 |]
+w: I have a home, but they send me to school.
+w: I am a child,  and they send me to school.
+
+X: 205
+T: Tom, the Piper's Son
+O: English
+%R: air, march
+B: "The Everyday Song Book", 1927
+F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
+M: 2/4
+L: 1/8
+K: G
+!f![| "^>"G2 "^>"F> G | .B .G D2 | !mf! G G G F/ G/ | B G D2 z/ !f!d/ |
+w: Tom, Tom, the pi-per's son, Stole a pig, and a-way he run! The
+.d .e .d z/ !p!D/ | .D .E .D !f!D | G B B/A/ G/F/ | E G G2 |]
+w: pig was eat, And Tom was beat, Which sent him howl-*ing* down the street.
+
+
+
+%%center PART THREE.
+
+X: 206
+T: The Tomtit
+C: music: Reinecke.
+C: words: Goethe.
+Q: "Allegretto."
+N: This is version 1, for ABC software that doesn't understand crescendo/diminuendo symbols.
+B: "The Everyday Song Book", 1927
+F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
+M: 2/4
+L: 1/8
+K: G
+D | D !f!G F A | G> B d !p!D | D z z G | G z z G | "^cresc."F A
+w: 1.~A boy once caught a tom-tit gay,     hm, hm, so, so, And in a
+w: 2.~he laughed a-loud in sil-ly glee,    hm, hm, so, so, Put in his
+w: 3.~The bird flew high and sang for joy, hm, hm, so, so, And laughed to
+%
+G B | !f!e> "dim."d c !p!B | A z z B | G z z "^rit."D | D z z G | G z Hz |]
+w: cage he put his prey,  hm, hm, so, so, hm, hm, so, so.
+w: hand right clum-si-ly, hm, hm, so, so, hm, hm, so, so.
+w: scorn the stu-pid boy, hm, hm, so, so, hm, hm, so, so.
+
+X: 207
 T: To the Moon
 O: German Folksong.
 Q: "Tranquillamente."
@@ -5183,72 +5249,6 @@ w: clouds of peace* thy* throne,* To the fair-est dawn* dost*
 w: com-*fort To each heart that's sore* op-*prest.
 w: show* us How God loves us, one* and* all.
 w: lead* us, Thanks to thee, O sil-*v'ry* moon.
-
-X: 205
-T: Tom and His Friend
-N: Copyright, 1916, by The Cable Company
-C: words: Mary Blake:
-C: music: J. H.
-%R: air, waltz
-B: "The Everyday Song Book", 1927
-F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
-M: 3/4
-L: 1/4
-K: F
-|: c c A | c c A | B c d | c3 | A A F | A A F |
-w: 1.~Lit-tle pink Pig-gy-wig lives in the yard,     Lambs in the mead-ow with
-w:    Dick-y-bird lives in the top of a tree,        Fish-y-wish down in the
-w: 2.~Pig-gy-wig roots with his queer lit-tle snout, Lamb-kin goes run-ning and
-w:    Dick-y-bird sings in the top of his tree,      Fish-y-wish swims miles and
-%
-G F E F3 :| G G A | F G A | B B c | A3 |
-w: Rov-er on guard; | Pol-ly-wog lives in a lit-tle brown pool;
-w: depths of the sea; | ~ ~ ~ | ~ ~ ~ | ~ ~ ~ | ~ |
-w: frisk-ing a-bout; | Pol-ly-wog kicks all day long in his pool;
-w: miles in the sea; | ~ ~ ~ | ~ ~ ~ | ~ ~ ~ | ~ |
-%
-F A c | f e d | c B G | F3 |]
-w: I have a home, but they send me to school.
-w: I am a child,  and they send me to school.
-
-X: 206
-T: Tom, the Piper's Son
-O: English
-%R: air, march
-B: "The Everyday Song Book", 1927
-F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
-M: 2/4
-L: 1/8
-K: G
-!f![| "^>"G2 "^>"F> G | .B .G D2 | !mf! G G G F/ G/ | B G D2 z/ !f!d/ |
-w: Tom, Tom, the pi-per's son, Stole a pig, and a-way he run! The
-.d .e .d z/ !p!D/ | .D .E .D !f!D | G B B/A/ G/F/ | E G G2 |]
-w: pig was eat, And Tom was beat, Which sent him howl-*ing* down the street.
-
-
-
-%%center PART THREE.
-
-X: 207
-T: The Tomtit
-C: music: Reinecke.
-C: words: Goethe.
-Q: "Allegretto."
-N: This is version 1, for ABC software that doesn't understand crescendo/diminuendo symbols.
-B: "The Everyday Song Book", 1927
-F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
-M: 2/4
-L: 1/8
-K: G
-D | D !f!G F A | G> B d !p!D | D z z G | G z z G | "^cresc."F A
-w: 1.~A boy once caught a tom-tit gay,     hm, hm, so, so, And in a
-w: 2.~he laughed a-loud in sil-ly glee,    hm, hm, so, so, Put in his
-w: 3.~The bird flew high and sang for joy, hm, hm, so, so, And laughed to
-%
-G B | !f!e> "dim."d c !p!B | A z z B | G z z "^rit."D | D z z G | G z Hz |]
-w: cage he put his prey,  hm, hm, so, so, hm, hm, so, so.
-w: hand right clum-si-ly, hm, hm, so, so, hm, hm, so, so.
-w: scorn the stu-pid boy, hm, hm, so, so, hm, hm, so, so.
 
 X: 208
 T: Try Again
@@ -5293,35 +5293,6 @@ w: For you nev-er shut your eye      Till the sun is in the sky.
 w: Though I know not what you are,   Twin-kle, twin-kle, lit-tle star.
 
 X: 210
-T: The U. S. A. Forever
-T: (To be sung to the tune of Dixie.)
-%R: air, march
-B: "The Everyday Song Book", 1927
-F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
-M: none
-K: none
-W:1. Come, all who live in the U. S. A.,
-W:   Join in our song and sing today,
-W:Work away, work away, for the land of the free;
-W:   United, firm, with every state,
-W:   To make a nation good and great,
-W:Work away, work away, for the land of the free;
-W:
-W:2. The North and South, the East and West,
-W:   We love them all, for all are best,
-W:Work away, work away, for the land of the free;
-W:   United States and hearts and hands
-W:   Will make the greatest of all lands,
-W:Work away, work away, for the land of the free;
-W:
-W:Chorus:--
-W:   The U. S. A. forever, hurray!, hurray!
-W:   The Stars and Stripes shall wave above
-W:      The U. S. A. forever.
-W:   Hurray! hurray! the U. S. A. forever.
-W:   Hurray! hurray! the Stars and Stripes forever.
-
-X: 211
 T: Vesper Hymn
 O: Russian Melody
 Q: "Moderato."
@@ -5347,7 +5318,7 @@ w: Ju-bi-la-te, waves re-treat-ing  To the shore, it dies a-long;
 w: Far-ther now, now far-ther steal-ing, Soft it fades up - on the ear.
 w: Hark! a-gain, like waves re-treat-ing To the shore it* dies a-long.
 
-X: 212
+X: 211
 T: Violet With Tear-Dimmed Eye
 O: German
 Q: "Andante."
@@ -5364,6 +5335,30 @@ w: 2.~Rays of love the sun-beams dart Deep in-to thy ver-y heart;
 B c | d d | c d | e z | f f | e d | c B | A z |]
 w: Vi-o-let, re-joice with me!       Al-so smiles the sun on thee!
 w: Wipe the tear from off thine eye, Vi-o-let, re-joice with me!
+
+X: 212
+T: We'll All Clap Hands Together.
+O: Old Fashioned CHildren's Action Song.
+%R: march
+B: "The Everyday Song Book", 1927
+F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
+M: 4/4
+L: 1/4
+K: G
+D | G G G G | G2 D D | B B B B | B2 G |]
+w: 1.~We'll all clap hands to-geth-er, we'll all clap hands to-geth-er,
+B | d d d d | d2 B B | A A A (B/A/) | G3 |]
+w: We'll all clap hands to-geth-er, as child-ren ought to* do.
+%%text (For playing directions, see page 7.)
+%
+W: 2. We'll all stand up together, etc. as in verse 1.
+W: 3. We'll all join hands together, etc.
+W: 4. We'll all fold hands together, etc.
+W: 5. We'll all turn round together, etc.
+W: 6. We'll all stand still together, etc.
+W: 7. We'll all sit down together, etc.
+W: 8. We'll all twist hands together, etc.
+W: 9. We'll all be quiet together, etc.
 
 X: 213
 T: We Three Kings of Orient Are
@@ -5399,30 +5394,6 @@ G2 G | A2 B | c2 B | A2 B | G2 G | G2 D | G2 E | G3 |]
 w: West-ward lead-ing, still pro-ceed-ing, Guide us to Thy per-fect light.
 
 X: 214
-T: We'll All Clap Hands Together.
-O: Old Fashioned CHildren's Action Song.
-%R: march
-B: "The Everyday Song Book", 1927
-F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
-M: 4/4
-L: 1/4
-K: G
-D | G G G G | G2 D D | B B B B | B2 G |]
-w: 1.~We'll all clap hands to-geth-er, we'll all clap hands to-geth-er,
-B | d d d d | d2 B B | A A A (B/A/) | G3 |]
-w: We'll all clap hands to-geth-er, as child-ren ought to* do.
-%%text (For playing directions, see page 7.)
-%
-W: 2. We'll all stand up together, etc. as in verse 1.
-W: 3. We'll all join hands together, etc.
-W: 4. We'll all fold hands together, etc.
-W: 5. We'll all turn round together, etc.
-W: 6. We'll all stand still together, etc.
-W: 7. We'll all sit down together, etc.
-W: 8. We'll all twist hands together, etc.
-W: 9. We'll all be quiet together, etc.
-
-X: 215
 T: When Johnny Comes Marching Home
 C: Louis Lambert
 Q: "With Spirit.
@@ -5451,7 +5422,7 @@ w: The* lau-rel wreath* is read-y now        To place up-on* his loy-al brow,
 |: "^Chorus."B c "^Repeat ad lib."| d3 c3 | B3 A3 | D G G G2 ^F | G3- G :|
 w: And we'll all feel gay, When John-ny comes march-ing home.*
 
-X: 216
+X: 215
 T: When the Little Children Sleep.
 C: Reinecke.
 P: From the German.
@@ -5469,7 +5440,7 @@ w: They will watch the live long night By their beds till* morn-ing light,
 "^a tempo."D E | F2 F2 (3(EF G) | F4 d A | F3"rit." A (3(GF E) | HD4 |]
 w: When the lit-tle chil-*dren sleep, Stars and an-gels watch* do keep.
 
-X: 217
+X: 216
 T: Which Way Does the Wind Blow?
 O: Austrian Folk-tune
 %R: air, waltz
@@ -5488,7 +5459,7 @@ w: He* rides o-ver wa-ter,         He* rides o-ver snow.
 w: Where the goat can-not trav-el, He* tak-eth his fight.
 w: There's* nev-er a schol-ar,     This* mys-ter-y knows.
 
-X: 218
+X: 217
 T: The Wind-Baby.
 C: Anon.
 %R: _
@@ -5509,6 +5480,26 @@ d4 | B2 e2 | d2 B G | B2 A B | G4- | G3 |]
 w: call him A zeph-yr, and some-times a breeze.*
 w: snow-drifts And thinks it most cap-i-tal fun.*
 %%text Copyright, 1910, by the Cable Company.
+
+X: 218
+T: Winter, Adieu!
+O: German.
+Q: "Moderato."
+%R: air, waltz
+B: "The Everyday Song Book", 1927
+F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
+M: 3/4
+L: 1/4
+K: Ab
+[| c c B | A3 | c c B | A3 | c d e | e (d/c/) d |
+w: 1.~Win-ter, a-dieu! Your time is through; Par-tings they say, are* sad,
+w: 2.~Win-ter, a-dieu! Your time is through; Quick-ly a-way you* go,
+w: 3.~Win-ter, a-dieu! Your time is through; Hie you, and quick-ly,* too,
+%
+B c d | d (c/ B/) c | c c d | e3 | c c B | A3 |]
+w: Part-ing with you makes me glad; Win-ter a-dieu! no time for you.
+w: Tak-ing your cold and your snow; Win-ter a-dieu! no time for you.
+w: Spring birds will laugh at* you; Win-ter a-dieu! no time for you.
 
 X: 219
 T: Winter and Spring
@@ -5552,26 +5543,6 @@ w: skat-*ing; Boys and girls, Come out_ and play.
 w: slid-*ing, Cold and keen   The north_ winds blow.
 
 X: 221
-T: Winter, Adieu!
-O: German.
-Q: "Moderato."
-%R: air, waltz
-B: "The Everyday Song Book", 1927
-F: http://www.library.pitt.edu/happybirthday/pdf/The_Everyday_Song_Book.pdf
-M: 3/4
-L: 1/4
-K: Ab
-[| c c B | A3 | c c B | A3 | c d e | e (d/c/) d |
-w: 1.~Win-ter, a-dieu! Your time is through; Par-tings they say, are* sad,
-w: 2.~Win-ter, a-dieu! Your time is through; Quick-ly a-way you* go,
-w: 3.~Win-ter, a-dieu! Your time is through; Hie you, and quick-ly,* too,
-%
-B c d | d (c/ B/) c | c c d | e3 | c c B | A3 |]
-w: Part-ing with you makes me glad; Win-ter a-dieu! no time for you.
-w: Tak-ing your cold and your snow; Win-ter a-dieu! no time for you.
-w: Spring birds will laugh at* you; Win-ter a-dieu! no time for you.
-
-X: 222
 T: A Wish
 C: German Adaptation.
 C: German Tune.
@@ -5592,7 +5563,7 @@ w: O-ver the moun-tain blue,     O-ver the bil-lows too,      Thru the great blu
 w: Won-drous the sights I'd see, Could I but range with thee, Glad,* at thy side.
 w: But that can nev-er be,       Ah! that can nev-er be;      Here* must I stay.
 
-X: 223
+X: 222
 T: Work and Play
 C: words: L. Harper.
 C: music: J. M.
@@ -5615,7 +5586,7 @@ d B | F2 | G A | B F | G A | B c | d c | F A | B2- | B z |]
 w: use-ful be,   Hous-es watch-ing, Mice a-catch-ing\-\- Still they love to play.*
 w: ne'er a sigh, Glad-ly work-ing,  nev-er shirk-ing,    Toil with pleas-ure take.*
 
-X: 224
+X: 223
 T: Yankee Doodle.
 C: music: Old English Tune -- 1755
 C: words: Dr.Schamburg.
