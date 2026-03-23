@@ -6,13 +6,15 @@ export interface Props {
   description?: string;
   fullWidth?: boolean;
   contentClass?: string;
+  analyticsName?: string;
 }
 
 const {
   title,
   description = "JamBuddy - Tools for Musicians",
   fullWidth = false,
-  contentClass
+  contentClass,
+  analyticsName = title
 } = Astro.props;
 
 const baseContentClass = fullWidth
@@ -48,14 +50,75 @@ const resolvedContentClass = contentClass ?? baseContentClass;
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192x192.png" />
     <link rel="manifest" href="/manifest.json" />
+    <meta name="jb-analytics-name" content={analyticsName} />
     
     <!-- Google tag (gtag.js) -->
-    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-JXYZHXEJND"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JXYZHXEJND"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      window.gtag = window.gtag || function(){dataLayer.push(arguments);};
+      const JAMBUDDY_PAGE_NAME = document.querySelector('meta[name="jb-analytics-name"]')?.content || document.title;
+      const JAMBUDDY_PAGE_TYPE = window.location.pathname.startsWith('/abc')
+        ? 'abc'
+        : window.location.pathname === '/chord-browser'
+          ? 'chord_browser'
+          : 'marketing';
+      let jambuddyPageStartMs = Date.now();
+      let jambuddyHiddenAtMs = null;
+      let jambuddyHiddenMs = 0;
+
+      function gtag(){window.gtag.apply(window, arguments);}
+      function buildPageParams(extra = {}) {
+        return {
+          page_title: document.title,
+          page_location: window.location.href,
+          page_path: window.location.pathname,
+          jb_page_name: JAMBUDDY_PAGE_NAME,
+          jb_page_type: JAMBUDDY_PAGE_TYPE,
+          ...extra
+        };
+      }
+      function trackPageView(extra = {}) {
+        gtag('event', 'page_view', buildPageParams(extra));
+      }
+      function trackPageEngagement(reason = 'pagehide') {
+        const now = Date.now();
+        const totalHiddenMs = jambuddyHiddenMs + (jambuddyHiddenAtMs ? now - jambuddyHiddenAtMs : 0);
+        const engagedMs = Math.max(0, now - jambuddyPageStartMs - totalHiddenMs);
+        if (engagedMs < 1000) return;
+        gtag('event', 'jb_page_engagement', buildPageParams({
+          jb_duration_sec: Math.round(engagedMs / 1000),
+          engagement_time_msec: engagedMs,
+          jb_exit_reason: reason
+        }));
+        jambuddyPageStartMs = now;
+        jambuddyHiddenAtMs = null;
+        jambuddyHiddenMs = 0;
+      }
+
       gtag('js', new Date());
-      gtag('config', 'G-JXYZHXEJND');
+      gtag('config', 'G-JXYZHXEJND', { send_page_view: false });
+      window.jamBuddyAnalytics = {
+        trackEvent(name, params = {}) {
+          gtag('event', name, buildPageParams(params));
+        },
+        trackPageView,
+        trackPageEngagement,
+        getPageContext() {
+          return buildPageParams();
+        }
+      };
+      trackPageView();
+
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          jambuddyHiddenAtMs = Date.now();
+        } else if (jambuddyHiddenAtMs) {
+          jambuddyHiddenMs += Date.now() - jambuddyHiddenAtMs;
+          jambuddyHiddenAtMs = null;
+        }
+      });
+      window.addEventListener('pagehide', () => trackPageEngagement('pagehide'));
     </script>
     
     <title>{title}</title>
@@ -183,24 +246,43 @@ const resolvedContentClass = contentClass ?? baseContentClass;
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
+        const analytics = window.jamBuddyAnalytics;
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuIcon = document.querySelector('.menu-icon');
         const closeIcon = document.querySelector('.close-icon');
 
-        mobileMenuButton.addEventListener('click', function() {
-          mobileMenu.classList.toggle('hidden');
-          menuIcon.classList.toggle('hidden');
-          closeIcon.classList.toggle('hidden');
-        });
+        if (mobileMenuButton && mobileMenu && menuIcon && closeIcon) {
+          mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+            analytics?.trackEvent?.('jb_mobile_menu_toggle', {
+              jb_menu_state: mobileMenu.classList.contains('hidden') ? 'closed' : 'open'
+            });
+          });
 
-        // Close mobile menu when clicking on a link
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-          link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-            menuIcon.classList.remove('hidden');
-            closeIcon.classList.add('hidden');
+          const mobileLinks = mobileMenu.querySelectorAll('a');
+          mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+              mobileMenu.classList.add('hidden');
+              menuIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+            });
+          });
+        }
+
+        document.addEventListener('click', (event) => {
+          const link = event.target instanceof Element ? event.target.closest('a') : null;
+          if (!link) return;
+          const href = link.getAttribute('href') || '';
+          if (!href) return;
+          const isExternal = href.startsWith('http');
+          const isDownload = href.includes('play.google.com');
+          if (!isExternal && !isDownload) return;
+          analytics?.trackEvent?.('jb_link_click', {
+            jb_link_type: isDownload ? 'app_store' : 'external',
+            jb_link_href: href
           });
         });
       });

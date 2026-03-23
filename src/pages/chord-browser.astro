@@ -6,7 +6,7 @@ const pageDescription =
   'Explore JamBuddy chord charts directly in your browser. Select an instrument, browse fingerings, and light up the fretboard by interval degrees.';
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
+<Layout title={pageTitle} description={pageDescription} analyticsName="Chord Browser">
   <section class="space-y-10">
   <div class="browser-shell rounded-2xl shadow-2xl overflow-hidden">
       <div class="browser-grid">
@@ -448,6 +448,7 @@ const pageDescription =
   </style>
 
   <script type="module">
+    const analytics = window.jamBuddyAnalytics;
     const NOTE_ORDER = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
     const ENHARMONIC_EQUIV = {
       Db: 'C#',
@@ -532,6 +533,10 @@ const pageDescription =
 
     const STORAGE_KEY = 'jamBuddyChordBrowserState';
 
+    function trackChordBrowserEvent(name, params = {}) {
+      analytics?.trackEvent?.(name, params);
+    }
+
     function getStorage() {
       if (typeof window === 'undefined') {
         return null;
@@ -576,6 +581,7 @@ const pageDescription =
     }
 
     function setActiveTab(tabId) {
+      const previousTab = state.activeTab;
       state.activeTab = tabId;
       TAB_BUTTONS.forEach((button) => {
         const isActive = button.dataset.tab === tabId;
@@ -589,6 +595,12 @@ const pageDescription =
         LEGEND_ROW.toggleAttribute('hidden', tabId !== 'fretboard');
       }
       persistState();
+      if (previousTab !== tabId) {
+        trackChordBrowserEvent('jb_chord_browser_tab', {
+          jb_tab_id: tabId,
+          jb_instrument_id: state.instrumentId
+        });
+      }
     }
 
     function normaliseNoteName(note) {
@@ -973,6 +985,10 @@ const pageDescription =
           renderIntervalLegend();
           renderFretboard();
           persistState();
+          trackChordBrowserEvent('jb_chord_browser_intervals', {
+            jb_interval_count: state.selectedIntervals.size,
+            jb_instrument_id: state.instrumentId
+          });
         });
 
         const dot = document.createElement('span');
@@ -1206,6 +1222,9 @@ const pageDescription =
         renderIntervalLegend();
         renderFretboard();
         persistState();
+        trackChordBrowserEvent('jb_chord_browser_instrument', {
+          jb_instrument_id: state.instrumentId
+        });
       });
 
       CHORD_ROOT_SELECT.addEventListener('change', () => {
@@ -1214,6 +1233,11 @@ const pageDescription =
         renderIntervalLegend();
         renderFretboard();
         persistState();
+        trackChordBrowserEvent('jb_chord_browser_selection', {
+          jb_instrument_id: state.instrumentId,
+          jb_chord_root: state.chordRoot,
+          jb_chord_quality: state.chordQuality || 'maj'
+        });
       });
 
       CHORD_QUALITY_SELECT.addEventListener('change', () => {
@@ -1224,6 +1248,11 @@ const pageDescription =
         renderIntervalLegend();
         renderFretboard();
         persistState();
+        trackChordBrowserEvent('jb_chord_browser_selection', {
+          jb_instrument_id: state.instrumentId,
+          jb_chord_root: state.chordRoot,
+          jb_chord_quality: state.chordQuality || 'maj'
+        });
       });
 
       INTERVAL_CLEAR_BUTTON.addEventListener('click', () => {
@@ -1232,6 +1261,10 @@ const pageDescription =
         renderIntervalLegend();
         renderFretboard();
         persistState();
+        trackChordBrowserEvent('jb_chord_browser_intervals', {
+          jb_interval_count: 0,
+          jb_instrument_id: state.instrumentId
+        });
       });
     }
 
