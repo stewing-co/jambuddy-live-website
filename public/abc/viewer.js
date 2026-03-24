@@ -143,6 +143,7 @@
       audioContext: null,
       synth: null,
       isPlaying: false,
+      playbackPending: false,
       lastVisualObj: null,
       currentTempo: null,
       currentTempoUnit: null, // e.g., '1/4' if Q:1/4=120 was present
@@ -721,6 +722,7 @@
       const playToggle = q('playToggle');
       if (playToggle) {
         playToggle.addEventListener('click', () => {
+          if (this.state.playbackPending) return;
           if (this.state.isPlaying) this.stop(); else this.play();
         });
         this.updatePlayButton();
@@ -1515,6 +1517,9 @@
     },
 
     play: async function() {
+      if (this.state.playbackPending || this.state.isPlaying) return;
+      this.state.playbackPending = true;
+      this.updatePlayButton();
       try {
         if (!window.ABCJS?.synth) throw new Error('abcjs synth not available');
         const wantsMetronome = !!this.state.metronomeEnabled;
@@ -1529,6 +1534,7 @@
           const proceed = await this.performCountIn();
           if (!proceed) {
             this.state.isPlaying = false;
+            this.state.playbackPending = false;
             this.updatePlayButton();
             return;
           }
@@ -1584,6 +1590,7 @@
           this.clearMetronomeDisplay();
         }
         this.state.isPlaying = true;
+        this.state.playbackPending = false;
         this.updatePlayButton();
         // Reapply render scaling after playback starts
         try { this.applyRenderScale(); } catch(_) {}
@@ -1607,6 +1614,7 @@
           startResult.then(() => {
             if (this.state.playSession !== __playSession) return;
             this.state.isPlaying = false;
+            this.state.playbackPending = false;
             this.updatePlayButton();
             if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
             this.clearHighlight();
@@ -1616,6 +1624,7 @@
           }).catch(() => {
             if (this.state.playSession !== __playSession) return;
             this.state.isPlaying = false;
+            this.state.playbackPending = false;
             this.updatePlayButton();
             if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
             this.clearHighlight();
@@ -1631,6 +1640,7 @@
               if (!this.state.synth || !this.state.synth.isRunning) {
                 if (this.state.playSession !== __playSession) { this.state.playFinishTimer = null; return; }
                 this.state.isPlaying = false;
+                this.state.playbackPending = false;
                 this.updatePlayButton();
                 this.state.playFinishTimer = null;
                 if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
@@ -1650,12 +1660,16 @@
         this.stopMetronomeLoop();
         if (!this.state.isCountingIn) this.clearMetronomeDisplay();
         this.state.isPlaying = false;
+        this.state.playbackPending = false;
         this.updatePlayButton();
         alert('Playback failed. Ensure soundfonts exist under /abcjs/soundfonts/FluidR3_GM/acoustic_grand_piano-mp3/.');
       }
     },
 
     stop: function() {
+      if (this.state.playbackPending && !this.state.isPlaying) {
+        this.state.metronomeCountCancel = true;
+      }
       this.state.metronomeCountCancel = true;
       this.stopMetronomeLoop();
       if (!this.state.isCountingIn) this.clearMetronomeDisplay();
@@ -1673,10 +1687,14 @@
       try { this.state.timer = null; } catch(_) {}
       if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
       this.state.isPlaying = false;
+      this.state.playbackPending = false;
       this.updatePlayButton();
     },
 
     restartPlayback: async function() {
+      if (this.state.playbackPending) return;
+      this.state.playbackPending = true;
+      this.updatePlayButton();
       try {
         this.stopMetronomeLoop();
         const vObj = this.render(true, true);
@@ -1706,6 +1724,7 @@
           this.clearMetronomeDisplay();
         }
         this.state.isPlaying = true;
+        this.state.playbackPending = false;
         this.updatePlayButton();
         try { this.applyRenderScale(); } catch(_) {}
         try {
@@ -1713,6 +1732,7 @@
           if (d && isFinite(d) && d > 0) {
             this.state.finishTimeout = setTimeout(() => {
               this.state.isPlaying = false;
+              this.state.playbackPending = false;
               this.updatePlayButton();
               if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
               try { this._clearCursor(); } catch(_) {}
@@ -1725,6 +1745,7 @@
         if (startResult && typeof startResult.then === 'function') {
           startResult.then(() => {
             this.state.isPlaying = false;
+            this.state.playbackPending = false;
             this.updatePlayButton();
             if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
             try { this._clearCursor(); } catch(_) {}
@@ -1733,6 +1754,7 @@
             if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
           }).catch(() => {
             this.state.isPlaying = false;
+            this.state.playbackPending = false;
             this.updatePlayButton();
             if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
             try { this._clearCursor(); } catch(_) {}
@@ -1745,6 +1767,7 @@
             try {
               if (!this.state.synth || !this.state.synth.isRunning) {
                 this.state.isPlaying = false;
+                this.state.playbackPending = false;
                 this.updatePlayButton();
                 this.state.playFinishTimer = null;
                 if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
@@ -1763,13 +1786,22 @@
         console.error('Restart playback failed:', e);
         this.stopMetronomeLoop();
         this.clearMetronomeDisplay();
+        this.state.playbackPending = false;
+        this.updatePlayButton();
       }
     },
 
     updatePlayButton: function() {
       const btn = document.getElementById('playToggle');
       if (!btn) return;
-      if (this.state.isPlaying) {
+      btn.disabled = !!this.state.playbackPending;
+      btn.classList.toggle('opacity-70', !!this.state.playbackPending);
+      btn.classList.toggle('cursor-wait', !!this.state.playbackPending);
+      if (this.state.playbackPending && !this.state.isPlaying) {
+        btn.textContent = 'Starting...';
+        btn.classList.remove('bg-red-600');
+        btn.classList.add('bg-green-600', 'hover:bg-green-500');
+      } else if (this.state.isPlaying) {
         btn.textContent = 'Stop';
         btn.classList.remove('bg-green-600', 'hover:bg-green-500');
         btn.classList.add('bg-red-600');
