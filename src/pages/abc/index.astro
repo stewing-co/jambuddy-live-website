@@ -1,130 +1,14 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import fs from 'node:fs';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import {
+  ABC_COLLECTIONS,
+  ABC_FILENAME_MAP,
+  ABC_TITLE_MAP
+} from '../../lib/abcCollections';
 
-// Pre-render available collection routes - not needed for index
-// This file handles /abc with the default old-time collection
-
-const filenameMap: Record<string, string> = {
-  'old-time-jam-tunes': 'old_time_jam_tunes_collection.abc',
-  'bluegrass-jam-tunes': 'bluegrass_jam_tunes_collection.abc',
-  'irish-session-top100': 'irish_session_top100_collection.abc',
-  'mandozine': 'mandozine.abc',
-  'practice-techniques': 'practice.abc',
-  'open-hymnal': 'open_hymnal_collection.abc',
-  'roaring-jelly-2024': 'roaring_jelly_collection.abc',
-  'nigel-gatherer-collection': 'nigel_gatherer_collection.abc',
-  'antifascist': 'antifascist_collection.abc',
-  'everyday-songbook-1927': 'everyday_songbook.abc',
-  'richard-robinsons-tunebook': 'richard_robinsons_tunebook.abc'
-};
-
-// During build, we need to find the public directory relative to the project root
-// The currentDir will be in .astro/build or similar during SSG
-const searchRoots = [
-  '../../../public/collections',           // Dev: from src/pages/abc
-  '../../public/collections',              // Build: from .astro output
-  './public/collections',                  // Build: from project root
-  'public/collections',                    // Build: alternative
-  '../../../../jb_android/app/src/main/assets/tunes',
-  '../../../../jb_ios/jb_ios/Resources/Tunes'
-];
-
-const titleMap: Record<string, string> = {
-  'old-time-jam-tunes': 'JamBuddy (Old-Time)',
-  'bluegrass-jam-tunes': 'JamBuddy (Bluegrass)',
-  'irish-session-top100': 'The Session (Irish)',
-  'mandozine': 'Mandozine (Various)',
-  'practice-techniques': 'Practice Techniques',
-  'open-hymnal': 'Open Hymnal (Christian)',
-  'roaring-jelly-2024': 'Roaring Jelly (Old-Time)',
-  'nigel-gatherer-collection': 'Nigel Gatherer (Various)',
-  'antifascist': 'JamBuddy (Antifascist)',
-  'everyday-songbook-1927': 'Everyday Songbook 1927 (Various)',
-  'richard-robinsons-tunebook': 'Richard Robinsons Tunebook (Various)'
-};
-
-const collections = [
-  { slug: 'old-time-jam-tunes', title: 'JamBuddy (Old-Time)' },
-  { slug: 'bluegrass-jam-tunes', title: 'JamBuddy (Bluegrass)' },
-  { slug: 'irish-session-top100', title: 'The Session (Irish)' },
-  { slug: 'mandozine', title: 'Mandozine (Various)' },
-  { slug: 'practice-techniques', title: 'Practice Techniques' },
-  { slug: 'open-hymnal', title: 'Open Hymnal (Christian)' },
-  { slug: 'roaring-jelly-2024', title: 'Roaring Jelly (Old-Time)' },
-  { slug: 'nigel-gatherer-collection', title: 'Nigel Gatherer (Various)' },
-  { slug: 'antifascist', title: 'JamBuddy (Antifascist)' },
-  { slug: 'everyday-songbook-1927', title: 'Everyday Songbook 1927 (Various)' },
-  { slug: 'richard-robinsons-tunebook', title: 'Richard Robinsons Tunebook (Various)' }
-];
-
-const currentDir = fileURLToPath(new URL('.', import.meta.url));
-
-function loadCollection(slug: string) {
-  const filename = filenameMap[slug];
-  if (!filename) {
-    return { content: null as string | null, attempts: [] as string[], source: null as string | null };
-  }
-
-  const attempts: string[] = [];
-  
-  // First, try to find project root by looking for package.json
-  let projectRoot = currentDir;
-  let depth = 0;
-  const maxDepth = 10;
-  
-  while (depth < maxDepth) {
-    const packageJsonPath = path.join(projectRoot, 'package.json');
-    if (fs.existsSync(packageJsonPath)) {
-      // Found project root, add direct path to public/collections
-      const directPath = path.join(projectRoot, 'public', 'collections', filename);
-      if (!attempts.includes(directPath)) {
-        attempts.push(directPath);
-      }
-      if (fs.existsSync(directPath)) {
-        try {
-          const content = fs.readFileSync(directPath, 'utf8');
-          return { content, attempts, source: directPath };
-        } catch (error) {
-          const message = error instanceof Error ? error.message : String(error);
-          attempts[attempts.length - 1] = `${directPath} (read failed: ${message})`;
-        }
-      }
-      break;
-    }
-    projectRoot = path.dirname(projectRoot);
-    depth++;
-  }
-
-  for (const root of searchRoots) {
-    const candidate = path.resolve(currentDir, root, filename);
-    if (!attempts.includes(candidate)) {
-      attempts.push(candidate);
-    }
-
-    if (!fs.existsSync(candidate)) {
-      continue;
-    }
-
-    try {
-      const content = fs.readFileSync(candidate, 'utf8');
-      return { content, attempts, source: candidate };
-    } catch (error) {
-      const message = error instanceof Error ? error.message : String(error);
-      attempts[attempts.length - 1] = `${candidate} (read failed: ${message})`;
-    }
-  }
-
-  return { content: null as string | null, attempts, source: null as string | null };
-}
-
-// Hardcode the slug for the /abc index page to show the old-time collection
 const slug = 'old-time-jam-tunes';
-const { content: abcText, attempts: attemptedPaths } = loadCollection(slug);
-
-const pageTitle = titleMap[slug] ?? 'ABC Collection';
+const pageTitle = ABC_TITLE_MAP[slug] ?? 'ABC Collection';
+const collectionUrl = `/collections/${ABC_FILENAME_MAP[slug]}`;
 ---
 
 <Layout title={`${pageTitle} – ABC Collection`} description={`View and edit the ${pageTitle} ABC collection in your browser.`} fullWidth analyticsName={`${pageTitle} ABC Collection`}>
@@ -132,9 +16,9 @@ const pageTitle = titleMap[slug] ?? 'ABC Collection';
     <div class="flex items-center gap-3 mb-6">
       <h1 class="text-3xl font-bold text-white">{pageTitle}</h1>
       <div class="flex flex-wrap items-center gap-2 ml-auto">
-        {collections.map((c) => (
-          <a 
-            href={c.slug === 'old-time-jam-tunes' ? '/abc' : `/abc/${c.slug}`} 
+        {ABC_COLLECTIONS.map((c) => (
+          <a
+            href={c.slug === 'old-time-jam-tunes' ? '/abc' : `/abc/${c.slug}`}
             class={`px-3 py-1 rounded border text-sm ${c.slug === slug ? 'bg-blue-600 border-blue-500 text-white' : 'bg-gray-800 border-gray-700 text-blue-200 hover:text-white hover:bg-gray-700'}`}
           >
             {c.title}
@@ -143,14 +27,42 @@ const pageTitle = titleMap[slug] ?? 'ABC Collection';
       </div>
     </div>
 
-    {abcText ? (
-      <>
-  <div class="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(420px,1.9fr)_minmax(520px,1.15fr)] xl:grid-cols-[minmax(440px,1.95fr)_minmax(560px,1.05fr)] min-h-[calc(100vh-240px)]">
-          <!-- Left column: selection + controls + rendered song -->
+    <div class="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(420px,1.9fr)_minmax(520px,1.15fr)] xl:grid-cols-[minmax(440px,1.95fr)_minmax(560px,1.05fr)] min-h-[calc(100vh-240px)]">
           <div class="lg:col-span-1 flex flex-col space-y-3 min-h-[calc(100vh-260px)]">
             <div class="rounded border border-gray-700 bg-gray-800 p-3" data-ignore-print>
               <div class="flex flex-wrap items-center gap-3">
-                <select id="tuneSelect" data-collection={slug} class="min-w-0 flex-1 rounded border border-gray-700 bg-black p-2 text-sm text-gray-200"></select>
+                <div class="min-w-0 flex-1 space-y-2">
+                  <select id="tuneSelect" data-collection={slug} class="w-full rounded border border-gray-700 bg-black p-2 text-sm text-gray-200"></select>
+                  <details class="group rounded border border-gray-700 bg-gray-900/70 px-3 py-2 text-gray-200" data-ignore-print>
+                    <summary class="flex cursor-pointer items-center justify-between gap-3 text-sm font-semibold uppercase tracking-wide text-gray-300 transition group-open:text-white">
+                      Search &amp; Filters
+                      <span class="text-xs font-medium text-gray-400 group-open:text-blue-300">Toggle</span>
+                    </summary>
+                    <div class="mt-3 space-y-2">
+                      <div class="flex items-center gap-2">
+                        <input
+                          id="tuneSearch"
+                          type="search"
+                          inputmode="search"
+                          placeholder="Search tunes across collections"
+                          autocomplete="off"
+                          class="w-full rounded border border-gray-700 bg-black p-2 text-sm text-gray-200 placeholder:text-gray-500"
+                        />
+                        <button
+                          id="clearTuneSearch"
+                          type="button"
+                          class="rounded border border-gray-600 px-2 py-1 text-xs text-gray-300 hover:border-gray-400 hover:text-white disabled:cursor-not-allowed disabled:opacity-40"
+                          disabled
+                        >
+                          Clear
+                        </button>
+                      </div>
+                      <p id="tuneSearchStatus" class="text-xs text-gray-400" aria-live="polite"></p>
+                      <div id="abcHeaderFilters" class="grid gap-2 sm:grid-cols-2 xl:grid-cols-3"></div>
+                    </div>
+                  </details>
+                  <p id="abcLoadStatus" class="text-xs text-blue-300" aria-live="polite">Loading collection...</p>
+                </div>
                 <div class="flex items-center gap-2">
                   <button id="playToggle" class="rounded bg-green-600 px-3 py-1 text-white hover:bg-green-500" type="button">Play</button>
                   <button data-print-trigger class="rounded bg-gray-700 p-2 text-white hover:bg-gray-600" title="Print tune" aria-label="Print tune" type="button">
@@ -260,12 +172,11 @@ const pageTitle = titleMap[slug] ?? 'ABC Collection';
               </div>
             </details>
 
-        <div class="flex-1 rounded border border-gray-800 bg-gray-900 p-3 abc-print-target">
-          <div id="paper" class="h-full min-h-[60vh] md:min-h-[calc(100vh-320px)]"></div>
-        </div>
+            <div class="flex-1 rounded border border-gray-800 bg-gray-900 p-3 abc-print-target">
+              <div id="paper" class="h-full min-h-[60vh] md:min-h-[calc(100vh-320px)]"></div>
+            </div>
           </div>
 
-          <!-- Middle column: ABC editor -->
           <div class="lg:col-span-1 flex flex-col space-y-2 min-h-[calc(100vh-260px)]" data-ignore-print>
             <div class="flex justify-end gap-2 flex-wrap">
               <div class="flex gap-2">
@@ -276,37 +187,13 @@ const pageTitle = titleMap[slug] ?? 'ABC Collection';
                 <button id="exportMidi" class="px-3 py-1 bg-gray-700 text-white rounded" title="Export MIDI">MIDI</button>
               </div>
             </div>
-            <textarea id="abcInput" class="w-full flex-1 min-h-0 p-3 font-mono text-sm rounded bg-black text-gray-200 border border-gray-700 resize-none">{abcText}</textarea>
+            <textarea id="abcInput" data-collection-src={collectionUrl} class="w-full flex-1 min-h-0 p-3 font-mono text-sm rounded bg-black text-gray-200 border border-gray-700 resize-none"></textarea>
           </div>
-
-          <!-- Right column removed: simplified to two-column layout -->
         </div>
-      </>
-    ) : (
-      <div class="p-4 rounded bg-red-900/40 border border-red-800 text-red-200">
-        <p class="font-semibold">Failed to load the ABC source file.</p>
-        <p class="mt-2 text-sm">
-          Ensure the collection .abc files are present in <code>/public/collections</code> when building the website.
-        </p>
-        {attemptedPaths.length > 0 && (
-          <details class="mt-3 text-xs text-red-100/80">
-            <summary class="cursor-pointer text-red-100">Paths checked</summary>
-            <ul class="mt-2 space-y-1">
-                {attemptedPaths.map((p, idx) => (
-                <li>
-                  <code>{p}</code>
-                </li>
-              ))}
-            </ul>
-          </details>
-        )}
-      </div>
-    )}
   </section>
 
   <script src="https://cdn.jsdelivr.net/npm/abcjs@6.4.4/dist/abcjs-basic-min.js" defer></script>
   <style>
-    /* Current note highlight */
     #paper .abc-current-note {
       fill: #f59e0b !important;
       stroke: #f59e0b !important;

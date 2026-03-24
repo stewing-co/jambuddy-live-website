@@ -40,6 +40,30 @@
     }
   }
 
+  function prettifyHeaderLabel(header) {
+    const labels = {
+      A: 'Area',
+      B: 'Book',
+      C: 'Composer',
+      D: 'Discography',
+      F: 'File',
+      G: 'Group',
+      H: 'History',
+      I: 'Instruction',
+      K: 'Key',
+      L: 'Note Length',
+      M: 'Meter',
+      N: 'Notes',
+      O: 'Origin',
+      P: 'Part',
+      Q: 'Tempo',
+      R: 'Rhythm',
+      S: 'Source',
+      Z: 'Transcription'
+    };
+    return labels[header] || header;
+  }
+
   function applyClefOverride(abcText, clefMode) {
     try {
       if (!abcText || typeof abcText !== 'string') return abcText;
@@ -108,6 +132,13 @@
       fullAbc: '',
       tunes: [],
       selectedX: null,
+      crossCollectionTunes: [],
+      initialSearchQuery: '',
+      activeHeaderFilters: {},
+      availableHeaderFilters: [],
+      collectionLoaded: false,
+      searchIndexLoaded: false,
+      searchIndexPromise: null,
       // audio state
       audioContext: null,
       synth: null,
@@ -116,6 +147,8 @@
       currentTempo: null,
       currentTempoUnit: null, // e.g., '1/4' if Q:1/4=120 was present
       selectedIndex: -1,
+      tuneSearchQuery: '',
+      filteredTunes: [],
       theme: { bg: '#ffffff', fg: '#000000' },
       playFinishTimer: null,
       timer: null,
@@ -215,6 +248,197 @@
       }
     },
 
+    getTunePath: function(slug) {
+      if (!slug || slug === 'old-time-jam-tunes') return '/abc';
+      return `/abc/${slug}`;
+    },
+
+    setLoadStatus: function(message, isError) {
+      const statusEl = document.getElementById('abcLoadStatus');
+      if (!statusEl) return;
+      statusEl.textContent = message || '';
+      statusEl.classList.remove('text-blue-300', 'text-red-300', 'hidden');
+      if (isError) {
+        statusEl.classList.add('text-red-300');
+      } else if (message) {
+        statusEl.classList.add('text-blue-300');
+      } else {
+        statusEl.classList.add('hidden');
+      }
+    },
+
+    ensureCollectionLoaded: async function() {
+      if (this.state.collectionLoaded) return true;
+      const input = document.getElementById(this.state.inputId);
+      if (!input) return false;
+      const src = input.dataset ? input.dataset.collectionSrc : '';
+      if (!src) {
+        this.setLoadStatus('Collection source is missing.', true);
+        return false;
+      }
+      try {
+        this.setLoadStatus('Loading collection...', false);
+        const response = await fetch(src);
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+        const text = await response.text();
+        input.value = text || '';
+        this.state.fullAbc = input.value;
+        this.state.collectionLoaded = true;
+        this.setLoadStatus('', false);
+        return true;
+      } catch (error) {
+        console.warn('ABCViewer: failed to load collection', error);
+        this.setLoadStatus('Failed to load collection.', true);
+        return false;
+      }
+    },
+
+    ensureSearchIndexLoaded: async function() {
+      if (this.state.searchIndexLoaded) return this.state.crossCollectionTunes || [];
+      if (this.state.searchIndexPromise) return this.state.searchIndexPromise;
+      this.state.searchIndexPromise = fetch('/abc/search-index.json')
+        .then((response) => {
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          return response.json();
+        })
+        .then((parsed) => {
+          const tunes = Array.isArray(parsed) ? parsed : [];
+          this.state.crossCollectionTunes = tunes;
+          this.state.searchIndexLoaded = true;
+          return tunes;
+        })
+        .catch((error) => {
+          console.warn('ABCViewer: failed to load search index', error);
+          this.state.crossCollectionTunes = [];
+          return [];
+        })
+        .finally(() => {
+          this.state.searchIndexPromise = null;
+        });
+      return this.state.searchIndexPromise;
+    },
+
+    readInitialQueryState: function() {
+      try {
+        const params = new URLSearchParams(window.location.search || '');
+        return {
+          tune: params.get('tune') || '',
+          search: params.get('search') || ''
+        };
+      } catch (_) {
+        return { tune: '', search: '' };
+      }
+    },
+
+    extractHeaderMetadata: function(lines) {
+      const headers = {};
+      for (const rawLine of lines || []) {
+        const line = typeof rawLine === 'string' ? rawLine : '';
+        const match = line.match(/^([A-Za-z]):\s*(.*)$/);
+        if (!match) continue;
+        const header = match[1].toUpperCase();
+        const value = (match[2] || '').trim();
+        if (!value || header === 'X' || header === 'T') continue;
+        if (!headers[header]) headers[header] = [];
+        if (!headers[header].includes(value)) headers[header].push(value);
+      }
+      return headers;
+    },
+
+    buildHeaderFilterOptions: function() {
+      const byHeader = new Map();
+      (this.state.tunes || []).forEach((tune) => {
+        const headers = tune && tune.headers ? tune.headers : {};
+        Object.entries(headers).forEach(([header, values]) => {
+          if (!Array.isArray(values) || !values.length) return;
+          if (!byHeader.has(header)) byHeader.set(header, new Set());
+          const bucket = byHeader.get(header);
+          values.forEach((value) => {
+            if (value) bucket.add(value);
+          });
+        });
+      });
+      const options = Array.from(byHeader.entries())
+        .map(([header, values]) => ({
+          header,
+          label: prettifyHeaderLabel(header),
+          values: Array.from(values).sort((a, b) => String(a).localeCompare(String(b), undefined, { sensitivity: 'base' }))
+        }))
+        .filter((entry) => entry.values.length > 1)
+        .sort((a, b) => a.label.localeCompare(b.label, undefined, { sensitivity: 'base' }));
+      this.state.availableHeaderFilters = options;
+      return options;
+    },
+
+    renderHeaderFilters: function() {
+      const container = document.getElementById('abcHeaderFilters');
+      if (!container) return;
+      container.innerHTML = '';
+      const options = this.buildHeaderFilterOptions();
+      this.state.activeHeaderFilters = this.state.activeHeaderFilters || {};
+      if (!options.length) return;
+      options.forEach((entry) => {
+        const wrapper = document.createElement('label');
+        wrapper.className = 'flex min-w-0 flex-col gap-1';
+
+        const label = document.createElement('span');
+        label.className = 'text-[11px] font-semibold uppercase tracking-wide text-gray-400';
+        label.textContent = entry.label;
+
+        const select = document.createElement('select');
+        select.className = 'w-full rounded border border-gray-700 bg-black p-2 text-sm text-gray-200';
+        select.dataset.header = entry.header;
+
+        const allOption = document.createElement('option');
+        allOption.value = '';
+        allOption.textContent = `All ${entry.label}`;
+        select.appendChild(allOption);
+
+        entry.values.forEach((value) => {
+          const option = document.createElement('option');
+          option.value = value;
+          option.textContent = value;
+          select.appendChild(option);
+        });
+
+        const currentValue = this.state.activeHeaderFilters[entry.header] || '';
+        if (currentValue && entry.values.includes(currentValue)) {
+          select.value = currentValue;
+        }
+
+        select.addEventListener('change', () => {
+          const nextValue = select.value || '';
+          if (nextValue) {
+            this.state.activeHeaderFilters[entry.header] = nextValue;
+          } else {
+            delete this.state.activeHeaderFilters[entry.header];
+          }
+          const tuneSearch = document.getElementById('tuneSearch');
+          if (tuneSearch) {
+            const event = new Event('input', { bubbles: true });
+            tuneSearch.dispatchEvent(event);
+          }
+        });
+
+        wrapper.appendChild(label);
+        wrapper.appendChild(select);
+        container.appendChild(wrapper);
+      });
+    },
+
+    matchesHeaderFilters: function(tune) {
+      const activeFilters = this.state.activeHeaderFilters || {};
+      const activeEntries = Object.entries(activeFilters).filter(([, value]) => !!value);
+      if (!activeEntries.length) return true;
+      const headers = tune && tune.headers ? tune.headers : {};
+      return activeEntries.every(([header, selectedValue]) => {
+        const values = headers[header];
+        return Array.isArray(values) && values.includes(selectedValue);
+      });
+    },
+
     getCollectionSlug: function() {
       const selectEl = document.getElementById('tuneSelect');
       if (selectEl && selectEl.dataset && selectEl.dataset.collection) {
@@ -276,7 +500,7 @@
       }
     },
 
-    init: function(inputId, paperId) {
+    init: async function(inputId, paperId) {
       this.state.inputId = inputId;
       this.state.paperId = paperId;
       this.loadPersistedState();
@@ -404,19 +628,77 @@
       // Tune selection (only on collection pages)
       const input = q(this.state.inputId);
       if (input) {
+        const loaded = await this.ensureCollectionLoaded();
+        if (!loaded) return;
         this.state.fullAbc = input.value || '';
         this.buildTuneIndex();
+        this.renderHeaderFilters();
         const tuneSel = q('tuneSelect');
         if (tuneSel) {
-          this.populateTuneSelect(tuneSel);
+          const initialQueryState = this.readInitialQueryState();
+          this.state.initialSearchQuery = initialQueryState.search || '';
+          this.state.filteredTunes = this.state.tunes || [];
+          this.populateTuneSelect(tuneSel, this.state.filteredTunes);
+          const tuneSearch = q('tuneSearch');
+          const clearTuneSearch = q('clearTuneSearch');
+          const tuneSearchStatus = q('tuneSearchStatus');
+          const applyTuneSearch = async () => {
+            const query = tuneSearch ? (tuneSearch.value || '') : '';
+            this.state.tuneSearchQuery = query;
+            if (query.trim()) {
+              await this.ensureSearchIndexLoaded();
+            }
+            this.state.filteredTunes = this.filterTunes(query);
+            this.populateTuneSelect(tuneSel, this.state.filteredTunes);
+
+            const activeX = this.state.selectedX ? String(this.state.selectedX) : '';
+            if (activeX && this.state.filteredTunes.some(t => String(t.x) === activeX)) {
+              tuneSel.value = activeX;
+            }
+
+            this.updateTuneSearchStatus(tuneSearchStatus, query, this.state.filteredTunes.length, (this.state.tunes || []).length);
+            if (clearTuneSearch) clearTuneSearch.disabled = query.trim().length === 0;
+          };
+
           const slug = tuneSel.dataset ? tuneSel.dataset.collection : null;
+          const requestedX = initialQueryState.tune || '';
           const storedX = slug && this.collectionSelections ? this.collectionSelections[slug] : null;
-          if (storedX && (this.state.tunes || []).some(t => String(t.x) === String(storedX))) {
+          if (tuneSearch && this.state.initialSearchQuery) {
+            tuneSearch.value = this.state.initialSearchQuery;
+          }
+          if (requestedX && (this.state.tunes || []).some(t => String(t.x) === String(requestedX))) {
+            tuneSel.value = String(requestedX);
+            this.selectTuneByX(requestedX);
+          } else if (storedX && (this.state.tunes || []).some(t => String(t.x) === String(storedX))) {
             tuneSel.value = String(storedX);
             this.selectTuneByX(storedX);
           }
+
+          if (tuneSearch) {
+            tuneSearch.addEventListener('focus', () => {
+              if ((tuneSearch.value || '').trim()) {
+                this.ensureSearchIndexLoaded();
+              }
+            });
+            tuneSearch.addEventListener('input', () => { applyTuneSearch(); });
+            tuneSearch.addEventListener('search', () => { applyTuneSearch(); });
+          }
+          if (clearTuneSearch) {
+            clearTuneSearch.addEventListener('click', () => {
+              if (tuneSearch) tuneSearch.value = '';
+              applyTuneSearch();
+              if (tuneSearch) tuneSearch.focus();
+            });
+          }
+
+          await applyTuneSearch();
+
           tuneSel.addEventListener('change', () => {
             const x = tuneSel.value;
+            if (x && x.startsWith('jump:')) {
+              this.navigateToSearchResult(x);
+              return;
+            }
             this.selectTuneByX(x);
           });
         }
@@ -730,19 +1012,33 @@
       const lines = text.split(/\r?\n/);
       const tunes = [];
       let current = null;
-      const pushCurrent = () => { if (current) { current.abc = current.lines.join('\n'); tunes.push(current); } };
+      const pushCurrent = () => {
+        if (current) {
+          current.abc = current.lines.join('\n');
+          current.headers = this.extractHeaderMetadata(current.lines);
+          const tokens = [current.x, ...(current.titles || []), current.title].filter(Boolean);
+          current.searchText = tokens.join(' ').toLocaleLowerCase();
+          tunes.push(current);
+        }
+      };
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
         const mX = line.match(/^X:\s*(\d+)/);
         if (mX) {
           pushCurrent();
-          current = { x: mX[1], title: 'Untitled', lines: [ line ] };
+          current = { x: mX[1], title: 'Untitled', titles: [], lines: [ line ], searchText: '', headers: {} };
           continue;
         }
         if (!current) continue;
-        if (/^T:\s*(.+)/.test(line) && current.title === 'Untitled') {
+        if (/^T:\s*(.+)/.test(line)) {
           const mT = line.match(/^T:\s*(.+)/);
-          if (mT) current.title = mT[1].trim();
+          if (mT) {
+            const tuneTitle = mT[1].trim();
+            if (tuneTitle) {
+              current.titles.push(tuneTitle);
+              if (current.title === 'Untitled') current.title = tuneTitle;
+            }
+          }
         }
         current.lines.push(line);
       }
@@ -762,26 +1058,96 @@
         return xA - xB;
       });
       this.state.tunes = tunes;
+      this.state.filteredTunes = tunes;
       return tunes;
     },
 
-    populateTuneSelect: function(selectEl) {
-      const tunes = this.state.tunes || [];
+    populateTuneSelect: function(selectEl, tunesOverride) {
+      const tunes = Array.isArray(tunesOverride) ? tunesOverride : (this.state.tunes || []);
+      const desiredValue = this.state.selectedX ? String(this.state.selectedX) : String(selectEl.value || '');
       selectEl.innerHTML = '';
       const ph = document.createElement('option');
       ph.value = '';
-      ph.textContent = 'Select a tune';
+      ph.textContent = tunes.length ? 'Select a tune' : 'No matching tunes';
       selectEl.appendChild(ph);
       tunes.forEach(t => {
         const opt = document.createElement('option');
         opt.value = String(t.x);
-        opt.textContent = `${t.title}`;
+        opt.textContent = t.isCrossCollectionResult ? `${t.title} (${t.collectionTitle})` : `${t.title}`;
         selectEl.appendChild(opt);
       });
-      const slug = selectEl.dataset ? selectEl.dataset.collection : null;
-      if (slug && this.collectionSelections && this.collectionSelections[slug]) {
-        selectEl.value = String(this.collectionSelections[slug]);
+
+      if (desiredValue && tunes.some(t => String(t.x) === desiredValue)) {
+        selectEl.value = desiredValue;
+        return;
       }
+
+      const slug = selectEl.dataset ? selectEl.dataset.collection : null;
+      const stored = slug && this.collectionSelections ? this.collectionSelections[slug] : null;
+      if (stored && tunes.some(t => String(t.x) === String(stored))) {
+        selectEl.value = String(stored);
+      } else {
+        selectEl.value = '';
+      }
+    },
+
+    filterTunes: function(query) {
+      const normalized = (query || '').trim().toLocaleLowerCase();
+      const currentSlug = this.getCollectionSlug();
+      const allTunes = this.state.tunes || [];
+      const localMatches = allTunes.filter(tune => {
+        if (!tune) return false;
+        if (!this.matchesHeaderFilters(tune)) return false;
+        if (!normalized) return true;
+        const haystack = tune.searchText || `${tune.title || ''} ${tune.x || ''}`.toLocaleLowerCase();
+        return haystack.includes(normalized);
+      });
+      if (!normalized) return localMatches;
+      const localKeys = new Set(localMatches.map((tune) => `${currentSlug || ''}::${tune.x}`));
+      const remoteMatches = (this.state.crossCollectionTunes || [])
+        .filter((tune) => {
+          if (!tune || tune.collectionSlug === currentSlug) return false;
+          if (!this.matchesHeaderFilters(tune)) return false;
+          if (localKeys.has(`${tune.collectionSlug || ''}::${tune.x}`)) return false;
+          const haystack = tune.searchText || `${tune.title || ''} ${tune.x || ''}`.toLocaleLowerCase();
+          return haystack.includes(normalized);
+        })
+        .map((tune) => ({
+          ...tune,
+          x: `jump:${tune.collectionSlug}:${tune.x}`,
+          isCrossCollectionResult: true
+        }));
+      return [...localMatches, ...remoteMatches];
+    },
+
+    updateTuneSearchStatus: function(statusEl, query, filteredCount, totalCount) {
+      if (!statusEl) return;
+      const normalizedQuery = (query || '').trim();
+      const activeFilterCount = Object.values(this.state.activeHeaderFilters || {}).filter(Boolean).length;
+      if (!normalizedQuery) {
+        statusEl.textContent = activeFilterCount > 0 ? `${filteredCount} of ${totalCount} tunes match active filters` : `${totalCount} tunes`;
+        return;
+      }
+      const crossCollectionCount = (this.state.filteredTunes || []).filter(tune => tune && tune.isCrossCollectionResult).length;
+      const localCount = Math.max(0, filteredCount - crossCollectionCount);
+      if (crossCollectionCount > 0) {
+        statusEl.textContent = `${localCount} here, ${crossCollectionCount} in other collections for "${normalizedQuery}"`;
+        return;
+      }
+      statusEl.textContent = `${filteredCount} of ${totalCount} tunes match "${normalizedQuery}"`;
+    },
+
+    navigateToSearchResult: function(value) {
+      const match = String(value || '').match(/^jump:([^:]+):(.+)$/);
+      if (!match) return;
+      const [, slug, x] = match;
+      const tuneSearch = document.getElementById('tuneSearch');
+      const searchValue = tuneSearch ? (tuneSearch.value || '').trim() : '';
+      const params = new URLSearchParams();
+      params.set('tune', x);
+      if (searchValue) params.set('search', searchValue);
+      const target = `${this.getTunePath(slug)}?${params.toString()}`;
+      window.location.assign(target);
     },
 
     selectTuneByX: function(x) {
