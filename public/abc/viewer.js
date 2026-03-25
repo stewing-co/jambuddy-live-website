@@ -2,6 +2,12 @@
  * Depends on abcjs-basic-min.js being loaded first.
  */
 (function(global) {
+  // Prevent duplicate script execution from creating multiple viewer instances
+  // with independent playback state and event handlers.
+  if (global.ABCViewer && global.ABCViewer.__jamBuddySingleton) {
+    return;
+  }
+
   const STORAGE_KEY = 'jamBuddyAbcViewerState';
 
   function getStorage() {
@@ -167,7 +173,6 @@
       // cursor state
       _cursorBallInit: false,
       cursorBallEl: null,
-      _highlightLocked: false,
       // metronome/count-in state
       metronomeEnabled: false,
       metronomeTimer: null,
@@ -502,6 +507,15 @@
     },
 
     init: async function(inputId, paperId) {
+      const existingInput = document.getElementById(inputId);
+      if (existingInput && existingInput.dataset && existingInput.dataset.abcViewerBound === '1') {
+        // Already initialized for this DOM; avoid duplicating control bindings.
+        return;
+      }
+      if (existingInput && existingInput.dataset) {
+        existingInput.dataset.abcViewerBound = '1';
+      }
+
       this.state.inputId = inputId;
       this.state.paperId = paperId;
       this.loadPersistedState();
@@ -930,13 +944,12 @@
           const ro = new ResizeObserver(() => {
             try { this.ensureResponsiveSvgs(); } catch(_) {}
             try { this.updatePaperHeight(); } catch(_) {}
-            try { this._clearTransientHighlights(); } catch(_) {}
             try {
-              if (this.state.enableHighlight) {
+              // Never restart timing from 0 while playback is active.
+              if (this.state.enableHighlight && !this.state.isPlaying) {
                 try { if (this.state.timer && this.state.timer.stop) this.state.timer.stop(); } catch(_) {}
                 const displayVObj = this.state.lastVisualObj || this.render(true);
-                const timer = this.installTiming(displayVObj);
-                if (timer && timer.start && this.state.isPlaying) timer.start(0);
+                this.installTiming(displayVObj);
               }
             } catch(_) {}
           });
@@ -950,16 +963,15 @@
         window.addEventListener('resize', () => {
           try { this.ensureResponsiveSvgs(); } catch(_) {}
           try { this.updatePaperHeight(); } catch(_) {}
-          try { this._clearTransientHighlights(); } catch(_) {}
           try {
-            if (this.state.enableHighlight) {
+            // Never restart timing from 0 while playback is active.
+            if (this.state.enableHighlight && !this.state.isPlaying) {
               // Keep persistent highlights; just clear transient cursor/highlights
               try { if (this.state.timer && this.state.timer.stop) this.state.timer.stop(); } catch(_) {}
               try { this._clearTransientHighlights(); } catch(_) {}
               try { this._clearCursor(); } catch(_) {}
               const displayVObj = this.state.lastVisualObj || this.render(true);
-              const timer = this.installTiming(displayVObj);
-              if (timer && timer.start && this.state.isPlaying) timer.start(0);
+              this.installTiming(displayVObj);
             }
           } catch(_) {}
         });
@@ -975,11 +987,11 @@
           if (scaleLabel) scaleLabel.textContent = `${v}%`;
           try { this.applyRenderScale(); } catch(_) {}
           try {
-            if (this.state.enableHighlight) {
+            // Never restart timing from 0 while playback is active.
+            if (this.state.enableHighlight && !this.state.isPlaying) {
               try { if (this.state.timer && this.state.timer.stop) this.state.timer.stop(); } catch(_) {}
               const displayVObj = this.state.lastVisualObj || this.render(true);
-              const timer = this.installTiming(displayVObj);
-              if (timer && timer.start && this.state.isPlaying) timer.start(0);
+              this.installTiming(displayVObj);
             }
           } catch(_) {}
         };
@@ -1171,7 +1183,7 @@
         this.state.selectedIndex = idx;
         const selectEl = document.getElementById('tuneSelect');
         if (selectEl) selectEl.value = String(hit.x);
-        input.value = hit.abc;
+        input.value = this.ensureKeyHeader(this.normalizeAbc(hit.abc));
         // Update tempo slider from selected tune
         const tempoSlider = document.getElementById('tempoSlider');
         const tempoLabel = document.getElementById('tempoLabel');
@@ -1546,17 +1558,16 @@
         // runs won't clear highlights after the user stops playback.
         this.state.playSession = (this.state.playSession || 0) + 1;
         const __playSession = this.state.playSession;
-        // Ensure a visible DOM-attached visual object exists for timing/highlights
-        // and also obtain a playback-only visual object for synth initialization.
+        // Ensure a visible DOM-attached visual object exists and use that same
+        // object for both synth playback and timing/highlights to keep them in sync.
         let displayVObj = this.state.lastVisualObj || null;
         if (!displayVObj) {
-          try { displayVObj = this.render(true); } catch(_) { displayVObj = null; }
+          try { this.render(); } catch(_) {}
+          displayVObj = this.state.lastVisualObj || null;
         }
-        // Build playback-only visual object (non-DOM) for the synth
-        const vObj = this.render(true, true);
-        if (!vObj) throw new Error('render failed');
+        if (!displayVObj) throw new Error('render failed');
         // Default path: our CreateSynth, optional TimingCallbacks
-        await this.ensureSynth(vObj);
+        await this.ensureSynth(displayVObj);
         if (this.state.enableHighlight) {
           // Ensure a DOM-attached visual object is available for timing callbacks.
           try {
@@ -1567,8 +1578,8 @@
           // Ensure transient highlights/cursor are cleared so timing begins at the first note consistently.
           try { this._clearTransientHighlights(); } catch(_) {}
           try { this._clearCursor(); } catch(_) {}
-          // Prefer the visible display VObj we ensured above; fall back to whatever vObj we have.
-          const useDisplay = this.state.lastVisualObj || displayVObj || vObj;
+          // Prefer the visible display visual object.
+          const useDisplay = this.state.lastVisualObj || displayVObj;
           let timer = this.installTiming(useDisplay);
           // Defensive retry if needed
           if (!timer) {
@@ -1697,14 +1708,19 @@
       this.updatePlayButton();
       try {
         this.stopMetronomeLoop();
-        const vObj = this.render(true, true);
-        await this.ensureSynth(vObj);
+        let displayVObj = this.state.lastVisualObj || null;
+        if (!displayVObj) {
+          try { this.render(); } catch(_) {}
+          displayVObj = this.state.lastVisualObj || null;
+        }
+        if (!displayVObj) throw new Error('render failed');
+        await this.ensureSynth(displayVObj);
         if (this.state.enableHighlight) {
           // Ensure DOM-attached visualObj exists for highlight callbacks
           if (!this.state.lastVisualObj) { try { this.render(); } catch(_) {} }
           try { this._clearTransientHighlights(); } catch(_) {}
           try { this._clearCursor(); } catch(_) {}
-          const useDisplay = this.state.lastVisualObj || vObj;
+          const useDisplay = this.state.lastVisualObj || displayVObj;
           let timer = this.installTiming(useDisplay);
           if (!timer) {
             try { this.render(); } catch(_) {}
@@ -1859,7 +1875,12 @@
           `${pid} svg path {fill:${fg} !important;}`,
           `${pid} svg use {stroke:${fg} !important; fill:${fg} !important;}`,
           // Ensure musical glyphs render with desired ink color
-          `${pid} svg .abcjs-note, ${pid} svg .abcjs-notehead, ${pid} svg .abcjs-rest, ${pid} svg .abcjs-beam-elem, ${pid} svg .abcjs-slur, ${pid} svg .abcjs-tie, ${pid} svg .abcjs-accidental, ${pid} svg .abcjs-keysig, ${pid} svg .abcjs-timesig, ${pid} svg .abcjs-clef, ${pid} svg .abcjs-bar, ${pid} svg .abcjs-staff, ${pid} svg .abcjs-ledger {stroke:${fg} !important; fill:${fg} !important;}`
+          `${pid} svg .abcjs-note, ${pid} svg .abcjs-notehead, ${pid} svg .abcjs-rest, ${pid} svg .abcjs-beam-elem, ${pid} svg .abcjs-slur, ${pid} svg .abcjs-tie, ${pid} svg .abcjs-accidental, ${pid} svg .abcjs-keysig, ${pid} svg .abcjs-timesig, ${pid} svg .abcjs-clef, ${pid} svg .abcjs-bar, ${pid} svg .abcjs-staff, ${pid} svg .abcjs-ledger {stroke:${fg} !important; fill:${fg} !important;}`,
+          // Keep abcjs built-in timing highlight visible over theme overrides.
+          `${pid} svg .abcjs-highlight, ${pid} svg .abcjs-highlight * {stroke:#f59e0b !important; fill:#f59e0b !important;}`,
+          `${pid} svg .abcjs-cursor, ${pid} svg .abcjs-cursor * {stroke:#f59e0b !important; fill:#f59e0b !important;}`,
+          // abcjs rangeHighlight() applies this class by default.
+          `${pid} svg .abcjs-note_selected, ${pid} svg .abcjs-note_selected * {stroke:#f59e0b !important; fill:#f59e0b !important;}`
         ].join("\n");
 
         // Also set inline on the current SVG to defeat any cached styles
@@ -1889,6 +1910,35 @@
       let t = abc;
       t = t.replace(/;\s*\|\|/g, ':||');
       return t;
+    },
+
+    ensureKeyHeader: function(abc) {
+      if (!abc) return '';
+      if (/^K:\s*/m.test(abc)) return abc;
+      const lines = abc.split(/\r?\n/);
+      // Insert K:C after L: if present, else after M:, else after Q:, else after X:/T:.
+      let insertAt = -1;
+      for (let i = 0; i < lines.length; i++) {
+        if (/^L:\s*/.test(lines[i])) { insertAt = i + 1; break; }
+      }
+      if (insertAt < 0) {
+        for (let i = 0; i < lines.length; i++) {
+          if (/^M:\s*/.test(lines[i])) { insertAt = i + 1; break; }
+        }
+      }
+      if (insertAt < 0) {
+        for (let i = 0; i < lines.length; i++) {
+          if (/^Q:\s*/.test(lines[i])) { insertAt = i + 1; break; }
+        }
+      }
+      if (insertAt < 0) {
+        for (let i = 0; i < lines.length; i++) {
+          if (/^(X|T):\s*/.test(lines[i])) insertAt = i + 1;
+        }
+      }
+      if (insertAt < 0) insertAt = 0;
+      lines.splice(insertAt, 0, 'K:C');
+      return lines.join('\n');
     },
 
     filterHeaders: function(abc) {
@@ -1942,7 +1992,7 @@
           this._restartAfterRender = true;
         }
         const raw = input.value || 'X:1\nT:Example\nM:4/4\nL:1/8\nK:C\nCDEF GABc|';
-        const norm = this.normalizeAbc(raw);
+        const norm = this.ensureKeyHeader(this.normalizeAbc(raw));
         const filtered = this.filterHeaders(norm);
         const clefMode = normalizeClefMode(this.state.clef);
         const clefAdjusted = applyClefOverride(filtered, clefMode);
@@ -2038,7 +2088,6 @@
     this.state.highlighted = [];
     try {
       if (this._highlightUnlockTimer) { try { clearTimeout(this._highlightUnlockTimer); } catch(_) {} this._highlightUnlockTimer = null; }
-      this.state._highlightLocked = false;
     } catch(_) {}
   };
 
@@ -2054,7 +2103,6 @@
     try { this.state._cursorBallInit = false; this.state.cursorBallEl = null; } catch(_) {}
     try {
       if (this._highlightUnlockTimer) { try { clearTimeout(this._highlightUnlockTimer); } catch(_) {} this._highlightUnlockTimer = null; }
-      this.state._highlightLocked = false;
     } catch(_) {}
   };
 
@@ -2067,7 +2115,17 @@
     try {
       this.state.timerHighlighted = [];
       const highlightFill = '#f59e0b';
+      const targets = new Set();
       elems.forEach(el => {
+        if (!el) return;
+        targets.add(el);
+        try {
+          if (el.querySelectorAll) {
+            el.querySelectorAll('path,polygon,polyline,use,ellipse,circle,rect,line,text').forEach(node => targets.add(node));
+          }
+        } catch(_) {}
+      });
+      targets.forEach(el => {
         if (!el) return;
         try {
           if (el.dataset) {
@@ -2147,183 +2205,52 @@
       const timer = new ABCJS.TimingCallbacks(vObj, {
         qpm: undefined,
         beatSubdivisions: 2,
-        beatCallback: (beat, totalBeats, totalMs, position) => {
-          if (!this.state.enableHighlight) return;
-          // Robust cursor creation: (re)build if missing, detached, or not found
-          if (!this.state.cursorBallEl || !this.state.cursorBallEl.isConnected || !document.getElementById('abc-cursor-bar')) {
-            try {
-              const paper = document.getElementById(this.state.paperId);
-              if (paper) {
-                try { const old = document.getElementById('abc-cursor-bar'); if (old) old.remove(); } catch(_) {}
-                const el = document.createElement('div');
-                el.id = 'abc-cursor-bar';
-                el.style.position = 'absolute';
-                el.style.width = '16px';
-                el.style.height = '0px';
-                el.style.marginLeft = '0';
-                el.style.marginTop = '0';
-                el.style.borderRadius = '2px';
-                el.style.background = '#f59e0b';
-                el.style.pointerEvents = 'none';
-                el.style.opacity = '0';
-                el.style.transition = 'opacity 120ms ease, transform 120ms ease, height 120ms ease';
-                paper.appendChild(el);
-                this.state.cursorBallEl = el;
-                this.state._cursorBallInit = true;
-              }
-            } catch(_) {}
-          }
-          const paper = document.getElementById(this.state.paperId);
-          const svg = paper ? paper.querySelector('svg') : null;
-          const ball = this.state.cursorBallEl;
-          if (!paper || !svg || !ball || !position) return;
-          const pr = paper.getBoundingClientRect();
-          const sr = svg.getBoundingClientRect();
-          if (this.state._highlightLocked) return;
-          try {
-            // Prefer transient timer-driven highlights, then DOM elements with
-            // the current-note class, then persistent highlighted elements.
-            // If we find multiple elements, compute their union bounding box.
-            let elemsToUse = null;
-            if (this.state.timerHighlighted && this.state.timerHighlighted.length) elemsToUse = Array.from(this.state.timerHighlighted);
-            if (!elemsToUse) {
-              const paperNode = document.getElementById(this.state.paperId);
-              if (paperNode) {
-                const domSelAll = paperNode.querySelectorAll('.abc-current-note');
-                if (domSelAll && domSelAll.length) elemsToUse = Array.from(domSelAll);
-              }
-            }
-            if (!elemsToUse && this.state.highlighted && this.state.highlighted.length) elemsToUse = Array.from(this.state.highlighted);
-            if (elemsToUse && elemsToUse.length) {
-              // Compute union bounding rect
-              let minL = Infinity, minT = Infinity, maxR = -Infinity, maxB = -Infinity;
-              elemsToUse.forEach(el => {
-                if (!el || !el.getBoundingClientRect) return;
-                try {
-                  const r = el.getBoundingClientRect();
-                  if (r.left < minL) minL = r.left;
-                  if (r.top < minT) minT = r.top;
-                  if (r.right > maxR) maxR = r.right;
-                  if (r.bottom > maxB) maxB = r.bottom;
-                } catch(_) {}
-              });
-              if (isFinite(minL) && isFinite(minT) && isFinite(maxR) && isFinite(maxB)) {
-                const width = Math.max(0, maxR - minL);
-                const height = Math.max(0, maxB - minT);
-                const barW = 16;
-                const left = (minL - pr.left) + (width ? (width / 2) : 0) - (barW / 2);
-                const topPx = (minT - pr.top);
-                ball.style.height = `${Math.round(height)}px`;
-                ball.style.transform = `translate(${Math.round(left)}px, ${Math.round(topPx)}px)`;
-                ball.style.opacity = '0.35';
-                // Record that we positioned via DOM elements so beatCallback
-                // won't override with viewBox-based coords immediately after.
-                try { this.state._lastElementPlacementTime = Date.now(); } catch(_) {}
-                return;
-              }
-            }
-          } catch(_) {}
-          // If we recently placed the cursor using DOM element bounding boxes,
-          // avoid immediately overriding that placement with viewBox-mapped
-          // coordinates which can jump when CSS scaling is present.
-          if (this.state._lastElementPlacementTime && (Date.now() - this.state._lastElementPlacementTime) < 1200) return;
-
-          // Map the viewBox/user coords to screen coordinates using SVG CTM
-          try {
-            if (svg.createSVGPoint && svg.getScreenCTM) {
-              const pt = svg.createSVGPoint();
-              pt.x = position.left || 0;
-              pt.y = position.top || 0;
-              const screenP = pt.matrixTransform(svg.getScreenCTM());
-              let heightPx = 0;
-              if (position.height) {
-                const pt2 = svg.createSVGPoint();
-                pt2.x = position.left || 0;
-                pt2.y = (position.top || 0) + position.height;
-                const screenP2 = pt2.matrixTransform(svg.getScreenCTM());
-                heightPx = Math.abs(screenP2.y - screenP.y);
-              }
-              const barW = 16;
-              const left = screenP.x - pr.left - (barW / 2);
-              const topPx = screenP.y - pr.top;
-              ball.style.height = `${Math.round(heightPx)}px`;
-              ball.style.transform = `translate(${Math.round(left)}px, ${Math.round(topPx)}px)`;
-              ball.style.opacity = '0.35';
-              return;
-            }
-          } catch (_) {}
-          // Fallback: Scale SVG coords (viewBox) to rendered CSS pixels
-          let scaleX = 1, scaleY = 1;
-          try {
-            const vb = (svg.getAttribute('viewBox') || '').split(/\s+/).map(Number);
-            if (vb.length === 4 && vb[2] > 0 && vb[3] > 0) {
-              scaleX = (sr.width || svg.clientWidth || 1) / vb[2];
-              scaleY = (sr.height || svg.clientHeight || 1) / vb[3];
-            }
-          } catch(_) {}
-          const barW = 16;
-          const left = (sr.left - pr.left) + (position.left ? position.left * scaleX : 0) - (barW / 2);
-          const topPx = (sr.top - pr.top) + (position.top ? position.top * scaleY : 0);
-          const hPx = position.height ? (position.height * scaleY) : 0;
-          ball.style.height = `${Math.round(hPx)}px`;
-          ball.style.transform = `translate(${Math.round(left)}px, ${Math.round(topPx)}px)`;
-          ball.style.opacity = '0.35';
-        },
         eventCallback: (ev) => {
+          if (!this.state.enableHighlight) return;
           // End of tune sends null
-          if (!ev) { try { this._clearTransientHighlights(); } catch(_) {} return; }
-          // Try abcjs native selection first using start/end char
+          if (!ev) {
+            try { this.clearHighlight(); } catch(_) {}
+            return;
+          }
+          let usedRangeHighlight = false;
+          // Use abcjs native highlighting for timing alignment.
           if (typeof ev.startChar === 'number' && typeof ev.endChar === 'number' && vObj && vObj.rangeHighlight) {
             try {
+              // Avoid stale fallback overlays from previous events.
+              this._clearTransientHighlights();
               vObj.rangeHighlight(ev.startChar, ev.endChar);
-              // Prevent the beatCallback from immediately overriding this element-based placement
-              try {
-                this.state._highlightLocked = true;
-                if (this._highlightUnlockTimer) { try { clearTimeout(this._highlightUnlockTimer); } catch(_) {} this._highlightUnlockTimer = null; }
-                this._highlightUnlockTimer = setTimeout(() => { try { this.state._highlightLocked = false; this._highlightUnlockTimer = null; } catch(_) {} }, 1200);
-              } catch(_) {}
               return;
-            } catch(_) { /* fall through to manual coloring */ }
+            } catch(_) {}
           }
-          // Fallback: manually color SVG elements — treat these as transient
+          // If char-range highlighting isn't available, keep a lightweight
+          // fallback so at least current-note styling still updates.
           if (ev.elements) {
             try {
               const elems = [];
-              ev.elements.forEach(set => set.forEach(el => { if (el) elems.push(el); }));
-              try { this._applyTransientHighlights(elems); } catch(_) {}
-              
-              // Position the cursor bar relative to the first highlighted element's
-              // bounding box so the cursor aligns with the actual DOM layout and
-              // respects any CSS-based max-height/width scaling.
-              try {
-                const paper = document.getElementById(this.state.paperId);
-                const ball = this.state.cursorBallEl;
-                if (paper && ball) {
-                  // Find first element node within ev.elements
-                  let firstEl = null;
-                  for (const set of ev.elements) {
-                    if (Array.isArray(set) && set.length) { firstEl = set[0]; break; }
-                    if (set && set.nodeType) { firstEl = set; break; }
-                  }
-                  if (firstEl && firstEl.getBoundingClientRect) {
-                    const pr = paper.getBoundingClientRect();
-                    const er = firstEl.getBoundingClientRect();
-                    const barW = parseInt(ball.style.width || '16', 10) || 16;
-                    const left = (er.left - pr.left) + (er.width ? (er.width/2) : 0) - (barW / 2);
-                    const topPx = (er.top - pr.top);
-                    const hPx = er.height || 0;
-                    ball.style.height = `${Math.round(hPx)}px`;
-                    ball.style.transform = `translate(${Math.round(left)}px, ${Math.round(topPx)}px)`;
-                    ball.style.opacity = '0.35';
-                    // Lock beatCallback updates briefly to avoid overriding this DOM-based placement
-                    try {
-                      this.state._highlightLocked = true;
-                      if (this._highlightUnlockTimer) { try { clearTimeout(this._highlightUnlockTimer); } catch(_) {} this._highlightUnlockTimer = null; }
-                      this._highlightUnlockTimer = setTimeout(() => { try { this.state._highlightLocked = false; this._highlightUnlockTimer = null; } catch(_) {} }, 1200);
-                    } catch(_) {}
-                  }
+              const visit = (entry) => {
+                if (!entry) return;
+                if (Array.isArray(entry)) {
+                  entry.forEach(visit);
+                  return;
                 }
-              } catch(_) {}
+                if (entry.nodeType === 1) {
+                  elems.push(entry);
+                  return;
+                }
+                // abcjs event payload variants can wrap element arrays.
+                if (entry.elemset && Array.isArray(entry.elemset)) {
+                  entry.elemset.forEach(visit);
+                  return;
+                }
+                if (entry.svgEl && entry.svgEl.nodeType === 1) {
+                  elems.push(entry.svgEl);
+                  return;
+                }
+              };
+              visit(ev.elements);
+              if (elems.length) {
+                this._applyTransientHighlights(elems);
+              }
             } catch(_) {}
           }
         }
@@ -2746,5 +2673,6 @@
     } catch (e) { /* no-op */ }
   };
 
+  Viewer.__jamBuddySingleton = true;
   global.ABCViewer = Viewer;
 })(window);
