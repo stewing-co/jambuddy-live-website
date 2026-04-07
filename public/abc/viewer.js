@@ -149,6 +149,7 @@
       audioContext: null,
       synth: null,
       isPlaying: false,
+      repeatPlayback: false,
       playbackPending: false,
       lastVisualObj: null,
       currentTempo: null,
@@ -209,6 +210,9 @@
         if (typeof data.enableHighlight === 'boolean') {
           this.state.enableHighlight = data.enableHighlight;
         }
+        if (typeof data.repeatPlayback === 'boolean') {
+          this.state.repeatPlayback = data.repeatPlayback;
+        }
         if (typeof data.metronomeEnabled === 'boolean') {
           this.state.metronomeEnabled = data.metronomeEnabled;
         }
@@ -241,6 +245,7 @@
       try {
         const payload = {
           enableHighlight: !!this.state.enableHighlight,
+          repeatPlayback: !!this.state.repeatPlayback,
           metronomeEnabled: !!this.state.metronomeEnabled,
           leadInEnabled: !!this.state.leadInEnabled,
           clef: normalizeClefMode(this.state.clef),
@@ -745,6 +750,16 @@
         const stopBtn = q('stopBtn');
         if (playBtn) playBtn.addEventListener('click', () => this.play());
         if (stopBtn) stopBtn.addEventListener('click', () => this.stop());
+      }
+
+      const repeatToggle = q('repeatToggle');
+      if (repeatToggle) {
+        repeatToggle.addEventListener('click', () => {
+          this.state.repeatPlayback = !this.state.repeatPlayback;
+          this.persistState();
+          this.updateRepeatButton();
+        });
+        this.updateRepeatButton();
       }
 
       // Playback mode toggle button
@@ -1610,38 +1625,16 @@
           const d = Number(this.state.synth && this.state.synth.duration);
           if (d && isFinite(d) && d > 0) {
             this.state.finishTimeout = setTimeout(() => {
-              this.state.isPlaying = false;
-              this.updatePlayButton();
-              if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
-              this.clearHighlight();
-              this.stopMetronomeLoop();
-              this.clearMetronomeDisplay();
-              this.state.finishTimeout = null;
+              this.finishPlayback(__playSession);
             }, Math.ceil(d * 1000) + 250);
           }
         } catch(_) {}
         // Handle playback finish to toggle Stop -> Play automatically
         if (startResult && typeof startResult.then === 'function') {
           startResult.then(() => {
-            if (this.state.playSession !== __playSession) return;
-            this.state.isPlaying = false;
-            this.state.playbackPending = false;
-            this.updatePlayButton();
-            if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
-            this.clearHighlight();
-            this.stopMetronomeLoop();
-            this.clearMetronomeDisplay();
-            if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
+            this.finishPlayback(__playSession);
           }).catch(() => {
-            if (this.state.playSession !== __playSession) return;
-            this.state.isPlaying = false;
-            this.state.playbackPending = false;
-            this.updatePlayButton();
-            if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
-            this.clearHighlight();
-            this.stopMetronomeLoop();
-            this.clearMetronomeDisplay();
-            if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
+            this.finishPlayback(__playSession);
           });
         } else {
           // Fallback: poll isRunning if no promise
@@ -1650,15 +1643,7 @@
               if (this.state.playSession !== __playSession) { this.state.playFinishTimer = null; return; }
               if (!this.state.synth || !this.state.synth.isRunning) {
                 if (this.state.playSession !== __playSession) { this.state.playFinishTimer = null; return; }
-                this.state.isPlaying = false;
-                this.state.playbackPending = false;
-                this.updatePlayButton();
-                this.state.playFinishTimer = null;
-                if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
-                this.clearHighlight();
-                this.stopMetronomeLoop();
-                this.clearMetronomeDisplay();
-                if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
+                this.finishPlayback(__playSession);
                 return;
               }
             } catch(_) {}
@@ -1700,6 +1685,31 @@
       this.state.isPlaying = false;
       this.state.playbackPending = false;
       this.updatePlayButton();
+    },
+
+    finishPlayback: function(playSession) {
+      if (typeof playSession === 'number' && this.state.playSession !== playSession) return;
+      if (this.state.repeatPlayback) {
+        this.restartPlayback().catch((error) => {
+          console.error('Repeat playback failed:', error);
+          this.state.isPlaying = false;
+          this.state.playbackPending = false;
+          this.updatePlayButton();
+          this.stopMetronomeLoop();
+          this.clearMetronomeDisplay();
+        });
+        return;
+      }
+      this.state.isPlaying = false;
+      this.state.playbackPending = false;
+      this.updatePlayButton();
+      if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
+      this.clearHighlight();
+      try { this._clearCursor(); } catch(_) {}
+      this.stopMetronomeLoop();
+      this.clearMetronomeDisplay();
+      if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
+      if (this.state.playFinishTimer) { try { clearTimeout(this.state.playFinishTimer); } catch(_) {} this.state.playFinishTimer = null; }
     },
 
     restartPlayback: async function() {
@@ -1747,50 +1757,21 @@
           const d = Number(this.state.synth && this.state.synth.duration);
           if (d && isFinite(d) && d > 0) {
             this.state.finishTimeout = setTimeout(() => {
-              this.state.isPlaying = false;
-              this.state.playbackPending = false;
-              this.updatePlayButton();
-              if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
-              try { this._clearCursor(); } catch(_) {}
-              this.stopMetronomeLoop();
-              this.clearMetronomeDisplay();
-              this.state.finishTimeout = null;
+              this.finishPlayback(this.state.playSession);
             }, Math.ceil(d * 1000) + 250);
           }
         } catch(_) {}
         if (startResult && typeof startResult.then === 'function') {
           startResult.then(() => {
-            this.state.isPlaying = false;
-            this.state.playbackPending = false;
-            this.updatePlayButton();
-            if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
-            try { this._clearCursor(); } catch(_) {}
-            this.stopMetronomeLoop();
-            this.clearMetronomeDisplay();
-            if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
+            this.finishPlayback(this.state.playSession);
           }).catch(() => {
-            this.state.isPlaying = false;
-            this.state.playbackPending = false;
-            this.updatePlayButton();
-            if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
-            try { this._clearCursor(); } catch(_) {}
-            this.stopMetronomeLoop();
-            this.clearMetronomeDisplay();
-            if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
+            this.finishPlayback(this.state.playSession);
           });
         } else {
           const poll = () => {
             try {
               if (!this.state.synth || !this.state.synth.isRunning) {
-                this.state.isPlaying = false;
-                this.state.playbackPending = false;
-                this.updatePlayButton();
-                this.state.playFinishTimer = null;
-                if (this.state.timer && this.state.timer.stop) this.state.timer.stop();
-                try { this._clearCursor(); } catch(_) {}
-                this.stopMetronomeLoop();
-                this.clearMetronomeDisplay();
-                if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
+                this.finishPlayback(this.state.playSession);
                 return;
               }
             } catch(_) {}
@@ -1826,6 +1807,21 @@
         btn.classList.remove('bg-red-600');
         btn.classList.add('bg-green-600', 'hover:bg-green-500');
       }
+    },
+
+    updateRepeatButton: function() {
+      const btn = document.getElementById('repeatToggle');
+      if (!btn) return;
+      const active = !!this.state.repeatPlayback;
+      btn.textContent = 'Repeat';
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+      btn.setAttribute('aria-label', active ? 'Repeat full tune on' : 'Repeat full tune off');
+      btn.title = active ? 'Repeat full tune on' : 'Repeat full tune off';
+      btn.classList.toggle('bg-blue-600', active);
+      btn.classList.toggle('hover:bg-blue-500', active);
+      btn.classList.toggle('bg-gray-700', !active);
+      btn.classList.toggle('hover:bg-gray-600', !active);
+      btn.classList.add('text-white');
     },
 
     updateHighlightControl: function(btn, enabled) {
