@@ -532,6 +532,8 @@ const pageDescription =
     };
 
     const STORAGE_KEY = 'jamBuddyChordBrowserState';
+    const BASS_ALLOWED_QUALITIES = ['', 'm', '7', 'm7'];
+    const BASS_ROOT_NOTES = ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#'];
 
     function trackChordBrowserEvent(name, params = {}) {
       analytics?.trackEvent?.(name, params);
@@ -681,6 +683,14 @@ const pageDescription =
         state.qualitiesByInstrument[instrument] = Array.from(qualitySet).sort((a, b) => a.localeCompare(b));
         state.rootsByInstrument[instrument] = Array.from(rootSet).sort((a, b) => noteIndex(a) - noteIndex(b));
       });
+
+      ensureBassChordOptions();
+    }
+
+    function ensureBassChordOptions() {
+      state.chordsByInstrument.bass = state.chordsByInstrument.bass || {};
+      state.qualitiesByInstrument.bass = [...BASS_ALLOWED_QUALITIES];
+      state.rootsByInstrument.bass = [...BASS_ROOT_NOTES];
     }
 
     function splitRootAndSuffix(chordName) {
@@ -799,7 +809,9 @@ const pageDescription =
       if (!fingering) {
         const fallback = document.createElement('div');
         fallback.className = 'diagram-placeholder';
-        fallback.innerHTML = `No stored fingering for <span class="text-white font-semibold">${chordName}</span> on this instrument.`;
+        fallback.innerHTML = state.instrumentId === 'bass'
+          ? `Bass uses the fretboard overlay for <span class="text-white font-semibold">${chordName}</span>. Select intervals to map chord tones.`
+          : `No stored fingering for <span class="text-white font-semibold">${chordName}</span> on this instrument.`;
         CHORD_DIAGRAM_CONTAINER.appendChild(fallback);
         return;
       }
