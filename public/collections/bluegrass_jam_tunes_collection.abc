@@ -50,7 +50,21 @@ W:
 W: 4. Someone stole my ol' 'coon dog. Wish they'd bring him back. 
 W: He chased the big hogs through the fence and the little ones through the crack.
 
-X: 3
+X: 3 
+T:Chinquapin Hunting
+C: Traditional
+M:4/4
+L:1/8
+R:Reel
+K:D
+Q:120
+|FG|:"D"ABAG FE D2|"A" [A6E6] FG|"D"ABAG FEDF|
+|"A"ED C2 "D"D2 FG| ABAG FED2|"A"[A6E6] FG| "D" ABAG FEDF|
+|1"A" ED C2 "D" D2 FG:|2 "A" ED C2 "D"D4|: "G"Bdef edBd| edef e2 d2|
+|BABc dcBc|"A"BA2 F A4|"G"Bdef edBd|
+|edef e2 ef | g2 (3f-gf e2 d2 |1 "A" c3 d cB A2:|2"A" [c8E8]||
+
+X: 4
 T:Church Street Blues
 C:Traditional
 R:Reel
@@ -80,7 +94,7 @@ W:I'd string up this old Martin box and go and join some band
 W:But I guess I'm gonna stay right here, just pick and sing a while
 W:Try to make me a little change and give them folks a smile
 
-X: 4
+X: 5
 T:Cluck Old Hen
 R: Reel
 C: Traditional
@@ -104,7 +118,7 @@ W:
 W:4. My old hen she just won't do. She lays eggs and taiters too
 W: First time she cackled cackled in'the lot. Next time she cackles cackle in the pot.
 
-X: 5
+X: 6
 T:Columbus Stockade Blues
 C:Thomas Darby & Jimmie Tarlton
 M:4/4
@@ -124,7 +138,7 @@ w:Go and leave me if you wish to. Nev-er let me cross your mind.
 |"D"D3/2 B,/2 A,/2A,/2D/2F/2|A2 F2|"A"A3/2 G/2 F/2G/2F/2E/2|"D"D3||
 w:in your heart you love a-noth-er.~Oh leave me Dar-lin' I don't mind.
 
-X: 6
+X: 7
 T:Crawdad Song
 C:Traditional
 R: Reel
@@ -174,7 +188,7 @@ W:Look at the crawdad crawl'in round, Babe,
 W:Look at the crawdad crawl'in round, he's the mayor of
 W:crawdad town, Honey Baby mine!
 
-X: 7
+X: 8
 T:Cripple Creek
 C:Traditional
 R:Reel
@@ -208,7 +222,7 @@ W:Wade old Cripple Creek before I sleep
 W:I roll my britches up to my knees
 W:And wade old Cripple Creek whenever I please
 
-X: 8
+X: 9
 T:Dooley
 C:Rodney Dillard and Mitchell F. Jayne
 R: Bluegrass
@@ -240,7 +254,7 @@ w:bush-el and mo-las-ses by the ton. I re-mem-ber ver-y well the
 "C"GGcc|"G7"d3 c|"C"eeee|"F"d c2 c/d/|"C"e c "G7"d B|"C" c4||
 w:day old Doo-ley died The wo-men folk lookede sor-ry and the men stood 'round and cried.
 
-X: 9
+X: 10
 T:Fly Around My Pretty Little Miss
 C:Traditional
 R:Reel
@@ -279,7 +293,7 @@ W:Going to get some barley
 W:Going to get some weevily wheat
 W:To bake a cake for Charlie
 
-X: 10
+X: 11
 T:Hot Corn, Cold Corn
 C: Traditional
 R: Bluegrass
@@ -298,7 +312,7 @@ w: Hot corn, cold corn, bring a-long a dem-i-john, Hot corn, cold corn, bring a-
 "G" B2 G2 G2 E2|GGGG ED D|"D" A2 A2 AA A2|AAAA F D3 | B4 G4 :|
 w: Hot corn, cold corn, bring a-long a dem-i-john, Fare-well Unc-le Bill, see you in the morn-ing, yes sir!
 
-X: 11
+X: 12
 T: I'll Fly Away
 C:Albert E. Brumley
 S:https://www.idahobluegrassassociation.org/beginner-jam/category/ill-fly-away
@@ -319,7 +333,7 @@ W:
 W: 3. Just a few more weary days and then
 W: To a land where joys will never end
 
-X: 12
+X: 13
 T: Kentucky Waltz
 C: Bill Monroe (1946)
 O: arranged by Bob Alessio
@@ -352,7 +366,7 @@ W:I can see your smiling face
 W:And I long once more for your embrace
 W:In that beautiful Kentucky waltz
 
-X: 13
+X: 14
 T:Long Journey Home
 C:Traditional
 S:https://www.idahobluegrassassociation.org/beginner-jam/category/long-journey-home
@@ -376,7 +390,7 @@ W: 4. Homesick and lonesome and I’m feeling kind of blue
 W:
 W: 5. There’s black smoke a rising and it surely is a train
 
-X: 14
+X: 15
 T:Nine Pound Hammer
 R:bluegrass
 L:1/8
@@ -403,7 +417,7 @@ W:And a long way to Harlan
 W:Just to get a little booze
 W:Just to get a little booze
 
-X: 15
+X: 16
 T: Old Folks at Home
 C: Stephen C. Foster. 1851.
 %R: air, march
@@ -438,7 +452,7 @@ w: All de world is sad and drear-y, Ev-'ry-where I roam;
    F4 E D F E | D2 d2 B d3 | A4 F> D E2 E> E | D6 z2 |]
 w: Oh! dark-ies, how my heart grows wear-y, Far from de old folks at home.
 
-X: 16
+X: 17
 T:Old Home Place
 C:Dean Webb and Mitchell F. Jayne
 R: Bluegrass
@@ -474,7 +488,7 @@ w:why did I leave the plow and the field and look for a
 "C7"A2 A G|1"F"F4-|F3A:|2"F"F4-|F3z|]
 w:job in the town _and town.
 
-X: 17
+X: 18
 T:Shady Grove
 C:Traditional
 R:Reel
@@ -510,7 +524,7 @@ W:Is sweet as brandy wine
 W:And there ain't no girl in this old world
 W:That's prettier than mine
 
-X: 18
+X: 19
 T:Sitting on Top of the World
 C:Walter Vinson and Lonnie Chatmon
 S:https://www.idahobluegrassassociation.org/beginner-jam/category/sitting-on-top-of-the-world
@@ -541,7 +555,7 @@ W:
 W: 6. Don’t you come here running, holding out your hand, 
 W:I’ll get me a woman like you got your man
 
-X: 19
+X: 20
 T:Soldier's Joy
 C:Traditional
 M:4/4
@@ -565,7 +579,7 @@ W:
 W: 5. Twenty-five cents for the morphine, Fifteen cents for the beer
 W: Twenty-five cents for the morphine Gonna take me away from here
 
-X: 20
+X: 21
 T:Sourwood Mountain
 A:William Marion Reece 
 M:C|

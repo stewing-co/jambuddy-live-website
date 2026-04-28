@@ -347,18 +347,16 @@ A,2|:"Dm"D2D2 F2FG|"F"AGFG AGFG|"Dm"D2D2 F2FG|"Am"A3cA2A,2|
 |"Dm"d2c2 A2c2|"Am"AGF2 "Dm"D2A2|"Dm"AGF2 "Am"D2C2|[1"Dm"D4 D2 d2:|][2"Dm"D8 ||]
 
 X: 27
-T:Chinquapin Hunting
-C: Traditional
-M:4/4
-L:1/8
-R:Reel
-K:D
-Q:120
-|FG|:"D"ABAG FE D2|"A" [A6E6] FG|"D"ABAG FEDF|
-|"A"ED C2 "D"D2 FG| ABAG FED2|"A"[A6E6] FG| "D" ABAG FEDF|
-|1"A" ED C2 "D" D2 FG:|2 "A" ED C2 "D"D4|: "G"Bdef edBd| edef e2 d2|
-|BABc dcBc|"A"BA2 F A4|"G"Bdef edBd|
-|edef e2 ef | g2 (3f-gf e2 d2 |1 "A" c3 d cB A2:|2"A" [c8E8]||
+T: Chinquapin Hunting
+R: polka
+M: 2/4
+L: 1/8
+K: Amaj
+|:"A"e3e|"D"fec2|"A"e3e|"D"fecd|"A"e3e|"D"fefg|"A"abaf|"E"efed|"A"cBA2:|
+|:"A"a3a|a2g2|"D"f3f|f4|"A"a3a|fgaf|"E"efed|"A"cBA2:|
+[|"D"f3e|fec2|"E"B3B|B4|"D"fefg|f2fg|"E"efed|"A"cBA2|
+"D"f3e|fec2|"E"B3B|B4|"D"fefg|a2af|
+"E"efed|"A"cBA2|]
 
 X: 28
 T:Cluck Old Hen
