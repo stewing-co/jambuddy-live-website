@@ -21,6 +21,13 @@ const baseContentClass = fullWidth
   ? "content-overlay w-full max-w-none my-8 px-4 sm:px-6 lg:px-12 xl:px-16 py-10"
   : "content-overlay mx-auto max-w-7xl my-8 p-6";
 const resolvedContentClass = contentClass ?? baseContentClass;
+
+const siteOrigin = (Astro.site?.origin ?? 'https://jambuddy.live').replace(/\/$/, '');
+const pagePath = Astro.url.pathname.replace(/\/index\.html$/, '/');
+const canonicalUrl = `${siteOrigin}${pagePath}`;
+const ogImage = `${siteOrigin}/images/logo/pick.png`;
+const isHome = pagePath === '/' || pagePath === '';
+const currentYear = new Date().getFullYear();
 ---
 
 <!DOCTYPE html>
@@ -29,19 +36,35 @@ const resolvedContentClass = contentClass ?? baseContentClass;
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="canonical" href="https://jambuddy.live/" />
+    <meta name="theme-color" content="#0f172a" />
+  <link rel="canonical" href={canonicalUrl} />
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="JamBuddy" />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:url" content="https://jambuddy.live/" />
-  <meta property="og:image" content="https://jambuddy.live/images/logo/pick.png" />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:image" content={ogImage} />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content="https://jambuddy.live/images/logo/pick.png" />
-    
-  <!-- TODO: Add structured data (SoftwareApplication) as a later enhancement -->
+  <meta name="twitter:image" content={ogImage} />
+
+  {isHome && (
+    <script type="application/ld+json" is:inline set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "JamBuddy",
+      "applicationCategory": "MusicApplication",
+      "operatingSystem": "Android 12+, Wear OS",
+      "description": description,
+      "url": siteOrigin + '/',
+      "image": ogImage,
+      "author": { "@type": "Person", "name": "Steve Ewing" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.jambuddy.app"
+    })} />
+  )}
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -51,74 +74,88 @@ const resolvedContentClass = contentClass ?? baseContentClass;
     <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192x192.png" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="jb-analytics-name" content={analyticsName} />
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JXYZHXEJND"></script>
+
+    <!-- Google tag (gtag.js) - production only -->
     <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      window.gtag = window.gtag || function(){dataLayer.push(arguments);};
-      const JAMBUDDY_PAGE_NAME = document.querySelector('meta[name="jb-analytics-name"]')?.content || document.title;
-      const JAMBUDDY_PAGE_TYPE = window.location.pathname.startsWith('/abc')
-        ? 'abc'
-        : window.location.pathname === '/chord-browser'
-          ? 'chord_browser'
-          : 'marketing';
-      let jambuddyPageStartMs = Date.now();
-      let jambuddyHiddenAtMs = null;
-      let jambuddyHiddenMs = 0;
+      (function () {
+        var GA_ID = 'G-JXYZHXEJND';
+        var host = window.location.hostname;
+        var isProd = host === 'jambuddy.live' || host === 'www.jambuddy.live';
 
-      function gtag(){window.gtag.apply(window, arguments);}
-      function buildPageParams(extra = {}) {
-        return {
-          page_title: document.title,
-          page_location: window.location.href,
-          page_path: window.location.pathname,
-          jb_page_name: JAMBUDDY_PAGE_NAME,
-          jb_page_type: JAMBUDDY_PAGE_TYPE,
-          ...extra
+        var pageName = document.querySelector('meta[name="jb-analytics-name"]')?.content || document.title;
+        var pageType = window.location.pathname.startsWith('/abc')
+          ? 'abc'
+          : window.location.pathname === '/chord-browser'
+            ? 'chord_browser'
+            : 'marketing';
+        var startMs = Date.now();
+        var hiddenAtMs = null;
+        var hiddenMs = 0;
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ window.dataLayer.push(arguments); }
+        window.gtag = gtag;
+
+        function buildPageParams(extra) {
+          return Object.assign({
+            page_title: document.title,
+            page_location: window.location.href,
+            page_path: window.location.pathname,
+            jb_page_name: pageName,
+            jb_page_type: pageType
+          }, extra || {});
+        }
+        function trackPageView(extra) {
+          gtag('event', 'page_view', buildPageParams(extra));
+        }
+        function trackPageEngagement(reason) {
+          var now = Date.now();
+          var totalHiddenMs = hiddenMs + (hiddenAtMs ? now - hiddenAtMs : 0);
+          var engagedMs = Math.max(0, now - startMs - totalHiddenMs);
+          if (engagedMs < 1000) return;
+          gtag('event', 'jb_page_engagement', buildPageParams({
+            jb_duration_sec: Math.round(engagedMs / 1000),
+            engagement_time_msec: engagedMs,
+            jb_exit_reason: reason || 'pagehide'
+          }));
+          startMs = now;
+          hiddenAtMs = null;
+          hiddenMs = 0;
+        }
+
+        window.jamBuddyAnalytics = {
+          trackEvent: function (name, params) { gtag('event', name, buildPageParams(params)); },
+          trackPageView: trackPageView,
+          trackPageEngagement: trackPageEngagement,
+          getPageContext: function () { return buildPageParams(); },
+          isProduction: isProd
         };
-      }
-      function trackPageView(extra = {}) {
-        gtag('event', 'page_view', buildPageParams(extra));
-      }
-      function trackPageEngagement(reason = 'pagehide') {
-        const now = Date.now();
-        const totalHiddenMs = jambuddyHiddenMs + (jambuddyHiddenAtMs ? now - jambuddyHiddenAtMs : 0);
-        const engagedMs = Math.max(0, now - jambuddyPageStartMs - totalHiddenMs);
-        if (engagedMs < 1000) return;
-        gtag('event', 'jb_page_engagement', buildPageParams({
-          jb_duration_sec: Math.round(engagedMs / 1000),
-          engagement_time_msec: engagedMs,
-          jb_exit_reason: reason
-        }));
-        jambuddyPageStartMs = now;
-        jambuddyHiddenAtMs = null;
-        jambuddyHiddenMs = 0;
-      }
 
-      gtag('js', new Date());
-      gtag('config', 'G-JXYZHXEJND', { send_page_view: false });
-      window.jamBuddyAnalytics = {
-        trackEvent(name, params = {}) {
-          gtag('event', name, buildPageParams(params));
-        },
-        trackPageView,
-        trackPageEngagement,
-        getPageContext() {
-          return buildPageParams();
+        if (!isProd) {
+          // Skip GA on localhost / deploy previews; keep stub so callers don't error.
+          return;
         }
-      };
-      trackPageView();
 
-      document.addEventListener('visibilitychange', () => {
-        if (document.hidden) {
-          jambuddyHiddenAtMs = Date.now();
-        } else if (jambuddyHiddenAtMs) {
-          jambuddyHiddenMs += Date.now() - jambuddyHiddenAtMs;
-          jambuddyHiddenAtMs = null;
-        }
-      });
-      window.addEventListener('pagehide', () => trackPageEngagement('pagehide'));
+        gtag('js', new Date());
+        gtag('config', GA_ID, { send_page_view: false });
+
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+        document.head.appendChild(s);
+
+        trackPageView();
+
+        document.addEventListener('visibilitychange', function () {
+          if (document.hidden) {
+            hiddenAtMs = Date.now();
+          } else if (hiddenAtMs) {
+            hiddenMs += Date.now() - hiddenAtMs;
+            hiddenAtMs = null;
+          }
+        });
+        window.addEventListener('pagehide', function () { trackPageEngagement('pagehide'); });
+      })();
     </script>
     
     <title>{title}</title>
@@ -239,7 +276,7 @@ const resolvedContentClass = contentClass ?? baseContentClass;
           </div>
         </div>
         <div class="border-t border-gray-700 mt-12 pt-8 text-center">
-          <p class="text-gray-400 text-lg">&copy; 2025 JamBuddy. All rights reserved.</p>
+          <p class="text-gray-400 text-lg">&copy; {currentYear} JamBuddy. All rights reserved.</p>
         </div>
       </div>
     </footer>

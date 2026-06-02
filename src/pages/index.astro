@@ -1,24 +1,40 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const description = "JamBuddy is the offline Android practice app with real-time chord detection, ABC sheet music that scales to your screen, tab for guitar/mandolin/uke, MIDI playback, looping audio player, tuner, metronome, and a Wear OS companion. No accounts, no ads, no subscriptions.";
 ---
 
-<Layout title="JamBuddy – Sheet Music & Practice Tools for Musicians">
-  <!-- Header with Download -->
-  <header class="bg-gray-900 border-b border-gray-800">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-4">
-        <img src="/images/logo/jam_buddy_round.png" alt="JamBuddy" class="w-12 h-12" />
-        <div>
-          <h1 class="text-xl font-bold text-white">JamBuddy</h1>
-          <p class="text-sm text-gray-400">Music Practice App for Android</p>
+<Layout title="JamBuddy – Sheet Music & Practice Tools for Musicians" description={description}>
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-900 border-b border-gray-800">
+    <div class="absolute inset-0 pointer-events-none opacity-30 bg-[radial-gradient(circle_at_20%_20%,rgba(236,72,153,0.25),transparent_60%),radial-gradient(circle_at_80%_70%,rgba(34,197,94,0.2),transparent_60%)]"></div>
+    <div class="relative max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-pink-300 bg-pink-500/10 border border-pink-500/30 rounded-full px-3 py-1 mb-6">Android &middot; Wear OS &middot; Offline</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">Read, hear, and learn tunes faster.</h1>
+        <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 max-w-xl">JamBuddy renders ABC sheet music to fit your screen, listens for chords in real time, and gives you tab, MIDI playback, audio looping, a tuner and a metronome &mdash; all in one app, all offline.</p>
+        <div class="flex flex-wrap items-center gap-4 mb-8">
+          <a href="https://play.google.com/store/apps/details?id=com.jambuddy.app&pcampaignid=web_share" target="_blank" rel="noopener" class="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-bold text-lg shadow-lg transition-colors">
+            <img src="/images/icons/google-play-badge.png" alt="" class="h-8" />
+            Get on Google Play
+          </a>
+          <a href="/abc" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white px-5 py-3 rounded-xl font-semibold transition-colors">Browse sheet music &rarr;</a>
+        </div>
+        <div class="flex flex-wrap gap-3 text-sm">
+          <span class="px-3 py-1 bg-gray-800/80 border border-gray-700 rounded-full text-gray-300">Works offline</span>
+          <span class="px-3 py-1 bg-gray-800/80 border border-gray-700 rounded-full text-gray-300">No account required</span>
+          <span class="px-3 py-1 bg-gray-800/80 border border-gray-700 rounded-full text-gray-300">No ads, ever</span>
+          <span class="px-3 py-1 bg-gray-800/80 border border-gray-700 rounded-full text-gray-300">Thousands of tunes included</span>
         </div>
       </div>
-      <a href="https://play.google.com/store/apps/details?id=com.jambuddy.app&pcampaignid=web_share" target="_blank" rel="noopener" class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">
-        <img src="/images/icons/google-play-badge.png" alt="" class="h-6" />
-        Get on Google Play
-      </a>
+      <div class="relative">
+        <div class="absolute -inset-4 bg-gradient-to-tr from-pink-500/20 via-purple-500/10 to-cyan-500/20 blur-2xl rounded-3xl"></div>
+        <div class="relative bg-gray-800/80 rounded-2xl p-3 border border-gray-700 shadow-2xl">
+          <img src="/images/features/full_screen_abc.png" alt="JamBuddy showing a full tune of sheet music scaled to a phone screen" class="rounded-xl w-full max-w-md mx-auto" loading="eager" />
+        </div>
+      </div>
     </div>
-  </header>
+  </section>
 
   <!-- Quick Nav -->
   <nav class="bg-gray-800/50 border-b border-gray-700 py-3 overflow-x-auto">
@@ -36,18 +52,12 @@ import Layout from '../layouts/Layout.astro';
   </nav>
 
   <main class="max-w-6xl mx-auto px-4 py-12">
-    
+
     <!-- Intro -->
     <section class="mb-16">
       <p class="text-lg text-gray-300 leading-relaxed max-w-3xl">
-        JamBuddy is a practice app built around readable sheet music. ABC notation renders at whatever size fits your screen—fiddle tunes stay legible even on a phone without scrolling. Add tablature, transpose to any key, play back with MIDI, and edit everything right in the app.
+        JamBuddy is a practice app built around readable sheet music. ABC notation renders at whatever size fits your screen&mdash;fiddle tunes stay legible even on a phone without scrolling. Add tablature, transpose to any key, play back with MIDI, and edit everything right in the app.
       </p>
-      <div class="mt-6 flex flex-wrap gap-3 text-sm">
-        <span class="px-3 py-1 bg-gray-800 rounded-full text-gray-300">Works offline</span>
-        <span class="px-3 py-1 bg-gray-800 rounded-full text-gray-300">No account required</span>
-        <span class="px-3 py-1 bg-gray-800 rounded-full text-gray-300">One-time purchase</span>
-        <span class="px-3 py-1 bg-gray-800 rounded-full text-gray-300">No ads</span>
-      </div>
     </section>
 
     <!-- ABC Sheet Music - LEAD FEATURE -->
@@ -160,7 +170,7 @@ import Layout from '../layouts/Layout.astro';
           <div class="text-center">
             <div class="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mx-auto mb-3 text-2xl">⭕</div>
             <h4 class="font-semibold text-white">Visualization Window</h4>
-            <p class="text-sm text-gray-400 mt-1">Circle of Fifths showing notes in the current chord and key as 12 o'clock, current chord's chart, current chord's fretboard view, next chord's predictor, historgram, spectrogram and timeline visualizers</p>
+            <p class="text-sm text-gray-400 mt-1">Circle of Fifths showing notes in the current chord and key as 12 o'clock, current chord's chart, current chord's fretboard view, next chord's predictor, histogram, spectrogram and timeline visualizers</p>
           </div>
           <div class="text-center">
             <div class="w-16 h-16 bg-yellow-600 rounded-xl flex items-center justify-center mx-auto mb-3 text-2xl">🔧</div>
@@ -208,7 +218,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="bg-gray-800 rounded-xl p-6">
           <img src="/images/features/slow%20down%20and%20looping%20with%20saving.png" alt="Audio player with slowdown and loop controls" class="rounded-lg w-full mb-4" />
           <h3 class="text-xl font-semibold text-white mb-3">Audio Mode</h3>
-          <p class="text-gray-300 text-sm">Attach MP3, WAV, or other audio files to any tune, or record directly in the app. The waveform player lets you slow down playback (5%–250%) without changing pitch, set loop points, and save named sections. The built-in recorder captures practice takes or melody ideas that save locally and can be played back in the app or shared as a file saved in the users defined folder.</p>
+            <p class="text-gray-300 text-sm">Attach MP3, WAV, or other audio files to any tune, or record directly in the app. The waveform player lets you slow down playback (5%&ndash;250%) without changing pitch, set loop points, and save named sections. The built-in recorder captures practice takes or melody ideas that save locally and can be played back in the app or shared as a file saved to your chosen folder.</p>
         </div>
 
         <!-- Notes Tab -->
@@ -237,7 +247,7 @@ import Layout from '../layouts/Layout.astro';
               <li class="flex gap-2"><span class="text-orange-400">•</span> Old-Time Jam Tunes – traditional old-time music</li>
               <li class="flex gap-2"><span class="text-orange-400">•</span> Mandozine – mandolin repertoire</li>
               <li class="flex gap-2"><span class="text-orange-400">•</span> Everyday Songbook 1927 – classic songs and standards</li>
-              <li class="flex gap-2"><span class="text-orange-400">•</span> Richard Robinsons Tunebook – session-ready traditional repertoire</li>
+              <li class="flex gap-2"><span class="text-orange-400">•</span> Richard Robinson's Tunebook – session-ready traditional repertoire</li>
               <li class="flex gap-2"><span class="text-orange-400">•</span> OpenHymnal – hymns and traditional songs</li>
             </ul>
             <p class="mt-3 text-sm"><a href="/abc" class="text-orange-400 hover:text-orange-300">All collections available free on the web →</a></p>
@@ -269,7 +279,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="space-y-6">
           <div>
             <h3 class="text-lg font-semibold text-white mb-2">Circle of Fifths</h3>
-            <p class="text-gray-300 text-sm">The circle rotates so the detected key sits at 12 o'clock. The current chord is shown in the center of the circle and the notes in the chord get circled, showing their relationship to the key. Tap the key on the top bar to lock a key if its know so it stops trying to guess it.</p>
+            <p class="text-gray-300 text-sm">The circle rotates so the detected key sits at 12 o'clock. The current chord is shown in the center of the circle and the notes in the chord get circled, showing their relationship to the key. Tap the key on the top bar to lock a key if it's known so it stops trying to guess it.</p>
           </div>
           <div>
             <h3 class="text-lg font-semibold text-white mb-2">Chord Charts</h3>
