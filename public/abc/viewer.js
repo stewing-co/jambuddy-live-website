@@ -2533,9 +2533,9 @@
             return makePage(contentTop, contentH || pageHeightVb);
           }
 
-          // Find horizontal whitespace gaps by unioning every drawn element's
-          // vertical extent into occupied bands; the spaces between bands are
-          // safe break points. The largest gaps are the inter-system spaces.
+          // Union every drawn element's vertical extent into occupied "bands"
+          // (≈ staff systems). The whitespace between bands is where it's safe
+          // to break.
           const ivs = [];
           svg.querySelectorAll('path,rect,ellipse,use,text,polygon,line,circle').forEach((el) => {
             let bb; try { bb = el.getBBox(); } catch (_) { return; }
@@ -2549,31 +2549,24 @@
             if (last && t <= last[1]) last[1] = Math.max(last[1], b);
             else bands.push([t, b]);
           });
-          const gaps = [];
-          for (let i = 1; i < bands.length; i++) {
-            const gTop = bands[i - 1][1], gBot = bands[i][0];
-            if (gBot > gTop) gaps.push({ center: (gTop + gBot) / 2, size: gBot - gTop });
-          }
-          const maxGap = gaps.reduce((m, g) => Math.max(m, g.size), 0);
-          const sigThreshold = maxGap * 0.5; // bias breaks toward system gaps
 
-          // Greedily pack whole systems into pages.
+          // Pack bands into pages, filling each page as full as possible: keep
+          // adding systems until the next one would overflow the page, then cut
+          // in the whitespace gap right before it. (Don't weight by gap size —
+          // a few oversized gaps around section labels would otherwise force
+          // early, uneven breaks.)
           const boundaries = [contentTop];
-          let start = contentTop, guard = 0;
-          while (start < bottomAll - 1 && guard++ < 500) {
-            const target = start + pageHeightVb;
-            if (target >= bottomAll) break;
-            let chosen = null, chosenSig = null;
-            for (const g of gaps) {
-              if (g.center > start + 1 && g.center <= target) {
-                if (!chosen || g.center > chosen.center) chosen = g;
-                if (g.size >= sigThreshold && (!chosenSig || g.center > chosenSig.center)) chosenSig = g;
-              }
+          let pageStart = contentTop;
+          for (let i = 0; i < bands.length; i++) {
+            const top = bands[i][0], bottom = bands[i][1];
+            const prevBottom = i > 0 ? bands[i - 1][1] : contentTop;
+            // Only break if something already occupies this page (prevBottom >
+            // pageStart); a single system taller than a page keeps its own page.
+            if (bottom - pageStart > pageHeightVb && prevBottom > pageStart) {
+              const cut = (prevBottom + top) / 2; // midpoint of the gap
+              boundaries.push(cut);
+              pageStart = cut;
             }
-            const cut = chosenSig ? chosenSig.center : (chosen ? chosen.center : target);
-            if (cut <= start + 1) break; // no forward progress — bail to single tail page
-            boundaries.push(cut);
-            start = cut;
           }
           boundaries.push(bottomAll);
 
