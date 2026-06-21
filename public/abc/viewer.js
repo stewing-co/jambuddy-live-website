@@ -2041,10 +2041,9 @@
   // an auto-fit pass is iterating (the key is unchanged then anyway).
   const fitKey = [this.state.clef, this.getTotalTranspose(), this.state.layer, this.state.renderScale, Math.round(paperWidth / 40), (input.value || '')].join('|');
   if (fitKey !== this._fitKey && !this._autoFitIter) { this._fitKey = fitKey; this._autoScale = 1; }
-  // Auto-fit scale grows the rendered music to fill spare vertical room; it
-  // never shrinks below natural size (1.0) so notes stay readable and long
-  // tunes scroll within the paper pane instead of being squeezed.
-  const autoScale = Math.max(1, Math.min(2.5, this._autoScale || 1));
+  // Auto-fit scale: grow short tunes to fill spare vertical room, and shrink
+  // tall tunes so the whole tune fits on screen rather than being cut off.
+  const autoScale = Math.max(0.5, Math.min(2.5, this._autoScale || 1));
   const effectiveStaffWidth = Math.max(320, Math.round(paperWidth / autoScale));
   // Scale measures per line with the *effective* staff width so wide columns
   // aren't rendered tall and skinny.
@@ -2090,10 +2089,13 @@
               // SVG is CSS-scaled to paperWidth; its displayed height keeps aspect.
               const displayedHeight = paperWidth * (svgH / Math.max(1, svgW));
               const userPct = Math.max(20, Math.min(100, Number(this.state.renderScale || 100))) / 100;
-              const targetHeight = Math.max(200, (paperEl.clientHeight || 600) * userPct);
+              // Aim slightly under the container (0.96) so discrete system
+              // reflow can't overshoot and clip the last staff line.
+              const targetHeight = Math.max(160, (paperEl.clientHeight || 600) * userPct * 0.96);
               const fillRatio = targetHeight / Math.max(1, displayedHeight);
-              // Never shrink below natural size; grow short tunes to fill.
-              const desired = Math.max(1, Math.min(2.5, autoScale * fillRatio));
+              // Grow short tunes to fill; shrink tall tunes so the whole tune
+              // fits on screen instead of being cut off.
+              const desired = Math.max(0.5, Math.min(2.5, autoScale * fillRatio));
               const iter = this._autoFitIter || 0;
               // Reflowing measures-per-line is non-linear and discrete, so a
               // single correction rarely lands. Converge over a few passes.

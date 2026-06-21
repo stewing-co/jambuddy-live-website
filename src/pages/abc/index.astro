@@ -188,7 +188,15 @@ const collectionUrl = `/collections/${ABC_FILENAME_MAP[slug]}`;
                 <button id="exportMidi" class="px-3 py-1 bg-gray-700 text-white rounded" title="Export MIDI">MIDI</button>
               </div>
             </div>
-            <textarea id="abcInput" data-collection-src={collectionUrl} class="w-full h-48 lg:h-56 min-h-[8rem] p-3 font-mono text-sm rounded bg-black text-gray-200 border border-gray-700 resize-y"></textarea>
+            <details class="group rounded border border-gray-700 bg-gray-900/70" data-ignore-print>
+              <summary class="flex cursor-pointer items-center justify-between gap-3 px-3 py-2 text-sm font-semibold uppercase tracking-wide text-gray-300 transition group-open:text-white">
+                Edit ABC source
+                <span class="text-xs font-medium text-gray-400 group-open:text-blue-300">Toggle</span>
+              </summary>
+              <div class="p-2">
+                <textarea id="abcInput" data-collection-src={collectionUrl} class="w-full h-48 lg:h-56 min-h-[8rem] p-3 font-mono text-sm rounded bg-black text-gray-200 border border-gray-700 resize-y"></textarea>
+              </div>
+            </details>
           </div>
         </div>
   </section>

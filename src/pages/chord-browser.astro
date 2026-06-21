@@ -26,6 +26,24 @@ const pageDescription =
               >
                 Fretboard Overlay
               </button>
+              <button type="button" class="tab-button" data-tab="circle" aria-selected="false" role="tab" id="tab-btn-circle">
+                Circle of Fifths
+              </button>
+              <button type="button" class="tab-button" data-tab="next" aria-selected="false" role="tab" id="tab-btn-next">
+                Next Chord
+              </button>
+              <button type="button" class="tab-button" data-tab="transpose" aria-selected="false" role="tab" id="tab-btn-transpose">
+                Transposer
+              </button>
+              <button type="button" class="tab-button" data-tab="metronome" aria-selected="false" role="tab" id="tab-btn-metronome">
+                Metronome
+              </button>
+              <button type="button" class="tab-button" data-tab="tuner" aria-selected="false" role="tab" id="tab-btn-tuner">
+                Tuner
+              </button>
+              <button type="button" class="tab-button" data-tab="live" aria-selected="false" role="tab" id="tab-btn-live">
+                Live Detect
+              </button>
             </div>
             <div id="legend-row" class="legend-row tab-legend" hidden>
               <div id="interval-legend" class="legend-chips">
@@ -54,6 +72,181 @@ const pageDescription =
               <div class="fretboard-frame">
                 <svg id="fretboard-svg" class="fretboard-svg" role="img" aria-label="Instrument fretboard visualization"></svg>
               </div>
+            </div>
+
+            <!-- Circle of Fifths -->
+            <div id="tab-panel-circle" class="tab-panel tool-panel" data-panel="circle" role="tabpanel" aria-labelledby="tab-btn-circle" hidden>
+              <div class="tool-controls">
+                <label class="control-label">
+                  <span>Key</span>
+                  <select id="cof-key" class="control-input"></select>
+                </label>
+                <label class="control-label">
+                  <span>Mode</span>
+                  <select id="cof-mode" class="control-input">
+                    <option value="major">Major</option>
+                    <option value="minor">Minor</option>
+                  </select>
+                </label>
+              </div>
+              <div class="cof-layout">
+                <div class="cof-wheel-wrap">
+                  <svg id="cof-svg" viewBox="0 0 400 400" class="cof-svg" role="img" aria-label="Circle of fifths"></svg>
+                </div>
+                <div class="cof-info">
+                  <h3 class="tool-subhead">Diatonic chords</h3>
+                  <div id="cof-diatonic" class="cof-chips"></div>
+                  <p id="cof-summary" class="tool-hint"></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Next Chord -->
+            <div id="tab-panel-next" class="tab-panel tool-panel" data-panel="next" role="tabpanel" aria-labelledby="tab-btn-next" hidden>
+              <div class="tool-controls">
+                <label class="control-label">
+                  <span>Key</span>
+                  <select id="next-key" class="control-input"></select>
+                </label>
+                <label class="control-label">
+                  <span>Mode</span>
+                  <select id="next-mode" class="control-input">
+                    <option value="major">Major</option>
+                    <option value="minor">Minor</option>
+                  </select>
+                </label>
+                <label class="control-label">
+                  <span>Current chord</span>
+                  <select id="next-current" class="control-input"></select>
+                </label>
+              </div>
+              <h3 class="tool-subhead">Likely next chords</h3>
+              <div id="next-suggestions" class="next-grid"></div>
+              <h3 class="tool-subhead">Progression</h3>
+              <div class="next-progression-row">
+                <div id="next-progression" class="next-progression"></div>
+                <button id="next-clear" type="button" class="tool-btn tool-btn-ghost">Clear</button>
+              </div>
+              <p class="tool-hint">Tap a suggestion to extend your progression. Suggestions are weighted by common functional harmony (V→I, ii→V, etc.).</p>
+            </div>
+
+            <!-- Transposer -->
+            <div id="tab-panel-transpose" class="tab-panel tool-panel" data-panel="transpose" role="tabpanel" aria-labelledby="tab-btn-transpose" hidden>
+              <label class="control-label tool-block">
+                <span>Chords / progression</span>
+                <textarea id="tr-input" class="control-input tool-textarea" rows="3" placeholder="e.g. C G Am F  |  Em7 A7 Dmaj7"></textarea>
+              </label>
+              <div class="tool-controls">
+                <label class="control-label">
+                  <span>Transpose</span>
+                  <select id="tr-steps" class="control-input"></select>
+                </label>
+                <label class="control-label">
+                  <span>Spelling</span>
+                  <select id="tr-spelling" class="control-input">
+                    <option value="auto">Auto</option>
+                    <option value="sharps">Sharps</option>
+                    <option value="flats">Flats</option>
+                  </select>
+                </label>
+                <div class="tool-quick">
+                  <button type="button" class="tool-btn tool-btn-ghost" data-tr-step="-1">−1 semitone</button>
+                  <button type="button" class="tool-btn tool-btn-ghost" data-tr-step="1">+1 semitone</button>
+                </div>
+              </div>
+              <h3 class="tool-subhead">Result</h3>
+              <div id="tr-output" class="tr-output">—</div>
+              <h3 class="tool-subhead">Capo calculator</h3>
+              <div class="tool-controls">
+                <label class="control-label">
+                  <span>Capo fret</span>
+                  <select id="tr-capo" class="control-input"></select>
+                </label>
+              </div>
+              <p id="tr-capo-result" class="tool-hint"></p>
+            </div>
+
+            <!-- Metronome -->
+            <div id="tab-panel-metronome" class="tab-panel tool-panel" data-panel="metronome" role="tabpanel" aria-labelledby="tab-btn-metronome" hidden>
+              <div class="metro-top">
+                <div class="metro-bpm">
+                  <span id="metro-bpm-value">120</span><span class="metro-bpm-unit">BPM</span>
+                </div>
+                <div id="metro-beats" class="metro-beats" aria-hidden="true"></div>
+              </div>
+              <div class="tool-controls">
+                <div class="tool-quick">
+                  <button id="metro-down" type="button" class="tool-btn tool-btn-ghost" aria-label="Decrease tempo">−</button>
+                  <input id="metro-slider" type="range" min="40" max="240" value="120" class="metro-slider" />
+                  <button id="metro-up" type="button" class="tool-btn tool-btn-ghost" aria-label="Increase tempo">+</button>
+                  <button id="metro-tap" type="button" class="tool-btn tool-btn-ghost">Tap</button>
+                </div>
+              </div>
+              <div class="tool-controls">
+                <label class="control-label">
+                  <span>Beats / measure</span>
+                  <select id="metro-beats-per" class="control-input">
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4" selected>4</option>
+                    <option value="6">6</option>
+                  </select>
+                </label>
+                <label class="control-label">
+                  <span>Pattern</span>
+                  <select id="metro-pattern" class="control-input"></select>
+                </label>
+              </div>
+              <div class="metro-actions">
+                <button id="metro-toggle" type="button" class="tool-btn tool-btn-primary">▶ Start</button>
+              </div>
+              <p class="tool-hint">Patterns from the JamBuddy app: <strong>D</strong> = down (accent), <strong>U</strong> = up, <strong>x</strong> = mute/skip.</p>
+            </div>
+
+            <!-- Tuner -->
+            <div id="tab-panel-tuner" class="tab-panel tool-panel" data-panel="tuner" role="tabpanel" aria-labelledby="tab-btn-tuner" hidden>
+              <div class="tuner-display">
+                <div id="tuner-note" class="tuner-note">—</div>
+                <div class="tuner-gauge">
+                  <div class="tuner-scale">
+                    <span>−50</span><span>0</span><span>+50</span>
+                  </div>
+                  <div class="tuner-track">
+                    <div class="tuner-center"></div>
+                    <div id="tuner-needle" class="tuner-needle"></div>
+                  </div>
+                  <div id="tuner-cents" class="tuner-cents">cents: —</div>
+                </div>
+                <div class="tuner-meta">
+                  <span id="tuner-freq">— Hz</span>
+                  <div class="tuner-level"><div id="tuner-level-bar" class="tuner-level-bar"></div></div>
+                </div>
+              </div>
+              <div class="metro-actions">
+                <button id="tuner-toggle" type="button" class="tool-btn tool-btn-primary">🎤 Start microphone</button>
+              </div>
+              <p id="tuner-status" class="tool-hint">Allow microphone access, then play a single note. A reads at 440 Hz.</p>
+            </div>
+
+            <!-- Live chord/key detection -->
+            <div id="tab-panel-live" class="tab-panel tool-panel" data-panel="live" role="tabpanel" aria-labelledby="tab-btn-live" hidden>
+              <div class="ld-top">
+                <div class="ld-chord-box">
+                  <div id="ld-chord" class="ld-chord">—</div>
+                  <div id="ld-confidence" class="ld-confidence">confidence: —</div>
+                </div>
+                <div class="ld-key-box">
+                  <div class="tool-subhead">Detected key</div>
+                  <div id="ld-key" class="ld-key">—</div>
+                  <button id="ld-reset-key" type="button" class="tool-btn tool-btn-ghost">Reset key</button>
+                </div>
+              </div>
+              <div class="tool-subhead">Pitch-class energy (chroma)</div>
+              <div id="ld-chroma" class="ld-chroma"></div>
+              <div class="metro-actions">
+                <button id="ld-toggle" type="button" class="tool-btn tool-btn-primary">🎤 Start listening</button>
+              </div>
+              <p id="ld-status" class="tool-hint">Play or strum chords near your mic. Detection mirrors the JamBuddy app: FFT → chroma → chord templates, with key inferred from the chords you play.</p>
             </div>
           </div>
         </div>
@@ -447,6 +640,152 @@ const pageDescription =
     }
   </style>
 
+  <!-- Global (not scoped): many tool elements below are created at runtime by
+       the /tools/*.js modules, so they never receive Astro's scoped-style
+       attribute. These rules must be global to reach them. -->
+  <style is:global>
+    /* ---- Shared tool-tab styling ---- */
+    .tab-bar { flex-wrap: wrap; }
+    .browser-grid.tools-mode .visual-pane { flex: 1 1 100%; }
+
+    .tool-panel { gap: 1.25rem; }
+    .tool-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: flex-end;
+    }
+    .tool-controls .control-label { min-width: 150px; flex: 0 1 auto; }
+    .tool-block { display: block; }
+    .tool-subhead {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #94a3b8;
+      font-weight: 700;
+      margin: 0.25rem 0 0;
+    }
+    .tool-hint { color: #94a3b8; font-size: 0.85rem; line-height: 1.5; margin: 0; }
+    .tool-textarea { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; resize: vertical; width: 100%; }
+    .tool-quick { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+    .tool-btn {
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      border-radius: 0.6rem;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #e2e8f0;
+      background: rgba(15, 23, 42, 0.6);
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+    }
+    .tool-btn:hover { background: rgba(30, 41, 59, 0.9); transform: translateY(-1px); }
+    .tool-btn-primary {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.35), rgba(59, 130, 246, 0.4));
+      border-color: rgba(59, 130, 246, 0.5);
+      color: #ecfeff;
+    }
+    .tool-btn-active { background: linear-gradient(135deg, rgba(239, 68, 68, 0.35), rgba(244, 114, 182, 0.4)); border-color: rgba(239,68,68,0.5); }
+    .tool-btn-ghost { background: rgba(15, 23, 42, 0.4); }
+
+    /* Circle of Fifths */
+    .cof-layout { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; }
+    .cof-wheel-wrap { flex: 1 1 320px; max-width: 440px; }
+    .cof-svg { width: 100%; height: auto; display: block; }
+    .cof-info { flex: 1 1 220px; }
+    .cof-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+    .cof-chip {
+      border-radius: 0.6rem;
+      padding: 0.45rem 0.7rem;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: #e2e8f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 56px;
+    }
+    .cof-chip small { color: #94a3b8; font-weight: 500; font-size: 0.7rem; }
+
+    /* Next chord */
+    .next-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 0.6rem; }
+    .next-card {
+      text-align: left;
+      border-radius: 0.7rem;
+      padding: 0.7rem 0.85rem;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      color: #e2e8f0;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.15s ease;
+    }
+    .next-card:hover { background: rgba(30, 41, 59, 0.95); transform: translateY(-1px); }
+    .next-card .next-name { font-size: 1.15rem; font-weight: 700; }
+    .next-card .next-roman { color: #94a3b8; font-size: 0.78rem; }
+    .next-card .next-bar { height: 4px; border-radius: 2px; margin-top: 0.45rem; background: linear-gradient(90deg, #10b981, #3b82f6); }
+    .next-progression-row { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+    .next-progression { display: flex; flex-wrap: wrap; gap: 0.4rem; font-weight: 700; color: #ecfeff; min-height: 1.5rem; }
+    .next-progression span { background: rgba(59,130,246,0.2); border-radius: 0.4rem; padding: 0.2rem 0.5rem; }
+
+    /* Transposer */
+    .tr-output {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 1.1rem;
+      color: #ecfeff;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      border-radius: 0.7rem;
+      padding: 0.9rem 1rem;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    /* Metronome */
+    .metro-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .metro-bpm { font-weight: 800; color: #ecfeff; line-height: 1; }
+    .metro-bpm #metro-bpm-value { font-size: 3rem; }
+    .metro-bpm-unit { font-size: 1rem; color: #94a3b8; margin-left: 0.4rem; }
+    .metro-beats { display: flex; gap: 0.6rem; }
+    .metro-dot { width: 18px; height: 18px; border-radius: 50%; background: rgba(148, 163, 184, 0.3); transition: background 0.06s ease, transform 0.06s ease; }
+    .metro-dot.is-beat { background: #3b82f6; }
+    .metro-dot.is-accent { background: #10b981; }
+    .metro-dot.is-active { transform: scale(1.35); box-shadow: 0 0 14px rgba(59,130,246,0.6); }
+    .metro-slider { flex: 1 1 160px; min-width: 140px; accent-color: #3b82f6; }
+    .metro-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+    /* Tuner */
+    .tuner-display { display: flex; flex-direction: column; align-items: center; gap: 1rem; padding: 1rem 0; }
+    .tuner-note { font-size: 4rem; font-weight: 800; color: #ecfeff; line-height: 1; min-height: 4rem; }
+    .tuner-note.in-tune { color: #10b981; }
+    .tuner-note.off { color: #f59e0b; }
+    .tuner-gauge { width: 100%; max-width: 460px; }
+    .tuner-scale { display: flex; justify-content: space-between; color: #94a3b8; font-size: 0.75rem; }
+    .tuner-track { position: relative; height: 22px; border-radius: 9999px; background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(148, 163, 184, 0.3); margin: 0.35rem 0; overflow: hidden; }
+    .tuner-center { position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: rgba(148,163,184,0.6); transform: translateX(-50%); }
+    .tuner-needle { position: absolute; top: 2px; bottom: 2px; width: 6px; border-radius: 3px; background: #3b82f6; left: 50%; transform: translateX(-50%); transition: left 0.08s ease, background 0.08s ease; }
+    .tuner-needle.in-tune { background: #10b981; }
+    .tuner-cents { text-align: center; color: #94a3b8; font-size: 0.85rem; }
+    .tuner-meta { display: flex; align-items: center; gap: 1rem; width: 100%; max-width: 460px; justify-content: space-between; }
+    .tuner-meta #tuner-freq { color: #e2e8f0; font-family: ui-monospace, monospace; font-size: 0.9rem; }
+    .tuner-level { flex: 1 1 auto; height: 8px; border-radius: 4px; background: rgba(15,23,42,0.7); overflow: hidden; }
+    .tuner-level-bar { height: 100%; width: 0%; background: linear-gradient(90deg, #10b981, #3b82f6); transition: width 0.08s ease; }
+
+    /* Live Detect */
+    .ld-top { display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: stretch; }
+    .ld-chord-box { flex: 1 1 220px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(15,23,42,0.7); border: 1px solid rgba(148,163,184,0.3); border-radius: 1rem; padding: 1.25rem; }
+    .ld-chord { font-size: 4.5rem; font-weight: 800; color: #ecfeff; line-height: 1; }
+    .ld-confidence { color: #94a3b8; font-size: 0.85rem; margin-top: 0.4rem; }
+    .ld-key-box { flex: 1 1 160px; display: flex; flex-direction: column; gap: 0.5rem; align-items: flex-start; justify-content: center; background: rgba(15,23,42,0.5); border: 1px solid rgba(148,163,184,0.25); border-radius: 1rem; padding: 1.25rem; }
+    .ld-key { font-size: 1.8rem; font-weight: 700; color: #10b981; }
+    .ld-chroma { display: grid; grid-template-columns: repeat(12, 1fr); gap: 0.4rem; align-items: end; }
+    .ld-bar-wrap { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 140px; gap: 0.3rem; }
+    .ld-bar { width: 100%; height: 2px; border-radius: 3px 3px 0 0; background: linear-gradient(180deg, #3b82f6, #10b981); transition: height 0.08s ease; }
+    .ld-bar.is-chord-tone { background: linear-gradient(180deg, #f59e0b, #ef4444); }
+    .ld-bar-label { font-size: 0.65rem; color: #94a3b8; }
+  </style>
+
   <script type="module">
     const analytics = window.jamBuddyAnalytics;
     const NOTE_ORDER = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
@@ -518,6 +857,8 @@ const pageDescription =
     const LEGEND_ROW = document.querySelector('#legend-row');
     const TAB_BUTTONS = Array.from(document.querySelectorAll('.tab-button'));
     const TAB_PANELS = Array.from(document.querySelectorAll('.tab-panel'));
+    const CONTROL_PANE = document.querySelector('.control-pane');
+    const BROWSER_GRID = document.querySelector('.browser-grid');
 
     const state = {
       chordsByInstrument: {},
@@ -596,6 +937,14 @@ const pageDescription =
       if (LEGEND_ROW) {
         LEGEND_ROW.toggleAttribute('hidden', tabId !== 'fretboard');
       }
+      // The instrument/chord control aside only applies to the chord + fretboard
+      // tabs; the new tool tabs are self-contained and span full width.
+      const usesChordControls = tabId === 'chord' || tabId === 'fretboard';
+      if (CONTROL_PANE) CONTROL_PANE.hidden = !usesChordControls;
+      if (BROWSER_GRID) BROWSER_GRID.classList.toggle('tools-mode', !usesChordControls);
+      // Let the standalone tool modules know (e.g. so the tuner releases the mic
+      // when you leave its tab).
+      document.dispatchEvent(new CustomEvent('jb-tab-change', { detail: { tab: tabId } }));
       persistState();
       if (previousTab !== tabId) {
         trackChordBrowserEvent('jb_chord_browser_tab', {
@@ -1204,7 +1553,8 @@ const pageDescription =
             state.selectedIntervals = new Set(intervals);
           }
         }
-        if (persisted.activeTab === 'fretboard' || persisted.activeTab === 'chord') {
+        const KNOWN_TABS = ['chord', 'fretboard', 'circle', 'next', 'transpose', 'metronome', 'tuner', 'live'];
+        if (KNOWN_TABS.includes(persisted.activeTab)) {
           state.activeTab = persisted.activeTab;
         }
       }
@@ -1289,4 +1639,14 @@ const pageDescription =
       CHORD_DIAGRAM_CONTAINER.appendChild(fallback);
     });
   </script>
+
+  <!-- Standalone tool tabs (self-contained ES modules). -->
+  <script type="module" src="/tools/circle-of-fifths.js"></script>
+  <script type="module" src="/tools/next-chord.js"></script>
+  <script type="module" src="/tools/transposer.js"></script>
+  <script type="module" src="/tools/metronome.js"></script>
+  <script type="module" src="/tools/tuner.js"></script>
+  <!-- Live FFT/chroma chord + key detection engine, then its tab UI. -->
+  <script is:inline src="/tools/detect-engine.js"></script>
+  <script type="module" src="/tools/live-detect.js"></script>
 </Layout>
