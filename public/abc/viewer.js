@@ -2441,14 +2441,15 @@
       // the on-screen SVG would carry over the screen's auto-fit zoom and
       // screen-tuned measures-per-line; print needs a paper-width layout.
       const DPI = 96;
-      const cmPx = DPI / 2.54;                                  // px per cm
-      const contentWidthPx = Math.round(8.5 * DPI - 2 * cmPx);  // printable width (~740px)
+      const cmPx = DPI / 2.54;                                       // px per cm
+      const printableWidthPx = Math.round(8.5 * DPI - 2 * cmPx);     // ~740px
+      const printableHeightPx = Math.round(11 * DPI - 2 * cmPx);     // ~981px
       const printOpts = {
         add_classes: true,
         responsive: 'resize',
         visualTranspose: this.getTotalTranspose(),
-        staffwidth: contentWidthPx,
-        wrap: { preferredMeasuresPerLine: Math.max(4, Math.min(8, Math.round(contentWidthPx / 150))) },
+        staffwidth: printableWidthPx,
+        wrap: { preferredMeasuresPerLine: Math.max(4, Math.min(8, Math.round(printableWidthPx / 150))) },
         print: true
       };
       if (hasTab && tabSpec) printOpts.tablature = [tabSpec];
@@ -2456,42 +2457,121 @@
       const styles = `
         :root { color-scheme: light; }
         @page { size: letter portrait; margin: 1cm; }
-        body {
+        html, body {
           margin: 0;
           padding: 0;
           background: #ffffff;
           color: #000000;
           font-family: "Libre Baskerville", "Times New Roman", serif;
         }
-        .print-container {
+        .print-page {
           width: calc(8.5in - 2cm);
           margin: 0 auto;
         }
-        .print-container svg {
+        /* Each page after the first starts on a fresh sheet. */
+        .print-page:not(:first-child) {
+          break-before: page;
+          page-break-before: always;
+        }
+        .print-page svg {
           width: 100% !important;
           height: auto !important;
-          preserve-aspect-ratio: xMinYMin meet;
+          max-height: ${printableHeightPx}px;
+          display: block;
         }
         .abcjs-highlight, .abcjs-cursor, .abcjs-box-second {
           display: none !important;
         }
       `;
 
+      // Render once off-screen at the printable width, then slice the tall SVG
+      // into letter-height pages, breaking only in the whitespace between staff
+      // systems so no line of music is ever cut in half.
       const safeSvg = (() => {
-        // Render off-screen at the printable width so abcjs engraves the music
-        // for the page rather than cloning the screen pane's scaled SVG.
         const holder = document.createElement('div');
-        holder.style.cssText = 'position:absolute;left:-99999px;top:0;width:' + contentWidthPx + 'px;';
+        holder.style.cssText = 'position:absolute;left:-99999px;top:0;width:' + printableWidthPx + 'px;';
         document.body.appendChild(holder);
         try {
           ABCJS.renderAbc(holder, abcForPrint, printOpts);
           const svg = holder.querySelector('svg');
           if (!svg) return '';
-          svg.removeAttribute('width');
-          svg.removeAttribute('height');
-          svg.setAttribute('preserveAspectRatio', 'xMinYMin meet');
-          svg.setAttribute('style', 'display:block;width:100%;height:auto;');
-          return new XMLSerializer().serializeToString(svg);
+
+          const vb = svg.viewBox && svg.viewBox.baseVal;
+          const vbX = vb ? vb.x : 0;
+          const vbY = vb ? vb.y : 0;
+          const vbW = (vb && vb.width) || svg.clientWidth || printableWidthPx;
+          const vbH = (vb && vb.height) || svg.clientHeight || 0;
+
+          // One displayed page worth of height, expressed in viewBox units.
+          // 0.98 leaves a hair of slack so rounding never spills a blank page.
+          const displayScale = printableWidthPx / Math.max(1, vbW);
+          const pageHeightVb = (printableHeightPx * 0.98) / Math.max(0.0001, displayScale);
+
+          const makePage = (winY, winH) => {
+            const clone = svg.cloneNode(true);
+            clone.setAttribute('viewBox', `${vbX} ${winY} ${vbW} ${winH}`);
+            clone.removeAttribute('width');
+            clone.removeAttribute('height');
+            clone.setAttribute('preserveAspectRatio', 'xMinYMin meet');
+            clone.setAttribute('style', 'display:block;width:100%;height:auto;');
+            return `<div class="print-page">${new XMLSerializer().serializeToString(clone)}</div>`;
+          };
+
+          // Short tune that already fits on one page: emit it whole.
+          if (!(vbH > 0) || vbH <= pageHeightVb) {
+            return makePage(vbY, vbH || (printableHeightPx / Math.max(0.0001, displayScale)));
+          }
+
+          // Find horizontal whitespace gaps by unioning every drawn element's
+          // vertical extent into occupied bands; the spaces between bands are
+          // safe break points. The largest gaps are the inter-system spaces.
+          const ivs = [];
+          svg.querySelectorAll('path,rect,ellipse,use,text,polygon,line,circle').forEach((el) => {
+            let bb; try { bb = el.getBBox(); } catch (_) { return; }
+            if (!bb || bb.height <= 0 || bb.width <= 0) return;
+            ivs.push([bb.y, bb.y + bb.height]);
+          });
+          ivs.sort((a, b) => a[0] - b[0]);
+          const bands = [];
+          ivs.forEach(([t, b]) => {
+            const last = bands[bands.length - 1];
+            if (last && t <= last[1]) last[1] = Math.max(last[1], b);
+            else bands.push([t, b]);
+          });
+          const gaps = [];
+          for (let i = 1; i < bands.length; i++) {
+            const gTop = bands[i - 1][1], gBot = bands[i][0];
+            if (gBot > gTop) gaps.push({ center: (gTop + gBot) / 2, size: gBot - gTop });
+          }
+          const maxGap = gaps.reduce((m, g) => Math.max(m, g.size), 0);
+          const sigThreshold = maxGap * 0.5; // bias breaks toward system gaps
+
+          // Greedily pack whole systems into pages.
+          const bottomAll = vbY + vbH;
+          const boundaries = [vbY];
+          let start = vbY, guard = 0;
+          while (start < bottomAll - 1 && guard++ < 500) {
+            const target = start + pageHeightVb;
+            if (target >= bottomAll) break;
+            let chosen = null, chosenSig = null;
+            for (const g of gaps) {
+              if (g.center > start + 1 && g.center <= target) {
+                if (!chosen || g.center > chosen.center) chosen = g;
+                if (g.size >= sigThreshold && (!chosenSig || g.center > chosenSig.center)) chosenSig = g;
+              }
+            }
+            const cut = chosenSig ? chosenSig.center : (chosen ? chosen.center : target);
+            if (cut <= start + 1) break; // no forward progress — bail to single tail page
+            boundaries.push(cut);
+            start = cut;
+          }
+          boundaries.push(bottomAll);
+
+          const pages = [];
+          for (let i = 0; i < boundaries.length - 1; i++) {
+            pages.push(makePage(boundaries[i], boundaries[i + 1] - boundaries[i]));
+          }
+          return pages.join('\n');
         } finally {
           try { document.body.removeChild(holder); } catch (_) {}
         }
@@ -2506,7 +2586,7 @@
             <style>${styles}</style>
           </head>
           <body>
-            <div class="print-container">${safeSvg}</div>
+            ${safeSvg}
           </body>
         </html>
       `;
