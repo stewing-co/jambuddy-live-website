@@ -2465,8 +2465,12 @@
           font-family: "Libre Baskerville", "Times New Roman", serif;
         }
         .print-page {
-          width: calc(8.5in - 2cm);
-          margin: 0 auto;
+          /* Fill the actual printable area (@page already removed the margins).
+             A fixed calc(8.5in - 2cm) overflows whenever the browser's margins
+             differ from ours, clipping the right edge — 100% is robust. */
+          width: 100%;
+          box-sizing: border-box;
+          margin: 0;
         }
         /* Each page after the first starts on a fresh sheet. */
         .print-page:not(:first-child) {
