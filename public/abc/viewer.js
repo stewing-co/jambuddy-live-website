@@ -2497,19 +2497,26 @@
           if (!svg) return '';
 
           const vb = svg.viewBox && svg.viewBox.baseVal;
-          const vbX = vb ? vb.x : 0;
-          const vbY = vb ? vb.y : 0;
-          const vbW = (vb && vb.width) || svg.clientWidth || printableWidthPx;
-          const vbH = (vb && vb.height) || svg.clientHeight || 0;
+          // Crop from the ACTUAL drawn extent (getBBox), not abcjs's viewBox —
+          // the viewBox can be narrower/offset from the real ink, which clipped
+          // the rightmost notes. A small pad keeps edge stems/barlines off the
+          // margin. Fall back to the viewBox if getBBox is unavailable.
+          let bbox = null; try { bbox = svg.getBBox(); } catch (_) { bbox = null; }
+          const padX = 6, padY = 6;
+          const contentX = (bbox ? bbox.x : (vb ? vb.x : 0)) - padX;
+          const contentW = (bbox ? bbox.width : ((vb && vb.width) || svg.clientWidth || printableWidthPx)) + padX * 2;
+          const contentTop = (bbox ? bbox.y : (vb ? vb.y : 0)) - padY;
+          const contentH = (bbox ? bbox.height : ((vb && vb.height) || svg.clientHeight || 0)) + padY * 2;
+          const bottomAll = contentTop + contentH;
 
           // One displayed page worth of height, expressed in viewBox units.
           // 0.98 leaves a hair of slack so rounding never spills a blank page.
-          const displayScale = printableWidthPx / Math.max(1, vbW);
+          const displayScale = printableWidthPx / Math.max(1, contentW);
           const pageHeightVb = (printableHeightPx * 0.98) / Math.max(0.0001, displayScale);
 
           const makePage = (winY, winH) => {
             const clone = svg.cloneNode(true);
-            clone.setAttribute('viewBox', `${vbX} ${winY} ${vbW} ${winH}`);
+            clone.setAttribute('viewBox', `${contentX} ${winY} ${contentW} ${winH}`);
             clone.removeAttribute('width');
             clone.removeAttribute('height');
             clone.setAttribute('preserveAspectRatio', 'xMinYMin meet');
@@ -2518,8 +2525,8 @@
           };
 
           // Short tune that already fits on one page: emit it whole.
-          if (!(vbH > 0) || vbH <= pageHeightVb) {
-            return makePage(vbY, vbH || (printableHeightPx / Math.max(0.0001, displayScale)));
+          if (!(contentH > 0) || contentH <= pageHeightVb) {
+            return makePage(contentTop, contentH || pageHeightVb);
           }
 
           // Find horizontal whitespace gaps by unioning every drawn element's
@@ -2547,9 +2554,8 @@
           const sigThreshold = maxGap * 0.5; // bias breaks toward system gaps
 
           // Greedily pack whole systems into pages.
-          const bottomAll = vbY + vbH;
-          const boundaries = [vbY];
-          let start = vbY, guard = 0;
+          const boundaries = [contentTop];
+          let start = contentTop, guard = 0;
           while (start < bottomAll - 1 && guard++ < 500) {
             const target = start + pageHeightVb;
             if (target >= bottomAll) break;
@@ -2593,7 +2599,10 @@
 
       const blob = new Blob([html], { type: 'text/html' });
       const blobUrl = URL.createObjectURL(blob);
-      const printWindow = window.open(blobUrl, '_blank', 'noopener=yes,width=960,height=720');
+      // NOTE: do NOT pass `noopener` here — with it, window.open() returns null
+      // by spec even on success, which both fires a false "enable pop-ups" alert
+      // and loses the reference we need to drive print()/close().
+      const printWindow = window.open(blobUrl, '_blank', 'width=960,height=720');
       if (!printWindow) {
         URL.revokeObjectURL(blobUrl);
         alert('Allow pop-ups to print the music.');
