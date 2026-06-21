@@ -959,6 +959,27 @@
           const ro = new ResizeObserver(() => {
             try { this.ensureResponsiveSvgs(); } catch(_) {}
             try { this.updatePaperHeight(); } catch(_) {}
+            // Re-fit when the available paper box changes size — not just width.
+            // The control panels above the music (tune picker, Search & Filters,
+            // Playback & Controls) expand/collapse and the editor can be dragged,
+            // all of which change the pane's HEIGHT. The auto-fit targets that
+            // height, so without this the scale goes stale and the music no
+            // longer fills (or overflows) the space. (Paper height is fixed by
+            // flexbox, so auto-fit's own re-renders don't retrigger this.)
+            try {
+              const w = paperEl.clientWidth || paperEl.offsetWidth || 0;
+              const h = paperEl.clientHeight || paperEl.offsetHeight || 0;
+              if (this._lastPaperW == null) { this._lastPaperW = w; this._lastPaperH = h; }
+              const dW = Math.abs(w - this._lastPaperW);
+              const dH = Math.abs(h - this._lastPaperH);
+              if (!this.state.isPlaying && (dW >= 24 || dH >= 24)) {
+                this._lastPaperW = w; this._lastPaperH = h;
+                if (this._roRenderTimer) clearTimeout(this._roRenderTimer);
+                this._roRenderTimer = setTimeout(() => {
+                  try { this._autoScale = 1; this.render(); } catch(_) {}
+                }, 120);
+              }
+            } catch(_) {}
             try {
               // Never restart timing from 0 while playback is active.
               if (this.state.enableHighlight && !this.state.isPlaying) {
@@ -2402,25 +2423,35 @@
       }
 
       const raw = this.getActiveAbcText() || '';
-      const normalized = this.normalizeAbc(raw);
+      const normalized = this.ensureKeyHeader(this.normalizeAbc(raw));
       const filtered = this.filterHeaders(normalized);
       const hasTab = this.state.layer && this.state.layer !== 'none';
       const tabSpec = hasTab ? this.instruments[this.state.layer] : null;
+      // Mirror the on-screen pipeline so print matches the displayed clef.
+      const clefAdjusted = applyClefOverride(filtered, normalizeClefMode(this.state.clef));
       const abcForPrint = (hasTab && this.state.stripChordsForTabs)
-        ? this.simplifyForTab(filtered)
-        : filtered;
+        ? this.simplifyForTab(clefAdjusted)
+        : clefAdjusted;
       if (!abcForPrint || !abcForPrint.trim()) {
         alert('Nothing to print yet.');
         return;
       }
 
-      const renderOpts = {
+      // Engrave fresh for US Letter portrait (8.5"×11", 1cm margins). Reusing
+      // the on-screen SVG would carry over the screen's auto-fit zoom and
+      // screen-tuned measures-per-line; print needs a paper-width layout.
+      const DPI = 96;
+      const cmPx = DPI / 2.54;                                  // px per cm
+      const contentWidthPx = Math.round(8.5 * DPI - 2 * cmPx);  // printable width (~740px)
+      const printOpts = {
         add_classes: true,
         responsive: 'resize',
         visualTranspose: this.getTotalTranspose(),
+        staffwidth: contentWidthPx,
+        wrap: { preferredMeasuresPerLine: Math.max(4, Math.min(8, Math.round(contentWidthPx / 150))) },
         print: true
       };
-      if (hasTab && tabSpec) renderOpts.tablature = [tabSpec];
+      if (hasTab && tabSpec) printOpts.tablature = [tabSpec];
 
       const styles = `
         :root { color-scheme: light; }
@@ -2447,14 +2478,23 @@
       `;
 
       const safeSvg = (() => {
-        const svg = paper.querySelector('svg');
-        if (!svg) return '';
-        const clone = svg.cloneNode(true);
-        clone.removeAttribute('width');
-        clone.removeAttribute('height');
-        clone.setAttribute('preserveAspectRatio', 'xMinYMin meet');
-        clone.setAttribute('style', 'display:block;width:100%;height:auto;');
-        return new XMLSerializer().serializeToString(clone);
+        // Render off-screen at the printable width so abcjs engraves the music
+        // for the page rather than cloning the screen pane's scaled SVG.
+        const holder = document.createElement('div');
+        holder.style.cssText = 'position:absolute;left:-99999px;top:0;width:' + contentWidthPx + 'px;';
+        document.body.appendChild(holder);
+        try {
+          ABCJS.renderAbc(holder, abcForPrint, printOpts);
+          const svg = holder.querySelector('svg');
+          if (!svg) return '';
+          svg.removeAttribute('width');
+          svg.removeAttribute('height');
+          svg.setAttribute('preserveAspectRatio', 'xMinYMin meet');
+          svg.setAttribute('style', 'display:block;width:100%;height:auto;');
+          return new XMLSerializer().serializeToString(svg);
+        } finally {
+          try { document.body.removeChild(holder); } catch (_) {}
+        }
       })();
 
       const html = `
