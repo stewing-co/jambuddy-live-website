@@ -2014,10 +2014,16 @@
   const hasTab = this.state.layer && this.state.layer !== 'none';
   const tabSpec = hasTab ? this.instruments[this.state.layer] : null;
   const paperWidth = Math.max(paperEl.clientWidth || paperEl.offsetWidth || 740, 320);
-  // Auto-fit scale grows the rendered music to fill spare vertical room.
-  // Cleared on tune/layer/transpose changes (see setAutoFitDirty) so each
-  // distinct render measures from a fresh baseline of 1.0 before settling.
-  const autoScale = Math.max(0.6, Math.min(2.5, this._autoScale || 1));
+  // Reset the auto-fit baseline whenever the musical content (or anything that
+  // changes its layout) changes, so each distinct tune measures from a fresh
+  // scale of 1.0 instead of inheriting the previous tune's zoom. Skipped while
+  // an auto-fit pass is iterating (the key is unchanged then anyway).
+  const fitKey = [this.state.clef, this.getTotalTranspose(), this.state.layer, this.state.renderScale, Math.round(paperWidth / 40), (input.value || '')].join('|');
+  if (fitKey !== this._fitKey && !this._autoFitIter) { this._fitKey = fitKey; this._autoScale = 1; }
+  // Auto-fit scale grows the rendered music to fill spare vertical room; it
+  // never shrinks below natural size (1.0) so notes stay readable and long
+  // tunes scroll within the paper pane instead of being squeezed.
+  const autoScale = Math.max(1, Math.min(2.5, this._autoScale || 1));
   const effectiveStaffWidth = Math.max(320, Math.round(paperWidth / autoScale));
   // Scale measures per line with the *effective* staff width so wide columns
   // aren't rendered tall and skinny.
@@ -2053,7 +2059,7 @@
         // space, bump abcjs's scale and re-render once so the music grows to
         // fill the column. Guarded against recursion and capped to avoid
         // extreme zoom on very short tunes.
-        if (!returnVisualObj && !forPlayback && !this._autoFitInProgress) {
+        if (!returnVisualObj && !forPlayback) {
           try {
             const svg = paperEl.querySelector('svg');
             if (svg) {
@@ -2065,11 +2071,15 @@
               const userPct = Math.max(20, Math.min(100, Number(this.state.renderScale || 100))) / 100;
               const targetHeight = Math.max(200, (paperEl.clientHeight || 600) * userPct);
               const fillRatio = targetHeight / Math.max(1, displayedHeight);
-              const desired = Math.max(0.6, Math.min(2.5, autoScale * fillRatio));
-              if (Math.abs(desired - autoScale) / autoScale > 0.08) {
+              // Never shrink below natural size; grow short tunes to fill.
+              const desired = Math.max(1, Math.min(2.5, autoScale * fillRatio));
+              const iter = this._autoFitIter || 0;
+              // Reflowing measures-per-line is non-linear and discrete, so a
+              // single correction rarely lands. Converge over a few passes.
+              if (iter < 4 && Math.abs(desired - autoScale) / Math.max(0.01, autoScale) > 0.04) {
                 this._autoScale = desired;
-                this._autoFitInProgress = true;
-                try { this.render(); } finally { this._autoFitInProgress = false; }
+                this._autoFitIter = iter + 1;
+                try { this.render(); } finally { this._autoFitIter = 0; }
                 return;
               }
             }
@@ -2710,13 +2720,12 @@
       const paper = document.getElementById(this.state.paperId);
       if (!paper) return;
       const svgs = paper.querySelectorAll('svg');
-      const pct = Math.max(20, Math.min(100, Number(this.state.renderScale || 100)));
-      // Base max-height on the paper container, falling back to viewport.
-      const containerH = paper.clientHeight || Math.round((window.innerHeight || 800) * 0.7);
-      const maxPx = Math.max(200, Math.round(containerH * (pct / 100)));
+      // Height is governed by the auto-fit scale + the scrollable paper pane,
+      // not a hard CSS cap — capping here letterboxed/shrank tall tunes. Clear
+      // any stale max-height so the rendered scale is what shows.
       svgs.forEach(svg => {
         try {
-          svg.style.maxHeight = maxPx + 'px';
+          svg.style.maxHeight = 'none';
         } catch(_) {}
       });
     } catch (e) { /* no-op */ }
