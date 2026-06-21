@@ -978,6 +978,20 @@
         window.addEventListener('resize', () => {
           try { this.ensureResponsiveSvgs(); } catch(_) {}
           try { this.updatePaperHeight(); } catch(_) {}
+          // Re-render so measures-per-line tracks the new column width.
+          // Debounce to avoid thrashing while the user drags the window.
+          try {
+            const paperEl = document.getElementById(this.state.paperId);
+            const w = paperEl ? (paperEl.clientWidth || paperEl.offsetWidth || 0) : 0;
+            if (this._lastRenderWidth == null) this._lastRenderWidth = w;
+            const widthDelta = Math.abs(w - this._lastRenderWidth);
+            if (this._resizeRenderTimer) clearTimeout(this._resizeRenderTimer);
+            if (!this.state.isPlaying && widthDelta >= 24) {
+              this._resizeRenderTimer = setTimeout(() => {
+                try { this._lastRenderWidth = w; this.render(); } catch(_) {}
+              }, 150);
+            }
+          } catch(_) {}
           try {
             // Never restart timing from 0 while playback is active.
             if (this.state.enableHighlight && !this.state.isPlaying) {
@@ -1998,9 +2012,12 @@
   const hasTab = this.state.layer && this.state.layer !== 'none';
   const tabSpec = hasTab ? this.instruments[this.state.layer] : null;
   const paperWidth = Math.max(paperEl.clientWidth || paperEl.offsetWidth || 740, 320);
+  // Scale measures per line with the available width so wide columns aren't rendered tall and skinny.
+  // ~160px per measure is a comfortable density at typical scales.
+  const measuresPerLine = Math.max(4, Math.min(12, Math.round(paperWidth / 160)));
   const totalTranspose = this.getTotalTranspose();
-  const baseOpts = { responsive: 'resize', add_classes: true, visualTranspose: totalTranspose, selectionColor: '#f59e0b', wrap: { preferredMeasuresPerLine: 5 } };
-        const renderOpts = hasTab && tabSpec ? { ...baseOpts, tablature: [tabSpec] } : baseOpts;
+  const baseOpts = { responsive: 'resize', staffwidth: paperWidth, add_classes: true, visualTranspose: totalTranspose, selectionColor: '#f59e0b', wrap: { preferredMeasuresPerLine: measuresPerLine } };
+  const renderOpts = hasTab && tabSpec ? { ...baseOpts, tablature: [tabSpec] } : baseOpts;
 
         // Render the visible paper from the unmodified (display) ABC so playback filtering does not affect rendering
         const abcForDisplay = (hasTab && this.state.stripChordsForTabs) ? this.simplifyForTab(clefAdjusted) : clefAdjusted;
