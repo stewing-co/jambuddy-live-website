@@ -170,7 +170,7 @@
       synthControl: null,
       synthUiEl: null,
       finishTimeout: null,
-      renderScale: 60, // percent of viewport height to aim SVG max-height
+      renderScale: 100, // percent of available paper height the rendered SVG may fill
       // cursor state
       _cursorBallInit: false,
       cursorBallEl: null,
@@ -1011,10 +1011,12 @@
       const scaleLabel = q('renderScaleLabel');
       if (scaleSlider) {
         const setVal = () => {
-          const v = parseInt(scaleSlider.value, 10) || 60;
+          const v = parseInt(scaleSlider.value, 10) || 100;
           this.state.renderScale = v;
           if (scaleLabel) scaleLabel.textContent = `${v}%`;
           try { this.applyRenderScale(); } catch(_) {}
+          // Reset auto-fit baseline so the rendering re-converges against the new target fraction.
+          try { this._autoScale = 1; this.render(); } catch(_) {}
           try {
             // Never restart timing from 0 while playback is active.
             if (this.state.enableHighlight && !this.state.isPlaying) {
@@ -2012,11 +2014,16 @@
   const hasTab = this.state.layer && this.state.layer !== 'none';
   const tabSpec = hasTab ? this.instruments[this.state.layer] : null;
   const paperWidth = Math.max(paperEl.clientWidth || paperEl.offsetWidth || 740, 320);
-  // Scale measures per line with the available width so wide columns aren't rendered tall and skinny.
-  // ~160px per measure is a comfortable density at typical scales.
-  const measuresPerLine = Math.max(4, Math.min(12, Math.round(paperWidth / 160)));
+  // Auto-fit scale grows the rendered music to fill spare vertical room.
+  // Cleared on tune/layer/transpose changes (see setAutoFitDirty) so each
+  // distinct render measures from a fresh baseline of 1.0 before settling.
+  const autoScale = Math.max(0.6, Math.min(2.5, this._autoScale || 1));
+  const effectiveStaffWidth = Math.max(320, Math.round(paperWidth / autoScale));
+  // Scale measures per line with the *effective* staff width so wide columns
+  // aren't rendered tall and skinny.
+  const measuresPerLine = Math.max(4, Math.min(12, Math.round(effectiveStaffWidth / 160)));
   const totalTranspose = this.getTotalTranspose();
-  const baseOpts = { responsive: 'resize', staffwidth: paperWidth, add_classes: true, visualTranspose: totalTranspose, selectionColor: '#f59e0b', wrap: { preferredMeasuresPerLine: measuresPerLine } };
+  const baseOpts = { responsive: 'resize', staffwidth: effectiveStaffWidth, scale: autoScale, add_classes: true, visualTranspose: totalTranspose, selectionColor: '#f59e0b', wrap: { preferredMeasuresPerLine: measuresPerLine } };
   const renderOpts = hasTab && tabSpec ? { ...baseOpts, tablature: [tabSpec] } : baseOpts;
 
         // Render the visible paper from the unmodified (display) ABC so playback filtering does not affect rendering
@@ -2041,6 +2048,33 @@
         try { this.applyHeaderVisibilityToSvg?.(); } catch(_) {}
         try { this.ensureResponsiveSvgs(); } catch(_) {}
         try { this.updatePaperHeight(); } catch(_) {}
+
+        // Auto-fit: if the rendered SVG doesn't fill the available vertical
+        // space, bump abcjs's scale and re-render once so the music grows to
+        // fill the column. Guarded against recursion and capped to avoid
+        // extreme zoom on very short tunes.
+        if (!returnVisualObj && !forPlayback && !this._autoFitInProgress) {
+          try {
+            const svg = paperEl.querySelector('svg');
+            if (svg) {
+              const vb = svg.viewBox && svg.viewBox.baseVal;
+              const svgW = (vb && vb.width) || svg.clientWidth || paperWidth;
+              const svgH = (vb && vb.height) || svg.clientHeight || 1;
+              // SVG is CSS-scaled to paperWidth; its displayed height keeps aspect.
+              const displayedHeight = paperWidth * (svgH / Math.max(1, svgW));
+              const userPct = Math.max(20, Math.min(100, Number(this.state.renderScale || 100))) / 100;
+              const targetHeight = Math.max(200, (paperEl.clientHeight || 600) * userPct);
+              const fillRatio = targetHeight / Math.max(1, displayedHeight);
+              const desired = Math.max(0.6, Math.min(2.5, autoScale * fillRatio));
+              if (Math.abs(desired - autoScale) / autoScale > 0.08) {
+                this._autoScale = desired;
+                this._autoFitInProgress = true;
+                try { this.render(); } finally { this._autoFitInProgress = false; }
+                return;
+              }
+            }
+          } catch (_) { /* no-op */ }
+        }
 
         if (returnVisualObj) return this.state.lastVisualObj;
         // If we stopped playback at the beginning of render because the SVG
@@ -2676,8 +2710,10 @@
       const paper = document.getElementById(this.state.paperId);
       if (!paper) return;
       const svgs = paper.querySelectorAll('svg');
-      const pct = Math.max(20, Math.min(100, Number(this.state.renderScale || 60)));
-      const maxPx = Math.round((window.innerHeight || 800) * (pct / 100));
+      const pct = Math.max(20, Math.min(100, Number(this.state.renderScale || 100)));
+      // Base max-height on the paper container, falling back to viewport.
+      const containerH = paper.clientHeight || Math.round((window.innerHeight || 800) * 0.7);
+      const maxPx = Math.max(200, Math.round(containerH * (pct / 100)));
       svgs.forEach(svg => {
         try {
           svg.style.maxHeight = maxPx + 'px';
