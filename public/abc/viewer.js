@@ -2862,7 +2862,10 @@
         // creates a containing block, so fixed is relative to the viewport).
         '.abc-fs-controls{position:fixed !important;top:0.75rem;right:0.75rem;z-index:10000 !important;',
         'padding:0.375rem;border-radius:0.5rem;background:rgba(17,24,39,0.92);',
-        'box-shadow:0 4px 16px rgba(0,0,0,0.5);}'
+        'box-shadow:0 4px 16px rgba(0,0,0,0.5);transition:opacity 0.3s ease;}',
+        // Auto-hidden state: fade out and stop intercepting taps so the music
+        // underneath stays interactive.
+        '.abc-fs-controls.abc-fs-controls-hidden{opacity:0 !important;pointer-events:none !important;}'
       ].join('');
       document.head.appendChild(st);
     }
@@ -2881,12 +2884,44 @@
       try { this._autoScale = 1; this.render(); } catch(_) {}
     };
 
+    // Auto-hide the floating controls after a few idle seconds in fullscreen,
+    // revealing them again on any pointer activity over the music.
+    const HIDE_DELAY_MS = 3000;
+    const clearHideTimer = () => {
+      if (this._fsHideTimer) { clearTimeout(this._fsHideTimer); this._fsHideTimer = null; }
+    };
+    const scheduleHide = () => {
+      clearHideTimer();
+      if (!this.state.isFullscreen) return;
+      this._fsHideTimer = setTimeout(() => {
+        if (this.state.isFullscreen && controls) controls.classList.add('abc-fs-controls-hidden');
+      }, HIDE_DELAY_MS);
+    };
+    const revealControls = () => {
+      if (!this.state.isFullscreen) return;
+      if (controls) controls.classList.remove('abc-fs-controls-hidden');
+      scheduleHide();
+    };
+    if (!this._fsActivityBound) {
+      this._fsActivityBound = true;
+      ['pointermove', 'pointerdown', 'touchstart', 'keydown'].forEach(evt => {
+        document.addEventListener(evt, () => revealControls(), { passive: true });
+      });
+    }
+
     const setExpanded = (expanded) => {
       this.state.isFullscreen = expanded;
       pane.classList.toggle('abc-fullscreen', expanded);
       document.body.classList.toggle('abc-fullscreen-active', expanded);
       if (controls) controls.classList.toggle('abc-fs-controls', expanded);
       setLabel(expanded);
+      if (expanded) {
+        if (controls) controls.classList.remove('abc-fs-controls-hidden');
+        scheduleHide();
+      } else {
+        clearHideTimer();
+        if (controls) controls.classList.remove('abc-fs-controls-hidden');
+      }
       // Let layout settle before refitting to the new box size.
       try { requestAnimationFrame(() => requestAnimationFrame(refit)); } catch(_) { refit(); }
     };
