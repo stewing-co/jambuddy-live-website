@@ -937,6 +937,12 @@
       const exportMidiBtn = q('exportMidi');
       if (exportMidiBtn) exportMidiBtn.addEventListener('click', () => this.exportMidi());
 
+      // Expand / collapse the rendered music to fill the whole screen. The
+      // auto-fit logic in render() keys off the paper box size and a
+      // ResizeObserver re-renders on size change, so growing the pane to the
+      // full viewport makes the engraving refit to that size automatically.
+      try { this.wireExpandToggle(); } catch(_) {}
+
       // Inject responsive SVG styles for this paper
       try {
         let resp = document.getElementById('abc-responsive-style');
@@ -1825,22 +1831,34 @@
       }
     },
 
+    // Inline SVG icons for the icon-only transport buttons.
+    _icons: {
+      play: '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>',
+      stop: '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="1.5"></rect></svg>',
+      repeat: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>'
+    },
+
     updatePlayButton: function() {
       const btn = document.getElementById('playToggle');
       if (!btn) return;
       btn.disabled = !!this.state.playbackPending;
       btn.classList.toggle('opacity-70', !!this.state.playbackPending);
       btn.classList.toggle('cursor-wait', !!this.state.playbackPending);
+      const setBtn = (icon, label) => {
+        if (btn.innerHTML !== icon) btn.innerHTML = icon;
+        btn.title = label;
+        btn.setAttribute('aria-label', label);
+      };
       if (this.state.playbackPending && !this.state.isPlaying) {
-        btn.textContent = 'Starting...';
+        setBtn(this._icons.play, 'Starting…');
         btn.classList.remove('bg-red-600');
         btn.classList.add('bg-green-600', 'hover:bg-green-500');
       } else if (this.state.isPlaying) {
-        btn.textContent = 'Stop';
+        setBtn(this._icons.stop, 'Stop');
         btn.classList.remove('bg-green-600', 'hover:bg-green-500');
         btn.classList.add('bg-red-600');
       } else {
-        btn.textContent = 'Play';
+        setBtn(this._icons.play, 'Play');
         btn.classList.remove('bg-red-600');
         btn.classList.add('bg-green-600', 'hover:bg-green-500');
       }
@@ -1850,7 +1868,7 @@
       const btn = document.getElementById('repeatToggle');
       if (!btn) return;
       const active = !!this.state.repeatPlayback;
-      btn.textContent = 'Repeat';
+      if (btn.innerHTML !== this._icons.repeat) btn.innerHTML = this._icons.repeat;
       btn.setAttribute('aria-pressed', active ? 'true' : 'false');
       btn.setAttribute('aria-label', active ? 'Repeat full tune on' : 'Repeat full tune off');
       btn.title = active ? 'Repeat full tune on' : 'Repeat full tune off';
@@ -2814,6 +2832,75 @@
     paper.style.height = '100%';
     paper.style.display = paper.style.display || 'flex';
     paper.style.flexDirection = paper.style.flexDirection || 'column';
+  };
+
+  // --- Expand to full screen ---
+  // Toggles the music pane (the scrollable wrapper around #paper) into a
+  // fixed, full-viewport overlay. render()'s auto-fit measures the paper box,
+  // and the ResizeObserver re-renders on size change, so the engraving refits
+  // to the larger area on its own; we also force one render to refit promptly.
+  Viewer.wireExpandToggle = function() {
+    const btn = document.getElementById('expandToggle');
+    const paper = document.getElementById(this.state.paperId);
+    if (!btn || !paper) return;
+    const pane = paper.parentElement;
+    if (!pane) return;
+    // The transport group (play / repeat / print / expand). Kept visible in
+    // fullscreen by floating it as a fixed toolbar over the music.
+    const controls = document.getElementById('tuneQuickControls');
+
+    // Inject the fullscreen styles once (shared across collection pages).
+    if (!document.getElementById('abc-fullscreen-style')) {
+      const st = document.createElement('style');
+      st.id = 'abc-fullscreen-style';
+      st.textContent = [
+        '.abc-fullscreen{position:fixed !important;inset:0 !important;z-index:9999 !important;',
+        'margin:0 !important;border-radius:0 !important;max-width:none !important;width:100vw !important;',
+        'height:100vh !important;height:100dvh !important;}',
+        'body.abc-fullscreen-active{overflow:hidden !important;}',
+        // Float the transport controls over the fullscreen music (no ancestor
+        // creates a containing block, so fixed is relative to the viewport).
+        '.abc-fs-controls{position:fixed !important;top:0.75rem;right:0.75rem;z-index:10000 !important;',
+        'padding:0.375rem;border-radius:0.5rem;background:rgba(17,24,39,0.92);',
+        'box-shadow:0 4px 16px rgba(0,0,0,0.5);}'
+      ].join('');
+      document.head.appendChild(st);
+    }
+
+    const setLabel = (expanded) => {
+      // Keep the 4-way-arrow icon; only swap the accessible label/state.
+      const label = expanded ? 'Exit full screen' : 'Expand tune to full screen';
+      btn.setAttribute('aria-pressed', expanded ? 'true' : 'false');
+      btn.setAttribute('aria-label', label);
+      btn.title = label;
+    };
+
+    const refit = () => {
+      try { this.ensureResponsiveSvgs(); } catch(_) {}
+      try { this.updatePaperHeight(); } catch(_) {}
+      try { this._autoScale = 1; this.render(); } catch(_) {}
+    };
+
+    const setExpanded = (expanded) => {
+      this.state.isFullscreen = expanded;
+      pane.classList.toggle('abc-fullscreen', expanded);
+      document.body.classList.toggle('abc-fullscreen-active', expanded);
+      if (controls) controls.classList.toggle('abc-fs-controls', expanded);
+      setLabel(expanded);
+      // Let layout settle before refitting to the new box size.
+      try { requestAnimationFrame(() => requestAnimationFrame(refit)); } catch(_) { refit(); }
+    };
+
+    btn.addEventListener('click', () => setExpanded(!this.state.isFullscreen));
+
+    if (!this._fullscreenEscBound) {
+      this._fullscreenEscBound = true;
+      document.addEventListener('keydown', (ev) => {
+        if (ev.key === 'Escape' && this.state.isFullscreen) setExpanded(false);
+      });
+    }
+
+    setLabel(false);
   };
 
   // --- Responsiveness helper ---
