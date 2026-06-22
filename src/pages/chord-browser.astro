@@ -6,7 +6,7 @@ const pageDescription =
   'Explore JamBuddy chord charts directly in your browser. Select an instrument, browse fingerings, and light up the fretboard by interval degrees.';
 ---
 
-<Layout title={pageTitle} description={pageDescription} analyticsName="Chord Browser">
+<Layout title={pageTitle} description={pageDescription} fullWidth analyticsName="Chord Browser">
   <section class="space-y-10">
   <div class="browser-shell rounded-2xl shadow-2xl overflow-hidden">
       <div class="browser-grid">
@@ -43,6 +43,9 @@ const pageDescription =
               </button>
               <button type="button" class="tab-button" data-tab="live" aria-selected="false" role="tab" id="tab-btn-live">
                 Live Detect
+              </button>
+              <button type="button" class="tab-button" data-tab="transcribe" aria-selected="false" role="tab" id="tab-btn-transcribe">
+                Transcribe
               </button>
             </div>
             <div id="legend-row" class="legend-row tab-legend" hidden>
@@ -248,6 +251,57 @@ const pageDescription =
               </div>
               <p id="ld-status" class="tool-hint">Play or strum chords near your mic. Detection mirrors the JamBuddy app: FFT → chroma → chord templates, with key inferred from the chords you play.</p>
             </div>
+
+            <!-- Live transcription to ABC -->
+            <div id="tab-panel-transcribe" class="tab-panel tool-panel" data-panel="transcribe" role="tabpanel" aria-labelledby="tab-btn-transcribe" hidden>
+              <div class="tool-controls">
+                <div class="tool-quick" role="group" aria-label="Capture mode">
+                  <button type="button" class="tool-btn" data-tx-mode="both">Both</button>
+                  <button type="button" class="tool-btn" data-tx-mode="chords">Chords</button>
+                  <button type="button" class="tool-btn" data-tx-mode="melody">Melody</button>
+                </div>
+                <label class="control-label">
+                  <span>BPM</span>
+                  <input id="tx-bpm" type="number" min="40" max="240" value="120" class="control-input" />
+                </label>
+                <label class="control-label">
+                  <span>Meter</span>
+                  <select id="tx-meter" class="control-input">
+                    <option value="4/4" selected>4/4</option>
+                    <option value="3/4">3/4</option>
+                    <option value="2/4">2/4</option>
+                    <option value="6/8">6/8</option>
+                  </select>
+                </label>
+                <label class="control-label">
+                  <span>Key</span>
+                  <input id="tx-key" type="text" placeholder="auto" class="control-input" />
+                </label>
+              </div>
+              <div class="metro-actions">
+                <button id="tx-start" type="button" class="tool-btn tool-btn-primary">● Record</button>
+                <button id="tx-cleanup" type="button" class="tool-btn tool-btn-ghost">Cleanup</button>
+                <button id="tx-clear" type="button" class="tool-btn tool-btn-ghost">Clear</button>
+                <button id="tx-crepe" type="button" class="tool-btn tool-btn-ghost" title="Loads a large neural model from the configured URL" data-crepe-model="">Enable CREPE pitch (~85 MB)</button>
+              </div>
+              <div class="tool-subhead">Detected notes — ▲▼ retune · –/+ length · ⊕ insert · ✕ delete</div>
+              <div id="tx-timeline" class="tx-timeline"></div>
+              <div class="tool-quick">
+                <button id="tx-add-note" type="button" class="tool-btn tool-btn-ghost">+ Add note</button>
+                <button id="tx-add-rest" type="button" class="tool-btn tool-btn-ghost">+ Add rest</button>
+              </div>
+              <div class="tool-subhead">Sheet preview (built from the timeline above)</div>
+              <div class="tx-paper-frame">
+                <div id="tx-paper" class="tx-paper"></div>
+              </div>
+              <div class="tool-subhead">Playback (MIDI)</div>
+              <div id="tx-audio" class="tx-audio"></div>
+              <details class="group rounded border border-gray-700 bg-gray-900/70">
+                <summary class="tool-subhead" style="cursor:pointer;padding:0.5rem;">ABC source (editable)</summary>
+                <textarea id="tx-abc" class="control-input tool-textarea" rows="6" spellcheck="false"></textarea>
+              </details>
+              <p id="tx-status" class="tool-hint">Records detected chords + melody to standard ABC notation. Melody uses YIN pitch by default. CREPE (neural pitch) is opt-in and loads from a configured URL — set <code>window.JB_CREPE_MODEL_URL</code> or the button's <code>data-crepe-model</code> to your hosted <code>crepe_full.tflite</code>. Editing the ABC box stops auto-overwrite.</p>
+            </div>
           </div>
         </div>
 
@@ -316,6 +370,10 @@ const pageDescription =
       gap: 1.5rem;
       padding: 0.5rem 0;
       min-height: 520px;
+      /* Allow this flex item to shrink below its content width so wide tool
+         panels (e.g. the note timeline) scroll internally instead of pushing
+         the page wider. */
+      min-width: 0;
     }
 
     .tab-header {
@@ -369,6 +427,7 @@ const pageDescription =
       display: flex;
       flex-direction: column;
       gap: 1rem;
+      min-width: 0;
     }
 
     .tab-panel[hidden] {
@@ -784,6 +843,40 @@ const pageDescription =
     .ld-bar { width: 100%; height: 2px; border-radius: 3px 3px 0 0; background: linear-gradient(180deg, #3b82f6, #10b981); transition: height 0.08s ease; }
     .ld-bar.is-chord-tone { background: linear-gradient(180deg, #f59e0b, #ef4444); }
     .ld-bar-label { font-size: 0.65rem; color: #94a3b8; }
+
+    /* Transcribe */
+    .tx-timeline { display: flex; gap: 0.4rem; overflow-x: auto; max-width: 100%; padding: 0.5rem; background: rgba(15,23,42,0.5); border: 1px solid rgba(148,163,184,0.25); border-radius: 0.75rem; min-height: 92px; align-items: stretch; scrollbar-width: thin; }
+    .tx-cell { flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.1rem; background: rgba(15,23,42,0.85); border: 1px solid rgba(148,163,184,0.35); border-radius: 0.5rem; padding: 0.35rem 0.25rem; cursor: pointer; transition: border-color 0.15s ease, background 0.15s ease; }
+    .tx-cell:hover { border-color: rgba(59,130,246,0.7); }
+    .tx-cell.is-selected { border-color: #3b82f6; background: rgba(59,130,246,0.22); box-shadow: 0 0 0 1px #3b82f6; }
+    .tx-cell.is-rest { opacity: 0.6; border-style: dashed; }
+    .tx-cell-chord { font-size: 0.6rem; color: #fbbf24; font-weight: 700; min-height: 0.75rem; }
+    .tx-cell-note { font-size: 1.1rem; font-weight: 800; color: #ffffff; }
+    .tx-cell-len { font-size: 0.62rem; color: #cbd5e1; }
+    .tx-cell-btn { border: none; background: rgba(148,163,184,0.15); color: #cbd5e1; border-radius: 0.3rem; cursor: pointer; font-size: 0.85rem; line-height: 1; padding: 0.25rem 0.45rem; }
+    .tx-cell-btn:hover { background: rgba(59,130,246,0.4); color: #fff; }
+    .tx-cell-del { color: #fca5a5; }
+    .tx-cell-del:hover { background: rgba(239,68,68,0.5); color: #fff; }
+
+    /* Note editor popup */
+    .tx-editor { position: fixed; z-index: 60; display: flex; flex-direction: column; gap: 0.5rem; background: #0f172a; border: 1px solid rgba(148,163,184,0.5); border-radius: 0.7rem; padding: 0.7rem; box-shadow: 0 12px 40px rgba(0,0,0,0.55); min-width: 210px; }
+    .tx-editor[hidden] { display: none; }
+    .tx-editor-hd { display: flex; align-items: center; justify-content: space-between; gap: 1rem; font-weight: 700; color: #ecfeff; font-size: 1.1rem; }
+    .tx-editor-row { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+    .tx-editor-lbl { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: #94a3b8; }
+    .tx-editor-row .tool-btn { padding: 0.35rem 0.7rem; }
+    #tx-ed-units { font-weight: 700; color: #ecfeff; min-width: 1.5ch; text-align: center; }
+    .tx-paper-frame { background: #ffffff; border-radius: 0.75rem; padding: 0.75rem; min-height: 220px; max-height: 50vh; overflow: auto; }
+    .tx-paper { width: 100%; color: #000; }
+    .tx-paper svg { max-width: 100%; height: auto; display: block; }
+    /* The page's light text colour was bleeding into the notation as grey;
+       force solid black noteheads/stems/staff/text. */
+    .tx-paper svg path { fill: #000 !important; }
+    .tx-paper svg text { fill: #000 !important; }
+    .tx-audio { margin-top: 0.25rem; }
+    .tx-audio .abcjs-inline-audio { background: rgba(15,23,42,0.85); border: 1px solid rgba(148,163,184,0.35); border-radius: 0.6rem; }
+    #tx-abc { width: 100%; margin-top: 0.5rem; }
+    #tx-abc.tool-edited { border-color: #f59e0b; }
   </style>
 
   <script type="module">
@@ -1553,7 +1646,7 @@ const pageDescription =
             state.selectedIntervals = new Set(intervals);
           }
         }
-        const KNOWN_TABS = ['chord', 'fretboard', 'circle', 'next', 'transpose', 'metronome', 'tuner', 'live'];
+        const KNOWN_TABS = ['chord', 'fretboard', 'circle', 'next', 'transpose', 'metronome', 'tuner', 'live', 'transcribe'];
         if (KNOWN_TABS.includes(persisted.activeTab)) {
           state.activeTab = persisted.activeTab;
         }
@@ -1649,4 +1742,10 @@ const pageDescription =
   <!-- Live FFT/chroma chord + key detection engine, then its tab UI. -->
   <script is:inline src="/tools/detect-engine.js"></script>
   <script type="module" src="/tools/live-detect.js"></script>
+  <!-- CREPE neural pitch (lazy-loaded on demand) + live transcription. abcjs
+       powers the rendered sheet-music preview in the Transcribe tab. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/abcjs@6.4.4/abcjs-audio.css" />
+  <script is:inline src="https://cdn.jsdelivr.net/npm/abcjs@6.4.4/dist/abcjs-basic-min.js" defer></script>
+  <script is:inline src="/tools/crepe.js"></script>
+  <script type="module" src="/tools/transcribe.js"></script>
 </Layout>

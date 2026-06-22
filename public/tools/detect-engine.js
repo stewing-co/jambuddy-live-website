@@ -161,6 +161,12 @@
     timeBuf: null,
     timer: null,
     listeners: [],
+    useCrepe: false,
+    // onset (attack/fall-off) detection state
+    _prevRms: 0,
+    _peak: 0,
+    _armed: true,
+    _lastOnset: 0,
     // detection state
     lastDetectedChord: null,
     stableCount: 0,
@@ -223,6 +229,24 @@
 
       const now = performance.now();
       const active = rms >= RMS_SILENCE_THRESHOLD;
+
+      // Onset detection: model attack + fall-off so a re-struck/re-picked note
+      // of the SAME pitch registers as a new note. Fire on a sharp energy rise
+      // while "armed"; only re-arm after the level decays below 60% of the
+      // attack peak (the fall-off), so a sustained note doesn't re-trigger.
+      let onset = false;
+      const ONSET_MIN = RMS_SILENCE_THRESHOLD * 2;
+      if (rms >= ONSET_MIN && this._armed && rms >= this._prevRms * 1.6 && (now - this._lastOnset) > 110) {
+        onset = true;
+        this._armed = false;
+        this._peak = rms;
+        this._lastOnset = now;
+      }
+      if (!this._armed) {
+        this._peak = Math.max(this._peak, rms);
+        if (rms < this._peak * 0.6 || rms < ONSET_MIN) this._armed = true;
+      }
+      this._prevRms = rms;
       let chord = this.reportedChord;
       let confidence = 0;
 
@@ -248,17 +272,27 @@
         chord = null;
       }
 
-      // Melody pitch (classical YIN) for transcription consumers.
+      // Melody pitch for transcription consumers. Classical YIN by default;
+      // when CREPE is enabled and loaded, blend the two 50/50 (geometric mean
+      // of frequency) exactly as the Android engine does.
       let pitch = null;
       if (active) {
         const yres = yin(this.timeBuf, sr);
-        if (yres.freq > 30 && yres.freq < 2000 && yres.conf > 0.25) {
-          const note = freqToNote(yres.freq);
-          pitch = { freq: yres.freq, conf: yres.conf, note: note.name + note.octave, midi: note.midi, cents: note.cents };
+        let f = yres.freq, c = yres.conf;
+        if (this.useCrepe && global.JBCrepe && global.JBCrepe.ready) {
+          const cr = global.JBCrepe.process(this.timeBuf, sr);
+          if (cr && cr.freq > 0) {
+            if (f > 0) { f = Math.exp(0.5 * Math.log(cr.freq) + 0.5 * Math.log(f)); c = Math.min(1, 0.5 * cr.conf + 0.5 * c); }
+            else { f = cr.freq; c = cr.conf; }
+          }
+        }
+        if (f > 30 && f < 2000 && c > 0.25) {
+          const note = freqToNote(f);
+          pitch = { freq: f, conf: c, note: note.name + note.octave, midi: note.midi, cents: note.cents };
         }
       }
 
-      const frame = { time: now, rms, active, chroma, chord, confidence, key: this.detectedKey, pitch };
+      const frame = { time: now, rms, active, chroma, chord, confidence, key: this.detectedKey, pitch, onset };
       for (const fn of this.listeners) { try { fn(frame); } catch (_) {} }
     },
 
@@ -292,6 +326,10 @@
         this.lastDetectedChord = null;
         this.stableCount = 0;
         this.reportedChord = null;
+        this._prevRms = 0;
+        this._peak = 0;
+        this._armed = true;
+        this._lastOnset = 0;
         this.timer = setInterval(() => this.process(), FRAME_MS);
         return true;
       } catch (err) {
