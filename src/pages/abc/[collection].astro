@@ -21,7 +21,7 @@ const collectionUrl = collectionFilename ? `/collections/${collectionFilename}` 
 ---
 
 <Layout title={`${pageTitle} – ABC Collection`} description={`View and edit the ${pageTitle} ABC collection in your browser.`} fullWidth contentClass="content-overlay w-full max-w-none" analyticsName={`${pageTitle} ABC Collection`}>
-  <section data-abc-collection={slug} class="w-full px-2 sm:px-4 lg:px-6 xl:px-10 2xl:px-16 py-3 h-[calc(100dvh-5rem)] overflow-hidden flex flex-col">
+  <section data-abc-collection={slug} class="w-full px-2 sm:px-4 lg:px-6 xl:px-10 2xl:px-16 py-3 sm:h-[calc(100dvh-5rem)] sm:overflow-hidden flex flex-col">
     <div class="flex items-center gap-3 mb-4 shrink-0">
       <h1 class="text-3xl font-bold text-white">{pageTitle}</h1>
       <div class="flex flex-wrap items-center gap-2 ml-auto">
@@ -197,7 +197,7 @@ const collectionUrl = collectionFilename ? `/collections/${collectionFilename}` 
               </div>
             </details>
 
-            <div class="flex-1 min-h-0 overflow-auto rounded border border-gray-800 bg-gray-900 p-3 abc-print-target">
+            <div class="h-[70vh] overflow-auto rounded border border-gray-800 bg-gray-900 p-3 abc-print-target sm:h-auto sm:flex-1 sm:min-h-0">
               <div id="paper" class="h-full"></div>
             </div>
           </div>
