@@ -12,41 +12,21 @@ const pageDescription =
       <div class="browser-grid">
         <div class="visual-pane">
           <div class="tab-header">
-            <div class="tab-bar" role="tablist" aria-label="Chord chart views">
-              <button type="button" class="tab-button" data-tab="chord" aria-selected="true" role="tab" id="tab-btn-chord">
-                Chord Diagram
-              </button>
-              <button
-                type="button"
-                class="tab-button"
-                data-tab="fretboard"
-                aria-selected="false"
-                role="tab"
-                id="tab-btn-fretboard"
-              >
-                Fretboard Overlay
-              </button>
-              <button type="button" class="tab-button" data-tab="circle" aria-selected="false" role="tab" id="tab-btn-circle">
-                Circle of Fifths
-              </button>
-              <button type="button" class="tab-button" data-tab="next" aria-selected="false" role="tab" id="tab-btn-next">
-                Next Chord
-              </button>
-              <button type="button" class="tab-button" data-tab="transpose" aria-selected="false" role="tab" id="tab-btn-transpose">
-                Transposer
-              </button>
-              <button type="button" class="tab-button" data-tab="metronome" aria-selected="false" role="tab" id="tab-btn-metronome">
-                Metronome
-              </button>
-              <button type="button" class="tab-button" data-tab="tuner" aria-selected="false" role="tab" id="tab-btn-tuner">
-                Tuner
-              </button>
-              <button type="button" class="tab-button" data-tab="live" aria-selected="false" role="tab" id="tab-btn-live">
-                Live Detect
-              </button>
-              <button type="button" class="tab-button" data-tab="transcribe" aria-selected="false" role="tab" id="tab-btn-transcribe">
-                Transcribe
-              </button>
+            <div class="tab-bar">
+              <label class="tab-select-label">
+                <span class="tab-select-caption">Tool</span>
+                <select id="tool-select" class="tab-select" aria-label="Chord chart views">
+                  <option value="chord">Chord Diagram</option>
+                  <option value="fretboard">Fretboard Overlay</option>
+                  <option value="circle">Circle of Fifths</option>
+                  <option value="next">Next Chord</option>
+                  <option value="transpose">Transposer</option>
+                  <option value="metronome">Metronome</option>
+                  <option value="tuner">Tuner</option>
+                  <option value="live">Live Detect</option>
+                  <option value="transcribe">Transcribe</option>
+                </select>
+              </label>
             </div>
             <div id="legend-row" class="legend-row tab-legend" hidden>
               <div id="interval-legend" class="legend-chips">
@@ -387,36 +367,55 @@ const pageDescription =
 
     .tab-bar {
       display: inline-flex;
-      border-radius: 9999px;
-      padding: 0.35rem;
-      background: rgba(15, 23, 42, 0.8);
-      border: 1px solid rgba(148, 163, 184, 0.3);
       margin-bottom: 0;
-      gap: 0.35rem;
+    }
+
+    .tab-select-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .tab-select-caption {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #94a3b8;
+    }
+
+    .tab-select {
+      border-radius: 9999px;
+      padding: 0.55rem 2.4rem 0.55rem 1.2rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #ecfeff;
+      background-color: rgba(15, 23, 42, 0.9);
+      background-image: linear-gradient(135deg, rgba(16, 185, 129, 0.18), rgba(59, 130, 246, 0.22)),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23cbd5e1' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center, right 1rem center;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow: 0 10px 30px rgba(14, 165, 233, 0.15);
+      cursor: pointer;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      max-width: 100%;
+    }
+
+    .tab-select:focus-visible {
+      outline: 2px solid rgba(59, 130, 246, 0.7);
+      outline-offset: 2px;
+    }
+
+    .tab-select option {
+      color: #0f172a;
     }
 
     .tab-legend {
       flex: 1 1 auto;
       justify-content: flex-end;
-    }
-
-    .tab-button {
-      border: none;
-      border-radius: 9999px;
-      padding: 0.55rem 1.2rem;
-      font-size: 0.9rem;
-      font-weight: 600;
-      background: transparent;
-      color: #94a3b8;
-      cursor: pointer;
-      transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
-    }
-
-    .tab-button[aria-selected="true"] {
-      background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(59, 130, 246, 0.25));
-      color: #ecfeff;
-      box-shadow: 0 10px 30px rgba(14, 165, 233, 0.18);
-      transform: translateY(-1px);
     }
 
     .tab-panels {
@@ -948,7 +947,7 @@ const pageDescription =
     const FRETBOARD_SVG = document.querySelector('#fretboard-svg');
     const INTERVAL_LEGEND = document.querySelector('#interval-legend');
     const LEGEND_ROW = document.querySelector('#legend-row');
-    const TAB_BUTTONS = Array.from(document.querySelectorAll('.tab-button'));
+    const TOOL_SELECT = document.querySelector('#tool-select');
     const TAB_PANELS = Array.from(document.querySelectorAll('.tab-panel'));
     const CONTROL_PANE = document.querySelector('.control-pane');
     const BROWSER_GRID = document.querySelector('.browser-grid');
@@ -1019,10 +1018,9 @@ const pageDescription =
     function setActiveTab(tabId) {
       const previousTab = state.activeTab;
       state.activeTab = tabId;
-      TAB_BUTTONS.forEach((button) => {
-        const isActive = button.dataset.tab === tabId;
-        button.setAttribute('aria-selected', String(isActive));
-      });
+      if (TOOL_SELECT && TOOL_SELECT.value !== tabId) {
+        TOOL_SELECT.value = tabId;
+      }
       TAB_PANELS.forEach((panel) => {
         const shouldShow = panel.dataset.panel === tabId;
         panel.toggleAttribute('hidden', !shouldShow);
@@ -1664,9 +1662,9 @@ const pageDescription =
       renderFretboard();
       setActiveTab(state.activeTab);
 
-      TAB_BUTTONS.forEach((button) => {
-        button.addEventListener('click', () => setActiveTab(button.dataset.tab));
-      });
+      if (TOOL_SELECT) {
+        TOOL_SELECT.addEventListener('change', () => setActiveTab(TOOL_SELECT.value));
+      }
 
       INSTRUMENT_SELECT.addEventListener('change', () => {
         state.instrumentId = INSTRUMENT_SELECT.value;

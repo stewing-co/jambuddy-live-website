@@ -1626,7 +1626,10 @@
         if (!displayVObj) throw new Error('render failed');
         // Default path: our CreateSynth, optional TimingCallbacks
         await this.ensureSynth(displayVObj);
-        if (this.state.enableHighlight) {
+        // Always install timing callbacks so the playback cursor can autoscroll
+        // the pane; note highlighting itself is still gated by enableHighlight
+        // inside the callback.
+        {
           // Ensure a DOM-attached visual object is available for timing callbacks.
           try {
             if (!this.state.lastVisualObj) {
@@ -1636,6 +1639,7 @@
           // Ensure transient highlights/cursor are cleared so timing begins at the first note consistently.
           try { this._clearTransientHighlights(); } catch(_) {}
           try { this._clearCursor(); } catch(_) {}
+          if (!this.state.enableHighlight) this.clearHighlight();
           // Prefer the visible display visual object.
           const useDisplay = this.state.lastVisualObj || displayVObj;
           let timer = this.installTiming(useDisplay);
@@ -1645,9 +1649,6 @@
             try { timer = this.installTiming(this.state.lastVisualObj || useDisplay); } catch(_) { timer = null; }
           }
           if (timer && timer.start) timer.start(0);
-        } else {
-          if (this.state.timer && this.state.timer.stop) { try { this.state.timer.stop(); } catch(_) {} }
-          this.clearHighlight();
         }
         // Clear any previous finish polling/timeouts
         if (this.state.playFinishTimer) { try { clearTimeout(this.state.playFinishTimer); } catch(_) {} this.state.playFinishTimer = null; }
@@ -1768,11 +1769,14 @@
         }
         if (!displayVObj) throw new Error('render failed');
         await this.ensureSynth(displayVObj);
-        if (this.state.enableHighlight) {
+        // Always install timing so the cursor can autoscroll; highlighting is
+        // gated inside the callback by enableHighlight.
+        {
           // Ensure DOM-attached visualObj exists for highlight callbacks
           if (!this.state.lastVisualObj) { try { this.render(); } catch(_) {} }
           try { this._clearTransientHighlights(); } catch(_) {}
           try { this._clearCursor(); } catch(_) {}
+          if (!this.state.enableHighlight) this.clearHighlight();
           const useDisplay = this.state.lastVisualObj || displayVObj;
           let timer = this.installTiming(useDisplay);
           if (!timer) {
@@ -1780,9 +1784,6 @@
             try { timer = this.installTiming(this.state.lastVisualObj || useDisplay); } catch(_) { timer = null; }
           }
           if (timer && timer.start) timer.start(0);
-        } else {
-          if (this.state.timer && this.state.timer.stop) { try { this.state.timer.stop(); } catch(_) {} }
-          this.clearHighlight();
         }
         if (this.state.playFinishTimer) { try { clearTimeout(this.state.playFinishTimer); } catch(_) {} this.state.playFinishTimer = null; }
         if (this.state.finishTimeout) { try { clearTimeout(this.state.finishTimeout); } catch(_) {} this.state.finishTimeout = null; }
@@ -2097,7 +2098,12 @@
         // space, bump abcjs's scale and re-render once so the music grows to
         // fill the column. Guarded against recursion and capped to avoid
         // extreme zoom on very short tunes.
-        if (!returnVisualObj && !forPlayback) {
+        // On narrow (mobile) screens, skip the fit-to-height pass so the tune
+        // renders at its natural width-based scale and a long tune overflows
+        // the scrollable pane (letting the playback cursor autoscroll). The
+        // fullscreen overlay still fits-to-screen on any width.
+        const fitToHeight = ((global.innerWidth || 0) >= 640) || !!this.state.isFullscreen;
+        if (!returnVisualObj && !forPlayback && fitToHeight) {
           try {
             const svg = paperEl.querySelector('svg');
             if (svg) {
@@ -2287,6 +2293,40 @@
     this.state.timerHighlighted = [];
   };
 
+  // Scroll the music pane so the currently-playing note stays in view.
+  Viewer._followPlaybackCursor = function(ev) {
+    try {
+      const paper = document.getElementById(this.state.paperId);
+      if (!paper) return;
+      const pane = paper.parentElement;
+      if (!pane) return;
+      // Nothing to do unless the music overflows its scroll container.
+      if (pane.scrollHeight <= pane.clientHeight + 4) return;
+      // Find a representative DOM node for this timing event.
+      let node = null;
+      const visit = (entry) => {
+        if (node || !entry) return;
+        if (Array.isArray(entry)) { entry.forEach(visit); return; }
+        if (entry.nodeType === 1) { node = entry; return; }
+        if (entry.elemset && entry.elemset.length) { visit(entry.elemset); return; }
+        if (entry.svgEl && entry.svgEl.nodeType === 1) { node = entry.svgEl; return; }
+      };
+      if (ev && ev.elements) visit(ev.elements);
+      if (!node) node = paper.querySelector('.abcjs-note_selected, .abc-current-note');
+      if (!node || !node.getBoundingClientRect) return;
+      const nr = node.getBoundingClientRect();
+      const pr = pane.getBoundingClientRect();
+      if (!pr.height) return;
+      const margin = pr.height * 0.25;
+      // Only scroll when the note drifts out of the comfortable middle band.
+      if (nr.top < pr.top + margin || nr.bottom > pr.bottom - margin) {
+        const target = pane.scrollTop + (nr.top - pr.top) - pr.height * 0.35;
+        const max = pane.scrollHeight - pane.clientHeight;
+        pane.scrollTo({ top: Math.max(0, Math.min(max, target)), behavior: 'smooth' });
+      }
+    } catch (_) { /* no-op */ }
+  };
+
   Viewer.installTiming = function(vObj) {
     try {
       if (!vObj || !ABCJS) return null;
@@ -2304,12 +2344,16 @@
         qpm: undefined,
         beatSubdivisions: 2,
         eventCallback: (ev) => {
-          if (!this.state.enableHighlight) return;
           // End of tune sends null
           if (!ev) {
             try { this.clearHighlight(); } catch(_) {}
             return;
           }
+          // Keep the currently-sounding note in view during playback. Runs
+          // regardless of the highlight toggle so the music autoscrolls even
+          // when note highlighting is off.
+          try { this._followPlaybackCursor(ev); } catch(_) {}
+          if (!this.state.enableHighlight) return;
           let usedRangeHighlight = false;
           // Use abcjs native highlighting for timing alignment.
           if (typeof ev.startChar === 'number' && typeof ev.endChar === 'number' && vObj && vObj.rangeHighlight) {
@@ -2823,13 +2867,23 @@
   Viewer.updatePaperHeight = function() {
     const paper = document.getElementById(this.state.paperId);
     if (!paper) return;
+    // On larger screens the music pane is a flex child that should fill the
+    // fixed-height layout, so force #paper to 100%. On narrow screens the pane
+    // has a fixed CSS height and scrolls; here we let #paper grow to its
+    // natural content height so a long tune overflows the pane (and the
+    // playback cursor can autoscroll through it) instead of being shrunk to
+    // fit. Fullscreen always fills the viewport regardless of width.
+    const isWide = (global.innerWidth || 0) >= 640;
+    const fillHeight = isWide || !!this.state.isFullscreen;
     const wrapper = paper.parentElement;
     if (wrapper) {
-      wrapper.style.height = '100%';
+      if (fillHeight) wrapper.style.height = '100%';
+      else wrapper.style.removeProperty('height');
       wrapper.style.display = wrapper.style.display || 'flex';
       wrapper.style.flexDirection = wrapper.style.flexDirection || 'column';
     }
-    paper.style.height = '100%';
+    if (fillHeight) paper.style.height = '100%';
+    else paper.style.removeProperty('height');
     paper.style.display = paper.style.display || 'flex';
     paper.style.flexDirection = paper.style.flexDirection || 'column';
   };
