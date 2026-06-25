@@ -53,7 +53,6 @@
       addRest: document.getElementById('tx-add-rest'),
       abc: document.getElementById('tx-abc'),
       status: document.getElementById('tx-status'),
-      crepe: document.getElementById('tx-crepe'),
       modeBtns: Array.from(document.querySelectorAll('[data-tx-mode]'))
     };
     if (!els.start || !els.paper || els.start.dataset.txInit === '1') return;
@@ -461,18 +460,6 @@
       els.abc.classList.add('tool-edited');
       paintAbc(els.abc.value);
     });
-
-    if (els.crepe) {
-      els.crepe.addEventListener('click', async () => {
-        if (!window.JBCrepe) { els.status.textContent = 'CREPE module not loaded.'; return; }
-        if (window.JBCrepe.ready) { engine.useCrepe = !engine.useCrepe; els.crepe.classList.toggle('tool-btn-active', engine.useCrepe); els.status.textContent = engine.useCrepe ? 'CREPE pitch ON.' : 'CREPE pitch OFF (using YIN).'; return; }
-        els.crepe.disabled = true;
-        const ok = await window.JBCrepe.load((s) => { els.status.textContent = s; });
-        els.crepe.disabled = false;
-        if (ok) { engine.useCrepe = true; els.crepe.classList.add('tool-btn-active'); els.crepe.textContent = 'CREPE pitch: ON'; els.status.textContent = 'CREPE ready — neural melody pitch active.'; }
-        else { els.status.textContent = 'CREPE failed: ' + (window.JBCrepe.error || 'unknown') + '. Still using YIN.'; }
-      });
-    }
 
     // Periodic re-render while capturing so the sheet grows live.
     setInterval(() => { if (state.capturing && state.dirty) { state.dirty = false; render(); } }, 600);

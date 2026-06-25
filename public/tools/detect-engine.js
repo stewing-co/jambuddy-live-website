@@ -161,7 +161,6 @@
     timeBuf: null,
     timer: null,
     listeners: [],
-    useCrepe: false,
     // onset (attack/fall-off) detection state
     _prevRms: 0,
     _peak: 0,
@@ -272,20 +271,11 @@
         chord = null;
       }
 
-      // Melody pitch for transcription consumers. Classical YIN by default;
-      // when CREPE is enabled and loaded, blend the two 50/50 (geometric mean
-      // of frequency) exactly as the Android engine does.
+      // Melody pitch for transcription consumers, via classical YIN.
       let pitch = null;
       if (active) {
         const yres = yin(this.timeBuf, sr);
         let f = yres.freq, c = yres.conf;
-        if (this.useCrepe && global.JBCrepe && global.JBCrepe.ready) {
-          const cr = global.JBCrepe.process(this.timeBuf, sr);
-          if (cr && cr.freq > 0) {
-            if (f > 0) { f = Math.exp(0.5 * Math.log(cr.freq) + 0.5 * Math.log(f)); c = Math.min(1, 0.5 * cr.conf + 0.5 * c); }
-            else { f = cr.freq; c = cr.conf; }
-          }
-        }
         if (f > 30 && f < 2000 && c > 0.25) {
           const note = freqToNote(f);
           pitch = { freq: f, conf: c, note: note.name + note.octave, midi: note.midi, cents: note.cents };

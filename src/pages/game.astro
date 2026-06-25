@@ -1,0 +1,157 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = 'Tune Trek - JamBuddy';
+const pageDescription =
+  'Tune Trek — a browser game you play by ear. Every square is a fiddle tune; play it to clear the square, then play a chord tone to choose your direction. Any instrument, any key.';
+---
+
+<Layout title={pageTitle} description={pageDescription} fullWidth analyticsName="Tune Trek">
+  <section class="max-w-5xl mx-auto px-4 py-8">
+    <header class="text-center mb-5">
+      <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-green-200 via-white to-blue-200 bg-clip-text text-transparent">
+        Tune Trek
+      </h1>
+      <p class="text-gray-300 mt-2 max-w-2xl mx-auto">
+        Each square is a tune. Play it to clear the square, then play a chord tone to move:
+        <strong>root = forward · 3rd = left · 5th = right</strong>.
+      </p>
+    </header>
+
+    <div class="flex flex-wrap items-center justify-center gap-3 mb-4">
+      <button id="bg-start" class="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-semibold px-5 py-2 rounded-xl shadow-lg transition">
+        🎤 Enable microphone
+      </button>
+      <span id="bg-live" class="font-mono text-green-300 text-sm min-w-[5rem] text-center">♪ —</span>
+      <span id="bg-floor" class="font-bold text-white">Floor 1/3</span>
+      <span id="bg-score" class="font-mono text-green-300 text-sm"></span>
+    </div>
+
+    <!-- Left: current-tune staff. Right: map with the d-pad below it.
+         Stacks (tune, then map, then d-pad) on small screens. -->
+    <div class="flex flex-col lg:flex-row gap-4 items-start">
+      <div class="order-1 w-full lg:flex-1 min-w-0">
+        <h2 class="text-sm font-semibold text-gray-200 mb-1">This square's tune</h2>
+        <div id="bg-staff" class="bg-stone-100 rounded-lg p-2 overflow-auto" style="max-height: 60vh;"></div>
+      </div>
+      <div class="order-2 w-full lg:flex-1 flex flex-col items-center gap-3">
+        <div class="rounded-2xl border border-gray-700 bg-black/60 shadow-2xl p-3 w-full">
+          <div id="bg-map" class="mx-auto" style="max-width: 640px;"></div>
+        </div>
+        <div id="bg-dpad" class="bg-dpad"></div>
+        <!-- Options: collection (single-select), tablature layer, blind mode. -->
+        <div class="flex flex-col items-center gap-2">
+          <div class="flex gap-2">
+            <button class="bg-opt bg-opt-active" data-collection="old-time">Old-Time</button>
+            <button class="bg-opt" data-collection="irish">Irish Session</button>
+          </div>
+          <div class="flex flex-wrap gap-2 items-center justify-center">
+            <button id="bg-tab" class="bg-opt" title="Show a tablature layer for an instrument">Tab</button>
+            <span id="bg-instrument-wrap" class="hidden">
+              <select id="bg-instrument" class="bg-black/60 border border-gray-600 rounded px-2 py-1 text-white text-xs">
+                <option value="violin">Fiddle</option>
+                <option value="mandolin">Mandolin</option>
+                <option value="guitar">Guitar</option>
+              </select>
+            </span>
+            <button id="bg-blind" class="bg-opt" title="Hide upcoming notes — separate leaderboard">Blind</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-3 text-center">
+      <div id="bg-tune" class="text-gray-200 text-sm"></div>
+      <div id="bg-tune-best" class="text-blue-300 text-xs"></div>
+      <div id="bg-status" class="text-yellow-300 text-sm h-5"></div>
+    </div>
+
+    <!-- Run result + leaderboard. -->
+    <div class="mt-6 grid md:grid-cols-2 gap-4">
+      <div class="bg-black/40 border border-gray-700 rounded-xl p-4">
+        <h2 id="bg-lb-title" class="text-sm font-semibold text-gray-200 mb-2">Top 10</h2>
+        <p class="text-xs text-gray-500 mb-1">Ranked by accuracy, then time. 100% with the fastest time leads.</p>
+        <div id="bg-pb" class="text-xs text-blue-300 mb-2"></div>
+        <div id="bg-leaderboard" class="text-gray-200"></div>
+      </div>
+      <div id="bg-result" class="hidden bg-gradient-to-br from-green-900/40 to-black/40 border border-green-700/50 rounded-xl p-4">
+        <div data-result-head class="font-bold text-white"></div>
+        <div data-result-sub class="text-sm text-gray-300 mt-1"></div>
+        <div class="flex flex-wrap items-center gap-2 mt-3">
+          <input id="bg-name" type="text" maxlength="24" placeholder="Your name" class="bg-black/50 border border-gray-600 rounded px-3 py-1.5 text-white text-sm" />
+          <button id="bg-submit" class="bg-green-600 hover:bg-green-700 disabled:opacity-40 disabled:cursor-not-allowed text-white font-semibold px-4 py-1.5 rounded transition">Submit score</button>
+        </div>
+        <div data-result-msg class="text-xs text-green-300 mt-2"></div>
+      </div>
+    </div>
+
+    <details class="mt-6 text-gray-300 text-sm max-w-2xl mx-auto">
+      <summary class="cursor-pointer font-semibold text-white">How to play</summary>
+      <ul class="list-disc pl-6 mt-2 space-y-1">
+        <li>Click <strong>Enable microphone</strong> and allow access.</li>
+        <li>You're on a square (a tune). Play its melody — the staff highlights the next note in red — to <strong>clear</strong> it.</li>
+        <li>Once cleared, the corner <strong>d-pad</strong> lights up. Play a chord tone of the square's chord to move: <strong>root → forward, 3rd → left, 5th → right</strong> (you can't go back).</li>
+        <li>Each reachable square shows its tune name. Reach and clear the gold <strong>EXIT</strong> square to descend.</li>
+        <li>Octave and key don't matter — play on any instrument in any comfortable range.</li>
+        <li>No mic? <strong>Space</strong> plays the next note; when choosing, <strong>↑/←/→</strong> pick root/3rd/5th; <strong>N</strong> next floor, <strong>R</strong> restart.</li>
+      </ul>
+      <p class="mt-3"><strong>Scoring:</strong> a run = clear 3 floors. Score is <strong>% correct notes</strong> first, then <strong>time</strong>. Place top 10 and submit to open a GitHub pull request adding you to the global leaderboard.</p>
+    </details>
+  </section>
+
+  <style is:global>
+    /* Tune-square map */
+    .bg-cell { position: relative; aspect-ratio: 1; background: #16241a; border: 1px solid #2c3d30; border-radius: 6px; display: flex; align-items: center; justify-content: center; padding: 2px; overflow: hidden; }
+    .bg-cell-name { font-size: 10px; line-height: 1.1; color: #9fb3a4; text-align: center; overflow: hidden; }
+    .bg-cell-cleared { background: #1d3324; }
+    .bg-cell-cleared .bg-cell-name { color: #6f8a78; }
+    .bg-cell-current { background: #2c5238; border-color: #7fd4ff; box-shadow: inset 0 0 0 2px #7fd4ff; }
+    .bg-cell-current .bg-cell-name { color: #eaf6ff; }
+    .bg-cell-reachable { border-color: #3fae57; }
+    .bg-cell-exit { outline: 2px solid #caa53a; outline-offset: -2px; }
+    .bg-cell-exit .bg-cell-name { color: #e3c860; }
+    .bg-cell-arrow { position: absolute; top: 1px; left: 4px; color: #3fae57; font-weight: 700; font-size: 14px; }
+    .bg-cell-exit-tag { position: absolute; top: 2px; right: 4px; font-size: 8px; font-weight: 700; color: #caa53a; }
+
+    /* Chord-tone d-pad */
+    .bg-dpad { background: rgba(8,12,9,0.9); border: 1px solid #374151; border-radius: 12px; padding: 8px 10px; width: 210px; }
+    .bg-dpad-chord { text-align: center; font-size: 13px; color: #e5e7eb; margin-bottom: 6px; }
+    .bg-dpad-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: auto auto; gap: 4px; align-items: stretch; }
+    .bg-dpad-up { grid-column: 2; grid-row: 1; }
+    .bg-dpad-leftc { grid-column: 1; grid-row: 2; }
+    .bg-dpad-mid { grid-column: 2; grid-row: 2; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 9px; color: #6b7280; }
+    .bg-dpad-rightc { grid-column: 3; grid-row: 2; }
+    .bg-dpad-slot { background: #1f2937; border: 1px solid #374151; border-radius: 8px; padding: 4px 2px; text-align: center; }
+    .bg-dpad-note { font-size: 16px; font-weight: 700; color: #fff; }
+    .bg-dpad-int { font-size: 8px; color: #9ca3af; }
+    .bg-dpad-dest { font-size: 8px; color: #7fd4ff; overflow: hidden; max-height: 22px; }
+    .bg-dpad-active { border-color: #3fae57; box-shadow: 0 0 8px rgba(63,174,87,0.45); }
+    .bg-dpad-blocked { opacity: 0.35; }
+
+    /* Sheet-music next-note highlight */
+    /* abcjs draws notes with fill:currentColor — set a dark base so future notes
+       render black on the light staff (not the page's grey text color). */
+    #bg-staff { color: #14110c; }
+    /* Blind mode: hide upcoming (unhighlighted) notes by matching the staff bg. */
+    #bg-staff.bg-staff-blind .abcjs-note, #bg-staff.bg-staff-blind .abcjs-note * { fill: #f5f5f4; stroke: #f5f5f4; }
+
+    /* Option toggle buttons */
+    .bg-opt { background: #1f2937; border: 1px solid #374151; color: #cbd5e1; font-size: 12px; padding: 4px 10px; border-radius: 8px; cursor: pointer; transition: all .15s; }
+    .bg-opt:hover { border-color: #4b5563; color: #fff; }
+    .bg-opt-active { background: #15803d; border-color: #22c55e; color: #fff; }
+    #bg-staff .abcjs-note.bg-note-done, #bg-staff .abcjs-note.bg-note-done * { fill: #9aa39b !important; stroke: #9aa39b !important; }
+    #bg-staff .abcjs-note.bg-note-current, #bg-staff .abcjs-note.bg-note-current * { fill: #eab308 !important; stroke: #eab308 !important; }
+  </style>
+
+  <!-- Same abcjs the Sheet Music tab uses. -->
+  <script is:inline src="https://cdn.jsdelivr.net/npm/abcjs@6.4.4/dist/abcjs-basic-min.js" defer></script>
+
+  <script>
+    import { initGame } from '../game/game';
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => { void initGame(); });
+    } else {
+      void initGame();
+    }
+  </script>
+</Layout>

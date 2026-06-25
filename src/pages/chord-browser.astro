@@ -262,7 +262,6 @@ const pageDescription =
                 <button id="tx-start" type="button" class="tool-btn tool-btn-primary">● Record</button>
                 <button id="tx-cleanup" type="button" class="tool-btn tool-btn-ghost">Cleanup</button>
                 <button id="tx-clear" type="button" class="tool-btn tool-btn-ghost">Clear</button>
-                <button id="tx-crepe" type="button" class="tool-btn tool-btn-ghost" title="Loads a large neural model from the configured URL" data-crepe-model="">Enable CREPE pitch (~85 MB)</button>
               </div>
               <div class="tool-subhead">Detected notes — ▲▼ retune · –/+ length · ⊕ insert · ✕ delete</div>
               <div id="tx-timeline" class="tx-timeline"></div>
@@ -280,7 +279,7 @@ const pageDescription =
                 <summary class="tool-subhead" style="cursor:pointer;padding:0.5rem;">ABC source (editable)</summary>
                 <textarea id="tx-abc" class="control-input tool-textarea" rows="6" spellcheck="false"></textarea>
               </details>
-              <p id="tx-status" class="tool-hint">Records detected chords + melody to standard ABC notation. Melody uses YIN pitch by default. CREPE (neural pitch) is opt-in and loads from a configured URL — set <code>window.JB_CREPE_MODEL_URL</code> or the button's <code>data-crepe-model</code> to your hosted <code>crepe_full.tflite</code>. Editing the ABC box stops auto-overwrite.</p>
+              <p id="tx-status" class="tool-hint">Records detected chords + melody to standard ABC notation using YIN pitch detection. Editing the ABC box stops auto-overwrite.</p>
             </div>
           </div>
         </div>
@@ -1740,10 +1739,8 @@ const pageDescription =
   <!-- Live FFT/chroma chord + key detection engine, then its tab UI. -->
   <script is:inline src="/tools/detect-engine.js"></script>
   <script type="module" src="/tools/live-detect.js"></script>
-  <!-- CREPE neural pitch (lazy-loaded on demand) + live transcription. abcjs
-       powers the rendered sheet-music preview in the Transcribe tab. -->
+  <!-- Live transcription. abcjs powers the rendered sheet-music preview. -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/abcjs@6.4.4/abcjs-audio.css" />
   <script is:inline src="https://cdn.jsdelivr.net/npm/abcjs@6.4.4/dist/abcjs-basic-min.js" defer></script>
-  <script is:inline src="/tools/crepe.js"></script>
   <script type="module" src="/tools/transcribe.js"></script>
 </Layout>
