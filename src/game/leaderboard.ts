@@ -11,7 +11,7 @@ export interface ScoreEntry {
   timeMs: number; // total run time
   floors: number; // floors cleared this run
   date: string; // ISO date
-  collection: string; // which tune collection (e.g. 'old-time', 'irish')
+  collection: string; // which tune collection (e.g. 'old-time', 'irish', 'irish+old-time')
   mode: GameMode; // normal play vs blind mode
 }
 

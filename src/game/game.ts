@@ -2,14 +2,14 @@
 //
 // Each square is a tune. Play its full melody to CLEAR it, then pick one of the
 // three non-backward exits with a chord tone: root = forward, 3rd = left,
-// 5th = right. Reach and clear the EXIT square to descend. A run = 3 floors,
-// scored by accuracy then time. Options: pick the tune collection, show a
-// tablature layer for an instrument, and Blind mode (future notes hidden) —
-// each (collection, mode) pair has its own leaderboard.
+// 5th = right. Reach and clear the EXIT square to win the run, scored by
+// accuracy then time. Options: pick one or both tune collections, play the
+// current tune through the speakers, and Blind mode (future notes hidden) —
+// each (collection selection, mode) has its own leaderboard.
 
 import type { Tune, Cell } from './types';
 import { MicInput, type PitchReadout } from './input';
-import { SheetMusic } from './abc-render';
+import { SheetMusic, meterForType, type Melody } from './abc-render';
 import { chordForTune, type Chord } from './chord';
 import {
   generateGrid,
@@ -39,12 +39,10 @@ import {
 } from './leaderboard';
 
 const pc = (m: number): number => ((m % 12) + 12) % 12;
-const FLOORS_PER_RUN = 3;
 
 export const COLLECTIONS: Record<string, string> = { 'old-time': 'Old-Time', irish: 'Irish Session' };
 
 interface HudEls {
-  floor: HTMLElement | null;
   tune: HTMLElement | null;
   tuneBest: HTMLElement | null;
   status: HTMLElement | null;
@@ -68,12 +66,14 @@ export class Game {
   private view: GridView;
   private sheet?: SheetMusic;
 
-  private collection = 'old-time';
+  private collections = new Set<string>(['old-time']); // one or more selected
   private collectionTunes: Tune[] = [];
   private tuneCache = new Map<string, Tune[]>();
-  private tabOn = false;
-  private instrument = 'violin';
   private blindOn = false;
+
+  /** Notified when tune playback starts (true) / stops (false) — the UI uses it
+   *  to update the Play button. */
+  onPlaybackChange: (playing: boolean) => void = () => {};
 
   private grid!: TuneGrid;
   private pos: Cell = { x: 0, y: 0 };
@@ -82,7 +82,8 @@ export class Game {
   private cleared = new Set<string>();
   private tune!: Tune;
   private chord!: Chord;
-  private notes: number[] = [];
+  private melody: Melody = []; // [pitch, duration] pairs for rendering
+  private notes: number[] = []; // pitches only, for gameplay (1:1 with melody)
   private progress = 0;
   private floor = 1;
   private seed = 1;
@@ -126,17 +127,46 @@ export class Game {
 
   async load(): Promise<void> {
     this.globalScores = await fetchGlobalScores();
-    await this.loadCollection(this.collection);
+    await this.loadSelected();
     this.newFloor(1);
     this.renderLeaderboard();
   }
 
-  private async loadCollection(key: string): Promise<void> {
+  /** Load one collection's tunes (cached). Each tune carries its original ABC,
+   *  and the pool is restricted to tunes that actually belong to this
+   *  collection's source ABC file — i.e. the ones we have ABC for. (If the ABC
+   *  lookup couldn't be fetched, keep every tune rather than emptying the pool.) */
+  private async loadCollection(key: string): Promise<Tune[]> {
     if (!this.tuneCache.has(key)) {
-      const data = await (await fetch(`/game/collections/${key}.json`)).json();
-      this.tuneCache.set(key, data.tunes as Tune[]);
+      const [data, abcMap] = await Promise.all([
+        fetch(`/game/collections/${key}.json`).then((r) => r.json()),
+        fetch(`/game/collections/${key}-abc.json`)
+          .then((r) => (r.ok ? r.json() : {}))
+          .catch(() => ({})) as Promise<Record<string, string>>,
+      ]);
+      const haveAbc = Object.keys(abcMap).length > 0;
+      const tunes = (data.tunes as Tune[])
+        .map((t) => ({ ...t, abc: abcMap[t.id] }))
+        .filter((t) => !haveAbc || t.abc);
+      this.tuneCache.set(key, tunes);
     }
-    this.collectionTunes = this.tuneCache.get(key)!;
+    return this.tuneCache.get(key)!;
+  }
+
+  /** Rebuild the active pool as the union (deduped by id) of every selected
+   *  collection. */
+  private async loadSelected(): Promise<void> {
+    const union: Tune[] = [];
+    const seen = new Set<string>();
+    for (const key of this.selectedKeys()) {
+      for (const t of await this.loadCollection(key)) {
+        if (!seen.has(t.id)) {
+          seen.add(t.id);
+          union.push(t);
+        }
+      }
+    }
+    this.collectionTunes = union;
   }
 
   startMic(): Promise<boolean> {
@@ -145,22 +175,69 @@ export class Game {
 
   // --- Option toggles ---
 
-  async setCollection(key: string): Promise<void> {
-    if (!(key in COLLECTIONS) || key === this.collection) return;
-    this.collection = key;
-    await this.loadCollection(key);
+  /** Selected collection keys, sorted for a stable board identity. */
+  private selectedKeys(): string[] {
+    return [...this.collections].sort();
+  }
+
+  /** Stable board key for the current selection, e.g. 'old-time' or 'irish+old-time'. */
+  private collectionKey(): string {
+    return this.selectedKeys().join('+');
+  }
+
+  /** Human label, e.g. 'Old-Time' or 'Old-Time + Irish Session'. */
+  private collectionLabel(): string {
+    return this.selectedKeys().map((k) => COLLECTIONS[k] ?? k).join(' + ');
+  }
+
+  hasCollection(key: string): boolean {
+    return this.collections.has(key);
+  }
+
+  /** Toggle a collection on/off (at least one must stay selected). The pool
+   *  becomes the union of all selected collections. */
+  async toggleCollection(key: string): Promise<void> {
+    if (!(key in COLLECTIONS)) return;
+    if (this.collections.has(key)) {
+      if (this.collections.size === 1) return; // keep at least one selected
+      this.collections.delete(key);
+    } else {
+      this.collections.add(key);
+    }
+    await this.loadSelected();
     this.renderLeaderboard();
-    this.newFloor(1); // fresh run on the new collection's board
+    this.newFloor(1); // selection changes the board → fresh run
   }
 
-  setTab(on: boolean): void {
-    this.tabOn = on;
-    this.relayoutSheet();
+  // --- Tune playback (abcjs synth) ---
+
+  isPlaying(): boolean {
+    return this.sheet?.isPlaying() ?? false;
   }
 
-  setInstrument(id: string): void {
-    this.instrument = id;
-    if (this.tabOn) this.relayoutSheet();
+  /** Play the current square's tune through the speakers, pausing mic listening
+   *  so the playback isn't heard as gameplay notes. */
+  async playTune(): Promise<void> {
+    if (!this.sheet || this.isPlaying()) return;
+    this.input.setPaused(true);
+    this.onPlaybackChange(true);
+    this.showStatus(`▶ Playing ${this.tune.title} — listening paused`);
+    const ok = await this.sheet.play(() => this.handlePlayEnded());
+    if (!ok) {
+      this.handlePlayEnded();
+      this.flash('Playback unavailable');
+    }
+  }
+
+  stopTune(): void {
+    this.sheet?.stopPlay();
+    this.handlePlayEnded();
+  }
+
+  private handlePlayEnded(): void {
+    this.input.setPaused(false);
+    this.onPlaybackChange(false);
+    this.showStatus('');
   }
 
   setBlind(on: boolean): void {
@@ -173,9 +250,10 @@ export class Game {
   /** Re-render the current tune at the new width / tab setting (also on resize). */
   relayoutSheet(): void {
     if (!this.sheet || !this.tune) return;
-    this.sheet.render(this.notes, {
+    this.sheet.render(this.melody, {
       title: this.tune.title,
-      tablature: this.tabOn ? this.instrument : undefined,
+      meter: meterForType(this.tune.type),
+      abc: this.tune.abc, // original notation when available; else built from melody
     });
     this.sheet.setProgress(this.progress);
   }
@@ -189,7 +267,7 @@ export class Game {
       this.runTotal = 0;
       this.runComplete = false;
       this.pendingEntry = null;
-      this.runCollection = this.collection;
+      this.runCollection = this.collectionKey();
       this.runMode = this.mode();
       this.seed = Math.floor(Math.random() * 1e6) + 1;
       this.lb.result?.classList.add('hidden');
@@ -201,11 +279,13 @@ export class Game {
   }
 
   private enterCell(cell: Cell, heading: Cell): void {
+    if (this.isPlaying()) this.stopTune(); // moving to a new tune ends playback
     this.pos = cell;
     this.heading = heading;
     this.tune = this.grid.cells[cell.y][cell.x];
     this.chord = chordForTune(this.tune);
-    this.notes = (this.tune.melody ?? []).map((nt) => nt[0]);
+    this.melody = this.tune.melody ?? [];
+    this.notes = this.melody.map((nt) => nt[0]);
     const already = this.cleared.has(cellKey(cell));
     this.phase = already ? 'choosing' : 'playing';
     this.progress = already ? this.notes.length : 0;
@@ -296,12 +376,7 @@ export class Game {
   }
 
   private win(): void {
-    if (this.floor >= FLOORS_PER_RUN) {
-      this.completeRun();
-      return;
-    }
-    this.toast(`Floor ${this.floor} cleared — descending!`);
-    window.setTimeout(() => this.newFloor(this.floor + 1), 1300);
+    this.completeRun();
   }
 
   private completeRun(): void {
@@ -313,7 +388,7 @@ export class Game {
       name,
       accuracy,
       timeMs,
-      floors: FLOORS_PER_RUN,
+      floors: 1,
       date: new Date().toISOString().slice(0, 10),
       collection: this.runCollection,
       mode: this.runMode,
@@ -336,13 +411,12 @@ export class Game {
       else if (code === 'ArrowLeft' || code === 'KeyA') this.handleNote(60 + this.chord.third);
       else if (code === 'ArrowRight' || code === 'KeyD') this.handleNote(60 + this.chord.fifth);
     }
-    if (code === 'KeyN') this.newFloor(this.floor + 1);
-    else if (code === 'KeyR') this.newFloor(1);
+    if (code === 'KeyN' || code === 'KeyR') this.newFloor(1);
   }
 
   // --- Rendering / HUD ---
 
-  private displayScores(collection = this.collection, mode = this.mode()): ScoreEntry[] {
+  private displayScores(collection = this.collectionKey(), mode = this.mode()): ScoreEntry[] {
     return rankScores([...this.globalScores, ...loadLocalScores()], collection, mode);
   }
 
@@ -359,7 +433,6 @@ export class Game {
   }
 
   private updateHud(): void {
-    if (this.hud.floor) this.hud.floor.textContent = `Floor ${Math.min(this.floor, FLOORS_PER_RUN)}/${FLOORS_PER_RUN}`;
     if (this.hud.tune) {
       const verb = this.phase === 'playing' ? 'Play' : 'Cleared';
       this.hud.tune.textContent = `${verb}: ${this.tune.title}  (key ${this.tune.key})`;
@@ -375,13 +448,13 @@ export class Game {
   }
 
   private boardLabel(): string {
-    return `${COLLECTIONS[this.collection] ?? this.collection}${this.blindOn ? ' · Blind' : ''}`;
+    return `${this.collectionLabel()}${this.blindOn ? ' · Blind' : ''}`;
   }
 
   private renderLeaderboard(): void {
     if (this.lb.title) this.lb.title.textContent = `Top 10 — ${this.boardLabel()}`;
     if (this.lb.pb) {
-      const best = rankScores(loadLocalScores(), this.collection, this.mode())[0];
+      const best = rankScores(loadLocalScores(), this.collectionKey(), this.mode())[0];
       this.lb.pb.textContent = best
         ? `Your best: ${formatAccuracy(best.accuracy)} · ${formatTime(best.timeMs)}`
         : 'Your best: not yet — play a run!';
@@ -477,7 +550,6 @@ export async function initGame(): Promise<void> {
   const dpadEl = document.getElementById('bg-dpad');
   if (!mapEl || !dpadEl) return;
   const hud: HudEls = {
-    floor: document.getElementById('bg-floor'),
     tune: document.getElementById('bg-tune'),
     tuneBest: document.getElementById('bg-tune-best'),
     status: document.getElementById('bg-status'),
@@ -506,27 +578,27 @@ export async function initGame(): Promise<void> {
     startBtn.textContent = ok ? '🎤 Listening — play!' : '🎤 Enable microphone';
   });
 
-  // Collection selector (single-select toggle buttons).
+  // Collection selector (multi-select: one or both collections).
   const collBtns = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-collection]'));
+  const syncCollBtns = () =>
+    collBtns.forEach((b) => b.classList.toggle('bg-opt-active', game.hasCollection(b.dataset.collection ?? '')));
   collBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      collBtns.forEach((b) => b.classList.toggle('bg-opt-active', b === btn));
-      void game.setCollection(btn.dataset.collection ?? 'old-time');
+    btn.addEventListener('click', async () => {
+      await game.toggleCollection(btn.dataset.collection ?? 'old-time');
+      syncCollBtns(); // reflect actual state (a no-op toggle leaves it unchanged)
     });
   });
 
-  // Tab toggle + instrument select.
-  const tabBtn = document.getElementById('bg-tab') as HTMLButtonElement | null;
-  const instrWrap = document.getElementById('bg-instrument-wrap');
-  const instrSel = document.getElementById('bg-instrument') as HTMLSelectElement | null;
-  let tabOn = false;
-  tabBtn?.addEventListener('click', () => {
-    tabOn = !tabOn;
-    tabBtn.classList.toggle('bg-opt-active', tabOn);
-    instrWrap?.classList.toggle('hidden', !tabOn);
-    game.setTab(tabOn);
+  // Play-tune button (abcjs synth; pauses listening while it plays).
+  const playBtn = document.getElementById('bg-play') as HTMLButtonElement | null;
+  game.onPlaybackChange = (playing) => {
+    if (playBtn) playBtn.textContent = playing ? '■ Stop' : '▶ Play tune';
+    playBtn?.classList.toggle('bg-opt-active', playing);
+  };
+  playBtn?.addEventListener('click', () => {
+    if (game.isPlaying()) game.stopTune();
+    else void game.playTune();
   });
-  instrSel?.addEventListener('change', () => game.setInstrument(instrSel.value));
 
   // Blind toggle.
   const blindBtn = document.getElementById('bg-blind') as HTMLButtonElement | null;

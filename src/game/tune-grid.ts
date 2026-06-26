@@ -21,19 +21,36 @@ const hash = (...xs: number[]): number => {
   return h >>> 0;
 };
 
-/** Tunes usable as squares: have a key root and a full melody to play. */
+/** Tunes usable as squares: have a key root and a full melody to play, deduped
+ *  by id (the source data has a few duplicate entries). */
 export function playableTunes(tunes: Tune[]): Tune[] {
-  return tunes.filter((t) => (t.melody?.length ?? 0) >= 8 && Number.isFinite(t.key_root));
+  const seen = new Set<string>();
+  return tunes.filter((t) => {
+    if ((t.melody?.length ?? 0) < 8 || !Number.isFinite(t.key_root) || seen.has(t.id)) return false;
+    seen.add(t.id);
+    return true;
+  });
 }
 
 export function generateGrid(seedValue: number, floorNum: number, tunes: Tune[]): TuneGrid {
   const pool = playableTunes(tunes);
   const size = Math.min(4 + floorNum, 7);
+  // Fill the grid with DISTINCT tunes so the same tune doesn't appear in several
+  // squares (and you never navigate onto one you've already played). Deterministic
+  // seeded shuffle of the pool, then assigned in order — only repeats if the pool
+  // is smaller than the grid.
+  const order = pool.map((_, i) => i);
+  for (let i = order.length - 1; i > 0; i--) {
+    const j = hash(seedValue, floorNum, i) % (i + 1);
+    [order[i], order[j]] = [order[j], order[i]];
+  }
   const cells: Tune[][] = [];
+  let k = 0;
   for (let y = 0; y < size; y++) {
     const row: Tune[] = [];
     for (let x = 0; x < size; x++) {
-      row.push(pool[hash(seedValue, floorNum, x, y) % pool.length]);
+      row.push(pool[order[k % order.length]]);
+      k++;
     }
     cells.push(row);
   }

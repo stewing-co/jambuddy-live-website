@@ -38,6 +38,7 @@ export class MicInput {
   private static readonly REFRACTORY_MS = 45; // min gap between committed notes
 
   private running = false;
+  private paused = false;
   private ctx?: AudioContext;
   private stream?: MediaStream;
   private analyser?: AnalyserNode;
@@ -93,8 +94,19 @@ export class MicInput {
     return this.running;
   }
 
+  /** Temporarily ignore input (without tearing down the stream) — used while the
+   *  tune is being played through the speakers so it isn't heard as notes. */
+  setPaused(paused: boolean): void {
+    this.paused = paused;
+    if (paused) this.onPitch(null);
+  }
+
   private loop = (): void => {
     if (!this.running || !this.analyser || !this.buf || !this.ctx) return;
+    if (this.paused) {
+      this.raf = requestAnimationFrame(this.loop);
+      return;
+    }
     this.analyser.getFloatTimeDomainData(this.buf);
     const level = rms(this.buf);
     this.onLevel(level);

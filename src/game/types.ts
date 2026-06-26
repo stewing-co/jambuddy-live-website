@@ -16,6 +16,10 @@ export interface Tune {
   /** Short opening lick used as a phrase "obstacle". */
   signature_phrase: number[];
   collection?: string;
+  /** Original ABC notation source (attached at load from <collection>-abc.json),
+   *  rendered on the staff so repeats/chords/beaming look right. Absent for the
+   *  few tunes with no ABC match — those fall back to ABC generated from melody. */
+  abc?: string;
 }
 
 export interface TuneFile {

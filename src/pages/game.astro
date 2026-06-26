@@ -23,7 +23,6 @@ const pageDescription =
         🎤 Enable microphone
       </button>
       <span id="bg-live" class="font-mono text-green-300 text-sm min-w-[5rem] text-center">♪ —</span>
-      <span id="bg-floor" class="font-bold text-white">Floor 1/3</span>
       <span id="bg-score" class="font-mono text-green-300 text-sm"></span>
     </div>
 
@@ -39,21 +38,14 @@ const pageDescription =
           <div id="bg-map" class="mx-auto" style="max-width: 640px;"></div>
         </div>
         <div id="bg-dpad" class="bg-dpad"></div>
-        <!-- Options: collection (single-select), tablature layer, blind mode. -->
+        <!-- Options: collection (multi-select), play tune, blind mode. -->
         <div class="flex flex-col items-center gap-2">
-          <div class="flex gap-2">
+          <div class="flex gap-2" title="Pick one or both collections — the pool combines your selection.">
             <button class="bg-opt bg-opt-active" data-collection="old-time">Old-Time</button>
             <button class="bg-opt" data-collection="irish">Irish Session</button>
           </div>
           <div class="flex flex-wrap gap-2 items-center justify-center">
-            <button id="bg-tab" class="bg-opt" title="Show a tablature layer for an instrument">Tab</button>
-            <span id="bg-instrument-wrap" class="hidden">
-              <select id="bg-instrument" class="bg-black/60 border border-gray-600 rounded px-2 py-1 text-white text-xs">
-                <option value="violin">Fiddle</option>
-                <option value="mandolin">Mandolin</option>
-                <option value="guitar">Guitar</option>
-              </select>
-            </span>
+            <button id="bg-play" class="bg-opt" title="Hear this square's tune played — listening pauses while it plays">▶ Play tune</button>
             <button id="bg-blind" class="bg-opt" title="Hide upcoming notes — separate leaderboard">Blind</button>
           </div>
         </div>
@@ -91,11 +83,12 @@ const pageDescription =
         <li>Click <strong>Enable microphone</strong> and allow access.</li>
         <li>You're on a square (a tune). Play its melody — the staff highlights the next note in red — to <strong>clear</strong> it.</li>
         <li>Once cleared, the corner <strong>d-pad</strong> lights up. Play a chord tone of the square's chord to move: <strong>root → forward, 3rd → left, 5th → right</strong> (you can't go back).</li>
-        <li>Each reachable square shows its tune name. Reach and clear the gold <strong>EXIT</strong> square to descend.</li>
+        <li>Each reachable square shows its tune name. Reach and clear the gold <strong>EXIT</strong> square to win the run.</li>
+        <li>Pick one or both <strong>collections</strong> (Old-Time / Irish Session) — the tune pool combines your selection.</li>
         <li>Octave and key don't matter — play on any instrument in any comfortable range.</li>
-        <li>No mic? <strong>Space</strong> plays the next note; when choosing, <strong>↑/←/→</strong> pick root/3rd/5th; <strong>N</strong> next floor, <strong>R</strong> restart.</li>
+        <li>No mic? <strong>Space</strong> plays the next note; when choosing, <strong>↑/←/→</strong> pick root/3rd/5th; <strong>N</strong> or <strong>R</strong> restart the run.</li>
       </ul>
-      <p class="mt-3"><strong>Scoring:</strong> a run = clear 3 floors. Score is <strong>% correct notes</strong> first, then <strong>time</strong>. Place top 10 and submit to open a GitHub pull request adding you to the global leaderboard.</p>
+      <p class="mt-3"><strong>Scoring:</strong> a run = clear the floor (reach and clear the EXIT). Score is <strong>% correct notes</strong> first, then <strong>time</strong>. Each collection selection has its own leaderboards — one normal and one Blind. Place top 10 and submit to open a GitHub pull request adding you to the global leaderboard.</p>
     </details>
   </section>
 
