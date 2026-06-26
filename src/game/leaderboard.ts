@@ -23,9 +23,21 @@ const modeOf = (s: ScoreEntry): GameMode => (s.mode === 'blind' ? 'blind' : 'nor
 const collOf = (s: ScoreEntry): string => s.collection || 'old-time';
 export const boardKey = (collection: string, mode: GameMode): string => `${collection}:${mode}`;
 
+/** Drop exact-duplicate entries. The same run is mirrored to localStorage and
+ *  returned by the server, so merging the two sources double-lists it without this. */
+export function dedupeScores(scores: ScoreEntry[]): ScoreEntry[] {
+  const seen = new Set<string>();
+  return scores.filter((s) => {
+    const k = `${s.name}|${s.accuracy}|${s.timeMs}|${collOf(s)}|${modeOf(s)}|${s.date}`;
+    if (seen.has(k)) return false;
+    seen.add(k);
+    return true;
+  });
+}
+
 /** Top scores, optionally restricted to one board (collection + mode). */
 export function rankScores(scores: ScoreEntry[], collection?: string, mode?: GameMode): ScoreEntry[] {
-  return [...scores]
+  return dedupeScores(scores)
     .filter((s) => (collection ? collOf(s) === collection : true) && (mode ? modeOf(s) === mode : true))
     .sort((a, b) => b.accuracy - a.accuracy || a.timeMs - b.timeMs)
     .slice(0, MAX_SCORES);

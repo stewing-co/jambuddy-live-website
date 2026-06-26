@@ -538,6 +538,25 @@ export class Game {
     if (btn) btn.textContent = 'Submitted';
   }
 
+  /** Admin: wipe all scores (global + local). The password is verified server-side
+   *  against SCORES_ADMIN_TOKEN — it's never stored on the client. */
+  async clearScores(password: string): Promise<void> {
+    try {
+      const res = await fetch('/api/scores', { method: 'DELETE', headers: { 'x-admin-token': password } });
+      if (res.status === 403) {
+        this.flash('Wrong password — scores not cleared');
+        return;
+      }
+      if (!res.ok) throw new Error('failed');
+      saveLocalScores([]);
+      this.globalScores = [];
+      this.renderLeaderboard();
+      this.toast('All scores cleared');
+    } catch {
+      this.flash('Could not reach the leaderboard to clear');
+    }
+  }
+
   private showLive(p: PitchReadout | null): void {
     if (!this.hud.live) return;
     this.hud.live.textContent = p
@@ -630,6 +649,13 @@ export async function initGame(): Promise<void> {
     blindOn = !blindOn;
     blindBtn.classList.toggle('bg-opt-active', blindOn);
     game.setBlind(blindOn);
+  });
+
+  // Admin: clear all scores (password-gated).
+  const clearBtn = document.getElementById('bg-clear') as HTMLButtonElement | null;
+  clearBtn?.addEventListener('click', () => {
+    const password = window.prompt('Enter admin password to clear ALL scores:');
+    if (password) void game.clearScores(password);
   });
 
   let resizeTimer = 0;
