@@ -118,6 +118,133 @@ export function notesToAbc(melody: Melody, title = '', meter = '4/4'): string {
   return `X:1\n${title ? `T:${title}\n` : ''}M:${meter}\nL:1/${UNIT}\nK:C\n${body}`;
 }
 
+/** Strip repeats and first endings from an ABC tune for the game's "play it
+ *  straight through" rendering: `|:` / `:|` / `::` become plain barlines, and a
+ *  first ending (from a `|1`/`[1` volta up to and including the matching
+ *  `|2`/`[2`) is removed so only the second ending remains.
+ *
+ *  Returns the cleaned ABC plus `drop` — the indices, in notehead order, of the
+ *  removed first-ending notes — and `total`, the notehead count of the ORIGINAL
+ *  abc. Callers can compare `total` against the gameplay melody length: when they
+ *  match, the abc and melody are the same transcription, so `drop` can be applied
+ *  to the melody to keep it aligned with the trimmed notation. */
+export function prepareGameAbc(rawAbc: string): { abc: string; drop: number[]; total: number } {
+  const drop: number[] = [];
+  let noteIndex = -1;
+  let inFirst = false;
+
+  const lines = rawAbc.split('\n').map((line) => {
+    if (/^[a-zA-Z]:/.test(line)) return line; // info field — leave alone
+    let res = '';
+    let i = 0;
+    const emit = (s: string): void => {
+      if (!inFirst) res += s;
+    };
+
+    while (i < line.length) {
+      const c = line[i];
+
+      if (c === '"') {
+        // chord symbol / annotation
+        let j = i + 1;
+        while (j < line.length && line[j] !== '"') j++;
+        emit(line.slice(i, j + 1));
+        i = j + 1;
+        continue;
+      }
+      if (c === '!') {
+        // decoration, e.g. !trill!
+        let j = i + 1;
+        while (j < line.length && line[j] !== '!') j++;
+        emit(line.slice(i, j + 1));
+        i = j + 1;
+        continue;
+      }
+      if (c === '{') {
+        // grace notes — decorative, never counted as noteheads
+        let j = i + 1;
+        while (j < line.length && line[j] !== '}') j++;
+        emit(line.slice(i, j + 1));
+        i = j + 1;
+        continue;
+      }
+      if (c === '[') {
+        const nx = line[i + 1];
+        if (nx && /[A-Za-z]/.test(nx) && line[i + 2] === ':') {
+          // inline field, e.g. [K:G]
+          let j = i + 1;
+          while (j < line.length && line[j] !== ']') j++;
+          emit(line.slice(i, j + 1));
+          i = j + 1;
+          continue;
+        }
+        if (nx && /\d/.test(nx)) {
+          // bracketed volta: [1 starts a first ending, [2 ends it
+          if (nx === '1' && !inFirst) inFirst = true;
+          else if (inFirst) inFirst = false;
+          i += 2;
+          continue;
+        }
+        // chord [CEG] renders as a single notehead
+        let j = i + 1;
+        while (j < line.length && line[j] !== ']') j++;
+        noteIndex++;
+        if (inFirst) drop.push(noteIndex);
+        emit(line.slice(i, j + 1));
+        i = j + 1;
+        continue;
+      }
+      if (c === '|' || c === ':' || c === ']') {
+        // a run of barline characters, optionally followed by a volta digit
+        let j = i;
+        while (j < line.length && (line[j] === '|' || line[j] === ':' || line[j] === ']')) j++;
+        const bars = line.slice(i, j);
+        let volta: string | null = null;
+        if (j < line.length && /\d/.test(line[j])) {
+          volta = line[j];
+          j++;
+        }
+        if (volta === '1' && !inFirst) {
+          inFirst = true;
+          res += '|'; // keep a barline before the (removed) first ending
+        } else if (volta && inFirst) {
+          inFirst = false; // reached the second ending — stop dropping
+        } else if (!inFirst) {
+          if (bars.includes(']')) res += '|]';
+          else if (bars === '||') res += '||';
+          else res += '|'; // normalize repeats (|: :| ::) to a plain barline
+        }
+        i = j;
+        continue;
+      }
+      if (/[A-Ga-g]/.test(c)) {
+        // a notehead (accidentals/octave/length around it are plain chars)
+        noteIndex++;
+        if (inFirst) drop.push(noteIndex);
+        emit(c);
+        i++;
+        continue;
+      }
+      // rests (z/x/Z), accidentals, octave marks, lengths, ties, slurs, spaces…
+      emit(c);
+      i++;
+    }
+    return res;
+  });
+
+  return { abc: lines.join('\n'), drop, total: noteIndex + 1 };
+}
+
+// Drop ABC info-header lines we don't want shown on the game staff — title (T),
+// composer (C), author/area (A), notes (N), rhythm (R), source (S) and tempo (Q).
+// The musically-required fields (X, M, L, K, …) and the tune body are left intact.
+function stripInfoHeaders(abc: string): string {
+  return abc
+    .split('\n')
+    .filter((line) => !/^\s*[TCANRSQ]:/.test(line))
+    .join('\n');
+}
+
 // Local soundfont path (same as the Sheet Music viewer). One mp3 per note.
 const soundFont = (filename: string): string =>
   '/abcjs/soundfonts/FluidR3_GM/acoustic_grand_piano-mp3/' + filename;
@@ -140,7 +267,7 @@ export class SheetMusic {
     if (!window.ABCJS || !this.el) return;
     // Prefer the original ABC (real repeats/chords/beaming, like the Sheet Music
     // page); fall back to ABC reconstructed from the melody when none is attached.
-    const abc = opts.abc ?? notesToAbc(melody, opts.title ?? '', opts.meter ?? '4/4');
+    const abc = stripInfoHeaders(opts.abc ?? notesToAbc(melody, opts.title ?? '', opts.meter ?? '4/4'));
     // Fixed, readable note size — wrap to multiple lines (the container scrolls)
     // rather than shrinking a long tune to fit the width.
     const width = Math.max(320, (this.el.clientWidth || 760) - 16);
@@ -159,7 +286,7 @@ export class SheetMusic {
     // different notehead count (chords, ties, multiple voices…), fall back to the
     // melody-built ABC for this tune so the highlight stays correct.
     if (opts.abc && melody.length && this.noteEls.length !== melody.length) {
-      vobj = window.ABCJS.renderAbc(this.el, notesToAbc(melody, opts.title ?? '', opts.meter ?? '4/4'), params);
+      vobj = window.ABCJS.renderAbc(this.el, stripInfoHeaders(notesToAbc(melody, opts.title ?? '', opts.meter ?? '4/4')), params);
       this.noteEls = this.collectNoteEls();
     }
     this.visualObj = Array.isArray(vobj) ? vobj[0] : vobj;

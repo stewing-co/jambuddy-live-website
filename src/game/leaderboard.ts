@@ -28,7 +28,10 @@ export const boardKey = (collection: string, mode: GameMode): string => `${colle
 export function dedupeScores(scores: ScoreEntry[]): ScoreEntry[] {
   const seen = new Set<string>();
   return scores.filter((s) => {
-    const k = `${s.name}|${s.accuracy}|${s.timeMs}|${collOf(s)}|${modeOf(s)}|${s.date}`;
+    // Round timeMs in the key so a local copy (raw performance.now() float) and the
+    // server copy (Math.round'd) of the same run collapse to one — including entries
+    // already saved with the old unrounded value before this was fixed.
+    const k = `${s.name}|${s.accuracy}|${Math.round(s.timeMs)}|${collOf(s)}|${modeOf(s)}|${s.date}`;
     if (seen.has(k)) return false;
     seen.add(k);
     return true;

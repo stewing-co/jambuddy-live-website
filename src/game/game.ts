@@ -9,7 +9,7 @@
 
 import type { Tune, Cell } from './types';
 import { MicInput, type PitchReadout } from './input';
-import { SheetMusic, meterForType, type Melody } from './abc-render';
+import { SheetMusic, meterForType, prepareGameAbc, type Melody } from './abc-render';
 import { chordForTune, type Chord } from './chord';
 import {
   generateGrid,
@@ -160,11 +160,23 @@ export class Game {
         .map((t) => {
           const entry = abcMap[t.id];
           if (!entry) return { ...t, abc: undefined };
-          const drop = entry.drop;
-          const melody = drop?.length
+          // Strip repeats and first endings so each tune renders as a single
+          // straight-through pass. `prepareGameAbc` also reports the original
+          // notehead count and which notes the first ending dropped.
+          const cleaned = prepareGameAbc(entry.abc);
+          // Pick the drop indices to filter the melody by. Prefer a precomputed
+          // `drop` (some entries already ship cleaned ABC + drop); otherwise use
+          // the ones we just derived, but only when the ABC and melody are the
+          // same transcription (equal notehead counts) so the indices line up.
+          const drop = entry.drop?.length
+            ? entry.drop
+            : cleaned.total === t.melody.length
+              ? cleaned.drop
+              : [];
+          const melody = drop.length
             ? t.melody.filter((_, i) => !drop.includes(i))
             : t.melody;
-          return { ...t, abc: entry.abc, melody };
+          return { ...t, abc: cleaned.abc, melody };
         })
         .filter((t) => !haveAbc || t.abc);
       this.tuneCache.set(key, tunes);
@@ -407,7 +419,10 @@ export class Game {
   private completeRun(): void {
     this.runComplete = true;
     const accuracy = this.runTotal > 0 ? this.runCorrect / this.runTotal : 1;
-    const timeMs = performance.now() - this.runStartMs;
+    // Round here so the localStorage copy matches the server's sanitized copy
+    // (the function does Math.round on timeMs). If they differ by a fraction of a
+    // millisecond, dedupeScores can't merge them and the run lists twice.
+    const timeMs = Math.round(performance.now() - this.runStartMs);
     // Name is filled in at submit time (the player types it after the run), so
     // ranking uses a placeholder here — placement only depends on accuracy/time.
     const entry: ScoreEntry = {

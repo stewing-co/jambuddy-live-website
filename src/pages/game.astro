@@ -6,8 +6,8 @@ const pageDescription =
   'Tune Trek — a browser game where you sight-read tunes on your instrument. Every square shows a traditional tune (Old-Time & Irish session) as sheet music; play it to clear the square, then play a chord tone to choose your direction. Play it in the written key on any instrument, in any octave.';
 ---
 
-<Layout title={pageTitle} description={pageDescription} fullWidth analyticsName="Tune Trek">
-  <section class="max-w-5xl mx-auto px-4 py-8">
+<Layout title={pageTitle} description={pageDescription} fullWidth contentClass="content-overlay w-full max-w-none" analyticsName="Tune Trek">
+  <section class="w-full px-2 sm:px-4 lg:px-6 xl:px-10 2xl:px-16 py-8">
     <header class="text-center mb-5">
       <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-green-200 via-white to-blue-200 bg-clip-text text-transparent">
         Tune Trek
@@ -24,37 +24,32 @@ const pageDescription =
       </button>
       <span id="bg-live" class="font-mono text-green-300 text-sm min-w-[5rem] text-center">♪ —</span>
       <span id="bg-score" class="font-mono text-green-300 text-sm"></span>
+      <!-- Options: collection (multi-select), play tune, blind mode. -->
+      <div class="flex gap-2" title="Pick one or both collections — the pool combines your selection.">
+        <button class="bg-opt bg-opt-active" data-collection="old-time">Old-Time</button>
+        <button class="bg-opt" data-collection="irish">Irish Session</button>
+      </div>
+      <button id="bg-play" class="bg-opt" title="Hear this square's tune played — listening pauses while it plays">▶ Play tune</button>
+      <button id="bg-blind" class="bg-opt" title="Hide upcoming notes — separate leaderboard">Blind</button>
     </div>
 
     <!-- Left: current-tune staff. Right: map with the d-pad below it.
          Stacks (tune, then map, then d-pad) on small screens. -->
     <div class="flex flex-col lg:flex-row gap-4 items-start">
       <div class="order-1 w-full lg:flex-1 min-w-0">
-        <h2 class="text-sm font-semibold text-gray-200 mb-1">This square's tune</h2>
+        <div id="bg-tune" class="text-sm font-semibold text-gray-200 mb-0.5">This square's tune</div>
+        <div id="bg-tune-best" class="text-blue-300 text-xs mb-1"></div>
         <div id="bg-staff" class="bg-stone-100 rounded-lg p-2 overflow-auto" style="max-height: 60vh;"></div>
       </div>
-      <div class="order-2 w-full lg:flex-1 flex flex-col items-center gap-3">
+      <div class="order-2 w-full lg:w-[520px] lg:flex-none flex flex-col items-center gap-3">
         <div class="rounded-2xl border border-gray-700 bg-black/60 shadow-2xl p-3 w-full">
           <div id="bg-map" class="mx-auto" style="max-width: 640px;"></div>
         </div>
         <div id="bg-dpad" class="bg-dpad"></div>
-        <!-- Options: collection (multi-select), play tune, blind mode. -->
-        <div class="flex flex-col items-center gap-2">
-          <div class="flex gap-2" title="Pick one or both collections — the pool combines your selection.">
-            <button class="bg-opt bg-opt-active" data-collection="old-time">Old-Time</button>
-            <button class="bg-opt" data-collection="irish">Irish Session</button>
-          </div>
-          <div class="flex flex-wrap gap-2 items-center justify-center">
-            <button id="bg-play" class="bg-opt" title="Hear this square's tune played — listening pauses while it plays">▶ Play tune</button>
-            <button id="bg-blind" class="bg-opt" title="Hide upcoming notes — separate leaderboard">Blind</button>
-          </div>
-        </div>
       </div>
     </div>
 
     <div class="mt-3 text-center">
-      <div id="bg-tune" class="text-gray-200 text-sm"></div>
-      <div id="bg-tune-best" class="text-blue-300 text-xs"></div>
       <div id="bg-status" class="text-yellow-300 text-sm h-5"></div>
     </div>
 

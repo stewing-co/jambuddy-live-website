@@ -32,9 +32,15 @@ export function playableTunes(tunes: Tune[]): Tune[] {
   });
 }
 
+/** How many squares the exit always sits from the start (Manhattan distance —
+ *  one square per forward/left/right move). */
+export const EXIT_DISTANCE = 7;
+
 export function generateGrid(seedValue: number, floorNum: number, tunes: Tune[]): TuneGrid {
   const pool = playableTunes(tunes);
-  const size = Math.min(4 + floorNum, 7);
+  // Need at least a 6×6 grid for a square to sit EXIT_DISTANCE (7) away from the
+  // bottom-centre start; a 5×5 only reaches distance 6.
+  const size = Math.min(Math.max(4 + floorNum, 6), 7);
   // Fill the grid with DISTINCT tunes so the same tune doesn't appear in several
   // squares (and you never navigate onto one you've already played). Deterministic
   // seeded shuffle of the pool, then assigned in order — only repeats if the pool
@@ -54,10 +60,27 @@ export function generateGrid(seedValue: number, floorNum: number, tunes: Tune[])
     }
     cells.push(row);
   }
-  // Start bottom-centre (facing up into the grid); exit at a top corner.
+  // Start bottom-centre (facing up into the grid). The exit is always exactly
+  // EXIT_DISTANCE squares away; which of those squares it lands on is seeded, so
+  // it moves around each game. (Falls back to the farthest in-bounds square if a
+  // grid is ever too small to have one at the exact distance.)
   const start: Cell = { x: Math.floor(size / 2), y: size - 1 };
-  const exitLeft = hash(seedValue, floorNum, 99) % 2 === 0;
-  const exit: Cell = { x: exitLeft ? 0 : size - 1, y: 0 };
+  let best: Cell = start;
+  let bestDist = -1;
+  const atExactDistance: Cell[] = [];
+  for (let y = 0; y < size; y++) {
+    for (let x = 0; x < size; x++) {
+      const dist = Math.abs(x - start.x) + Math.abs(y - start.y);
+      if (dist === EXIT_DISTANCE) atExactDistance.push({ x, y });
+      if (dist > bestDist) {
+        bestDist = dist;
+        best = { x, y };
+      }
+    }
+  }
+  const exit = atExactDistance.length
+    ? atExactDistance[hash(seedValue, floorNum, 99) % atExactDistance.length]
+    : best;
   return { size, cells, start, exit, floor: floorNum };
 }
 
