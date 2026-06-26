@@ -145,15 +145,27 @@ export class Game {
    *  lookup couldn't be fetched, keep every tune rather than emptying the pool.) */
   private async loadCollection(key: string): Promise<Tune[]> {
     if (!this.tuneCache.has(key)) {
+      // Each ABC entry is { abc, drop? }: `abc` is the notation to render, `drop`
+      // (when present) lists melody indices to remove — the first-ending notes
+      // stripped from the notation — so the melody stays aligned with the staff.
+      type AbcEntry = { abc: string; drop?: number[] };
       const [data, abcMap] = await Promise.all([
         fetch(`/game/collections/${key}.json`).then((r) => r.json()),
         fetch(`/game/collections/${key}-abc.json`)
           .then((r) => (r.ok ? r.json() : {}))
-          .catch(() => ({})) as Promise<Record<string, string>>,
+          .catch(() => ({})) as Promise<Record<string, AbcEntry>>,
       ]);
       const haveAbc = Object.keys(abcMap).length > 0;
       const tunes = (data.tunes as Tune[])
-        .map((t) => ({ ...t, abc: abcMap[t.id] }))
+        .map((t) => {
+          const entry = abcMap[t.id];
+          if (!entry) return { ...t, abc: undefined };
+          const drop = entry.drop;
+          const melody = drop?.length
+            ? t.melody.filter((_, i) => !drop.includes(i))
+            : t.melody;
+          return { ...t, abc: entry.abc, melody };
+        })
         .filter((t) => !haveAbc || t.abc);
       this.tuneCache.set(key, tunes);
     }
