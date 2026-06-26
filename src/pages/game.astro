@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 
 const pageTitle = 'Tune Trek - JamBuddy';
 const pageDescription =
-  'Tune Trek — a browser game where you sight-read tunes on your instrument. Every square shows a traditional tune (Old-Time & Irish session) as sheet music; play it to clear the square, then play a chord tone to choose your direction. Any instrument, any key.';
+  'Tune Trek — a browser game where you sight-read tunes on your instrument. Every square shows a traditional tune (Old-Time & Irish session) as sheet music; play it to clear the square, then play a chord tone to choose your direction. Play it in the written key on any instrument, in any octave.';
 ---
 
 <Layout title={pageTitle} description={pageDescription} fullWidth analyticsName="Tune Trek">
@@ -86,7 +86,7 @@ const pageDescription =
         <li>Once cleared, the corner <strong>d-pad</strong> lights up. Play a chord tone of the square's chord to move: <strong>root → forward, 3rd → left, 5th → right</strong> (you can't go back).</li>
         <li>Each reachable square shows its tune name. Reach and clear the gold <strong>EXIT</strong> square to win the run.</li>
         <li>Pick one or both <strong>collections</strong> (Old-Time / Irish Session) — the tune pool combines your selection.</li>
-        <li>Octave and key don't matter — play on any instrument in any comfortable range.</li>
+        <li>Play the tune's actual notes, in the <strong>written key</strong> — that's what the staff shows. Octave doesn't matter, so play in a comfortable range on any instrument.</li>
         <li>No mic? <strong>Space</strong> plays the next note; when choosing, <strong>↑/←/→</strong> pick root/3rd/5th; <strong>N</strong> or <strong>R</strong> restart the run.</li>
       </ul>
       <p class="mt-3"><strong>Scoring:</strong> a run = clear the floor (reach and clear the EXIT). Score is <strong>% correct notes</strong> first, then <strong>time</strong>. Each collection selection has its own leaderboards — one normal and one Blind. Place top 10 and submit to open a GitHub pull request adding you to the global leaderboard.</p>
