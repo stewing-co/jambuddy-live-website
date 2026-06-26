@@ -55,7 +55,9 @@ function topPerBoard(scores) {
 }
 
 export default async (req) => {
-  const store = getStore(STORE);
+  // Strong consistency so a read right after a write (e.g. after clearing) never
+  // returns a stale list — Blobs default to eventual consistency otherwise.
+  const store = getStore({ name: STORE, consistency: 'strong' });
 
   if (req.method === 'GET') {
     const scores = (await store.get(KEY, { type: 'json' })) || [];
