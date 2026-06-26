@@ -83,6 +83,16 @@ export default async (req) => {
     return Response.json({ scores: top, rank: idx >= 0 ? idx + 1 : null });
   }
 
+  // Admin: wipe the leaderboard. Requires SCORES_ADMIN_TOKEN to be set and matched
+  // (via X-Admin-Token header or ?token=…) so the board can't be cleared publicly.
+  if (req.method === 'DELETE') {
+    const token = process.env.SCORES_ADMIN_TOKEN;
+    const provided = req.headers.get('x-admin-token') || new URL(req.url).searchParams.get('token');
+    if (!token || provided !== token) return new Response('Forbidden', { status: 403 });
+    await store.setJSON(KEY, []);
+    return Response.json({ scores: [] });
+  }
+
   return new Response('Method not allowed', { status: 405 });
 };
 

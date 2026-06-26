@@ -102,6 +102,7 @@ export class Game {
   private runMode: GameMode = 'normal';
   private globalScores: ScoreEntry[] = [];
   private pendingEntry: ScoreEntry | null = null;
+  private pendingRank: number | null = null; // placement of the pending run, or null
   private toastTimer = 0;
 
   constructor(
@@ -118,6 +119,12 @@ export class Game {
     this.input.onPitch = (p) => this.showLive(p);
     this.input.onStatus = (s) => this.showStatus(s);
     this.lb.submitBtn?.addEventListener('click', () => void this.submitScore());
+    // A name is required to submit — keep the button in sync as the user types,
+    // and let Enter submit.
+    this.lb.nameInput?.addEventListener('input', () => this.updateSubmitEnabled());
+    this.lb.nameInput?.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') void this.submitScore();
+    });
     window.setInterval(() => this.updateScore(), 333);
   }
 
@@ -383,9 +390,10 @@ export class Game {
     this.runComplete = true;
     const accuracy = this.runTotal > 0 ? this.runCorrect / this.runTotal : 1;
     const timeMs = performance.now() - this.runStartMs;
-    const name = (this.lb.nameInput?.value || 'Player').slice(0, 24);
+    // Name is filled in at submit time (the player types it after the run), so
+    // ranking uses a placeholder here — placement only depends on accuracy/time.
     const entry: ScoreEntry = {
-      name,
+      name: '',
       accuracy,
       timeMs,
       floors: 1,
@@ -395,6 +403,7 @@ export class Game {
     };
     const { rank } = placement(this.displayScores(this.runCollection, this.runMode), entry);
     this.pendingEntry = entry;
+    this.pendingRank = rank;
     this.toast(`Run complete! ${formatAccuracy(accuracy)} in ${formatTime(timeMs)}`);
     this.renderResult(rank, entry);
     this.updateScore();
@@ -482,17 +491,31 @@ export class Game {
       sub.textContent = rank
         ? `That's #${rank} on the ${this.boardLabel()} board! Add your name and submit.`
         : `Not in the top 10 for ${this.boardLabel()} — press R to try again.`;
-    if (this.lb.submitBtn) {
-      this.lb.submitBtn.disabled = !rank;
-      this.lb.submitBtn.textContent = 'Submit score';
-    }
+    if (this.lb.submitBtn) this.lb.submitBtn.textContent = 'Submit score';
+    this.updateSubmitEnabled();
     const msg = r.querySelector('[data-result-msg]');
     if (msg) msg.textContent = '';
+    if (rank) this.lb.nameInput?.focus(); // prompt for a name right away
+  }
+
+  /** Submit is allowed only for a pending top-10 run that has a (non-empty) name. */
+  private updateSubmitEnabled(): void {
+    if (!this.lb.submitBtn) return;
+    const hasName = !!this.lb.nameInput?.value.trim();
+    this.lb.submitBtn.disabled = !this.pendingEntry || this.pendingRank === null || !hasName;
   }
 
   private async submitScore(): Promise<void> {
-    if (!this.pendingEntry) return;
-    saveLocalScores([...loadLocalScores(), this.pendingEntry]);
+    const name = this.lb.nameInput?.value.trim().slice(0, 24);
+    if (!this.pendingEntry || this.pendingRank === null) return;
+    if (!name) {
+      this.flash('Enter your name to submit');
+      this.lb.nameInput?.focus();
+      return;
+    }
+    const entry = { ...this.pendingEntry, name };
+    this.pendingEntry = null; // prevent double submission
+    saveLocalScores([...loadLocalScores(), entry]);
     this.renderLeaderboard();
     const btn = this.lb.submitBtn;
     if (btn) {
@@ -501,7 +524,7 @@ export class Game {
     }
     let message = 'Saved to this browser.';
     try {
-      const result = await this.submitFn(this.pendingEntry);
+      const result = await this.submitFn(entry);
       message = result.message;
       if (result.scores) {
         this.globalScores = result.scores;
