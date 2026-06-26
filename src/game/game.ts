@@ -188,8 +188,11 @@ export class Game {
     this.collectionTunes = union;
   }
 
-  startMic(): Promise<boolean> {
-    return this.input.start();
+  async startMic(): Promise<boolean> {
+    const ok = await this.input.start();
+    // Start the run clock when listening begins (not at page load).
+    if (ok && this.runStartMs === 0 && !this.runComplete) this.runStartMs = performance.now();
+    return ok;
   }
 
   // --- Option toggles ---
@@ -281,7 +284,9 @@ export class Game {
 
   newFloor(n: number): void {
     if (n === 1) {
-      this.runStartMs = performance.now();
+      // Clock starts when the mic is enabled (or the first note is played), not
+      // at page load — so a fresh, pre-mic run shows 0 until you actually begin.
+      this.runStartMs = this.input.isRunning() ? performance.now() : 0;
       this.runCorrect = 0;
       this.runTotal = 0;
       this.runComplete = false;
@@ -334,6 +339,7 @@ export class Game {
 
   handleNote(midi: number): void {
     if (this.runComplete) return;
+    if (this.runStartMs === 0) this.runStartMs = performance.now(); // first note (e.g. keyboard play)
     const played = pc(midi);
     if (this.phase === 'playing') {
       const expected = pc(this.notes[this.progress]);
