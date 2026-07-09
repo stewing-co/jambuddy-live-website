@@ -2017,6 +2017,72 @@
       return out.join('\n');
     },
 
+    // Insert explicit line breaks into the tune body every `perLine` bars.
+    // abcjs 6.4.4's `wrap` option can't be used with a tablature layer (it
+    // silently discards the tab staff), and without `wrap` abcjs does no
+    // automatic line-breaking at all — a tab tune would render as one fixed
+    // width block that never reflows to the screen. abcjs *does* honour
+    // explicit source line breaks alongside tablature, so for the tab layer we
+    // control wrapping here instead. Falls back to the input unchanged for
+    // anything we can't safely re-bar (multi-voice, lyrics, inline directives).
+    rewrapForTab: function(abc, perLine) {
+      try {
+        const n = Math.max(1, perLine | 0);
+        const lines = (abc || '').split('\n');
+        let kIdx = -1;
+        for (let i = 0; i < lines.length; i++) {
+          if (/^K:/.test(lines[i].trimStart())) { kIdx = i; break; }
+        }
+        if (kIdx < 0) return abc;
+        const head = lines.slice(0, kIdx + 1);
+        const bodyLines = lines.slice(kIdx + 1);
+        const isPlainMusic = (l) => {
+          const t = l.trimStart();
+          if (t === '') return true;
+          if (/^%/.test(t)) return false;         // comment / %% directive
+          if (/^[A-Za-z]:/.test(t)) return false; // V:/w:/K:/etc. field line
+          return true;
+        };
+        if (!bodyLines.every(isPlainMusic)) return abc;
+        const stream = bodyLines.join(' ').replace(/\s+/g, ' ').trim();
+        if (!stream) return abc;
+        // Split into measures, respecting "..." chord text and [...] so a bar
+        // inside them isn't treated as a measure boundary.
+        const measures = [];
+        let cur = '', inStr = false, depth = 0;
+        for (let i = 0; i < stream.length; i++) {
+          const c = stream[i];
+          cur += c;
+          if (c === '"') inStr = !inStr;
+          else if (!inStr && c === '[') depth++;
+          else if (!inStr && c === ']') depth = Math.max(0, depth - 1);
+          else if (!inStr && depth === 0 && c === '|') {
+            // Absorb trailing barline decorations (|] :| || etc.) into the bar.
+            while (i + 1 < stream.length && /[\]|:]/.test(stream[i + 1])) cur += stream[++i];
+            measures.push(cur.trim());
+            cur = '';
+          }
+        }
+        if (cur.trim()) measures.push(cur.trim());
+        // Merge note-less fragments (e.g. a leading "|:") into the next bar so a
+        // wrapped line never begins with a bare barline.
+        const hasNote = (m) => /[A-Ga-gz]/.test(m.replace(/"[^"]*"/g, ''));
+        const merged = [];
+        for (let i = 0; i < measures.length; i++) {
+          if (!hasNote(measures[i]) && i + 1 < measures.length) {
+            measures[i + 1] = measures[i] + ' ' + measures[i + 1];
+            continue;
+          }
+          merged.push(measures[i]);
+        }
+        const outBody = [];
+        for (let i = 0; i < merged.length; i += n) outBody.push(merged.slice(i, i + n).join(' '));
+        return head.concat(outBody).join('\n');
+      } catch (_) {
+        return abc;
+      }
+    },
+
     render: function(returnVisualObj, forPlayback) {
       try {
         if (!global.ABCJS || !ABCJS.renderAbc) return;
@@ -2076,7 +2142,10 @@
   const renderOpts = hasTab && tabSpec ? { ...baseOpts, tablature: [tabSpec] } : baseOpts;
 
         // Render the visible paper from the unmodified (display) ABC so playback filtering does not affect rendering
-        const abcForDisplay = (hasTab && this.state.stripChordsForTabs) ? this.simplifyForTab(clefAdjusted) : clefAdjusted;
+        let abcForDisplay = (hasTab && this.state.stripChordsForTabs) ? this.simplifyForTab(clefAdjusted) : clefAdjusted;
+        // For the tab layer, wrap lines in the source (see rewrapForTab) since
+        // abcjs's `wrap` option is unavailable alongside tablature.
+        if (hasTab && tabSpec) abcForDisplay = this.rewrapForTab(abcForDisplay, measuresPerLine);
         const vDisplay = ABCJS.renderAbc(this.state.paperId, abcForDisplay, renderOpts);
         this.state.lastVisualObj = vDisplay && vDisplay[0];
         // If caller wants a visual object for playback, build it from the playback-filtered ABC but do not replace the visible rendering
@@ -2497,7 +2566,7 @@
       const tabSpec = hasTab ? this.instruments[this.state.layer] : null;
       // Mirror the on-screen pipeline so print matches the displayed clef.
       const clefAdjusted = applyClefOverride(filtered, normalizeClefMode(this.state.clef));
-      const abcForPrint = (hasTab && this.state.stripChordsForTabs)
+      let abcForPrint = (hasTab && this.state.stripChordsForTabs)
         ? this.simplifyForTab(clefAdjusted)
         : clefAdjusted;
       if (!abcForPrint || !abcForPrint.trim()) {
@@ -2519,10 +2588,16 @@
         staffwidth: printableWidthPx,
         print: true
       };
-      // abcjs 6.4.4 silently drops tablature when `wrap` is also set, so only
-      // wrap measures per line when there is no tab layer to print.
-      if (hasTab && tabSpec) printOpts.tablature = [tabSpec];
-      else printOpts.wrap = { preferredMeasuresPerLine: Math.max(4, Math.min(8, Math.round(printableWidthPx / 150))) };
+      // abcjs 6.4.4 silently drops tablature when `wrap` is also set, so for
+      // the tab layer we wrap lines in the source (rewrapForTab) instead; the
+      // no-tab case keeps the `wrap` option.
+      const printPerLine = Math.max(4, Math.min(8, Math.round(printableWidthPx / 150)));
+      if (hasTab && tabSpec) {
+        printOpts.tablature = [tabSpec];
+        abcForPrint = this.rewrapForTab(abcForPrint, printPerLine);
+      } else {
+        printOpts.wrap = { preferredMeasuresPerLine: printPerLine };
+      }
 
       const styles = `
         :root { color-scheme: light; }
