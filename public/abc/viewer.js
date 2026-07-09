@@ -2068,7 +2068,11 @@
   // aren't rendered tall and skinny.
   const measuresPerLine = Math.max(4, Math.min(12, Math.round(effectiveStaffWidth / 160)));
   const totalTranspose = this.getTotalTranspose();
-  const baseOpts = { responsive: 'resize', staffwidth: effectiveStaffWidth, scale: autoScale, add_classes: true, visualTranspose: totalTranspose, selectionColor: '#f59e0b', wrap: { preferredMeasuresPerLine: measuresPerLine } };
+  const baseOpts = { responsive: 'resize', staffwidth: effectiveStaffWidth, scale: autoScale, add_classes: true, visualTranspose: totalTranspose, selectionColor: '#f59e0b' };
+  // abcjs 6.4.4 silently drops the `tablature` layout whenever the `wrap`
+  // option is also present, so only enable measure-wrapping when no tab layer
+  // is active. With a tab layer, let abcjs lay the staff+tab out unwrapped.
+  if (!hasTab) baseOpts.wrap = { preferredMeasuresPerLine: measuresPerLine };
   const renderOpts = hasTab && tabSpec ? { ...baseOpts, tablature: [tabSpec] } : baseOpts;
 
         // Render the visible paper from the unmodified (display) ABC so playback filtering does not affect rendering
@@ -2513,10 +2517,12 @@
         responsive: 'resize',
         visualTranspose: this.getTotalTranspose(),
         staffwidth: printableWidthPx,
-        wrap: { preferredMeasuresPerLine: Math.max(4, Math.min(8, Math.round(printableWidthPx / 150))) },
         print: true
       };
+      // abcjs 6.4.4 silently drops tablature when `wrap` is also set, so only
+      // wrap measures per line when there is no tab layer to print.
       if (hasTab && tabSpec) printOpts.tablature = [tabSpec];
+      else printOpts.wrap = { preferredMeasuresPerLine: Math.max(4, Math.min(8, Math.round(printableWidthPx / 150))) };
 
       const styles = `
         :root { color-scheme: light; }
@@ -2888,6 +2894,41 @@
     paper.style.flexDirection = paper.style.flexDirection || 'column';
   };
 
+  // --- Screen wake lock (focus mode) ---
+  // Keep the display awake while the tune is on screen in full-screen focus
+  // mode, so the OS power-saving settings don't blank the monitor mid-tune and
+  // lose the music. Uses the Screen Wake Lock API where available and silently
+  // no-ops otherwise (e.g. unsupported browser or insecure context).
+  Viewer.acquireWakeLock = async function() {
+    try {
+      if (!('wakeLock' in navigator)) return;
+      if (this._wakeLock) return; // already held
+      const lock = await navigator.wakeLock.request('screen');
+      this._wakeLock = lock;
+      // The lock is auto-released when the tab is hidden/minimised; clear our
+      // handle so a later visibility change can re-request it.
+      try { lock.addEventListener('release', () => { if (this._wakeLock === lock) this._wakeLock = null; }); } catch(_) {}
+      // Re-acquire when the page becomes visible again if we're still in focus
+      // mode. Bind the visibility listener only once.
+      if (!this._wakeLockVisBound) {
+        this._wakeLockVisBound = true;
+        document.addEventListener('visibilitychange', () => {
+          if (document.visibilityState === 'visible' && this.state.isFullscreen && !this._wakeLock) {
+            this.acquireWakeLock();
+          }
+        });
+      }
+    } catch (_) { /* wake lock unavailable or denied; ignore */ }
+  };
+
+  Viewer.releaseWakeLock = function() {
+    try {
+      const lock = this._wakeLock;
+      this._wakeLock = null;
+      if (lock && typeof lock.release === 'function') lock.release();
+    } catch (_) { /* no-op */ }
+  };
+
   // --- Expand to full screen ---
   // Toggles the music pane (the scrollable wrapper around #paper) into a
   // fixed, full-viewport overlay. render()'s auto-fit measures the paper box,
@@ -2972,9 +3013,11 @@
       if (expanded) {
         if (controls) controls.classList.remove('abc-fs-controls-hidden');
         scheduleHide();
+        try { this.acquireWakeLock(); } catch(_) {}
       } else {
         clearHideTimer();
         if (controls) controls.classList.remove('abc-fs-controls-hidden');
+        try { this.releaseWakeLock(); } catch(_) {}
       }
       // Let layout settle before refitting to the new box size.
       try { requestAnimationFrame(() => requestAnimationFrame(refit)); } catch(_) { refit(); }
