@@ -1,0 +1,7 @@
+{
+  "sources": [
+    {"id":"norbeck","name":"Henrik Norbeck's ABC Tunes","page":"https://www.norbeck.nu/abc/download.asp","encoding":"utf-8","max_files":100},
+    {"id":"hardy","name":"Paul Hardy's Tunebooks","page":"https://pghardy.net/tunebooks/","encoding":"utf-8","max_files":30},
+    {"id":"woodenflute","name":"Woodenflute mailing-list tunes","files":["https://raw.githubusercontent.com/Ismael-VC/ABCTunes/master/woodenflute.abc"],"encoding":"utf-8","max_files":1}
+  ]
+}

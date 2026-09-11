@@ -1,0 +1,30 @@
+name: Refresh web tune index
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 7 * * 1'
+permissions:
+  contents: write
+concurrency:
+  group: web-tune-index
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s scripts/tune-index -p 'test_*.py'
+      - run: python scripts/tune-index/build.py
+      - name: Publish refreshed metadata through the website deployment
+        run: |
+          git add public/tune-index/index.json
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Refresh web ABC tune index"
+          git push origin HEAD:main
