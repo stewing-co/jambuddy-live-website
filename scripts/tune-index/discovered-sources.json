@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-09-11T14:19:01Z",
+  "note": "Review artifact only - not read by build.py. Promote approved hosts into sources.json and Android AbcTuneCatalog.sourceHosts by hand.",
+  "sources": [
+    {
+      "id": "gatherer",
+      "name": "Nigel Gatherer's ABC Tune Collection",
+      "found_via": "web search: \"Nigel Gatherer tunebooks abc site\" (2026-09-11)",
+      "pages_visited": 1,
+      "candidates_found": 0,
+      "files": [],
+      "max_files": 20,
+      "tune_count": 0,
+      "sample_titles": [],
+      "failures": [
+        "https://www.nigelgatherer.com/tunes/abc.html: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      ]
+    },
+    {
+      "id": "celticroom",
+      "name": "The Celtic Room Session Tune Collection",
+      "found_via": "web search: \"thecelticroom.org abc-tune-library abc files\" (2026-09-11)",
+      "pages_visited": 30,
+      "candidates_found": 0,
+      "files": [],
+      "max_files": 20,
+      "tune_count": 0,
+      "sample_titles": [],
+      "failures": []
+    }
+  ]
+}

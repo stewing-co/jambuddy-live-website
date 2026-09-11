@@ -1,0 +1,14 @@
+[
+  {
+    "id": "gatherer",
+    "name": "Nigel Gatherer's ABC Tune Collection",
+    "seed_pages": ["https://www.nigelgatherer.com/tunes/abc.html"],
+    "found_via": "web search: \"Nigel Gatherer tunebooks abc site\" (2026-09-11)"
+  },
+  {
+    "id": "celticroom",
+    "name": "The Celtic Room Session Tune Collection",
+    "seed_pages": ["https://thecelticroom.org/abc-tune-library.html"],
+    "found_via": "web search: \"thecelticroom.org abc-tune-library abc files\" (2026-09-11)"
+  }
+]
