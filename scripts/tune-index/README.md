@@ -28,3 +28,23 @@ on a later app session after 24 hours. Offline users can search a cached index;
 loading uncached notation still requires the original source to be available.
 
 Tests: `python3 -m unittest discover -s scripts/tune-index -p 'test_*.py'`.
+
+## JC archive discovery
+
+`python3 scripts/tune-index/discover_jc.py` traverses JC's public `coll.cgi`
+collection-listing API under `/music/book/`. It records discovered bulk ABC URLs
+in `jc-sources.json`; the build reads those alongside manually configured sources.
+The title-search CGI currently returns no matches for known tunes, and its old
+index directory is inaccessible, so neither is a viable bulk export endpoint.
+
+Discovery is bounded to five directory levels and 1,000 directories. It prioritizes
+ABC files at least 6 KB long, which include full tunebooks, instead of requesting
+tens of thousands of duplicate single-tune exports. The discovery report records
+unvisited directories and failures. This is expanded coverage, not a claim to have
+replicated JC's complete historic index. Previously discovered files are retained
+when directory discovery is incomplete. Failed file refreshes retain prior records.
+
+Fetches use three workers, paced request starts, and a six-day local HTTP cache.
+The weekly workflow caches downloads, refreshes discovery, rebuilds metadata,
+and publishes both the index and discovery manifest. Android streams the larger
+JSON index and accepts original ABC downloads from trillian.mit.edu as well.

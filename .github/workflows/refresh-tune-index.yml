@@ -19,10 +19,16 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m unittest discover -s scripts/tune-index -p 'test_*.py'
+      - uses: actions/cache@v4
+        with:
+          path: scripts/tune-index/.cache
+          key: web-abc-${{ github.run_id }}
+          restore-keys: web-abc-
+      - run: python scripts/tune-index/discover_jc.py
       - run: python scripts/tune-index/build.py
       - name: Publish refreshed metadata through the website deployment
         run: |
-          git add public/tune-index/index.json
+          git add public/tune-index/index.json scripts/tune-index/jc-sources.json
           if git diff --cached --quiet; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

@@ -1,0 +1,2744 @@
+{
+  "sources": [
+    {
+      "id": "jc-12selectedcountrydances-1772-rutherford-abc",
+      "name": "JC archive: 12SelectedCountryDances_1772_Rutherford.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/12SelectedCountryDances_1772_Rutherford.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-1769-bremner-srcd-abc",
+      "name": "JC archive: 1769_Bremner_SRCD.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/1769_Bremner_SRCD.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-1812-wilson-harmony-fournewcountrydances-abc",
+      "name": "JC archive: 1812_Wilson_Harmony_FourNewCountryDances.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/1812_Wilson_Harmony_FourNewCountryDances.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24americancountrydances-1785-cantelo-abc",
+      "name": "JC archive: 24AmericanCountryDances_1785_Cantelo.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24AmericanCountryDances_1785_Cantelo.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1748-tdavis-abc",
+      "name": "JC archive: 24CountryDances_1748_TDavis.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1748_TDavis.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1762-thompson-abc",
+      "name": "JC archive: 24CountryDances_1762_Thompson.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1762_Thompson.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1765-thompson-abc",
+      "name": "JC archive: 24CountryDances_1765_Thompson.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1765_Thompson.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1766-abc",
+      "name": "JC archive: 24CountryDances_1766.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1766.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1766-johnson-abc",
+      "name": "JC archive: 24CountryDances_1766_Johnson.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1766_Johnson.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1766-various-abc",
+      "name": "JC archive: 24CountryDances_1766_various.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1766_various.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1767-thompson-abc",
+      "name": "JC archive: 24CountryDances_1767_Thompson.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1767_Thompson.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1770-abc",
+      "name": "JC archive: 24CountryDances_1770.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1770.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1770-longman-abc",
+      "name": "JC archive: 24CountryDances_1770_Longman.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1770_Longman.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1771-randall-abc",
+      "name": "JC archive: 24CountryDances_1771_Randall.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1771_Randall.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1771-thompson-abc",
+      "name": "JC archive: 24CountryDances_1771_Thompson.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1771_Thompson.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1772-thompson-abc",
+      "name": "JC archive: 24CountryDances_1772_Thompson.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1772_Thompson.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1774-thompson-abc",
+      "name": "JC archive: 24CountryDances_1774_Thompson.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1774_Thompson.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1776-randall-abc",
+      "name": "JC archive: 24CountryDances_1776_Randall.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1776_Randall.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1776-thompson-abc",
+      "name": "JC archive: 24CountryDances_1776_Thompson.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1776_Thompson.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1778-thompson-abc",
+      "name": "JC archive: 24CountryDances_1778_Thompson.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1778_Thompson.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1779-thompson-abc",
+      "name": "JC archive: 24CountryDances_1779_Thompson.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1779_Thompson.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1780-skillern-abc",
+      "name": "JC archive: 24CountryDances_1780_Skillern.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1780_Skillern.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1780-thompson-abc",
+      "name": "JC archive: 24CountryDances_1780_Thompson.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1780_Thompson.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1781-skillern-abc",
+      "name": "JC archive: 24CountryDances_1781_Skillern.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1781_Skillern.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1782-skillern-abc",
+      "name": "JC archive: 24CountryDances_1782_Skillern.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1782_Skillern.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1782-thompson-abc",
+      "name": "JC archive: 24CountryDances_1782_Thompson.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1782_Thompson.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1791-thompson-abc",
+      "name": "JC archive: 24CountryDances_1791_Thompson.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1791_Thompson.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1792-thompson-abc",
+      "name": "JC archive: 24CountryDances_1792_Thompson.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1792_Thompson.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1793-preston-abc",
+      "name": "JC archive: 24CountryDances_1793_Preston.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1793_Preston.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1794-preston-abc",
+      "name": "JC archive: 24CountryDances_1794_Preston.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1794_Preston.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1796-preston-abc",
+      "name": "JC archive: 24CountryDances_1796_Preston.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1796_Preston.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1798-bland-weller-abc",
+      "name": "JC archive: 24CountryDances_1798_Bland_Weller.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1798_Bland_Weller.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1798-preston-abc",
+      "name": "JC archive: 24CountryDances_1798_Preston.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1798_Preston.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1799-preston-abc",
+      "name": "JC archive: 24CountryDances_1799_Preston.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1799_Preston.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1799-skillern-abc",
+      "name": "JC archive: 24CountryDances_1799_Skillern.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1799_Skillern.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1800-preston-abc",
+      "name": "JC archive: 24CountryDances_1800_Preston.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1800_Preston.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1801-preston-abc",
+      "name": "JC archive: 24CountryDances_1801_Preston.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1801_Preston.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1802-thompson-abc",
+      "name": "JC archive: 24CountryDances_1802_Thompson.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1802_Thompson.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1803-bland-weller-abc",
+      "name": "JC archive: 24CountryDances_1803_Bland_Weller.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1803_Bland_Weller.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1803-gray-thompson-abc",
+      "name": "JC archive: 24CountryDances_1803_Gray_Thompson.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1803_Gray_Thompson.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1803-preston-abc",
+      "name": "JC archive: 24CountryDances_1803_Preston.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1803_Preston.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1804tp-preston-abc",
+      "name": "JC archive: 24CountryDances_1804TP_Preston.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1804TP_Preston.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1804-preston-abc",
+      "name": "JC archive: 24CountryDances_1804_Preston.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1804_Preston.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1804-thompson-abc",
+      "name": "JC archive: 24CountryDances_1804_Thompson.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1804_Thompson.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1805-gray-thompson-abc",
+      "name": "JC archive: 24CountryDances_1805_Gray_Thompson.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1805_Gray_Thompson.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1805-preston-abc",
+      "name": "JC archive: 24CountryDances_1805_Preston.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1805_Preston.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1805-thompson-abc",
+      "name": "JC archive: 24CountryDances_1805_Thompson.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1805_Thompson.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1808-goulding-abc",
+      "name": "JC archive: 24CountryDances_1808_Goulding.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1808_Goulding.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1808-goulding-ak-abc",
+      "name": "JC archive: 24CountryDances_1808_Goulding_AK.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1808_Goulding_AK.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1808-goulding-ftm-abc",
+      "name": "JC archive: 24CountryDances_1808_Goulding_FTM.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1808_Goulding_FTM.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1808-goulding-pd-abc",
+      "name": "JC archive: 24CountryDances_1808_Goulding_PD.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1808_Goulding_PD.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1809-button-whitaker-abc",
+      "name": "JC archive: 24CountryDances_1809_Button_Whitaker.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1809_Button_Whitaker.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1809-cahusac-abc",
+      "name": "JC archive: 24CountryDances_1809_Cahusac.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1809_Cahusac.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1809-cahusac-ak-abc",
+      "name": "JC archive: 24CountryDances_1809_Cahusac_AK.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1809_Cahusac_AK.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1809-cahusac-ftm-abc",
+      "name": "JC archive: 24CountryDances_1809_Cahusac_FTM.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1809_Cahusac_FTM.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1809-cahusac-jc-abc",
+      "name": "JC archive: 24CountryDances_1809_Cahusac_JC.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1809_Cahusac_JC.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1810-button-whitaker-abc",
+      "name": "JC archive: 24CountryDances_1810_Button_Whitaker.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1810_Button_Whitaker.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1810-button-whitaker-elegant-abc",
+      "name": "JC archive: 24CountryDances_1810_Button_Whitaker_Elegant.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1810_Button_Whitaker_Elegant.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1811-goulding-dalmaine-potter-abc",
+      "name": "JC archive: 24CountryDances_1811_Goulding_dAlmaine_Potter.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1811_Goulding_dAlmaine_Potter.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1812-jgray-abc",
+      "name": "JC archive: 24CountryDances_1812_JGray.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1812_JGray.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1813-button-whitaker-abc",
+      "name": "JC archive: 24CountryDances_1813_Button_Whitaker.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1813_Button_Whitaker.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1818-button-whitaker-abc",
+      "name": "JC archive: 24CountryDances_1818_Button_Whitaker.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1818_Button_Whitaker.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24countrydances-1826-goulding-dalmaine-abc",
+      "name": "JC archive: 24CountryDances_1826_Goulding_dAlmaine.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24CountryDances_1826_Goulding_dAlmaine.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24favouritedances-1779-straight-abc",
+      "name": "JC archive: 24FavouriteDances_1779_Straight.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24FavouriteDances_1779_Straight.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24favouritedances-1783-straight-abc",
+      "name": "JC archive: 24FavouriteDances_1783_Straight.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24FavouriteDances_1783_Straight.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24favouritedances-1784-straight-abc",
+      "name": "JC archive: 24FavouriteDances_1784_Straight.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24FavouriteDances_1784_Straight.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-24newcotillons-1770-longman-abc",
+      "name": "JC archive: 24NewCotillons_1770_Longman.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/24NewCotillons_1770_Longman.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-amhsi-abc1-abc",
+      "name": "JC archive: AMHSI-abc1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/AMHSI-abc1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-amhsi-abc2-abc",
+      "name": "JC archive: AMHSI-abc2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/AMHSI-abc2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-amhsi-abc1-abc",
+      "name": "JC archive: AMHSI_abc1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/AMHSI_abc1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-amhsi-abc2-abc",
+      "name": "JC archive: AMHSI_abc2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/AMHSI_abc2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-abrahammackintosh",
+      "name": "JC archive: AbrahamMackintosh",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/AbrahamMackintosh/all.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-abrahammackintosh-abc",
+      "name": "JC archive: AbrahamMackintosh.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/AbrahamMackintosh.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-andersonsbudgetv1",
+      "name": "JC archive: AndersonsBudgetV1",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/AndersonsBudgetV1/AndersonsBudgetV1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-andersonsbudgetv1-abc",
+      "name": "JC archive: AndersonsBudgetV1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/AndersonsBudgetV1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-attejensen",
+      "name": "JC archive: AtteJensen",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/AtteJensen/Book.abc",
+        "https://trillian.mit.edu/~jc/music/book/AtteJensen/jazz/Book.abc"
+      ],
+      "max_files": 102,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-bb50-abc",
+      "name": "JC archive: BB50.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/BB50.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-barsanti-coost-abc",
+      "name": "JC archive: Barsanti_CoOST.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Barsanti_CoOST.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-bayard",
+      "name": "JC archive: Bayard",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Bayard/Bayard_DTFMTF.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-bayard-dtfmtf-abc",
+      "name": "JC archive: Bayard_DTFMTF.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Bayard_DTFMTF.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-bonaccordcollection-abc",
+      "name": "JC archive: BonAccordCollection.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/BonAccordCollection.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-bostoncollection",
+      "name": "JC archive: BostonCollection",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/BostonCollection/0261_COTILLONS_First_set.abc",
+        "https://trillian.mit.edu/~jc/music/book/BostonCollection/0321_COTILLONS_Second_set.abc",
+        "https://trillian.mit.edu/~jc/music/book/BostonCollection/0381_COTILLONS_Third_set.abc",
+        "https://trillian.mit.edu/~jc/music/book/BostonCollection/0431_COTILLONS_Fourth_set.abc",
+        "https://trillian.mit.edu/~jc/music/book/BostonCollection/0481_TREMONT_QUADRILLES.abc",
+        "https://trillian.mit.edu/~jc/music/book/BostonCollection/BostonCollection.abc",
+        "https://trillian.mit.edu/~jc/music/book/BostonCollection/test1.abc",
+        "https://trillian.mit.edu/~jc/music/book/BostonCollection/test2.abc"
+      ],
+      "max_files": 108,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-bostoncollection-abc",
+      "name": "JC archive: BostonCollection.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/BostonCollection.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-botcdass-abc",
+      "name": "JC archive: BotCDaSS.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/BotCDaSS.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-brewer",
+      "name": "JC archive: Brewer",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Brewer/NewInstructionsForTheClarinet.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-brewer-newinstructionsfortheclarinet-abc",
+      "name": "JC archive: Brewer_NewInstructionsForTheClarinet.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Brewer_NewInstructionsForTheClarinet.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-button-whitaker-12elegantnewdances-1810-abc",
+      "name": "JC archive: Button_Whitaker_12ElegantNewDances_1810.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Button_Whitaker_12ElegantNewDances_1810.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-button-whitaker-selectionofdancesreelsandwaltzes-1-abc",
+      "name": "JC archive: Button_Whitaker_SelectionOfDancesReelsAndWaltzes_1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Button_Whitaker_SelectionOfDancesReelsAndWaltzes_1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-button-whitaker-selectionofdancesreelsandwaltzes-2-abc",
+      "name": "JC archive: Button_Whitaker_SelectionOfDancesReelsAndWaltzes_2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Button_Whitaker_SelectionOfDancesReelsAndWaltzes_2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-cdss-cdot-abc",
+      "name": "JC archive: CDSS_CDoT.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/CDSS_CDoT.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-cdss-gems-abc",
+      "name": "JC archive: CDSS_Gems.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/CDSS_Gems.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-cjsurtees-abc",
+      "name": "JC archive: CJSurtees.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/CJSurtees.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-cmcit-abc",
+      "name": "JC archive: CMCIT.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/CMCIT.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-csgbt-1794-v1-abc",
+      "name": "JC archive: CSGBT_1794-V1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/CSGBT_1794-V1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-csgbt-1794-v2-abc",
+      "name": "JC archive: CSGBT_1794-V2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/CSGBT_1794-V2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-csrhw-abc1-abc",
+      "name": "JC archive: CSRHW-abc1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/CSRHW-abc1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-csrhw-abc2-abc",
+      "name": "JC archive: CSRHW-abc2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/CSRHW-abc2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-ctftf-abc",
+      "name": "JC archive: CTftF.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/CTftF.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-caledoniancountrydances-abc",
+      "name": "JC archive: CaledonianCountryDances.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/CaledonianCountryDances.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-caledonianmusicalrepository",
+      "name": "JC archive: CaledonianMusicalRepository",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/CaledonianMusicalRepository/1806.abc",
+        "https://trillian.mit.edu/~jc/music/book/CaledonianMusicalRepository/1811.abc",
+        "https://trillian.mit.edu/~jc/music/book/CaledonianMusicalRepository/1811/1811.abc",
+        "https://trillian.mit.edu/~jc/music/book/CaledonianMusicalRepository/Braes_of_Yarrow_1806.abc",
+        "https://trillian.mit.edu/~jc/music/book/CaledonianMusicalRepository/Dainty_Davy_1806.abc",
+        "https://trillian.mit.edu/~jc/music/book/CaledonianMusicalRepository/Gil_Morrice_1806.abc",
+        "https://trillian.mit.edu/~jc/music/book/CaledonianMusicalRepository/Rock_and_Wee_Pickle_Tow_1806.abc",
+        "https://trillian.mit.edu/~jc/music/book/CaledonianMusicalRepository/Wood_and_Married_and_A_1806.abc",
+        "https://trillian.mit.edu/~jc/music/book/CaledonianMusicalRepository/alltunes.abc"
+      ],
+      "max_files": 109,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-caledonianmusicalrepository-abc",
+      "name": "JC archive: CaledonianMusicalRepository.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/CaledonianMusicalRepository.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-caledonianmusicalrepository-1806-abc",
+      "name": "JC archive: CaledonianMusicalRepository_1806.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/CaledonianMusicalRepository_1806.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-caledonianmusicalrepository-1811-abc",
+      "name": "JC archive: CaledonianMusicalRepository_1811.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/CaledonianMusicalRepository_1811.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-collections-abc",
+      "name": "JC archive: Collections.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Collections.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-danielwright",
+      "name": "JC archive: DanielWright",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/DanielWright/CCCCD.abc",
+        "https://trillian.mit.edu/~jc/music/book/DanielWright/ECPMH.abc"
+      ],
+      "max_files": 102,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-danielwright-ccccd-abc",
+      "name": "JC archive: DanielWright_CCCCD.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/DanielWright_CCCCD.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-danielwright-ecpmh-abc",
+      "name": "JC archive: DanielWright_ECPMH.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/DanielWright_ECPMH.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-efdss",
+      "name": "JC archive: EFDSS",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/EFDSS/CDM5.abc",
+        "https://trillian.mit.edu/~jc/music/book/EFDSS/CDM6.abc"
+      ],
+      "max_files": 102,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-efdss-cdm5-abc",
+      "name": "JC archive: EFDSS_CDM5.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/EFDSS_CDM5.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-efdss-cdm6-abc",
+      "name": "JC archive: EFDSS_CDM6.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/EFDSS_CDM6.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-erm-v1-abc",
+      "name": "JC archive: ERM-V1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/ERM-V1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-erm-v2-abc",
+      "name": "JC archive: ERM-V2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/ERM-V2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-eliashowe-musicianscompanionp1-1842-v1-abc",
+      "name": "JC archive: EliasHowe_MusiciansCompanionP1-1842-V1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/EliasHowe_MusiciansCompanionP1-1842-V1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-eliashowe-musicianscompanionp1-1842-v2-abc",
+      "name": "JC archive: EliasHowe_MusiciansCompanionP1-1842-V2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/EliasHowe_MusiciansCompanionP1-1842-V2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-eliashowe-musicianscompanionp2-1843-v1-abc",
+      "name": "JC archive: EliasHowe_MusiciansCompanionP2-1843-V1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/EliasHowe_MusiciansCompanionP2-1843-V1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-eliashowe-musicianscompanionp2-1843-v2-abc",
+      "name": "JC archive: EliasHowe_MusiciansCompanionP2-1843-V2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/EliasHowe_MusiciansCompanionP2-1843-V2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-eliashowe-musicianscompanionp3-1844-v1-abc",
+      "name": "JC archive: EliasHowe_MusiciansCompanionP3-1844-V1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/EliasHowe_MusiciansCompanionP3-1844-V1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-eliashowe-musicianscompanionp3-1844-v2-abc",
+      "name": "JC archive: EliasHowe_MusiciansCompanionP3-1844-V2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/EliasHowe_MusiciansCompanionP3-1844-V2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-everydaysongbook1-abc",
+      "name": "JC archive: EverydaySongBook1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/EverydaySongBook1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-everydaysongbook2-abc",
+      "name": "JC archive: EverydaySongBook2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/EverydaySongBook2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-farne",
+      "name": "JC archive: FARNE",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/FARNE/Anonymous2/all.abc",
+        "https://trillian.mit.edu/~jc/music/book/FARNE/FARNE_Anonymous1.abc",
+        "https://trillian.mit.edu/~jc/music/book/FARNE/FARNE_Anonymous2.abc"
+      ],
+      "max_files": 103,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-farne-anonymous1-abc",
+      "name": "JC archive: FARNE_Anonymous1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/FARNE_Anonymous1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-farne-anonymous2-abc",
+      "name": "JC archive: FARNE_Anonymous2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/FARNE_Anonymous2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-foefda-abc",
+      "name": "JC archive: FOEFDA.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/FOEFDA.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-feuillet-essex",
+      "name": "JC archive: Feuillet_Essex",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Feuillet_Essex/FtFIoD/FtFIoD1.abc",
+        "https://trillian.mit.edu/~jc/music/book/Feuillet_Essex/FtFIoD/FtFIoD2.abc",
+        "https://trillian.mit.edu/~jc/music/book/Feuillet_Essex/FtFIoD1.abc",
+        "https://trillian.mit.edu/~jc/music/book/Feuillet_Essex/FtFIoD2.abc"
+      ],
+      "max_files": 104,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-feuillet-essex-ftfiod1-abc",
+      "name": "JC archive: Feuillet_Essex_FtFIoD1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Feuillet_Essex_FtFIoD1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-feuillet-essex-ftfiod2-abc",
+      "name": "JC archive: Feuillet_Essex_FtFIoD2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Feuillet_Essex_FtFIoD2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-gm",
+      "name": "JC archive: GM",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/GM/alltunes.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-gallini-newcoll44cot1-abc",
+      "name": "JC archive: Gallini_NewColl44Cot1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Gallini_NewColl44Cot1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-gallini-newcoll44cot2-abc",
+      "name": "JC archive: Gallini_NewColl44Cot2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Gallini_NewColl44Cot2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-gentlemansmagazine-abc",
+      "name": "JC archive: GentlemansMagazine.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/GentlemansMagazine.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-george-meikle-abc",
+      "name": "JC archive: George_Meikle.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/George_Meikle.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-glen2-abc",
+      "name": "JC archive: Glen2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Glen2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-goldenbookoffavoritesongs",
+      "name": "JC archive: GoldenBookOfFavoriteSongs",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/GoldenBookOfFavoriteSongs/EverydaySongBook1.abc",
+        "https://trillian.mit.edu/~jc/music/book/GoldenBookOfFavoriteSongs/EverydaySongBook2.abc",
+        "https://trillian.mit.edu/~jc/music/book/GoldenBookOfFavoriteSongs/GoldenBookOfFavoriteSongs1.abc",
+        "https://trillian.mit.edu/~jc/music/book/GoldenBookOfFavoriteSongs/GoldenBookOfFavoriteSongs2.abc"
+      ],
+      "max_files": 104,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-goldenbookoffavoritesongs1-abc",
+      "name": "JC archive: GoldenBookOfFavoriteSongs1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/GoldenBookOfFavoriteSongs1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-goldenbookoffavoritesongs2-abc",
+      "name": "JC archive: GoldenBookOfFavoriteSongs2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/GoldenBookOfFavoriteSongs2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-goulding-sseifa-abc",
+      "name": "JC archive: Goulding_SSEIFA.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Goulding_SSEIFA.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-goulding-sseifa-v1-abc",
+      "name": "JC archive: Goulding_SSEIFA_v1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Goulding_SSEIFA_v1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-goulding-sseifa-v3-abc",
+      "name": "JC archive: Goulding_SSEIFA_v3.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Goulding_SSEIFA_v3.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-goulding-twentyfourcountrydancesfortheyear1808-abc",
+      "name": "JC archive: Goulding_TwentyFourCountryDancesForTheYear1808.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Goulding_TwentyFourCountryDancesForTheYear1808.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-gow-cr-abc1-abc",
+      "name": "JC archive: Gow-CR-abc1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Gow-CR-abc1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-gow-cr-abc2-abc",
+      "name": "JC archive: Gow-CR-abc2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Gow-CR-abc2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-gow-csr-abc1-abc",
+      "name": "JC archive: Gow-CSR-abc1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Gow-CSR-abc1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-gow-csr-abc2-abc",
+      "name": "JC archive: Gow-CSR-abc2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Gow-CSR-abc2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-gow-csr1-abc1-abc",
+      "name": "JC archive: Gow-CSR1-abc1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Gow-CSR1-abc1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-gow-csr1-abc2-abc",
+      "name": "JC archive: Gow-CSR1-abc2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Gow-CSR1-abc2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-gow-csr2-abc1-abc",
+      "name": "JC archive: Gow-CSR2-abc1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Gow-CSR2-abc1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-gow-csr2-abc2-abc",
+      "name": "JC archive: Gow-CSR2-abc2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Gow-CSR2-abc2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-gow-csr3-abc1-abc",
+      "name": "JC archive: Gow-CSR3-abc1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Gow-CSR3-abc1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-gow-csr3-abc2-abc",
+      "name": "JC archive: Gow-CSR3-abc2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Gow-CSR3-abc2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-gow-csr4-abc1-abc",
+      "name": "JC archive: Gow-CSR4-abc1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Gow-CSR4-abc1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-gow-csr4-abc2-abc",
+      "name": "JC archive: Gow-CSR4-abc2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Gow-CSR4-abc2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-hnorbeck",
+      "name": "JC archive: HNorbeck",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/HNorbeck/hnsp0.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-haandmedoondafiddle-abc",
+      "name": "JC archive: HaandMeDoonDaFiddle.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/HaandMeDoonDaFiddle.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-hamilton",
+      "name": "JC archive: Hamilton",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Hamilton/HUTB1-1844-V1.abc",
+        "https://trillian.mit.edu/~jc/music/book/Hamilton/HUTB1-1844-V2.abc",
+        "https://trillian.mit.edu/~jc/music/book/Hamilton/HUTB2-1846-V1.abc",
+        "https://trillian.mit.edu/~jc/music/book/Hamilton/HUTB2-1846-V2.abc"
+      ],
+      "max_files": 104,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-hamilton-hutb1-1844-v1-abc",
+      "name": "JC archive: Hamilton_HUTB1-1844-V1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Hamilton_HUTB1-1844-V1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-hamilton-hutb1-1844-v2-abc",
+      "name": "JC archive: Hamilton_HUTB1-1844-V2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Hamilton_HUTB1-1844-V2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-hamilton-hutb2-1846-v1-abc",
+      "name": "JC archive: Hamilton_HUTB2-1846-V1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Hamilton_HUTB2-1846-V1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-hamilton-hutb2-1846-v2-abc",
+      "name": "JC archive: Hamilton_HUTB2-1846-V2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Hamilton_HUTB2-1846-V2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-hamilton-kerr-mm2-v1-abc",
+      "name": "JC archive: Hamilton_Kerr_MM2-V1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Hamilton_Kerr_MM2-V1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-hamilton-kerr-mm2-v2-abc",
+      "name": "JC archive: Hamilton_Kerr_MM2-V2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Hamilton_Kerr_MM2-V2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-henryford",
+      "name": "JC archive: HenryFord",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/HenryFord/GoodMorning.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-henryford-goodmorning-abc",
+      "name": "JC archive: HenryFord_GoodMorning.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/HenryFord_GoodMorning.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-hibernianmuse-v1-abc",
+      "name": "JC archive: HibernianMuse-V1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/HibernianMuse-V1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-hibernianmuse-v2-abc",
+      "name": "JC archive: HibernianMuse-V2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/HibernianMuse-V2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-hillcountrytunes",
+      "name": "JC archive: HillCountryTunes",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/HillCountryTunes/HillCountryTunes.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-hillcountrytunes-abc",
+      "name": "JC archive: HillCountryTunes.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/HillCountryTunes.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-iast-abc1-abc",
+      "name": "JC archive: IaST-abc1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/IaST-abc1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-iast-abc2-abc",
+      "name": "JC archive: IaST-abc2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/IaST-abc2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-ignatiussancho-mccd-v1-abc",
+      "name": "JC archive: IgnatiusSancho_MCCD_v1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/IgnatiusSancho_MCCD_v1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-ignatiussancho-mccd-v2-abc",
+      "name": "JC archive: IgnatiusSancho_MCCD_v2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/IgnatiusSancho_MCCD_v2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-jamesjohnson-scotsmusicalmuseumv5-v1-abc",
+      "name": "JC archive: JamesJohnson_ScotsMusicalMuseumV5-V1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/JamesJohnson_ScotsMusicalMuseumV5-V1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-jamesjohnson-scotsmusicalmuseumv5-v2-abc",
+      "name": "JC archive: JamesJohnson_ScotsMusicalMuseumV5-V2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/JamesJohnson_ScotsMusicalMuseumV5-V2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-jamesoswald",
+      "name": "JC archive: JamesOswald",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/JamesOswald/CPC-abc1.abc",
+        "https://trillian.mit.edu/~jc/music/book/JamesOswald/CPC-abc2.abc",
+        "https://trillian.mit.edu/~jc/music/book/JamesOswald/CPCvol1-abc1.abc",
+        "https://trillian.mit.edu/~jc/music/book/JamesOswald/CPCvol1-abc2.abc",
+        "https://trillian.mit.edu/~jc/music/book/JamesOswald/JamesOswald_CPC-abc1.abc",
+        "https://trillian.mit.edu/~jc/music/book/JamesOswald/JamesOswald_CPC-abc2.abc"
+      ],
+      "max_files": 106,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-jamesoswald-cpc-abc1-abc",
+      "name": "JC archive: JamesOswald_CPC-abc1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/JamesOswald_CPC-abc1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-jamesoswald-cpc-abc2-abc",
+      "name": "JC archive: JamesOswald_CPC-abc2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/JamesOswald_CPC-abc2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-jeanwhite-hrjcd-abc",
+      "name": "JC archive: JeanWhite_HRJCD.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/JeanWhite_HRJCD.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-johnfrench-abc",
+      "name": "JC archive: JohnFrench.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/JohnFrench.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-johnjohnson",
+      "name": "JC archive: JohnJohnson",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/JohnJohnson/ChoiceCollectionVol8-V1.abc",
+        "https://trillian.mit.edu/~jc/music/book/JohnJohnson/ChoiceCollectionVol8-V2.abc",
+        "https://trillian.mit.edu/~jc/music/book/JohnJohnson/ChoiceCollectionVol8-VMP.abc",
+        "https://trillian.mit.edu/~jc/music/book/JohnJohnson/V8/ChoiceCollection1.abc",
+        "https://trillian.mit.edu/~jc/music/book/JohnJohnson/V8/ChoiceCollection2.abc",
+        "https://trillian.mit.edu/~jc/music/book/JohnJohnson/V8/ChoiceCollectionVol8-VMP.abc"
+      ],
+      "max_files": 106,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-johnjohnson-choicecollectionvol8-v1-abc",
+      "name": "JC archive: JohnJohnson_ChoiceCollectionVol8-V1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/JohnJohnson_ChoiceCollectionVol8-V1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-johnjohnson-choicecollectionvol8-v2-abc",
+      "name": "JC archive: JohnJohnson_ChoiceCollectionVol8-V2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/JohnJohnson_ChoiceCollectionVol8-V2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-johnjohnson-choicecollectionvol8-vmp-abc",
+      "name": "JC archive: JohnJohnson_ChoiceCollectionVol8-VMP.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/JohnJohnson_ChoiceCollectionVol8-VMP.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-johntreat",
+      "name": "JC archive: JohnTreat",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/JohnTreat/GftF1.abc",
+        "https://trillian.mit.edu/~jc/music/book/JohnTreat/GftF2.abc"
+      ],
+      "max_files": 102,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-johntreat-gftf1-abc",
+      "name": "JC archive: JohnTreat_GftF1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/JohnTreat_GftF1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-johntreat-gftf2-abc",
+      "name": "JC archive: JohnTreat_GftF2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/JohnTreat_GftF2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-johnwalsh-abc",
+      "name": "JC archive: JohnWalsh.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/JohnWalsh.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-kauntze",
+      "name": "JC archive: Kauntze",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Kauntze/alltunes.abc",
+        "https://trillian.mit.edu/~jc/music/book/Kauntze/alltunes_NO.abc",
+        "https://trillian.mit.edu/~jc/music/book/Kauntze/alltunes_VO.abc"
+      ],
+      "max_files": 103,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-kauntze-cotmfd-no-abc",
+      "name": "JC archive: Kauntze_CotmfD_NO.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Kauntze_CotmfD_NO.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-kauntze-cotmfd-vo-abc",
+      "name": "JC archive: Kauntze_CotmfD_VO.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Kauntze_CotmfD_VO.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-kerr-mm1-v1-abc",
+      "name": "JC archive: Kerr_MM1-V1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Kerr_MM1-V1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-kerr-mm1-v2-abc",
+      "name": "JC archive: Kerr_MM1-V2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Kerr_MM1-V2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-kerr-mm2-v1-abc",
+      "name": "JC archive: Kerr_MM2-V1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Kerr_MM2-V1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-kerr-mm2-v2-abc",
+      "name": "JC archive: Kerr_MM2-V2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Kerr_MM2-V2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-kerr-mm3-v1-abc",
+      "name": "JC archive: Kerr_MM3-V1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Kerr_MM3-V1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-kerr-mm3-v2-abc",
+      "name": "JC archive: Kerr_MM3-V2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Kerr_MM3-V2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-kerr-mm4-v1-abc",
+      "name": "JC archive: Kerr_MM4-V1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Kerr_MM4-V1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-kerr-mm4-v2-abc",
+      "name": "JC archive: Kerr_MM4-V2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Kerr_MM4-V2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-kittybridges",
+      "name": "JC archive: KittyBridges",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/KittyBridges/1745/KittyBridges_1745_NO.abc",
+        "https://trillian.mit.edu/~jc/music/book/KittyBridges/1745/KittyBridges_1745_VO.abc",
+        "https://trillian.mit.edu/~jc/music/book/KittyBridges/KittyBridges_1745_NO.abc",
+        "https://trillian.mit.edu/~jc/music/book/KittyBridges/KittyBridges_1745_VO.abc"
+      ],
+      "max_files": 104,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-kittybridges-1745-no-abc",
+      "name": "JC archive: KittyBridges_1745_NO.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/KittyBridges_1745_NO.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-kittybridges-1745-vo-abc",
+      "name": "JC archive: KittyBridges_1745_VO.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/KittyBridges_1745_VO.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-kohlers",
+      "name": "JC archive: Kohlers",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Kohlers/Kohlers.abc",
+        "https://trillian.mit.edu/~jc/music/book/Kohlers/Kohlers1.abc",
+        "https://trillian.mit.edu/~jc/music/book/Kohlers/Kohlers2.abc",
+        "https://trillian.mit.edu/~jc/music/book/Kohlers/Kohlers3.abc"
+      ],
+      "max_files": 104,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-kohlers-abc",
+      "name": "JC archive: Kohlers.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Kohlers.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-kohlers1-abc",
+      "name": "JC archive: Kohlers1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Kohlers1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-kohlers2-abc",
+      "name": "JC archive: Kohlers2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Kohlers2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-kohlers3-abc",
+      "name": "JC archive: Kohlers3.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Kohlers3.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-landrin",
+      "name": "JC archive: Landrin",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Landrin/Landrin_Potpourri.abc",
+        "https://trillian.mit.edu/~jc/music/book/Landrin/Potpourri/Landrin_Potpourri.abc"
+      ],
+      "max_files": 102,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-landrin-potpourri-abc",
+      "name": "JC archive: Landrin_Potpourri.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Landrin_Potpourri.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-londonmagazine-abc",
+      "name": "JC archive: LondonMagazine.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/LondonMagazine.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-mmm1-abc",
+      "name": "JC archive: MMM1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/MMM1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-mmm2-abc",
+      "name": "JC archive: MMM2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/MMM2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-msrpb",
+      "name": "JC archive: MSRPB",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/MSRPB/MSRPB.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-msrpb-abc",
+      "name": "JC archive: MSRPB.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/MSRPB.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-michaeldabney",
+      "name": "JC archive: MichaelDabney",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/MichaelDabney/12Minuets12Dances-1760-V1.abc",
+        "https://trillian.mit.edu/~jc/music/book/MichaelDabney/12Minuets12Dances-1760-V2.abc"
+      ],
+      "max_files": 102,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-michaeldabney-12minuets12dances-1760-v1-abc",
+      "name": "JC archive: MichaelDabney_12Minuets12Dances-1760-V1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/MichaelDabney_12Minuets12Dances-1760-V1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-michaeldabney-12minuets12dances-1760-v2-abc",
+      "name": "JC archive: MichaelDabney_12Minuets12Dances-1760-V2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/MichaelDabney_12Minuets12Dances-1760-V2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-mof-abc",
+      "name": "JC archive: MoF.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/MoF.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-mrkynastonsfamousdance",
+      "name": "JC archive: MrKynastonsFamousDance",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/MrKynastonsFamousDance/tunes.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-mrkynastonsfamousdance-abc",
+      "name": "JC archive: MrKynastonsFamousDance.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/MrKynastonsFamousDance.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-nelson-abc",
+      "name": "JC archive: Nelson.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Nelson.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-northumbrianminstrelsy",
+      "name": "JC archive: NorthumbrianMinstrelsy",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/NorthumbrianMinstrelsy/NorthumbrianMinstrelsy.abc",
+        "https://trillian.mit.edu/~jc/music/book/NorthumbrianMinstrelsy/minstrelsy.abc",
+        "https://trillian.mit.edu/~jc/music/book/NorthumbrianMinstrelsy/minstrelsy1.abc",
+        "https://trillian.mit.edu/~jc/music/book/NorthumbrianMinstrelsy/minstrelsy2.abc"
+      ],
+      "max_files": 104,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-northumbrianminstrelsy-abc",
+      "name": "JC archive: NorthumbrianMinstrelsy.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/NorthumbrianMinstrelsy.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-oneills",
+      "name": "JC archive: ONeills",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/ONeills/Rare_Small/SSEIFA.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/Rare_Small/SSEIFA_v1.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/Rare_Small/SSEIFA_v3.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/Rare_Small/SSEIFA_v4.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/Rare_Small/SSEIFA_v5.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_/SSEIFA.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_/SSEIFA_v1.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_/SSEIFA_v3.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/0001-0050_np.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/0051-0100_jc.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/0101-0200_hn.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/0201-0300_jc.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/0301-0350_jc.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/0351-0400_cf.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/0401-0486_hn.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/0501-0550_dw.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/0550-0625_jw.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/0626-0700_jc.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/0701-0720_lw.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/0732-0758_bs.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/0732-0758_mh.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/0759-0810_sf.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/0811-0899_dp.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/0900-0950_tk.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/0951-0981_dp.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/0981-1000_rt.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/1001-1031_dp.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/1031-1115_hn.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/1116-1135_mh.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/1116-1135_ml.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/1136-1175_sf.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/1176-1275_to.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/1276-1375_to.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/1376-1475_bs.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/1476-1555_jw.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/1556-1576_bh.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/1556-1624_mh.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/1577-1624_ml.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/1625-1700_nt.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/1701-1780_bs.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/1710-1750_lw.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/1781-1800_rt.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/_1850/F/1801-1850_bs.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/waifs/waif-1.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/waifs/waif-2.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/waifs/waif-3.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/waifs/waif-4.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/waifs/waif-5.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/waifs/waif-6.abc",
+        "https://trillian.mit.edu/~jc/music/book/ONeills/waifs/waif-7.abc"
+      ],
+      "max_files": 150,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-oldenglishcountrydances",
+      "name": "JC archive: OldEnglishCountryDances",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/OldEnglishCountryDances/OECD.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-oldenglishcountrydances-abc",
+      "name": "JC archive: OldEnglishCountryDances.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/OldEnglishCountryDances.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-originallymine-abc",
+      "name": "JC archive: OriginallyMine.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/OriginallyMine.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-oude-en-nieuwe-hollantse-boeren-lieties-en-contredansen-abc",
+      "name": "JC archive: Oude_en_Nieuwe_Hollantse_Boeren_Lieties_en_Contredansen.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Oude_en_Nieuwe_Hollantse_Boeren_Lieties_en_Contredansen.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-pat-shaw",
+      "name": "JC archive: Pat_Shaw",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Pat_Shaw/NewWineInOldBottles.abc",
+        "https://trillian.mit.edu/~jc/music/book/Pat_Shaw/Pinewoods.abc",
+        "https://trillian.mit.edu/~jc/music/book/Pat_Shaw/Pinewoods/tunes.abc"
+      ],
+      "max_files": 103,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-pat-shaw-newwineinoldbottles-abc",
+      "name": "JC archive: Pat_Shaw_NewWineInOldBottles.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Pat_Shaw_NewWineInOldBottles.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-pat-shaw-pinewoods-abc",
+      "name": "JC archive: Pat_Shaw_Pinewoods.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Pat_Shaw_Pinewoods.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-pat-shawspinewoods-abc",
+      "name": "JC archive: Pat_ShawsPinewoods.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Pat_ShawsPinewoods.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-paulbackstrom-lfd-abc",
+      "name": "JC archive: PaulBackstrom-LfD.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/PaulBackstrom-LfD.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-pioneer-abc",
+      "name": "JC archive: Pioneer.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Pioneer.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-playford-ab-abc",
+      "name": "JC archive: Playford_AB.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Playford_AB.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-playford-cost-abc",
+      "name": "JC archive: Playford_COST.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Playford_COST.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-pringle",
+      "name": "JC archive: Pringle",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Pringle/Pringle.abc",
+        "https://trillian.mit.edu/~jc/music/book/Pringle/tunes.abc"
+      ],
+      "max_files": 102,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-pringle-abc",
+      "name": "JC archive: Pringle.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Pringle.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-rscds-graded1-abc",
+      "name": "JC archive: RSCDS_Graded1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/RSCDS_Graded1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-rscds-graded2-abc",
+      "name": "JC archive: RSCDS_Graded2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/RSCDS_Graded2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-riddell",
+      "name": "JC archive: Riddell",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Riddell/CSGBT1.abc",
+        "https://trillian.mit.edu/~jc/music/book/Riddell/CSGBT2.abc"
+      ],
+      "max_files": 102,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-rinnci-na-heireann-abc",
+      "name": "JC archive: Rinnci_na_hEireann.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Rinnci_na_hEireann.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-robertbremner-csrcd1-abc",
+      "name": "JC archive: RobertBremner_CSRCD1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/RobertBremner_CSRCD1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-robertbremner-csrcd2-abc",
+      "name": "JC archive: RobertBremner_CSRCD2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/RobertBremner_CSRCD2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-round-band-book-of-playford-abc",
+      "name": "JC archive: Round_Band_Book_of_Playford.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Round_Band_Book_of_Playford.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-rutherford-compleat-collection-v1-abc",
+      "name": "JC archive: Rutherford_Compleat_Collection_V1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Rutherford_Compleat_Collection_V1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-rutherford-compleat-collection-v2-abc",
+      "name": "JC archive: Rutherford_Compleat_Collection_V2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Rutherford_Compleat_Collection_V2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-scd",
+      "name": "JC archive: SCD",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/SCD/BB50.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/BB50/BB50.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Birm2004.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book01.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book02.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book03.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book04.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book05.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book06.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book07.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book08.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book09.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book10.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book11.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book12.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book13.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book14.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book15.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book16.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book17.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book18.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book19.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book20.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book21.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book22.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book23.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book24.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book25.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book26.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book27.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book28.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book29.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book30.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book31.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book33.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book34.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book35.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book36.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book37.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book38.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book39.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book40.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book41.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book42.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book45.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book46.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book47.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book48.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book49-V1.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book49-V2.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book52.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Book52/book52.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Glen2.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Glen2/Glen2.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Graded1.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Graded2.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Kohlers.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Leaflets.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/MMM1.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/MMM1/MMM1.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/MMM2.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/RoyGoldring/14SD2000.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/RoyGoldring/14SD2000/alltunes.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/RoyGoldring/15SD.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/RoyGoldring_14SocialDancesFor2000.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/RoyGoldring_15SocialDances.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Skye_HB.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Skye_HB/Skye_HB.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/Skye_HB/all.abc",
+        "https://trillian.mit.edu/~jc/music/book/SCD/SocialDances2002.abc"
+      ],
+      "max_files": 170,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-scd-book49-v1-abc",
+      "name": "JC archive: SCD_Book49-V1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/SCD_Book49-V1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-scd-book49-v2-abc",
+      "name": "JC archive: SCD_Book49-V2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/SCD_Book49-V2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-scd-roygoldring-14socialdancesfor2000-abc",
+      "name": "JC archive: SCD_RoyGoldring_14SocialDancesFor2000.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/SCD_RoyGoldring_14SocialDancesFor2000.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-scd-roygoldring-15socialdances-abc",
+      "name": "JC archive: SCD_RoyGoldring_15SocialDances.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/SCD_RoyGoldring_15SocialDances.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-skillernchalloner-pcd1-abc",
+      "name": "JC archive: SkillernChalloner_PCD1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/SkillernChalloner_PCD1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-skillernchalloner-pcd2-abc",
+      "name": "JC archive: SkillernChalloner_PCD2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/SkillernChalloner_PCD2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-socialdances2002-abc",
+      "name": "JC archive: SocialDances2002.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/SocialDances2002.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-stewart",
+      "name": "JC archive: Stewart",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Stewart/SCAJMR_1784-V1.abc",
+        "https://trillian.mit.edu/~jc/music/book/Stewart/SCAJMR_1784-V2.abc"
+      ],
+      "max_files": 102,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-stewart-scajmr-1784-v1-abc",
+      "name": "JC archive: Stewart_SCAJMR_1784-V1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Stewart_SCAJMR_1784-V1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-stewart-scajmr-1784-v2-abc",
+      "name": "JC archive: Stewart_SCAJMR_1784-V2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Stewart_SCAJMR_1784-V2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-straight-skillern-abc",
+      "name": "JC archive: Straight_Skillern.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Straight_Skillern.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-thomasbrayscountrydances1699-abc",
+      "name": "JC archive: ThomasBraysCountryDances1699.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/ThomasBraysCountryDances1699.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-thomasmarsden",
+      "name": "JC archive: ThomasMarsden",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/ThomasMarsden/ThomasMarsden.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-thomasmarsden-abc",
+      "name": "JC archive: ThomasMarsden.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/ThomasMarsden.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-thompson-v1-1751-1757-ftm-abc",
+      "name": "JC archive: Thompson_V1_1751-1757_FTM.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Thompson_V1_1751-1757_FTM.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-thompson-v2-1758-1765-ftm-abc",
+      "name": "JC archive: Thompson_V2_1758-1765_FTM.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Thompson_V2_1758-1765_FTM.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-thompson-v3-1766-1772-ftm-abc",
+      "name": "JC archive: Thompson_V3_1766-1772_FTM.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Thompson_V3_1766-1772_FTM.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-thompson-v4-1773-1780-pd-abc",
+      "name": "JC archive: Thompson_V4_1773-1780_PD.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Thompson_V4_1773-1780_PD.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-tomanderson",
+      "name": "JC archive: TomAnderson",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/TomAnderson/HaandMeDoonDaFiddle.abc",
+        "https://trillian.mit.edu/~jc/music/book/TomAnderson/HaandMeDoonDaFiddle/HaandMeDoonDaFiddle.abc"
+      ],
+      "max_files": 102,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-urbani-liston",
+      "name": "JC archive: Urbani_Liston",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Urbani_Liston/1800/Urbani_Liston_1800.abc",
+        "https://trillian.mit.edu/~jc/music/book/Urbani_Liston/Urbani_Liston_1800.abc"
+      ],
+      "max_files": 102,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-urbani-liston-1800-abc",
+      "name": "JC archive: Urbani_Liston_1800.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Urbani_Liston_1800.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-violaruth-advancedsd-abc",
+      "name": "JC archive: ViolaRuth_AdvancedSD.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/ViolaRuth_AdvancedSD.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-violaruth-americansd-abc",
+      "name": "JC archive: ViolaRuth_AmericanSD.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/ViolaRuth_AmericanSD.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-violaruth-pwft-abc",
+      "name": "JC archive: ViolaRuth_PWFT.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/ViolaRuth_PWFT.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-violaruth-pioneer-abc",
+      "name": "JC archive: ViolaRuth_Pioneer.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/ViolaRuth_Pioneer.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-violaturpeinen",
+      "name": "JC archive: ViolaTurpeinen",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/ViolaTurpeinen/MoVT-abc1.abc",
+        "https://trillian.mit.edu/~jc/music/book/ViolaTurpeinen/MoVT-abc2.abc",
+        "https://trillian.mit.edu/~jc/music/book/ViolaTurpeinen/si-G-114-0.abc"
+      ],
+      "max_files": 103,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-walterrainstorp-wrcb-abc",
+      "name": "JC archive: WalterRainstorp_WRCB.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/WalterRainstorp_WRCB.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-williamcampbell-10thbook-1798-v1-abc",
+      "name": "JC archive: WilliamCampbell_10thBook_1798-V1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/WilliamCampbell_10thBook_1798-V1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-williamcampbell-10thbook-1798-v2-abc",
+      "name": "JC archive: WilliamCampbell_10thBook_1798-V2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/WilliamCampbell_10thBook_1798-V2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-williamchristie",
+      "name": "JC archive: WilliamChristie",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/WilliamChristie/CSRHW-abc1.abc",
+        "https://trillian.mit.edu/~jc/music/book/WilliamChristie/CSRHW-abc2.abc"
+      ],
+      "max_files": 102,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-williamclarke",
+      "name": "JC archive: WilliamClarke",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/WilliamClarke/William_Clarke_MS_1770.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-williamshepherd",
+      "name": "JC archive: WilliamShepherd",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/WilliamShepherd/Collections.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-williamshepherdscollections-abc",
+      "name": "JC archive: WilliamShepherdsCollections.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/WilliamShepherdsCollections.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-william-clarke-ms-1770-abc",
+      "name": "JC archive: William_Clarke_MS_1770.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/William_Clarke_MS_1770.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-wilson-harmony-4ncd-1812-v1-abc",
+      "name": "JC archive: Wilson_Harmony_4NCD_1812_V1.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Wilson_Harmony_4NCD_1812_V1.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-wilson-harmony-4ncd-1812-v2-abc",
+      "name": "JC archive: Wilson_Harmony_4NCD_1812_V2.abc",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/Wilson_Harmony_4NCD_1812_V2.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    },
+    {
+      "id": "jc-old",
+      "name": "JC archive: old",
+      "files": [
+        "https://trillian.mit.edu/~jc/music/book/old/GouldingTwentyfourCountryDancesForTheYear18082-10-11.abc"
+      ],
+      "max_files": 101,
+      "discovered_via": "https://trillian.mit.edu/~jc/cgi/abc/coll.cgi/music/book/"
+    }
+  ],
+  "discovery": {
+    "directories": 465,
+    "abc_files": 57120,
+    "bulk_files": 464,
+    "unvisited_directories": [
+      "/~jc/music/book/ONeills/_1850/X/F/F/",
+      "/~jc/music/book/ONeills/_1850/X/F/X/",
+      "/~jc/music/book/ONeills/_1850/X/X/F/",
+      "/~jc/music/book/ONeills/_1850/X/X/X/"
+    ],
+    "errors": []
+  }
+}
