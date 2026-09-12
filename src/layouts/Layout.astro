@@ -22,6 +22,13 @@ const baseContentClass = fullWidth
   : "content-overlay mx-auto max-w-7xl my-8 p-6";
 const resolvedContentClass = contentClass ?? baseContentClass;
 
+// On a full-width page, the nav should span the same width as the content below
+// it. Otherwise the header stays capped at max-w-7xl and looks stranded off to
+// one side on wide viewports while full-bleed content spans edge to edge.
+const navContainerClass = fullWidth
+  ? "w-full px-4 sm:px-6 lg:px-8"
+  : "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8";
+
 const siteOrigin = (Astro.site?.origin ?? 'https://jambuddy.live').replace(/\/$/, '');
 const pagePath = Astro.url.pathname.replace(/\/index\.html$/, '/');
 const canonicalUrl = `${siteOrigin}${pagePath}`;
@@ -163,7 +170,7 @@ const currentYear = new Date().getFullYear();
   <body class="min-h-screen">
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-black text-white px-4 py-2 rounded z-50">Skip to content</a>
     <nav class="bg-black/95 shadow-2xl border-b border-gray-700 backdrop-blur-md sticky top-0 z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class={navContainerClass}>
         <div class="flex justify-between h-20">
           <div class="flex items-center">
             <a href="/" class="group flex items-center">
@@ -182,8 +189,12 @@ const currentYear = new Date().getFullYear();
             </a>
           </div>
 
-          <!-- Mobile menu button -->
-          <div class="md:hidden flex items-center">
+          <!-- Mobile: a persistent, compact download CTA so it isn't hidden behind
+               the hamburger menu on the page most first-time visitors land on. -->
+          <div class="md:hidden flex items-center gap-3">
+            <a href="https://play.google.com/store/apps/details?id=com.jambuddy.app&pcampaignid=web_share" target="_blank" rel="noopener" class="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-lg font-semibold text-xs shadow-lg whitespace-nowrap">
+              Get App
+            </a>
             <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none focus:text-white">
               <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                 <path class="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>

@@ -692,6 +692,13 @@
           } else if (storedX && (this.state.tunes || []).some(t => String(t.x) === String(storedX))) {
             tuneSel.value = String(storedX);
             this.selectTuneByX(storedX);
+          } else if ((this.state.tunes || []).length) {
+            // No explicit or stored selection: default to the first tune instead of
+            // silently rendering the whole collection while the picker still shows
+            // its "Select a tune" placeholder - the two looked out of sync.
+            const first = this.state.tunes[0];
+            tuneSel.value = String(first.x);
+            this.selectTuneByX(first.x);
           }
 
           if (tuneSearch) {
@@ -1842,13 +1849,18 @@
     updatePlayButton: function() {
       const btn = document.getElementById('playToggle');
       if (!btn) return;
+      // Icon lives in its own child span so this can swap just the icon
+      // without wiping out the sibling visible-text label.
+      const iconEl = document.getElementById('playToggleIcon') || btn;
+      const labelEl = document.getElementById('playToggleLabel');
       btn.disabled = !!this.state.playbackPending;
       btn.classList.toggle('opacity-70', !!this.state.playbackPending);
       btn.classList.toggle('cursor-wait', !!this.state.playbackPending);
       const setBtn = (icon, label) => {
-        if (btn.innerHTML !== icon) btn.innerHTML = icon;
+        if (iconEl.innerHTML !== icon) iconEl.innerHTML = icon;
         btn.title = label;
         btn.setAttribute('aria-label', label);
+        if (labelEl) labelEl.textContent = label;
       };
       if (this.state.playbackPending && !this.state.isPlaying) {
         setBtn(this._icons.play, 'Starting…');
@@ -1868,8 +1880,9 @@
     updateRepeatButton: function() {
       const btn = document.getElementById('repeatToggle');
       if (!btn) return;
+      const iconEl = document.getElementById('repeatToggleIcon') || btn;
       const active = !!this.state.repeatPlayback;
-      if (btn.innerHTML !== this._icons.repeat) btn.innerHTML = this._icons.repeat;
+      if (iconEl.innerHTML !== this._icons.repeat) iconEl.innerHTML = this._icons.repeat;
       btn.setAttribute('aria-pressed', active ? 'true' : 'false');
       btn.setAttribute('aria-label', active ? 'Repeat full tune on' : 'Repeat full tune off');
       btn.title = active ? 'Repeat full tune on' : 'Repeat full tune off';
