@@ -364,11 +364,14 @@ export class SheetMusic {
     return gaps[Math.floor(gaps.length / 2)];
   }
 
-  /** Past notes grey, current note highlighted, future notes black. Also scrolls
-   *  the current note into view within the (scrollable) staff container. */
-  setProgress(index: number): void {
+  /** Past notes grey (or red if missed), current note highlighted, future notes
+   *  black. Also scrolls the current note into view within the (scrollable)
+   *  staff container. */
+  setProgress(index: number, missed?: Set<number>): void {
     this.noteEls.forEach((n, i) => {
-      n.classList.toggle('bg-note-done', i < index);
+      const isMissed = i < index && (missed?.has(i) ?? false);
+      n.classList.toggle('bg-note-missed', isMissed);
+      n.classList.toggle('bg-note-done', i < index && !isMissed);
       n.classList.toggle('bg-note-current', i === index);
     });
     this.scrollToCurrent(index);

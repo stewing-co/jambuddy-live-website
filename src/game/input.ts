@@ -33,9 +33,9 @@ export class MicInput {
 
   private static readonly FFT = 2048;
   private static readonly SILENCE = 0.012;
-  private static readonly CLARITY_MIN = 0.5;
-  private static readonly RISE_RATIO = 1.7; // RMS jump that counts as a re-attack
-  private static readonly REFRACTORY_MS = 45; // min gap between committed notes
+  private static readonly CLARITY_MIN = 0.35; // was 0.5 — accept noisier pitch reads so fast playing isn't dropped
+  private static readonly RISE_RATIO = 1.35; // was 1.7 — smaller volume jump now counts as a re-attack
+  private static readonly REFRACTORY_MS = 30; // was 45 — allow faster repeated notes
 
   private running = false;
   private paused = false;

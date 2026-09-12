@@ -85,6 +85,7 @@ export class Game {
   private melody: Melody = []; // [pitch, duration] pairs for rendering
   private notes: number[] = []; // pitches only, for gameplay (1:1 with melody)
   private progress = 0;
+  private missed = new Set<number>(); // note indices marked red instead of blocking the run
   private floor = 1;
   private seed = 1;
 
@@ -289,7 +290,7 @@ export class Game {
       meter: meterForType(this.tune.type),
       abc: this.tune.abc, // original notation when available; else built from melody
     });
-    this.sheet.setProgress(this.progress);
+    this.sheet.setProgress(this.progress, this.missed);
   }
 
   // --- Floor / cell lifecycle ---
@@ -325,6 +326,7 @@ export class Game {
     const already = this.cleared.has(cellKey(cell));
     this.phase = already ? 'choosing' : 'playing';
     this.progress = already ? this.notes.length : 0;
+    this.missed = new Set();
     this.tuneStartMs = performance.now();
     this.tuneCorrect = 0;
     this.tuneTotal = 0;
@@ -349,24 +351,42 @@ export class Game {
 
   // --- Note handling ---
 
+  /** How far ahead of the expected note we'll look for a match. Lets a single
+   *  missed detection (mic glitch, or a genuinely skipped note at speed) get
+   *  marked and skipped without permanently desyncing the rest of the tune. */
+  private static readonly LOOKAHEAD = 2;
+
   handleNote(midi: number): void {
     if (this.runComplete) return;
     if (this.runStartMs === 0) this.runStartMs = performance.now(); // first note (e.g. keyboard play)
     const played = pc(midi);
     if (this.phase === 'playing') {
-      const expected = pc(this.notes[this.progress]);
-      this.runTotal++;
-      this.tuneTotal++;
-      if (played === expected) {
+      let offset = -1;
+      for (let k = 0; k <= Game.LOOKAHEAD && this.progress + k < this.notes.length; k++) {
+        if (played === pc(this.notes[this.progress + k])) {
+          offset = k;
+          break;
+        }
+      }
+      // No match within the lookahead window: mark the expected note missed and
+      // move on by one rather than blocking the run waiting for it. A match
+      // further ahead marks the skipped notes in between as missed too.
+      const matched = offset >= 0;
+      const missedCount = matched ? offset : 1;
+      for (let k = 0; k < missedCount; k++) this.missed.add(this.progress + k);
+      const consumed = missedCount + (matched ? 1 : 0);
+      this.runTotal += consumed;
+      this.tuneTotal += consumed;
+      if (matched) {
         this.runCorrect++;
         this.tuneCorrect++;
-        this.progress++;
-        this.sheet?.setProgress(this.progress);
-        if (this.progress >= this.notes.length) this.clearCurrent();
-        else this.render();
       } else {
-        this.flash('not the next note — try again');
+        this.flash('missed note — keep going');
       }
+      this.progress += consumed;
+      this.sheet?.setProgress(this.progress, this.missed);
+      if (this.progress >= this.notes.length) this.clearCurrent();
+      else this.render();
     } else {
       if (played === this.chord.root) this.tryMove('forward');
       else if (played === this.chord.third) this.tryMove('left');

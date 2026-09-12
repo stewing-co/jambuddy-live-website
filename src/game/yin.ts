@@ -3,7 +3,7 @@
 // resolution than the chord engine's 90 ms cadence, so fast notes and quick
 // repeats register.
 
-const THRESHOLD = 0.12;
+const THRESHOLD = 0.2; // looser than YIN's typical 0.1-0.15 — accepts noisier/faster playing as pitched
 const MIN_FREQ = 70; // ~ C#2
 const MAX_FREQ = 1600; // ~ G6
 
