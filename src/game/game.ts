@@ -86,6 +86,8 @@ export class Game {
   private notes: number[] = []; // pitches only, for gameplay (1:1 with melody)
   private progress = 0;
   private missed = new Set<number>(); // note indices marked red instead of blocking the run
+  private strikes = 0; // unmatched notes heard at the current cursor position
+  private chooseSinceMs = 0; // when the current square entered 'choosing' (move guard)
   private floor = 1;
   private seed = 1;
 
@@ -327,6 +329,8 @@ export class Game {
     this.phase = already ? 'choosing' : 'playing';
     this.progress = already ? this.notes.length : 0;
     this.missed = new Set();
+    this.strikes = 0;
+    this.chooseSinceMs = already ? performance.now() : 0;
     this.tuneStartMs = performance.now();
     this.tuneCorrect = 0;
     this.tuneTotal = 0;
@@ -351,43 +355,61 @@ export class Game {
 
   // --- Note handling ---
 
-  /** How far ahead of the expected note we'll look for a match. Lets a single
-   *  missed detection (mic glitch, or a genuinely skipped note at speed) get
-   *  marked and skipped without permanently desyncing the rest of the tune. */
+  /** How far ahead of the expected note we'll look for a match. One note ahead
+   *  is always in reach (players do drop a note at speed); reaching two ahead
+   *  costs a strike first, so a single stray detection can't leapfrog the tune. */
   private static readonly LOOKAHEAD = 2;
+  private static readonly LOOKAHEAD_FREE = 1;
 
-  handleNote(midi: number): void {
+  /** Unmatched notes tolerated at the cursor before we give up on the expected
+   *  note, mark it missed and step past it. A stray detection costs a strike
+   *  rather than a note, so mic noise no longer eats its way through the tune —
+   *  but a player who genuinely can't find the note still gets unstuck. */
+  private static readonly STRIKES_TO_ADVANCE = 3;
+
+  /** Quiet window after a tune is cleared before chord tones steer. Without it
+   *  the ring-out of the tune's last note picks a direction for you. */
+  private static readonly MOVE_GUARD_MS = 450;
+
+  handleNote(midi: number, source: 'mic' | 'key' = 'mic'): void {
     if (this.runComplete) return;
     if (this.runStartMs === 0) this.runStartMs = performance.now(); // first note (e.g. keyboard play)
     const played = pc(midi);
     if (this.phase === 'playing') {
+      // The cursor is deliberately reluctant: it advances on a match at (or just
+      // past) the expected note, widening its reach only once a strike has shown
+      // the expected note isn't coming. Anything else is a strike — it costs
+      // accuracy but leaves the cursor where it is, so a stray detection can no
+      // longer chew its way through the tune.
+      const reach = this.strikes > 0 ? Game.LOOKAHEAD : Game.LOOKAHEAD_FREE;
       let offset = -1;
-      for (let k = 0; k <= Game.LOOKAHEAD && this.progress + k < this.notes.length; k++) {
+      for (let k = 0; k <= reach && this.progress + k < this.notes.length; k++) {
         if (played === pc(this.notes[this.progress + k])) {
           offset = k;
           break;
         }
       }
-      // No match within the lookahead window: mark the expected note missed and
-      // move on by one rather than blocking the run waiting for it. A match
-      // further ahead marks the skipped notes in between as missed too.
-      const matched = offset >= 0;
-      const missedCount = matched ? offset : 1;
-      for (let k = 0; k < missedCount; k++) this.missed.add(this.progress + k);
-      const consumed = missedCount + (matched ? 1 : 0);
-      this.runTotal += consumed;
-      this.tuneTotal += consumed;
-      if (matched) {
+      // Accuracy is correct notes over notes heard: every detected note is one
+      // attempt. Stepping past a note already cost the strikes that got us
+      // there, so notes marked missed aren't charged a second time.
+      this.runTotal++;
+      this.tuneTotal++;
+      if (offset >= 0) {
         this.runCorrect++;
         this.tuneCorrect++;
-      } else {
-        this.flash('missed note — keep going');
+        for (let k = 0; k < offset; k++) this.missed.add(this.progress + k);
+        this.progress += offset + 1;
+        this.strikes = 0;
+      } else if (++this.strikes >= Game.STRIKES_TO_ADVANCE) {
+        this.missed.add(this.progress);
+        this.progress++;
+        this.strikes = 0;
+        this.flash('missed note — moving on');
       }
-      this.progress += consumed;
       this.sheet?.setProgress(this.progress, this.missed);
       if (this.progress >= this.notes.length) this.clearCurrent();
       else this.render();
-    } else {
+    } else if (source === 'key' || performance.now() - this.chooseSinceMs >= Game.MOVE_GUARD_MS) {
       if (played === this.chord.root) this.tryMove('forward');
       else if (played === this.chord.third) this.tryMove('left');
       else if (played === this.chord.fifth) this.tryMove('right');
@@ -398,6 +420,7 @@ export class Game {
   private clearCurrent(): void {
     this.cleared.add(cellKey(this.pos));
     this.phase = 'choosing';
+    this.chooseSinceMs = performance.now();
     // Record this tune's personal best (accuracy first, then clear time).
     const perf = {
       accuracy: this.tuneTotal > 0 ? this.tuneCorrect / this.tuneTotal : 1,
@@ -467,11 +490,12 @@ export class Game {
   handleKey(code: string): void {
     if (this.runComplete && code !== 'KeyR') return;
     if (this.phase === 'playing') {
-      if (code === 'Space') this.handleNote(this.notes[this.progress]);
+      if (code === 'Space') this.handleNote(this.notes[this.progress], 'key');
     } else {
-      if (code === 'ArrowUp' || code === 'KeyW') this.handleNote(60 + this.chord.root);
-      else if (code === 'ArrowLeft' || code === 'KeyA') this.handleNote(60 + this.chord.third);
-      else if (code === 'ArrowRight' || code === 'KeyD') this.handleNote(60 + this.chord.fifth);
+      // Deliberate key presses have no ring-out, so they skip the move guard.
+      if (code === 'ArrowUp' || code === 'KeyW') this.handleNote(60 + this.chord.root, 'key');
+      else if (code === 'ArrowLeft' || code === 'KeyA') this.handleNote(60 + this.chord.third, 'key');
+      else if (code === 'ArrowRight' || code === 'KeyD') this.handleNote(60 + this.chord.fifth, 'key');
     }
     if (code === 'KeyN' || code === 'KeyR') this.newFloor(1);
   }

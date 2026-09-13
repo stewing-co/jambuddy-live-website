@@ -33,9 +33,14 @@ export class MicInput {
 
   private static readonly FFT = 2048;
   private static readonly SILENCE = 0.012;
-  private static readonly CLARITY_MIN = 0.35; // was 0.5 — accept noisier pitch reads so fast playing isn't dropped
-  private static readonly RISE_RATIO = 1.35; // was 1.7 — smaller volume jump now counts as a re-attack
-  private static readonly REFRACTORY_MS = 30; // was 45 — allow faster repeated notes
+  private static readonly CLARITY_MIN = 0.35; // accept noisier pitch reads so fast playing isn't dropped
+  private static readonly RISE_RATIO = 1.6; // volume jump that counts as a re-attack of the same note
+  private static readonly REFRACTORY_MS = 60; // ~16 notes/sec ceiling — well above any session tempo
+  /** Frames (~16 ms each) a pitch must hold before it commits as a note. Attack
+   *  transients and YIN's octave slips rarely survive three frames, while 50 ms
+   *  of settling still clears the fastest reel. Without this gate every wobble
+   *  inside a single bowed/plucked note fired its own note. */
+  private static readonly CONFIRM_FRAMES = 3;
 
   private running = false;
   private paused = false;
@@ -49,6 +54,9 @@ export class MicInput {
   private lastPc = -1;
   private lastCommitMs = 0;
   private prevRms = 0;
+  // Pitch currently accumulating frames toward a commit, and how many it has held.
+  private pendingPc = -1;
+  private pendingFrames = 0;
 
   async start(): Promise<boolean> {
     if (this.running) return true;
@@ -115,6 +123,8 @@ export class MicInput {
     if (level < MicInput.SILENCE) {
       this.onPitch(null);
       this.lastPc = -1; // silence re-arms repeats
+      this.pendingPc = -1;
+      this.pendingFrames = 0;
       this.prevRms = level;
       this.raf = requestAnimationFrame(this.loop);
       return;
@@ -125,9 +135,18 @@ export class MicInput {
       const r = readout(freq);
       this.onPitch(r);
       const pc = ((r.midi % 12) + 12) % 12;
+      // A pitch has to hold for CONFIRM_FRAMES before it counts. A dropout frame
+      // (low clarity) neither advances nor resets the streak, so one bad read
+      // mid-note doesn't restart the wait.
+      if (pc === this.pendingPc) this.pendingFrames++;
+      else {
+        this.pendingPc = pc;
+        this.pendingFrames = 1;
+      }
+      const settled = this.pendingFrames >= MicInput.CONFIRM_FRAMES;
       const reattack = level > this.prevRms * MicInput.RISE_RATIO && level > MicInput.SILENCE * 1.5;
       const changed = pc !== this.lastPc;
-      if ((changed || reattack) && now - this.lastCommitMs >= MicInput.REFRACTORY_MS) {
+      if (settled && (changed || reattack) && now - this.lastCommitMs >= MicInput.REFRACTORY_MS) {
         this.lastPc = pc;
         this.lastCommitMs = now;
         this.onNote(r.midi);
