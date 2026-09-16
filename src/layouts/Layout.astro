@@ -32,7 +32,7 @@ const navContainerClass = fullWidth
 const siteOrigin = (Astro.site?.origin ?? 'https://jambuddy.live').replace(/\/$/, '');
 const pagePath = Astro.url.pathname.replace(/\/index\.html$/, '/');
 const canonicalUrl = `${siteOrigin}${pagePath}`;
-const ogImage = `${siteOrigin}/images/logo/pick.png`;
+const ogImage = `${siteOrigin}/images/logo/og-card.png`;
 const isHome = pagePath === '/' || pagePath === '';
 const currentYear = new Date().getFullYear();
 ---
@@ -52,10 +52,14 @@ const currentYear = new Date().getFullYear();
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonicalUrl} />
   <meta property="og:image" content={ogImage} />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
+  <meta property="og:image:alt" content="JamBuddy logo" />
+  <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={ogImage} />
+  <meta name="twitter:image:alt" content="JamBuddy logo" />
 
   {isHome && (
     <script type="application/ld+json" is:inline set:html={JSON.stringify({
@@ -63,7 +67,7 @@ const currentYear = new Date().getFullYear();
       "@type": "SoftwareApplication",
       "name": "JamBuddy",
       "applicationCategory": "MusicApplication",
-      "operatingSystem": "Android 12+, Wear OS",
+      "operatingSystem": "Android 12+",
       "description": description,
       "url": siteOrigin + '/',
       "image": ogImage,
@@ -174,7 +178,7 @@ const currentYear = new Date().getFullYear();
         <div class="flex justify-between h-20">
           <div class="flex items-center">
             <a href="/" class="group flex items-center">
-              <img src="/images/logo/pick.png" alt="JamBuddy" class="h-10 transition-transform duration-300 group-hover:scale-110" />
+              <img src="/images/logo/pick-header.png" alt="JamBuddy" width="40" height="40" class="h-10 w-10 transition-transform duration-300 group-hover:scale-110" />
             </a>
           </div>          
           
