@@ -54,6 +54,10 @@ export class MicInput {
   private lastPc = -1;
   private lastCommitMs = 0;
   private prevRms = 0;
+  // A re-attack happens before YIN has produced CONFIRM_FRAMES stable reads.
+  // Remember it long enough for that confirmation instead of requiring both
+  // events to occur on the same animation frame.
+  private reattackUntilMs = 0;
   // Pitch currently accumulating frames toward a commit, and how many it has held.
   private pendingPc = -1;
   private pendingFrames = 0;
@@ -123,11 +127,22 @@ export class MicInput {
     if (level < MicInput.SILENCE) {
       this.onPitch(null);
       this.lastPc = -1; // silence re-arms repeats
+      this.reattackUntilMs = 0;
       this.pendingPc = -1;
       this.pendingFrames = 0;
       this.prevRms = level;
       this.raf = requestAnimationFrame(this.loop);
       return;
+    }
+
+    const attack =
+      level > this.prevRms * MicInput.RISE_RATIO && level > MicInput.SILENCE * 1.5;
+    if (attack && this.lastPc !== -1) {
+      // The attack transient can briefly obscure the pitch. Start confirmation
+      // again and give YIN a short window to settle on the re-articulated note.
+      this.reattackUntilMs = now + 250;
+      this.pendingPc = -1;
+      this.pendingFrames = 0;
     }
 
     const { freq, clarity } = yinPitch(this.buf, this.ctx.sampleRate);
@@ -144,11 +159,12 @@ export class MicInput {
         this.pendingFrames = 1;
       }
       const settled = this.pendingFrames >= MicInput.CONFIRM_FRAMES;
-      const reattack = level > this.prevRms * MicInput.RISE_RATIO && level > MicInput.SILENCE * 1.5;
+      const reattack = this.reattackUntilMs > 0 && now <= this.reattackUntilMs;
       const changed = pc !== this.lastPc;
       if (settled && (changed || reattack) && now - this.lastCommitMs >= MicInput.REFRACTORY_MS) {
         this.lastPc = pc;
         this.lastCommitMs = now;
+        this.reattackUntilMs = 0;
         this.onNote(r.midi);
       }
     } else {
