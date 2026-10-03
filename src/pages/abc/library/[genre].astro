@@ -18,7 +18,7 @@ const fileLabel = (path: string) => (path.split('/').pop() ?? path).replace(/\.a
   <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-white">
     <div class="flex flex-wrap items-center gap-3 mb-2">
       <h1 class="text-4xl font-bold">{genre.name}</h1>
-      <CollectionPicker selected={`/abc/library/${genre.genre}`} />
+      <CollectionPicker genre={genre.genre} />
     </div>
     <p class="text-gray-300 mb-6">{genre.tunes.toLocaleString('en-US')} tunes from {genre.sources.length} collections.</p>
 

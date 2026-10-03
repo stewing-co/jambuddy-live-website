@@ -5,7 +5,7 @@ import { LIBRARY_BASE } from '../../../lib/abcLibrary';
 ---
 
 <Layout title="ABC Tune Library - JamBuddy" description="View, play and print tunes from JamBuddy's ABC tune library." fullWidth contentClass="content-overlay w-full max-w-none" analyticsName="ABC Library Viewer">
-  <SheetMusicViewer slug="library" title="ABC Tune Library" collectionUrl="" selected="" />
+  <SheetMusicViewer slug="library" title="ABC Tune Library" collectionUrl="" selected="" fromUrl />
   <script is:inline define:vars={{ base: LIBRARY_BASE }}>
     // Runs before the viewer initializes (on window load): point it at the requested library
     // file. Only files inside the library's sources/ folder are accepted.
@@ -14,16 +14,11 @@ import { LIBRARY_BASE } from '../../../lib/abcLibrary';
       const input = document.getElementById('abcInput');
       const select = document.getElementById('tuneSelect');
       const section = document.querySelector('[data-abc-collection]');
-      if (!input || !/^sources\/[^?#]+\.abc$/i.test(src) || src.split('/').includes('..')) return;
+      if (!input || !/^(sources|books)\/[^?#]+\.abc$/i.test(src) || src.split('/').includes('..')) return;
       input.dataset.collectionSrc = base + src.split('/').map(encodeURIComponent).join('/');
       // Remember the selected tune per file rather than once for the whole library.
       if (select) select.dataset.collection = `library:${src}`;
       if (section) section.setAttribute('data-abc-collection', `library:${src}`);
-      // Show the genre the tune was opened from in the collection picker.
-      const genre = new URLSearchParams(window.location.search).get('genre') || '';
-      const picker = document.getElementById('collectionPicker');
-      const option = picker && /^[a-z0-9-]+$/.test(genre) ? picker.querySelector(`option[value="/abc/library/${genre}"]`) : null;
-      if (option) option.selected = true;
       const title = document.getElementById('abcCollectionTitle');
       if (title) title.textContent = src.split('/').pop().replace(/\.abc$/i, '');
     })();

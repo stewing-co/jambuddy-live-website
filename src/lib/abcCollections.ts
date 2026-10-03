@@ -6,6 +6,8 @@ export type AbcCollectionMeta = {
   slug: string;
   title: string;
   filename: string;
+  /** Tune library genre the collection is listed under in the collection picker. */
+  genre: string;
 };
 
 export type AbcTuneSearchEntry = {
@@ -19,17 +21,17 @@ export type AbcTuneSearchEntry = {
 };
 
 export const ABC_COLLECTIONS: AbcCollectionMeta[] = [
-  { slug: 'old-time-jam-tunes', title: 'JamBuddy (Old-Time)', filename: 'old_time_jam_tunes_collection.abc' },
-  { slug: 'bluegrass-jam-tunes', title: 'JamBuddy (Bluegrass)', filename: 'bluegrass_jam_tunes_collection.abc' },
-  { slug: 'irish-session-top100', title: 'The Session (Irish)', filename: 'irish_session_top100_collection.abc' },
-  { slug: 'mandozine', title: 'Mandozine (Various)', filename: 'mandozine.abc' },
-  { slug: 'practice-techniques', title: 'Practice Techniques', filename: 'practice.abc' },
-  { slug: 'open-hymnal', title: 'Open Hymnal (Christian)', filename: 'open_hymnal_collection.abc' },
-  { slug: 'roaring-jelly-2024', title: 'Roaring Jelly (Old-Time)', filename: 'roaring_jelly_collection.abc' },
-  { slug: 'nigel-gatherer-collection', title: 'Nigel Gatherer (Various)', filename: 'nigel_gatherer_collection.abc' },
-  { slug: 'antifascist', title: 'JamBuddy (Antifascist)', filename: 'antifascist_collection.abc' },
-  { slug: 'everyday-songbook-1927', title: 'Everyday Songbook 1927 (Various)', filename: 'everyday_songbook.abc' },
-  { slug: 'richard-robinsons-tunebook', title: 'Richard Robinsons Tunebook (Various)', filename: 'richard_robinsons_tunebook.abc' }
+  { slug: 'old-time-jam-tunes', title: 'JamBuddy (Old-Time)', filename: 'old_time_jam_tunes_collection.abc', genre: 'american' },
+  { slug: 'bluegrass-jam-tunes', title: 'JamBuddy (Bluegrass)', filename: 'bluegrass_jam_tunes_collection.abc', genre: 'american' },
+  { slug: 'irish-session-top100', title: 'The Session (Irish)', filename: 'irish_session_top100_collection.abc', genre: 'irish' },
+  { slug: 'mandozine', title: 'Mandozine (Various)', filename: 'mandozine.abc', genre: 'other' },
+  { slug: 'practice-techniques', title: 'Practice Techniques', filename: 'practice.abc', genre: 'other' },
+  { slug: 'open-hymnal', title: 'Open Hymnal (Christian)', filename: 'open_hymnal_collection.abc', genre: 'other' },
+  { slug: 'roaring-jelly-2024', title: 'Roaring Jelly (Old-Time)', filename: 'roaring_jelly_collection.abc', genre: 'american' },
+  { slug: 'nigel-gatherer-collection', title: 'Nigel Gatherer (Various)', filename: 'nigel_gatherer_collection.abc', genre: 'scottish' },
+  { slug: 'antifascist', title: 'JamBuddy (Antifascist)', filename: 'antifascist_collection.abc', genre: 'other' },
+  { slug: 'everyday-songbook-1927', title: 'Everyday Songbook 1927 (Various)', filename: 'everyday_songbook.abc', genre: 'american' },
+  { slug: 'richard-robinsons-tunebook', title: 'Richard Robinsons Tunebook (Various)', filename: 'richard_robinsons_tunebook.abc', genre: 'english' }
 ];
 
 export const ABC_FILENAME_MAP = Object.fromEntries(
