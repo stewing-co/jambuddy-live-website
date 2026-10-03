@@ -1,0 +1,44 @@
+---
+// Collection dropdown shared by the sheet music pages and the ABC tune library: the bundled
+// collections, then the library's genres.
+import { ABC_COLLECTIONS } from '../lib/abcCollections';
+import { loadLibrary } from '../lib/abcLibrary';
+
+interface Props {
+  /** Href of the current page's option, e.g. "/abc/mandozine" or "/abc/library/irish". */
+  selected?: string;
+}
+
+const { selected: requested = '' } = Astro.props;
+// The Old-Time collection is served at both /abc and /abc/old-time-jam-tunes.
+const selected = requested === '/abc/old-time-jam-tunes' ? '/abc' : requested;
+const genres = await loadLibrary();
+const collectionHref = (slug: string) => (slug === 'old-time-jam-tunes' ? '/abc' : `/abc/${slug}`);
+---
+
+<label class="ml-auto flex min-w-0 items-center gap-2 text-sm text-gray-300">
+  <span class="sr-only sm:not-sr-only text-xs font-semibold uppercase tracking-wide text-gray-400">Collection</span>
+  <select
+    id="collectionPicker"
+    aria-label="Choose collection"
+    class="min-w-0 max-w-[55vw] truncate rounded border border-gray-700 bg-black p-2 text-sm text-gray-200 sm:max-w-xs"
+    onchange="if(this.value)window.location.href=this.value"
+  >
+    {!selected && <option value="" selected>Choose a collection…</option>}
+    <optgroup label="Collections">
+      {ABC_COLLECTIONS.map((c) => (
+        <option value={collectionHref(c.slug)} selected={collectionHref(c.slug) === selected}>{c.title}</option>
+      ))}
+    </optgroup>
+    {genres.length > 0 && (
+      <optgroup label="Tune Library">
+        <option value="/abc/library" selected={selected === '/abc/library'}>All genres</option>
+        {genres.map((genre) => (
+          <option value={`/abc/library/${genre.genre}`} selected={`/abc/library/${genre.genre}` === selected}>
+            {genre.name} ({genre.tunes.toLocaleString('en-US')})
+          </option>
+        ))}
+      </optgroup>
+    )}
+  </select>
+</label>

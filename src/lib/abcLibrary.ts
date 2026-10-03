@@ -25,10 +25,12 @@ export function loadLibrary(): Promise<LibraryGenre[]> {
   return cached;
 }
 
-/** Viewer link for a repo file (path like "sources/norbeck/i/hnr0.abc"), optionally at tune X. */
-export function viewerHref(path: string, x?: string) {
+/** Viewer link for a repo file (path like "sources/norbeck/i/hnr0.abc"), optionally at tune X.
+ *  [genre] keeps that genre selected in the collection picker. */
+export function viewerHref(path: string, x?: string, genre?: string) {
   const params = new URLSearchParams({ src: path });
   if (x) params.set('tune', x);
+  if (genre) params.set('genre', genre);
   return `/abc/library/view?${params}`;
 }
 

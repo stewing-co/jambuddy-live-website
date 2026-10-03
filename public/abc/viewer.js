@@ -139,6 +139,8 @@
       tunes: [],
       selectedX: null,
       crossCollectionTunes: [],
+      // Matches from the ABC tune library (library-search.js), for the query they answer.
+      libraryResults: null,
       initialSearchQuery: '',
       activeHeaderFilters: {},
       availableHeaderFilters: [],
@@ -293,7 +295,14 @@
         if (!response.ok) {
           throw new Error(`HTTP ${response.status}`);
         }
-        const text = await response.text();
+        // Older collections are often Windows-1252 rather than UTF-8.
+        const bytes = await response.arrayBuffer();
+        let text;
+        try {
+          text = new TextDecoder('utf-8', { fatal: true }).decode(bytes);
+        } catch (_) {
+          text = new TextDecoder('windows-1252').decode(bytes);
+        }
         input.value = text || '';
         this.state.fullAbc = input.value;
         this.state.collectionLoaded = true;
@@ -336,10 +345,12 @@
         const params = new URLSearchParams(window.location.search || '');
         return {
           tune: params.get('tune') || '',
+          // Position of the tune in the file, to tell apart tunes that share an X number.
+          n: params.get('n') || '',
           search: params.get('search') || ''
         };
       } catch (_) {
-        return { tune: '', search: '' };
+        return { tune: '', n: '', search: '' };
       }
     },
 
@@ -678,10 +689,15 @@
 
             this.updateTuneSearchStatus(tuneSearchStatus, query, this.state.filteredTunes.length, (this.state.tunes || []).length);
             if (clearTuneSearch) clearTuneSearch.disabled = query.trim().length === 0;
+            this.scheduleLibrarySearch(query, applyTuneSearch);
           };
 
           const slug = tuneSel.dataset ? tuneSel.dataset.collection : null;
-          const requestedX = initialQueryState.tune || '';
+          let requestedX = initialQueryState.tune || '';
+          if (requestedX && initialQueryState.n !== '') {
+            const hit = (this.state.tunes || []).find(t => String(t.ordinal) === initialQueryState.n && String(t.baseX) === requestedX);
+            if (hit) requestedX = String(hit.x);
+          }
           const storedX = slug && this.collectionSelections ? this.collectionSelections[slug] : null;
           if (tuneSearch && this.state.initialSearchQuery) {
             tuneSearch.value = this.state.initialSearchQuery;
@@ -724,6 +740,10 @@
             const x = tuneSel.value;
             if (x && x.startsWith('jump:')) {
               this.navigateToSearchResult(x);
+              return;
+            }
+            if (x && x.startsWith('lib:')) {
+              window.location.assign(x.slice(4));
               return;
             }
             this.selectTuneByX(x);
@@ -1091,6 +1111,7 @@
       const lines = text.split(/\r?\n/);
       const tunes = [];
       let current = null;
+      let ordinal = 0;
       const pushCurrent = () => {
         if (current) {
           current.abc = current.lines.join('\n');
@@ -1105,7 +1126,7 @@
         const mX = line.match(/^X:\s*(\d+)/);
         if (mX) {
           pushCurrent();
-          current = { x: mX[1], title: 'Untitled', titles: [], lines: [ line ], searchText: '', headers: {} };
+          current = { x: mX[1], baseX: mX[1], ordinal: ordinal++, title: 'Untitled', titles: [], lines: [ line ], searchText: '', headers: {} };
           continue;
         }
         if (!current) continue;
@@ -1122,6 +1143,13 @@
         current.lines.push(line);
       }
       pushCurrent();
+      // Many collections reuse X numbers. The picker selects tunes by x, so later repeats get
+      // a unique key ("12.2") while baseX keeps the number from the file.
+      const seenX = {};
+      tunes.forEach((tune) => {
+        const count = (seenX[tune.baseX] = (seenX[tune.baseX] || 0) + 1);
+        if (count > 1) tune.x = `${tune.baseX}.${count}`;
+      });
       const normalizeSortTitle = (title) => {
         const trimmed = (title || '').trim();
         const stripped = trimmed.replace(/^(?:the|an|a)\s+/i, '');
@@ -1196,7 +1224,45 @@
           x: `jump:${tune.collectionSlug}:${tune.x}`,
           isCrossCollectionResult: true
         }));
-      return [...localMatches, ...remoteMatches];
+      // Library tunes have no header metadata, so header filters exclude them.
+      const library = this.state.libraryResults;
+      const activeFilters = Object.values(this.state.activeHeaderFilters || {}).some(Boolean);
+      const libraryMatches = library && library.query === normalized && !activeFilters
+        ? library.results.map((tune) => ({
+          title: tune.title,
+          collectionTitle: `Library · ${tune.genreName}`,
+          x: `lib:${tune.href}`,
+          isCrossCollectionResult: true,
+          isLibraryResult: true
+        }))
+        : [];
+      return [...localMatches, ...remoteMatches, ...libraryMatches];
+    },
+
+    /** Searches the tune library after typing pauses, then re-applies the search with its matches. */
+    scheduleLibrarySearch: function(query, reapply) {
+      const normalized = (query || '').trim().toLocaleLowerCase();
+      clearTimeout(this.state.librarySearchTimer);
+      const library = window.JamBuddyLibrary;
+      if (!normalized || !library) {
+        this.state.libraryPending = false;
+        return;
+      }
+      if (this.state.libraryResults && this.state.libraryResults.query === normalized) return;
+      this.state.libraryPending = true;
+      this.state.librarySearchTimer = setTimeout(() => {
+        library.search(query, { limit: 50 })
+          .then((found) => ({ query: normalized, results: found.results }))
+          .catch(() => ({ query: normalized, results: [] }))
+          .then((result) => {
+            const tuneSearch = document.getElementById('tuneSearch');
+            const current = tuneSearch ? (tuneSearch.value || '').trim().toLocaleLowerCase() : '';
+            if (current !== normalized) return; // Typing moved on; a newer search is scheduled.
+            this.state.libraryResults = result;
+            this.state.libraryPending = false;
+            reapply();
+          });
+      }, 300);
     },
 
     updateTuneSearchStatus: function(statusEl, query, filteredCount, totalCount) {
@@ -1207,10 +1273,14 @@
         statusEl.textContent = activeFilterCount > 0 ? `${filteredCount} of ${totalCount} tunes match active filters` : `${totalCount} tunes`;
         return;
       }
-      const crossCollectionCount = (this.state.filteredTunes || []).filter(tune => tune && tune.isCrossCollectionResult).length;
-      const localCount = Math.max(0, filteredCount - crossCollectionCount);
-      if (crossCollectionCount > 0) {
-        statusEl.textContent = `${localCount} here, ${crossCollectionCount} in other collections for "${normalizedQuery}"`;
+      const filtered = this.state.filteredTunes || [];
+      const libraryCount = filtered.filter(tune => tune && tune.isLibraryResult).length;
+      const crossCollectionCount = filtered.filter(tune => tune && tune.isCrossCollectionResult).length - libraryCount;
+      const localCount = Math.max(0, filteredCount - crossCollectionCount - libraryCount);
+      const libraryNote = this.state.libraryPending ? ', searching the Tune Library…'
+        : libraryCount > 0 ? `, ${libraryCount}${libraryCount >= 50 ? '+' : ''} in the Tune Library` : '';
+      if (crossCollectionCount > 0 || libraryNote) {
+        statusEl.textContent = `${localCount} here, ${crossCollectionCount} in other collections${libraryNote} for "${normalizedQuery}"`;
         return;
       }
       statusEl.textContent = `${filteredCount} of ${totalCount} tunes match "${normalizedQuery}"`;

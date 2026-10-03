@@ -1,6 +1,6 @@
 ---
+import CollectionPicker from './CollectionPicker.astro';
 import {
-  ABC_COLLECTIONS,
   ABC_FILENAME_MAP,
   ABC_TITLE_MAP
 } from '../lib/abcCollections';
@@ -11,15 +11,15 @@ interface Props {
   title?: string;
   /** ABC file to load; the library viewer sets it from the page URL instead. */
   collectionUrl?: string;
-  /** Show the bundled-collection picker (off for library files). */
-  showPicker?: boolean;
+  /** Href of the collection picker option to show as selected. */
+  selected?: string;
 }
 
 const {
   slug = 'old-time-jam-tunes',
   title,
   collectionUrl = `/collections/${ABC_FILENAME_MAP[slug]}`,
-  showPicker = true
+  selected = slug === 'old-time-jam-tunes' ? '/abc' : `/abc/${slug}`
 } = Astro.props;
 const pageTitle = title ?? ABC_TITLE_MAP[slug] ?? 'ABC Collection';
 ---
@@ -27,21 +27,7 @@ const pageTitle = title ?? ABC_TITLE_MAP[slug] ?? 'ABC Collection';
 <section data-abc-collection={slug} class="w-full px-2 sm:px-4 lg:px-6 xl:px-10 2xl:px-16 py-3 h-[calc(100dvh-5rem)] overflow-hidden flex flex-col">
   <div class="flex items-center gap-3 mb-4 shrink-0">
     <h1 id="abcCollectionTitle" class="min-w-0 truncate text-3xl font-bold text-white">{pageTitle}</h1>
-    <a href="/abc/library" class="ml-auto shrink-0 rounded border border-gray-600 px-3 py-1.5 text-sm text-gray-200 hover:border-gray-400 hover:text-white">Library</a>
-    {showPicker && <label class="flex min-w-0 items-center gap-2 text-sm text-gray-300">
-      <span class="sr-only sm:not-sr-only text-xs font-semibold uppercase tracking-wide text-gray-400">Collection</span>
-      <select
-        aria-label="Choose collection"
-        class="min-w-0 max-w-[55vw] truncate rounded border border-gray-700 bg-black p-2 text-sm text-gray-200 sm:max-w-xs"
-        onchange="if(this.value)window.location.href=this.value"
-      >
-        {ABC_COLLECTIONS.map((c) => (
-          <option value={c.slug === 'old-time-jam-tunes' ? '/abc' : `/abc/${c.slug}`} selected={c.slug === slug}>
-            {c.title}
-          </option>
-        ))}
-      </select>
-    </label>}
+    <CollectionPicker selected={selected} />
   </div>
 
   <div class="flex flex-col gap-4 flex-1 min-h-0">
@@ -283,5 +269,6 @@ const pageTitle = title ?? ABC_TITLE_MAP[slug] ?? 'ABC Collection';
     }
   }
 </style>
-<script src="/abc/viewer.js" defer></script>
+<script src="/abc/library-search.js" defer></script>
+  <script src="/abc/viewer.js" defer></script>
 <script src="/abc/init-viewer.js" defer></script>
