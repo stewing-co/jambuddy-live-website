@@ -90,7 +90,13 @@ def main():
                for name, urls in sorted(groups.items())]
     output = ROOT / 'scripts/tune-index/jc-sources.json'
     if not sources:
-        raise RuntimeError('Discovery returned no collections; retaining the published manifest')
+        if not output.exists():
+            raise RuntimeError('Discovery returned no collections and no manifest exists')
+        # The archive is unreachable or returned nothing; keep the published manifest
+        # so the build can still refresh other sources and retain prior JC records.
+        print(f'::warning::JC discovery returned no collections ({len(errors)} directory errors); '
+              'retaining the published manifest', flush=True)
+        return
     if output.exists() and (errors or pending - seen):
         previous = json.loads(output.read_text())['sources']
         by_id = {source['id']: source for source in sources}
