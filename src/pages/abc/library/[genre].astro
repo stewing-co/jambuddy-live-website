@@ -1,0 +1,142 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LIBRARY_BASE, loadLibrary, originUrl, viewerHref, type LibraryGenre } from '../../../lib/abcLibrary';
+
+export async function getStaticPaths() {
+  const genres = await loadLibrary();
+  return genres.map((genre) => ({ params: { genre: genre.genre }, props: { genre } }));
+}
+
+const { genre } = Astro.props as { genre: LibraryGenre };
+// Some collections hold thousands of single-tune files; search covers those, so list only the largest.
+const FILES_SHOWN = 100;
+const fileLabel = (path: string) => (path.split('/').pop() ?? path).replace(/\.abc$/i, '');
+---
+
+<Layout title={`${genre.name} tunes - JamBuddy ABC Library`} description={`Search and browse ${genre.tunes.toLocaleString('en-US')} ${genre.name} tunes in ABC notation.`}>
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-white">
+    <p class="text-sm mb-2"><a href="/abc/library" class="text-blue-300 hover:text-blue-200">← ABC Tune Library</a></p>
+    <h1 class="text-4xl font-bold mb-2">{genre.name}</h1>
+    <p class="text-gray-300 mb-6">{genre.tunes.toLocaleString('en-US')} tunes from {genre.sources.length} collections.</p>
+
+    <div class="rounded-lg border border-gray-700 bg-gray-800 p-4 mb-10">
+      <label for="librarySearch" class="block text-sm font-semibold uppercase tracking-wide text-gray-300 mb-2">Search tunes</label>
+      <input id="librarySearch" type="search" autocomplete="off" placeholder="Tune title, e.g. Morning Dew"
+        class="w-full rounded border border-gray-700 bg-black p-2 text-gray-200 placeholder:text-gray-500" />
+      <p id="librarySearchStatus" class="mt-2 text-xs text-gray-400" aria-live="polite"></p>
+      <ul id="librarySearchResults" class="mt-2 divide-y divide-gray-700"></ul>
+    </div>
+
+    <h2 class="text-2xl font-bold mb-4">Collections</h2>
+    <div class="space-y-3">
+      {genre.sources.map((source) => (
+        <details class="group rounded-lg border border-gray-700 bg-gray-800">
+          <summary class="flex cursor-pointer flex-wrap items-baseline justify-between gap-2 px-4 py-3">
+            <span class="font-semibold">{source.name}</span>
+            <span class="text-sm text-gray-400">{source.tunes.toLocaleString('en-US')} tunes · {source.files.length} files</span>
+          </summary>
+          <div class="border-t border-gray-700 px-4 py-3">
+            {originUrl(source.origin) && (
+              <p class="mb-2 text-sm text-gray-400">Source: <a class="underline hover:text-gray-200" href={originUrl(source.origin)} target="_blank" rel="noopener">{originUrl(source.origin)}</a></p>
+            )}
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-1 text-sm">
+              {source.files.slice(0, FILES_SHOWN).map((file) => (
+                <li class="min-w-0 truncate">
+                  <a class="text-blue-300 hover:text-blue-200" href={viewerHref(file.path)}>{file.tunes > 1 ? fileLabel(file.path) : file.first}</a>
+                  <span class="text-gray-500"> · {file.tunes === 1 ? '1 tune' : `${file.tunes} tunes`}</span>
+                </li>
+              ))}
+            </ul>
+            {source.files.length > FILES_SHOWN && (
+              <p class="mt-2 text-xs text-gray-500">Showing the {FILES_SHOWN} largest of {source.files.length} files. Use the search above to find any tune.</p>
+            )}
+          </div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <script is:inline define:vars={{ genreId: genre.genre, base: LIBRARY_BASE,
+    sourceNames: Object.fromEntries(genre.sources.map((source) => [source.id, source.name])) }}>
+    (function () {
+      const input = document.getElementById('librarySearch');
+      const status = document.getElementById('librarySearchStatus');
+      const list = document.getElementById('librarySearchResults');
+      const LIMIT = 100;
+      let tunes = null;
+      let loading = null;
+
+      const normalize = (text) => String(text || '').normalize('NFD').replace(/\p{M}+/gu, '')
+        .toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+
+      function load() {
+        loading ??= fetch(`${base}index/search/${genreId}.json`)
+          .then((response) => {
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            return response.json();
+          })
+          .then((data) => {
+            tunes = (data.tunes || []).map((tune) => ({ ...tune, search: tune.titles.map(normalize) }));
+            return tunes;
+          });
+        return loading;
+      }
+
+      // Same ranking as the app: exact title, then "the"-insensitive, prefix, all words.
+      function rank(titles, query, words) {
+        let best = null;
+        for (const title of titles) {
+          const r = title === query ? 0
+            : title.replace(/^the /, '') === query.replace(/^the /, '') ? 1
+            : title.startsWith(query) ? 2
+            : words.every((word) => title.includes(word)) ? 3 : null;
+          if (r !== null && (best === null || r < best)) best = r;
+        }
+        return best;
+      }
+
+      function viewerHref(tune) {
+        const params = new URLSearchParams({ src: decodeURIComponent(tune.url.slice(base.length)), tune: String(tune.x) });
+        return `/abc/library/view?${params}`;
+      }
+
+      async function search() {
+        const query = normalize(input.value);
+        list.replaceChildren();
+        if (!query) { status.textContent = ''; return; }
+        if (!tunes) status.textContent = 'Loading tunes…';
+        try { await load(); } catch (error) {
+          status.textContent = 'Could not load the tune list. Please try again later.';
+          loading = null;
+          return;
+        }
+        if (normalize(input.value) !== query) return; // A newer search is running.
+        const words = query.split(' ');
+        const hits = [];
+        for (const tune of tunes) {
+          const r = rank(tune.search, query, words);
+          if (r !== null) hits.push([r, tune]);
+        }
+        hits.sort((a, b) => a[0] - b[0] || a[1].search[0].localeCompare(b[1].search[0]));
+        status.textContent = hits.length > LIMIT ? `Showing ${LIMIT} of ${hits.length} matches` : `${hits.length} matches`;
+        for (const [, tune] of hits.slice(0, LIMIT)) {
+          const item = document.createElement('li');
+          item.className = 'py-1.5 text-sm';
+          const link = document.createElement('a');
+          link.href = viewerHref(tune);
+          link.className = 'text-blue-300 hover:text-blue-200';
+          link.textContent = tune.titles[0];
+          const meta = document.createElement('span');
+          meta.className = 'text-gray-500';
+          meta.textContent = ` · ${sourceNames[tune.source] || tune.source}`;
+          item.append(link, meta);
+          list.append(item);
+        }
+      }
+
+      let timer = null;
+      input.addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(search, 200); });
+      input.addEventListener('focus', () => { load().catch(() => { loading = null; }); }, { once: true });
+    })();
+  </script>
+</Layout>

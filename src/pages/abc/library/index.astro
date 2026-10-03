@@ -1,0 +1,38 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { loadLibrary } from '../../../lib/abcLibrary';
+
+const genres = await loadLibrary();
+const total = genres.reduce((sum, genre) => sum + genre.tunes, 0);
+const sources = new Set(genres.flatMap((genre) => genre.sources.map((source) => source.id))).size;
+---
+
+<Layout title="ABC Tune Library - JamBuddy" description="Browse and search over 100,000 traditional tunes in ABC notation, grouped by tradition: Irish, Scottish, English, old-time, Nordic, French and more.">
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-white">
+    <h1 class="text-4xl font-bold mb-3">ABC Tune Library</h1>
+    {genres.length ? (
+      <p class="text-gray-300 max-w-3xl mb-8">
+        {total.toLocaleString('en-US')} tunes gathered from {sources} collections across the web, including John Chambers'
+        archive, grouped by tradition. Pick a tradition to search its tunes or browse its collections, then open
+        any tune in the sheet music viewer.
+      </p>
+    ) : (
+      <p class="text-red-300 mb-8">The tune library couldn't be loaded when this page was built. Please try again later.</p>
+    )}
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {genres.map((genre) => (
+        <a href={`/abc/library/${genre.genre}`} class="block rounded-lg border border-gray-700 bg-gray-800 p-5 hover:border-blue-400 hover:bg-gray-750 transition-colors">
+          <h2 class="text-xl font-semibold mb-1">{genre.name}</h2>
+          <p class="text-sm text-gray-400">
+            {genre.tunes.toLocaleString('en-US')} tunes · {genre.sources.length} collections
+          </p>
+        </a>
+      ))}
+    </div>
+    <p class="mt-10 text-sm text-gray-500">
+      Tunes are mostly traditional and remain credited to the collections they came from. The library is open source at
+      <a class="underline hover:text-gray-300" href="https://github.com/stewing-co/jambuddy-abc" target="_blank" rel="noopener">github.com/stewing-co/jambuddy-abc</a>.
+      Genres are assigned automatically, so a few tunes may be filed under the wrong tradition.
+    </p>
+  </section>
+</Layout>
