@@ -14,5 +14,5 @@ const title = `All ${list.name} tunes`;
 
 <Layout title={`${title} – JamBuddy`} description={`${list.tunes.length.toLocaleString('en-US')} ${list.name} tunes in ABC notation, each with its versions from collections across the web. View, play and print them.`} fullWidth contentClass="content-overlay w-full max-w-none" analyticsName={title}>
   <SheetMusicViewer slug={`tunes:${list.genre}`} title={title} collectionUrl="" tuneList={`/abc/tunes/${list.genre}.json`}
-    genre={list.genre} selected={`/abc/tunes/${list.genre}`} />
+    selected="" />
 </Layout>

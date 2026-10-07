@@ -1,10 +1,7 @@
 ---
 import CollectionPicker from './CollectionPicker.astro';
-import {
-  ABC_COLLECTIONS,
-  ABC_FILENAME_MAP,
-  ABC_TITLE_MAP
-} from '../lib/abcCollections';
+import { ABC_COLLECTIONS, ABC_FILENAME_MAP, ABC_TITLE_MAP } from '../lib/abcCollections';
+import { collectionHref } from '../lib/abcLibrary';
 
 interface Props {
   /** Identifies the collection for remembered tune selection. */
@@ -14,10 +11,6 @@ interface Props {
   collectionUrl?: string;
   /** Href of the collection picker option to show as selected. */
   selected?: string;
-  /** Genre listed in the collection picker; defaults to the bundled collection's genre. */
-  genre?: string;
-  /** Library viewer: the picker reads its genre and collection from the page URL. */
-  fromUrl?: boolean;
   /** All-tunes collection: a genre's tune list (src/lib/genreTunes.ts) to show instead of an ABC file. */
   tuneList?: string;
 }
@@ -27,17 +20,17 @@ const {
   title,
   collectionUrl = `/collections/${ABC_FILENAME_MAP[slug]}`,
   selected = slug === 'old-time-jam-tunes' ? '/abc' : `/abc/${slug}`,
-  genre = ABC_COLLECTIONS.find((c) => c.slug === slug)?.genre ?? '',
-  fromUrl = false,
   tuneList
 } = Astro.props;
 const pageTitle = title ?? ABC_TITLE_MAP[slug] ?? 'ABC Collection';
+// On phones the collection dropdown names a JamBuddy collection, so its title would repeat it.
+const pickerNamesPage = ABC_COLLECTIONS.some((c) => collectionHref(c.slug) === selected);
 ---
 
 <section data-abc-collection={slug} class="w-full px-2 sm:px-4 lg:px-6 xl:px-10 2xl:px-16 py-3 h-[calc(100dvh-5rem)] overflow-hidden flex flex-col">
-  <div class="flex items-center gap-3 mb-4 shrink-0">
-    <h1 id="abcCollectionTitle" class="min-w-0 truncate text-3xl font-bold text-white">{pageTitle}</h1>
-    <CollectionPicker genre={genre} selected={selected} fromUrl={fromUrl} />
+  <div class="flex items-center gap-3 mb-3 shrink-0 sm:mb-4">
+    <h1 id="abcCollectionTitle" class={`min-w-0 truncate font-bold text-white ${pickerNamesPage ? 'hidden sm:block sm:text-3xl' : 'text-xl sm:text-3xl'}`}>{pageTitle}</h1>
+    <CollectionPicker selected={selected} />
   </div>
 
   <div class="flex flex-col gap-4 flex-1 min-h-0">
@@ -59,12 +52,15 @@ const pageTitle = title ?? ABC_TITLE_MAP[slug] ?? 'ABC Collection';
                       class="w-full min-w-0 rounded border border-gray-700 bg-black p-2 text-sm text-gray-200 placeholder:text-gray-500"
                     />
                     <button
-                      id="clearTuneSearch"
+                      id="tuneFiltersToggle"
                       type="button"
-                      class="rounded border border-gray-600 px-2 py-1 text-xs text-gray-300 hover:border-gray-400 hover:text-white disabled:cursor-not-allowed disabled:opacity-40"
-                      disabled
+                      aria-expanded="false"
+                      aria-controls="tuneFilters"
+                      title="Filter by type, key and more"
+                      class="hidden shrink-0 items-center gap-1 rounded border border-gray-700 bg-black px-2 py-2 text-xs font-semibold text-gray-300 hover:border-gray-400 hover:text-white aria-expanded:border-blue-400 aria-expanded:text-white"
                     >
-                      Clear
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18l-7 8v6l-4 2v-8z"></path></svg>
+                      <span>Filters</span><span id="tuneFilterCount" class="text-blue-300"></span>
                     </button>
                   </div>
                 </div>
@@ -74,15 +70,11 @@ const pageTitle = title ?? ABC_TITLE_MAP[slug] ?? 'ABC Collection';
                 </label>
                 <div id="tuneSearchPanel" class="hidden space-y-1" data-ignore-print>
                   <p id="tuneSearchStatus" class="text-xs text-gray-400" aria-live="polite"></p>
-                  <ul id="tuneSearchResults" class="max-h-48 overflow-auto rounded border border-gray-700 bg-black/60 divide-y divide-gray-800 text-sm"></ul>
+                  <ul id="tuneSearchResults" class="max-h-36 overflow-auto sm:max-h-48 rounded border border-gray-700 bg-black/60 divide-y divide-gray-800 text-sm"></ul>
                 </div>
-                <details id="tuneFilters" class="group hidden rounded border border-gray-700 bg-gray-900/70 px-3 py-2 text-gray-200" data-ignore-print>
-                  <summary class="flex cursor-pointer items-center justify-between gap-3 text-sm font-semibold uppercase tracking-wide text-gray-300 transition group-open:text-white">
-                    <span>Filters <span id="tuneFilterCount" class="normal-case text-blue-300"></span></span>
-                    <span class="text-xs font-medium text-gray-400 group-open:text-blue-300">Toggle</span>
-                  </summary>
-                  <div class="mt-3 space-y-2">
-                    <div id="abcHeaderFilters" class="grid gap-2 sm:grid-cols-2 xl:grid-cols-3"></div>
+                <div id="tuneFilters" class="hidden rounded border border-gray-700 bg-gray-900/70 p-2 text-gray-200" data-ignore-print>
+                  <div class="space-y-2">
+                    <div id="abcHeaderFilters" class="grid grid-cols-2 gap-2 xl:grid-cols-3"></div>
                     <button
                       id="resetTuneFilters"
                       type="button"
@@ -92,7 +84,7 @@ const pageTitle = title ?? ABC_TITLE_MAP[slug] ?? 'ABC Collection';
                       Reset filters
                     </button>
                   </div>
-                </details>
+                </div>
                 <p id="abcLoadStatus" class="text-xs text-blue-300" aria-live="polite">Loading collection...</p>
               </div>
               <div id="tuneQuickControls" class="flex items-center gap-2 flex-wrap">
@@ -231,11 +223,11 @@ const pageTitle = title ?? ABC_TITLE_MAP[slug] ?? 'ABC Collection';
         <div class="flex flex-col space-y-2 shrink-0" data-ignore-print>
           <div class="flex justify-end gap-2 flex-wrap">
             <div class="flex gap-2">
-              <button id="exportTuneAbc" class="px-3 py-1 bg-gray-700 text-white rounded" title="Export selected tune as .abc">Tune .abc</button>
-              <button id="exportFullAbc" class="px-3 py-1 bg-gray-700 text-white rounded" title="Export full collection as .abc">Full .abc</button>
-              <button id="printSheet" data-print-trigger type="button" class="px-3 py-1 bg-gray-700 text-white rounded" title="Print the rendered sheet music">Print</button>
-              <button id="exportPng" class="px-3 py-1 bg-gray-700 text-white rounded" title="Export rendered sheet as .png">PNG</button>
-              <button id="exportMidi" class="px-3 py-1 bg-gray-700 text-white rounded" title="Export MIDI">MIDI</button>
+              <button id="exportTuneAbc" class="whitespace-nowrap px-2 py-1 text-sm bg-gray-700 text-white rounded sm:px-3 sm:text-base" title="Export selected tune as .abc">Tune .abc</button>
+              <button id="exportFullAbc" class="whitespace-nowrap px-2 py-1 text-sm bg-gray-700 text-white rounded sm:px-3 sm:text-base" title="Export full collection as .abc">Full .abc</button>
+              <button id="printSheet" data-print-trigger type="button" class="whitespace-nowrap px-2 py-1 text-sm bg-gray-700 text-white rounded sm:px-3 sm:text-base" title="Print the rendered sheet music">Print</button>
+              <button id="exportPng" class="whitespace-nowrap px-2 py-1 text-sm bg-gray-700 text-white rounded sm:px-3 sm:text-base" title="Export rendered sheet as .png">PNG</button>
+              <button id="exportMidi" class="whitespace-nowrap px-2 py-1 text-sm bg-gray-700 text-white rounded sm:px-3 sm:text-base" title="Export MIDI">MIDI</button>
             </div>
           </div>
           <details class="group rounded border border-gray-700 bg-gray-900/70" data-ignore-print>

@@ -1,105 +1,31 @@
 ---
-// Two-step collection picker shared by the sheet music pages and the ABC tune library: choose a
-// genre, then one of its collections (JamBuddy's bundled collections and the library's tunebooks).
-// Changing the genre only refills the collection list; choosing a collection opens it.
+// Collection dropdown shared by the sheet music pages and the ABC tune library: JamBuddy's
+// collections. Tunes from the tune library are found through the viewer's search.
 import { ABC_COLLECTIONS } from '../lib/abcCollections';
-import { loadPickerGenres } from '../lib/abcLibrary';
+import { collectionHref } from '../lib/abcLibrary';
 
 interface Props {
-  /** Genre whose collections are listed initially. */
-  genre?: string;
-  /** Href of the current collection's option. */
+  /** Href of the current collection, e.g. "/abc/mandozine". */
   selected?: string;
-  /** Library viewer: read the genre and collection from the page URL (the page is static). */
-  fromUrl?: boolean;
 }
 
-const { genre = '', selected: requested = '', fromUrl = false } = Astro.props;
+const { selected: requested = '' } = Astro.props;
 // The Old-Time collection is served at both /abc and /abc/old-time-jam-tunes.
 const selected = requested === '/abc/old-time-jam-tunes' ? '/abc' : requested;
-const genres = await loadPickerGenres(ABC_COLLECTIONS);
-const current = genres.find((g) => g.genre === genre);
-const selectClass = 'min-w-0 truncate rounded border border-gray-700 bg-black p-2 text-sm text-gray-200';
+const current = ABC_COLLECTIONS.some((c) => collectionHref(c.slug) === selected);
 ---
 
-<div class="ml-auto flex min-w-0 flex-wrap items-center justify-end gap-2 text-sm text-gray-300">
+<label class="ml-auto flex min-w-0 flex-1 items-center justify-end gap-2 text-sm text-gray-300 sm:flex-none">
   <span class="sr-only sm:not-sr-only text-xs font-semibold uppercase tracking-wide text-gray-400">Collection</span>
-  <select id="genrePicker" aria-label="Choose genre" class={`${selectClass} max-w-[40vw] sm:max-w-[14rem]`}>
-    {!current && <option value="" selected>Genre…</option>}
-    {genres.map((g) => <option value={g.genre} selected={g.genre === genre}>{g.name}</option>)}
-  </select>
-  <select id="collectionPicker" aria-label="Choose collection" data-from-url={fromUrl ? '1' : undefined}
-    class={`${selectClass} max-w-[55vw] sm:max-w-xs`}>
-    {!(current && current.groups.some((group) => group.options.some((o) => o.href === selected))) &&
-      <option value="" selected>Choose a collection…</option>}
-    {current?.groups.map((group) => (
-      <optgroup label={group.label}>
-        {group.options.map((o) => <option value={o.href} data-src={o.src} selected={o.href === selected}>{o.label}</option>)}
-      </optgroup>
+  <select
+    id="collectionPicker"
+    aria-label="Choose collection"
+    class="w-full min-w-0 truncate rounded border border-gray-700 bg-black p-2 text-sm text-gray-200 sm:w-auto sm:max-w-xs"
+    onchange="if(this.value)window.location.href=this.value"
+  >
+    {!current && <option value="" selected>Choose a collection…</option>}
+    {ABC_COLLECTIONS.map((c) => (
+      <option value={collectionHref(c.slug)} selected={collectionHref(c.slug) === selected}>{c.title}</option>
     ))}
   </select>
-  <a href="/abc/library" class="text-xs text-gray-400 underline hover:text-gray-200">Library</a>
-</div>
-
-<script is:inline>
-  (function () {
-    const genreSelect = document.getElementById('genrePicker');
-    const collectionSelect = document.getElementById('collectionPicker');
-    if (!genreSelect || !collectionSelect) return;
-    let data = null;
-    const load = () => (data ??= fetch('/abc/library/picker.json').then((response) => {
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      return response.json();
-    }).catch((error) => { data = null; throw error; }));
-
-    function fill(genres, genreId, selectedSrc) {
-      const genre = genres.find((g) => g.genre === genreId);
-      collectionSelect.replaceChildren();
-      const placeholder = new Option('Choose a collection…', '');
-      collectionSelect.append(placeholder);
-      for (const group of genre ? genre.groups : []) {
-        const optgroup = document.createElement('optgroup');
-        optgroup.label = group.label;
-        for (const o of group.options) {
-          const option = new Option(o.label, o.href);
-          if (o.src) option.dataset.src = o.src;
-          if (selectedSrc && o.src === selectedSrc) option.selected = true;
-          optgroup.append(option);
-        }
-        collectionSelect.append(optgroup);
-      }
-      if (!collectionSelect.value) placeholder.selected = true;
-    }
-
-    genreSelect.addEventListener('change', () => {
-      const genreId = genreSelect.value;
-      collectionSelect.disabled = true;
-      load().then((genres) => { fill(genres, genreId, null); })
-        .catch(() => { collectionSelect.replaceChildren(new Option('Could not load collections', '')); })
-        .finally(() => { collectionSelect.disabled = false; collectionSelect.focus(); });
-    });
-    collectionSelect.addEventListener('change', () => {
-      if (collectionSelect.value) window.location.href = collectionSelect.value;
-    });
-
-    if (collectionSelect.dataset.fromUrl) {
-      const params = new URLSearchParams(window.location.search);
-      const genreId = params.get('genre') || '';
-      if (genreId) {
-        load().then((genres) => {
-          if (!genres.some((g) => g.genre === genreId)) return;
-          genreSelect.value = genreId;
-          genreSelect.querySelector('option[value=""]')?.remove();
-          fill(genres, genreId, params.get('src'));
-          // Title the viewer with the collection's name rather than its file name.
-          const option = collectionSelect.selectedOptions[0];
-          const title = document.getElementById('abcCollectionTitle');
-          if (option && option.value && title && option.parentElement.label) {
-            const label = option.textContent.replace(/ \([\d,]+\)$/, '');
-            title.textContent = /^(All|More) tunes/.test(label) ? option.parentElement.label : `${option.parentElement.label}: ${label}`;
-          }
-        }).catch(() => {});
-      }
-    }
-  })();
-</script>
+</label>

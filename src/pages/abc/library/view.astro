@@ -5,7 +5,7 @@ import { LIBRARY_BASE } from '../../../lib/abcLibrary';
 ---
 
 <Layout title="ABC Tune Library - JamBuddy" description="View, play and print tunes from JamBuddy's ABC tune library." fullWidth contentClass="content-overlay w-full max-w-none" analyticsName="ABC Library Viewer">
-  <SheetMusicViewer slug="library" title="ABC Tune Library" collectionUrl="" selected="" fromUrl />
+  <SheetMusicViewer slug="library" title="ABC Tune Library" collectionUrl="" selected="" />
   <script is:inline define:vars={{ base: LIBRARY_BASE }}>
     // Runs before the viewer initializes (on window load): point it at the requested library
     // file. Only files inside the library's sources/ folder are accepted.

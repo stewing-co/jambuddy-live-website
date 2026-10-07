@@ -537,8 +537,13 @@
         const entry = options.find((option) => option.id === id);
         if (!entry || !entry.values.some((value) => value.key === active[id])) delete active[id];
       });
-      const details = document.getElementById('tuneFilters');
-      if (details) details.classList.toggle('hidden', !options.length);
+      // The Filters button only shows when this collection has something to filter by.
+      const toggle = document.getElementById('tuneFiltersToggle');
+      if (toggle) {
+        toggle.classList.toggle('hidden', !options.length);
+        toggle.classList.toggle('flex', !!options.length);
+      }
+      if (!options.length) this.setFiltersOpen(false);
       container.replaceChildren(...options.map((entry) => {
         const wrapper = document.createElement('label');
         wrapper.className = 'flex min-w-0 flex-col gap-1';
@@ -575,10 +580,17 @@
       if (tuneSearch) tuneSearch.dispatchEvent(new Event('input', { bubbles: true }));
     },
 
+    setFiltersOpen: function(open) {
+      const panel = document.getElementById('tuneFilters');
+      const toggle = document.getElementById('tuneFiltersToggle');
+      if (panel) panel.classList.toggle('hidden', !open);
+      if (toggle) toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    },
+
     updateFilterControls: function() {
       const count = this.activeFilterCount();
       const countEl = document.getElementById('tuneFilterCount');
-      if (countEl) countEl.textContent = count ? `(${count} active)` : '';
+      if (countEl) countEl.textContent = count ? String(count) : '';
       const reset = document.getElementById('resetTuneFilters');
       if (reset) reset.hidden = count === 0;
     },
@@ -819,7 +831,6 @@
           this.state.filteredTunes = this.state.tunes || [];
           this.populateTuneSelect(tuneSel, this.state.filteredTunes);
           const tuneSearch = q('tuneSearch');
-          const clearTuneSearch = q('clearTuneSearch');
           const tuneSearchStatus = q('tuneSearchStatus');
           const applyTuneSearch = async () => {
             const query = tuneSearch ? (tuneSearch.value || '') : '';
@@ -839,7 +850,6 @@
             this.renderSearchResults();
             this.updateFilterControls();
             this.syncSearchUrl();
-            if (clearTuneSearch) clearTuneSearch.disabled = query.trim().length === 0;
             this.scheduleLibrarySearch(query, applyTuneSearch);
           };
 
@@ -853,9 +863,12 @@
           if (tuneSearch && this.state.initialSearchQuery) {
             tuneSearch.value = this.state.initialSearchQuery;
           }
-          if (this.activeFilterCount() > 0) {
-            const filters = q('tuneFilters');
-            if (filters) filters.open = true;
+          if (this.activeFilterCount() > 0) this.setFiltersOpen(true);
+          const filtersToggle = q('tuneFiltersToggle');
+          if (filtersToggle) {
+            filtersToggle.addEventListener('click', () => {
+              this.setFiltersOpen(filtersToggle.getAttribute('aria-expanded') !== 'true');
+            });
           }
           if (requestedX && (this.state.tunes || []).some(t => String(t.x) === String(requestedX))) {
             tuneSel.value = String(requestedX);
@@ -904,13 +917,6 @@
               const next = items[index + (event.key === 'ArrowDown' ? 1 : -1)];
               if (next) next.focus();
               else if (event.key === 'ArrowUp' && tuneSearch) tuneSearch.focus();
-            });
-          }
-          if (clearTuneSearch) {
-            clearTuneSearch.addEventListener('click', () => {
-              if (tuneSearch) tuneSearch.value = '';
-              applyTuneSearch();
-              if (tuneSearch) tuneSearch.focus();
             });
           }
           const resetFilters = q('resetTuneFilters');
@@ -1366,7 +1372,8 @@
       tunes.forEach(t => {
         const opt = document.createElement('option');
         opt.value = String(t.x);
-        opt.textContent = t.isCrossCollectionResult ? `${t.title} (${t.collectionTitle})`
+        opt.textContent = t.isCrossCollectionResult
+          ? `${t.title} (${t.collectionTitle}${t.versions > 1 ? `, ${t.versions} versions` : ''})`
           : t.versions && t.versions.length > 1 ? `${t.menuLabel || t.title} (${t.versions.length} versions)` : `${t.menuLabel || t.title}`;
         selectEl.appendChild(opt);
       });
@@ -1405,17 +1412,22 @@
       const localMatches = ranked(this.state.tunes || [], query && /^\d+$/.test(query.text));
       if (!query) return localMatches;
       const listGenre = this.state.tuneList ? this.state.tuneList.genre : null;
-      const remoteMatches = ranked(listGenre ? [] : (this.state.crossCollectionTunes || []).filter((tune) => tune.collectionSlug !== currentSlug))
-        .map((tune) => ({
-          ...tune,
-          x: `jump:${tune.collectionSlug}:${tune.x}`,
-          isCrossCollectionResult: true
-        }));
+      // Other collections: one result per title in each (the link searches that collection).
+      const remoteGroups = new Map();
+      ranked(listGenre ? [] : (this.state.crossCollectionTunes || []).filter((tune) => tune.collectionSlug !== currentSlug))
+        .forEach((tune) => {
+          const group = `${tune.collectionSlug}|${(tune.cores || [])[0] || tune.title}`;
+          const seen = remoteGroups.get(group);
+          if (seen) seen.versions += 1;
+          else remoteGroups.set(group, { ...tune, x: `jump:${tune.collectionSlug}:${tune.x}`, isCrossCollectionResult: true, versions: 1 });
+        });
+      const remoteMatches = [...remoteGroups.values()];
       const results = this.state.libraryResults;
       const libraryMatches = results && results.signature === this.librarySignature(text)
         ? results.results.filter((tune) => tune.genre !== listGenre).map((tune) => ({
           title: tune.title,
           collectionTitle: `Library · ${tune.genreName}`,
+          versions: tune.versions || 1,
           x: `lib:${tune.href}`,
           isCrossCollectionResult: true,
           isLibraryResult: true
@@ -1476,10 +1488,11 @@
         statusEl.textContent = `${localCount} of ${total} tunes match the filters`;
         return;
       }
-      const libraryNote = this.state.libraryPending ? 'searching the tune library…'
-        : !this.libraryFilters() ? 'tune library not searched with these filters'
-        : `${libraryCount}${libraryCount >= 50 ? '+' : ''} in the tune library`;
-      statusEl.textContent = `${localCount} of ${total} here, ${otherCount} in other collections, ${libraryNote} for "${query}"`;
+      const libraryNote = this.state.libraryPending ? 'searching the library…'
+        : !this.libraryFilters() ? 'library not searched with these filters'
+        : `${libraryCount}${libraryCount >= 50 ? '+' : ''} in the library`;
+      statusEl.textContent = [`${localCount} here`, this.state.tuneList ? '' : `${otherCount} in other collections`, libraryNote]
+        .filter(Boolean).join(' · ');
     },
 
     /** Lists the search results under the search box, so they don't hide in the tune menu. */
@@ -1507,15 +1520,15 @@
           el.href = tune.isLibraryResult ? tune.x.slice(4) : this.searchResultHref(tune.x);
         }
         const title = document.createElement('span');
-        title.className = 'min-w-0 truncate text-blue-200';
+        title.className = 'min-w-0 flex-1 truncate text-blue-200';
         title.textContent = tune.title;
         const meta = document.createElement('span');
-        meta.className = 'ml-auto shrink-0 text-xs text-gray-500';
+        meta.className = 'max-w-[55%] shrink-0 truncate text-xs text-gray-500';
         const facets = tune.facets || {};
         const type = (facets.type || [])[0];
         meta.textContent = local
           ? [type && type[0] !== 'other' ? type[1] : '', ((facets.key || [])[0] || [])[1]].filter(Boolean).join(' · ')
-          : tune.collectionTitle;
+          : `${tune.collectionTitle}${tune.versions > 1 ? ` · ${tune.versions} versions` : ''}`;
         el.append(title, meta);
         item.append(el);
         return item;
