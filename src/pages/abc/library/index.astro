@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import CollectionPicker from '../../../components/CollectionPicker.astro';
+import LibrarySearch from '../../../components/LibrarySearch.astro';
 import { loadLibrary } from '../../../lib/abcLibrary';
 
 const genres = await loadLibrary();
@@ -23,15 +24,7 @@ const sources = new Set(genres.flatMap((genre) => genre.sources.map((source) => 
     ) : (
       <p class="text-red-300 mb-8">The tune library couldn't be loaded when this page was built. Please try again later.</p>
     )}
-    {genres.length > 0 && (
-      <div class="rounded-lg border border-gray-700 bg-gray-800 p-4 mb-8">
-        <label for="librarySearch" class="block text-sm font-semibold uppercase tracking-wide text-gray-300 mb-2">Search all genres</label>
-        <input id="librarySearch" type="search" autocomplete="off" placeholder="Tune title, e.g. Morning Dew"
-          class="w-full rounded border border-gray-700 bg-black p-2 text-gray-200 placeholder:text-gray-500" />
-        <p id="librarySearchStatus" class="mt-2 text-xs text-gray-400" aria-live="polite"></p>
-        <ul id="librarySearchResults" class="mt-2 divide-y divide-gray-700"></ul>
-      </div>
-    )}
+    {genres.length > 0 && <LibrarySearch label="Search all genres" />}
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {genres.map((genre) => (
         <a href={`/abc/library/${genre.genre}`} class="block rounded-lg border border-gray-700 bg-gray-800 p-5 hover:border-blue-400 hover:bg-gray-750 transition-colors">
@@ -48,15 +41,4 @@ const sources = new Set(genres.flatMap((genre) => genre.sources.map((source) => 
       Genres are assigned automatically, so a few tunes may be filed under the wrong tradition.
     </p>
   </section>
-  <script is:inline src="/abc/library-search.js"></script>
-  <script is:inline>
-    if (document.getElementById('librarySearch')) {
-      window.JamBuddyLibrary.attach({
-        input: document.getElementById('librarySearch'),
-        status: document.getElementById('librarySearchStatus'),
-        list: document.getElementById('librarySearchResults'),
-        showGenre: true
-      });
-    }
-  </script>
 </Layout>

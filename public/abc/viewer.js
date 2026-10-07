@@ -46,29 +46,30 @@
     }
   }
 
-  function prettifyHeaderLabel(header) {
-    const labels = {
-      A: 'Area',
-      B: 'Book',
-      C: 'Composer',
-      D: 'Discography',
-      F: 'File',
-      G: 'Group',
-      H: 'History',
-      I: 'Instruction',
-      K: 'Key',
-      L: 'Note Length',
-      M: 'Meter',
-      N: 'Notes',
-      O: 'Origin',
-      P: 'Part',
-      Q: 'Tempo',
-      R: 'Rhythm',
-      S: 'Source',
-      Z: 'Transcription'
-    };
-    return labels[header] || header;
-  }
+  // Header fields offered as tune filters. values() turns a tune's headers into [match key, label]
+  // pairs. Types and keys are normalized like the tune library's (library-search.js), so its
+  // search results can be filtered by them too.
+  const stripComment = (value) => String(value || '').replace(/%.*/, '').replace(/\s+/g, ' ').trim();
+  const TUNE_FACETS = [
+    { id: 'type', label: 'Type', library: true, values: (headers) => {
+      const library = window.JamBuddyLibrary;
+      const type = library.category((headers.R || []).join(' '), stripComment((headers.M || [])[0]));
+      return [[type, library.typeLabel(type)]];
+    } },
+    { id: 'key', label: 'Key', library: true, values: (headers) => (headers.K || [])
+      .map((value) => window.JamBuddyLibrary.normalizeKey(value)).filter(Boolean)
+      .map((key) => [key, window.JamBuddyLibrary.keyLabel(key)]) },
+    { id: 'meter', label: 'Meter', values: (headers) => (headers.M || [])
+      .map((value) => stripComment(value).replace(/\s+/g, ''))
+      .map((meter) => (meter === 'C' ? '4/4' : meter === 'C|' ? '2/2' : meter))
+      .filter(Boolean).map((meter) => [meter, meter]) },
+    ...[['composer', 'Composer', 'C'], ['origin', 'Origin', 'O']].map(([id, label, header]) => ({
+      id, label, values: (headers) => (headers[header] || []).map(stripComment).filter(Boolean)
+        .map((value) => [value.toLocaleLowerCase(), value])
+    }))
+  ];
+  // The search results list shows this many tunes; the tune menu lists them all.
+  const RESULTS_SHOWN = 200;
 
   function applyClefOverride(abcText, clefMode) {
     try {
@@ -324,7 +325,7 @@
           return response.json();
         })
         .then((parsed) => {
-          const tunes = Array.isArray(parsed) ? parsed : [];
+          const tunes = (Array.isArray(parsed) ? parsed : []).map((tune) => this.prepareSearchTune(tune));
           this.state.crossCollectionTunes = tunes;
           this.state.searchIndexLoaded = true;
           return tunes;
@@ -347,10 +348,11 @@
           tune: params.get('tune') || '',
           // Position of the tune in the file, to tell apart tunes that share an X number.
           n: params.get('n') || '',
-          search: params.get('search') || ''
+          search: params.get('search') || '',
+          filters: Object.fromEntries(TUNE_FACETS.map((facet) => [facet.id, params.get(facet.id)]).filter(([, value]) => value))
         };
       } catch (_) {
-        return { tune: '', n: '', search: '' };
+        return { tune: '', n: '', search: '', filters: {} };
       }
     },
 
@@ -369,27 +371,33 @@
       return headers;
     },
 
+    /** Adds what search and filters need to a parsed tune (title, titles, headers). */
+    prepareSearchTune: function(tune) {
+      const library = window.JamBuddyLibrary;
+      const titles = tune.titles && tune.titles.length ? tune.titles : [tune.title || ''];
+      tune.search = titles.map(library.normalize);
+      tune.cores = titles.map(library.core);
+      tune.facets = {};
+      TUNE_FACETS.forEach((facet) => { tune.facets[facet.id] = facet.values(tune.headers || {}); });
+      return tune;
+    },
+
+    /** Filters for this collection: facets whose values tell its tunes apart, with tune counts. */
     buildHeaderFilterOptions: function() {
-      const byHeader = new Map();
-      (this.state.tunes || []).forEach((tune) => {
-        const headers = tune && tune.headers ? tune.headers : {};
-        Object.entries(headers).forEach(([header, values]) => {
-          if (!Array.isArray(values) || !values.length) return;
-          if (!byHeader.has(header)) byHeader.set(header, new Set());
-          const bucket = byHeader.get(header);
-          values.forEach((value) => {
-            if (value) bucket.add(value);
+      const tunes = this.state.tunes || [];
+      const options = TUNE_FACETS.map((facet) => {
+        const counts = new Map();
+        tunes.forEach((tune) => {
+          new Map((tune.facets || {})[facet.id] || []).forEach((label, key) => {
+            const entry = counts.get(key) || { key, label, count: 0 };
+            entry.count += 1;
+            counts.set(key, entry);
           });
         });
-      });
-      const options = Array.from(byHeader.entries())
-        .map(([header, values]) => ({
-          header,
-          label: prettifyHeaderLabel(header),
-          values: Array.from(values).sort((a, b) => String(a).localeCompare(String(b), undefined, { sensitivity: 'base' }))
-        }))
-        .filter((entry) => entry.values.length > 1)
-        .sort((a, b) => a.label.localeCompare(b.label, undefined, { sensitivity: 'base' }));
+        const values = [...counts.values()]
+          .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, undefined, { sensitivity: 'base' }));
+        return { id: facet.id, label: facet.label, values };
+      }).filter((entry) => entry.values.length > 1);
       this.state.availableHeaderFilters = options;
       return options;
     },
@@ -397,11 +405,16 @@
     renderHeaderFilters: function() {
       const container = document.getElementById('abcHeaderFilters');
       if (!container) return;
-      container.innerHTML = '';
       const options = this.buildHeaderFilterOptions();
-      this.state.activeHeaderFilters = this.state.activeHeaderFilters || {};
-      if (!options.length) return;
-      options.forEach((entry) => {
+      const active = this.state.activeHeaderFilters = this.state.activeHeaderFilters || {};
+      // Drop filters (say, from a shared link) this collection has no tunes for.
+      Object.keys(active).forEach((id) => {
+        const entry = options.find((option) => option.id === id);
+        if (!entry || !entry.values.some((value) => value.key === active[id])) delete active[id];
+      });
+      const details = document.getElementById('tuneFilters');
+      if (details) details.classList.toggle('hidden', !options.length);
+      container.replaceChildren(...options.map((entry) => {
         const wrapper = document.createElement('label');
         wrapper.className = 'flex min-w-0 flex-col gap-1';
 
@@ -411,54 +424,59 @@
 
         const select = document.createElement('select');
         select.className = 'w-full rounded border border-gray-700 bg-black p-2 text-sm text-gray-200';
-        select.dataset.header = entry.header;
-
-        const allOption = document.createElement('option');
-        allOption.value = '';
-        allOption.textContent = `All ${entry.label}`;
-        select.appendChild(allOption);
-
-        entry.values.forEach((value) => {
-          const option = document.createElement('option');
-          option.value = value;
-          option.textContent = value;
-          select.appendChild(option);
-        });
-
-        const currentValue = this.state.activeHeaderFilters[entry.header] || '';
-        if (currentValue && entry.values.includes(currentValue)) {
-          select.value = currentValue;
-        }
+        select.dataset.facet = entry.id;
+        select.append(new Option(`Any ${entry.label.toLocaleLowerCase()}`, ''),
+          ...entry.values.map((value) => new Option(`${value.label} (${value.count})`, value.key)));
+        select.value = active[entry.id] || '';
 
         select.addEventListener('change', () => {
-          const nextValue = select.value || '';
-          if (nextValue) {
-            this.state.activeHeaderFilters[entry.header] = nextValue;
-          } else {
-            delete this.state.activeHeaderFilters[entry.header];
-          }
-          const tuneSearch = document.getElementById('tuneSearch');
-          if (tuneSearch) {
-            const event = new Event('input', { bubbles: true });
-            tuneSearch.dispatchEvent(event);
-          }
+          if (select.value) active[entry.id] = select.value;
+          else delete active[entry.id];
+          this.refreshTuneSearch();
         });
 
-        wrapper.appendChild(label);
-        wrapper.appendChild(select);
-        container.appendChild(wrapper);
-      });
+        wrapper.append(label, select);
+        return wrapper;
+      }));
+    },
+
+    activeFilterCount: function() {
+      return Object.values(this.state.activeHeaderFilters || {}).filter(Boolean).length;
+    },
+
+    /** Re-runs the search, e.g. after the filters change. */
+    refreshTuneSearch: function() {
+      const tuneSearch = document.getElementById('tuneSearch');
+      if (tuneSearch) tuneSearch.dispatchEvent(new Event('input', { bubbles: true }));
+    },
+
+    updateFilterControls: function() {
+      const count = this.activeFilterCount();
+      const countEl = document.getElementById('tuneFilterCount');
+      if (countEl) countEl.textContent = count ? `(${count} active)` : '';
+      const reset = document.getElementById('resetTuneFilters');
+      if (reset) reset.hidden = count === 0;
     },
 
     matchesHeaderFilters: function(tune) {
-      const activeFilters = this.state.activeHeaderFilters || {};
-      const activeEntries = Object.entries(activeFilters).filter(([, value]) => !!value);
+      const activeEntries = Object.entries(this.state.activeHeaderFilters || {}).filter(([, value]) => !!value);
       if (!activeEntries.length) return true;
-      const headers = tune && tune.headers ? tune.headers : {};
-      return activeEntries.every(([header, selectedValue]) => {
-        const values = headers[header];
-        return Array.isArray(values) && values.includes(selectedValue);
-      });
+      const facets = (tune && tune.facets) || {};
+      return activeEntries.every(([id, key]) => (facets[id] || []).some(([value]) => value === key));
+    },
+
+    /** Keeps the search and filters in the page URL, so they survive reloads and can be shared. */
+    syncSearchUrl: function() {
+      try {
+        const url = new URL(window.location.href);
+        const query = (this.state.tuneSearchQuery || '').trim();
+        if (query) url.searchParams.set('search', query); else url.searchParams.delete('search');
+        const active = this.state.activeHeaderFilters || {};
+        TUNE_FACETS.forEach((facet) => {
+          if (active[facet.id]) url.searchParams.set(facet.id, active[facet.id]); else url.searchParams.delete(facet.id);
+        });
+        if (url.href !== window.location.href) history.replaceState(history.state, '', url);
+      } catch (_) {}
     },
 
     getCollectionSlug: function() {
@@ -663,10 +681,11 @@
         if (!loaded) return;
         this.state.fullAbc = input.value || '';
         this.buildTuneIndex();
+        const initialQueryState = this.readInitialQueryState();
+        this.state.activeHeaderFilters = { ...initialQueryState.filters };
         this.renderHeaderFilters();
         const tuneSel = q('tuneSelect');
         if (tuneSel) {
-          const initialQueryState = this.readInitialQueryState();
           this.state.initialSearchQuery = initialQueryState.search || '';
           this.state.filteredTunes = this.state.tunes || [];
           this.populateTuneSelect(tuneSel, this.state.filteredTunes);
@@ -687,7 +706,10 @@
               tuneSel.value = activeX;
             }
 
-            this.updateTuneSearchStatus(tuneSearchStatus, query, this.state.filteredTunes.length, (this.state.tunes || []).length);
+            this.updateTuneSearchStatus(tuneSearchStatus, query);
+            this.renderSearchResults();
+            this.updateFilterControls();
+            this.syncSearchUrl();
             if (clearTuneSearch) clearTuneSearch.disabled = query.trim().length === 0;
             this.scheduleLibrarySearch(query, applyTuneSearch);
           };
@@ -701,6 +723,10 @@
           const storedX = slug && this.collectionSelections ? this.collectionSelections[slug] : null;
           if (tuneSearch && this.state.initialSearchQuery) {
             tuneSearch.value = this.state.initialSearchQuery;
+          }
+          if (this.activeFilterCount() > 0) {
+            const filters = q('tuneFilters');
+            if (filters) filters.open = true;
           }
           if (requestedX && (this.state.tunes || []).some(t => String(t.x) === String(requestedX))) {
             tuneSel.value = String(requestedX);
@@ -717,6 +743,7 @@
             this.selectTuneByX(first.x);
           }
 
+          const resultsList = q('tuneSearchResults');
           if (tuneSearch) {
             tuneSearch.addEventListener('focus', () => {
               if ((tuneSearch.value || '').trim()) {
@@ -725,12 +752,44 @@
             });
             tuneSearch.addEventListener('input', () => { applyTuneSearch(); });
             tuneSearch.addEventListener('search', () => { applyTuneSearch(); });
+            // Enter opens the best match; the down arrow moves into the results.
+            tuneSearch.addEventListener('keydown', (event) => {
+              const first = resultsList ? resultsList.querySelector('button, a') : null;
+              if (!first) return;
+              if (event.key === 'Enter') {
+                event.preventDefault();
+                first.click();
+              } else if (event.key === 'ArrowDown') {
+                event.preventDefault();
+                first.focus();
+              }
+            });
+          }
+          if (resultsList) {
+            resultsList.addEventListener('keydown', (event) => {
+              if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp') return;
+              const items = Array.from(resultsList.querySelectorAll('button, a'));
+              const index = items.indexOf(document.activeElement);
+              if (index < 0) return;
+              event.preventDefault();
+              const next = items[index + (event.key === 'ArrowDown' ? 1 : -1)];
+              if (next) next.focus();
+              else if (event.key === 'ArrowUp' && tuneSearch) tuneSearch.focus();
+            });
           }
           if (clearTuneSearch) {
             clearTuneSearch.addEventListener('click', () => {
               if (tuneSearch) tuneSearch.value = '';
               applyTuneSearch();
               if (tuneSearch) tuneSearch.focus();
+            });
+          }
+          const resetFilters = q('resetTuneFilters');
+          if (resetFilters) {
+            resetFilters.addEventListener('click', () => {
+              this.state.activeHeaderFilters = {};
+              this.renderHeaderFilters();
+              applyTuneSearch();
             });
           }
 
@@ -1116,9 +1175,7 @@
         if (current) {
           current.abc = current.lines.join('\n');
           current.headers = this.extractHeaderMetadata(current.lines);
-          const tokens = [current.x, ...(current.titles || []), current.title].filter(Boolean);
-          current.searchText = tokens.join(' ').toLocaleLowerCase();
-          tunes.push(current);
+          tunes.push(this.prepareSearchTune(current));
         }
       };
       for (let i = 0; i < lines.length; i++) {
@@ -1126,7 +1183,7 @@
         const mX = line.match(/^X:\s*(\d+)/);
         if (mX) {
           pushCurrent();
-          current = { x: mX[1], baseX: mX[1], ordinal: ordinal++, title: 'Untitled', titles: [], lines: [ line ], searchText: '', headers: {} };
+          current = { x: mX[1], baseX: mX[1], ordinal: ordinal++, title: 'Untitled', titles: [], lines: [ line ], headers: {} };
           continue;
         }
         if (!current) continue;
@@ -1198,37 +1255,34 @@
       }
     },
 
-    filterTunes: function(query) {
-      const normalized = (query || '').trim().toLocaleLowerCase();
+    filterTunes: function(text) {
+      const library = window.JamBuddyLibrary;
+      const query = library.parseQuery(text);
       const currentSlug = this.getCollectionSlug();
-      const allTunes = this.state.tunes || [];
-      const localMatches = allTunes.filter(tune => {
-        if (!tune) return false;
-        if (!this.matchesHeaderFilters(tune)) return false;
-        if (!normalized) return true;
-        const haystack = tune.searchText || `${tune.title || ''} ${tune.x || ''}`.toLocaleLowerCase();
-        return haystack.includes(normalized);
-      });
-      if (!normalized) return localMatches;
-      const localKeys = new Set(localMatches.map((tune) => `${currentSlug || ''}::${tune.x}`));
-      const remoteMatches = (this.state.crossCollectionTunes || [])
-        .filter((tune) => {
-          if (!tune || tune.collectionSlug === currentSlug) return false;
-          if (!this.matchesHeaderFilters(tune)) return false;
-          if (localKeys.has(`${tune.collectionSlug || ''}::${tune.x}`)) return false;
-          const haystack = tune.searchText || `${tune.title || ''} ${tune.x || ''}`.toLocaleLowerCase();
-          return haystack.includes(normalized);
-        })
+      const ranked = (tunes, byNumber) => {
+        const hits = [];
+        tunes.forEach((tune, order) => {
+          if (!tune || !this.matchesHeaderFilters(tune)) return;
+          const match = !query ? [0]
+            : byNumber && String(tune.baseX) === query.text ? [0]
+            : library.rank(tune.search || [], tune.cores, query);
+          if (match) hits.push([match[0], order, tune]);
+        });
+        // Best matches first; ties keep the collection's alphabetical order.
+        return hits.sort((a, b) => a[0] - b[0] || a[1] - b[1]).map(([, , tune]) => tune);
+      };
+      // A number finds that X: number in this collection too.
+      const localMatches = ranked(this.state.tunes || [], query && /^\d+$/.test(query.text));
+      if (!query) return localMatches;
+      const remoteMatches = ranked((this.state.crossCollectionTunes || []).filter((tune) => tune.collectionSlug !== currentSlug))
         .map((tune) => ({
           ...tune,
           x: `jump:${tune.collectionSlug}:${tune.x}`,
           isCrossCollectionResult: true
         }));
-      // Library tunes have no header metadata, so header filters exclude them.
-      const library = this.state.libraryResults;
-      const activeFilters = Object.values(this.state.activeHeaderFilters || {}).some(Boolean);
-      const libraryMatches = library && library.query === normalized && !activeFilters
-        ? library.results.map((tune) => ({
+      const results = this.state.libraryResults;
+      const libraryMatches = results && results.signature === this.librarySignature(text)
+        ? results.results.map((tune) => ({
           title: tune.title,
           collectionTitle: `Library · ${tune.genreName}`,
           x: `lib:${tune.href}`,
@@ -1239,25 +1293,39 @@
       return [...localMatches, ...remoteMatches, ...libraryMatches];
     },
 
-    /** Searches the tune library after typing pauses, then re-applies the search with its matches. */
-    scheduleLibrarySearch: function(query, reapply) {
-      const normalized = (query || '').trim().toLocaleLowerCase();
-      clearTimeout(this.state.librarySearchTimer);
+    /** Type and key filters for the tune library search, or null when another filter is active:
+     *  the library only knows tunes' types and keys. */
+    libraryFilters: function() {
+      const active = this.state.activeHeaderFilters || {};
+      if (TUNE_FACETS.some((facet) => !facet.library && active[facet.id])) return null;
+      return { type: active.type || '', key: active.key || '' };
+    },
+
+    /** Identifies a tune library search; null when there's nothing to search for. */
+    librarySignature: function(text) {
       const library = window.JamBuddyLibrary;
-      if (!normalized || !library) {
+      const query = library && library.parseQuery(text);
+      const filters = this.libraryFilters();
+      return query && filters ? `${query.text}|${filters.type}|${filters.key}` : null;
+    },
+
+    /** Searches the tune library after typing pauses, then re-applies the search with its matches. */
+    scheduleLibrarySearch: function(text, reapply) {
+      const signature = this.librarySignature(text);
+      clearTimeout(this.state.librarySearchTimer);
+      if (!signature || (this.state.libraryResults && this.state.libraryResults.signature === signature)) {
         this.state.libraryPending = false;
         return;
       }
-      if (this.state.libraryResults && this.state.libraryResults.query === normalized) return;
       this.state.libraryPending = true;
+      const { type, key } = this.libraryFilters();
       this.state.librarySearchTimer = setTimeout(() => {
-        library.search(query, { limit: 50 })
-          .then((found) => ({ query: normalized, results: found.results }))
-          .catch(() => ({ query: normalized, results: [] }))
+        window.JamBuddyLibrary.search(text, { limit: 50, type, key })
+          .then((found) => ({ signature, results: found.results }))
+          .catch(() => ({ signature, results: [] }))
           .then((result) => {
-            const tuneSearch = document.getElementById('tuneSearch');
-            const current = tuneSearch ? (tuneSearch.value || '').trim().toLocaleLowerCase() : '';
-            if (current !== normalized) return; // Typing moved on; a newer search is scheduled.
+            // Typing or filters moved on; a newer search is scheduled.
+            if (this.librarySignature(this.state.tuneSearchQuery) !== signature) return;
             this.state.libraryResults = result;
             this.state.libraryPending = false;
             reapply();
@@ -1265,38 +1333,97 @@
       }, 300);
     },
 
-    updateTuneSearchStatus: function(statusEl, query, filteredCount, totalCount) {
+    updateTuneSearchStatus: function(statusEl, text) {
       if (!statusEl) return;
-      const normalizedQuery = (query || '').trim();
-      const activeFilterCount = Object.values(this.state.activeHeaderFilters || {}).filter(Boolean).length;
-      if (!normalizedQuery) {
-        statusEl.textContent = activeFilterCount > 0 ? `${filteredCount} of ${totalCount} tunes match active filters` : `${totalCount} tunes`;
+      const query = (text || '').trim();
+      const filtered = this.state.filteredTunes || [];
+      const total = (this.state.tunes || []).length;
+      const libraryCount = filtered.filter((tune) => tune && tune.isLibraryResult).length;
+      const otherCount = filtered.filter((tune) => tune && tune.isCrossCollectionResult).length - libraryCount;
+      const localCount = filtered.length - otherCount - libraryCount;
+      if (!query) {
+        statusEl.textContent = `${localCount} of ${total} tunes match the filters`;
+        return;
+      }
+      const libraryNote = this.state.libraryPending ? 'searching the tune library…'
+        : !this.libraryFilters() ? 'tune library not searched with these filters'
+        : `${libraryCount}${libraryCount >= 50 ? '+' : ''} in the tune library`;
+      statusEl.textContent = `${localCount} of ${total} here, ${otherCount} in other collections, ${libraryNote} for "${query}"`;
+    },
+
+    /** Lists the search results under the search box, so they don't hide in the tune menu. */
+    renderSearchResults: function() {
+      const panel = document.getElementById('tuneSearchPanel');
+      const list = document.getElementById('tuneSearchResults');
+      if (!panel || !list) return;
+      const active = !!(this.state.tuneSearchQuery || '').trim() || this.activeFilterCount() > 0;
+      panel.classList.toggle('hidden', !active);
+      if (!active) {
+        list.replaceChildren();
         return;
       }
       const filtered = this.state.filteredTunes || [];
-      const libraryCount = filtered.filter(tune => tune && tune.isLibraryResult).length;
-      const crossCollectionCount = filtered.filter(tune => tune && tune.isCrossCollectionResult).length - libraryCount;
-      const localCount = Math.max(0, filteredCount - crossCollectionCount - libraryCount);
-      const libraryNote = this.state.libraryPending ? ', searching the Tune Library…'
-        : libraryCount > 0 ? `, ${libraryCount}${libraryCount >= 50 ? '+' : ''} in the Tune Library` : '';
-      if (crossCollectionCount > 0 || libraryNote) {
-        statusEl.textContent = `${localCount} here, ${crossCollectionCount} in other collections${libraryNote} for "${normalizedQuery}"`;
-        return;
+      const items = filtered.slice(0, RESULTS_SHOWN).map((tune) => {
+        const local = !tune.isCrossCollectionResult;
+        const item = document.createElement('li');
+        const el = document.createElement(local ? 'button' : 'a');
+        el.className = 'flex w-full min-w-0 items-baseline gap-2 px-2 py-1 text-left hover:bg-gray-800 focus:bg-gray-800 focus:outline-none';
+        if (local) {
+          el.type = 'button';
+          el.dataset.x = String(tune.x);
+          el.addEventListener('click', () => this.selectTuneByX(tune.x));
+        } else {
+          el.href = tune.isLibraryResult ? tune.x.slice(4) : this.searchResultHref(tune.x);
+        }
+        const title = document.createElement('span');
+        title.className = 'min-w-0 truncate text-blue-200';
+        title.textContent = tune.title;
+        const meta = document.createElement('span');
+        meta.className = 'ml-auto shrink-0 text-xs text-gray-500';
+        const facets = tune.facets || {};
+        const type = (facets.type || [])[0];
+        meta.textContent = local
+          ? [type && type[0] !== 'other' ? type[1] : '', ((facets.key || [])[0] || [])[1]].filter(Boolean).join(' · ')
+          : tune.collectionTitle;
+        el.append(title, meta);
+        item.append(el);
+        return item;
+      });
+      if (filtered.length > RESULTS_SHOWN) {
+        const more = document.createElement('li');
+        more.className = 'px-2 py-1 text-xs text-gray-500';
+        more.textContent = `${filtered.length - RESULTS_SHOWN} more in the tune menu`;
+        items.push(more);
       }
-      statusEl.textContent = `${filteredCount} of ${totalCount} tunes match "${normalizedQuery}"`;
+      list.replaceChildren(...items);
+      this.markSelectedResult();
+    },
+
+    markSelectedResult: function() {
+      const list = document.getElementById('tuneSearchResults');
+      if (!list) return;
+      const selected = this.state.selectedX == null ? '' : String(this.state.selectedX);
+      list.querySelectorAll('button[data-x]').forEach((button) => {
+        const current = button.dataset.x === selected;
+        button.classList.toggle('bg-gray-700', current);
+        if (current) button.setAttribute('aria-current', 'true'); else button.removeAttribute('aria-current');
+      });
+    },
+
+    searchResultHref: function(value) {
+      const match = String(value || '').match(/^jump:([^:]+):(.+)$/);
+      if (!match) return '';
+      const [, slug, x] = match;
+      const params = new URLSearchParams();
+      params.set('tune', x);
+      const query = (this.state.tuneSearchQuery || '').trim();
+      if (query) params.set('search', query);
+      return `${this.getTunePath(slug)}?${params.toString()}`;
     },
 
     navigateToSearchResult: function(value) {
-      const match = String(value || '').match(/^jump:([^:]+):(.+)$/);
-      if (!match) return;
-      const [, slug, x] = match;
-      const tuneSearch = document.getElementById('tuneSearch');
-      const searchValue = tuneSearch ? (tuneSearch.value || '').trim() : '';
-      const params = new URLSearchParams();
-      params.set('tune', x);
-      if (searchValue) params.set('search', searchValue);
-      const target = `${this.getTunePath(slug)}?${params.toString()}`;
-      window.location.assign(target);
+      const target = this.searchResultHref(value);
+      if (target) window.location.assign(target);
     },
 
     selectTuneByX: function(x) {
@@ -1334,6 +1461,7 @@
         this.stop();
         this.render();
         this.persistSelectedTune(hit.x);
+        this.markSelectedResult();
       }
     },
 

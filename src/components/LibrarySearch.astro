@@ -1,0 +1,44 @@
+---
+// Tune library search box with type and key filters (and a genre filter when searching every
+// genre). Searching runs in the browser; see public/abc/library-search.js.
+interface Props {
+  label: string;
+  /** Search only this genre; otherwise every genre, with a genre filter. */
+  genre?: string;
+}
+
+const { label, genre } = Astro.props;
+const selectClass = 'min-w-0 rounded border border-gray-700 bg-black p-2 text-sm text-gray-200';
+---
+
+<div class="rounded-lg border border-gray-700 bg-gray-800 p-4 mb-8">
+  <label for="librarySearch" class="block text-sm font-semibold uppercase tracking-wide text-gray-300 mb-2">{label}</label>
+  <input id="librarySearch" type="search" autocomplete="off" placeholder="Tune title, e.g. Morning Dew"
+    class="w-full rounded border border-gray-700 bg-black p-2 text-gray-200 placeholder:text-gray-500" />
+  <div class="mt-2 flex flex-wrap gap-2">
+    {!genre && <select id="libraryGenre" aria-label="Genre" class={selectClass}><option value="">All genres</option></select>}
+    <select id="libraryType" aria-label="Tune type" class={selectClass}><option value="">Any type</option></select>
+    <select id="libraryKey" aria-label="Key" class={selectClass}><option value="">Any key</option></select>
+  </div>
+  <p id="librarySearchStatus" class="mt-2 text-xs text-gray-400" aria-live="polite"></p>
+  <ul id="librarySearchResults" class="mt-2 divide-y divide-gray-700"></ul>
+  <button id="librarySearchMore" type="button" hidden
+    class="mt-3 rounded border border-gray-600 px-3 py-1 text-sm text-gray-300 hover:border-gray-400 hover:text-white">
+    Show more
+  </button>
+</div>
+
+<script is:inline src="/abc/library-search.js"></script>
+<script is:inline define:vars={{ genre: genre ?? null }}>
+  window.JamBuddyLibrary.attach({
+    input: document.getElementById('librarySearch'),
+    status: document.getElementById('librarySearchStatus'),
+    list: document.getElementById('librarySearchResults'),
+    more: document.getElementById('librarySearchMore'),
+    typeSelect: document.getElementById('libraryType'),
+    keySelect: document.getElementById('libraryKey'),
+    genreSelect: document.getElementById('libraryGenre'),
+    genres: genre ? [genre] : null,
+    showGenre: !genre
+  });
+</script>

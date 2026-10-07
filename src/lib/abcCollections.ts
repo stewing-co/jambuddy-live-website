@@ -16,7 +16,6 @@ export type AbcTuneSearchEntry = {
   x: string;
   title: string;
   titles: string[];
-  searchText: string;
   headers: Record<string, string[]>;
 };
 
@@ -114,18 +113,17 @@ function normalizeSortTitle(title: string) {
   return (stripped || trimmed).toLocaleLowerCase();
 }
 
+// Headers the sheet music viewer filters by (type, key, meter, composer, origin).
+const FILTER_HEADERS = ['R', 'K', 'M', 'C', 'O'];
+
 export function parseTunesFromAbc(abcText: string, collectionSlug: string, collectionTitle: string): AbcTuneSearchEntry[] {
   const lines = (abcText || '').split(/\r?\n/);
   const tunes: AbcTuneSearchEntry[] = [];
-  let current: Omit<AbcTuneSearchEntry, 'searchText'> & { searchText?: string } | null = null;
+  let current: AbcTuneSearchEntry | null = null;
 
   const pushCurrent = () => {
     if (!current) return;
-    const titleTokens = [...current.titles, current.title, current.x].filter(Boolean);
-    tunes.push({
-      ...current,
-      searchText: titleTokens.join(' ').toLocaleLowerCase()
-    });
+    tunes.push(current);
   };
 
   for (const line of lines) {
@@ -162,7 +160,7 @@ export function parseTunesFromAbc(abcText: string, collectionSlug: string, colle
     if (headerMatch) {
       const header = headerMatch[1].toUpperCase();
       const value = (headerMatch[2] || '').trim();
-      if (header !== 'X' && header !== 'T' && value) {
+      if (FILTER_HEADERS.includes(header) && value) {
         const existing = current.headers[header] || [];
         if (!existing.includes(value)) {
           current.headers[header] = [...existing, value];

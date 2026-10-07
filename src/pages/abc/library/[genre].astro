@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import CollectionPicker from '../../../components/CollectionPicker.astro';
+import LibrarySearch from '../../../components/LibrarySearch.astro';
 import { loadLibrary, originUrl, viewerHref, type LibraryGenre } from '../../../lib/abcLibrary';
 
 export async function getStaticPaths() {
@@ -22,13 +23,7 @@ const fileLabel = (path: string) => (path.split('/').pop() ?? path).replace(/\.a
     </div>
     <p class="text-gray-300 mb-6">{genre.tunes.toLocaleString('en-US')} tunes from {genre.sources.length} collections.</p>
 
-    <div class="rounded-lg border border-gray-700 bg-gray-800 p-4 mb-10">
-      <label for="librarySearch" class="block text-sm font-semibold uppercase tracking-wide text-gray-300 mb-2">Search tunes</label>
-      <input id="librarySearch" type="search" autocomplete="off" placeholder="Tune title, e.g. Morning Dew"
-        class="w-full rounded border border-gray-700 bg-black p-2 text-gray-200 placeholder:text-gray-500" />
-      <p id="librarySearchStatus" class="mt-2 text-xs text-gray-400" aria-live="polite"></p>
-      <ul id="librarySearchResults" class="mt-2 divide-y divide-gray-700"></ul>
-    </div>
+    <LibrarySearch label="Search tunes" genre={genre.genre} />
 
     <h2 class="text-2xl font-bold mb-4">Collections</h2>
     <div class="space-y-3">
@@ -58,14 +53,4 @@ const fileLabel = (path: string) => (path.split('/').pop() ?? path).replace(/\.a
       ))}
     </div>
   </section>
-
-  <script is:inline src="/abc/library-search.js"></script>
-  <script is:inline define:vars={{ genreId: genre.genre }}>
-    window.JamBuddyLibrary.attach({
-      input: document.getElementById('librarySearch'),
-      status: document.getElementById('librarySearchStatus'),
-      list: document.getElementById('librarySearchResults'),
-      genres: [genreId]
-    });
-  </script>
 </Layout>
