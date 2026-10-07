@@ -317,6 +317,128 @@
       }
     },
 
+    /** All-tunes collections: loads the genre's tune list (each tune once, with its versions). */
+    ensureTuneListLoaded: async function() {
+      if (this.state.collectionLoaded) return true;
+      const input = document.getElementById(this.state.inputId);
+      try {
+        this.setLoadStatus('Loading tunes...', false);
+        const response = await fetch(input.dataset.tuneList);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const list = await response.json();
+        this.state.tuneList = list;
+        this.state.tunes = (list.tunes || []).map(([id, title, type, titles, versions]) => this.prepareSearchTune({
+          x: id, baseX: id, title, titles: [title, ...(titles || [])], versions, abc: '',
+          headers: { R: [type], K: [...new Set(versions.map((version) => version[3]).filter(Boolean))] }
+        }));
+        // Tunes sharing a title (a reel and a polka, say) are told apart by type in the tune menu.
+        const titleCounts = {};
+        this.state.tunes.forEach((tune) => { titleCounts[tune.title] = (titleCounts[tune.title] || 0) + 1; });
+        this.state.tunes.forEach((tune) => {
+          const type = tune.facets.type[0];
+          if (titleCounts[tune.title] > 1 && type) tune.menuLabel = `${tune.title} · ${type[1]}`;
+        });
+        this.state.filteredTunes = this.state.tunes;
+        this.state.collectionLoaded = true;
+        this.setLoadStatus('', false);
+        // Tunes load one at a time, so there's no whole collection to export.
+        const exportFull = document.getElementById('exportFullAbc');
+        if (exportFull) exportFull.hidden = true;
+        const versionSelect = document.getElementById('versionSelect');
+        if (versionSelect) {
+          versionSelect.addEventListener('change', () => {
+            const hit = (this.state.tunes || [])[this.state.selectedIndex];
+            if (hit && hit.versions) this.showTuneVersion(hit, versionSelect.value);
+          });
+        }
+        return true;
+      } catch (error) {
+        console.warn('ABCViewer: failed to load tune list', error);
+        this.setLoadStatus('Failed to load tunes.', true);
+        return false;
+      }
+    },
+
+    /** Where a version of a tune comes from, and its key. */
+    versionLabel: function(version) {
+      const names = (this.state.tuneList && this.state.tuneList.sources) || {};
+      const [, , , key, source, also] = version;
+      const label = [names[source] || source, key ? window.JamBuddyLibrary.keyLabel(key) : ''].filter(Boolean).join(' · ');
+      return also && also.length ? `${label} (also in ${also.map((id) => names[id] || id).join(', ')})` : label;
+    },
+
+    /** Resolves to a version's ABC, from its file (each file is fetched once). */
+    loadVersionAbc: function(version) {
+      const list = this.state.tuneList;
+      const path = list.files[version[1]];
+      const url = path.startsWith('/') ? path : list.base + path.split('/').map(encodeURIComponent).join('/');
+      this.versionFiles = this.versionFiles || new Map();
+      if (!this.versionFiles.has(url)) {
+        this.versionFiles.set(url, fetch(url).then(async (response) => {
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          const bytes = await response.arrayBuffer();
+          let text;
+          try {
+            text = new TextDecoder('utf-8', { fatal: true }).decode(bytes);
+          } catch (_) {
+            text = new TextDecoder('windows-1252').decode(bytes);
+          }
+          // Numbered as the library numbers a file's tunes (jambuddy-abc's build_index.py).
+          const parts = text.replace(/\r\n?/g, '\n').replace(/^\ufeff/, '').split(/(?=^X:\s*\S)/m);
+          // Drop the file header before the first tune (unlike Python's, this split yields no empty one).
+          return /^X:\s*\S/.test(parts[0] || '') ? parts : parts.slice(1);
+        }).catch((error) => {
+          this.versionFiles.delete(url);
+          throw error;
+        }));
+      }
+      return this.versionFiles.get(url).then((tunes) => {
+        if (!tunes[version[2]]) throw new Error('Tune not found in its file');
+        return tunes[version[2]].trim();
+      });
+    },
+
+    /** Shows a version of a tune from an all-tunes collection ([versionId], else the first). */
+    showTuneVersion: function(hit, versionId) {
+      const version = hit.versions.find((v) => v[0] === versionId) || hit.versions[0];
+      hit.abc = '';
+      const request = this.state.versionRequest = {};
+      this.setLoadStatus('Loading tune...', false);
+      this.loadVersionAbc(version).then((abc) => {
+        if (this.state.versionRequest !== request) return; // Another tune or version was chosen meanwhile.
+        hit.abc = abc;
+        hit.versionId = version[0];
+        this.setLoadStatus('', false);
+        this.selectTuneByX(hit.x);
+      }).catch((error) => {
+        if (this.state.versionRequest !== request) return;
+        console.warn('ABCViewer: failed to load tune version', error);
+        this.setLoadStatus('Could not load this version of the tune.', true);
+      });
+    },
+
+    renderVersionPicker: function(hit) {
+      const picker = document.getElementById('versionPicker');
+      const select = document.getElementById('versionSelect');
+      if (!picker || !select) return;
+      picker.classList.remove('hidden');
+      picker.classList.add('flex');
+      const count = hit.versions.length;
+      select.replaceChildren(...hit.versions.map((version, index) =>
+        new Option(`${count > 1 ? `${index + 1} of ${count}: ` : ''}${this.versionLabel(version)}`, version[0])));
+      select.value = hit.versionId;
+    },
+
+    /** All-tunes collections: links name the tune and version shown. */
+    syncTuneUrl: function(hit) {
+      try {
+        const url = new URL(window.location.href);
+        url.searchParams.set('tune', hit.x);
+        url.searchParams.set('v', hit.versionId);
+        if (url.href !== window.location.href) history.replaceState(history.state, '', url);
+      } catch (_) {}
+    },
+
     ensureSearchIndexLoaded: async function() {
       if (this.state.searchIndexLoaded) return this.state.crossCollectionTunes || [];
       if (this.state.searchIndexPromise) return this.state.searchIndexPromise;
@@ -350,10 +472,12 @@
           // Position of the tune in the file, to tell apart tunes that share an X number.
           n: params.get('n') || '',
           search: params.get('search') || '',
+          // All-tunes collections: the version of the tune to show.
+          v: params.get('v') || '',
           filters: Object.fromEntries(TUNE_FACETS.map((facet) => [facet.id, params.get(facet.id)]).filter(([, value]) => value))
         };
       } catch (_) {
-        return { tune: '', n: '', search: '', filters: {} };
+        return { tune: '', n: '', search: '', v: '', filters: {} };
       }
     },
 
@@ -678,12 +802,16 @@
       // Tune selection (only on collection pages)
       const input = q(this.state.inputId);
       if (input) {
-        const loaded = await this.ensureCollectionLoaded();
+        const tuneListMode = !!(input.dataset && input.dataset.tuneList);
+        const loaded = tuneListMode ? await this.ensureTuneListLoaded() : await this.ensureCollectionLoaded();
         if (!loaded) return;
-        this.state.fullAbc = input.value || '';
-        this.buildTuneIndex();
+        if (!tuneListMode) {
+          this.state.fullAbc = input.value || '';
+          this.buildTuneIndex();
+        }
         const initialQueryState = this.readInitialQueryState();
         this.state.activeHeaderFilters = { ...initialQueryState.filters };
+        this.state.requestedVersion = initialQueryState.v ? { tune: initialQueryState.tune, version: initialQueryState.v } : null;
         this.renderHeaderFilters();
         const tuneSel = q('tuneSelect');
         if (tuneSel) {
@@ -1238,7 +1366,8 @@
       tunes.forEach(t => {
         const opt = document.createElement('option');
         opt.value = String(t.x);
-        opt.textContent = t.isCrossCollectionResult ? `${t.title} (${t.collectionTitle})` : `${t.title}`;
+        opt.textContent = t.isCrossCollectionResult ? `${t.title} (${t.collectionTitle})`
+          : t.versions && t.versions.length > 1 ? `${t.menuLabel || t.title} (${t.versions.length} versions)` : `${t.menuLabel || t.title}`;
         selectEl.appendChild(opt);
       });
 
@@ -1275,7 +1404,8 @@
       // A number finds that X: number in this collection too.
       const localMatches = ranked(this.state.tunes || [], query && /^\d+$/.test(query.text));
       if (!query) return localMatches;
-      const remoteMatches = ranked((this.state.crossCollectionTunes || []).filter((tune) => tune.collectionSlug !== currentSlug))
+      const listGenre = this.state.tuneList ? this.state.tuneList.genre : null;
+      const remoteMatches = ranked(listGenre ? [] : (this.state.crossCollectionTunes || []).filter((tune) => tune.collectionSlug !== currentSlug))
         .map((tune) => ({
           ...tune,
           x: `jump:${tune.collectionSlug}:${tune.x}`,
@@ -1283,7 +1413,7 @@
         }));
       const results = this.state.libraryResults;
       const libraryMatches = results && results.signature === this.librarySignature(text)
-        ? results.results.map((tune) => ({
+        ? results.results.filter((tune) => tune.genre !== listGenre).map((tune) => ({
           title: tune.title,
           collectionTitle: `Library · ${tune.genreName}`,
           x: `lib:${tune.href}`,
@@ -1442,6 +1572,16 @@
       const idx = (this.state.tunes || []).findIndex(t => String(t.x) === String(x));
       if (idx >= 0) {
         const hit = this.state.tunes[idx];
+        // All-tunes collections fetch a tune's version before showing it.
+        if (hit.versions && !hit.abc) {
+          const requested = this.state.requestedVersion;
+          this.state.requestedVersion = null;
+          this.state.selectedX = hit.x;
+          this.state.selectedIndex = idx;
+          this.showTuneVersion(hit, requested && requested.tune === String(hit.x) ? requested.version : null);
+          return;
+        }
+        this.state.versionRequest = null;
         this.state.selectedX = hit.x;
         this.state.selectedIndex = idx;
         const selectEl = document.getElementById('tuneSelect');
@@ -1463,6 +1603,11 @@
         this.render();
         this.persistSelectedTune(hit.x);
         this.markSelectedResult();
+        if (hit.versions) {
+          this.state.fullAbc = hit.abc;
+          this.renderVersionPicker(hit);
+          this.syncTuneUrl(hit);
+        }
       }
     },
 

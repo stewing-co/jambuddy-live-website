@@ -3,6 +3,7 @@ import Layout from '../../../layouts/Layout.astro';
 import CollectionPicker from '../../../components/CollectionPicker.astro';
 import LibrarySearch from '../../../components/LibrarySearch.astro';
 import { loadLibrary, originUrl, viewerHref, type LibraryGenre } from '../../../lib/abcLibrary';
+import { loadGenreTuneLists } from '../../../lib/genreTunes';
 
 export async function getStaticPaths() {
   const genres = await loadLibrary();
@@ -10,6 +11,7 @@ export async function getStaticPaths() {
 }
 
 const { genre } = Astro.props as { genre: LibraryGenre };
+const allTunes = (await loadGenreTuneLists()).get(genre.genre);
 // Some collections hold thousands of single-tune files; search covers those, so list only the largest.
 const FILES_SHOWN = 100;
 const fileLabel = (path: string) => (path.split('/').pop() ?? path).replace(/\.abc$/i, '');
@@ -21,7 +23,10 @@ const fileLabel = (path: string) => (path.split('/').pop() ?? path).replace(/\.a
       <h1 class="text-4xl font-bold">{genre.name}</h1>
       <CollectionPicker genre={genre.genre} />
     </div>
-    <p class="text-gray-300 mb-6">{genre.tunes.toLocaleString('en-US')} tunes from {genre.sources.length} collections.</p>
+    <p class="text-gray-300 mb-6">
+      {genre.tunes.toLocaleString('en-US')} versions of {(allTunes?.tunes.length ?? genre.tunes).toLocaleString('en-US')} tunes from {genre.sources.length} collections.
+      {allTunes && <a href={`/abc/tunes/${genre.genre}`} class="ml-1 text-blue-300 underline hover:text-blue-200">Browse every tune in the sheet music viewer</a>}
+    </p>
 
     <LibrarySearch label="Search tunes" genre={genre.genre} />
 

@@ -4,6 +4,18 @@
 
 export const LIBRARY_BASE = 'https://raw.githubusercontent.com/stewing-co/jambuddy-abc/main/';
 
+/** Reads a library index file at build time. JAMBUDDY_ABC_DIR builds from a local jambuddy-abc checkout. */
+export async function fetchIndexJson(path: string) {
+  const dir = process.env.JAMBUDDY_ABC_DIR;
+  if (dir) {
+    const { readFile } = await import('node:fs/promises');
+    return JSON.parse(await readFile(`${dir.replace(/\/$/, '')}/index/${path}`, 'utf8'));
+  }
+  const response = await fetch(`${LIBRARY_BASE}index/${path}`);
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  return response.json();
+}
+
 export type LibraryFile = { path: string; tunes: number; first: string };
 export type LibrarySource = { id: string; name: string; origin?: string | string[] | null; tunes: number; files: LibraryFile[] };
 export type LibraryGenre = { genre: string; name: string; tunes: number; sources: LibrarySource[] };
@@ -11,11 +23,7 @@ export type LibraryGenre = { genre: string; name: string; tunes: number; sources
 let cached: Promise<LibraryGenre[]> | null = null;
 
 export function loadLibrary(): Promise<LibraryGenre[]> {
-  cached ??= fetch(`${LIBRARY_BASE}index/collections.json`)
-    .then((response) => {
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      return response.json();
-    })
+  cached ??= fetchIndexJson('collections.json')
     .then((data) => (data?.version === 1 && Array.isArray(data.genres) ? data.genres : []))
     .catch((error) => {
       // A GitHub outage shouldn't break the whole site build; the library pages say it's unavailable.
@@ -49,11 +57,7 @@ type BookSource = { id: string; name: string; books: { label: string; path: stri
 let books: Promise<{ genre: string; name: string; sources: BookSource[] }[]> | null = null;
 
 function loadBooks() {
-  books ??= fetch(`${LIBRARY_BASE}index/books.json`)
-    .then((response) => {
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      return response.json();
-    })
+  books ??= fetchIndexJson('books.json')
     .then((data) => (data?.version === 1 && Array.isArray(data.genres) ? data.genres : []))
     .catch((error) => {
       console.warn(`ABC library tunebooks unavailable: ${error}`);
@@ -69,10 +73,19 @@ export async function loadPickerGenres(
   bundled: { slug: string; title: string; genre: string }[]
 ): Promise<PickerGenre[]> {
   const genres = await loadBooks();
+  // genreTunes imports this module; load it lazily to keep the import one-way.
+  const tuneLists = await (await import('./genreTunes')).loadGenreTuneLists();
+  const allTunes = (genre: string): PickerGroup[] => {
+    const list = tuneLists.get(genre);
+    return list ? [{ label: 'Every tune', options: [{
+      label: `All ${list.name} tunes (${list.tunes.length.toLocaleString('en-US')})`, href: `/abc/tunes/${genre}`
+    }] }] : [];
+  };
   const result: PickerGenre[] = genres.map((genre) => ({
     genre: genre.genre,
     name: genre.name,
     groups: [
+      ...allTunes(genre.genre),
       { label: 'JamBuddy', options: bundled.filter((c) => c.genre === genre.genre).map((c) => ({ label: c.title, href: collectionHref(c.slug) })) },
       ...genre.sources.map((source) => ({
         label: source.name,
@@ -87,7 +100,7 @@ export async function loadPickerGenres(
   // Without the library (GitHub unreachable at build time), still offer the bundled collections.
   if (!result.length) {
     for (const genre of [...new Set(bundled.map((c) => c.genre))]) {
-      result.push({ genre, name: genre.charAt(0).toUpperCase() + genre.slice(1), groups: [{ label: 'JamBuddy', options:
+      result.push({ genre, name: genre.charAt(0).toUpperCase() + genre.slice(1), groups: [...allTunes(genre), { label: 'JamBuddy', options:
         bundled.filter((c) => c.genre === genre).map((c) => ({ label: c.title, href: collectionHref(c.slug) })) }] });
     }
   }

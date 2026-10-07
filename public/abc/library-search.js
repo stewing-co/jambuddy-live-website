@@ -111,6 +111,10 @@
   }
 
   function viewerHref(tune) {
+    // Tunes open in their genre's all-tunes collection, which lists every version.
+    if (tune.tune) {
+      return `/abc/tunes/${tune.genre}?${new URLSearchParams({ tune: tune.tune, v: tune.id.slice(0, 8) })}`;
+    }
     const params = new URLSearchParams({
       src: decodeURIComponent(tune.url.slice(BASE.length)), tune: String(tune.x), n: String(tune.ordinal), genre: tune.genre
     });
@@ -118,11 +122,12 @@
   }
 
   /**
-   * Resolves to { total, results, failedGenres, keys, types }. Results carry title, genreName,
-   * sourceName, type, key and href (a viewer link). [genres] limits the search to those genre ids
-   * (default all); [type] and [key] keep only tunes of that category and normalized key. With
-   * filters but no query, lists every matching tune by title. [keys] and [types] count the tunes
-   * matching the query for each key and type, for filter menus.
+   * Resolves to { total, results, failedGenres, keys, types }. Each tune is listed once, however many
+   * versions (settings) of it the library has. Results carry title, genreName, sourceName, type,
+   * key, versions (how many match) and href (a viewer link). [genres] limits the search to those
+   * genre ids (default all); [type] and [key] keep only tunes of that category and normalized key.
+   * With filters but no query, lists every matching tune by title. [keys] and [types] count the
+   * tunes matching the query for each key and type, for filter menus.
    */
   async function search(text, { genres = null, limit = PAGE, type = '', key = '' } = {}) {
     const query = parseQuery(text);
@@ -133,34 +138,48 @@
     const loaded = await Promise.allSettled(ids.map(loadGenre));
     const failedGenres = ids.filter((_, index) => loaded[index].status === 'rejected');
     if (failedGenres.length === ids.length) throw new Error('Tune library unavailable');
-    const hits = [];
+    // One entry per tune (its best-matching version) in each genre.
+    const groups = new Map();
     const keys = {};
     const types = {};
+    const tally = (counts, value, group) => {
+      if (!value) return;
+      const seen = counts[value] || (counts[value] = new Set());
+      seen.add(group);
+    };
     for (const result of loaded) {
       if (result.status !== 'fulfilled') continue;
       for (const tune of result.value) {
         const match = query ? rank(tune.search, tune.cores, query) : [0, 0];
         if (!match) continue;
+        const group = `${tune.genre}:${tune.tune || tune.id}`;
         // Facet counts ignore their own filter so the menus offer every alternative.
-        if (!type || tune.category === type) keys[tune.key || ''] = (keys[tune.key || ''] || 0) + 1;
-        if (!key || tune.key === key) types[tune.category || ''] = (types[tune.category || ''] || 0) + 1;
+        if (!type || tune.category === type) tally(keys, tune.key, group);
+        if (!key || tune.key === key) tally(types, tune.category, group);
         if ((type && tune.category !== type) || (key && tune.key !== key)) continue;
-        hits.push([match[0], tune, match[1]]);
+        const hit = groups.get(group);
+        if (!hit) groups.set(group, [match[0], tune, match[1], 1, tune.category]);
+        else {
+          hit[3] += 1;
+          if (match[0] < hit[0]) [hit[0], hit[1], hit[2]] = [match[0], tune, match[1]];
+          // An untyped version's tune takes its type from typed versions.
+          if (hit[4] === 'other' && tune.category) hit[4] = tune.category;
+        }
       }
     }
+    const hits = [...groups.values()];
     hits.sort((a, b) => a[0] - b[0] || a[1].cores[a[2]].localeCompare(b[1].cores[b[2]]));
-    delete keys[''];
-    delete types[''];
+    const sizes = (counts) => Object.fromEntries(Object.entries(counts).map(([value, seen]) => [value, seen.size]));
     return {
       total: hits.length,
       failedGenres,
-      keys,
-      types,
+      keys: sizes(keys),
+      types: sizes(types),
       // Show the title that matched; a tune's first title can be unrelated to the query.
-      results: hits.slice(0, limit).map(([, tune, index]) => ({
+      results: hits.slice(0, limit).map(([, tune, index, versions, category]) => ({
         title: tune.titles[index], genre: tune.genre, genreName: names[tune.genre] || tune.genre,
-        sourceName: (info.sources || {})[tune.source] || tune.source, type: tune.category || '', key: tune.key || '',
-        href: viewerHref(tune)
+        sourceName: (info.sources || {})[tune.source] || tune.source, type: category || '', key: tune.key || '',
+        versions, href: viewerHref(tune)
       }))
     };
   }
@@ -208,7 +227,7 @@
         const meta = document.createElement('span');
         meta.className = 'text-gray-500';
         const details = [showGenre && tune.genreName, tune.type && tune.type !== 'other' && typeLabel(tune.type),
-          tune.key && keyLabel(tune.key), tune.sourceName].filter(Boolean);
+          tune.key && keyLabel(tune.key), tune.versions > 1 ? `${tune.versions} versions` : tune.sourceName].filter(Boolean);
         meta.textContent = ` · ${details.join(' · ')}`;
         item.append(link, meta);
         return item;
@@ -240,8 +259,8 @@
       if (keySelect) fillSelect(keySelect, found.keys, 'Any key', keyLabel, key);
       const shown = found.results.length;
       status.textContent = (found.total === 0 ? 'No matching tunes'
-        : found.total > shown ? `Showing ${shown.toLocaleString('en-US')} of ${found.total.toLocaleString('en-US')} matches`
-        : `${found.total.toLocaleString('en-US')} ${found.total === 1 ? 'match' : 'matches'}`)
+        : found.total > shown ? `Showing ${shown.toLocaleString('en-US')} of ${found.total.toLocaleString('en-US')} tunes`
+        : `${found.total.toLocaleString('en-US')} ${found.total === 1 ? 'tune' : 'tunes'}`)
         + (found.failedGenres.length ? ' (some genres could not be loaded)' : '');
       render(found);
       if (more) more.hidden = found.total <= shown;

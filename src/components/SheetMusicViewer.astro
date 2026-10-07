@@ -18,6 +18,8 @@ interface Props {
   genre?: string;
   /** Library viewer: the picker reads its genre and collection from the page URL. */
   fromUrl?: boolean;
+  /** All-tunes collection: a genre's tune list (src/lib/genreTunes.ts) to show instead of an ABC file. */
+  tuneList?: string;
 }
 
 const {
@@ -26,7 +28,8 @@ const {
   collectionUrl = `/collections/${ABC_FILENAME_MAP[slug]}`,
   selected = slug === 'old-time-jam-tunes' ? '/abc' : `/abc/${slug}`,
   genre = ABC_COLLECTIONS.find((c) => c.slug === slug)?.genre ?? '',
-  fromUrl = false
+  fromUrl = false,
+  tuneList
 } = Astro.props;
 const pageTitle = title ?? ABC_TITLE_MAP[slug] ?? 'ABC Collection';
 ---
@@ -65,6 +68,10 @@ const pageTitle = title ?? ABC_TITLE_MAP[slug] ?? 'ABC Collection';
                     </button>
                   </div>
                 </div>
+                <label id="versionPicker" class="hidden flex-wrap items-center gap-2 text-xs text-gray-400">
+                  <span class="font-semibold uppercase tracking-wide">Version</span>
+                  <select id="versionSelect" class="min-w-0 flex-1 rounded border border-gray-700 bg-black p-2 text-sm text-gray-200"></select>
+                </label>
                 <div id="tuneSearchPanel" class="hidden space-y-1" data-ignore-print>
                   <p id="tuneSearchStatus" class="text-xs text-gray-400" aria-live="polite"></p>
                   <ul id="tuneSearchResults" class="max-h-48 overflow-auto rounded border border-gray-700 bg-black/60 divide-y divide-gray-800 text-sm"></ul>
@@ -237,7 +244,7 @@ const pageTitle = title ?? ABC_TITLE_MAP[slug] ?? 'ABC Collection';
               <span class="text-xs font-medium text-gray-400 group-open:text-blue-300">Toggle</span>
             </summary>
             <div class="p-2">
-              <textarea id="abcInput" data-collection-src={collectionUrl} class="w-full h-48 lg:h-56 min-h-[8rem] p-3 font-mono text-sm rounded bg-black text-gray-200 border border-gray-700 resize-y"></textarea>
+              <textarea id="abcInput" data-collection-src={collectionUrl} data-tune-list={tuneList} class="w-full h-48 lg:h-56 min-h-[8rem] p-3 font-mono text-sm rounded bg-black text-gray-200 border border-gray-700 resize-y"></textarea>
             </div>
           </details>
         </div>
