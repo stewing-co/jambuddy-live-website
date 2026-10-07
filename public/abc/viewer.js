@@ -2507,7 +2507,13 @@
   const effectiveStaffWidth = Math.max(320, Math.round(paperWidth / autoScale));
   // Scale measures per line with the *effective* staff width so wide columns
   // aren't rendered tall and skinny.
-  const measuresPerLine = Math.max(4, Math.min(12, Math.round(effectiveStaffWidth / 160)));
+  // A phone in fullscreen is tall and narrow. Keeping the desktop minimum of
+  // four measures per line leaves short tunes occupying only the top half of
+  // the display, and changing abcjs's scale cannot fix that while the SVG is
+  // constrained to the viewport width. Allow more staff rows there so the
+  // vertical auto-fit can actually use the full screen.
+  const minMeasuresPerLine = this.state.isFullscreen && paperWidth < 640 ? 3 : 4;
+  const measuresPerLine = Math.max(minMeasuresPerLine, Math.min(12, Math.round(effectiveStaffWidth / 160)));
   const totalTranspose = this.getTotalTranspose();
   const baseOpts = { responsive: 'resize', staffwidth: effectiveStaffWidth, scale: autoScale, add_classes: true, visualTranspose: totalTranspose, selectionColor: '#f59e0b' };
   // abcjs 6.4.4 silently drops the `tablature` layout whenever the `wrap`
