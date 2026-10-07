@@ -1179,10 +1179,15 @@
       // Auto-render initially
       this.render();
 
-      // Recompute on window resize and when the paper content size changes
+      // Recompute when the available music viewport changes. abcjs's
+      // responsive renderer gives #paper an aspect-ratio height based on the
+      // generated SVG, so observing #paper itself creates a feedback loop:
+      // rendering changes its height, which schedules another render. Observe
+      // the stable scroll pane around it instead.
       try {
         const paperEl = document.getElementById(this.state.paperId);
         if (paperEl) {
+          const paperViewport = paperEl.parentElement || paperEl;
           const ro = new ResizeObserver(() => {
             try { this.ensureResponsiveSvgs(); } catch(_) {}
             try { this.updatePaperHeight(); } catch(_) {}
@@ -1191,11 +1196,11 @@
             // Playback & Controls) expand/collapse and the editor can be dragged,
             // all of which change the pane's HEIGHT. The auto-fit targets that
             // height, so without this the scale goes stale and the music no
-            // longer fills (or overflows) the space. (Paper height is fixed by
-            // flexbox, so auto-fit's own re-renders don't retrigger this.)
+            // longer fills (or overflows) the space. The observed viewport is
+            // fixed by flexbox, so auto-fit's own renders don't retrigger it.
             try {
-              const w = paperEl.clientWidth || paperEl.offsetWidth || 0;
-              const h = paperEl.clientHeight || paperEl.offsetHeight || 0;
+              const w = paperViewport.clientWidth || paperViewport.offsetWidth || 0;
+              const h = paperViewport.clientHeight || paperViewport.offsetHeight || 0;
               if (this._lastPaperW == null) { this._lastPaperW = w; this._lastPaperH = h; }
               const dW = Math.abs(w - this._lastPaperW);
               const dH = Math.abs(h - this._lastPaperH);
@@ -1216,7 +1221,7 @@
               }
             } catch(_) {}
           });
-          ro.observe(paperEl);
+          ro.observe(paperViewport);
           // Keep a reference to avoid GC in some browsers
           this._resizeObserver = ro;
         }
@@ -2558,7 +2563,21 @@
               const userPct = Math.max(20, Math.min(100, Number(this.state.renderScale || 100))) / 100;
               // Aim slightly under the container (0.96) so discrete system
               // reflow can't overshoot and clip the last staff line.
-              const targetHeight = Math.max(160, (paperEl.clientHeight || 600) * userPct * 0.96);
+              // Fit against the scroll pane, not #paper. With abcjs's
+              // responsive mode #paper's height is derived from the SVG, so
+              // using it as the target makes the result influence the next
+              // fit calculation and can oscillate forever. Subtract the
+              // pane's padding to get its actual content area.
+              const paperViewport = paperEl.parentElement;
+              let availableHeight = paperEl.clientHeight || 600;
+              if (paperViewport) {
+                const viewportStyle = global.getComputedStyle ? global.getComputedStyle(paperViewport) : null;
+                const paddingY = viewportStyle
+                  ? (parseFloat(viewportStyle.paddingTop) || 0) + (parseFloat(viewportStyle.paddingBottom) || 0)
+                  : 0;
+                availableHeight = Math.max(0, (paperViewport.clientHeight || 0) - paddingY) || availableHeight;
+              }
+              const targetHeight = Math.max(160, availableHeight * userPct * 0.96);
               const fillRatio = targetHeight / Math.max(1, displayedHeight);
               // Grow short tunes to fill; shrink tall tunes so the whole tune
               // fits on screen instead of being cut off.
