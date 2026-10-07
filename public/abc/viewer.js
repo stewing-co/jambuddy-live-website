@@ -61,7 +61,8 @@
       .map((key) => [key, window.JamBuddyLibrary.keyLabel(key)]) },
     { id: 'meter', label: 'Meter', values: (headers) => (headers.M || [])
       .map((value) => stripComment(value).replace(/\s+/g, ''))
-      .map((meter) => (meter === 'C' ? '4/4' : meter === 'C|' ? '2/2' : meter))
+      // Common time (C) and cut time (C|) are both written in four.
+      .map((meter) => (meter === 'C' || meter === 'C|' ? '4/4' : meter))
       .filter(Boolean).map((meter) => [meter, meter]) },
     ...[['composer', 'Composer', 'C'], ['origin', 'Origin', 'O']].map(([id, label, header]) => ({
       id, label, values: (headers) => (headers[header] || []).map(stripComment).filter(Boolean)
